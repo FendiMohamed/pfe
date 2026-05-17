@@ -1,0 +1,35 @@
+{
+  "libraries": [
+    {
+      "group": "com.squareup.okhttp3",
+      "artifact": "okhttp",
+      "versions": ["4.8.0", "4.9.0", "4.9.1", "4.10.0"]
+    },
+    {
+      "group": "com.squareup.okio",
+      "artifact": "okio",
+      "versions": ["2.8.0", "2.9.0", "3.0.0"]
+    },
+    {
+      "group": "com.squareup.retrofit2",
+      "artifact": "retrofit",
+      "versions": ["2.8.1", "2.9.0"]
+    },
+    {
+      "group": "com.google.code.gson",
+      "artifact": "gson",
+      "versions": ["2.8.5", "2.8.6", "2.8.9"]
+    },
+    {
+      "group": "commons-codec",
+      "artifact": "commons-codec",
+      "versions": ["1.15", "1.16.0", "1.16.1"]
+    },
+    {
+      "group": "com.fasterxml.jackson.core",
+      "artifact": "jackson-databind",
+      "versions": ["2.9.10.8", "2.12.7.1", "2.13.5", "2.15.2"]
+    }
+  ]
+}
+

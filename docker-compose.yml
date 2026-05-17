@@ -1,0 +1,11 @@
+services:
+  apk-sbom:
+    build:
+      context: .
+    image: apk-sbom-mvp:latest
+    working_dir: /app
+    volumes:
+      - .:/app
+    environment:
+      PYTHONPATH: /app/src
+

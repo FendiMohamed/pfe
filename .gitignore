@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+data/results/*
+data/reference_db/*
+!data/results/.gitkeep
+!data/reference_db/.gitkeep
+!data/test_apks/.gitkeep
+

@@ -1,0 +1,11 @@
+.git
+.pytest_cache
+__pycache__
+*.pyc
+.venv
+venv
+data/results/*
+data/reference_db/*
+!data/results/.gitkeep
+!data/reference_db/.gitkeep
+
