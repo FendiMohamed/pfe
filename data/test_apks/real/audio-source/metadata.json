@@ -1,0 +1,64 @@
+{
+  "apk": {
+    "expected_sha256": "cd48532829f41060d3c9909daa5563a669394eb9dd00baf303b6db1b5b2db1fa",
+    "index_size": 1284104,
+    "path": "data/test_apks/real/audio-source/audio-source.apk",
+    "sha256": "cd48532829f41060d3c9909daa5563a669394eb9dd00baf303b6db1b5b2db1fa",
+    "size": 1284104,
+    "url": "https://f-droid.org/repo/fr.dzx.audiosource_7.apk"
+  },
+  "app": "Audio Source",
+  "categories": [
+    "Multimedia",
+    "System"
+  ],
+  "classifications": [
+    "low-risk-preflight",
+    "no-native",
+    "small-apk",
+    "normal-gradle-root",
+    "low-risk-candidate",
+    "modern-gradle",
+    "has-declared-dependencies"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/fr.dzx.audiosource/",
+  "license": "MIT",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "fr.dzx.audiosource",
+  "proof_status": "report-generated",
+  "reason": "Selected by low-risk preflight: no native ABI, small APK/source tarball, modern AGP project, declared Maven dependencies, and quick Gradle dependency-tree success.",
+  "report": {
+    "detected_component_count": 3,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/low-risk-real-apk-batch/report-real-audio-source",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/low-risk-real-apk-batch/report-real-audio-source/report.html",
+    "json": "data/results/evaluation/low-risk-real-apk-batch/report-real-audio-source/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "medium",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates.",
+        "Structural evidence is stronger than package-name evidence."
+      ],
+      "score": 0.4
+    },
+    "sbom": "data/results/evaluation/low-risk-real-apk-batch/report-real-audio-source/sbom.cdx.json",
+    "sbom_component_count": 3,
+    "status": "ok"
+  },
+  "slug": "audio-source",
+  "source_repo": "https://github.com/gdzx/audiosource",
+  "source_tarball": {
+    "sha256": "677aae2c9423e377d430c58615212175ae1f8a79f6f55cb148a3c7fed9ec3646",
+    "size": 302015,
+    "url": "https://f-droid.org/repo/fr.dzx.audiosource_7_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 7,
+  "version_name": "1.5"
+}

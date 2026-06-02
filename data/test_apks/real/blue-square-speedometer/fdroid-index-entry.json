@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "added": 1642118400000,
+    "authorName": "nhirokinet",
+    "authorWebSite": "https://nhiroki.net/",
+    "categories": [
+      "Navigation"
+    ],
+    "description": {
+      "en-US": "Displays speed, altitude and current coordinates using device location provider.\n\nBlue Square Speedometer does not have network connection privilege, and does not have function to send information out of the device. Note that the information sent out by location provider itself of the device depends on OS setting.\n\n\nSource code: https://github.com/nhirokinet/bluesquarespeedometer\n",
+      "ja": "\u30c7\u30d0\u30a4\u30b9\u306e\u4f4d\u7f6e\u60c5\u5831\u3092\u5229\u7528\u3057\u3066\u901f\u5ea6\u3092\u8868\u793a\u3057\u307e\u3059\u3002\u9ad8\u5ea6\u3001\u73fe\u5728\u4f4d\u7f6e\u306e\u306e\u5ea7\u6a19\u306a\u3069\u3082\u8868\u793a\u3057\u307e\u3059\u3002\n\nBlue Square Speedometer \u306f\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u63a5\u7d9a\u6a29\u9650\u3092\u6301\u305f\u305a\u3001\u60c5\u5831\u3092\u7aef\u672b\u304b\u3089\u6301\u3061\u51fa\u3059\u6a5f\u80fd\u3082\u3042\u308a\u307e\u305b\u3093\u3002\u305f\u3060\u3057\u3001\u30c7\u30d0\u30a4\u30b9\u304b\u3089\u306e\u4f4d\u7f6e\u60c5\u5831\u53d6\u5f97\u6a5f\u80fd\u305d\u306e\u3082\u306e\u304c\u901a\u4fe1\u3092\u4f34\u3046\u304b\u3069\u3046\u304b\u306f OS \u306e\u8a2d\u5b9a\u306b\u4f9d\u5b58\u3057\u307e\u3059\u3002\n\n\n\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9: https://github.com/nhirokinet/bluesquarespeedometer",
+      "ko": "\uae30\uae30\uc758 \uc704\uce58 \uc815\ubcf4\ub97c \uc0ac\uc6a9\ud558\uc5ec \uc18d\ub3c4\ub97c \ud45c\uc2dc\ud569\ub2c8\ub2e4. \uace0\ub3c4, \ud604\uc7ac \uc704\uce58 \uc88c\ud45c \ub4f1\ub3c4 \ud45c\uc2dc\ud569\ub2c8\ub2e4.\n\nBlue Square Speedometer\ub294 \ub124\ud2b8\uc6cc\ud06c \uc5f0\uacb0 \uad8c\ud55c\uc744 \uac00\uc9c0\uc9c0 \uc54a\uace0, \uc811\ubcf4\ub97c \uae30\uae30\uc5d0\uc11c \ubc18\ucd9c\ud558\ub294 \uae30\ub2a5\uc774 \uc5c6\uc2b5\ub2c8\ub2e4. \ub2e4\ub9cc, \uae30\uae30 \uc704\uce58 \uae30\ub2a5 \uc790\uccb4\uac00 \ud1b5\uc2e0\uc744 \ud558\ub294\uc9c0\ub294 OS \uc124\uc815\uc5d0 \ub530\ub77c \ub2e4\ub985\ub2c8\ub2e4.\n\n\n\uc18c\uc2a4 \ucf54\ub4dc: https://github.com/nhirokinet/bluesquarespeedometer\n",
+      "ru": "\u041e\u0442\u043e\u0431\u0440\u0430\u0436\u0430\u0435\u0442 \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c, \u0432\u044b\u0441\u043e\u0442\u0443 \u0438 \u0442\u0435\u043a\u0443\u0449\u0438\u0435 \u043a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0442\u044b \u0441 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0435\u043c \u043f\u043e\u0441\u0442\u0430\u0432\u0449\u0438\u043a\u0430 \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430.\n\n\u042d\u0442\u043e\u0442 \u0421\u0438\u043d\u0438\u0439 \u043a\u0432\u0430\u0434\u0440\u0430\u0442\u043d\u044b\u0439 \u0441\u043f\u0438\u0434\u043e\u043c\u0435\u0442\u0440 \u043d\u0435 \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u044f \u0434\u043b\u044f \u0441\u0435\u0442\u0435\u0432\u043e\u0433\u043e \u0434\u043e\u0441\u0442\u0443\u043f\u0430 \u0438 \u043d\u0435 \u0438\u043c\u0435\u0435\u0442 \u0444\u0443\u043d\u043a\u0446\u0438\u0438 \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0438 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438 \u0438\u0437 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430. \u041e\u0431\u0440\u0430\u0442\u0438\u0442\u0435 \u0432\u043d\u0438\u043c\u0430\u043d\u0438\u0435, \u0447\u0442\u043e \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f, \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u043c\u0430\u044f \u043f\u043e\u0441\u0442\u0430\u0432\u0449\u0438\u043a\u043e\u043c \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u0441\u0430\u043c\u043e\u0433\u043e \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430, \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043e\u0442 \u043d\u0430\u0441\u0442\u0440\u043e\u0435\u043a \u041e\u0421.\n\n\n\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u043a\u043e\u0434: https://github.com/nhirokinet/bluesquarespeedometer\n"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/net.nhiroki.bluesquarespeedometer/en-US/icon_edH8w8Ifbam5ug3SWGL7U8fOkFw5j96Sg66TQKE4HEk=.png",
+        "sha256": "79d1fcc3c21f6da9b9ba0dd25862fb53c7ce905c398fde9283ae9340a1381c49",
+        "size": 26903
+      },
+      "ja": {
+        "name": "/net.nhiroki.bluesquarespeedometer/ja/icon_edH8w8Ifbam5ug3SWGL7U8fOkFw5j96Sg66TQKE4HEk=.png",
+        "sha256": "79d1fcc3c21f6da9b9ba0dd25862fb53c7ce905c398fde9283ae9340a1381c49",
+        "size": 26903
+      }
+    },
+    "issueTracker": "https://github.com/nhirokinet/bluesquarespeedometer/issues",
+    "lastUpdated": 1776079954992,
+    "license": "Apache-2.0",
+    "name": {
+      "en-US": "Blue Square Speedometer",
+      "ru": "\u0421\u0438\u043d\u0438\u0439 \u043a\u0432\u0430\u0434\u0440\u0430\u0442\u043d\u044b\u0439 \u0441\u043f\u0438\u0434\u043e\u043c\u0435\u0442\u0440"
+    },
+    "preferredSigner": "065a40754bf02c3677e3236c71d8afbef9bf19b2ef5f64ba71fcf4f9f74c6f2d",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/net.nhiroki.bluesquarespeedometer/en-US/phoneScreenshots/1.png",
+            "sha256": "27294245f67e88641e9afb2d6ceec5620b73a92c0af0833aeb7478ad4683e598",
+            "size": 133117
+          },
+          {
+            "name": "/net.nhiroki.bluesquarespeedometer/en-US/phoneScreenshots/2.png",
+            "sha256": "5e129152f3af5123d4ef0044783fe83ae413aa80faa097e78a4b4438dd144b1a",
+            "size": 46575
+          }
+        ],
+        "ja": [
+          {
+            "name": "/net.nhiroki.bluesquarespeedometer/ja/phoneScreenshots/1.png",
+            "sha256": "663ec049918ec94c34f99d5b0b8154c91cc81bc83709fe0fa0410734d2a74085",
+            "size": 139171
+          },
+          {
+            "name": "/net.nhiroki.bluesquarespeedometer/ja/phoneScreenshots/2.png",
+            "sha256": "5e129152f3af5123d4ef0044783fe83ae413aa80faa097e78a4b4438dd144b1a",
+            "size": 46575
+          }
+        ],
+        "ko": [
+          {
+            "name": "/net.nhiroki.bluesquarespeedometer/ko/phoneScreenshots/1.png",
+            "sha256": "971d73c6df408cc9d1498cc98ec5bd5e20b51f8fa6c7bd2ced5f538467cef488",
+            "size": 120883
+          },
+          {
+            "name": "/net.nhiroki.bluesquarespeedometer/ko/phoneScreenshots/2.png",
+            "sha256": "12a1afaa500878cecf8ec3c8839a680aa888e3f2aeb038cb17b24e39ea66bf2b",
+            "size": 32780
+          }
+        ],
+        "ru": [
+          {
+            "name": "/net.nhiroki.bluesquarespeedometer/ru/phoneScreenshots/1.png",
+            "sha256": "04ac9b6a684fbe20c6be070b42a0feec70aeaf8b3b2ce51ff9a1b8015c482f6a",
+            "size": 140198
+          },
+          {
+            "name": "/net.nhiroki.bluesquarespeedometer/ru/phoneScreenshots/2.png",
+            "sha256": "f4ab31bb4261fca7938d90b1317b07bcf2ef7a62fde54b2f5108c85bd9e05499",
+            "size": 32919
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/nhirokinet/bluesquarespeedometer",
+    "summary": {
+      "en-US": "Simple speedometer & GPS viewer",
+      "ja": "\u901f\u5ea6\u8a08\u30fbGPS \u30d3\u30e5\u30fc\u30a2",
+      "ko": "\uc18d\ub3c4\uacc4, GPS \ubdf0\uc5b4",
+      "ru": "\u041f\u0440\u043e\u0441\u0442\u043e\u0439 \u0441\u043f\u0438\u0434\u043e\u043c\u0435\u0442\u0440 \u0438 \u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c GPS"
+    }
+  },
+  "version": {
+    "added": 1776079954992,
+    "file": {
+      "ipfsCIDv1": "bafybeidbgsucvaesydcas4j3xxh7xhgxl353pqhj553ouy7dogg6az7fwy",
+      "name": "/net.nhiroki.bluesquarespeedometer_13.apk",
+      "sha256": "6105bcda289c1efe6c0af840a08ce3bb3f21b21e724b21aa8b65aa86892b5f7c",
+      "size": 818921
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "065a40754bf02c3677e3236c71d8afbef9bf19b2ef5f64ba71fcf4f9f74c6f2d"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "name": "net.nhiroki.bluesquarespeedometer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 23,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 13,
+      "versionName": "1.1.0"
+    },
+    "src": {
+      "name": "/net.nhiroki.bluesquarespeedometer_13_src.tar.gz",
+      "sha256": "38a0f55900a38c3b1599df7f070e0fe8e236e62015bc458d0a49f3babccefe9b",
+      "size": 689834
+    }
+  }
+}

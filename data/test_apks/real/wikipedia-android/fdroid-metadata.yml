@@ -1,0 +1,1063 @@
+AntiFeatures:
+  TetheredNet:
+    en-US: Depends on wikipedia.org which is free and open source, but is not changeable
+      by a user.
+  Tracking:
+    en-US: Analytics can't be disabled.
+Categories:
+  - Internet
+  - Reading
+  - Science & Education
+License: Apache-2.0
+AuthorName: Wikimedia
+AuthorWebSite: https://www.wikimedia.org/
+WebSite: https://www.mediawiki.org/wiki/Wikimedia_Apps
+SourceCode: https://github.com/wikimedia/apps-android-wikipedia
+IssueTracker: https://phabricator.wikimedia.org/project/profile/489/
+Translation: https://translatewiki.net/wiki/Translating:WikimediaMobile
+Changelog: https://www.mediawiki.org/wiki/Wikimedia_Apps/Team/Android#Updates
+Donate: https://donate.wikimedia.org
+
+AutoName: Wikipedia
+
+RepoType: git
+Repo: https://github.com/wikimedia/apps-android-wikipedia.git
+
+Builds:
+  - versionName: 2.0-r-2014-10-14
+    versionCode: 84
+    commit: r/2.0-r-2014-10-14
+    subdir: wikipedia
+    gradle:
+      - prod
+    srclibs:
+      - MediaWikiApi@32b5b87d0a57900eaa5d7e78d5623cd76f8951b3
+    forceversion: true
+    prebuild:
+      - sed -i -e '/wmflabs/d' -e '/jcenter/amavenLocal()' ../build.gradle
+      - pushd $$MediaWikiApi$$
+      - sed -i -e 
+        '/<plugins>/a<plugin><artifactId>maven-compiler-plugin</artifactId><version>3.0</version><configuration><source>1.7</source><target>1.7</target></configuration></plugin>'
+        pom.xml
+      - mvn install
+      - popd
+    antifeatures:
+      - Tracking
+
+  - versionName: 2.0.109-fdroid
+    versionCode: 109
+    commit: r/2.0.109-r-2015-08-21
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - custom
+    forceversion: true
+    gradleprops:
+      - customChannel=fdroid
+      - customApplicationId=org.wikipedia
+    antifeatures:
+      - Tracking
+
+  - versionName: 2.0.110-fdroid
+    versionCode: 110
+    commit: r/2.0.110-r-2015-08-31
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - custom
+    forceversion: true
+    gradleprops:
+      - customChannel=fdroid
+      - customApplicationId=org.wikipedia
+    antifeatures:
+      - Tracking
+
+  - versionName: 2.1.131-fdroid
+    versionCode: 131
+    commit: r/2.1.131-r-2015-09-28
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - custom
+    forceversion: true
+    gradleprops:
+      - customChannel=fdroid
+      - customApplicationId=org.wikipedia
+    antifeatures:
+      - Tracking
+
+  - versionName: 2.1.132-fdroid
+    versionCode: 132
+    commit: r/2.1.132-r-2015-10-23
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - custom
+    forceversion: true
+    gradleprops:
+      - customChannel=fdroid
+      - customApplicationId=org.wikipedia
+    antifeatures:
+      - Tracking
+
+  - versionName: 2.1.133-fdroid
+    versionCode: 133
+    commit: r/2.1.133-r-2015-10-26
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - custom
+    forceversion: true
+    gradleprops:
+      - customChannel=fdroid
+      - customApplicationId=org.wikipedia
+    antifeatures:
+      - Tracking
+
+  - versionName: 2.1.134-fdroid
+    versionCode: 134
+    commit: r/2.1.134-r-2015-11-12
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - custom
+    forceversion: true
+    gradleprops:
+      - customChannel=fdroid
+      - customApplicationId=org.wikipedia
+    antifeatures:
+      - Tracking
+
+  - versionName: 2.1.135-fdroid
+    versionCode: 135
+    commit: r/2.1.135-r-2015-12-03
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - custom
+    forceversion: true
+    gradleprops:
+      - customChannel=fdroid
+      - customApplicationId=org.wikipedia
+    antifeatures:
+      - Tracking
+
+  - versionName: 2.1.136-fdroid
+    versionCode: 136
+    commit: r/2.1.136-r-2015-12-09
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - custom
+    forceversion: true
+    gradleprops:
+      - customChannel=fdroid
+      - customApplicationId=org.wikipedia
+    antifeatures:
+      - Tracking
+
+  - versionName: 2.1.137-fdroid
+    versionCode: 137
+    commit: r/2.1.137-r-2016-01-11
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - custom
+    forceversion: true
+    gradleprops:
+      - customChannel=fdroid
+      - customApplicationId=org.wikipedia
+    antifeatures:
+      - Tracking
+
+  - versionName: 2.1.139-fdroid
+    versionCode: 139
+    commit: r/2.1.139-r-2016-01-22
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - custom
+    forceversion: true
+    gradleprops:
+      - customChannel=fdroid
+      - customApplicationId=org.wikipedia
+    antifeatures:
+      - Tracking
+
+  - versionName: 2.1.140-fdroid
+    versionCode: 140
+    commit: r/2.1.140-r-2016-02-04
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - custom
+    forceversion: true
+    gradleprops:
+      - customChannel=fdroid
+      - customApplicationId=org.wikipedia
+    antifeatures:
+      - Tracking
+
+  - versionName: 2.1.141-fdroid
+    versionCode: 141
+    commit: r/2.1.141-r-2016-02-10
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - custom
+    forceversion: true
+    gradleprops:
+      - customChannel=fdroid
+      - customApplicationId=org.wikipedia
+    antifeatures:
+      - Tracking
+
+  - versionName: 2.1.143-fdroid
+    versionCode: 143
+    commit: r/2.1.143-r-2016-03-23
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    antifeatures:
+      - Tracking
+
+  - versionName: 2.3.150-fdroid
+    versionCode: 150
+    commit: r/2.3.150-r-2016-07-25
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    antifeatures:
+      - Tracking
+
+  - versionName: r/2.3.152-r-2016-08-18
+    versionCode: 152
+    commit: r/2.3.152-r-2016-08-18
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    antifeatures:
+      - Tracking
+
+  - versionName: r/2.4.157-r-2016-09-28
+    versionCode: 157
+    commit: r/2.4.157-r-2016-09-28
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    antifeatures:
+      - Tracking
+
+  - versionName: r/2.4.160-r-2016-10-14
+    versionCode: 160
+    commit: r/2.4.160-r-2016-10-14
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    antifeatures:
+      - Tracking
+
+  - versionName: r/2.4.183-r-2016-12-08
+    versionCode: 183
+    commit: r/2.4.183-r-2016-12-08
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    antifeatures:
+      - Tracking
+
+  - versionName: r/2.4.184-r-2016-12-14
+    versionCode: 184
+    commit: r/2.4.184-r-2016-12-14
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    antifeatures:
+      - Tracking
+
+  - versionName: r/2.5.190-r-2017-02-24
+    versionCode: 190
+    commit: r/2.5.190-r-2017-02-24
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    antifeatures:
+      - Tracking
+
+  - versionName: r/2.5.191-r-2017-03-31
+    versionCode: 191
+    commit: r/2.5.191-r-2017-03-31
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    antifeatures:
+      - Tracking
+
+  - versionName: r/2.5.195-r-2017-04-21
+    versionCode: 194
+    commit: r/2.5.195-r-2017-04-21
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    antifeatures:
+      - Tracking
+
+  - versionName: r/2.6.203-r-2017-08-28
+    versionCode: 203
+    commit: r/2.6.203-r-2017-08-28
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    antifeatures:
+      - Tracking
+
+  - versionName: r/2.7.222-r-2017-12-15
+    versionCode: 222
+    commit: r/2.7.222-r-2017-12-15
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+
+  - versionName: r/2.7.225-r-2018-02-06
+    versionCode: 225
+    commit: r/2.7.225-r-2018-02-06
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+
+  - versionName: r/2.7.231-r-2018-04-09
+    versionCode: 231
+    commit: r/2.7.231-r-2018-04-09
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+
+  - versionName: r/2.7.232-r-2018-04-17
+    versionCode: 232
+    commit: r/2.7.232-r-2018-04-17
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+
+  - versionName: r/2.7.236-r-2018-06-25
+    versionCode: 236
+    commit: r/2.7.236-r-2018-06-25
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.237-r-2018-06-27
+    versionCode: 237
+    commit: r/2.7.237-r-2018-06-27
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.238-r-2018-07-30
+    versionCode: 238
+    commit: r/2.7.238-r-2018-07-30
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.239-r-2018-07-31
+    versionCode: 239
+    commit: r/2.7.239-r-2018-07-31
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.260-r-2018-10-19
+    versionCode: 260
+    commit: r/2.7.260-r-2018-10-19
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.261-r-2018-10-23
+    versionCode: 261
+    commit: r/2.7.261-r-2018-10-23
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.262-r-2018-10-24
+    versionCode: 262
+    commit: r/2.7.262-r-2018-10-24
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.263-r-2018-10-29
+    versionCode: 263
+    commit: r/2.7.263-r-2018-10-29
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.265-r-2018-11-19
+    versionCode: 265
+    commit: r/2.7.265-r-2018-11-19
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.266-r-2018-11-26
+    versionCode: 266
+    commit: r/2.7.266-r-2018-11-26
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.268-r-2018-12-07
+    versionCode: 268
+    commit: r/2.7.268-r-2018-12-07
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.270-r-2019-02-26
+    versionCode: 270
+    commit: r/2.7.270-r-2019-02-26
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.273-r-2019-03-22
+    versionCode: 273
+    commit: r/2.7.273-r-2019-03-22
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.275-r-2019-03-25
+    versionCode: 275
+    commit: r/2.7.275-r-2019-03-25
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.276-r-2019-03-27
+    versionCode: 276
+    commit: r/2.7.276-r-2019-03-27
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.278-r-2019-04-05
+    versionCode: 278
+    commit: r/2.7.278-r-2019-04-05
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.279-r-2019-04-22
+    versionCode: 279
+    commit: r/2.7.279-r-2019-04-22
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.280-r-2019-05-01
+    versionCode: 280
+    commit: r/2.7.280-r-2019-05-01
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.50282-r-2019-05-24
+    versionCode: 50282
+    commit: r/2.7.50282-r-2019-05-24
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.50308-r-2020-01-06
+    versionCode: 50308
+    commit: r/2.7.50308-r-2020-01-06
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+
+  - versionName: r/2.7.50320-r-2020-05-20
+    versionCode: 50320
+    commit: r/2.7.50320-r-2020-05-20
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: r/2.7.50322-r-2020-06-08
+    versionCode: 50322
+    commit: r/2.7.50322-r-2020-06-08
+    subdir: app
+    init: sed -i '/sonatype/d' ../build.gradle
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/defaultConfig {/a ndk{abiFilters
+      "arm64-v8a", "armeabi-v7a", "x86", "x86_64"}' build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: r/2.7.50324-r-2020-06-29
+    versionCode: 50324
+    commit: r/2.7.50324-r-2020-06-29
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+
+  - versionName: r/2.7.50495-r-2024-07-23
+    versionCode: 50495
+    commit: f34eb5f9bf95baacdc7c005128e4a69ae5e734bd
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+
+  - versionName: r/2.7.50498-r-2024-08-19
+    versionCode: 50498
+    commit: f5177a97ace43e1b9bd2c88f819315df2478c11a
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+
+  - versionName: r/2.7.50504-r-2024-10-01
+    versionCode: 50504
+    commit: 0ff4e478eb131bd697eba9144abffb252648fc5e
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/com.google.gms.google-services/d'
+        build.gradle ../build.gradle
+
+  - versionName: r/2.7.50506-r-2024-10-08
+    versionCode: 50506
+    commit: 9fac4e66da3a8f9a6a5633ab13d8569dd3f049d4
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50507-r-2024-10-21
+    versionCode: 50507
+    commit: 9fb51b2b8110c9488bcfed9523ea3b24c730d87a
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50508-r-2024-11-06
+    versionCode: 50508
+    commit: 0046cf185e916cdac3fad1200026653fb6ed16c6
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50514-r-2024-12-11
+    versionCode: 50514
+    commit: 1ea218f144be524f2b85b1612ee2da37bef2a266
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50515-r-2024-12-16
+    versionCode: 50515
+    commit: 53beda93a5d3814cd1f325774dec75bcb703f4f2
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50517-r-2025-01-21
+    versionCode: 50517
+    commit: 2753fd234b30f7afb24b3a674e6506c5df337929
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50519-r-2025-01-30
+    versionCode: 50519
+    commit: ace85012ce2728f5238c86e45804c2c60e0db711
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50522-r-2025-02-20
+    versionCode: 50522
+    commit: e94fed1369278635af8b48eb37aca3d58ae949ea
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50524-r-2025-03-04
+    versionCode: 50524
+    commit: 7730f3916a7d95c1f5fd9050a878e08457e942ab
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50528-r-2025-04-15
+    versionCode: 50528
+    commit: 31721cbb403478906c751dca9b54c177fa96b6cb
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50529-r-2025-04-21
+    versionCode: 50529
+    commit: f5a881bf8f5763d6f2cb1e78f75d3acd0e82baa4
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50530-r-2025-05-02
+    versionCode: 50530
+    commit: 4ab7c9706e68d7cca8a54c302b6db60b3d083935
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50532-r-2025-05-20
+    versionCode: 50532
+    commit: 9448cfe0c0db45f76b040a14ae767bec1c9f3f53
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50536-r-2025-06-18
+    versionCode: 50536
+    commit: 72ea5b807a3d626c50d19266df460dc467abbca0
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50538-r-2025-06-24
+    versionCode: 50538
+    commit: 32dced051a5c30d3bd470f8fd6576e6afec5ce0d
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50540-r-2025-07-08
+    versionCode: 50540
+    commit: 3551b3d101fc0649f964864e448f7412ec6b4136
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50543-r-2025-07-31
+    versionCode: 50543
+    commit: 07e0ffd0e3677ed6c8c62eb818257414ff37dc9c
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50549-r-2025-09-17
+    versionCode: 50549
+    commit: 7eea65315efd05c658b86a67e852986c8a48f511
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+      - sed -i '/gradle/s/8.13.0/8.11.1/' ../gradle/libs.versions.toml
+
+  - versionName: r/2.7.50550-r-2025-09-22
+    versionCode: 50550
+    commit: 6484b1a1491748cf99c75d55aa022e69c66d6986
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+      - sed -i '/gradle/s/8.13.0/8.11.1/' ../gradle/libs.versions.toml
+
+  - versionName: r/2.7.50555-r-2025-11-03
+    versionCode: 50555
+    commit: 65b99afa5f7f3142c1657d5eca164abc28d94356
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50559-r-2025-11-24
+    versionCode: 50559
+    commit: 696ff71b9f9b3c406152748613e77bfe3b43010f
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/50561-r-2025-12-03
+    versionCode: 50561
+    commit: 0d7167af1a92e804fbe77de08e5e2e3326286b5c
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/50562-r-2025-12-08
+    versionCode: 50562
+    commit: 39fc0c427ecc3eddcf036eaa347e211ad1711552
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/50563-r-2025-12-11
+    versionCode: 50563
+    commit: 8252044d2f9f44d53fdfb4ead1b73408bb770b93
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/50564-r-2025-12-15
+    versionCode: 50564
+    commit: d1fb604131250e2e21494915ecf42d038665c400
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/50565-r-2026-01-12
+    versionCode: 50565
+    commit: 76ceafa9b0edcb5d3a60ab337b907dfca552c0d8
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/50566-r-2026-02-04
+    versionCode: 50566
+    commit: 6a085362ecf74ff69a3abf689038ba2882976c07
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/50569-r-2026-03-03
+    versionCode: 50569
+    commit: 0e5261db2e18ec86e6a087116105f5f13b454533
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+
+  - versionName: r/50572-r-2026-03-17
+    versionCode: 50572
+    commit: bb6a74a05b5b09f5bcc14627379da8f54d08b91c
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+
+  - versionName: r/50573-r-2026-03-19
+    versionCode: 50573
+    commit: 5e19b9bd77e82fcabc5e052810aa1d6de264e6a6
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+
+  - versionName: r/50574-r-2026-03-20
+    versionCode: 50574
+    commit: 2c086856d4840f854fb9fb456ae3b4db055f1183
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+
+  - versionName: r/50575-r-2026-03-26
+    versionCode: 50575
+    commit: 743c5658f21001eceaae034ac7fb347873d86fa5
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+
+  - versionName: r/50579-r-2026-04-14
+    versionCode: 50579
+    commit: b74f202c37c50d9136a6bc9b632b47336ad21645
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+
+  - versionName: r/50585-r-2026-05-06
+    versionCode: 50585
+    commit: f730d59705224aca1c8d96a6dfec3cf46264abde
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+
+  - versionName: r/50586-r-2026-05-12
+    versionCode: 50586
+    commit: 40876929c5a84e1a1f968b29184c245582c7ff9a
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+
+MaintainerNotes: |-
+  * whitelist app/build.gradle for microsoft appcenter SDK. It's actually open source but might
+    pull in google dependencies. In this case it doesn't
+    Ref: https://phabricator.wikimedia.org/T254980
+  * versionname is timebased and generated on build; force it. Also remove the timestamp.
+  * we disable gradle abi splits because using the universal apk is easier for us for now.
+  * ndk abifilters line is added as otherwise stray mips/armeabi .so files are added to the apk
+  * Since version 2.7 the log can be disabled on the start guide so Tracking AF is removed.
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^r
+CurrentVersion: r/50586-r-2026-05-12
+CurrentVersionCode: 50586

@@ -1,0 +1,86 @@
+{
+  "selections": [
+    {
+      "app": "yetCalc",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "calculator",
+        "science-education",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "yetzio.yetcalc",
+      "reason": "No-native modern calculator/unit-converter app with source tarball metadata and a non-trivial APK size; candidate for clean non-sparse Maven evidence.",
+      "slug": "yetcalc",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Loop Habit Tracker",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "habit-tracker",
+        "sports-health",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.isoron.uhabits",
+      "reason": "No-native maintained habit-tracking app with source tarball metadata and a moderate APK/source size; useful health/productivity candidate.",
+      "slug": "loop-habit-tracker",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "QuickDic",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "dictionary",
+        "reader",
+        "science-education",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "de.reimardoeffinger.quickdic",
+      "reason": "No-native dictionary/reader app with source tarball metadata and enough APK size to expose richer Java/Kotlin Maven evidence if present.",
+      "slug": "quickdic",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Cirrus",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "weather",
+        "internet",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.woheller69.omweather",
+      "reason": "No-native weather app with source tarball metadata; adds a compact internet/weather family to the clean-candidate search.",
+      "slug": "cirrus",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "AFWall+",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "security",
+        "firewall",
+        "internet",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "dev.ukanth.ufirewall",
+      "reason": "No-native firewall/security app with source tarball metadata; tests another security family without native library claims.",
+      "slug": "afwall-plus",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    }
+  ]
+}

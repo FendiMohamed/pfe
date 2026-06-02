@@ -1,0 +1,43 @@
+
+Welcome to Gradle 9.5.0!
+
+Here are the highlights of this release:
+ - Task provenance in reports and failure messages
+ - Type-safe accessors for precompiled Kotlin Settings plugins
+
+For more details see https://docs.gradle.org/9.5.0/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.5.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :buildSrc:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :buildSrc:compileKotlin
+> Task :buildSrc:pluginDescriptors
+> Task :buildSrc:processResources NO-SOURCE
+> Task :buildSrc:compileJava NO-SOURCE
+> Task :buildSrc:compileGroovy NO-SOURCE
+> Task :buildSrc:classes UP-TO-DATE
+
+> Task :buildSrc:jar
+:jar: No valid plugin descriptors were found in META-INF/gradle-plugins
+
+> Configure project :
+w: file:///tmp/stt/com.razeeman.util.simpletimetracker_139_src.tar.gz/build.gradle.kts:24:16: 'var buildDir: File' is deprecated. Deprecated in Java.
+
+> Configure project :app
+WARNING: BuildType 'debug' is both debuggable and has 'isMinifyEnabled' set to true.
+Debuggable builds are no longer name minified and all code optimizations and obfuscation will be disabled.
+WARNING: BuildType 'debug' is both debuggable and has 'isMinifyEnabled' set to true.
+Debuggable builds are no longer name minified and all code optimizations and obfuscation will be disabled.
+
+> Configure project :wear
+WARNING: BuildType 'debug' is both debuggable and has 'isMinifyEnabled' set to true.
+Debuggable builds are no longer name minified and all code optimizations and obfuscation will be disabled.
+
+[Incubating] Problems report is available at: file:///tmp/stt/com.razeeman.util.simpletimetracker_139_src.tar.gz/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.5.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+3 actionable tasks: 3 executed

@@ -1,0 +1,64 @@
+{
+  "apk": {
+    "expected_sha256": "2c7f5fd4872da25115bb8e5e62f92de94dda47b0f249ff387ac667b13871dc3e",
+    "index_size": 17491108,
+    "path": "data/test_apks/real/localsend/localsend.apk",
+    "sha256": "2c7f5fd4872da25115bb8e5e62f92de94dda47b0f249ff387ac667b13871dc3e",
+    "size": 17491108,
+    "url": "https://f-droid.org/repo/org.localsend.localsend_app_583.apk"
+  },
+  "app": "LocalSend",
+  "categories": [
+    "Connectivity",
+    "File Transfer"
+  ],
+  "classifications": [
+    "flutter",
+    "framework-boundary",
+    "file-transfer",
+    "modern",
+    "native-so",
+    "r8-likely"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/org.localsend.localsend_app/",
+  "license": "Apache-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [
+    "arm64-v8a"
+  ],
+  "package_name": "org.localsend.localsend_app",
+  "proof_status": "report-generated",
+  "reason": "Flutter/file-transfer app that exercises framework-boundary behavior and native artifacts.",
+  "report": {
+    "detected_component_count": 4,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/real-apk-growth-batch-v2/report-real-localsend",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/real-apk-growth-batch-v2/report-real-localsend/report.html",
+    "json": "data/results/evaluation/real-apk-growth-batch-v2/report-real-localsend/report.json",
+    "native_library_count": 4,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/real-apk-growth-batch-v2/report-real-localsend/sbom.cdx.json",
+    "sbom_component_count": 8,
+    "status": "ok"
+  },
+  "slug": "localsend",
+  "source_repo": "https://github.com/localsend/localsend",
+  "source_tarball": {
+    "sha256": "7128b875b5fddd1b0b722dd70da9373a4c4c16ebcd4fd3c16fcdac3a3ecfa0cc",
+    "size": 454005642,
+    "url": "https://f-droid.org/repo/org.localsend.localsend_app_583_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "smoke-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 583,
+  "version_name": "1.17.0"
+}

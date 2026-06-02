@@ -1,0 +1,81 @@
+﻿{
+  "apk_path": "data/test_apks/real/newpipe/newpipe.apk",
+  "apk_sha256": "dbc8a1bb7a3db16f1d2fa9f96157171cc80453d1ff6e51108e73c007ea05cf87",
+  "apk_size": 10881466,
+  "dex_files": [
+    "classes.dex",
+    "classes2.dex"
+  ],
+  "forensic_summary": {
+    "extraction_risk": "low",
+    "indicators": [],
+    "native_abis": [
+      "arm64-v8a",
+      "armeabi-v7a",
+      "x86",
+      "x86_64"
+    ],
+    "native_library_count": 4,
+    "nonstandard_dex_files": [],
+    "standard_dex_files": [
+      "classes.dex",
+      "classes2.dex"
+    ],
+    "zip_entries": 1351
+  },
+  "has_multidex": true,
+  "manifest_metadata": {
+    "min_sdk": "21",
+    "package_name": "org.schabi.newpipe",
+    "parse_error": null,
+    "parse_status": "parsed",
+    "permissions": [
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+      "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "android.permission.INTERNET",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.SYSTEM_ALERT_WINDOW",
+      "android.permission.WAKE_LOCK",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "org.schabi.newpipe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "target_sdk": "35",
+    "version_code": "1010",
+    "version_name": "0.28.5"
+  },
+  "manifest_present": true,
+  "native_libraries": [
+    {
+      "abi": "arm64-v8a",
+      "filename": "libandroidx.graphics.path.so",
+      "path": "lib/arm64-v8a/libandroidx.graphics.path.so",
+      "sha256": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+      "size": 10096
+    },
+    {
+      "abi": "armeabi-v7a",
+      "filename": "libandroidx.graphics.path.so",
+      "path": "lib/armeabi-v7a/libandroidx.graphics.path.so",
+      "sha256": "41399eba6fc2a60f6f14642375c1824f3cf25eb8fec7397d753730a3ceda3e2b",
+      "size": 7252
+    },
+    {
+      "abi": "x86",
+      "filename": "libandroidx.graphics.path.so",
+      "path": "lib/x86/libandroidx.graphics.path.so",
+      "sha256": "eb0570b41fd3bff25d8204a967c03bd7550719e768b791f680cc40cbe35f29af",
+      "size": 9284
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libandroidx.graphics.path.so",
+      "path": "lib/x86_64/libandroidx.graphics.path.so",
+      "sha256": "4e56c996f13670e70082658de7880c4020eabf4f25e43387f88ed78a713fc9f0",
+      "size": 10760
+    }
+  ],
+  "resources_arsc_present": true
+}

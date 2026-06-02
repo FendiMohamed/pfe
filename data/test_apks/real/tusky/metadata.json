@@ -1,0 +1,168 @@
+﻿{
+  "apk_path": "data/test_apks/real/tusky/tusky.apk",
+  "apk_sha256": "3e8fcc49a80d4c30ab6f6037e51402c77e2694d27ec19ae5b8a93cd08b6caffa",
+  "apk_size": 22364055,
+  "dex_files": [
+    "classes.dex"
+  ],
+  "forensic_summary": {
+    "extraction_risk": "low",
+    "indicators": [
+      {
+        "code": "native-heavy",
+        "detail": "APK contains 16 native libraries.",
+        "severity": "info"
+      }
+    ],
+    "native_abis": [
+      "arm64-v8a",
+      "armeabi-v7a",
+      "x86",
+      "x86_64"
+    ],
+    "native_library_count": 16,
+    "nonstandard_dex_files": [],
+    "standard_dex_files": [
+      "classes.dex"
+    ],
+    "zip_entries": 1503
+  },
+  "has_multidex": false,
+  "manifest_metadata": {
+    "min_sdk": "24",
+    "package_name": "com.keylesspalace.tusky",
+    "parse_error": null,
+    "parse_status": "parsed",
+    "permissions": [
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.INTERNET",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.VIBRATE",
+      "android.permission.WAKE_LOCK",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "com.keylesspalace.tusky.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "target_sdk": "36",
+    "version_code": "142",
+    "version_name": "32.2"
+  },
+  "manifest_present": true,
+  "native_libraries": [
+    {
+      "abi": "arm64-v8a",
+      "filename": "libandroidx.graphics.path.so",
+      "path": "lib/arm64-v8a/libandroidx.graphics.path.so",
+      "sha256": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+      "size": 10096
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libanimation-decoder-gif.so",
+      "path": "lib/arm64-v8a/libanimation-decoder-gif.so",
+      "sha256": "1a36faccdc2df2d03b399bd20113768f04fe5f9c873c32974d89e588f63b6933",
+      "size": 275368
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libavif_android.so",
+      "path": "lib/arm64-v8a/libavif_android.so",
+      "sha256": "278211a4aa0fe5034aef8ef9717736242b3b6868708dcd1e1b6d941c5f05150c",
+      "size": 899752
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libconscrypt_jni.so",
+      "path": "lib/arm64-v8a/libconscrypt_jni.so",
+      "sha256": "fd5a080ced130e2c2e7982cb9c82b5601fc84df61f41129dd0d3ecdbf2c96155",
+      "size": 2103592
+    },
+    {
+      "abi": "armeabi-v7a",
+      "filename": "libandroidx.graphics.path.so",
+      "path": "lib/armeabi-v7a/libandroidx.graphics.path.so",
+      "sha256": "41399eba6fc2a60f6f14642375c1824f3cf25eb8fec7397d753730a3ceda3e2b",
+      "size": 7252
+    },
+    {
+      "abi": "armeabi-v7a",
+      "filename": "libanimation-decoder-gif.so",
+      "path": "lib/armeabi-v7a/libanimation-decoder-gif.so",
+      "sha256": "750f811d54bd64e2f1e307de7162caaf05c89a111a1d785e6e3312b2d9aa03a2",
+      "size": 161752
+    },
+    {
+      "abi": "armeabi-v7a",
+      "filename": "libavif_android.so",
+      "path": "lib/armeabi-v7a/libavif_android.so",
+      "sha256": "83d0a97055eece4ee47a340504eae7cf8185522f64b0353507839ebf59da8946",
+      "size": 691804
+    },
+    {
+      "abi": "armeabi-v7a",
+      "filename": "libconscrypt_jni.so",
+      "path": "lib/armeabi-v7a/libconscrypt_jni.so",
+      "sha256": "009ee440620105adefff81c5af4fafd23aebefff5b8d03d7180212c02983b532",
+      "size": 1284028
+    },
+    {
+      "abi": "x86",
+      "filename": "libandroidx.graphics.path.so",
+      "path": "lib/x86/libandroidx.graphics.path.so",
+      "sha256": "eb0570b41fd3bff25d8204a967c03bd7550719e768b791f680cc40cbe35f29af",
+      "size": 9284
+    },
+    {
+      "abi": "x86",
+      "filename": "libanimation-decoder-gif.so",
+      "path": "lib/x86/libanimation-decoder-gif.so",
+      "sha256": "520a7dab587fef0bc30f83338d5c6ff787a5824f034eea276723f9c02b5073b7",
+      "size": 240852
+    },
+    {
+      "abi": "x86",
+      "filename": "libavif_android.so",
+      "path": "lib/x86/libavif_android.so",
+      "sha256": "8400d6ae3b1feca6e0cc3eb3965568095c050a46dd571be4d18b1c04a13b9d93",
+      "size": 1212276
+    },
+    {
+      "abi": "x86",
+      "filename": "libconscrypt_jni.so",
+      "path": "lib/x86/libconscrypt_jni.so",
+      "sha256": "a005cac24028f662269e969b13bca38fa7f759e1479eecbd4e48dba9cfdc889b",
+      "size": 2267028
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libandroidx.graphics.path.so",
+      "path": "lib/x86_64/libandroidx.graphics.path.so",
+      "sha256": "4e56c996f13670e70082658de7880c4020eabf4f25e43387f88ed78a713fc9f0",
+      "size": 10760
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libanimation-decoder-gif.so",
+      "path": "lib/x86_64/libanimation-decoder-gif.so",
+      "sha256": "ac33356aa5d6fc6d8c749e95192440a693f5095f1532e2405cc133fab78e493c",
+      "size": 261216
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libavif_android.so",
+      "path": "lib/x86_64/libavif_android.so",
+      "sha256": "d63e4fe8cba8992b28a4497b9a174c0549ed875ec4b28115ec7cf6c55136c5a4",
+      "size": 1892960
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libconscrypt_jni.so",
+      "path": "lib/x86_64/libconscrypt_jni.so",
+      "sha256": "9ee2eccb596cbbf5316572c11efa5ce4c2612ceba540c215b360e2750a665d87",
+      "size": 2501432
+    }
+  ],
+  "resources_arsc_present": true
+}

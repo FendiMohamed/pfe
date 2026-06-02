@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "added": 1666677419000,
+    "authorEmail": "alexei.ivanovski@gmail.com",
+    "authorName": "Aleksey Ivanovsky",
+    "categories": [
+      "Password & 2FA",
+      "Security"
+    ],
+    "changelog": "https://github.com/aivanovski/kpassnotes/releases",
+    "description": {
+      "en-US": "Client app for KeePass databases.\n\nThis app is orientated for my personal use. It may have some bugs, so please make a backup before using it.\n\nApplication Features:\n\nSynchronization:\n - Sync with WebDav server\n - Sync with Git repository (only via HTTPS, SSH protocol is not available)\n\nDatabase Management:\n - Create new databases\n - Edit existing databases\n - Manage entry history\n - Manage attachments\n - Dynamic templates (compatible with other android applications: KeePassDX, keepass2android)\n\nAdvanced Database Tools:\n - Built-in diff viewer for database changes\n - TOTP (Time-based One-Time Password) and HOTP (HMAC-based One-Time Password) support for Two-Factor Authentication (2FA)\n\nSecurity Features:\n - Unlock using password or key file\n - Supports biometric unlock (fingerprint)\n\nFile Compatibility:\n - Supports .kdbx files up to version 4.1\n\nUser Convenience:\n - Autofill for Android >= 8.0\n - Dark theme (controlled by system settings)\n - Fuzzy search for easy finding of entries\n",
+      "uk-UA": "\u041a\u043b\u0456\u0454\u043d\u0442\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0441\u0442\u043e\u0441\u0443\u043d\u043e\u043a \u0434\u043b\u044f \u0431\u0430\u0437 \u0434\u0430\u043d\u0438\u0445 KeePass.\n\n\u0426\u044f \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u0430 \u043f\u0440\u0438\u0437\u043d\u0430\u0447\u0435\u043d\u0430 \u0434\u043b\u044f \u043c\u043e\u0433\u043e \u043e\u0441\u043e\u0431\u0438\u0441\u0442\u043e\u0433\u043e \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u043d\u043d\u044f. \u0412\u043e\u043d\u0430 \u043c\u043e\u0436\u0435 \u043c\u0456\u0441\u0442\u0438\u0442\u0438 \u0434\u0435\u044f\u043a\u0456 \u043f\u043e\u043c\u0438\u043b\u043a\u0438, \u0442\u043e\u043c\u0443 \u043f\u0435\u0440\u0435\u0434 \u0432\u0438\u043a\u043e\u0440\u0438\u0441\u0442\u0430\u043d\u043d\u044f\u043c \u0437\u0440\u043e\u0431\u0456\u0442\u044c \u0440\u0435\u0437\u0435\u0440\u0432\u043d\u0443 \u043a\u043e\u043f\u0456\u044e.\n\n\u0424\u0443\u043d\u043a\u0446\u0456\u0457 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u0438:\n\n\u0421\u0438\u043d\u0445\u0440\u043e\u043d\u0456\u0437\u0430\u0446\u0456\u044f:\n - \u0421\u0438\u043d\u0445\u0440\u043e\u043d\u0456\u0437\u0430\u0446\u0456\u044f \u0437 \u0441\u0435\u0440\u0432\u0435\u0440\u043e\u043c WebDav\n - \u0421\u0438\u043d\u0445\u0440\u043e\u043d\u0456\u0437\u0430\u0446\u0456\u044f \u0437 \u0440\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0456\u0454\u043c Git (\u0442\u0456\u043b\u044c\u043a\u0438 \u0447\u0435\u0440\u0435\u0437 HTTPS, \u043f\u0440\u043e\u0442\u043e\u043a\u043e\u043b SSH \u043d\u0435\u0434\u043e\u0441\u0442\u0443\u043f\u043d\u0438\u0439)\n\n\u0423\u043f\u0440\u0430\u0432\u043b\u0456\u043d\u043d\u044f \u0431\u0430\u0437\u0430\u043c\u0438 \u0434\u0430\u043d\u0438\u0445:\n - \u0421\u0442\u0432\u043e\u0440\u0435\u043d\u043d\u044f \u043d\u043e\u0432\u0438\u0445 \u0431\u0430\u0437 \u0434\u0430\u043d\u0438\u0445\n - \u0420\u0435\u0434\u0430\u0433\u0443\u0432\u0430\u043d\u043d\u044f \u0456\u0441\u043d\u0443\u044e\u0447\u0438\u0445 \u0431\u0430\u0437 \u0434\u0430\u043d\u0438\u0445\n - \u0423\u043f\u0440\u0430\u0432\u043b\u0456\u043d\u043d\u044f \u0456\u0441\u0442\u043e\u0440\u0456\u0454\u044e \u0432\u043d\u0435\u0441\u0435\u043d\u044c\n - \u0423\u043f\u0440\u0430\u0432\u043b\u0456\u043d\u043d\u044f \u0432\u043a\u043b\u0430\u0434\u0435\u043d\u043d\u044f\u043c\u0438\n - \u0414\u0438\u043d\u0430\u043c\u0456\u0447\u043d\u0456 \u0448\u0430\u0431\u043b\u043e\u043d\u0438 (\u0441\u0443\u043c\u0456\u0441\u043d\u0456 \u0437 \u0456\u043d\u0448\u0438\u043c\u0438 \u0434\u043e\u0434\u0430\u0442\u043a\u0430\u043c\u0438 \u0434\u043b\u044f Android: KeePassDX, keepass2android)\n\n\u0420\u043e\u0437\u0448\u0438\u0440\u0435\u043d\u0456 \u0456\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0438 \u0440\u043e\u0431\u043e\u0442\u0438 \u0437 \u0431\u0430\u0437\u0430\u043c\u0438 \u0434\u0430\u043d\u0438\u0445:\n - \u0412\u0431\u0443\u0434\u043e\u0432\u0430\u043d\u0438\u0439 \u043f\u0435\u0440\u0435\u0433\u043b\u044f\u0434\u0430\u0447 \u0437\u043c\u0456\u043d \u0443 \u0431\u0430\u0437\u0456 \u0434\u0430\u043d\u0438\u0445\n - \u041f\u0456\u0434\u0442\u0440\u0438\u043c\u043a\u0430 TOTP (\u043e\u0434\u043d\u043e\u0440\u0430\u0437\u043e\u0432\u0438\u0439 \u043f\u0430\u0440\u043e\u043b\u044c \u043d\u0430 \u043e\u0441\u043d\u043e\u0432\u0456 \u0447\u0430\u0441\u0443) \u0442\u0430 HOTP (\u043e\u0434\u043d\u043e\u0440\u0430\u0437\u043e\u0432\u0438\u0439 \u043f\u0430\u0440\u043e\u043b\u044c \u043d\u0430 \u043e\u0441\u043d\u043e\u0432\u0456 HMAC) \u0434\u043b\u044f \u0434\u0432\u043e\u0444\u0430\u043a\u0442\u043e\u0440\u043d\u043e\u0457 \u0430\u0432\u0442\u0435\u043d\u0442\u0438\u0444\u0456\u043a\u0430\u0446\u0456\u0457 (2FA)\n\n\u0424\u0443\u043d\u043a\u0446\u0456\u0457 \u0431\u0435\u0437\u043f\u0435\u043a\u0438:\n - \u0420\u043e\u0437\u0431\u043b\u043e\u043a\u0443\u0432\u0430\u043d\u043d\u044f \u0437\u0430 \u0434\u043e\u043f\u043e\u043c\u043e\u0433\u043e\u044e \u043f\u0430\u0440\u043e\u043b\u044f \u0430\u0431\u043e \u0444\u0430\u0439\u043b\u0443 \u043a\u043b\u044e\u0447\u0430\n - \u041f\u0456\u0434\u0442\u0440\u0438\u043c\u043a\u0430 \u0431\u0456\u043e\u043c\u0435\u0442\u0440\u0438\u0447\u043d\u043e\u0433\u043e \u0440\u043e\u0437\u0431\u043b\u043e\u043a\u0443\u0432\u0430\u043d\u043d\u044f (\u0432\u0456\u0434\u0431\u0438\u0442\u043e\u043a \u043f\u0430\u043b\u044c\u0446\u044f)\n\n\u0421\u0443\u043c\u0456\u0441\u043d\u0456\u0441\u0442\u044c \u0444\u0430\u0439\u043b\u0456\u0432:\n - \u041f\u0456\u0434\u0442\u0440\u0438\u043c\u043a\u0430 \u0444\u0430\u0439\u043b\u0456\u0432 .kdbx \u0434\u043e \u0432\u0435\u0440\u0441\u0456\u0457 4.1\n\n\u0417\u0440\u0443\u0447\u043d\u0456\u0441\u0442\u044c \u0434\u043b\u044f \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u0447\u0430:\n - \u0410\u0432\u0442\u043e\u0437\u0430\u043f\u043e\u0432\u043d\u0435\u043d\u043d\u044f \u0434\u043b\u044f Android >= 8.0\n - \u0422\u0435\u043c\u043d\u0430 \u0442\u0435\u043c\u0430 (\u043a\u0435\u0440\u0443\u0454\u0442\u044c\u0441\u044f \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u0438\u043c\u0438 \u043d\u0430\u043b\u0430\u0448\u0442\u0443\u0432\u0430\u043d\u043d\u044f\u043c\u0438)\n - \u041d\u0435\u0447\u0456\u0442\u043a\u0438\u0439 \u043f\u043e\u0448\u0443\u043a \u0434\u043b\u044f \u043b\u0435\u0433\u043a\u043e\u0433\u043e \u0437\u043d\u0430\u0445\u043e\u0434\u0436\u0435\u043d\u043d\u044f \u0437\u0430\u043f\u0438\u0441\u0456\u0432"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/com.ivanovsky.passnotes/en-US/icon_JwFh25BuYNeBI1sJq2i7guisyo2_WuoF1usr0TCsR_w=.png",
+        "sha256": "270161db906e60d781235b09ab68bb82e8acca8dbf5aea05d6eb2bd130ac47fc",
+        "size": 7145
+      }
+    },
+    "issueTracker": "https://github.com/aivanovski/kpassnotes/issues",
+    "lastUpdated": 1771544212000,
+    "license": "Apache-2.0",
+    "name": {
+      "en-US": "KeePassVault"
+    },
+    "preferredSigner": "e8b2bbb739916509b17cb32c44363714c96cde4343b108236de011fbe9df2074",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.ivanovsky.passnotes/en-US/phoneScreenshots/1.png",
+            "sha256": "740077061fddd42dc431c04aae34a86a1744f89e9fb0e83e558e082bbf6a1727",
+            "size": 146250
+          },
+          {
+            "name": "/com.ivanovsky.passnotes/en-US/phoneScreenshots/2.png",
+            "sha256": "1cf307fde78b08414173b28e64ab7116b24d4c5e474d1000389047e31a79ecee",
+            "size": 157876
+          },
+          {
+            "name": "/com.ivanovsky.passnotes/en-US/phoneScreenshots/3.png",
+            "sha256": "6c71e967dec2b2099729565d10114871431f05fd047a60c8b2f0a374206e2140",
+            "size": 116260
+          },
+          {
+            "name": "/com.ivanovsky.passnotes/en-US/phoneScreenshots/4.png",
+            "sha256": "ff1354d266577ac9d93e26e3908d742e04db92fe1bc540f974d8218557117b3d",
+            "size": 105578
+          },
+          {
+            "name": "/com.ivanovsky.passnotes/en-US/phoneScreenshots/5.png",
+            "sha256": "6a3685e300ac22dcaf6a0c0952a06e43444f96ba96349154e57ead2480ef8f05",
+            "size": 179333
+          },
+          {
+            "name": "/com.ivanovsky.passnotes/en-US/phoneScreenshots/6.png",
+            "sha256": "a60dc346d66bb3cc72f4b74b3c357edd49c35269a7914c6fad4c011c2b3a8c01",
+            "size": 183180
+          },
+          {
+            "name": "/com.ivanovsky.passnotes/en-US/phoneScreenshots/7.png",
+            "sha256": "e5de24b5a2b5832e0bc3910907573487c5a3d2ce9751fc3bce6208d8064082c4",
+            "size": 194995
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/aivanovski/kpassnotes",
+    "summary": {
+      "en-US": "Client app for KeePass databases",
+      "uk-UA": "\u041a\u043b\u0456\u0454\u043d\u0442\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0441\u0442\u043e\u0441\u0443\u043d\u043e\u043a \u0434\u043b\u044f \u0431\u0430\u0437 \u0434\u0430\u043d\u0438\u0445 KeePass"
+    }
+  },
+  "version": {
+    "added": 1771544212000,
+    "file": {
+      "ipfsCIDv1": "bafybeifzq7aas46hp32bgqwwlak2ud73if5tmrsaldyjfohdfrsgogrlym",
+      "name": "/com.ivanovsky.passnotes_11600.apk",
+      "sha256": "0c66628a9b6478f2d9fc0f3210c3a41f8cdff477f5347f381a301d93999040ab",
+      "size": 18595226
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "e8b2bbb739916509b17cb32c44363714c96cde4343b108236de011fbe9df2074"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.MANAGE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.USE_BIOMETRIC"
+        },
+        {
+          "name": "android.permission.USE_FINGERPRINT"
+        },
+        {
+          "name": "com.ivanovsky.passnotes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 34
+      },
+      "versionCode": 11600,
+      "versionName": "1.16.0"
+    },
+    "src": {
+      "name": "/com.ivanovsky.passnotes_11600_src.tar.gz",
+      "sha256": "7b08371c10f2620840426ff60dbe6384bb11eecd2cd29d17573a5deb3980f1fd",
+      "size": 1411777
+    },
+    "whatsNew": {
+      "en-US": "- Improve logging to file"
+    }
+  }
+}

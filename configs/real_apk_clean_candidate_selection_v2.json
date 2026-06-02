@@ -1,0 +1,64 @@
+{
+  "selections": [
+    {
+      "app": "Gotify",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "messaging-notification",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.github.gotify",
+      "reason": "Recent no-native notification client with source tarball metadata; likely to expose networking/AndroidX Maven evidence.",
+      "slug": "gotify",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "BetterCounter",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "kde-utility",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.kde.bettercounter",
+      "reason": "Recent no-native KDE utility app; useful as a compact modern clean candidate if Maven evidence is non-sparse.",
+      "slug": "bettercounter",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Olauncher",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "launcher",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "app.olauncher",
+      "reason": "Recent no-native launcher with source tarball metadata; tests a UI-heavy Java/Kotlin app family.",
+      "slug": "olauncher",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Coffee",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "system-utility",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.github.muellerma.coffee",
+      "reason": "Recent no-native system utility from the same family as Stopwatch; useful if it emits more Maven evidence.",
+      "slug": "coffee",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    }
+  ]
+}

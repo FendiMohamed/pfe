@@ -1,0 +1,21 @@
+{
+  "apk_path": "data\\test_apks\\limitation\\controlled-hidden-dex-loader-limitation.apk",
+  "builder": "scripts/build_limitation_apk.py",
+  "dataset_layer": "limitation",
+  "expected_behavior": {
+    "accuracy_claim": "none",
+    "forensic_indicators": [
+      "nonstandard-dex",
+      "tiny-primary-dex",
+      "protector-name-hint",
+      "large-opaque-assets"
+    ],
+    "reporting_expectation": "The MVP should warn about hidden/dynamic-code-style packaging and avoid claiming complete Java/Kotlin library recovery."
+  },
+  "metrics_allowed": [
+    "forensic warning quality",
+    "limitation behavior"
+  ],
+  "package_name": "com.example.limitation.dynamicloader",
+  "validation_level": "L3 limitation fixture"
+}

@@ -1,0 +1,37 @@
+Defense deck QA scorecard
+Generated: 2026-05-26
+
+Source script:
+- docs/thesis/PRESENTATION_DECK_SCRIPT.md
+
+Editable deck:
+- outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx
+
+Rendered QA:
+- outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/preview/contact-sheet.png
+- outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/preview/slide-01.png through slide-12.png
+- outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/layout/final/slide-01.layout.json through slide-12.layout.json
+
+Slide count:
+- 12 slides.
+- 12 speaker-notes slides embedded in the PPTX package.
+
+Visual QA notes:
+- Contact sheet review passed: every slide has a visible claim and one proof object.
+- Layouts vary across cover, split problem view, research table, output workflow, architecture pipeline, evidence matrix, confidence triad, evaluation ladder, result bars, case interpretation, demo panels, and roadmap.
+- Result wording preserves the required phrase "emitted Maven version confirmation rate" and does not call the metric full dependency recall.
+- Partial, blocked, limitation, native hash-only, and scanner-blocked cases remain visible.
+
+Technical validation:
+- PPTX zip/package validation passed.
+- Package contains 12 ppt/slides/slide*.xml entries and 12 ppt/notesSlides/notesSlide*.xml entries.
+- Contact sheet and per-slide PNG previews were produced.
+
+Runtime caveat:
+- The artifact-tool build wrote the PPTX, manifest, previews, layouts, and contact sheet, but the bundled Node/artifact runtime returned native exit code -1073740791 after the files were written.
+- Treat the generated deck as valid based on the separate PPTX package validation and rendered contact sheet, but rerun rendering after any major visual edits.
+
+Remaining manual polish:
+- Add university template, student/supervisor names, logos, and dates if required.
+- Replace diagram placeholders with screenshots from report.html/SBOM/OSV demo if the defense format prefers real screenshots.
+- Review in PowerPoint or LibreOffice before presenting.

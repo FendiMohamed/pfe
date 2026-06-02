@@ -1,0 +1,61 @@
+{
+  "apk": {
+    "expected_sha256": "815e57ae6881e4f73e0ea73f2c2f494cc23df380c5f264a6b1b796ca91119263",
+    "index_size": 16477464,
+    "path": "data/test_apks/real/moneywallet/moneywallet.apk",
+    "sha256": "815e57ae6881e4f73e0ea73f2c2f494cc23df380c5f264a6b1b796ca91119263",
+    "size": 16477464,
+    "url": "https://f-droid.org/repo/com.oriondev.moneywallet_75.apk"
+  },
+  "app": "MoneyWallet",
+  "categories": [
+    "Finance Manager",
+    "Money"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "finance",
+    "older-profile",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.oriondev.moneywallet/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.oriondev.moneywallet",
+  "proof_status": "report-generated",
+  "reason": "No-native finance app that may expose older dependency/version-band behavior while still avoiding native/toolchain blockers.",
+  "report": {
+    "detected_component_count": 9,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v4/report-real-moneywallet",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v4/report-real-moneywallet/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v4/report-real-moneywallet/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v4/report-real-moneywallet/sbom.cdx.json",
+    "sbom_component_count": 9,
+    "status": "ok"
+  },
+  "slug": "moneywallet",
+  "source_repo": "https://github.com/AndreAle94/moneywallet",
+  "source_tarball": {
+    "sha256": "c3d44ba72a1a0d583485cc1a903747afa31ed5d1731c2d3316a7ab6c776cb1c4",
+    "size": 14571986,
+    "url": "https://f-droid.org/repo/com.oriondev.moneywallet_75_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 75,
+  "version_name": "4.0.5.10"
+}

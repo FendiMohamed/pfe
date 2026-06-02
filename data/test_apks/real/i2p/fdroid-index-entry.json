@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "added": 1383868800000,
+    "categories": [
+      "Internet",
+      "Security",
+      "VPN & Proxy"
+    ],
+    "description": {
+      "en-US": "I2P is an anonymizing network, offering a simple layer that identity-sensitive\napplications can use to securely communicate. All data is wrapped with several\nlayers of encryption, and the network is both distributed and dynamic, with no\ntrusted parties."
+    },
+    "issueTracker": "https://trac.i2p2.de",
+    "lastUpdated": 1772122497000,
+    "license": "Apache-2.0",
+    "name": {
+      "en-US": "I2P"
+    },
+    "preferredSigner": "2a057a72d56ce0113afc63ef86e66fa406a25c00dffe35bdad83ce6070a71ab6",
+    "sourceCode": "https://github.com/i2p",
+    "summary": {
+      "ar": "\u0634\u0628\u0643\u0629 I2P \u0627\u0644\u0645\u062c\u0647\u0648\u0644\u0629",
+      "ba": "I2P \u0430\u043d\u043e\u043d\u0438\u043c \u0441\u0435\u043b\u0442\u04d9\u0440\u0435",
+      "ca": "Xarxa an\u00f2nima I2P",
+      "cs": "Anonymn\u00ed s\u00ed\u0165 I2P",
+      "de": "Anonymes I2P-Netzwerk",
+      "en-US": "I2P anonymous network",
+      "eo": "Anonima reto",
+      "es": "Red anonimizadora Proyecto Internet Invisible (I2P)",
+      "fi": "Anonyymi I2P-verkko",
+      "fr": "R\u00e9seau anonyme I2P",
+      "ga": "L\u00edonra gan ainm I2P",
+      "he": "\u05e8\u05e9\u05ea \u05d0\u05dc\u05de\u05d5\u05e0\u05d9\u05ea I2P",
+      "hr": "I2P anonimna mre\u017ea",
+      "id": "Jaringan anonim I2P",
+      "it": "Rete anonima I2P",
+      "ja": "I2P\u533f\u540d\u30cd\u30c3\u30c8\u30ef\u30fc\u30af",
+      "nb": "I2P anonymt nettverk",
+      "pl": "Anonimowa sie\u0107 I2P",
+      "pt": "Rede I2P an\u00f4nima",
+      "pt-BR": "Rede an\u00f4nima da I2P",
+      "pt-PT": "Rede I2P an\u00f4nima",
+      "ro": "Re\u021bea anonim\u0103 I2P",
+      "ru": "\u0410\u043d\u043e\u043d\u0438\u043c\u043d\u0430\u044f \u0441\u0435\u0442\u044c I2P",
+      "sq": "Rrjeti anonim I2P",
+      "sr": "I2P \u0430\u043d\u043e\u043d\u0438\u043c\u043d\u0430 \u043c\u0440\u0435\u0436\u0430",
+      "sw": "Mtandao wa I2P usiojulikana",
+      "ta": "I2P \u0b85\u0ba8\u0bbe\u0bae\u0ba4\u0bc7\u0baf \u0baa\u0bbf\u0ba3\u0bc8\u0baf\u0bae\u0bcd",
+      "tr": "I2P anonim a\u011f",
+      "uk": "\u0410\u043d\u043e\u043d\u0456\u043c\u043d\u0430 \u043c\u0435\u0440\u0435\u0436\u0430 I2P",
+      "zh-CN": "I2P \u533f\u540d\u7f51\u7edc",
+      "zh-TW": "I2P \u533f\u540d\u7db2\u8def"
+    },
+    "translation": "https://www.transifex.com/otf/I2P/",
+    "webSite": "https://geti2p.net"
+  },
+  "version": {
+    "added": 1772122497000,
+    "file": {
+      "ipfsCIDv1": "bafybeifwpskvg47smvwwkppxztitnu2d6hgj57427dbz4cgtjgu6uelxem",
+      "name": "/net.i2p.android.router_4745304.apk",
+      "sha256": "22c637918175ca4d4fe74d773a2c8a1b793cdd5d795b8d72fd838d2a16b4aceb",
+      "size": 9512906
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "2a057a72d56ce0113afc63ef86e66fa406a25c00dffe35bdad83ce6070a71ab6"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+        },
+        {
+          "name": "android.permission.ACCESS_WIFI_STATE"
+        },
+        {
+          "name": "android.permission.CHANGE_WIFI_MULTICAST_STATE"
+        },
+        {
+          "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+        },
+        {
+          "name": "android.permission.REORDER_TASKS"
+        },
+        {
+          "name": "net.i2p.android.router.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 4745304,
+      "versionName": "2.11.0"
+    },
+    "src": {
+      "name": "/net.i2p.android.router_4745304_src.tar.gz",
+      "sha256": "dded22feee758ab414b3d2bd44e95f5f33764b84c5d0de8abd59534409c8d3f2",
+      "size": 14665350
+    }
+  }
+}

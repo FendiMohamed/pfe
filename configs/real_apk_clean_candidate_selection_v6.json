@@ -1,0 +1,85 @@
+{
+  "selections": [
+    {
+      "app": "microMathematics Plus",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "calculator",
+        "science-education",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.mkulesh.micromath.plus",
+      "reason": "No-native modern calculator/science app with a medium APK, source tarball metadata, target SDK 36, and enough size to plausibly emit non-sparse Maven evidence.",
+      "slug": "micromathematics-plus",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Retro Music",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "multimedia",
+        "local-media-player",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "code.name.monkey.retromusic",
+      "reason": "No-native media player with source tarball metadata, target SDK 36, and a medium APK/source size; useful for a richer AndroidX/Kotlin clean-candidate probe.",
+      "slug": "retro-music",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Broccoli",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "recipe-manager",
+        "sports-health",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.flauschcode.broccoli",
+      "reason": "No-native recipe/health app with source tarball metadata and a non-trivial source tree; adds a different app family to the clean non-sparse search.",
+      "slug": "broccoli",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Diaguard",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "health-manager",
+        "diary",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.faltenreich.diaguard",
+      "reason": "No-native health/diary app with source tarball metadata, target SDK 36, and a moderate dependency surface candidate.",
+      "slug": "diaguard",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "LibreTube",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "multimedia",
+        "online-media-player",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.github.libretube",
+      "reason": "No-native internet/media app with source tarball metadata, target SDK 36, and a medium APK; useful as another modern media-family clean-candidate probe.",
+      "slug": "libretube",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    }
+  ]
+}

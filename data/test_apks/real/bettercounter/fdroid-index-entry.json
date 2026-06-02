@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "added": 1611187200000,
+    "authorEmail": "albertvaka@gmail.com",
+    "authorName": "Albert Vaca Cintora",
+    "authorWebSite": "https://albertvaka.wordpress.com/",
+    "categories": [
+      "Habit Tracker",
+      "Sports & Health",
+      "Time"
+    ],
+    "description": {
+      "ca": "Fes-la servir per al que vulguis:\n- Seguiment d'h\u00e0bits, bons o dolents (pe: fer esport, fumar, beure alcohol...)\n- Recordar quan \u00e9s l'\u00faltima vegada que vas fer alguna cosa (pe: regar les plantes, canviar els llen\u00e7ols...)\n- Contar vides a una partida de M\u00e0gic\n\nFuncions principals:\n- Crea comptadors amb diferents noms i colors\n- Visualitza l'hist\u00f2ric de cada comptador\n- Exporta les dades\n- Les teves dades mai surten del teu dispositiu (exceptuant, si estan activades, les c\u00f2pies de seguretat de Google)\n- Una app molt senzilla, que continuar\u00e0 sent aix\u00ed\n",
+      "cs": "- Sledujte dobr\u00e9 a \u0161patn\u00e9 n\u00e1vyky (nap\u0159. cvi\u010den\u00ed, kou\u0159en\u00ed, pit\u00ed alkoholu...).\n- Sledujte, kdy jste naposledy n\u011bco ud\u011blali (nap\u0159. zal\u00e9vali kv\u011btiny, m\u011bnili povle\u010den\u00ed, chodili na z\u00e1chod...).\n- Po\u010d\u00edtejte sv\u00e9 \u017eivoty v MtG\n\nFunkce:\n- Zaznamen\u00e1v\u00e1 datum a \u010das ka\u017ed\u00e9ho jednotliv\u00e9ho zv\u00fd\u0161en\u00ed po\u010d\u00edtadla.\n- Vytv\u00e1\u0159\u00ed grafy va\u0161ich dat v \u010dase a vypo\u010d\u00edt\u00e1v\u00e1 statistiky.\n- Umo\u017e\u0148uje exportovat data (nap\u0159. pro anal\u00fdzu pomoc\u00ed n\u00e1stroj\u016f podle va\u0161eho v\u00fdb\u011bru).\n- Va\u0161e data nejsou nikdy odes\u00edl\u00e1na na \u017e\u00e1dn\u00fd server (s v\u00fdjimkou z\u00e1lohov\u00e1n\u00ed Google, pokud je povoleno)\n- Je to naprosto jednoduch\u00e9 a tak to i z\u016fstane.\n",
+      "da-DK": "\u2013 Log gode og d\u00e5rlige vaner (f.eks. tr\u00e6ning, rygning, alkoholindtag...)\n\u2013 Log hvorn\u00e5r du sidst gjorde noget (f.eks. vandede dine planter, skiftede senget\u00f8j, lavede nummer to...)\n\u2013 T\u00e6l dine liv i MtG\n\nFunktioner:\n\u2013 Gemmer dato og tidspunkt for hver gang hver individuelle t\u00e6ller for\u00f8ges.\n\u2013 Laver en graf over dine data og regner statistik over dem.\n\u2013 Lader dig eksportere dine data (f.eks. for at analysere dem med andre v\u00e6rkt\u00f8jer).\n\u2013 Dine data bliver aldrig sendt til en server (undtagen Google's app backup, hvis det er sl\u00e5et til).\n\u2013 Skide enkel og vil forblive s\u00e5dan.\n",
+      "en-US": "- Track good and bad habits (eg: exercising, smoking, drinking...)\n- Track when's the last time you did something (eg: water your plants, change your bedsheets, poop...)\n- Count your lives in MtG\n\nFeatures:\n- Records the date and time of each individual counter increase.\n- Graphs your data over time and calculates statistics.\n- Lets you export your data (eg: to analyze it with your choice of tools).\n- Your data is never sent to any server (except for Google's app backup, if enabled).\n- Simple as hell and will stay this way.\n",
+      "es-ES": "\u00dasala para lo que quieras:\n- Seguimiento de h\u00e1bitos, buenos o malos (por ejemplo: hacer deporte, fumar, beber alcohol...)\n- Recordar cu\u00e1ndo fue la \u00faltima vez que hiciste algo (por ejemplo: regar las plantas, cambiar las s\u00e1banas...)\n- Contar vidas en una partida de Magic\n\nFunciones principales:\n- Crea contadores con distintos nombres y colores\n- Visualiza el hist\u00f3rico de cada contador\n- Exporta los datos\n- Tus datos nunca salen de tu dispositivo (exceptuando, si est\u00e1n activadas, las copias de seguridad de Google)\n- Una app muy sencilla, que seguir\u00e1 siendo as\u00ed\n",
+      "fr-FR": "Utilisez-le pour ce que vous voulez :\n- Suivre ses habitudes, bonnes ou mauvaises (ex : faire du sport, fumer, boire de l'alcool...).\n- Se souvenir de la derni\u00e8re fois que l'on a fait quelque chose (par exemple : arroser les plantes, changer les draps...).\n- Compter les vies dans un jeu de magie\n\nFonctions principales :\n- Cr\u00e9er des compteurs avec des noms et des couleurs diff\u00e9rentes\n- Visualiser l'historique de chaque compteur\n- Exporter des donn\u00e9es\n- Vos donn\u00e9es ne quittent jamais votre appareil (sauf, si elles sont activ\u00e9es, les sauvegardes Google)\n- Une application tr\u00e8s simple, qui le restera."
+    },
+    "featureGraphic": {
+      "en-US": {
+        "name": "/org.kde.bettercounter/en-US/featureGraphic_JL-fSmbH-MMfAV37p9SJFWh_FWCcMhUGu6NhnqkTLbQ=.png",
+        "sha256": "24bf9f4a66c7f8c31f015dfba7d48915687f15609c321506bba3619ea9132db4",
+        "size": 37959
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/org.kde.bettercounter/en-US/icon_NjF7fbEYDtMsjV1W7YUX-Exl3wyJanZSw6IROR01D0E=.png",
+        "sha256": "36317b7db1180ed32c8d5d56ed8517f84c65df0c896a7652c3a211391d350f41",
+        "size": 45861
+      }
+    },
+    "issueTracker": "https://github.com/albertvaka/bettercounter/issues",
+    "lastUpdated": 1779269682635,
+    "license": "GPL-2.0-only",
+    "name": {
+      "ca": "BetterCounter",
+      "cs": "BetterCounter",
+      "da-DK": "BedreT\u00e6ller",
+      "en-US": "BetterCounter",
+      "es-ES": "BetterCounter",
+      "fr-FR": "BetterCounter"
+    },
+    "preferredSigner": "ae2f696c566189588a434ab2e14f2431642cc3a43bee539d191ce1cb3ba819cb",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/org.kde.bettercounter/en-US/phoneScreenshots/1.png",
+            "sha256": "6ca71704468e0699266aea6c72ebf508659cddaf8561ad0d66c7d45dec386b12",
+            "size": 99435
+          },
+          {
+            "name": "/org.kde.bettercounter/en-US/phoneScreenshots/2.png",
+            "sha256": "7b05d933ee40cdb155212b2a145b105a00379f2922f10359a554b8f0d3bbc74d",
+            "size": 116987
+          },
+          {
+            "name": "/org.kde.bettercounter/en-US/phoneScreenshots/3.png",
+            "sha256": "6efadeda01b61d3c5bda6e60e2313c23c93afbff04705a1446097b42cbbe93a1",
+            "size": 119782
+          },
+          {
+            "name": "/org.kde.bettercounter/en-US/phoneScreenshots/4.png",
+            "sha256": "b9eb754426f68e7c499ed2a8354cb0f9561e9b6041185819827fe20b22ce54ba",
+            "size": 87475
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/albertvaka/bettercounter",
+    "summary": {
+      "ca": "Aplicaci\u00f3 de comptadors senzilla",
+      "cs": "Jednoduch\u00e1, multifunk\u010dn\u00ed aplikace pro po\u010d\u00edt\u00e1n\u00ed",
+      "da-DK": "En enkel, alsidig t\u00e6ller app",
+      "en-US": "A simple, multi-purpose counter app",
+      "es-ES": "Aplicaci\u00f3n de contadores sencilla",
+      "fr-FR": "Simple application de compteur"
+    }
+  },
+  "version": {
+    "added": 1779269682635,
+    "file": {
+      "ipfsCIDv1": "bafybeife5b6nx525xgogrq7y4feaiyj2c55nhnqvezq2r7qznvmdktk6ni",
+      "name": "/org.kde.bettercounter_60003.apk",
+      "sha256": "a48916f7a52913c189f84e38bca5c058d7a83b3e133cae7af03f581e72889feb",
+      "size": 2732198
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "ae2f696c566189588a434ab2e14f2431642cc3a43bee539d191ce1cb3ba819cb"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "org.kde.bettercounter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 60003,
+      "versionName": "6.0.3"
+    },
+    "src": {
+      "name": "/org.kde.bettercounter_60003_src.tar.gz",
+      "sha256": "f722e18ba4f83b53f58375f1bad7d0763ea8d840f5ae2d1f33b0cf9eb6b5cf5e",
+      "size": 807451
+    },
+    "whatsNew": {
+      "en-US": "6.0:\n- Show stats about goals completion\n- Add a setting to change the first hour of day\n- Add Czech translation\n\n5.0:\n- Add a filter/search\n- Add settings to configure average calculation and auto-export\n- Keep Y axis the same for all charts\n"
+    }
+  }
+}

@@ -1,0 +1,954 @@
+{
+  "metadata": {
+    "added": 1460851200000,
+    "authorEmail": "soren@stoutner.com",
+    "authorName": "Soren Stoutner",
+    "bitcoin": "1Jiooc5L238VnhiWtkdYEkwm7kRNWQspSC",
+    "categories": [
+      "Browser",
+      "Internet"
+    ],
+    "changelog": "https://www.stoutner.com/privacy-browser-android/changelog/",
+    "description": {
+      "de-DE": "Die einzige M\u00f6glichkeit, den Missbrauch von Daten zu verhindern, ist in erster Linie das Verhindern der Sammlung dieser Daten. Privacy Browser verfolgt dabei zwei grunds\u00e4tzliche Ziele:\n\n1. Das Minimieren der Daten, die ins Internet gesendet werden.\n\n2. Das Minimieren von auf dem Ger\u00e4t gespeicherten Daten.\n\nDie meisten Browser plaudern still und heimlich jede Menge Informationen an Websiten aus, welche genutzt werden k\u00f6nnen, um deren Benutzer zu verfolgen und deren Privatsph\u00e4re zu kompromittieren. Webseiten und Werbenetzwerke nutzen Technologien wie JavaScript, Cookies, DOM-Speicher, User-Agents und andere, um jeden einzelnen Browser-Benutzer eindeutig zu identifizieren und ihn zwischen seinen Besuchen und sogar quer durch das Internet zu verfolgen.\n\nIn Privacy Browser hingegen sind Funktionen, welche die Privatsph\u00e4re gef\u00e4hrden, grunds\u00e4tzlich deaktiviert. Wenn Webseiten jedoch spezielle Funktionen ben\u00f6tigen, um zu funktionieren, k\u00f6nnen diese beim Besuch der betreffenden Seite bewusst einmalig aktiviert werden. Dar\u00fcber hinaus k\u00f6nnen spezielle Einstellungen f\u00fcr bestimmte Domains auch abgespeichert werden, damit sie bei jedem Besuch der betreffenden Seite automatisch aktiviert und danach wieder deaktiviert werden.\n\nDer Privacy Browser verwendet Androids eingebaute WebView-Komponente zum Anzeigen von Webseiten, weshalb die neueste Version von WebView installiert sein sollte (siehe https://www.stoutner.com/privacy-browser/common-settings/webview/). F\u00fcr erweiterte Privatsph\u00e4re-Funktionen wird ab Version 4.x eine speziell angepa\u00dfte Version (\u201ePrivacy WebView\u201d) von WebView verwendet werden.\n\nFeatures:\n\u2022 Integrierter EasyList-Werbeblocker\n\u2022 TOR-Proxy-Unterst\u00fctzung mittels Orbot\n\u2022 Verankerung von SSL-Zertifikaten (Pinning)\n\u2022 Import/export von Einstellungen und Lesezeichen",
+      "en-US": "The only way to prevent data from being abused is to prevent it from being collected in the first place. Privacy Browser has two primary goals.\n\n1. Minimize the data that is sent to the internet.\n\n2. Minimize the data that is stored on the device.\n\nMost browsers silently give websites massive amounts of information that allows them to track you and compromise your privacy. Websites and ad networks use technologies like JavaScript, cookies, DOM storage, user agents, and many other things to uniquely identify each user and track them between visits and across the web.\n\nIn contrast, privacy sensitive features are disabled by default in Privacy Browser. If one of these technologies is required for a website to function correctly, the user may choose to turn it on for just that visit. Or, they can use domain settings to automatically turn on certain features when entering a specific website and turn them off again when leaving.\n\nPrivacy Browser currently uses Android\u2019s built-in WebView to render web pages. As such, it works best when the latest version of WebView is installed (see https://www.stoutner.com/privacy-browser/common-settings/webview/). In the 4.x series, Privacy Browser will switch to a forked version of Android\u2019s WebView called Privacy WebView that will allow for advanced privacy features.\n\nFeatures:\n\u2022 Integrated EasyList ad blocking.\n\u2022 Tor Orbot proxy support.\n\u2022 SSL certificate pinning.\n\u2022 Import/export of settings and bookmarks.",
+      "es-ES": "La \u00fanica manera de evitar que se abuse de los datos es impedir que se recojan en primer lugar. Navegador Privado tiene dos objetivos principales.\n\n1. Minimizar los datos que se env\u00edan a Internet.\n\n2. Minimizar los datos que se almacenan en el dispositivo.\n\nLa mayor\u00eda de los navegadores proporcionan a los sitios web cantidades masivas de informaci\u00f3n que les permite rastrearte y comprometer tu privacidad. Los sitios web y las redes publicitarias utilizan tecnolog\u00edas como JavaScript, cookies, almacenamiento DOM, agentes de usuario y muchas otras cosas para identificar de forma \u00fanica a cada usuario y rastrearlo entre visitas y a trav\u00e9s de la web.\n\nPor el contrario, las funciones sensibles a la privacidad est\u00e1n desactivadas de forma predeterminada en el Navegador de privacidad. Si una de estas tecnolog\u00edas es necesaria para el correcto funcionamiento de un sitio web, el usuario puede optar por activarla s\u00f3lo para esa visita. O bien, puede utilizar la configuraci\u00f3n del dominio para activar autom\u00e1ticamente determinadas funciones al entrar en un sitio web espec\u00edfico y desactivarlas de nuevo al salir.\n\nNavegador Privado utiliza actualmente el WebView incorporado de Android para renderizar las p\u00e1ginas web. Como tal, funciona mejor cuando se instala la \u00faltima versi\u00f3n de WebView (ver https://www.stoutner.com/privacy-browser/common-settings/webview/). En la serie 4.x, Navegador Privado cambiar\u00e1 a una versi\u00f3n bifurcada del WebView de Android llamada Privacy WebView que permitir\u00e1 caracter\u00edsticas de privacidad avanzadas.\n\nCaracter\u00edsticas:\n\u2022 Bloqueo de anuncios EasyList integrado.\n\u2022 Soporte para proxy de Tor Orbot.\n\u2022 Fijaci\u00f3n de certificados SSL.\n\u2022 Importar/exportar la configuraci\u00f3n y los marcadores.",
+      "fr-FR": "Le seul moyen d'emp\u00eacher toute utilisation abusive des donn\u00e9es est d'emp\u00eacher leur collecte en premier lieu. Privacy Browser a deux objectifs principaux.\n\n1. Minimisez les donn\u00e9es envoy\u00e9es sur Internet\n\n2. Minimisez les donn\u00e9es stock\u00e9es sur l'appareil.\n\nLa plupart des navigateurs donnent silencieusement aux sites Web des quantit\u00e9s \u00e9normes d'informations leur permettant de vous suivre et de compromettre votre confidentialit\u00e9. Les sites Web et les r\u00e9seaux publicitaires utilisent des technologies telles que JavaScript, les cookies, le stockage DOM, les agents utilisateur et bien d'autres choses pour identifier chaque utilisateur de mani\u00e8re unique et le suivre entre chaque visite et au travers du Web.\t\n\nA l'inverse, les fonctionnalit\u00e9s sensibles sont d\u00e9sactiv\u00e9es par d\u00e9faut dans Privacy Browser. Si l'une de ces technologies est n\u00e9cessaire au bon fonctionnement d'un site Web, l'utilisateur peut choisir de l'activer uniquement pour une visite. Il peut \u00e9galement utiliser des param\u00e8tres de domaine pour activer automatiquement certaines fonctionnalit\u00e9s lors de l'arriv\u00e9e sun site Web sp\u00e9cifique et les d\u00e9sactiver \u00e0 nouveau lors de son d\u00e9part.\n\nPrivacy Browser utilise actuellement WebView int\u00e9gr\u00e9 \u00e0 Android pour le rendu des pages Web. En tant que tel, cela fonctionne mieux lorsque la derni\u00e8re version de WebView est install\u00e9e (voir https://www.stoutner.com/privacy-browser/common-settings/webview/). Dans la s\u00e9rie 4.x, Privacy Browser basculera vers une version de WebView d\u2019Android appel\u00e9e Privacy WebView, qui permettra des fonctionnalit\u00e9s de confidentialit\u00e9 avanc\u00e9es.\n\nFonctionnalit\u00e9s:\n\u2022 Blocage int\u00e9gr\u00e9 des publicit\u00e9s EasyList.\n\u2022 Prise en charge du proxy Tor Orbot.\n\u2022 \u00c9pinglage de certificat SSL.\n\u2022 Importation / exportation des param\u00e8tres et des favoris.",
+      "it-IT": "L'unico modo per evitare che i dati vengano utilizzati in modo improprio \u00e8 innanzitutto quello di impedire che essi siano raccolti. Privacy Browser ha due obiettivi primari.\n\n1. Minimizzare la quantit\u00e0 di dati inviati attraverso internet.\n\n2. Minimizzare la quantit\u00e0 di dati memorizzati sul dispositivo.\n\nLa maggioranza dei browser fornisce silenziosamente ai siti web un'enorme quantit\u00e0 di informazioni per permettere loro di tracciare l'utente e compromettere la sua privacy. I siti web e le reti pubblicitarie utilizzano diverse tecnologie, come JavaScript, i cookie, il DOM storage, gli user agent e molte altre, con lo scopo di identificare in modo univoco ogni utente e di tracciare la sua navigazione attraverso la rete.\n\nPer migliorare la sicurezza le funzionalit\u00e0 sensibili al problema della privacy sono disabilitate di default in Privacy Browser. Se per\u00f2 una di queste tecnologie \u00e8 necessaria per il corretto funzionamento di un sito web l'utente pu\u00f2 abilitarla anche per un accesso momentaneo. In alternativa \u00e8 possibile utilizzare le impostazioni dei domini per abilitare in modo automatico determinate funzionalit\u00e0 nel momento in cui si accede ad un determinato sito web, cos\u00ec che siano poi disabilitate nel momento in cui si abbandona il sito.\n\nPrivacy Browser utilizza attualmente la WebView nativa di Android per la visualizzazione delle pagine web. Per questo motivo si ha un funzionamento ottimale solo se \u00e8 installata la versione pi\u00f9 recente di WebView (si veda in proposito https://www.stoutner.com/privacy-browser/common-settings/webview/). A partire dalle release della serie 4.x, Privacy Browser passer\u00e0 ad una versione modificata della WebView di Android chiamata Privacy WebView che permetter\u00e0 l'utilizzo di funzionalit\u00e0 di privacy pi\u00f9 avanzate.\n\nFunzionalit\u00e0:\n\u2022 Blocco degli annunci EasyList integrato.\n\u2022 Possibilit\u00e0 di utilizzare il proxy Tor Orbot.\n\u2022 Salvataggio dei certificati SSL.\n\u2022 Import/export delle impostazioni e dei segnalibri.",
+      "pt-BR": "A \u00fanica maneira de evitar que os dados sejam mal-usados \u00e9, em primeiro lugar, impedir que eles sejam coletados. O Privacy Browser tem dois objetivos principais.\n\n1. Minimizar os dados que s\u00e3o enviados para a internet.\n\n2. Minimizar os dados armazenados no dispositivo.\n\nA maioria dos navegadores fornece silenciosamente aos sites grandes quantidades de informa\u00e7\u00f5es que permitem que eles rastreiem voc\u00ea e comprometam sua privacidade. Sites e redes de an\u00fancios usam tecnologias como JavaScript, cookies, armazenamento DOM, agentes de usu\u00e1rio e muitas outras coisas para identificar exclusivamente cada usu\u00e1rio e rastre\u00e1-los entre as visitas e na web.\n\nPor outro lado, funcionalidades sens\u00edveis \u00e0 privacidade s\u00e3o desativados por padr\u00e3o no Privacy Browser. Se uma dessas tecnologias for necess\u00e1ria para um site funcionar corretamente, o usu\u00e1rio pode optar por ativ\u00e1-la apenas para essa visita. Ou podem usar as configura\u00e7\u00f5es de dom\u00ednio para ativar automaticamente determinados recursos ao entrar em um site espec\u00edfico e desativ\u00e1-los novamente ao sair.\n\nAtualmente, o Privacy Browser usa o WebView integrado do Android para renderizar p\u00e1ginas da web. Como tal, funciona melhor quando a vers\u00e3o mais recente do WebView est\u00e1 instalada (consulte https://www.stoutner.com/privacy-browser/common-settings/webview/). Na s\u00e9rie 4.x, o Privacy Browser mudar\u00e1 para uma vers\u00e3o bifurcada do WebView do Android chamada Privacy WebView, que permitir\u00e1 recursos avan\u00e7ados de privacidade.\n\nCaracter\u00edsticas:\n\u2022 Bloqueio de an\u00fancios EasyList integrado.\n\u2022 Suporte de proxy Tor Orbot.\n\u2022 Fixa\u00e7\u00e3o de certificado SSL.\n\u2022 Importa\u00e7\u00e3o/exporta\u00e7\u00e3o de configura\u00e7\u00f5es e favoritos.",
+      "ru-RU": "\u0415\u0434\u0438\u043d\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439 \u0441\u043f\u043e\u0441\u043e\u0431 \u043f\u0440\u0435\u0434\u043e\u0442\u0432\u0440\u0430\u0442\u0438\u0442\u044c \u0437\u043b\u043e\u0443\u043f\u043e\u0442\u0440\u0435\u0431\u043b\u0435\u043d\u0438\u0435 \u0434\u0430\u043d\u043d\u044b\u043c\u0438 - \u044d\u0442\u043e \u0432 \u043f\u0435\u0440\u0432\u0443\u044e \u043e\u0447\u0435\u0440\u0435\u0434\u044c \u043f\u0440\u0435\u0434\u043e\u0442\u0432\u0440\u0430\u0442\u0438\u0442\u044c \u0438\u0445 \u0441\u0431\u043e\u0440. Privacy Browser \u0438\u043c\u0435\u0435\u0442 \u0434\u0432\u0435 \u043e\u0441\u043d\u043e\u0432\u043d\u044b\u0435 \u0446\u0435\u043b\u0438:\n\n1. \u0421\u0432\u0435\u0441\u0442\u0438 \u043a \u043c\u0438\u043d\u0438\u043c\u0443\u043c\u0443 \u0434\u0430\u043d\u043d\u044b\u0435, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u0432 \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442.\n\n2. \u0421\u0432\u0435\u0441\u0442\u0438 \u043a \u043c\u0438\u043d\u0438\u043c\u0443\u043c\u0443 \u0434\u0430\u043d\u043d\u044b\u0435, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0445\u0440\u0430\u043d\u044f\u0442\u0441\u044f \u043d\u0430 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0435.\n\n\u0411\u043e\u043b\u044c\u0448\u0438\u043d\u0441\u0442\u0432\u043e \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u043e\u0432 \u0441\u043a\u0440\u044b\u0442\u043d\u043e \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u044e\u0442 \u0432\u0435\u0431-\u0441\u0430\u0439\u0442\u0430\u043c \u043e\u0433\u0440\u043e\u043c\u043d\u043e\u0435 \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438, \u043a\u043e\u0442\u043e\u0440\u0430\u044f \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0438\u043c \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u0442\u044c \u0432\u0430\u0441 \u0438 \u043d\u0430\u0440\u0443\u0448\u0430\u0442\u044c \u0432\u0430\u0448\u0443 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u044c. \u0421\u0430\u0439\u0442\u044b \u0438 \u0440\u0435\u043a\u043b\u0430\u043c\u043d\u044b\u0435 \u0441\u0435\u0442\u0438 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u044e\u0442 JavaScript, \u0444\u0430\u0439\u043b\u044b cookie, DOM-\u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435, \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u0441\u043a\u0438\u0435 \u0430\u0433\u0435\u043d\u0442\u044b \u0438 \u043c\u043d\u043e\u0433\u0438\u0435 \u0434\u0440\u0443\u0433\u0438\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0434\u043b\u044f \u0443\u043d\u0438\u043a\u0430\u043b\u044c\u043d\u043e\u0439 \u0438\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u043a\u0430\u0436\u0434\u043e\u0433\u043e \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f \u0438 \u0435\u0433\u043e \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u043f\u0440\u0438 \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0435 \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0430.\n\n\u041f\u043e\u044d\u0442\u043e\u043c\u0443 \u0447\u0443\u0432\u0441\u0442\u0432\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u043a \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438 \u0444\u0443\u043d\u043a\u0446\u0438\u0438 \u043e\u0442\u043a\u043b\u044e\u0447\u0435\u043d\u044b \u0432 Privacy Browser \u043f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e. \u0415\u0441\u043b\u0438 \u043e\u0434\u043d\u0430 \u0438\u0437 \u044d\u0442\u0438\u0445 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0439 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u0430 \u0434\u043b\u044f \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u043e\u0439 \u0440\u0430\u0431\u043e\u0442\u044b \u0432\u0435\u0431-\u0441\u0430\u0439\u0442\u0430, \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c \u043c\u043e\u0436\u0435\u0442 \u0432\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u0435\u0435 \u0442\u043e\u043b\u044c\u043a\u043e \u0434\u043b\u044f \u044d\u0442\u043e\u0433\u043e \u0432\u0438\u0437\u0438\u0442\u0430. \u041a\u0440\u043e\u043c\u0435 \u0442\u043e\u0433\u043e, \u043c\u043e\u0436\u043d\u043e \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0434\u043e\u043c\u0435\u043d\u0430, \u0447\u0442\u043e\u0431\u044b \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u0432\u043a\u043b\u044e\u0447\u0430\u0442\u044c \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0444\u0443\u043d\u043a\u0446\u0438\u0438 \u043f\u0440\u0438 \u0432\u0445\u043e\u0434\u0435 \u043d\u0430 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u043d\u044b\u0439 \u0432\u0435\u0431-\u0441\u0430\u0439\u0442 \u0438 \u0441\u043d\u043e\u0432\u0430 \u043e\u0442\u043a\u043b\u044e\u0447\u0430\u0442\u044c \u0438\u0445 \u043f\u0440\u0438 \u0432\u044b\u0445\u043e\u0434\u0435.\n\n\u0412 \u043d\u0430\u0441\u0442\u043e\u044f\u0449\u0435\u0435 \u0432\u0440\u0435\u043c\u044f \u0434\u043b\u044f \u043e\u0442\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u044f \u0432\u0435\u0431-\u0441\u0442\u0440\u0430\u043d\u0438\u0446 \u0432 Privacy Browser \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f \u0432\u0441\u0442\u0440\u043e\u0435\u043d\u043d\u044b\u0439 \u0432 Android \u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442 WebView, \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u043d\u0430\u0438\u043b\u0443\u0447\u0448\u0438\u0435 \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b \u0440\u0430\u0431\u043e\u0442\u044b \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0430 \u043c\u043e\u0436\u043d\u043e \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c, \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u044f \u043f\u043e\u0441\u043b\u0435\u0434\u043d\u044e\u044e \u0432\u0435\u0440\u0441\u0438\u044e \u044d\u0442\u043e\u0433\u043e \u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430 (\u0441\u043c. https://www.stoutner.com/privacy-browser/common-settings/webview/). \u041d\u0430\u0447\u0438\u043d\u0430\u044f \u0441 \u0432\u0435\u0440\u0441\u0438\u0438 4.x Privacy Browser \u0431\u0443\u0434\u0435\u0442 \u043f\u0435\u0440\u0435\u043a\u043b\u044e\u0447\u0435\u043d \u043d\u0430 \u0444\u043e\u0440\u043a WebView \u043f\u043e\u0434 \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u0435\u043c Privacy WebView, \u0447\u0442\u043e \u043f\u043e\u0437\u0432\u043e\u043b\u0438\u0442 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c \u0431\u043e\u043b\u0435\u0435 \u043f\u0440\u043e\u0434\u0432\u0438\u043d\u0443\u0442\u044b\u0435 \u0444\u0443\u043d\u043a\u0446\u0438\u0438 \u043e\u0431\u0435\u0441\u043f\u0435\u0447\u0435\u043d\u0438\u044f \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438.\n\n\u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438:\n\u2022 \u0412\u0441\u0442\u0440\u043e\u0435\u043d\u043d\u0430\u044f \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430 \u0440\u0435\u043a\u043b\u0430\u043c\u044b EasyList.\n\u2022 \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 \u043f\u0440\u043e\u043a\u0441\u0438 Tor Orbot.\n\u2022 \u0417\u0430\u043a\u0440\u0435\u043f\u043b\u0435\u043d\u0438\u0435 SSL-\u0441\u0435\u0440\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u0430.\n\u2022 \u0418\u043c\u043f\u043e\u0440\u0442/\u044d\u043a\u0441\u043f\u043e\u0440\u0442 \u043d\u0430\u0441\u0442\u0440\u043e\u0435\u043a \u0438 \u0437\u0430\u043a\u043b\u0430\u0434\u043e\u043a.",
+      "tr-TR": "\ufeffThe only way to prevent data from being abused is to prevent it from being collected in the first place. Privacy Browser'\u0131n iki ana amac\u0131 vard\u0131r.\n\n1. Minimize the data that is sent to the internet.\n\n2. Minimize the data that is stored on the device.\n\n\u00c7o\u011fu taray\u0131c\u0131, gizlili\u011finizi tehlikeye atacak ve sizi izlemelerine izin verecek b\u00fcy\u00fck miktarda bilgiyi web sitelerine verir. Web siteleri ve reklam a\u011flar\u0131, her kullan\u0131c\u0131y\u0131 \u00f6zel bir \u015fekilde tan\u0131mlamak ve web genelinde ve ziyaretleri s\u0131ras\u0131nda izlemek i\u00e7in JavaScript, \u00e7erezler, DOM depolama, kullan\u0131c\u0131 arac\u0131lar\u0131 ve di\u011fer bir\u00e7ok teknolojileri kullan\u0131r.\n\nPrivacy Browser, bir taray\u0131c\u0131n\u0131n web sitelere sundu\u011fu bilgi miktar\u0131n\u0131 en aza indirecek \u015fekilde tasarlanm\u0131\u015ft\u0131r. Gizlili\u011fe duyarl\u0131 \u00f6zellikler varsay\u0131lan olarak devre d\u0131\u015f\u0131d\u0131r. E\u011fer bu teknolojilerden biri, bir web sitenin d\u00fczg\u00fcn \u00e7al\u0131\u015fmas\u0131 i\u00e7in gerekliyse, kullan\u0131c\u0131 yaln\u0131zca o sitenin ziyareti i\u00e7in o \u00f6zelli\u011fi etkinle\u015ftirebilir. Veya, \u00f6zel bir web sitesine girerken, belirli \u00f6zellikleri otomatik olarak a\u00e7mak ve ayr\u0131l\u0131rken tekrar kapatmak i\u00e7in domain ayarlar\u0131n\u0131 kullanabilir.\n\nPrivacy Browser \u015fu anda, web sayfalar\u0131n\u0131 olu\u015fturmak i\u00e7in Android\u2019in yerle\u015fik WebView\u2019\u0131n\u0131 kullanmaktad\u0131r. Bu nedenle g\u00fcncel WebView versiyonu y\u00fckl\u00fc oldu\u011funda en iyi \u015fekilde \u00e7al\u0131\u015f\u0131r (bak\u0131n\u0131z https://www.stoutner.com/privacy-browser/common-settings/webview/). 4.x serisinde, Privacy Browser Android WebView\u2019\u0131n geli\u015fmi\u015f gizlilik \u00f6zelliklerine sahip Privacy WebView adl\u0131 b\u00f6l\u00fcnm\u00fc\u015f bir versiyonu ile devam edecek.\n\n\u00d6zellikler:\n\u2022 Entegre EasyList reklam engelleme.\n\u2022 Tor Orbot vekil sunucusu deste\u011fi.\n\u2022 SSL sertifika sabitlemesi.\n\u2022 Yer imlerin ve ayarlar\u0131n \u0130\u00e7e/D\u0131\u015fa Aktar\u0131lmas\u0131.",
+      "zh-CN": "\u4fdd\u62a4\u9690\u79c1\u4e0d\u88ab\u6ee5\u7528\u7684\u552f\u4e00\u65b9\u6cd5\u662f\u9996\u5148\u9632\u6b62\u9690\u79c1\u88ab\u6536\u96c6\u3002Privacy Browser\u6709\u4e24\u4e2a\u76ee\u6807\u3002 \n1.\u51cf\u5c11\u5728\u4e92\u8054\u7f51\u4e2d\u53d1\u9001\u7684\u6570\u636e\u3002\n2.\u51cf\u5c11\u6570\u636e\u50a8\u5b58\u5230\u8bbe\u5907\u3002\n\u5927\u591a\u6570\u6d4f\u89c8\u5668\u9ed8\u9ed8\u7684\u50cf\u7f51\u9875\u63d0\u4f9b\u5927\u91cf\u4fe1\u606f\uff0c\u5141\u8bb8\u4ed6\u4eec\u8ffd\u8e2a\u4f60\uff0c\u635f\u5bb3\u4f60\u7684\u9690\u79c1\u3002\u7f51\u7ad9\u548c\u5e7f\u544a\u7f51\u7edc\u4f7f\u7528JavaScript\uff0ccookies\uff0cDOM\u5b58\u50a8\uff0cUA\u548c\u5176\u4ed6\u7684\u7279\u5b9a\u7684\u8eab\u4efd\u9274\u522b\u6280\u672f\u6765\u5728\u7528\u6237\u8bbf\u95ee\u65f6\u8bc6\u522b\u7528\u6237\u8ffd\u8e2a\u4ed6\u4eec\u3002\n\u76f8\u6bd4\u4e4b\u4e0b\uff0cPrivacy Browser\u9ed8\u8ba4\u7981\u7528\u9690\u79c1\u76f8\u5173\u7684\u529f\u80fd\uff0c\u5982\u679c\u7f51\u9875\u5408\u6cd5\u7684\u8bf7\u6c42\u8fd9\u4e9b\u529f\u80fd\uff0c\u7528\u6237\u53ef\u4ee5\u9009\u62e9\u5728\u8fd9\u4e2a\u8bbf\u95ee\u65f6\u6253\u5f00\u76f8\u5e94\u7684\u529f\u80fd\uff0c\u6216\u8005\u53ef\u4ee5\u4f7f\u7528\u57df\u8bbe\u7f6e\u6765\u5728\u4ed6\u4eec\u8bbf\u95ee\u7279\u5b9a\u7f51\u9875\u65f6\u81ea\u52a8\u6253\u5f00\u67d0\u4e9b\u529f\u80fd\uff0c\u5e76\u5728\u79bb\u5f00\u65f6\u5173\u95ed\u3002\n\nPrivacy Browser\u76ee\u524d\u4f7f\u7528\u5b89\u5353\u5185\u7f6e\u7684WebView\u6765\u5448\u73b0\u7f51\u9875\uff0c\u56e0\u6b64\u5b83\u5728\u6700\u65b0\u7248\u672c\u7684WebView\u6548\u679c\u6700\u597d\u3002(see https://www.stoutner.com/privacy-browser/common-settings/webview/). \u57284.x\u7cfb\u5217\u4e2d\uff0cPrivacy Browser\u5c06\u5207\u6362\u5230\u53ebPrivacy WebView\u7684\u5b89\u5353WebView\u7684\u5206\u652f\uff0c\u5b83\u5141\u8bb8\u66f4\u9ad8\u7684\u9690\u79c1\u529f\u80fd\u3002\n\u529f\u80fd:\n\u96c6\u6210EasyList\u62e6\u622a\u5e7f\u544a\n\u652f\u6301Tor Orbot\u901a\u9053\n\u56fa\u5b9aSSL\u8bc1\u4e66\n\u652f\u6301\u5bfc\u5165/\u5bfc\u51fa\u8bbe\u7f6e\u548c\u4e66\u7b7e"
+    },
+    "donate": [
+      "https://www.stoutner.com/donations/"
+    ],
+    "featureGraphic": {
+      "en": {
+        "name": "/com.stoutner.privacybrowser.standard/en/featureGraphic_InkcI4hN67DvGPubqkIqkqbxsI0Wz7oWcEqA33TsgSs=.png",
+        "sha256": "22791c23884debb0ef18fb9baa422a92a6f1b08d16cfba16704a80df74ec812b",
+        "size": 51015
+      },
+      "en-US": {
+        "name": "/com.stoutner.privacybrowser.standard/en-US/featureGraphic_InkcI4hN67DvGPubqkIqkqbxsI0Wz7oWcEqA33TsgSs=.png",
+        "sha256": "22791c23884debb0ef18fb9baa422a92a6f1b08d16cfba16704a80df74ec812b",
+        "size": 51015
+      },
+      "images": {
+        "name": "/com.stoutner.privacybrowser.standard/images/featureGraphic_J75jwsssc9M7u7N9H89hyXPn4vE6oVuM-63Ci-keSls=.png",
+        "sha256": "27be63c2cb2c73d33bbbb37d1fcf61c973e7e2f13aa15b8cfbadc28be91e4a5b",
+        "size": 51115
+      }
+    },
+    "icon": {
+      "en": {
+        "name": "/com.stoutner.privacybrowser.standard/en/icon_TcuCM76vKQN0yOL--Q5nb5tVhvCxqsomSWiIn8jfgm0=.png",
+        "sha256": "4dcb8233beaf290374c8e2fef90e676f9b5586f0b1aaca264968889fc8df826d",
+        "size": 26240
+      },
+      "en-US": {
+        "name": "/com.stoutner.privacybrowser.standard/en-US/icon_TcuCM76vKQN0yOL--Q5nb5tVhvCxqsomSWiIn8jfgm0=.png",
+        "sha256": "4dcb8233beaf290374c8e2fef90e676f9b5586f0b1aaca264968889fc8df826d",
+        "size": 26240
+      },
+      "images": {
+        "name": "/com.stoutner.privacybrowser.standard/images/icon_8iJ6HLFd2zkOoPefo1s5E21-K37puFKN_XlBw7Re_Iw=.png",
+        "sha256": "f2227a1cb15ddb390ea0f79fa35b39136d7e2b7ee9b8528dfd7941c3b45efc8c",
+        "size": 27842
+      }
+    },
+    "issueTracker": "https://redmine.stoutner.com/projects/privacy-browser/issues",
+    "lastUpdated": 1775295264521,
+    "liberapay": "sorenstoutner",
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "de-DE": "Privacy Browser",
+      "en-US": "Privacy Browser",
+      "es-ES": "Navegador Privado",
+      "fr-FR": "Privacy Browser",
+      "it-IT": "Privacy Browser",
+      "pt-BR": "Navegador Privado",
+      "ru-RU": "Privacy Browser",
+      "tr-TR": "Privacy Browser",
+      "zh-CN": "Privacy Browser"
+    },
+    "preferredSigner": "f97614dc96964bea2e4fa66b24608a510a87b3b1e01ba68e0753c099133a8768",
+    "promoGraphic": {
+      "en": {
+        "name": "/com.stoutner.privacybrowser.standard/en/promoGraphic_qhlVNg3ncQthzfHrVsswArtMwrym33xTP8kEE52ViPk=.png",
+        "sha256": "aa1955360de7710b61cdf1eb56cb3002bb4cc2bca6df7c533fc904139d9588f9",
+        "size": 11192
+      },
+      "en-US": {
+        "name": "/com.stoutner.privacybrowser.standard/en-US/promoGraphic_qhlVNg3ncQthzfHrVsswArtMwrym33xTP8kEE52ViPk=.png",
+        "sha256": "aa1955360de7710b61cdf1eb56cb3002bb4cc2bca6df7c533fc904139d9588f9",
+        "size": 11192
+      },
+      "images": {
+        "name": "/com.stoutner.privacybrowser.standard/images/promoGraphic_uG5vWeUx8ybRrYKS0Mik96m7Kl7UQ4KFIF6JguktUQU=.png",
+        "sha256": "b86e6f59e531f326d1ad8292d0c8a4f7a9bb2a5ed4438285205e8982e92d5105",
+        "size": 11263
+      }
+    },
+    "screenshots": {
+      "phone": {
+        "de-DE": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/de-DE/phoneScreenshots/01 - Homepage - de.png",
+            "sha256": "bf90947659c271083e31d6282cab5c48c6bb14a429a7cd4173c5e87933c0a85f",
+            "size": 127930
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/de-DE/phoneScreenshots/01-Homepage.png",
+            "sha256": "bd5d2ac5863972803ec4e377169243059d3b1210820b8171db1ef5134f373f37",
+            "size": 104150
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/de-DE/phoneScreenshots/02 - Navigation Menu - de.png",
+            "sha256": "b810811c62161af5f877a57b9db6803d07741023373e4526c3811149432cba86",
+            "size": 115451
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/de-DE/phoneScreenshots/02-NavigationMenu-de.png",
+            "sha256": "dd9f40d70271ac39bf80ab56059fed0858bd4b48db25d6df2e2969d883f9dbb0",
+            "size": 117451
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/de-DE/phoneScreenshots/02-NavigationMenu.png",
+            "sha256": "0312d48bc56ba492a837219a9348e0cf726fe8e8cb35f2cb6fbf9385fab329c9",
+            "size": 119772
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/de-DE/phoneScreenshots/03-OptionsMenu-de.png",
+            "sha256": "8d34da439b20290319216ab63692878571dba99b7b7412d0c33b468518887b13",
+            "size": 119504
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/de-DE/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "8003f28b5ffa176ce31d8e22dfa9500b6f0d55fbcdbb011cbea2143e38b9cf0b",
+            "size": 117531
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/de-DE/phoneScreenshots/04-Tor.png",
+            "sha256": "88e7d7ccb4f14edca9c917d08486581ba04d3e9aa7aaf1c9c0ad5bb4f28d13bb",
+            "size": 256953
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/de-DE/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "9b2556acf60a15822ec203d95c09f087b68e74ff1e2995bd9070ab2463a48f97",
+            "size": 130128
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/de-DE/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "bd18244e3d6240824deb8a31eb8d3edefbf02a515f7ac4c88e42a9a9edf80003",
+            "size": 86740
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/de-DE/phoneScreenshots/07 - 10-Inch Tablet Domains - de.png",
+            "sha256": "8c4e147e9552104360a37094a5153c7cb7155c12ad686ce445a2ab7f6fb44707",
+            "size": 273196
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/de-DE/phoneScreenshots/07-10-InchTabletDomains-de.png",
+            "sha256": "7c4a6d380ce911f9f5a91d549ae19652b76b91646bf6bbfdb6119a5fbff473a3",
+            "size": 279792
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/de-DE/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "472ea7287467e2896cac03dad2254fdc399096779ccf30ebf1a8b79115d3b135",
+            "size": 183724
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/en-US/phoneScreenshots/01 - Homepage - en.png",
+            "sha256": "e44e089b3a502afd16b34df6422290818c9f392e4c940102c1d3a1a28a9e080b",
+            "size": 128024
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/en-US/phoneScreenshots/01-Homepage.png",
+            "sha256": "4ef3793d4a221457f5e9ef84097a0ac4c46f15e86a4d87a1e9e6e1013d48d711",
+            "size": 105734
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/en-US/phoneScreenshots/02 - Navigation Menu - en.png",
+            "sha256": "b982a18c5eb6a40a6808ac187047becd6d9e7510e8db591178c66be13f6799ee",
+            "size": 111327
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/en-US/phoneScreenshots/02-NavigationMenu-en.png",
+            "sha256": "0298c27064b535c6ab7e2ee83aa46399109c67b617f2a3e73ae8a8590b0108a2",
+            "size": 114170
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/en-US/phoneScreenshots/02-NavigationMenu.png",
+            "sha256": "4e041bbd033f49d25cef4dc25e6e4c64f937907187e3bf5d43e909651bd3d617",
+            "size": 115278
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/en-US/phoneScreenshots/03-Options Menu-en.png",
+            "sha256": "677972b266fb28698f5b8b3bf16b4fdddc5d3f54747d5b000557f6dc6847e25f",
+            "size": 153419
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/en-US/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "3eea013f7c4fdaa2bf4187045f81538bec346f54ce19c1dbc08b9277da107447",
+            "size": 143702
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/en-US/phoneScreenshots/04-Tor.png",
+            "sha256": "88e7d7ccb4f14edca9c917d08486581ba04d3e9aa7aaf1c9c0ad5bb4f28d13bb",
+            "size": 256953
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/en-US/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "428a90ca83ea33eb4e1180135db31aca9a3e4f9ae5895d4bf11b338ba53b11d8",
+            "size": 130734
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/en-US/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "2e46ca2feeb52d6182e6824ea8c06bf72df5a6d1fb04e25c6c95192c7e9b7ff2",
+            "size": 86674
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/en-US/phoneScreenshots/07 - 10-Inch Tablet Domains - en.png",
+            "sha256": "f91212dc8531ddeec0729e027b1b8cb6534e6608a265e4d6f0942128462c2bd2",
+            "size": 267865
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/en-US/phoneScreenshots/07-10-InchTabletDomains-en.png",
+            "sha256": "e3f9186840dbbd2809787096ef153ee67db9e5370c24a83563ca019f58ec6265",
+            "size": 254478
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/en-US/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "d8331fb3462a323a845eda1ed060435b604c58349e2fb659c17ca83c8caf36f1",
+            "size": 177128
+          }
+        ],
+        "es-ES": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/es-ES/phoneScreenshots/01 - Homepage - es.png",
+            "sha256": "5b33e26624eca25cd239e3a3551194fee31fdf73ae7222365a0baa9c62c302e2",
+            "size": 126829
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/es-ES/phoneScreenshots/01-Homepage.png",
+            "sha256": "e3597139910b1da885bf49505504a0d59b393f3cbc268b9bcf8ade31e30ca9ca",
+            "size": 106474
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/es-ES/phoneScreenshots/02 - Navigation Menu - es.png",
+            "sha256": "efb5fa4dc97bdab83a20ca62958d10c121daf919a596be3e052141c2f952795f",
+            "size": 113324
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/es-ES/phoneScreenshots/02-NavigationMenu-es.png",
+            "sha256": "c7c89bbd11940a70cb1f53d631bdfb8363ab85e50ff46e749d4faa31aa75885a",
+            "size": 117223
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/es-ES/phoneScreenshots/02-NavigationMenu.png",
+            "sha256": "95a885319cd10a57191487df0161d279c92828700a9bb1b63d60e87ecf0fc04a",
+            "size": 119023
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/es-ES/phoneScreenshots/03-OptionsMenu-es.png",
+            "sha256": "63b3a09c2041f7ab8c1c57cd15f95783f1de6647540d76b37b288a4578a7e2a5",
+            "size": 139108
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/es-ES/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "99011a33a4aff7ac5ab1dd8bad422526751d06c8a29411b871e4f4b4437e312d",
+            "size": 132790
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/es-ES/phoneScreenshots/04-Tor.png",
+            "sha256": "67d34305cd9b2718dd250471248364ca4cf2500fc489cf93bc5c435bbcc13013",
+            "size": 242171
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/es-ES/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "97ea3e841e5ab63006878ac4fb8feb30458380f5156270e77c72e8b8cc5bee91",
+            "size": 136385
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/es-ES/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "e25a2e94309b58dcd5852a4be42b67066b3a0991cf424223a7ce3cce2ec67a5f",
+            "size": 87078
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/es-ES/phoneScreenshots/07 - 10-Inch Tablet Domains - es.png",
+            "sha256": "a780dc54e63db7866ec8cf0a39aac70c5e09b41927d1532a7cc184d185d57adf",
+            "size": 288515
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/es-ES/phoneScreenshots/07-10-InchTabletDomains-es.png",
+            "sha256": "53c13011f593a3a4db40d2b53f69bf523995969b8b64ffcfad249acba2eb5497",
+            "size": 279858
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/es-ES/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "c5f6084a3e7af38140b55d62d0b7fb0bdc22e9a39865d995b33e892872edb6f4",
+            "size": 181237
+          }
+        ],
+        "fr-FR": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/fr-FR/phoneScreenshots/01 - Homepage - fr.png",
+            "sha256": "5c859fdcf2d6d9a9478df7165bafe1f04be1444f62a20ca3ee7ae2fd57b0d59f",
+            "size": 126926
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/fr-FR/phoneScreenshots/01-Homepage.png",
+            "sha256": "14cec1243e743f5e29fb407c389b2f46ce5c98a40f3f44ef87907b46bd9d8c68",
+            "size": 104996
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/fr-FR/phoneScreenshots/02 - Navigation Menu - fr.png",
+            "sha256": "2161639b38a0efe36fa48498758c51558dbf08d9160dfb78f32943fee868a52d",
+            "size": 117645
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/fr-FR/phoneScreenshots/02-NavigationMenu-fr.png",
+            "sha256": "f3eccb4f9bd1d6e4d9683ac1e93a0007d2be463c493e681d07fb18fbf6e8069b",
+            "size": 120779
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/fr-FR/phoneScreenshots/02-NavigationMenu.png",
+            "sha256": "78d45cb05d6c1abb99949f434648116da6c1448d2157d18bf74899bb5c0c91dd",
+            "size": 125266
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/fr-FR/phoneScreenshots/03-OptionsMenu-fr.png",
+            "sha256": "dbaeb797e28525e2cb404c3a822e85bb85fcfede117431d8eb3a70e903b4a830",
+            "size": 150278
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/fr-FR/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "19ad2c7123ac2db76eab65f75d73fae3b7990405e70438ec9103700a84c6ff3b",
+            "size": 135513
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/fr-FR/phoneScreenshots/04-Tor.png",
+            "sha256": "4b39557b5ab39a97fc84259cc46287342ded2e67d9da0b8d334356f425728f38",
+            "size": 240511
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/fr-FR/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "77ddaf37f9f9151ad6257efd048ba4a90d70563dcc9f59720ed4868c659e526c",
+            "size": 131857
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/fr-FR/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "c998a75f94b18e7ea6137a352f0184cb8c8cf965370e6577531131ac762f9f93",
+            "size": 87330
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/fr-FR/phoneScreenshots/07 - 10-Inch Tablet Domains - fr.png",
+            "sha256": "0151ddf52632a349eeef26b89bfedd6dc170479f6ae8c04b3c66a7e752556db8",
+            "size": 269388
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/fr-FR/phoneScreenshots/07-10-InchTabletDomains-fr.png",
+            "sha256": "0a1cfbabe768a1c6ab4797ab35bb47d9518b7df017558ef3dc994562ba14f69f",
+            "size": 265240
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/fr-FR/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "e6c78a19b81372e92f95dc87b4853fab8e0ae36560439bd47dc4393fb92e1ac9",
+            "size": 180256
+          }
+        ],
+        "it-IT": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/it-IT/phoneScreenshots/01 - Homepage - it.png",
+            "sha256": "30287da3869623fdcdd286009883c687fa56472bd40c946faceb8569d8d332dd",
+            "size": 126016
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/it-IT/phoneScreenshots/01-Homepage.png",
+            "sha256": "72583ad572b3509ef1e27eed5dd2180c79d597bacef22e9dccf5e947bb4402b5",
+            "size": 106928
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/it-IT/phoneScreenshots/02 - Navigation Menu - it.png",
+            "sha256": "70bc671deca9fafcdac675202fb772b3a0b0daa75faa8027c6c7ce4b7e7d4dad",
+            "size": 106968
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/it-IT/phoneScreenshots/02-NavigationMenu-it.png",
+            "sha256": "09048d23ef78b9790496b1033c5362047b1a543ca96cb1c6bd505587d65371cf",
+            "size": 111116
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/it-IT/phoneScreenshots/02-NavigationMenu.png",
+            "sha256": "62927fb9fe9ef0b7fa07781497a902aa3d0738ca1d47384b0ec14269db5c83f8",
+            "size": 117139
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/it-IT/phoneScreenshots/03-OptionsMenu-it.png",
+            "sha256": "7679d8aafae293521277b83a516a35000b67e7d80dc5c24eec953dbefb8ab970",
+            "size": 158887
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/it-IT/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "dd664b23c276aad360e410081a597cafca51c152adbf3733c1551998fbb76902",
+            "size": 143745
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/it-IT/phoneScreenshots/04-Tor.png",
+            "sha256": "88e7d7ccb4f14edca9c917d08486581ba04d3e9aa7aaf1c9c0ad5bb4f28d13bb",
+            "size": 256953
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/it-IT/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "44df22dccfcb58aeb35cbe07e220ce04a0a41c60f6e564217552637cde5e5310",
+            "size": 133457
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/it-IT/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "94b7b4ea190a2504246ce6b23131de70a79f136819bd0689b14dba5445961f82",
+            "size": 87897
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/it-IT/phoneScreenshots/07 - 10-Inch Tablet Domains - it.png",
+            "sha256": "837c4eb4ab91c1a0b0aa994a52ca030c894a3671a7d782b274a5575dc3cc7d7d",
+            "size": 268375
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/it-IT/phoneScreenshots/07-10-InchTabletDomains-it.png",
+            "sha256": "795ede39363c08f21f19ecebef855a4d418f032c649074f587ff4d0980c092a4",
+            "size": 260859
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/it-IT/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "575375de948800900042faaacf7518b7781a38716b89eef50858550ed7878c05",
+            "size": 173093
+          }
+        ],
+        "pt-BR": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/pt-BR/phoneScreenshots/01 - Homepage - pt-rBR.png",
+            "sha256": "e2f9b68e81ed8215c5d503419c2fcf11b2ff4ba842c0e616866a6f2041ab9439",
+            "size": 127447
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/pt-BR/phoneScreenshots/01-Homepage.png",
+            "sha256": "e09f169dd446196ee1f40683b3043ccbda83a565d95871facedda4123da93274",
+            "size": 104702
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/pt-BR/phoneScreenshots/02 - Navigation Menu - pt-rBR.png",
+            "sha256": "d40d47ab891044004829c1ad896f1825ff0e069dcf3aff7d03d3f366c9e91b33",
+            "size": 113005
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/pt-BR/phoneScreenshots/02-NavigationMenu-pt-rBR.png",
+            "sha256": "509b84ce98df43d85eb0af772c0b00b8e11dffb0b157b126d785d1220f3ad912",
+            "size": 115350
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/pt-BR/phoneScreenshots/02-NavigationMenu.png",
+            "sha256": "347ae9f9943b38b34f122a469d13fa0f766f3dc3a94e1ef98cbb87f180d92e1d",
+            "size": 119803
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/pt-BR/phoneScreenshots/03-OptionsMenu-pt-rBR.png",
+            "sha256": "c309b2220bb66209c2660d01d9bf4b25147688a8fa1d3c1cf62fda7e16df9ad7",
+            "size": 122886
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/pt-BR/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "4fd6966b56a07f7977454e3725bda910ae36fbb8f29b5dfcb4885116b1ec5611",
+            "size": 121637
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/pt-BR/phoneScreenshots/04-Tor.png",
+            "sha256": "612d5db43c63698ff29e66e389389af90752bd2f0713ebe23b57f2de2d82c3b3",
+            "size": 254964
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/pt-BR/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "c6ad883825c4ea4691ab4982895b06daf04f59cc68f461e37e156b2bd76b0f9f",
+            "size": 126119
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/pt-BR/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "b57e6999a86cb60d0d654bba16cfef31e3fdbd594cdccf5eb3632e3f8a2f8b4d",
+            "size": 87161
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/pt-BR/phoneScreenshots/07 - 10-Inch Tablet Domains - pt-rBR.png",
+            "sha256": "68023d1429b41e577f2efa4a2bccab3bdb35e56f0cd712406b051d8a4f05dfc1",
+            "size": 274876
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/pt-BR/phoneScreenshots/07-10-InchTabletDomains-pt-rBR.png",
+            "sha256": "87b461955f9cb40769f31497ffac5fe11d7857b17e27cc8c9806908ad2c0c6c7",
+            "size": 273947
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/pt-BR/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "425396eb2c3eac8df4fea30a23d607c9c99ada2647394db420d7d6a833211867",
+            "size": 181934
+          }
+        ],
+        "ru-RU": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/ru-RU/phoneScreenshots/01 - Homepage - ru.png",
+            "sha256": "9bb26d72a8e2292745dcd815a14dad5a98f93b66766846162ecd9bca4d4001f9",
+            "size": 128295
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/ru-RU/phoneScreenshots/01-Homepage.png",
+            "sha256": "33064466ad1a76c4d253027620c28f794a691f73c72a0b7cae3651be0da1b48f",
+            "size": 106462
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/ru-RU/phoneScreenshots/02 - Navigation Menu - ru.png",
+            "sha256": "93aa899d2c82eec41e8dcb30118416cd1904f93dcd70d6123d9ab4c3f1bbaff5",
+            "size": 112951
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/ru-RU/phoneScreenshots/02-NavigationMenu-ru.png",
+            "sha256": "e1e9a5fe10e9883de038777b3ab506013ca5c68bedaf53cf70d4b0c804d112c2",
+            "size": 118321
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/ru-RU/phoneScreenshots/02-NavigationMenu.png",
+            "sha256": "4df5eda6e6d547fce4127b15a56a6249e7a871c27810ce79a0e194249ad284f0",
+            "size": 123038
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/ru-RU/phoneScreenshots/03-OptionsMenu-ru.png",
+            "sha256": "32220a982760e1b73cc472d81396008dcad1820928bb5e6aac9629e270c0821f",
+            "size": 123296
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/ru-RU/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "3d17abb6074a39872d4453e118959ebbfa91d3534a00290878b8c2387f85f6be",
+            "size": 121766
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/ru-RU/phoneScreenshots/04-Tor.png",
+            "sha256": "88e7d7ccb4f14edca9c917d08486581ba04d3e9aa7aaf1c9c0ad5bb4f28d13bb",
+            "size": 256953
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/ru-RU/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "4606948d634740b91b76f4bdb5fc8eaea335c27531c5fbc8fc01e34814318ce6",
+            "size": 139350
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/ru-RU/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "d1c263b07ac5c5d2c20716e6f6530d090c3608744bb2a211971e13e6d293c386",
+            "size": 87265
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/ru-RU/phoneScreenshots/07 - 10-Inch Tablet Domains - ru.png",
+            "sha256": "e8ad28a9df03b137da99973577975cab4ebc160a1664820c1d43e472f50194e4",
+            "size": 269300
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/ru-RU/phoneScreenshots/07-10-InchTabletDomains-ru.png",
+            "sha256": "82e5b889d7ab3be4b94357b9fb0496bd01fca637f44c53655a3ced94056dd489",
+            "size": 279141
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/ru-RU/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "4ba7dec500ca45f381a669ae0df679fef4d376bed721e6196bfb8092f8ea9ef9",
+            "size": 186533
+          }
+        ],
+        "tr-TR": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/tr-TR/phoneScreenshots/01 - Homepage - tr.png",
+            "sha256": "aeea1eea89538ee3eee36643c379eab00857d8c40773bc13d50896be284cf3a9",
+            "size": 128535
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/tr-TR/phoneScreenshots/01-Homepage.png",
+            "sha256": "3dc20b07517a66efc4b6849668a2c7faba2165704d971af0de5d47f86b66a530",
+            "size": 105745
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/tr-TR/phoneScreenshots/02 - Navigation Menu - tr.png",
+            "sha256": "39f6fd2f32e810635d73d98efe4cccb6bb4488155733a668439747dac5a17798",
+            "size": 108673
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/tr-TR/phoneScreenshots/02-NavigationMenu-tr.png",
+            "sha256": "6f234233d2e32ab4916b87887ca8a1042aaff80e47cabad66ebed46c9d828108",
+            "size": 107742
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/tr-TR/phoneScreenshots/02-NavigationMenu.png",
+            "sha256": "596a3194c88e0bd20ae4489e333bc80ea91f7df601bd21f926bf8b2eb8708653",
+            "size": 113080
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/tr-TR/phoneScreenshots/03-OptionsMenu-tr.png",
+            "sha256": "91d552c9b8f84916d6d4aadd2435c09a8dc91d9a238111202c983616ed96c8f6",
+            "size": 148005
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/tr-TR/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "1e5764293feca063f18dad57abc9fec24489a2032f1ee75964b83af30525cca9",
+            "size": 136485
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/tr-TR/phoneScreenshots/04-Tor.png",
+            "sha256": "08a2569dd1e932a37375552ec0388a439378dd531ae8bf3967e0cb41f47b0ba9",
+            "size": 225735
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/tr-TR/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "7cbcf85c3611aff957d51795a27e6ee07ee085e524616f5b787bc5ee51aab23b",
+            "size": 127330
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/tr-TR/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "edadf2f3da63279e192f99204b225dfa57ed3ddbf398d5242182f914b48c906f",
+            "size": 87607
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/tr-TR/phoneScreenshots/07 - 10-Inch Tablet Domains - tr.png",
+            "sha256": "a5e7d290c6909dbe2914e4423aade046b7a5d0581a9dbb757fa6a1b8853fa172",
+            "size": 270561
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/tr-TR/phoneScreenshots/07-10-InchTabletDomains-tr.png",
+            "sha256": "0c464c625b88946376317988fb2cc0d867475c5aa26e3384027c8ffffb59c87f",
+            "size": 262644
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/tr-TR/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "e18c150f04c031509db836a323ba0afd95347ecd8c09425db9bf08b832e62825",
+            "size": 172988
+          }
+        ],
+        "zh-CN": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh-CN/phoneScreenshots/01 - Homepage - zh-rCN.png",
+            "sha256": "6186f37b81dd1024851232d722370e923a8b0b78655de9f940bb3f5b868cdb47",
+            "size": 127917
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh-CN/phoneScreenshots/02 - Navigation Menu - zh-rCN.png",
+            "sha256": "7ccc9427ca6dd475631a5aae8eef99b2a122ed4d3c92f6118b8d69e03500855f",
+            "size": 101850
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh-CN/phoneScreenshots/02-NavigationMenu-zh-rCN.png",
+            "sha256": "611a32334eb17bb966108f517b30f4492153b668a8dfe6525fc9f0f94f64b3f4",
+            "size": 100226
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh-CN/phoneScreenshots/03-OptionsMenu-zh-rCN.png",
+            "sha256": "3a4955fe02cc912fa613ee066814f8e78b9c7a2b7c89773e9b17aaeab3803f86",
+            "size": 152978
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh-CN/phoneScreenshots/04-Tor-zh-rCN.png",
+            "sha256": "812f95def8c30a58dbf29eb761fb45ae731e5c04567481923cfd269e9f1ae13b",
+            "size": 189340
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh-CN/phoneScreenshots/05-RequestDetails-zh-rCN.png",
+            "sha256": "edff3b141a539e4e13f562c1aeca14356e4c526ad86af0dafd4a412a37d3344c",
+            "size": 196505
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh-CN/phoneScreenshots/06-DarkTheme-zh-rCN.png",
+            "sha256": "bf037404e8113bd2aa9927de258fce65abce2fddda3177fed147d7a7b4c91166",
+            "size": 126490
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh-CN/phoneScreenshots/07 - 10-Inch Tablet Domains - zh-rCN.png",
+            "sha256": "8db6a5fff7d5f3476a7d821174d1444d121f9d2be25dbcc6a4bd3f00ebca87ea",
+            "size": 267377
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh-CN/phoneScreenshots/07-10-InchTabletDomains-zh-rCN.png",
+            "sha256": "e08ade23a27915c336f271a1d1414d6f87db6af9ae5c32ac249f4aeae436dc9e",
+            "size": 246918
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh-CN/phoneScreenshots/07-Domains.png",
+            "sha256": "17ed7b546e9dc1547b6119e5269ca96cfa714e925df5f6b8f4bcd52b075546fe",
+            "size": 173407
+          }
+        ],
+        "zh_CN": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh_CN/phoneScreenshots/01 - Homepage - zh-rCN.png",
+            "sha256": "8624294d3bbc0a62059da85964c499d52f91a6b141502d7f0fd4a5309cbfbc58",
+            "size": 126885
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh_CN/phoneScreenshots/02-NavigationMenu-zh-rCN.png",
+            "sha256": "611a32334eb17bb966108f517b30f4492153b668a8dfe6525fc9f0f94f64b3f4",
+            "size": 100226
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh_CN/phoneScreenshots/03-OptionsMenu-zh-rCN.png",
+            "sha256": "f534204a24967f3601ddc4efd88d083b1f710902998cba369421d5ee5bc75dcd",
+            "size": 154718
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh_CN/phoneScreenshots/04-Tor-zh-rCN.png",
+            "sha256": "14979671f1caed48386782ec3d999d50462f486d8cea43c273348db60296ce3f",
+            "size": 189646
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh_CN/phoneScreenshots/05-RequestDetails-zh-rCN.png",
+            "sha256": "6ae39ea14b244b7d9eea772c6b8e2b77ea31b4e5e7506379760d6c0c96e6e06b",
+            "size": 196811
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh_CN/phoneScreenshots/06-DarkTheme-zh-rCN.png",
+            "sha256": "4a8b3ecb8d60c14d119654fc352fa4122f1b10cde58a005c8e45262a97be5b2d",
+            "size": 126796
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/zh_CN/phoneScreenshots/07-Domains.png",
+            "sha256": "17ed7b546e9dc1547b6119e5269ca96cfa714e925df5f6b8f4bcd52b075546fe",
+            "size": 173407
+          }
+        ]
+      },
+      "sevenInch": {
+        "de-DE": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/de-DE/sevenInchScreenshots/01-DarkTheme.png",
+            "sha256": "bd18244e3d6240824deb8a31eb8d3edefbf02a515f7ac4c88e42a9a9edf80003",
+            "size": 86740
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/de-DE/sevenInchScreenshots/02-RequestDetails.png",
+            "sha256": "9b2556acf60a15822ec203d95c09f087b68e74ff1e2995bd9070ab2463a48f97",
+            "size": 130128
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/en-US/sevenInchScreenshots/01-DarkTheme.png",
+            "sha256": "2e46ca2feeb52d6182e6824ea8c06bf72df5a6d1fb04e25c6c95192c7e9b7ff2",
+            "size": 86674
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/en-US/sevenInchScreenshots/02-RequestDetails.png",
+            "sha256": "428a90ca83ea33eb4e1180135db31aca9a3e4f9ae5895d4bf11b338ba53b11d8",
+            "size": 130734
+          }
+        ],
+        "es-ES": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/es-ES/sevenInchScreenshots/01-DarkTheme.png",
+            "sha256": "e25a2e94309b58dcd5852a4be42b67066b3a0991cf424223a7ce3cce2ec67a5f",
+            "size": 87078
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/es-ES/sevenInchScreenshots/02-RequestDetails.png",
+            "sha256": "97ea3e841e5ab63006878ac4fb8feb30458380f5156270e77c72e8b8cc5bee91",
+            "size": 136385
+          }
+        ],
+        "fr-FR": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/fr-FR/sevenInchScreenshots/01-DarkTheme.png",
+            "sha256": "c998a75f94b18e7ea6137a352f0184cb8c8cf965370e6577531131ac762f9f93",
+            "size": 87330
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/fr-FR/sevenInchScreenshots/02-RequestDetails.png",
+            "sha256": "77ddaf37f9f9151ad6257efd048ba4a90d70563dcc9f59720ed4868c659e526c",
+            "size": 131857
+          }
+        ],
+        "it-IT": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/it-IT/sevenInchScreenshots/01-DarkTheme.png",
+            "sha256": "94b7b4ea190a2504246ce6b23131de70a79f136819bd0689b14dba5445961f82",
+            "size": 87897
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/it-IT/sevenInchScreenshots/02-RequestDetails.png",
+            "sha256": "44df22dccfcb58aeb35cbe07e220ce04a0a41c60f6e564217552637cde5e5310",
+            "size": 133457
+          }
+        ],
+        "pt-BR": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/pt-BR/sevenInchScreenshots/01-DarkTheme.png",
+            "sha256": "b57e6999a86cb60d0d654bba16cfef31e3fdbd594cdccf5eb3632e3f8a2f8b4d",
+            "size": 87161
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/pt-BR/sevenInchScreenshots/02-RequestDetails.png",
+            "sha256": "c6ad883825c4ea4691ab4982895b06daf04f59cc68f461e37e156b2bd76b0f9f",
+            "size": 126119
+          }
+        ],
+        "ru-RU": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/ru-RU/sevenInchScreenshots/01-DarkTheme.png",
+            "sha256": "d1c263b07ac5c5d2c20716e6f6530d090c3608744bb2a211971e13e6d293c386",
+            "size": 87265
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/ru-RU/sevenInchScreenshots/02-RequestDetails.png",
+            "sha256": "4606948d634740b91b76f4bdb5fc8eaea335c27531c5fbc8fc01e34814318ce6",
+            "size": 139350
+          }
+        ],
+        "tr-TR": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/tr-TR/sevenInchScreenshots/01-DarkTheme.png",
+            "sha256": "edadf2f3da63279e192f99204b225dfa57ed3ddbf398d5242182f914b48c906f",
+            "size": 87607
+          },
+          {
+            "name": "/com.stoutner.privacybrowser.standard/tr-TR/sevenInchScreenshots/02-RequestDetails.png",
+            "sha256": "7cbcf85c3611aff957d51795a27e6ee07ee085e524616f5b787bc5ee51aab23b",
+            "size": 127330
+          }
+        ]
+      },
+      "tenInch": {
+        "de-DE": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/de-DE/tenInchScreenshots/01-Domains.png",
+            "sha256": "472ea7287467e2896cac03dad2254fdc399096779ccf30ebf1a8b79115d3b135",
+            "size": 183724
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/en-US/tenInchScreenshots/01-Domains.png",
+            "sha256": "d8331fb3462a323a845eda1ed060435b604c58349e2fb659c17ca83c8caf36f1",
+            "size": 177128
+          }
+        ],
+        "es-ES": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/es-ES/tenInchScreenshots/01-Domains.png",
+            "sha256": "c5f6084a3e7af38140b55d62d0b7fb0bdc22e9a39865d995b33e892872edb6f4",
+            "size": 181237
+          }
+        ],
+        "fr-FR": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/fr-FR/tenInchScreenshots/01-Domains.png",
+            "sha256": "e6c78a19b81372e92f95dc87b4853fab8e0ae36560439bd47dc4393fb92e1ac9",
+            "size": 180256
+          }
+        ],
+        "it-IT": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/it-IT/tenInchScreenshots/01-Domains.png",
+            "sha256": "575375de948800900042faaacf7518b7781a38716b89eef50858550ed7878c05",
+            "size": 173093
+          }
+        ],
+        "pt-BR": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/pt-BR/tenInchScreenshots/01-Domains.png",
+            "sha256": "425396eb2c3eac8df4fea30a23d607c9c99ada2647394db420d7d6a833211867",
+            "size": 181934
+          }
+        ],
+        "ru-RU": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/ru-RU/tenInchScreenshots/01-Domains.png",
+            "sha256": "4ba7dec500ca45f381a669ae0df679fef4d376bed721e6196bfb8092f8ea9ef9",
+            "size": 186533
+          }
+        ],
+        "tr-TR": [
+          {
+            "name": "/com.stoutner.privacybrowser.standard/tr-TR/tenInchScreenshots/01-Domains.png",
+            "sha256": "e18c150f04c031509db836a323ba0afd95347ecd8c09425db9bf08b832e62825",
+            "size": 172988
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://gitweb.stoutner.com/?p=PrivacyBrowserAndroid.git;a=summary",
+    "summary": {
+      "de-DE": "Ein Browser, der Ihre Privatsph\u00e4re sch\u00fctzt.",
+      "en-US": "A web browser that respects your privacy.",
+      "es-ES": "Un navegador web que respeta tu privacidad.",
+      "fr-FR": "Un navigateur Web qui respecte votre vie priv\u00e9e.",
+      "it-IT": "Il browser web che rispetta la tua privacy.",
+      "pt-BR": "Um navegador da web que respeita sua privacidade.",
+      "ru-RU": "\u0412\u0435\u0431-\u0431\u0440\u0430\u0443\u0437\u0435\u0440, \u0443\u0432\u0430\u0436\u0430\u044e\u0449\u0438\u0439 \u0432\u0430\u0448\u0443 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u044c.",
+      "tr-TR": "Gizlili\u011finize sayg\u0131 duyan web taray\u0131c\u0131s\u0131.",
+      "zh-CN": "\u4e00\u4e2a\u5c0a\u91cd\u4f60\u9690\u79c1\u7684\u6d4f\u89c8\u5668\u3002"
+    },
+    "tvBanner": {
+      "en": {
+        "name": "/com.stoutner.privacybrowser.standard/en/tvBanner_N-WYN8I_nrIrEZsp97w6cceIeZB1bnZySYnfBc4eeyQ=.png",
+        "sha256": "37e59837c23f9eb22b119b29f7bc3a71c7887990756e76724989df05ce1e7b24",
+        "size": 42009
+      },
+      "en-US": {
+        "name": "/com.stoutner.privacybrowser.standard/en-US/tvBanner_N-WYN8I_nrIrEZsp97w6cceIeZB1bnZySYnfBc4eeyQ=.png",
+        "sha256": "37e59837c23f9eb22b119b29f7bc3a71c7887990756e76724989df05ce1e7b24",
+        "size": 42009
+      },
+      "images": {
+        "name": "/com.stoutner.privacybrowser.standard/images/tvBanner_RrDswLUj23iI73zcHKMs8gBrazs7OFozI5PZ3KIW5Bw=.png",
+        "sha256": "46b0ecc0b523db7888ef7cdc1ca32cf2006b6b3b3b385a332393d9dca216e41c",
+        "size": 42140
+      }
+    },
+    "webSite": "https://www.stoutner.com/privacy-browser-android/"
+  },
+  "version": {
+    "added": 1775295264521,
+    "file": {
+      "ipfsCIDv1": "bafybeiggp3dabgzrxkwemzc2rpxzyixsmlae6hl456wkcxyv55morhj53e",
+      "name": "/com.stoutner.privacybrowser.standard_81.apk",
+      "sha256": "209e0670cb44a959dd628737eaa5b8df05bfb605e4706de49ea2b72684cf72e3",
+      "size": 17083571
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "f97614dc96964bea2e4fa66b24608a510a87b3b1e01ba68e0753c099133a8768"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "com.android.launcher.permission.INSTALL_SHORTCUT"
+        },
+        {
+          "name": "com.stoutner.privacybrowser.standard.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 81,
+      "versionName": "3.20.1"
+    },
+    "src": {
+      "name": "/com.stoutner.privacybrowser.standard_81_src.tar.gz",
+      "sha256": "5a41fad1d8341e863d3dec97b56aca1f201258bd808e42a8c79b586e59e1b1c5",
+      "size": 24460323
+    },
+    "whatsNew": {
+      "de-DE": "\u2022 Fehler der F-Droid-Builds durch die Verwendung der Standard-Java-Version behoben.",
+      "en-US": "\u2022 Fix the F-Droid builds by using the default Java version.",
+      "es-ES": "\u2022 Corregir las compilaciones de F-Droid utilizando la versi\u00f3n predeterminada de Java.",
+      "it-IT": "\u2022 Sistemazione della compilazione per F-Droid utilizzando la versione base di Java.",
+      "ru-RU": "\u2022 \u0418\u0441\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u044b \u0441\u0431\u043e\u0440\u043a\u0438 \u0434\u043b\u044f F-Droid \u0441 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0435\u043c \u0432\u0435\u0440\u0441\u0438\u0438 Java \u043f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e."
+    }
+  }
+}

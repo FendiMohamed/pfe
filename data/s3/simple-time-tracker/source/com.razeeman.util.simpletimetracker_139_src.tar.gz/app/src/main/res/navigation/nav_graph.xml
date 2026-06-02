@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <action
+        android:id="@+id/action_to_archiveFragment"
+        app:destination="@id/archiveFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_to_categoriesFragment"
+        app:destination="@id/categoriesFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_to_dataEditFragment"
+        app:destination="@id/dataEditFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_to_complexRulesFragment"
+        app:destination="@id/complexRulesFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_to_activitySuggestionsFragment"
+        app:destination="@id/activitySuggestionsFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_to_shortcutsFragment"
+        app:destination="@id/shortcutsFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_to_changeShortcutFragment"
+        app:destination="@id/changeShortcutFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_to_statisticsDetailFragment"
+        app:destination="@id/statisticsDetailFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_to_pomodoroFragment"
+        app:destination="@id/pomodoroFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_to_pomodoroSettingsFragment"
+        app:destination="@id/pomodoroSettingsDialogFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_to_statisticsTagValuesSettingsDialogFragment"
+        app:destination="@id/statisticsTagValuesSettingsDialogFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_to_changeComplexRuleFragment"
+        app:destination="@id/changeComplexRuleFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.util.simpletimetracker.feature_main.view.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_mainFragment_to_changeRecordTypeFragment"
+            app:destination="@id/changeRecordTypeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_changeRecordFragment"
+            app:destination="@id/changeRecordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_changeRunningRecordFragment"
+            app:destination="@id/changeRunningRecordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_changeActivityFilterFragment"
+            app:destination="@+id/changeActivityFilterFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeRecordTypeFragment"
+        android:name="com.example.util.simpletimetracker.feature_change_record_type.view.ChangeRecordTypeFragment"
+        android:label="ChangeRecordTypeFragment"
+        tools:layout="@layout/change_record_type_fragment">
+        <action
+            android:id="@+id/action_changeRecordTypeFragment_to_changeCategoryFragment"
+            app:destination="@id/changeCategoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeRecordFragment"
+        android:name="com.example.util.simpletimetracker.feature_change_record.view.ChangeRecordFragment"
+        android:label="ChangeRecordFragment"
+        tools:layout="@layout/change_record_fragment">
+        <action
+            android:id="@+id/action_changeRecordFragment_to_changeRecordTagFragment"
+            app:destination="@id/changeRecordTagFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeRunningRecordFragment"
+        android:name="com.example.util.simpletimetracker.feature_change_running_record.view.ChangeRunningRecordFragment"
+        android:label="ChangeRunningRecordFragment"
+        tools:layout="@layout/change_running_record_fragment">
+        <action
+            android:id="@+id/action_changeRunningRecordFragment_to_changeRecordTagFragment"
+            app:destination="@id/changeRecordTagFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticsDetailFragment"
+        android:name="com.example.util.simpletimetracker.feature_statistics_detail.view.StatisticsDetailFragment"
+        android:label="StatisticsDetailFragment"
+        tools:layout="@layout/statistics_detail_fragment">
+        <action
+            android:id="@+id/action_statisticsDetailFragment_to_recordsAllFragment"
+            app:destination="@id/recordsAllFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordsAllFragment"
+        android:name="com.example.util.simpletimetracker.feature_records_all.view.RecordsAllFragment"
+        android:label="RecordsAllFragment"
+        tools:layout="@layout/records_all_fragment">
+        <action
+            android:id="@+id/action_recordsAllFragment_to_changeRecordFragment"
+            app:destination="@id/changeRecordFragment" />
+        <action
+            android:id="@+id/action_recordsAllFragment_to_changeRunningRecordFragment"
+            app:destination="@id/changeRunningRecordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.util.simpletimetracker.feature_categories.view.CategoriesFragment"
+        android:label="CategoriesFragment"
+        tools:layout="@layout/categories_fragment">
+        <action
+            android:id="@+id/action_categoriesFragment_to_changeCategoryFragment"
+            app:destination="@id/changeCategoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_changeRecordTagFragment"
+            app:destination="@id/changeRecordTagFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeCategoryFragment"
+        android:name="com.example.util.simpletimetracker.feature_change_category.view.ChangeCategoryFragment"
+        android:label="ChangeCategoryFragment"
+        tools:layout="@layout/change_category_fragment" />
+    <fragment
+        android:id="@+id/changeRecordTagFragment"
+        android:name="com.example.util.simpletimetracker.feature_change_record_tag.view.ChangeRecordTagFragment"
+        android:label="ChangeRecordTagFragment"
+        tools:layout="@layout/change_record_tag_fragment" />
+    <fragment
+        android:id="@+id/archiveFragment"
+        android:name="com.example.util.simpletimetracker.feature_archive.view.ArchiveFragment"
+        android:label="ArchiveFragment"
+        tools:layout="@layout/archive_fragment" />
+    <fragment
+        android:id="@+id/dataEditFragment"
+        android:name="com.example.util.simpletimetracker.feature_data_edit.view.DataEditFragment"
+        android:label="DataEditFragment"
+        tools:layout="@layout/data_edit_fragment" />
+    <fragment
+        android:id="@+id/complexRulesFragment"
+        android:name="com.example.util.simpletimetracker.feature_complex_rules.view.ComplexRulesFragment"
+        android:label="ComplexRulesFragment"
+        tools:layout="@layout/complex_rules_fragment" />
+    <fragment
+        android:id="@+id/activitySuggestionsFragment"
+        android:name="com.example.util.simpletimetracker.feature_suggestions.view.ActivitySuggestionsFragment"
+        android:label="ActivitySuggestionsFragment"
+        tools:layout="@layout/activity_suggestions_fragment" />
+    <fragment
+        android:id="@+id/shortcutsFragment"
+        android:name="com.example.util.simpletimetracker.feature_shortcuts.view.ShortcutsFragment"
+        android:label="ShortcutsFragment"
+        tools:layout="@layout/shortcuts_fragment" />
+    <fragment
+        android:id="@+id/changeShortcutFragment"
+        android:name="com.example.util.simpletimetracker.feature_change_shortcut.view.ChangeShortcutFragment"
+        android:label="ChangeShortcutFragment"
+        tools:layout="@layout/fragment_change_shortcut" />
+    <fragment
+        android:id="@+id/changeComplexRuleFragment"
+        android:name="com.example.util.simpletimetracker.feature_change_complex_rule.view.ChangeComplexRuleFragment"
+        android:label="ChangeComplexRuleFragment"
+        tools:layout="@layout/change_complex_rule_fragment" />
+    <fragment
+        android:id="@+id/changeActivityFilterFragment"
+        android:name="com.example.util.simpletimetracker.feature_change_activity_filter.view.ChangeActivityFilterFragment"
+        android:label="ChangeActivityFilterFragment"
+        tools:layout="@layout/change_activity_filter_fragment" />
+    <fragment
+        android:id="@+id/pomodoroFragment"
+        android:name="com.example.util.simpletimetracker.feature_pomodoro.timer.view.PomodoroFragment"
+        android:label="PomodoroFragment"
+        tools:layout="@layout/pomodoro_fragment" />
+    <dialog
+        android:id="@+id/dateTimeDialog"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.dateTime.DateTimeDialogFragment"
+        android:label="DateTimeDialog"
+        tools:layout="@layout/date_dialog_fragment" />
+    <dialog
+        android:id="@+id/durationDialog"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.duration.view.DurationDialogFragment"
+        android:label="DurationDialog"
+        tools:layout="@layout/duration_dialog_fragment" />
+    <dialog
+        android:id="@+id/standardDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.standard.StandardDialogFragment"
+        android:label="StandardDialogFragment" />
+    <dialog
+        android:id="@+id/chartFilerDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.chartFilter.view.ChartFilterDialogFragment"
+        android:label="ChartFilerDialogFragment"
+        tools:layout="@layout/chart_filter_dialog_fragment" />
+    <dialog
+        android:id="@+id/defaultTypesSelectionDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.defaultTypesSelection.view.DefaultTypesSelectionDialogFragment"
+        android:label="DefaultTypesSelectionDialogFragment"
+        tools:layout="@layout/default_types_selection_dialog_fragment" />
+    <dialog
+        android:id="@+id/debugMenuDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.debugMenu.DebugMenuDialogFragment"
+        android:label="DebugMenuDialogFragment"
+        tools:layout="@layout/debug_menu_dialog_fragment" />
+    <dialog
+        android:id="@+id/typesSelectionDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.typesSelection.view.TypesSelectionDialogFragment"
+        android:label="RecordTagSelectionTypesDialogFragment"
+        tools:layout="@layout/record_tag_selection_types_dialog_fragment" />
+    <dialog
+        android:id="@+id/cardSizeDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.cardSize.view.CardSizeDialogFragment"
+        android:label="CardSizeDialogFragment"
+        tools:layout="@layout/card_size_dialog_fragment" />
+    <dialog
+        android:id="@+id/customizeOptionsMenuDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_settings.customizeOptionsMenu.CustomizeOptionsMenuDialogFragment"
+        android:label="CustomizeOptionsMenuDialogFragment"
+        tools:layout="@layout/customize_options_menu_dialog_fragment" />
+    <dialog
+        android:id="@+id/cardOrderDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.cardOrder.view.CardOrderDialogFragment"
+        android:label="CardSizeDialogFragment"
+        tools:layout="@layout/card_order_dialog_fragment" />
+    <dialog
+        android:id="@+id/emojiSelectionDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.emojiSelection.view.EmojiSelectionDialogFragment"
+        android:label="EmojiSelectionDialogFragment"
+        tools:layout="@layout/emoji_selection_dialog_fragment" />
+    <dialog
+        android:id="@+id/colorSelectionDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.colorSelection.view.ColorSelectionDialogFragment"
+        android:label="ColorSelectionDialogFragment"
+        tools:layout="@layout/color_selection_dialog_fragment" />
+    <dialog
+        android:id="@+id/archiveDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.archive.view.ArchiveDialogFragment"
+        android:label="ArchiveDialogFragment"
+        tools:layout="@layout/archive_dialog_fragment" />
+    <dialog
+        android:id="@+id/recordTagSelectionDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.recordTagSelection.RecordTagSelectionDialogFragment"
+        android:label="RecordTagSelectionDialogFragment"
+        tools:layout="@layout/record_tag_selection_dialog_fragment" />
+    <dialog
+        android:id="@+id/recordTagValueSelectionDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.recordTagValueSelection.view.RecordTagValueSelectionDialogFragment"
+        android:label="RecordTagValueSelectionDialogFragment"
+        tools:layout="@layout/record_tag_value_selection_dialog_fragment" />
+    <dialog
+        android:id="@+id/csvExportSettingsDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.csvExportSettings.view.CsvExportSettingsDialogFragment"
+        android:label="CsvExportSettingsDialogFragment"
+        tools:layout="@layout/csv_export_settings_fragment" />
+    <dialog
+        android:id="@+id/customRangeSelectionDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.customRangeSelection.view.CustomRangeSelectionDialogFragment"
+        android:label="CustomRangeSelectionDialogFragment"
+        tools:layout="@layout/custom_range_selection_fragment" />
+    <dialog
+        android:id="@+id/helpDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.helpDialog.HelpDialogFragment"
+        android:label="HelpDialogFragment"
+        tools:layout="@layout/help_dialog_fragment" />
+    <dialog
+        android:id="@+id/dataEditDuplicateTypeDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_data_edit.dialog.DataEditDuplicateTypeDialogFragment"
+        android:label="DataEditDuplicateTypeDialogFragment"
+        tools:layout="@layout/data_edit_duplicate_type_dialog_fragment" />
+    <dialog
+        android:id="@+id/dataEditTypeSelectionDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_data_edit.dialog.DataEditTypeSelectionDialogFragment"
+        android:label="DataEditTypeSelectionDialogFragment"
+        tools:layout="@layout/data_edit_type_selection_dialog_fragment" />
+    <dialog
+        android:id="@+id/dataEditTagSelectionDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_data_edit.dialog.DataEditTagSelectionDialogFragment"
+        android:label="DataEditTagSelectionDialogFragment"
+        tools:layout="@layout/data_edit_tag_selection_dialog_fragment" />
+    <dialog
+        android:id="@+id/recordsFilterDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_records_filter.view.RecordsFilterFragment"
+        android:label="RecordsFilterFragment"
+        tools:layout="@layout/records_filter_fragment" />
+    <dialog
+        android:id="@+id/pomodoroSettingsDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_pomodoro.settings.view.PomodoroSettingsDialogFragment"
+        android:label="PomodoroSettingsFragment"
+        tools:layout="@layout/pomodoro_settings_fragment" />
+    <dialog
+        android:id="@+id/statisticsTagValuesSettingsDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_statistics_detail.settings.view.StatisticsTagValuesSettingsDialogFragment"
+        android:label="StatisticsTagValuesSettingsDialogFragment" />
+    <dialog
+        android:id="@+id/recordQuickActionsDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.recordQuickActions.view.RecordQuickActionsDialogFragment"
+        android:label="RecordQuickActionsDialogFragment"
+        tools:layout="@layout/record_quick_actions_dialog_fragment" />
+    <dialog
+        android:id="@+id/backupOptionsDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_settings.backupOptions.view.BackupOptionsFragment"
+        android:label="BackupOptionsDialogFragment"
+        tools:layout="@layout/settings_backup_options_fragment" />
+    <dialog
+        android:id="@+id/exportOptionsDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_settings.exportOptions.view.ExportOptionsFragment"
+        android:label="ExportOptionsDialogFragment"
+        tools:layout="@layout/settings_export_options_fragment" />
+    <dialog
+        android:id="@+id/partialRestoreDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_settings.partialRestore.view.PartialRestoreFragment"
+        android:label="PartialRestoreDialogFragment"
+        tools:layout="@layout/settings_partial_restore_fragment" />
+    <dialog
+        android:id="@+id/partialRestoreSelectionDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_settings.partialRestoreSelection.view.PartialRestoreSelectionFragment"
+        android:label="PartialRestoreSelectionDialogFragment"
+        tools:layout="@layout/settings_partial_restore_selection_fragment" />
+    <dialog
+        android:id="@+id/optionsListDialogFragment"
+        android:name="com.example.util.simpletimetracker.feature_dialogs.optionsDialog.OptionsListDialogFragment"
+        android:label="OptionsListDialogFragment"
+        tools:layout="@layout/options_list_dialog_fragment" />
+</navigation>

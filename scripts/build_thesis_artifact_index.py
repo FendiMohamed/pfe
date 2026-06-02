@@ -1,0 +1,632 @@
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+from typing import Any
+
+
+DEFAULT_APK_TYPE_JSON = Path("data/results/evaluation/apk-type-evaluation.json")
+DEFAULT_THESIS_TABLES_JSON = Path("data/results/evaluation/thesis-evaluation-tables.json")
+DEFAULT_OUTPUT_JSON = Path("data/results/evaluation/thesis-artifact-index.json")
+DEFAULT_OUTPUT_DOC = Path("docs/thesis/THESIS_ARTIFACT_INDEX.md")
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description="Generate a thesis artifact index that maps claims to evidence files.",
+    )
+    parser.add_argument("--apk-type-json", default=str(DEFAULT_APK_TYPE_JSON))
+    parser.add_argument("--thesis-tables-json", default=str(DEFAULT_THESIS_TABLES_JSON))
+    parser.add_argument("--output-json", default=str(DEFAULT_OUTPUT_JSON))
+    parser.add_argument("--output-doc", default=str(DEFAULT_OUTPUT_DOC))
+    return parser
+
+
+def main() -> int:
+    args = build_parser().parse_args()
+    apk_type_path = Path(args.apk_type_json)
+    thesis_tables_path = Path(args.thesis_tables_json)
+    payload = build_index(
+        read_json(apk_type_path),
+        read_json(thesis_tables_path),
+        apk_type_path=apk_type_path,
+        thesis_tables_path=thesis_tables_path,
+    )
+
+    output_json = Path(args.output_json)
+    output_json.parent.mkdir(parents=True, exist_ok=True)
+    output_json.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+    output_doc = Path(args.output_doc)
+    output_doc.parent.mkdir(parents=True, exist_ok=True)
+    output_doc.write_text(build_markdown(payload), encoding="utf-8")
+
+    print(
+        json.dumps(
+            {
+                "doc": normalize_path(output_doc),
+                "json": normalize_path(output_json),
+                "claims": len(payload["claim_evidence"]),
+                "case_artifacts": len(payload["case_artifacts"]),
+            },
+            indent=2,
+            sort_keys=True,
+        )
+    )
+    return 0
+
+
+def build_index(
+    apk_type: dict[str, Any],
+    thesis_tables: dict[str, Any],
+    *,
+    apk_type_path: Path,
+    thesis_tables_path: Path,
+) -> dict[str, Any]:
+    summary = thesis_tables["summary"]
+    return {
+        "schema_version": 1,
+        "sources": {
+            "apk_type": normalize_path(apk_type_path),
+            "thesis_tables": normalize_path(thesis_tables_path),
+        },
+        "summary": {
+            "controlled": (
+                f"{summary['controlled_fixtures']['confirmed_versions']}/"
+                f"{summary['controlled_fixtures']['expected_components']} "
+                f"expected versions across {summary['controlled_fixtures']['cases']} fixtures"
+            ),
+            "clean_real": (
+                f"{summary['clean_versions']['confirmed']}/"
+                f"{summary['clean_versions']['checked']} emitted Maven versions across "
+                f"{summary['clean_versions']['cases']} APKs"
+            ),
+            "partial_real": (
+                f"{summary['partial_versions']['confirmed']}/"
+                f"{summary['partial_versions']['checked']} emitted Maven versions across "
+                f"{summary['partial_versions']['cases']} APKs"
+            ),
+            "overall_real": (
+                f"{summary['source_validated_versions']['confirmed']}/"
+                f"{summary['source_validated_versions']['checked']} emitted Maven versions across "
+                f"{summary['source_validated_versions']['cases']} APKs"
+            ),
+        },
+        "claim_evidence": build_claim_evidence(thesis_tables),
+        "table_sources": build_table_sources(),
+        "figure_plan": build_figure_plan(),
+        "case_artifacts": build_case_artifacts(apk_type.get("real_cases", [])),
+        "demo_package": build_demo_package(),
+        "writing_guardrails": thesis_tables.get("writing_guidance", []),
+        "final_report_checklist": build_final_report_checklist(),
+    }
+
+
+def build_claim_evidence(thesis_tables: dict[str, Any]) -> list[dict[str, Any]]:
+    shared_artifacts = [
+        "docs/evaluation/THESIS_EVALUATION_TABLES.md",
+        "docs/evaluation/APK_TYPE_EVALUATION.md",
+        "docs/evaluation/THESIS_EVALUATION_CHAPTER_DRAFT.md",
+    ]
+    extra_by_prefix = {
+        "The MVP can recover exact": [
+            "docs/evaluation/CONTROLLED_EVALUATION.md",
+            "data/results/evaluation/controlled-evaluation.md",
+            "data/results/evaluation/generated-apk-category-batch.md",
+        ],
+        "The MVP can produce exact": [
+            "docs/evaluation/MVP_RESULTS_SUMMARY.md",
+            "data/results/source-validation/fdroid-final-demo-osv/source-validation.md",
+            "data/results/source-validation/opentracks-calibrated-db/source-validation.md",
+            "data/results/source-validation/tusky-calibrated-db/source-validation.md",
+        ],
+        "Harder APK families": [
+            "docs/evaluation/VERSION_BAND_TIE_EVIDENCE.md",
+            "docs/evaluation/REAL_APK_CURRENT_BATCH_RESULTS.md",
+            "docs/evaluation/NEXTCLOUD_ANDROID_PROOF_BUNDLE.md",
+            "docs/evaluation/MARKOR_PROOF_BUNDLE.md",
+        ],
+        "The evaluation separates": [
+            "docs/evaluation/K9_THUNDERBIRD_PROOF_BUNDLE.md",
+            "docs/evaluation/HIDDEN_DEX_LIMITATION_FIXTURE.md",
+            "docs/evaluation/APK_TESTSET_INVENTORY.md",
+        ],
+    }
+
+    rows = []
+    for row in thesis_tables.get("claim_table", []):
+        artifacts = list(shared_artifacts)
+        for prefix, extra in extra_by_prefix.items():
+            if row["claim"].startswith(prefix):
+                artifacts.extend(extra)
+                break
+        rows.append(
+            {
+                "claim": row["claim"],
+                "evidence": row["evidence"],
+                "scope": row["scope"],
+                "limitation": row["limitation"],
+                "artifacts": unique(artifacts),
+            }
+        )
+    return rows
+
+
+def build_table_sources() -> list[dict[str, str]]:
+    return [
+        {
+            "table": "Main evaluation metrics",
+            "source": "docs/evaluation/THESIS_EVALUATION_TABLES.md",
+            "use": "Copy into the evaluation chapter and presentation results slide.",
+        },
+        {
+            "table": "Per-APK role and rate table",
+            "source": "docs/evaluation/THESIS_EVALUATION_TABLES.md",
+            "use": "Use as appendix evidence or shortened in the main evaluation chapter.",
+        },
+        {
+            "table": "APK family grouping",
+            "source": "docs/evaluation/APK_TYPE_EVALUATION.md",
+            "use": "Explain why clean, partial, blocked, and limitation cases are separate.",
+        },
+        {
+            "table": "Dataset coverage matrix",
+            "source": "docs/evaluation/DATASET_COVERAGE_MATRIX.md",
+            "use": "Justify APK selection by classification instead of convenience.",
+        },
+        {
+            "table": "Next real APK growth queue",
+            "source": "docs/evaluation/NEXT_REAL_APK_GROWTH_QUEUE.md",
+            "use": "Justify why the next real APK batch must be selected by class balance before Phase 6 or ML experiments.",
+        },
+        {
+            "table": "Real APK growth batch V2",
+            "source": "docs/evaluation/REAL_APK_GROWTH_BATCH_V2.md",
+            "use": "Show the 8-app category-balanced smoke/report batch while keeping it separate from source-validated accuracy claims.",
+        },
+        {
+            "table": "Controlled generated batch",
+            "source": "data/results/evaluation/generated-apk-category-batch.md",
+            "use": "Show controlled coverage by clear/R8/multidex category.",
+        },
+        {
+            "table": "Paper-to-implementation traceability",
+            "source": "docs/thesis/PAPER_TO_IMPLEMENTATION_TRACEABILITY.md",
+            "use": "Justify each MVP feature as a paper-backed adaptation with implementation and evaluation evidence.",
+        },
+        {
+            "table": "Paper-backed improvement notes",
+            "source": "docs/thesis/PAPER_BACKED_MVP_IMPROVEMENT_NOTES.md",
+            "use": "Preserve current cons, improvement policies, and thesis framing for uncertainty.",
+        },
+        {
+            "table": "Experiment decision ledger",
+            "source": "docs/thesis/EXPERIMENT_DECISION_LEDGER.md",
+            "use": "Use as the central paper-ready ledger for accepted, rejected, disabled, blocked, and deferred methods.",
+        },
+        {
+            "table": "MVP cons and improvement plan",
+            "source": "docs/planning/MVP_CONS_IMPROVEMENT_PLAN.md",
+            "use": "Use as the operational plan for weak points, safe next actions, blocked work, and rejected global changes.",
+        },
+        {
+            "table": "R8 obfuscation method selection",
+            "source": "docs/research/R8_OBFUSCATION_METHOD_SELECTION.md",
+            "use": "Use as the research gate for the final R8/obfuscation con and as the justification for classifier-first, evaluation-first integration.",
+        },
+        {
+            "table": "R8 obfuscation execution plan",
+            "source": "docs/planning/R8_OBFUSCATION_CON_EXECUTION_PLAN.md",
+            "use": "Use as the implementation roadmap for the best-of-tools R8 layer, from report-only classifier fields to scoped scoring.",
+        },
+        {
+            "table": "R8 obfuscation diagnostics",
+            "source": "docs/evaluation/R8_OBFUSCATION_DIAGNOSTICS.md",
+            "use": "Use as the scoring-unchanged diagnostic summary of controlled R8 coverage, real R8/minified partial cases, hidden-code boundaries, and classifier gaps.",
+        },
+        {
+            "table": "R8 multi-scale feature diagnostics",
+            "source": "docs/evaluation/R8_MULTISCALE_FEATURE_DIAGNOSTICS.md",
+            "use": "Use as the Phase 3 proof that call-chain, basic-block, class-neighbor, field-operation, and literal/context features are extracted and reportable while scoring remains unchanged.",
+        },
+        {
+            "table": "R8 Phase 4 scoped experiment diagnostics",
+            "source": "docs/evaluation/R8_PHASE4_SCOPED_EXPERIMENT_DIAGNOSTICS.md",
+            "use": "Use as the Phase 4 proof that the offline multi-scale blend stays diagnostic-only because controlled and real source-validated rows would regress.",
+        },
+        {
+            "table": "R8 Phase 5 scoped trigger diagnostics",
+            "source": "docs/evaluation/R8_PHASE5_SCOPED_TRIGGER_DIAGNOSTICS.md",
+            "use": "Use as the Phase 5 experiment-only proof that a narrow trigger keeps four target improvements without triggered regressions in the current artifact, while default scoring remains unchanged.",
+        },
+        {
+            "table": "R8 Phase 5 trigger control validation",
+            "source": "docs/evaluation/R8_PHASE5_TRIGGER_CONTROL_VALIDATION.md",
+            "use": "Use as the current-control gate showing the scoped trigger blocks controlled, clean, and boundary rows and is not wired into production code.",
+        },
+        {
+            "table": "R8 Phase 5 report evidence",
+            "source": "docs/evaluation/R8_PHASE5_REPORT_EVIDENCE.md",
+            "use": "Use as the opt-in report-surface proof that four target suggestions remain separate from official MVP selected versions and SBOM artifacts.",
+        },
+        {
+            "table": "R8 obfuscation continuation prompt",
+            "source": "docs/codex/R8_OBFUSCATION_CON_CONTINUATION_PROMPT.md",
+            "use": "Use to resume the con in a later Codex session without losing the paper-backed plan or guardrails.",
+        },
+        {
+            "table": "Version-tie reranker diagnostics",
+            "source": "docs/evaluation/VERSION_TIE_RERANKER_DIAGNOSTICS.md",
+            "use": "Use as diagnostic no-change evidence for the current AndroidX/Kotlin version-band ties.",
+        },
+        {
+            "table": "POM coherence diagnostics",
+            "source": "docs/evaluation/POM_COHERENCE_DIAGNOSTICS.md",
+            "use": "Use as diagnostic no-change evidence for dependency metadata and POM coherence ties.",
+        },
+        {
+            "table": "Artifact-family diagnostics",
+            "source": "docs/evaluation/ARTIFACT_FAMILY_DIAGNOSTICS.md",
+            "use": "Use as no-new-rule evidence for scoped Okio, OkHttp, and Lifecycle family handling.",
+        },
+        {
+            "table": "Opcode/API signal diagnostics",
+            "source": "docs/evaluation/OPCODE_API_SIGNAL_DIAGNOSTICS.md",
+            "use": "Use as no-global-weight evidence for API/member-reference and opcode tri-gram signals.",
+        },
+        {
+            "table": "Native boundary diagnostics",
+            "source": "docs/evaluation/NATIVE_BOUNDARY_DIAGNOSTICS.md",
+            "use": "Use as hash-only file-component evidence for native .so scope boundaries.",
+        },
+        {
+            "table": "K-9 blocker diagnostics",
+            "source": "docs/evaluation/K9_BLOCKER_DIAGNOSTICS.md",
+            "use": "Use as source-linked blocked evidence for K-9 dependency-tree validation.",
+        },
+        {
+            "table": "Hidden DEX diagnostics",
+            "source": "docs/evaluation/HIDDEN_DEX_DIAGNOSTICS.md",
+            "use": "Use as limitation evidence for nonstandard DEX and dynamic-loading boundaries.",
+        },
+        {
+            "table": "OSV source-validation triage",
+            "source": "docs/evaluation/OSV_SOURCE_VALIDATION_TRIAGE.md",
+            "use": "Use to separate source-confirmed vulnerability evidence from source-version-mismatch and report-only OSV findings.",
+        },
+        {
+            "table": "External scanner validation status",
+            "source": "docs/evaluation/EXTERNAL_SCANNER_VALIDATION_STATUS.md",
+            "use": "Use as generated readiness evidence for optional cyclonedx-cli, Trivy, Grype, Syft, and cdxgen validation.",
+        },
+        {
+            "table": "External scanner validation results",
+            "source": "docs/evaluation/EXTERNAL_SCANNER_VALIDATION.md",
+            "use": "Use as Grype/Trivy comparison evidence for clean, vulnerable, and partial SBOM targets.",
+        },
+        {
+            "table": "Source-version candidate queue",
+            "source": "docs/evaluation/SOURCE_VERSION_CANDIDATE_QUEUE.md",
+            "use": "Use before any future reference DB experiment to track target benefit, control regressions, and promotion decisions.",
+        },
+        {
+            "table": "Assembled final report draft",
+            "source": "docs/thesis/PFE_FINAL_REPORT_ASSEMBLED.md",
+            "use": "Use as the main university-report starting point before applying the final template.",
+        },
+        {
+            "table": "Presentation deck script",
+            "source": "docs/thesis/PRESENTATION_DECK_SCRIPT.md",
+            "use": "Use as the slide-by-slide defense script with claims, proof objects, and speaker notes.",
+        },
+        {
+            "table": "Editable defense deck",
+            "source": "outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx",
+            "use": "Use as the current editable PPTX defense deck before applying any university template.",
+        },
+        {
+            "table": "Defense deck QA scorecard",
+            "source": "outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/qa/comeback-scorecard.txt",
+            "use": "Keep the rendered-deck QA notes and runtime caveat with the generated deck artifact.",
+        },
+    ]
+
+
+def build_figure_plan() -> list[dict[str, str]]:
+    return [
+        {
+            "figure": "System architecture pipeline",
+            "source": "docs/architecture/MVP_ARCHITECTURE.md",
+            "caption": "Static APK-to-SBOM pipeline from APK extraction to CycloneDX and OSV reporting.",
+        },
+        {
+            "figure": "Evaluation layer diagram",
+            "source": "docs/evaluation/DATASET_DESIGN.md",
+            "caption": "Controlled, source-validated, smoke, and limitation layers with allowed metrics.",
+        },
+        {
+            "figure": "Generated report screenshot",
+            "source": "data/results/report-real-f-droid-final-demo-osv/report.html",
+            "caption": "Example report showing detected Maven components, confidence, evidence, native files, and OSV result.",
+        },
+        {
+            "figure": "Clean and vulnerable OSV examples",
+            "source": "docs/dev/RUNBOOK.md",
+            "caption": "Negative OSV result on calibrated F-Droid and positive HIGH advisories on controlled Jackson Databind.",
+        },
+        {
+            "figure": "Real APK OSV triage",
+            "source": "docs/evaluation/OSV_SOURCE_VALIDATION_TRIAGE.md",
+            "caption": "Real APK OSV findings grouped by source-confirmed, source-version-mismatch, and report-only evidence strength.",
+        },
+    ]
+
+
+def build_case_artifacts(cases: list[dict[str, Any]]) -> list[dict[str, str]]:
+    rows = []
+    for case in cases:
+        validation = case.get("validation") or {}
+        checked = int(validation.get("checked_components") or 0)
+        confirmed = int(validation.get("confirmed") or 0)
+        case_id = str(case.get("case_id", ""))
+        rows.append(
+            {
+                "case": str(case.get("name", "")),
+                "role": str(case.get("role", "")),
+                "confirmed": f"{confirmed}/{checked}" if checked else "not counted",
+                "report": normalize_path(case.get("report_path", "")),
+                "validation": normalize_path(case.get("validation_path", "")),
+                "proof": resolve_proof_path(case_id, case.get("proof_path", "")),
+                "interpretation": str(case.get("interpretation", "")),
+            }
+        )
+    return rows
+
+
+def resolve_proof_path(case_id: str, path: Any) -> str:
+    normalized = normalize_path(path)
+    if normalized and Path(normalized).exists():
+        return normalized
+    checklist = Path("data/results/evaluation/real-apk-proof") / case_id / "proof-checklist.md"
+    if checklist.exists():
+        return normalize_path(checklist)
+    current_batch_checklist = (
+        Path("data/results/evaluation/real-apk-proof-current-batch")
+        / case_id
+        / "proof-checklist.md"
+    )
+    if current_batch_checklist.exists():
+        return normalize_path(current_batch_checklist)
+    return normalized
+
+
+def build_demo_package() -> list[dict[str, str]]:
+    return [
+        {
+            "item": "Clean real APK report",
+            "path": "data/results/report-real-f-droid-final-demo-osv/report.html",
+            "talking_point": "Calibrated real APK, source-confirmed emitted versions, OSV returns 0 vulnerabilities.",
+        },
+        {
+            "item": "Clean real APK SBOM",
+            "path": "data/results/report-real-f-droid-final-demo-osv/sbom.cdx.json",
+            "talking_point": "CycloneDX JSON with Maven PURLs and evidence/confidence properties.",
+        },
+        {
+            "item": "Clean source validation",
+            "path": "data/results/source-validation/fdroid-final-demo-osv/source-validation.md",
+            "talking_point": "23/23 emitted Maven versions confirmed against the source dependency tree.",
+        },
+        {
+            "item": "Vulnerable controlled report",
+            "path": "data/results/demo-osv-vulnerable-jackson-databind/report.html",
+            "talking_point": "Controlled vulnerable Jackson Databind fixture with 3 confirmed HIGH advisories.",
+        },
+        {
+            "item": "Real APK OSV triage",
+            "path": "docs/evaluation/OSV_SOURCE_VALIDATION_TRIAGE.md",
+            "talking_point": "Current real APK OSV findings are separated into source-confirmed, source-version-mismatch, and report-only evidence.",
+        },
+        {
+            "item": "Source-aware real APK vulnerability report",
+            "path": "data/results/report-real-osmand/report.html",
+            "talking_point": "OsmAnd report shows Jackson/Gson OSV advisories as potential source-version-mismatch findings after applying source validation.",
+        },
+        {
+            "item": "Evaluation tables",
+            "path": "docs/evaluation/THESIS_EVALUATION_TABLES.md",
+            "talking_point": "Clean/partial/blocked/limitation split and emitted Maven version confirmation rate.",
+        },
+    ]
+
+
+def build_final_report_checklist() -> list[dict[str, str]]:
+    return [
+        {
+            "section": "Introduction",
+            "status": "ready",
+            "next_action": "Start from `docs/thesis/PFE_FINAL_REPORT_ASSEMBLED.md`, then adapt wording to the university template and add local motivation if required.",
+        },
+        {
+            "section": "State of the art",
+            "status": "ready-source-material",
+            "next_action": "Condense `papers/data/state_of_the_art.md`, `docs/research/EVIDENCE_MAP.md`, and `docs/thesis/PAPER_TO_IMPLEMENTATION_TRACEABILITY.md` into the final chapter.",
+        },
+        {
+            "section": "Architecture and implementation",
+            "status": "ready",
+            "next_action": "Use `docs/architecture/MVP_ARCHITECTURE.md`, the implementation map in `docs/thesis/PFE_REPORT_DRAFT.md`, and the traceability matrix.",
+        },
+        {
+            "section": "Evaluation",
+            "status": "ready",
+            "next_action": "Use `docs/evaluation/THESIS_EVALUATION_CHAPTER_DRAFT.md` and keep the clean/partial split.",
+        },
+        {
+            "section": "Limitations",
+            "status": "ready",
+            "next_action": "Use `docs/planning/MVP_CONS_IMPROVEMENT_PLAN.md` and keep K-9, native-heavy, hidden-DEX, and scanner-tool limits visible.",
+        },
+        {
+            "section": "Presentation",
+            "status": "editable-deck-ready",
+            "next_action": "Use `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx`, then apply university template details, names, and screenshots if required.",
+        },
+    ]
+
+
+def build_markdown(payload: dict[str, Any]) -> str:
+    lines = [
+        "# Thesis Artifact Index",
+        "",
+        "Generated by `scripts/build_thesis_artifact_index.py`.",
+        "",
+        "This file maps thesis claims to concrete project artifacts. Use it while writing the final report, preparing slides, or answering supervisor questions about evidence.",
+        "",
+        "## Current Numbers",
+        "",
+        "| Slice | Result |",
+        "|---|---|",
+        f"| Controlled APKs | {payload['summary']['controlled']} |",
+        f"| Clean source-validated real APKs | {payload['summary']['clean_real']} |",
+        f"| Partial source-validated real APKs | {payload['summary']['partial_real']} |",
+        f"| All source-validated real APKs | {payload['summary']['overall_real']} |",
+        "",
+        "## Claim Evidence",
+        "",
+        "| Claim | Evidence | Scope | Limitation | Key artifacts |",
+        "|---|---|---|---|---|",
+    ]
+    for row in payload["claim_evidence"]:
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    md(row["claim"]),
+                    md(row["evidence"]),
+                    md(row["scope"]),
+                    md(row["limitation"]),
+                    "<br>".join(f"`{artifact}`" for artifact in row["artifacts"]),
+                ]
+            )
+            + " |"
+        )
+
+    lines.extend(
+        [
+            "",
+            "## Table Sources",
+            "",
+            "| Table | Source | Use |",
+            "|---|---|---|",
+        ]
+    )
+    for row in payload["table_sources"]:
+        lines.append(f"| {md(row['table'])} | `{row['source']}` | {md(row['use'])} |")
+
+    lines.extend(
+        [
+            "",
+            "## Figure Plan",
+            "",
+            "| Figure | Source | Caption |",
+            "|---|---|---|",
+        ]
+    )
+    for row in payload["figure_plan"]:
+        lines.append(f"| {md(row['figure'])} | `{row['source']}` | {md(row['caption'])} |")
+
+    lines.extend(
+        [
+            "",
+            "## Per-APK Evidence",
+            "",
+            "| Case | Role | Confirmed | Report | Validation | Proof | Interpretation |",
+            "|---|---|---:|---|---|---|---|",
+        ]
+    )
+    for row in payload["case_artifacts"]:
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    md(row["case"]),
+                    md(row["role"]),
+                    row["confirmed"],
+                    optional_path(row["report"]),
+                    optional_path(row["validation"]),
+                    optional_path(row["proof"]),
+                    md(row["interpretation"]),
+                ]
+            )
+            + " |"
+        )
+
+    lines.extend(
+        [
+            "",
+            "## Demo Package",
+            "",
+            "| Item | Path | Talking point |",
+            "|---|---|---|",
+        ]
+    )
+    for row in payload["demo_package"]:
+        lines.append(f"| {md(row['item'])} | `{row['path']}` | {md(row['talking_point'])} |")
+
+    lines.extend(
+        [
+            "",
+            "## Writing Guardrails",
+            "",
+        ]
+    )
+    for item in payload["writing_guardrails"]:
+        lines.append(f"- {item}")
+
+    lines.extend(
+        [
+            "",
+            "## Final Report Checklist",
+            "",
+            "| Section | Status | Next action |",
+            "|---|---|---|",
+        ]
+    )
+    for row in payload["final_report_checklist"]:
+        lines.append(f"| {md(row['section'])} | {md(row['status'])} | {md(row['next_action'])} |")
+
+    lines.append("")
+    return "\n".join(lines)
+
+
+def optional_path(path: str) -> str:
+    return f"`{path}`" if path else "n/a"
+
+
+def unique(values: list[str]) -> list[str]:
+    seen = []
+    for value in values:
+        if value and value not in seen:
+            seen.append(value)
+    return seen
+
+
+def normalize_path(value: Any) -> str:
+    if not value:
+        return ""
+    return str(value).replace("\\", "/")
+
+
+def md(value: Any) -> str:
+    return str(value).replace("|", "\\|").replace("\n", " ")
+
+
+def read_json(path: Path) -> dict[str, Any]:
+    with path.open("r", encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

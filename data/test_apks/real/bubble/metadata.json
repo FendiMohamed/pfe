@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "fa8028c4d7323e64757486baba1eeaf6e3c7f9ff4349ae84b0d88fe2a8f5428c",
+    "index_size": 1333966,
+    "path": "data/test_apks/real/bubble/bubble.apk",
+    "sha256": "fa8028c4d7323e64757486baba1eeaf6e3c7f9ff4349ae84b0d88fe2a8f5428c",
+    "size": 1333966,
+    "url": "https://f-droid.org/repo/org.woheller69.level_34.apk"
+  },
+  "app": "Bubble",
+  "categories": [
+    "Science & Education"
+  ],
+  "classifications": [
+    "low-risk-preflight",
+    "no-native",
+    "small-apk",
+    "normal-gradle-root",
+    "low-risk-candidate",
+    "modern-gradle",
+    "has-declared-dependencies"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/org.woheller69.level/",
+  "license": "GPL-3.0-or-later",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "org.woheller69.level",
+  "proof_status": "report-generated",
+  "reason": "Selected by low-risk preflight: no native ABI, small APK/source tarball, modern AGP project, declared Maven dependencies, and quick Gradle dependency-tree success.",
+  "report": {
+    "detected_component_count": 7,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/low-risk-real-apk-batch/report-real-bubble",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/low-risk-real-apk-batch/report-real-bubble/report.html",
+    "json": "data/results/evaluation/low-risk-real-apk-batch/report-real-bubble/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/low-risk-real-apk-batch/report-real-bubble/sbom.cdx.json",
+    "sbom_component_count": 7,
+    "status": "ok"
+  },
+  "slug": "bubble",
+  "source_repo": "https://github.com/woheller69/level",
+  "source_tarball": {
+    "sha256": "064cf479b4bd1ace0f076f4b45c99df7519df9ebb1658cf999d62b4b96881f29",
+    "size": 262928,
+    "url": "https://f-droid.org/repo/org.woheller69.level_34_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 34,
+  "version_name": "3.4"
+}

@@ -1,0 +1,64 @@
+{
+  "apk": {
+    "expected_sha256": "22c637918175ca4d4fe74d773a2c8a1b793cdd5d795b8d72fd838d2a16b4aceb",
+    "index_size": 9512906,
+    "path": "data/test_apks/real/i2p/i2p.apk",
+    "sha256": "22c637918175ca4d4fe74d773a2c8a1b793cdd5d795b8d72fd838d2a16b4aceb",
+    "size": 9512906,
+    "url": "https://f-droid.org/repo/net.i2p.android.router_4745304.apk"
+  },
+  "app": "I2P",
+  "categories": [
+    "Internet",
+    "Security",
+    "VPN & Proxy"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "internet",
+    "security",
+    "vpn-proxy",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/net.i2p.android.router/",
+  "license": "Apache-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "net.i2p.android.router",
+  "proof_status": "report-generated",
+  "reason": "No-native security/networking candidate with a medium APK and large source tree; useful for a richer security-family proof attempt.",
+  "report": {
+    "detected_component_count": 18,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-i2p",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-i2p/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-i2p/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-i2p/sbom.cdx.json",
+    "sbom_component_count": 18,
+    "status": "ok"
+  },
+  "slug": "i2p",
+  "source_repo": "https://github.com/i2p",
+  "source_tarball": {
+    "sha256": "dded22feee758ab414b3d2bd44e95f5f33764b84c5d0de8abd59534409c8d3f2",
+    "size": 14665350,
+    "url": "https://f-droid.org/repo/net.i2p.android.router_4745304_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 4745304,
+  "version_name": "2.11.0"
+}

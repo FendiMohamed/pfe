@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "07fdb9f23f8ecc1f9ad1726a1491ffd08bd92750fdb9db94b841d02168dc4c08",
+    "index_size": 8664691,
+    "path": "data/test_apks/real/micromathematics-plus/micromathematics-plus.apk",
+    "sha256": "07fdb9f23f8ecc1f9ad1726a1491ffd08bd92750fdb9db94b841d02168dc4c08",
+    "size": 8664691,
+    "url": "https://f-droid.org/repo/com.mkulesh.micromath.plus_325.apk"
+  },
+  "app": "microMathematics Plus",
+  "categories": [
+    "Calculator",
+    "Science & Education"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "calculator",
+    "science-education",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.mkulesh.micromath.plus/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.mkulesh.micromath.plus",
+  "proof_status": "report-generated",
+  "reason": "No-native modern calculator/science app with a medium APK, source tarball metadata, target SDK 36, and enough size to plausibly emit non-sparse Maven evidence.",
+  "report": {
+    "detected_component_count": 16,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v6/report-real-micromathematics-plus",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v6/report-real-micromathematics-plus/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v6/report-real-micromathematics-plus/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v6/report-real-micromathematics-plus/sbom.cdx.json",
+    "sbom_component_count": 16,
+    "status": "ok"
+  },
+  "slug": "micromathematics-plus",
+  "source_repo": "https://github.com/mkulesh/microMathematics",
+  "source_tarball": {
+    "sha256": "c18cdd40a8c5bc89df69d8b524ec5da933ac015501330819614bb2739d3ed02c",
+    "size": 16831979,
+    "url": "https://f-droid.org/repo/com.mkulesh.micromath.plus_325_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 325,
+  "version_name": "2.23.3"
+}

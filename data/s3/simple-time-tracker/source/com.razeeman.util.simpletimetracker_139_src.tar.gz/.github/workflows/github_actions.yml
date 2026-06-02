@@ -1,0 +1,32 @@
+name: Check
+on:
+  pull_request:
+    branches:
+      - 'dev'
+    paths-ignore:
+      - '**.md'
+  push:
+    branches:
+      - 'dev'
+    paths-ignore:
+      - '**.md'
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '21'
+
+      - name: Run style check
+        run: ./gradlew ktlintCheck
+
+      - name: Run tests
+        run: ./gradlew test testDebugUnitTest --stacktrace

@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "6105bcda289c1efe6c0af840a08ce3bb3f21b21e724b21aa8b65aa86892b5f7c",
+    "index_size": 818921,
+    "path": "data/test_apks/real/blue-square-speedometer/blue-square-speedometer.apk",
+    "sha256": "6105bcda289c1efe6c0af840a08ce3bb3f21b21e724b21aa8b65aa86892b5f7c",
+    "size": 818921,
+    "url": "https://f-droid.org/repo/net.nhiroki.bluesquarespeedometer_13.apk"
+  },
+  "app": "Blue Square Speedometer",
+  "categories": [
+    "Navigation"
+  ],
+  "classifications": [
+    "low-risk-preflight",
+    "no-native",
+    "small-apk",
+    "normal-gradle-root",
+    "low-risk-candidate",
+    "modern-gradle",
+    "has-declared-dependencies"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/net.nhiroki.bluesquarespeedometer/",
+  "license": "Apache-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "net.nhiroki.bluesquarespeedometer",
+  "proof_status": "report-generated",
+  "reason": "Selected by low-risk preflight: no native ABI, small APK/source tarball, modern AGP project, declared Maven dependencies, and quick Gradle dependency-tree success.",
+  "report": {
+    "detected_component_count": 0,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/low-risk-real-apk-batch/report-real-blue-square-speedometer",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/low-risk-real-apk-batch/report-real-blue-square-speedometer/report.html",
+    "json": "data/results/evaluation/low-risk-real-apk-batch/report-real-blue-square-speedometer/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "Structural evidence is stronger than package-name evidence."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/low-risk-real-apk-batch/report-real-blue-square-speedometer/sbom.cdx.json",
+    "sbom_component_count": 0,
+    "status": "ok"
+  },
+  "slug": "blue-square-speedometer",
+  "source_repo": "https://github.com/nhirokinet/bluesquarespeedometer",
+  "source_tarball": {
+    "sha256": "38a0f55900a38c3b1599df7f070e0fe8e236e62015bc458d0a49f3babccefe9b",
+    "size": 689834,
+    "url": "https://f-droid.org/repo/net.nhiroki.bluesquarespeedometer_13_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 13,
+  "version_name": "1.1.0"
+}

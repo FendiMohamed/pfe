@@ -1,0 +1,60 @@
+{
+  "apk": {
+    "expected_sha256": "60987fe5eabd839203f791c032570460808690445d1f0666b12602772638b909",
+    "index_size": 2798019,
+    "path": "data/test_apks/real/coffee/coffee.apk",
+    "sha256": "60987fe5eabd839203f791c032570460808690445d1f0666b12602772638b909",
+    "size": 2798019,
+    "url": "https://f-droid.org/repo/com.github.muellerma.coffee_46.apk"
+  },
+  "app": "Coffee",
+  "categories": [
+    "System"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "system-utility",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.github.muellerma.coffee/",
+  "license": "Apache-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.github.muellerma.coffee",
+  "proof_status": "report-generated",
+  "reason": "Recent no-native system utility from the same family as Stopwatch; useful if it emits more Maven evidence.",
+  "report": {
+    "detected_component_count": 11,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v2/report-real-coffee",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v2/report-real-coffee/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v2/report-real-coffee/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v2/report-real-coffee/sbom.cdx.json",
+    "sbom_component_count": 11,
+    "status": "ok"
+  },
+  "slug": "coffee",
+  "source_repo": "https://github.com/mueller-ma/Coffee",
+  "source_tarball": {
+    "sha256": "e0e47c6871a2636e9a09ef3159cfde82d985ef4b55c17422393aaa2ab54398cc",
+    "size": 516295,
+    "url": "https://f-droid.org/repo/com.github.muellerma.coffee_46_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 46,
+  "version_name": "2.26"
+}

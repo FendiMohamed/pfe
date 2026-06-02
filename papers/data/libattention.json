@@ -1,0 +1,45 @@
+{
+  "title": "Pay Your Attention on Lib! Android Third-Party Library Detection via Feature Language Model",
+  "authors": ["Zhenyu Pan", "Tianwei Xu", "Shuai Feng", "Le Yu", "Xiaodan Chen", "Yong Fang", "Limin Zhang"],
+  "year": 2025,
+  "venue": "IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER)",
+  "tool_name": "LibAttention",
+  "category": "ML-based",
+  "detection_method": "Pre-train Transformer on 200M Smali tokens from AndroZoo → fine-tune binary classifier using SDK structural vocabulary (reserved types, structural symbols); data compression via pre-trained model properties",
+  "module_decoupling": "None — operates on entire decompiled Smali code as token sequence; detects library presence/absence without locating library boundaries",
+  "features_used": [
+    "Smali instruction tokens (200M token vocabulary)",
+    "SDK structural vocabulary (reserved types, structural symbols)",
+    "Transformer attention patterns over Smali sequences"
+  ],
+  "matching_algorithm": "Binary classification via fine-tuned Transformer; predicts presence/absence of a specific library based on learned representations of Smali token sequences",
+  "obfuscation_handling": "Learns obfuscation patterns from data during pre-training — handles RN (renaming), PF (package flattening), CFR (control-flow randomization), DCR (dead code removal), SE (string encryption), MI (method inlining); most R8-resilient approach evaluated",
+  "r8_resilience": "+30% F1 over rule-based tools on R8-obfuscated dataset (most R8-resilient approach as of 2025)",
+  "lib_level_f1": "~39% F1 on non-obfuscated apps (below top rule-based tools); R8-resilient F1 higher but exact number not specified (+30% relative improvement)",
+  "version_level_f1": "None — binary presence/absence only, no version identification",
+  "class_level_f1": "Not applicable (binary classifier, not class-level)",
+  "precision": "Not explicitly reported as standalone metric",
+  "recall": "Not explicitly reported as standalone metric",
+  "speed": "~472s per app (AndroGuard Smali decompilation dominates processing time; model inference is fast)",
+  "dataset_size": "200M Smali tokens from AndroZoo for pre-training; 10,000 real apps for evaluation (found 28 vulnerable TPLs appearing 42,408 times)",
+  "partial_lib_handling": "Binary detection only (present/absent per library); no partial inclusion scoring",
+  "sbom_output": "No — cannot produce SBOM since it lacks version identification entirely",
+  "open_source": "Code described in paper but full release unclear as of 2025",
+  "cve_mapping": "No automated CVE mapping demonstrated (manual analysis of 28 vulnerable TPLs found in evaluation)",
+  "transitive_deps": "No — binary classifier does not model dependency relationships",
+  "strengths": [
+    "Most R8-resilient approach evaluated (+30% F1 over rule-based on R8 datasets)",
+    "Learns obfuscation patterns from data (handles 6 obfuscation types: RN, PF, CFR, DCR, SE, MI)",
+    "Pre-training on 200M Smali tokens reduces need for labeled training data",
+    "Transformer architecture captures long-range structural dependencies in Smali",
+    "Useful for first-pass filtering / library presence screening at scale"
+  ],
+  "weaknesses": [
+    "Binary presence/absence detection only — NO version identification, cannot produce SBOMs or map CVEs by version",
+    "Weak on non-obfuscated apps (~39% F1, below top rule-based tools)",
+    "~472s per app is slow (AndroGuard preprocessing bottleneck)",
+    "Cannot locate library boundaries within app code (no module decoupling)",
+    "Full release unclear — reproducibility concerns"
+  ],
+  "impact_on_project": "LibAttention represents the cutting edge for R8-resilient detection but is fundamentally insufficient for SBOM generation due to the complete absence of version identification. The approach is valuable as a potential first-pass filter in a multi-stage pipeline — use LibAttention to detect which libraries are present (especially in R8-obfuscated apps), then apply a version-identification method on the detected subset. The pre-training approach (200M Smali tokens from AndroZoo) reduces the labeled data burden, which could be leveraged for a version-capable model. However, the Transformer-based architecture must be extended with version-level classification heads or combined with a structural matching approach to enable SBOM production."
+}

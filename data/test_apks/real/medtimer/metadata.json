@@ -1,0 +1,61 @@
+{
+  "apk": {
+    "expected_sha256": "b115ed1c08693bd30f80e05570b4b208f674c3d61c95b863747ca4d50d579866",
+    "index_size": 26539785,
+    "path": "data/test_apks/real/medtimer/medtimer.apk",
+    "sha256": "b115ed1c08693bd30f80e05570b4b208f674c3d61c95b863747ca4d50d579866",
+    "size": 26539785,
+    "url": "https://f-droid.org/repo/com.futsch1.medtimer_173.apk"
+  },
+  "app": "MedTimer",
+  "categories": [
+    "Sports & Health",
+    "Timer"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "health-utility",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.futsch1.medtimer/",
+  "license": "MIT",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.futsch1.medtimer",
+  "proof_status": "report-generated",
+  "reason": "No-native health/reminder utility with source tarball metadata and enough APK size to test a non-sparse clean candidate.",
+  "report": {
+    "detected_component_count": 18,
+    "dex_file_count": 4,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v3/report-real-medtimer",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v3/report-real-medtimer/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v3/report-real-medtimer/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v3/report-real-medtimer/sbom.cdx.json",
+    "sbom_component_count": 18,
+    "status": "ok"
+  },
+  "slug": "medtimer",
+  "source_repo": "https://github.com/Futsch1/medTimer",
+  "source_tarball": {
+    "sha256": "567232343f99c3beefbaa456a05d6ec3a21e1f3a8991df2010e52c3b6ad271fc",
+    "size": 40808778,
+    "url": "https://f-droid.org/repo/com.futsch1.medtimer_173_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 173,
+  "version_name": "1.22.18"
+}

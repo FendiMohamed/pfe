@@ -1,0 +1,47 @@
+{
+  "title": "Automated Third-Party Library Detection for Android Applications: Are We There Yet?",
+  "authors": ["Xian Zhan", "Teng Fan", "Tianming Liu", "Sen Chen", "Li Li", "Yuan Wang", "Hao Xu", "Xiapu Luo", "Yepang Liu"],
+  "year": 2020,
+  "venue": "IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+  "tool_name": null,
+  "category": "survey",
+  "detection_method": "Empirical study comparing 5 tools (LibScout, LibRadar, LibPecker, ORLIS, LibSift) on unified benchmark with 6 evaluation criteria; patches developed for identified blind spots",
+  "module_decoupling": "Evaluates package-structure-based vs. other approaches; finds package-structure-based fragile and recommends class dependency graphs (CDG) instead",
+  "features_used": [
+    "Package structure hierarchy",
+    "Method signatures",
+    "CFG opcode sequences",
+    "Class dependency relations",
+    "Entry point analysis"
+  ],
+  "matching_algorithm": "Cross-tool comparison — each tool uses different algorithms; study identifies common failure modes rather than proposing new matching",
+  "obfuscation_handling": "LibPecker found best against obfuscation among evaluated tools; study notes that obfuscation handling varies significantly across tools and most lack comprehensive protection",
+  "r8_resilience": "Not specifically tested (pre-dates widespread R8 adoption in study context)",
+  "lib_level_f1": "LibScout best overall accuracy but no single F1 reported for the study itself (it is a comparison, not a new tool)",
+  "version_level_f1": "Only LibScout provides version-level detection among tools studied",
+  "class_level_f1": "Not reported (study-level metric)",
+  "precision": "Not reported as unified metric (tool-by-tool comparison)",
+  "recall": "Most tools have low recall because they ignore compilation mechanisms, new TPL formats (.aar), and TPL dependency chains",
+  "speed": "LibRadar fastest at 5.53s/app; ORLIS slowest at ~1,438s/app",
+  "dataset_size": "59 unique TPLs with 2,115 versions across 221 apps from Google Play",
+  "partial_lib_handling": "Identified as open problem — most tools lack partial library scoring mechanisms",
+  "sbom_output": "No — none of the evaluated tools produce standard SBOM output",
+  "open_source": "N/A (survey/empirical study; patches for tools provided)",
+  "cve_mapping": "No — none of the evaluated tools include CVE mapping",
+  "transitive_deps": "No — identified as a key gap; most tools ignore TPL dependency chains",
+  "strengths": [
+    "First systematic comparative study with unified benchmark",
+    "Identified critical multidex blind spot (tools only scan classes.dex, missing classes2+.dex, losing ~50% of libraries)",
+    "Provided patches for identified issues (multidex loop, .aar pre-processing, EntryPoint root detection)",
+    "Clear recommendation to use CDG over package structure",
+    "Established 6 evaluation criteria framework"
+  ],
+  "weaknesses": [
+    "Does not propose a new tool or method",
+    "Dataset limited to 59 TPL families (low coverage vs. real-world diversity)",
+    "Pre-dates R8 as standard obfuscation (evaluates ProGuard era tools)",
+    "No version-level detection comparison (only LibScout supports it)",
+    "No SBOM or CVE evaluation dimension"
+  ],
+  "impact_on_project": "Critical reference for understanding the landscape of existing tools and their failure modes. The multidex finding (50% library loss from ignoring classes2+.dex) is an implementation requirement for any APK analysis pipeline. The recommendation to use class dependency graphs (CDG) instead of package structure for module decoupling directly informs architectural decisions. The finding that most tools have low recall due to ignoring compilation mechanisms and new TPL formats (.aar) highlights engineering requirements. The study confirms that no single existing tool is sufficient — a hybrid or novel approach is necessary."
+}

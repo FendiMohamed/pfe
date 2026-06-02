@@ -1,0 +1,30 @@
+{
+  "apk_path": "data/test_apks/real/opentracks/opentracks.apk",
+  "apk_sha256": "e5e51772ec2cd9f1474bc6d8cc6a180f6a286a690dc21226d974eac1c1c6b201",
+  "apk_size": 9077435,
+  "download_url": "https://f-droid.org/repo/de.dennisguse.opentracks_6653.apk",
+  "fdroid_metadata_path": "data/test_apks/real/opentracks/fdroid-metadata.yml",
+  "fdroid_package_url": "https://f-droid.org/en/packages/de.dennisguse.opentracks/",
+  "fdroid_source_tarball_path": "data/source/opentracks-v4.27.0irreproducible/source.tar.gz",
+  "fdroid_source_tarball_sha256": "bd00c2e696b950ae8172d6f9b793e3f77eb446b67f9c773fe6261a0066ea836f",
+  "fdroid_source_tarball_url": "https://f-droid.org/repo/de.dennisguse.opentracks_6653_src.tar.gz",
+  "manifest": {
+    "min_sdk": "26",
+    "package_name": "de.dennisguse.opentracks",
+    "target_sdk": "36",
+    "version_code": "6653",
+    "version_name": "v4.27.0irreproducible"
+  },
+  "mvp_report_dir": "data/results/report-real-opentracks",
+  "source_commit": "f143aabfbf77d1b71864042fe4f0bbf2b4174f4f",
+  "source_root": "data/source/opentracks-v4.27.0irreproducible/source/de.dennisguse.opentracks_6653_src.tar.gz",
+  "source_version_check": {
+    "application_id": "de.dennisguse.opentracks",
+    "build_gradle_version_code": "6653",
+    "build_gradle_version_name": "v4.27.0",
+    "flavor_version_name_suffix": "irreproducible",
+    "manifest_version_code": "6653",
+    "manifest_version_name": "v4.27.0irreproducible",
+    "status": "matched"
+  }
+}

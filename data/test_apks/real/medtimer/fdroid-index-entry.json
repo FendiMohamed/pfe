@@ -1,0 +1,1416 @@
+{
+  "metadata": {
+    "added": 1711278017000,
+    "authorName": "Florian Fetz",
+    "categories": [
+      "Sports & Health",
+      "Timer"
+    ],
+    "description": {
+      "ar": "\u062a\u0630\u0643\u064a\u0631\u0627\u062a \u0627\u0644\u0623\u062f\u0648\u064a\u0629 \u0648\u062a\u0627\u0631\u064a\u062e\u0647\u0627 \u0645\u0639 \u062e\u0635\u0648\u0635\u064a\u0629 \u0643\u0627\u0645\u0644\u0629 \u062f\u0648\u0646 \u0627\u062a\u0635\u0627\u0644 \u0628\u0627\u0644\u0625\u0646\u062a\u0631\u0646\u062a\n\n\u062a\u062d\u0643\u0645 \u0641\u064a \u0623\u062f\u0648\u064a\u062a\u0643 \u0628\u0627\u0633\u062a\u062e\u062f\u0627\u0645 MedTimer\n\nMedTimer \u0647\u0648 \u062a\u0637\u0628\u064a\u0642 \u0645\u0641\u062a\u0648\u062d \u0627\u0644\u0645\u0635\u062f\u0631 \u0644\u062a\u0630\u0643\u064a\u0631 \u0627\u0644\u0623\u062f\u0648\u064a\u0629 \u0645\u0635\u0645\u0645 \u0644\u0645\u0633\u0627\u0639\u062f\u062a\u0643 \u0639\u0644\u0649 \u0625\u062f\u0627\u0631\u0629 \u0623\u062f\u0648\u064a\u062a\u0643 \u0648\u062d\u0628\u0648\u0628\u0643 \u0628\u0641\u0639\u0627\u0644\u064a\u0629 \u0648\u0628\u062a\u062d\u0643\u0645 \u0643\u0627\u0645\u0644 \u0641\u064a \u0628\u064a\u0627\u0646\u0627\u062a\u0643 \u0627\u0644\u062d\u0633\u0627\u0633\u0629.\n\n\u062a\u0630\u0643\u064a\u0631\u0627\u062a \u0645\u0631\u0646\u0629 \u0648\u0634\u062e\u0635\u064a\u0629:\n\n- \u0625\u062f\u0627\u0631\u0629 \u0639\u062f\u062f \u063a\u064a\u0631 \u0645\u062d\u062f\u0648\u062f \u0645\u0646 \u0627\u0644\u0623\u062f\u0648\u064a\u0629 \u0645\u0639 \u062a\u0630\u0643\u064a\u0631\u0627\u062a \u0642\u0627\u0628\u0644\u0629 \u0644\u0644\u062a\u062e\u0635\u064a\u0635 \u0644\u0643\u0644 \u062f\u0648\u0627\u0621 (\u0628\u0645\u0627 \u0641\u064a \u0630\u0644\u0643 \u0627\u0644\u0625\u0639\u062f\u0627\u062f\u0627\u062a \u0627\u0644\u0627\u0641\u062a\u0631\u0627\u0636\u064a\u0629 \u0627\u0644\u0628\u0633\u064a\u0637\u0629 \u0644\u0644\u062a\u0630\u0643\u064a\u0631\u0627\u062a \u0627\u0644\u064a\u0648\u0645\u064a\u0629).\n- \u0625\u0646\u0634\u0627\u0621 \u062a\u0630\u0643\u064a\u0631\u0627\u062a \u0645\u0631\u0646\u0629 \u0645\u0639 \u0641\u062a\u0631\u0627\u062a \u0631\u0627\u062d\u0629 \u0648\u0623\u064a\u0627\u0645 \u0645\u062d\u062f\u062f\u0629 (\u0639\u0644\u0649 \u0633\u0628\u064a\u0644 \u0627\u0644\u0645\u062b\u0627\u0644 \u0644\u062d\u0628\u0648\u0628 \u0645\u0646\u0639 \u0627\u0644\u062d\u0645\u0644).\n- \u0648\u0636\u0639 \u0639\u0637\u0644\u0629 \u0646\u0647\u0627\u064a\u0629 \u0627\u0644\u0623\u0633\u0628\u0648\u0639: \u062a\u0623\u062e\u064a\u0631 \u0627\u0644\u062a\u0630\u0643\u064a\u0631\u0627\u062a \u0625\u0644\u0649 \u0648\u0642\u062a \u0645\u062d\u062f\u062f \u0641\u064a \u0627\u0644\u0623\u064a\u0627\u0645 \u0627\u0644\u0645\u062e\u062a\u0627\u0631\u0629.\n- \u063a\u0641\u0648\u0629 \u0627\u0644\u0625\u0634\u0639\u0627\u0631\u0627\u062a \u0644\u062a\u0630\u0643\u064a\u0631\u0627\u062a \u0644\u0627\u062d\u0642\u0629 \u0623\u0648 \u0627\u0644\u062a\u0630\u0643\u064a\u0631 \u0628\u0634\u0643\u0644 \u0645\u062a\u0643\u0631\u0631.\n- \u062a\u0623\u062c\u064a\u0644 \u0645\u0633\u062a\u0646\u062f \u0625\u0644\u0649 \u0627\u0644\u0645\u0648\u0642\u0639: \u064a\u062a\u0645 \u0625\u0639\u0627\u062f\u0629 \u0627\u0644\u0625\u0634\u0639\u0627\u0631 \u0639\u0646\u062f \u0627\u0644\u0639\u0648\u062f\u0629 \u0644\u0644\u0645\u0646\u0632\u0644 \u0628\u0639\u062f \u0627\u0644\u062a\u0623\u062c\u064a\u0644.\n- \u0625\u0636\u0627\u0641\u0629 \u062c\u0631\u0639\u0627\u062a \u0625\u0636\u0627\u0641\u064a\u0629 \u0628\u0633\u0631\u0639\u0629.\n- \u0625\u0646\u0634\u0627\u0621 \u062a\u0630\u0643\u064a\u0631\u0627\u062a \u0642\u0627\u0626\u0645\u0629 \u0639\u0644\u0649 \u0627\u0644\u0641\u062a\u0631\u0627\u062a\u060c \u062a\u0630\u0643\u064a\u0631\u0627\u062a \u0645\u062a\u062a\u0627\u0644\u064a\u0629 \u0641\u064a \u0641\u062a\u0631\u0627\u062a \u0623\u0648 \u062a\u0630\u0643\u064a\u0631\u0627\u062a \u0628\u0641\u0648\u0627\u0635\u0644 \u0632\u0645\u0646\u064a\u0629 \u0645\u0642\u064a\u062f\u0629 \u0628\u0648\u0642\u062a \u0628\u062f\u0621 \u0648\u0627\u0646\u062a\u0647\u0627\u0621 \u064a\u0648\u0645\u064a\u064b\u0627.\n- \u0627\u0633\u062a\u062e\u062f\u0627\u0645 \u062a\u0630\u0643\u064a\u0631\u0627\u062a \u0645\u0646 \u0646\u0648\u0639 \u0627\u0644\u0645\u0646\u0628\u0647 \u0644\u0636\u0645\u0627\u0646 \u0627\u0644\u0625\u0634\u0639\u0627\u0631 \u062d\u062a\u0649 \u0639\u0646\u062f\u0645\u0627 \u064a\u0643\u0648\u0646 \u0627\u0644\u062c\u0647\u0627\u0632 \u0645\u0636\u0628\u0648\u0637\u064b\u0627 \u0639\u0644\u0649 \u0627\u0644\u0648\u0636\u0639 \u0627\u0644\u0635\u0627\u0645\u062a.\n\n\u0625\u062f\u0627\u0631\u0629 \u0628\u064a\u0627\u0646\u0627\u062a \u0628\u0633\u064a\u0637\u0629 \u0648\u0622\u0645\u0646\u0629:\n\n- \u062a\u0623\u0643\u064a\u062f \u0623\u0648 \u0631\u0641\u0636 \u0627\u0644\u062a\u0630\u0643\u064a\u0631\u0627\u062a \u0644\u062a\u0633\u062c\u064a\u0644 \u0627\u0644\u0627\u0644\u062a\u0632\u0627\u0645 \u0628\u0627\u0644\u062f\u0648\u0627\u0621 \u0628\u062f\u0642\u0629.\n- \u0627\u0644\u062d\u0635\u0648\u0644 \u0639\u0644\u0649 \u0646\u0638\u0631\u0629 \u0639\u0627\u0645\u0629 \u0639\u0644\u0649 \u0627\u0644\u062c\u0631\u0639\u0627\u062a \u0627\u0644\u0633\u0627\u0628\u0642\u0629 \u0641\u064a \u0631\u0633\u0645 \u0628\u064a\u0627\u0646\u064a \u0648\u0639\u0631\u0636 \u062c\u062f\u0648\u0644\u064a.\n- \u062a\u0635\u062f\u064a\u0631 \u0633\u062c\u0644 \u0623\u062f\u0648\u064a\u062a\u0643 \u0643\u0645\u0644\u0641 CSV \u0644\u0633\u0647\u0648\u0644\u0629 \u062d\u0641\u0638 \u0627\u0644\u0633\u062c\u0644\u0627\u062a \u0623\u0648 \u0645\u0634\u0627\u0631\u0643\u062a\u0647\u0627 \u0645\u0639 \u0627\u0644\u0645\u062a\u062e\u0635\u0635\u064a\u0646 \u0641\u064a \u0627\u0644\u0631\u0639\u0627\u064a\u0629 \u0627\u0644\u0635\u062d\u064a\u0629.\n- \u0646\u0633\u062e \u0627\u062d\u062a\u064a\u0627\u0637\u064a \u0648\u0627\u0633\u062a\u0639\u0627\u062f\u0629 \u0642\u0627\u0626\u0645\u0629 \u0627\u0644\u0623\u062f\u0648\u064a\u0629 \u0627\u0644\u062e\u0627\u0635\u0629 \u0628\u0643 \u0643\u0645\u0644\u0641 JSON.\n- \u062a\u062a\u0628\u0639 \u0645\u062e\u0632\u0648\u0646 \u0627\u0644\u0623\u062f\u0648\u064a\u0629 \u0648\u062a\u0630\u0643\u064a\u0631\u0627\u062a \u0646\u0641\u0627\u062f \u0627\u0644\u0645\u062e\u0632\u0648\u0646.\n- \u0648\u0636\u0639 \u0639\u0644\u0627\u0645\u0627\u062a \u0648\u062a\u0635\u0641\u064a\u0629 \u0623\u062f\u0648\u064a\u062a\u0643.\n\n\u0627\u0644\u062e\u0635\u0648\u0635\u064a\u0629 \u0648\u0625\u0645\u0643\u0627\u0646\u064a\u0629 \u0627\u0644\u0648\u0635\u0648\u0644 \u062f\u0648\u0646 \u0627\u062a\u0635\u0627\u0644 \u0628\u0627\u0644\u0625\u0646\u062a\u0631\u0646\u062a:\n\n- \u064a\u062a\u0645 \u062a\u062e\u0632\u064a\u0646 \u062c\u0645\u064a\u0639 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a \u0628\u0634\u0643\u0644 \u0622\u0645\u0646 \u0639\u0644\u0649 \u062c\u0647\u0627\u0632\u0643\u060c \u0645\u0645\u0627 \u064a\u0636\u0645\u0646 \u062e\u0635\u0648\u0635\u064a\u0629 \u0643\u0627\u0645\u0644\u0629 \u0648\u0625\u0645\u0643\u0627\u0646\u064a\u0629 \u0627\u0644\u0648\u0635\u0648\u0644 \u062f\u0648\u0646 \u0627\u062a\u0635\u0627\u0644 \u0628\u0627\u0644\u0625\u0646\u062a\u0631\u0646\u062a.\n- \u0644\u0627 \u064a\u0644\u0632\u0645 \u0627\u0644\u0627\u062a\u0635\u0627\u0644 \u0628\u0627\u0644\u0625\u0646\u062a\u0631\u0646\u062a - \u062a\u0630\u0643\u064a\u0631\u0627\u062a \u0623\u062f\u0648\u064a\u062a\u0643 \u0645\u062a\u0627\u062d\u0629 \u062f\u0627\u0626\u0645\u064b\u0627.\n\nMedTimer \u0647\u0648 \u062a\u0637\u0628\u064a\u0642 \u0645\u062c\u0627\u0646\u064a \u0628\u062f\u0648\u0646 \u0625\u0639\u0644\u0627\u0646\u0627\u062a.\n\n\u0627\u0646\u0638\u0631 \u0635\u0641\u062d\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639 \u0639\u0644\u0649 GitHub: https://github.com/Futsch1/medTimer\n\n\u0623\u064f\u0646\u0634\u0626 \u0627\u0644\u0631\u0633\u0645 \u0627\u0644\u0628\u064a\u0627\u0646\u064a \u0644\u0644\u0645\u064a\u0632\u0629 \u0628\u0627\u0633\u062a\u062e\u062f\u0627\u0645 https://hotpot.ai\n",
+      "bg": "Med reminders and history with full offline privacy\n\nStay In Control of Your Medications with MedTimer\n\nMedTimer is an open-source medication reminder app designed to help you manage your medications and pills effectively and with full control of your sensitive data.\n\nFlexible & Personalized Reminders:\n\n-\u00a0Manage unlimited medications with customizable reminders per medication (including simple defaults\n  for daily reminders).\n-\u00a0Create flexible reminders with breaks and specific days (e.g. for birth control pills).\n-\u00a0Weekend mode: Delay reminders to a defined time on chosen days.\n-\u00a0Snooze notifications for later reminders or be reminded repeatedly.\n- Location-based snooze: be re-notified when arriving home after snoozing.\n-\u00a0Add extra doses on the fly.\n-\u00a0Create interval based reminders or reminders following each other in intervals.\n\nSimple & Secure Data Management:\n\n-\u00a0Confirm or dismiss reminders to record medication adherence accurately.\n-\u00a0Get an overview of past doses in a chart and a tabular view.\n-\u00a0Export your medication history as a CSV file for easy record-keeping or sharing with healthcare professionals.\n-\u00a0Backup and restore your medication list as JSON file.\n-\u00a0Medication stock tracking and out of stock reminders.\n-\u00a0Tag and filter your medication.\n\nPrivacy & Offline Accessibility:\n\n-\u00a0All data is stored securely on your device, ensuring complete privacy and offline accessibility.\n-\u00a0No internet connection required \u2013 your medication reminders are always available.\n\nMedTimer is a free app without ads.\n\nSee the project page on GitHub: https://github.com/Futsch1/medTimer\n\nFeature graphic was created with https://hotpot.ai\n",
+      "cs-CZ": "Med reminders and history with full offline privacy\n\nStay In Control of Your Medications with MedTimer\n\nMedTimer is an open-source medication reminder app designed to help you manage your medications and pills effectively and with full control of your sensitive data.\n\nFlexible & Personalized Reminders:\n\n-\u00a0Manage unlimited medications with customizable reminders per medication (including simple defaults for daily reminders).\n-\u00a0Create flexible reminders with breaks and specific days (e.g. for birth control pills).\n-\u00a0Weekend mode: Delay reminders to a defined time on chosen days.\n-\u00a0Snooze notifications for later reminders or be reminded repeatedly.\n- Location-based snooze: be re-notified when arriving home after snoozing.\n-\u00a0Add extra doses on the fly.\n-\u00a0Create interval based reminders, reminders following each other in intervals or interval reminders constrained with a start and end time per day.\n-\u00a0Use alarm type reminders to ensure notification even when the device is set to silent mode.\n\nSimple & Secure Data Management:\n\n-\u00a0Confirm or dismiss reminders to record medication adherence accurately.\n-\u00a0Get an overview of past doses in a chart and a tabular view.\n-\u00a0Export your medication history as a CSV file for easy record-keeping or sharing with healthcare professionals.\n-\u00a0Backup and restore your medication list as JSON file.\n-\u00a0Medication stock tracking and out of stock reminders.\n-\u00a0Tag and filter your medication.\n\nPrivacy & Offline Accessibility:\n\n-\u00a0All data is stored securely on your device, ensuring complete privacy and offline accessibility.\n-\u00a0No internet connection required \u2013 your medication reminders are always available.\n\nMedTimer is a free app without ads.\n\nSee the project page on GitHub: https://github.com/Futsch1/medTimer\n\nFeature graphic was created with https://hotpot.ai\n",
+      "da-DK": "Medicinp\u00e5mindelser og -historik med fuldt offline privatliv\n\nHav kontrol over din medicin med MedTimer\n\nMedTimer er en open source-app til medicinp\u00e5mindelser, der hj\u00e6lper dig med at h\u00e5ndtere din medicin og dine piller effektivt \u2013 med fuld kontrol over dine f\u00f8lsomme data.\n\nFleksible og personaliserede p\u00e5mindelser:\n\n- Administrer ubegr\u00e6nset medicin med brugerdefinerede p\u00e5mindelser for hver medicin (inklusive simple standardindstillinger for daglige p\u00e5mindelser).\n- Opret fleksible p\u00e5mindelser med pauser og specifikke dage (f.eks. for p-piller).\n- Weekendtilstand: Udskyd p\u00e5mindelser til et bestemt tidspunkt p\u00e5 udvalgte dage.\n- Slumre p\u00e5mindelser eller f\u00e5 gentagne p\u00e5mindelser.\n- Placeringsbaseret snooze: modtag en ny p\u00e5mindelse, n\u00e5r du ankommer hjem.\n- Tilf\u00f8j ekstra doser efter behov.\n- Opret intervalbaserede p\u00e5mindelser, sekventielle intervaller eller intervaller med fast start- og sluttid pr. dag.\n- Brug alarmtype-p\u00e5mindelser for at sikre at blive underrettet, selv n\u00e5r enheden er p\u00e5 lydl\u00f8s.\n\nEnkel og sikker datastyring:\n\n- Bekr\u00e6ft eller afvis p\u00e5mindelser for at registrere medicinering n\u00f8jagtigt.\n- F\u00e5 et overblik over tidligere doser i et diagram og en tabelvisning.\n- Eksport\u00e9r din medicinhistorik som en CSV-fil for nem journalf\u00f8ring eller deling med sundhedspersonale.\n- Sikkerhedskopi\u00e9r og gendan din medicinliste som JSON-fil.\n- Sporing af medicinlager og p\u00e5mindelser ved lav beholdning.\n- Tag og filtr\u00e9r din medicin.\n\nPrivatliv og offlineadgang:\n\n- Alle data gemmes sikkert p\u00e5 din enhed, hvilket sikrer fuldst\u00e6ndig privatliv og offlineadgang.\n- Ingen internetforbindelse kr\u00e6ves \u2013 dine medicinp\u00e5mindelser er altid tilg\u00e6ngelige.\n\nMedTimer er gratis og uden reklamer.\n\nSe projektet p\u00e5 GitHub: https://github.com/Futsch1/medTimer\n\nFunktionsgrafikken er oprettet med https://hotpot.ai\n",
+      "de-DE": "Behalten Sie den \u00dcberblick \u00fcber Ihre Medikamente mit MedTimer\n\nMedTimer ist eine Open-Source App zur Erinnerung an die Einnahme von Medikamenten, mit der du deine Medikamente effektiv und mit voller Kontrolle \u00fcber deine sensiblen Daten verwalten kannst.\n\nFlexible und personalisierte Erinnerungen:\n\n- Verwalte eine unbegrenzte Anzahl Medikamente mit individuellen Erinnerungen pro Medikament (mit einfacher Standardeinstellung f\u00fcr t\u00e4gliche Erinnerungen).\n- Erstelle flexible Erinnerungen mit Pausen und nur f\u00fcr bestimmten Tage (z.B. f\u00fcr die Antibabypille).\n- Wochenendmodus: Verschiebe Erinnerungen an w\u00e4hlbaren Tagen auf eine festgelegte Uhrzeit.\n- Verschiebe (\"snooze\") Benachrichtigungen, um sp\u00e4ter erneut erinnert zu werden oder lasse dich wiederholt erinner.\n- Standortbasierter Snooze: Erneute Benachrichtigung bei Heimkehr nach einem Snooze.\n- Protokolliere zus\u00e4tzliche, ungeplante Einnahmen.\n- Erstelle intervallbasierte Erinnerungen und solche, die auf vorherige Einnahmen nach einer gewissen Zeit folgen.\n\nEinfache und sichere Datenverwaltung:\n\n- Best\u00e4tige oder verwerfe Erinnerungen, um die Medikamenteneinnahme genau zu erfassen.\n- Zeige eine \u00dcbersicht deiner Einnahmen als Grafik oder Tabelle an.\n- Exportiere deine Medikamentenhistorie als CSV-Datei f\u00fcr eine einfache Aufzeichnung oder Weitergabe an medizinisches Fachpersonal.\n- Sichern und Wiederherstellen deiner Medikamentenliste als JSON-Datei.\n- Verwaltung des Medikamentenvorrats und Nachf\u00fcll-Erinnerungen.\n- Tagge und filtere deine Medikamente.\n\nDatenschutz und Offline-Zugriff:\n\n- Alle Daten werden sicher auf Ihrem Ger\u00e4t gespeichert, so dass ein vollst\u00e4ndiger Datenschutz und Offline-Zugriff gew\u00e4hrleistet ist.\n- Keine Internetverbindung erforderlich - deine Medikamentenerinnerungen sind immer verf\u00fcgbar.\n\nMedTimer ist eine kostenlose, werbefreie App.\n\nWeitere Informationen auf GitHub: https://github.com/Futsch1/medTimer\n\nFeature-Grafik wurde mit https://hotpot.ai erstellt\n",
+      "el-GR": "\u03a5\u03c0\u03b5\u03bd\u03b8\u03c5\u03bc\u03af\u03c3\u03b5\u03b9\u03c2 \u03ba\u03b1\u03b9 \u03c4\u03ae\u03c1\u03b7\u03c3\u03b7 \u03b9\u03c3\u03c4\u03bf\u03c1\u03b9\u03ba\u03bf\u03cd \u03c6\u03b1\u03c1\u03bc\u03b1\u03ba\u03b5\u03c5\u03c4\u03b9\u03ba\u03ce\u03bd \u03b1\u03b3\u03c9\u03b3\u03ce\u03bd \u03bc\u03b5 \u03c0\u03bb\u03ae\u03c1\u03b7 \u03b9\u03b4\u03b9\u03c9\u03c4\u03b9\u03ba\u03cc\u03c4\u03b7\u03c4\u03b1 \u03c7\u03c9\u03c1\u03af\u03c2 \u03c0\u03c1\u03cc\u03c3\u03b2\u03b1\u03c3\u03b7 \u03c3\u03c4\u03bf \u03b4\u03b9\u03b1\u03b4\u03af\u03ba\u03c4\u03c5\u03bf\n\n\u0394\u03b9\u03b1\u03c4\u03b7\u03c1\u03ae\u03c3\u03c4\u03b5 \u03c4\u03bf\u03bd \u03ad\u03bb\u03b5\u03b3\u03c7\u03bf \u03c4\u03c9\u03bd \u03c6\u03b1\u03c1\u03bc\u03b1\u03ba\u03b5\u03c5\u03c4\u03b9\u03ba\u03ce\u03bd \u03b1\u03b3\u03c9\u03b3\u03ce\u03bd \u03c3\u03b1\u03c2 \u03bc\u03b5 \u03c4\u03bf MedTimer\n\n\u03a4\u03bf MedTimer \u03b5\u03af\u03bd\u03b1\u03b9 \u03bc\u03b9\u03b1 \u03b1\u03bd\u03bf\u03b9\u03c7\u03c4\u03bf\u03cd \u03ba\u03ce\u03b4\u03b9\u03ba\u03b1 \u03b5\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ae \u03c5\u03c0\u03b5\u03bd\u03b8\u03cd\u03bc\u03b9\u03c3\u03b7\u03c2 \u03c6\u03b1\u03c1\u03bc\u03b1\u03ba\u03b5\u03c5\u03c4\u03b9\u03ba\u03ce\u03bd \u03b1\u03b3\u03c9\u03b3\u03ce\u03bd, \u03c0\u03bf\u03c5 \u03c3\u03c7\u03b5\u03b4\u03b9\u03ac\u03c3\u03c4\u03b7\u03ba\u03b5 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03c3\u03b1\u03c2 \u03b2\u03bf\u03b7\u03b8\u03ae\u03c3\u03b5\u03b9 \u03bd\u03b1 \u03b4\u03b9\u03b1\u03c7\u03b5\u03b9\u03c1\u03b9\u03c3\u03c4\u03b5\u03af\u03c4\u03b5 \u03c4\u03b9\u03c2 \u03c6\u03b1\u03c1\u03bc\u03b1\u03ba\u03b5\u03c5\u03c4\u03b9\u03ba\u03ad\u03c2 \u03b1\u03b3\u03c9\u03b3\u03ad\u03c2 \u03c3\u03b1\u03c2 \u03b1\u03c0\u03bf\u03c4\u03b5\u03bb\u03b5\u03c3\u03bc\u03b1\u03c4\u03b9\u03ba\u03ac, \u03b4\u03b9\u03b1\u03c4\u03b7\u03c1\u03ce\u03bd\u03c4\u03b1\u03c2 \u03c0\u03b1\u03c1\u03ac\u03bb\u03bb\u03b7\u03bb\u03b1 \u03c4\u03bf\u03bd \u03c0\u03bb\u03ae\u03c1\u03b7 \u03ad\u03bb\u03b5\u03b3\u03c7\u03bf \u03c4\u03c9\u03bd \u03c0\u03c1\u03bf\u03c3\u03c9\u03c0\u03b9\u03ba\u03ce\u03bd \u03c3\u03b1\u03c2 \u03b4\u03b5\u03b4\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd.\n\n\u0395\u03c5\u03ad\u03bb\u03b9\u03ba\u03c4\u03b5\u03c2 & \u03b5\u03be\u03b1\u03c4\u03bf\u03bc\u03b9\u03ba\u03b5\u03c5\u03bc\u03ad\u03bd\u03b5\u03c2 \u03c5\u03c0\u03b5\u03bd\u03b8\u03c5\u03bc\u03af\u03c3\u03b5\u03b9\u03c2:\n\n\u2010 \u00a0\u0394\u03b9\u03b1\u03c7\u03b5\u03b9\u03c1\u03b9\u03c3\u03c4\u03b5\u03af\u03c4\u03b5 \u03b1\u03c0\u03b5\u03c1\u03b9\u03cc\u03c1\u03b9\u03c3\u03c4\u03b5\u03c2 \u03c6\u03b1\u03c1\u03bc\u03b1\u03ba\u03b5\u03c5\u03c4\u03b9\u03ba\u03ad\u03c2 \u03b1\u03b3\u03c9\u03b3\u03ad\u03c2 \u03bc\u03b5 \u03c0\u03b1\u03c1\u03b1\u03bc\u03b5\u03c4\u03c1\u03bf\u03c0\u03bf\u03b9\u03ae\u03c3\u03b9\u03bc\u03b5\u03c2 \u03c5\u03c0\u03b5\u03bd\u03b8\u03c5\u03bc\u03af\u03c3\u03b5\u03b9\u03c2 \u03b1\u03bd\u03ac \u03b1\u03b3\u03c9\u03b3\u03ae (\u03c3\u03c5\u03bc\u03c0\u03b5\u03c1\u03b9\u03bb\u03b1\u03bc\u03b2\u03b1\u03bd\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd \u03b1\u03c0\u03bb\u03ce\u03bd \u03c0\u03c1\u03bf\u03b5\u03c0\u03b9\u03bb\u03bf\u03b3\u03ce\u03bd \u03b3\u03b9\u03b1 \u03ba\u03b1\u03b8\u03b7\u03bc\u03b5\u03c1\u03b9\u03bd\u03ad\u03c2 \u03c5\u03c0\u03b5\u03bd\u03b8\u03c5\u03bc\u03af\u03c3\u03b5\u03b9\u03c2).\n- \u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03ae\u03c3\u03c4\u03b5 \u03b5\u03c5\u03ad\u03bb\u03b9\u03ba\u03c4\u03b5\u03c2 \u03c5\u03c0\u03b5\u03bd\u03b8\u03c5\u03bc\u03af\u03c3\u03b5\u03b9\u03c2 \u03bc\u03b5 \u03c0\u03b1\u03cd\u03c3\u03b5\u03b9\u03c2 \u03ba\u03b1\u03b9 \u03c3\u03c5\u03b3\u03ba\u03b5\u03ba\u03c1\u03b9\u03bc\u03ad\u03bd\u03b5\u03c2 \u03b7\u03bc\u03ad\u03c1\u03b5\u03c2 (\u03c0.\u03c7. \u03b3\u03b9\u03b1 \u03b1\u03bd\u03c4\u03b9\u03c3\u03c5\u03bb\u03bb\u03b7\u03c0\u03c4\u03b9\u03ba\u03ac \u03c7\u03ac\u03c0\u03b9\u03b1).\n- \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03a3\u03b1\u03b2\u03b2\u03b1\u03c4\u03bf\u03ba\u03cd\u03c1\u03b9\u03b1\u03ba\u03bf\u03c5: \u039a\u03b1\u03b8\u03c5\u03c3\u03c4\u03b5\u03c1\u03ae\u03c3\u03c4\u03b5 \u03c4\u03b9\u03c2 \u03c5\u03c0\u03b5\u03bd\u03b8\u03c5\u03bc\u03af\u03c3\u03b5\u03b9\u03c2 \u03c3\u03b5 \u03bc\u03b9\u03b1 \u03ba\u03b1\u03b8\u03bf\u03c1\u03b9\u03c3\u03bc\u03ad\u03bd\u03b7 \u03ce\u03c1\u03b1 \u03b3\u03b9\u03b1 \u03b5\u03c0\u03b9\u03bb\u03b5\u03b3\u03bc\u03ad\u03bd\u03b5\u03c2 \u03b7\u03bc\u03ad\u03c1\u03b5\u03c2.\n- \u0391\u03bd\u03b1\u03b2\u03ac\u03bb\u03b5\u03c4\u03b5 \u03c4\u03b9\u03c2 \u03b5\u03b9\u03b4\u03bf\u03c0\u03bf\u03b9\u03ae\u03c3\u03b5\u03b9\u03c2 \u03b3\u03b9\u03b1 \u03bc\u03b5\u03c4\u03b1\u03b3\u03b5\u03bd\u03ad\u03c3\u03c4\u03b5\u03c1\u03b7 \u03c5\u03c0\u03b5\u03bd\u03b8\u03c5\u03bc\u03af\u03c3\u03b7, \u03ae \u03bf\u03c1\u03af\u03c3\u03c4\u03b5 \u03bd\u03b1 \u03c3\u03b1\u03c2 \u03c5\u03c0\u03b5\u03bd\u03b8\u03c5\u03bc\u03af\u03b6\u03bf\u03bd\u03c4\u03b1\u03b9 \u03b5\u03c0\u03b1\u03bd\u03b5\u03b9\u03bb\u03b7\u03bc\u03bc\u03ad\u03bd\u03b1.\n- \u0391\u03bd\u03b1\u03b2\u03bf\u03bb\u03ae \u03b2\u03ac\u03c3\u03b5\u03b9 \u03c4\u03bf\u03c0\u03bf\u03b8\u03b5\u03c3\u03af\u03b1\u03c2: \u03bd\u03ad\u03b1 \u03b5\u03b9\u03b4\u03bf\u03c0\u03bf\u03af\u03b7\u03c3\u03b7 \u03ba\u03b1\u03c4\u03ac \u03c4\u03b7\u03bd \u03b5\u03c0\u03b9\u03c3\u03c4\u03c1\u03bf\u03c6\u03ae \u03c3\u03c4\u03bf \u03c3\u03c0\u03af\u03c4\u03b9.\n- \u039a\u03b1\u03c4\u03b1\u03c7\u03c9\u03c1\u03ae\u03c3\u03c4\u03b5 \u03b5\u03c0\u03b9\u03c0\u03bb\u03ad\u03bf\u03bd \u03b4\u03cc\u03c3\u03b5\u03b9\u03c2, \u03b5\u03ba\u03c4\u03cc\u03c2 \u03c4\u03bf\u03c5 \u03ba\u03b1\u03b8\u03bf\u03c1\u03b9\u03c3\u03bc\u03ad\u03bd\u03bf\u03c5 \u03c0\u03c1\u03bf\u03b3\u03c1\u03ac\u03bc\u03bc\u03b1\u03c4\u03bf\u03c2 \u03c4\u03b7\u03c2 \u03b1\u03b3\u03c9\u03b3\u03ae\u03c2, \u03b5\u03bd \u03ba\u03b9\u03bd\u03ae\u03c3\u03b5\u03b9.\n- \u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03ae\u03c3\u03c4\u03b5 \u03c5\u03c0\u03b5\u03bd\u03b8\u03c5\u03bc\u03af\u03c3\u03b5\u03b9\u03c2 \u03b2\u03b1\u03c3\u03b9\u03c3\u03bc\u03ad\u03bd\u03b5\u03c2 \u03c3\u03b5 \u03c7\u03c1\u03bf\u03bd\u03b9\u03ba\u03ac \u03b4\u03b9\u03b1\u03c3\u03c4\u03ae\u03bc\u03b1\u03c4\u03b1, \u03c5\u03c0\u03b5\u03bd\u03b8\u03c5\u03bc\u03af\u03c3\u03b5\u03b9\u03c2 \u03b3\u03b9\u03b1 \u03b4\u03cc\u03c3\u03b5\u03b9\u03c2 \u03ba\u03b1\u03b9 \u03b1\u03b3\u03c9\u03b3\u03ad\u03c2 \u03c0\u03bf\u03c5 \u03b1\u03ba\u03bf\u03bb\u03bf\u03c5\u03b8\u03bf\u03cd\u03bd \u03b7 \u03bc\u03af\u03b1 \u03c4\u03b7\u03bd \u03ac\u03bb\u03bb\u03b7 \u03bc\u03b5 \u03c3\u03c4\u03b1\u03b8\u03b5\u03c1\u03ae \u03c7\u03c1\u03bf\u03bd\u03b9\u03ba\u03ae \u03b1\u03c0\u03cc\u03ba\u03bb\u03b9\u03c3\u03b7 \u03bc\u03b5\u03c4\u03b1\u03be\u03cd \u03c4\u03bf\u03c5\u03c2, \u03ae \u03c5\u03c0\u03b5\u03bd\u03b8\u03c5\u03bc\u03af\u03c3\u03b5\u03b9\u03c2 \u03b2\u03b1\u03c3\u03b9\u03c3\u03bc\u03ad\u03bd\u03b5\u03c2 \u03c3\u03b5 \u03c7\u03c1\u03bf\u03bd\u03b9\u03ba\u03ac \u03b4\u03b9\u03b1\u03c3\u03c4\u03ae\u03bc\u03b1\u03c4\u03b1, \u03bf\u03c1\u03b9\u03bf\u03b8\u03b5\u03c4\u03b7\u03bc\u03ad\u03bd\u03b5\u03c2 \u03bc\u03b5 \u03ce\u03c1\u03b1 \u03ad\u03bd\u03b1\u03c1\u03be\u03b7\u03c2 \u03ba\u03b1\u03b9 \u03bb\u03ae\u03be\u03b7\u03c2 \u03b1\u03bd\u03ac \u03b7\u03bc\u03ad\u03c1\u03b1.\n\n- \u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03ae\u03c3\u03c4\u03b5 \u03c5\u03c0\u03b5\u03bd\u03b8\u03c5\u03bc\u03af\u03c3\u03b5\u03b9\u03c2 \u03c4\u03cd\u03c0\u03bf\u03c5 \u03be\u03c5\u03c0\u03bd\u03b7\u03c4\u03b7\u03c1\u03b9\u03bf\u03cd \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b5\u03be\u03b1\u03c3\u03c6\u03b1\u03bb\u03af\u03c3\u03b5\u03c4\u03b5 \u03c4\u03b7\u03bd \u03b1\u03c0\u03c1\u03cc\u03c3\u03ba\u03bf\u03c0\u03c4\u03b7 \u03b5\u03b9\u03b4\u03bf\u03c0\u03bf\u03af\u03b7\u03c3\u03ae \u03c3\u03b1\u03c2 \u03b1\u03ba\u03cc\u03bc\u03b1 \u03ba\u03b1\u03b9 \u03cc\u03c4\u03b1\u03bd \u03b7 \u03c3\u03c5\u03c3\u03ba\u03b5\u03c5\u03ae \u03b5\u03af\u03bd\u03b1\u03b9 \u03c1\u03c5\u03b8\u03bc\u03b9\u03c3\u03bc\u03ad\u03bd\u03b7 \u03c3\u03b5 \u03b1\u03b8\u03cc\u03c1\u03c5\u03b2\u03b7 \u03bb\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03af\u03b1.\n\u0391\u03c0\u03bb\u03ae \u03ba\u03b1\u03b9 \u03b1\u03c3\u03c6\u03b1\u03bb\u03ae\u03c2 \u03b4\u03b9\u03b1\u03c7\u03b5\u03af\u03c1\u03b9\u03c3\u03b7 \u03b4\u03b5\u03b4\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd:\n\n- \u0395\u03c0\u03b9\u03b2\u03b5\u03b2\u03b1\u03b9\u03ce\u03c3\u03c4\u03b5 \u03ae \u03b1\u03c0\u03bf\u03c1\u03c1\u03af\u03c8\u03c4\u03b5 \u03c4\u03b9\u03c2 \u03c5\u03c0\u03b5\u03bd\u03b8\u03c5\u03bc\u03af\u03c3\u03b5\u03b9\u03c2 \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03b1\u03ba\u03c1\u03b9\u03b2\u03ae \u03ba\u03b1\u03c4\u03b1\u03b3\u03c1\u03b1\u03c6\u03ae \u03c4\u03b7\u03c2 \u03c4\u03ae\u03c1\u03b7\u03c3\u03b7\u03c2 \u03c4\u03b7\u03c2 \u03c6\u03b1\u03c1\u03bc\u03b1\u03ba\u03b5\u03c5\u03c4\u03b9\u03ba\u03ae\u03c2 \u03b1\u03b3\u03c9\u03b3\u03ae\u03c2.\n- \u0391\u03c0\u03bf\u03ba\u03c4\u03ae\u03c3\u03c4\u03b5 \u03bc\u03b9\u03b1 \u03b5\u03c0\u03b9\u03c3\u03ba\u03cc\u03c0\u03b7\u03c3\u03b7 \u03c4\u03c9\u03bd \u03c0\u03c1\u03bf\u03b7\u03b3\u03bf\u03cd\u03bc\u03b5\u03bd\u03c9\u03bd \u03b4\u03cc\u03c3\u03b5\u03c9\u03bd \u03c3\u03b5 \u03b4\u03b9\u03ac\u03b3\u03c1\u03b1\u03bc\u03bc\u03b1 \u03ba\u03b1\u03b9 \u03c3\u03b5 \u03bc\u03bf\u03c1\u03c6\u03ae \u03c0\u03af\u03bd\u03b1\u03ba\u03b1.\n- \u0395\u03be\u03ac\u03b3\u03b5\u03c4\u03b5 \u03c4\u03bf \u03b9\u03c3\u03c4\u03bf\u03c1\u03b9\u03ba\u03cc \u03c4\u03b7\u03c2 \u03c6\u03b1\u03c1\u03bc\u03b1\u03ba\u03b5\u03c5\u03c4\u03b9\u03ba\u03ae\u03c2 \u03c3\u03b1\u03c2 \u03b1\u03b3\u03c9\u03b3\u03ae\u03c2 \u03c9\u03c2 \u03b1\u03c1\u03c7\u03b5\u03af\u03bf CSV \u03b3\u03b9\u03b1 \u03b5\u03cd\u03ba\u03bf\u03bb\u03b7 \u03c4\u03ae\u03c1\u03b7\u03c3\u03b7 \u03b1\u03c1\u03c7\u03b5\u03af\u03c9\u03bd \u03ae \u03ba\u03bf\u03b9\u03bd\u03ae \u03c7\u03c1\u03ae\u03c3\u03b7 \u03bc\u03b5 \u03b5\u03c0\u03b1\u03b3\u03b3\u03b5\u03bb\u03bc\u03b1\u03c4\u03af\u03b5\u03c2 \u03c5\u03b3\u03b5\u03af\u03b1\u03c2.\n- \u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03ae\u03c3\u03c4\u03b5 \u03b1\u03bd\u03c4\u03af\u03b3\u03c1\u03b1\u03c6\u03b1 \u03b1\u03c3\u03c6\u03b1\u03bb\u03b5\u03af\u03b1\u03c2 \u03ba\u03b1\u03b9 \u03b5\u03c0\u03b1\u03bd\u03b1\u03c6\u03ad\u03c1\u03b5\u03c4\u03b5 \u03c4\u03b7 \u03bb\u03af\u03c3\u03c4\u03b1 \u03c6\u03b1\u03c1\u03bc\u03ac\u03ba\u03c9\u03bd \u03c3\u03b1\u03c2 \u03c9\u03c2 \u03b1\u03c1\u03c7\u03b5\u03af\u03bf JSON.\n- \u03a0\u03b1\u03c1\u03b1\u03ba\u03bf\u03bb\u03bf\u03cd\u03b8\u03b7\u03c3\u03b7 \u03c4\u03bf\u03c5 \u03b1\u03c0\u03bf\u03b8\u03ad\u03bc\u03b1\u03c4\u03bf\u03c2 \u03c6\u03b1\u03c1\u03bc\u03ac\u03ba\u03c9\u03bd \u03ba\u03b1\u03b9 \u03c5\u03c0\u03b5\u03bd\u03b8\u03c5\u03bc\u03af\u03c3\u03b5\u03b9\u03c2 \u03b3\u03b9\u03b1 \u03b5\u03be\u03ac\u03bd\u03c4\u03bb\u03b7\u03c3\u03b7 \u03b1\u03c0\u03bf\u03b8\u03b5\u03bc\u03ac\u03c4\u03c9\u03bd.\n- \u0395\u03c0\u03b9\u03c3\u03ae\u03bc\u03b1\u03bd\u03c3\u03b7 \u03ba\u03b1\u03b9 \u03c6\u03b9\u03bb\u03c4\u03c1\u03ac\u03c1\u03b9\u03c3\u03bc\u03b1 \u03c4\u03b7\u03c2 \u03c6\u03b1\u03c1\u03bc\u03b1\u03ba\u03b5\u03c5\u03c4\u03b9\u03ba\u03ae\u03c2 \u03c3\u03b1\u03c2 \u03b1\u03b3\u03c9\u03b3\u03ae\u03c2.\n\n\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf \u03ba\u03b1\u03b9 \u03c0\u03c1\u03bf\u03c3\u03b2\u03b1\u03c3\u03b9\u03bc\u03cc\u03c4\u03b7\u03c4\u03b1 \u03c7\u03c9\u03c1\u03af\u03c2 \u03c3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7:\n\n- \u038c\u03bb\u03b1 \u03c4\u03b1 \u03b4\u03b5\u03b4\u03bf\u03bc\u03ad\u03bd\u03b1 \u03b1\u03c0\u03bf\u03b8\u03b7\u03ba\u03b5\u03cd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03b5 \u03b1\u03c3\u03c6\u03ac\u03bb\u03b5\u03b9\u03b1 \u03c3\u03c4\u03b7 \u03c3\u03c5\u03c3\u03ba\u03b5\u03c5\u03ae \u03c3\u03b1\u03c2, \u03b5\u03be\u03b1\u03c3\u03c6\u03b1\u03bb\u03af\u03b6\u03bf\u03bd\u03c4\u03b1\u03c2 \u03c0\u03bb\u03ae\u03c1\u03b7 \u03b9\u03b4\u03b9\u03c9\u03c4\u03b9\u03ba\u03cc\u03c4\u03b7\u03c4\u03b1 \u03ba\u03b1\u03b9 \u03c0\u03c1\u03bf\u03c3\u03b2\u03b1\u03c3\u03b9\u03bc\u03cc\u03c4\u03b7\u03c4\u03b1 \u03b5\u03ba\u03c4\u03cc\u03c2 \u03b4\u03b9\u03ba\u03c4\u03cd\u03bf\u03c5.\n- \u0394\u03b5\u03bd \u03b1\u03c0\u03b1\u03b9\u03c4\u03b5\u03af\u03c4\u03b1\u03b9 \u03c3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7 \u03c3\u03c4\u03bf \u03b4\u03b9\u03b1\u03b4\u03af\u03ba\u03c4\u03c5\u03bf - \u03bf\u03b9 \u03c5\u03c0\u03b5\u03bd\u03b8\u03c5\u03bc\u03af\u03c3\u03b5\u03b9\u03c2 \u03c4\u03c9\u03bd \u03c6\u03b1\u03c1\u03bc\u03ac\u03ba\u03c9\u03bd \u03c3\u03b1\u03c2 \u03b5\u03af\u03bd\u03b1\u03b9 \u03c0\u03ac\u03bd\u03c4\u03b1 \u03b4\u03b9\u03b1\u03b8\u03ad\u03c3\u03b9\u03bc\u03b5\u03c2.\n\n\u03a4\u03bf MedTimer \u03b5\u03af\u03bd\u03b1\u03b9 \u03bc\u03b9\u03b1 \u03b4\u03c9\u03c1\u03b5\u03ac\u03bd \u03ba\u03b1\u03b9 \u03b5\u03bb\u03b5\u03cd\u03b8\u03b5\u03c1\u03b7 \u03b5\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ae \u03c7\u03c9\u03c1\u03af\u03c2 \u03b4\u03b9\u03b1\u03c6\u03b7\u03bc\u03af\u03c3\u03b5\u03b9\u03c2.\n\n\u0394\u03b5\u03af\u03c4\u03b5 \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1 \u03c4\u03bf\u03c5 \u03ad\u03c1\u03b3\u03bf\u03c5 \u03c3\u03c4\u03bf GitHub: https://github.com/Futsch1/medTimer\n\n\u03a4\u03bf \u03b3\u03c1\u03b1\u03c6\u03b9\u03ba\u03cc \u03c0\u03b5\u03c1\u03b9\u03b2\u03ac\u03bb\u03bb\u03bf\u03bd \u03b4\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03ae\u03b8\u03b7\u03ba\u03b5 \u03bc\u03b5 \u03c4\u03bf https://hotpot.ai\n",
+      "en-US": "Med reminders and history with full offline privacy\n\nStay In Control of Your Medications with MedTimer\n\nMedTimer is an open-source medication reminder app designed to help you manage your medications and pills effectively and with full control of your sensitive data.\n\nFlexible & Personalized Reminders:\n\n-\u00a0Manage unlimited medications with customizable reminders per medication (including simple defaults for daily reminders).\n-\u00a0Create flexible reminders with breaks and specific days (e.g. for birth control pills).\n-\u00a0Weekend mode: Delay reminders to a defined time on chosen days.\n-\u00a0Snooze notifications for later reminders or be reminded repeatedly.\n- Location-based snooze: be re-notified when arriving home after snoozing.\n-\u00a0Add extra doses on the fly.\n-\u00a0Create interval based reminders, reminders following each other in intervals or interval reminders constrained with a start and end time per day.\n-\u00a0Use alarm type reminders to ensure notification even when the device is set to silent mode.\n\nSimple & Secure Data Management:\n\n-\u00a0Confirm or dismiss reminders to record medication adherence accurately.\n-\u00a0Get an overview of past doses in a chart and a tabular view.\n-\u00a0Export your medication history as a CSV file for easy record-keeping or sharing with healthcare professionals.\n-\u00a0Backup and restore your medication list as JSON file.\n-\u00a0Medication stock tracking and out of stock reminders.\n-\u00a0Tag and filter your medication.\n\nPrivacy & Offline Accessibility:\n\n-\u00a0All data is stored securely on your device, ensuring complete privacy and offline accessibility.\n-\u00a0No internet connection required \u2013 your medication reminders are always available.\n\nMedTimer is a free app without ads.\n\nSee the project page on GitHub: https://github.com/Futsch1/medTimer\n\nFeature graphic was created with https://hotpot.ai\n",
+      "es-ES": "Historial y recordatorios de medicaci\u00f3n con total privacidad sin conexi\u00f3n \n\nMantenga el control de sus medicamentos con MedTimer.\n\nMedTimer es una aplicaci\u00f3n de recordatorios de medicaci\u00f3n de c\u00f3digo abierto dise\u00f1ada para ayudarle a gestionar sus medicamentos y pastillas de forma eficaz, manteniendo siempre el control total sobre sus datos sensibles.\n\nRecordatorios flexibles y personalizados:\n\n- Gestione un n\u00famero ilimitado de medicamentos con recordatorios personalizables por cada uno (incluidos ajustes predeterminados simples para recordatorios diarios).\n- Cree recordatorios flexibles con descansos y d\u00edas espec\u00edficos (por ejemplo, para p\u00edldoras anticonceptivas).\n- Modo fin de semana: retrase los recordatorios a una hora definida en los d\u00edas seleccionados.\n- Posponga notificaciones para m\u00e1s tarde o rec\u00edbalas de forma repetida.\n- Posposici\u00f3n seg\u00fan ubicaci\u00f3n: recibe una nueva notificaci\u00f3n al llegar a casa.\n- A\u00f1ada dosis adicionales en cualquier momento.\n- Cree recordatorios basados en intervalos, recordatorios que se encadenan entre s\u00ed o recordatorios por intervalos limitados por una hora de inicio y fin cada d\u00eda.\n- Utilice recordatorios tipo alarma para garantizar la notificaci\u00f3n incluso cuando el dispositivo est\u00e9 en modo silencio.\n\nGesti\u00f3n de datos sencilla y segura:\n\n- Confirme o descarte recordatorios para registrar con precisi\u00f3n la adherencia a la medicaci\u00f3n.\n- Obtenga una vista general de las dosis anteriores mediante gr\u00e1ficos y tablas.\n- Exporte su historial de medicaci\u00f3n como archivo CSV para conservar registros o compartirlos con profesionales sanitarios.\n- Realice copias de seguridad y restaure su lista de medicaci\u00f3n en formato JSON.\n- Lleve un seguimiento de las existencias de medicamentos y reciba avisos cuando se est\u00e9n agotando.\n- Etiquete y filtre sus medicamentos.\n\nPrivacidad y accesibilidad sin conexi\u00f3n:\n\n- Todos los datos se almacenan de forma segura en su dispositivo, garantizando privacidad total y acceso sin conexi\u00f3n.\n- No se requiere conexi\u00f3n a Internet: sus recordatorios de medicaci\u00f3n siempre estar\u00e1n disponibles.\n\nMedTimer es una aplicaci\u00f3n gratuita sin anuncios.\n\nConsulte la p\u00e1gina del proyecto en GitHub: https://github.com/Futsch1/medTimer\n\nGr\u00e1ficos creados con https://hotpot.ai\n",
+      "fi-FI": "L\u00e4\u00e4kemuistutukset ja -historia t\u00e4ysin yhteydett\u00f6m\u00e4ll\u00e4 yksityisyydell\u00e4\n\nPysy l\u00e4\u00e4kkeidesi hallinnassa MedTimerin avulla\n\nMedTimer on avoimen l\u00e4hdekoodin l\u00e4\u00e4kemuistutussovellus, joka on suunniteltu auttamaan sinua hallitsemaan l\u00e4\u00e4kkeit\u00e4si ja pillereit\u00e4si tehokkaasti ja t\u00e4ydell\u00e4 herk\u00e4n datasi hallinnalla.\n\nJoustavat ja yksil\u00f6lliset muistutukset:\n\n- Hallitse rajoittamattomasti l\u00e4\u00e4kkeit\u00e4 mukautettavilla l\u00e4\u00e4kekohtaisilla muistutuksilla (sis\u00e4lt\u00e4\u00e4 yksinkertaiset oletusarvot\n  p\u00e4ivitt\u00e4isille muistutuksille).\n- Luo joustavia muistutuksia tauoilla ja tietyille p\u00e4iville (esim. ehk\u00e4isypillereille).\n- Viikonlopputila: Viiv\u00e4styt\u00e4 muistutuksia m\u00e4\u00e4ritettyyn aikaan valittuina p\u00e4ivin\u00e4.\n- Torkkumuistutukset my\u00f6hemmille muistutuksille tai muistutettavaksi toistuvasti.\n- Sijaintipohjainen torkku: saa ilmoitus kotiin saapuessa.\n- Lis\u00e4\u00e4 ylim\u00e4\u00e4r\u00e4isi\u00e4 annoksia lennossa.\n- Luo v\u00e4liaikapohjaisia muistutuksia tai toisiaan v\u00e4liajoin seuraavia muistutuksia.\n\nYksinkertainen ja turvallinen tiedonhallinta:\n\n- Vahvista tai hylk\u00e4\u00e4 muistutukset tallentaaksesi l\u00e4\u00e4kityksen noudattamisen tarkasti.\n- N\u00e4e yleiskuva menneist\u00e4 annoksista kaaviosta ja taulukkon\u00e4kym\u00e4st\u00e4.\n- Vie l\u00e4\u00e4kityshistoriasi CSV-tiedostona helppoon kirjanpitoon tai jaettavaksi terveydenhuollon ammattilaisten kanssa.\n- Varmuuskopioi ja palauta l\u00e4\u00e4kelistasi JSON-tiedostona.\n- L\u00e4\u00e4kevaraston seuranta ja varaston loppumisen muistutukset.\n- Merkitse ja suodata l\u00e4\u00e4kkeit\u00e4si.\n\nYksityisyys ja yhteydet\u00f6n k\u00e4ytett\u00e4vyys:\n\n- Kaikki tiedot tallennetaan turvallisesti laitteellesi, mik\u00e4 takaa t\u00e4ydellisen yksityisyyden ja yhteydett\u00f6m\u00e4n k\u00e4ytett\u00e4vyyden.\n- Internet-yhteytt\u00e4 ei tarvita \u2013 l\u00e4\u00e4kemuistutuksesi ovat aina saatavilla.\n\nMedTimer on ilmainen sovellus ilman mainoksia.\n\nKatso projektisivu GitHubissa: https://github.com/Futsch1/medTimer\n\nEsittelykuva on luotu osoitteessa https://hotpot.ai\n",
+      "fr-FR": "Rappels m\u00e9dicaux et historiques avec confidentialit\u00e9 totale hors ligne\n\nGardez le contr\u00f4le de vos m\u00e9dicaments avec MedTimer\n\nMedTimer est une application open source de rappel de m\u00e9dicaments con\u00e7ue pour vous aider \u00e0 g\u00e9rer vos m\u00e9dicaments efficacement et avec un contr\u00f4le total sur vos donn\u00e9es sensibles.\n\nFlexible et flexible rappels personnalis\u00e9s\u00a0:\n\n-\u00a0Gestion d'un nombre illimit\u00e9 de m\u00e9dicaments avec des rappels personnalisables par m\u00e9dicament (avec des valeurs par d\u00e9faut simples\n  pour les rappels quotidiens).\n-\u00a0Cr\u00e9ation de rappels flexibles avec des pauses et des jours sp\u00e9cifiques (id\u00e9al pour les pilules contraceptives).\n-\u00a0Mode week-end\u00a0: Retardez les rappels \u00e0 une heure d\u00e9finie les jours choisis.\n-\u00a0R\u00e9p\u00e9tition des notifications pour les rappels ult\u00e9rieurs.\n- R\u00e9p\u00e9tition bas\u00e9e sur la localisation : recevoir \u00e0 nouveau une notification au retour \u00e0 la maison.\n-\u00a0Ajout des doses suppl\u00e9mentaires \u00e0 la vol\u00e9e.\n\nGestion simple et s\u00e9curis\u00e9e des donn\u00e9es\u00a0:\n\n-\u00a0Confirmation ou rejet des rappels pour enregistrer avec pr\u00e9cision l'observance du traitement.\n-\u00a0Obtention d'une vue d'ensemble des doses pass\u00e9es sous la forme d'un graphique et d'un tableau.\n-\u00a0Exportation de votre historique de m\u00e9dicaments sous forme de fichier CSV pour faciliter la tenue de dossiers ou le partage avec les soins de sant\u00e9 professionnels.\n-\u00a0Sauvegarde et restauration de votre liste de m\u00e9dicaments sous forme de fichier JSON.\n-\u00a0Suivi du stock de m\u00e9dicaments et rappels de rupture de stock.\n-\u00a0Taggez et filtrez vos m\u00e9dicaments.\n\nConfidentialit\u00e9 et accessibilit\u00e9 hors ligne\u00a0:\n\n-\u00a0Toutes les donn\u00e9es sont stock\u00e9es en toute s\u00e9curit\u00e9 sur votre appareil, garantissant une confidentialit\u00e9 totale et une accessibilit\u00e9 hors ligne.\n-\u00a0Aucune connexion Internet requise \u2013 vos rappels de m\u00e9dicaments sont toujours disponibles.\n\nMedTimer est une application gratuite sans publicit\u00e9s.\n\nVoir la page du projet sur GitHub\u00a0: https://github.com/Futsch1/medTimer\n\nVisuel cr\u00e9\u00e9 \u00e0 l'aide de https://hotpot.ai\n",
+      "hu-HU": "Gy\u00f3gyszereml\u00e9keztet\u0151k \u00e9s el\u0151zm\u00e9nyek teljes offline adatv\u00e9delemmel\n\nTartsd k\u00e9zben a gy\u00f3gyszereid kezel\u00e9s\u00e9t a MedTimer-rel\n\nA MedTimer egy ny\u00edlt forr\u00e1sk\u00f3d\u00fa gy\u00f3gyszereml\u00e9keztet\u0151 alkalmaz\u00e1s, amely seg\u00edt abban, hogy hat\u00e9konyan kezeld a gy\u00f3gyszereidet \u00e9s tablett\u00e1idat, mik\u00f6zben teljes m\u00e9rt\u00e9kben te rendelkezel az \u00e9rz\u00e9keny adataid felett.\n\nRugalmas \u00e9s szem\u00e9lyre szabott eml\u00e9keztet\u0151k:\n\n- Kezelj korl\u00e1tlan sz\u00e1m\u00fa gy\u00f3gyszert, egyedileg testreszabhat\u00f3 eml\u00e9keztet\u0151kkel \u00e9s egyszer\u0171 alapbe\u00e1ll\u00edt\u00e1sokkal.\n- Hozz l\u00e9tre rugalmas eml\u00e9keztet\u0151ket sz\u00fcnetekkel \u00e9s meghat\u00e1rozott napokkal (pl. fogamz\u00e1sg\u00e1tl\u00f3 tablett\u00e1k eset\u00e9ben).\n- H\u00e9tv\u00e9gi m\u00f3d: k\u00e9sleltesd az eml\u00e9keztet\u0151ket egy meghat\u00e1rozott id\u0151pontra a kiv\u00e1lasztott napokon.\n- Szundi funkci\u00f3: halaszd el az \u00e9rtes\u00edt\u00e9seket k\u00e9s\u0151bbre, vagy ism\u00e9teld meg \u0151ket t\u00f6bbsz\u00f6r.\n- Helyzet alap\u00fa szundi: \u00e9rtes\u00edt\u00e9s haza\u00e9rkez\u00e9skor.\n- Adj hozz\u00e1 extra adagokat b\u00e1rmikor.\n- Hozz l\u00e9tre id\u0151k\u00f6z\u00f6nk\u00e9nti eml\u00e9keztet\u0151ket, vagy egym\u00e1st k\u00f6vet\u0151, intervallumokban megjelen\u0151 eml\u00e9keztet\u0151ket.\n\nEgyszer\u0171 \u00e9s biztons\u00e1gos adatkezel\u00e9s:\n\n- Er\u0151s\u00edtsd meg vagy utas\u00edtsd el az eml\u00e9keztet\u0151ket a gy\u00f3gyszerszed\u00e9s pontos nyomon k\u00f6vet\u00e9s\u00e9hez.\n- Tekintsd meg a kor\u00e1bbi adagokat grafikonon \u00e9s t\u00e1bl\u00e1zatos n\u00e9zetben.\n- Export\u00e1ld a gy\u00f3gyszerszed\u00e9si el\u0151zm\u00e9nyeket CSV f\u00e1jlba, hogy k\u00f6nnyen meg\u0151rizhesd vagy megoszthasd azokat eg\u00e9szs\u00e9g\u00fcgyi szakemberrel.\n- K\u00e9sz\u00edts biztons\u00e1gi ment\u00e9st vagy \u00e1ll\u00edtsd vissza a gy\u00f3gyszerlist\u00e1dat JSON f\u00e1jlok seg\u00edts\u00e9g\u00e9vel.\n- Gy\u00f3gyszerk\u00e9szlet nyomon k\u00f6vet\u00e9se \u00e9s elfogy\u00e1sra figyelmeztet\u0151 eml\u00e9keztet\u0151k.\n- C\u00edmk\u00e9zd \u00e9s sz\u0171rd a gy\u00f3gyszereidet.\n\nAdatv\u00e9delem \u00e9s offline hozz\u00e1f\u00e9r\u00e9s:\n\n- Minden adat biztons\u00e1gosan a k\u00e9sz\u00fcl\u00e9keden ker\u00fcl t\u00e1rol\u00e1sra, teljes adatv\u00e9delmet \u00e9s offline hozz\u00e1f\u00e9r\u00e9st biztos\u00edtva.\n- Nincs sz\u00fcks\u00e9g internetkapcsolatra \u2013 a gy\u00f3gyszereml\u00e9keztet\u0151id mindig el\u00e9rhet\u0151k.\n\nA MedTimer ingyenes alkalmaz\u00e1s, hirdet\u00e9sek n\u00e9lk\u00fcl.\n\nTekintsd meg a projektet a GitHubon: https://github.com/Futsch1/medTimer\n\nA grafik\u00e1kat a https://hotpot.ai seg\u00edts\u00e9g\u00e9vel k\u00e9sz\u00edtett\u00fck.\n",
+      "it-IT": "Promemoria e cronologia dei farmaci con privacy offline completa\n\nTieni sotto controllo i farmaci con MedTimer\n\nMedTimer \u00e8 un'app open-source di promemoria per farmaci, progettata per aiutare a gestire i farmaci e le terapie in modo efficace e con il pieno controllo dei dati sensibili.\n\nPromemoria flessibili e personalizzati:\n\n- Gestisci farmaci illimitati con promemoria personalizzabili per ciascun farmaco (incluse impostazioni predefinite semplici per assunzioni quotidiane).\n- Crea promemoria flessibili con pause e giorni specifici (ad es. per le pillole anticoncezionali).\n- Imposta la modalit\u00e0 fine-settimana: ritarda i promemoria ad un orario prefissato in giorni selezionati.\n- Metti in pausa (snooze) le notifiche per promemoria posticipati o generati ripetutamente.\n- Posticipo basato sulla posizione: ricevi nuovamente la notifica quando arrivi a casa.\n- Aggiungi dosi extra al volo.\n- Crea promemoria basati su intervalli, promemoria che si ripetono ad intervalli o promemoria ad intervalli con un orario di inizio e di fine giornaliero.\n- Attiva promemoria con allarme per garantire la ricezione delle notifiche anche quando il dispositivo \u00e8 in modalit\u00e0 silenziosa.\n\nGestione dei dati semplice e sicura:\n\n- Conferma o ignora i promemoria per tracciare accuratamente l'andamento della terapia farmacologica.\n- Visualizza la panoramica delle dosi assunte con un grafico e una vista tabellare.\n- Esporta la cronologia dei farmaci in formato CSV per una facile archiviazione dei dati o per la condivisione con sanitari professionisti.\n- Effettua il backup e il ripristino della lista dei farmaci in formato JSON.\n- Monitora le scorte dei farmaci e imposta dei promemoria per l'esaurimento delle scorte.\n- Assegna etichette e filtra i farmaci.\n\nPrivacy e accessibilit\u00e0 offline:\n\n- Tutti i dati sono archiviati in modo sicuro sul dispositivo, garantendo una privacy completa e l'accessibilit\u00e0 offline.\n- Nessuna connessione Internet \u00e8 richiesta: i promemoria dei farmaci sono sempre disponibili.\n\nMedTimer \u00e8 un'app gratuita senza annunci pubblicitari.\n\nVisita la pagina del progetto su GitHub: https://github.com/Futsch1/medTimer\n\nLa grafica di presentazione \u00e8 stata realizzata con https://hotpot.ai\n",
+      "iw-IL": "\u05ea\u05d6\u05db\u05d5\u05e8\u05d5\u05ea \u05ea\u05e8\u05d5\u05e4\u05d5\u05ea \u05d5\u05d4\u05d9\u05e1\u05d8\u05d5\u05e8\u05d9\u05d4 \u05e2\u05dd \u05e4\u05e8\u05d8\u05d9\u05d5\u05ea \u05de\u05dc\u05d0\u05d4 \u05dc\u05dc\u05d0 \u05d7\u05d9\u05d1\u05d5\u05e8 \u05dc\u05d0\u05d9\u05e0\u05d8\u05e8\u05e0\u05d8\n\n\u05e9\u05dc\u05d5\u05d8 \u05e2\u05dc \u05d4\u05ea\u05e8\u05d5\u05e4\u05d5\u05ea \u05e9\u05dc\u05da \u05e2\u05dd MedTimer\n\nMedTimer \u05d4\u05d9\u05d0 \u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d9\u05ea \u05ea\u05d6\u05db\u05d5\u05e8\u05ea \u05dc\u05e0\u05d8\u05d9\u05dc\u05ea \u05ea\u05e8\u05d5\u05e4\u05d5\u05ea \u05d1\u05e7\u05d5\u05d3 \u05e4\u05ea\u05d5\u05d7, \u05e9\u05e0\u05d5\u05e2\u05d3\u05d4 \u05dc\u05e2\u05d6\u05d5\u05e8 \u05dc\u05db\u05dd \u05dc\u05e0\u05d4\u05dc \u05d0\u05ea \u05d4\u05ea\u05e8\u05d5\u05e4\u05d5\u05ea \u05d5\u05d4\u05d2\u05dc\u05d5\u05dc\u05d5\u05ea \u05e9\u05dc\u05db\u05dd \u05d1\u05e6\u05d5\u05e8\u05d4 \u05d9\u05e2\u05d9\u05dc\u05d4, \u05ea\u05d5\u05da \u05e9\u05dc\u05d9\u05d8\u05d4 \u05de\u05dc\u05d0\u05d4 \u05e2\u05dc \u05d4\u05e0\u05ea\u05d5\u05e0\u05d9\u05dd \u05d4\u05e8\u05d2\u05d9\u05e9\u05d9\u05dd \u05e9\u05dc\u05db\u05dd.\n\n\u05ea\u05d6\u05db\u05d5\u05e8\u05d5\u05ea \u05d2\u05de\u05d9\u05e9\u05d5\u05ea \u05d5\u05de\u05d5\u05ea\u05d0\u05de\u05d5\u05ea \u05d0\u05d9\u05e9\u05d9\u05ea:\n\n* \u05e0\u05d9\u05d4\u05d5\u05dc \u05ea\u05e8\u05d5\u05e4\u05d5\u05ea \u05d1\u05dc\u05ea\u05d9 \u05de\u05d5\u05d2\u05d1\u05dc \u05e2\u05dd \u05ea\u05d6\u05db\u05d5\u05e8\u05d5\u05ea \u05de\u05d5\u05ea\u05d0\u05de\u05d5\u05ea \u05dc\u05db\u05dc \u05ea\u05e8\u05d5\u05e4\u05d4 (\u05db\u05d5\u05dc\u05dc \u05ea\u05d6\u05db\u05d5\u05e8\u05d5\u05ea \u05d9\u05d5\u05de\u05d9\u05d5\u05ea \u05e4\u05e9\u05d5\u05d8\u05d5\u05ea \u05db\u05d1\u05e8\u05d9\u05e8\u05ea \u05de\u05d7\u05d3\u05dc).\n* \u05d9\u05e6\u05d9\u05e8\u05ea \u05ea\u05d6\u05db\u05d5\u05e8\u05d5\u05ea \u05d2\u05de\u05d9\u05e9\u05d5\u05ea \u05e2\u05dd \u05d4\u05e4\u05e1\u05e7\u05d5\u05ea \u05d5\u05d9\u05de\u05d9\u05dd \u05e1\u05e4\u05e6\u05d9\u05e4\u05d9\u05d9\u05dd (\u05dc\u05de\u05e9\u05dc, \u05dc\u05d2\u05dc\u05d5\u05dc\u05d5\u05ea \u05dc\u05de\u05e0\u05d9\u05e2\u05ea \u05d4\u05e8\u05d9\u05d5\u05df).\n* \u05de\u05e6\u05d1 \u05e1\u05d5\u05e3 \u05e9\u05d1\u05d5\u05e2: \u05d3\u05d7\u05d9\u05d9\u05ea \u05ea\u05d6\u05db\u05d5\u05e8\u05d5\u05ea \u05dc\u05e9\u05e2\u05d4 \u05de\u05d5\u05d2\u05d3\u05e8\u05ea \u05d1\u05d9\u05de\u05d9\u05dd \u05e9\u05e0\u05d1\u05d7\u05e8\u05d5.\n* \u05e0\u05d5\u05d3\u05e0\u05d9\u05e7 \u05de\u05d1\u05d5\u05e1\u05e1 \u05de\u05d9\u05e7\u05d5\u05dd: \u05e7\u05d1\u05dc \u05d4\u05ea\u05e8\u05d0\u05d4 \u05d7\u05d5\u05d6\u05e8\u05ea \u05e2\u05dd \u05d4\u05d2\u05e2\u05d4 \u05d4\u05d1\u05d9\u05ea\u05d4.\n* \u05d3\u05d7\u05d9\u05d9\u05ea \u05d4\u05ea\u05e8\u05d0\u05d5\u05ea \u05dc\u05d6\u05de\u05df \u05de\u05d0\u05d5\u05d7\u05e8 \u05d9\u05d5\u05ea\u05e8 \u05d0\u05d5 \u05e7\u05d1\u05dc\u05ea \u05ea\u05d6\u05db\u05d5\u05e8\u05ea \u05d7\u05d5\u05d6\u05e8\u05ea.\n* \u05d4\u05d5\u05e1\u05e4\u05ea \u05de\u05e0\u05d5\u05ea \u05e0\u05d5\u05e1\u05e4\u05d5\u05ea \u05d1\u05e7\u05dc\u05d5\u05ea.\n* \u05d9\u05e6\u05d9\u05e8\u05ea \u05ea\u05d6\u05db\u05d5\u05e8\u05d5\u05ea \u05de\u05d1\u05d5\u05e1\u05e1\u05d5\u05ea \u05de\u05e8\u05d5\u05d5\u05d7 \u05d6\u05de\u05df, \u05ea\u05d6\u05db\u05d5\u05e8\u05d5\u05ea \u05d6\u05d5 \u05d0\u05d7\u05e8\u05d9 \u05d6\u05d5 \u05d1\u05de\u05e8\u05d5\u05d5\u05d7\u05d9\u05dd \u05d0\u05d5 \u05ea\u05d6\u05db\u05d5\u05e8\u05d5\u05ea \u05de\u05d7\u05d6\u05d5\u05e8\u05d9\u05d5\u05ea \u05e2\u05dd \u05e9\u05e2\u05d5\u05ea \u05d4\u05ea\u05d7\u05dc\u05d4 \u05d5\u05e1\u05d9\u05d5\u05dd \u05de\u05d5\u05d2\u05d3\u05e8\u05d5\u05ea \u05dc\u05d9\u05d5\u05dd.\n* \u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05ea\u05d6\u05db\u05d5\u05e8\u05d5\u05ea \u05de\u05e1\u05d5\u05d2 \u05e9\u05e2\u05d5\u05df \u05de\u05e2\u05d5\u05e8\u05e8 \u05db\u05d3\u05d9 \u05dc\u05d4\u05d1\u05d8\u05d9\u05d7 \u05d4\u05ea\u05e8\u05d0\u05d4 \u05d2\u05dd \u05db\u05d0\u05e9\u05e8 \u05d4\u05de\u05db\u05e9\u05d9\u05e8 \u05d1\u05de\u05e6\u05d1 \u05e9\u05e7\u05d8.\n\n\u05e0\u05d9\u05d4\u05d5\u05dc \u05de\u05d9\u05d3\u05e2 \u05e4\u05e9\u05d5\u05d8 \u05d5\u05d1\u05d8\u05d5\u05d7:\n\n* \u05d0\u05d9\u05e9\u05d5\u05e8 \u05d0\u05d5 \u05e1\u05d2\u05d9\u05e8\u05ea \u05ea\u05d6\u05db\u05d5\u05e8\u05d5\u05ea \u05dc\u05e8\u05d9\u05e9\u05d5\u05dd \u05de\u05d3\u05d5\u05d9\u05e7 \u05e9\u05dc \u05e0\u05d8\u05d9\u05dc\u05ea \u05ea\u05e8\u05d5\u05e4\u05d5\u05ea.\n* \u05e7\u05d1\u05dc\u05ea \u05e1\u05e7\u05d9\u05e8\u05d4 \u05e9\u05dc \u05de\u05e0\u05d5\u05ea \u05e7\u05d5\u05d3\u05de\u05d5\u05ea \u05d1\u05ea\u05e8\u05e9\u05d9\u05dd \u05d5\u05d1\u05ea\u05e6\u05d5\u05d2\u05d4 \u05d8\u05d1\u05dc\u05d0\u05d9\u05ea.\n* \u05d9\u05d9\u05e6\u05d5\u05d0 \u05d4\u05d9\u05e1\u05d8\u05d5\u05e8\u05d9\u05d9\u05ea \u05d4\u05ea\u05e8\u05d5\u05e4\u05d5\u05ea \u05db\u05e7\u05d5\u05d1\u05e5 CSV \u05dc\u05e0\u05d9\u05d4\u05d5\u05dc \u05e7\u05dc \u05d0\u05d5 \u05dc\u05e9\u05d9\u05ea\u05d5\u05e3 \u05e2\u05dd \u05d0\u05e0\u05e9\u05d9 \u05de\u05e7\u05e6\u05d5\u05e2 \u05e8\u05e4\u05d5\u05d0\u05d9\u05d9\u05dd.\n* \u05d2\u05d9\u05d1\u05d5\u05d9 \u05d5\u05e9\u05d7\u05d6\u05d5\u05e8 \u05e8\u05e9\u05d9\u05de\u05ea \u05d4\u05ea\u05e8\u05d5\u05e4\u05d5\u05ea \u05db\u05e7\u05d5\u05d1\u05e5 JSON.\n* \u05de\u05e2\u05e7\u05d1 \u05d0\u05d7\u05e8 \u05de\u05dc\u05d0\u05d9 \u05d4\u05ea\u05e8\u05d5\u05e4\u05d5\u05ea \u05d5\u05ea\u05d6\u05db\u05d5\u05e8\u05d5\u05ea \u05dc\u05d7\u05d5\u05e1\u05e8 \u05d1\u05de\u05dc\u05d0\u05d9.\n* \u05ea\u05d9\u05d5\u05d2 \u05d5\u05e1\u05d9\u05e0\u05d5\u05df \u05d4\u05ea\u05e8\u05d5\u05e4\u05d5\u05ea \u05e9\u05dc\u05db\u05dd.\n\n\u05e4\u05e8\u05d8\u05d9\u05d5\u05ea \u05d5\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05dc\u05dc\u05d0 \u05d7\u05d9\u05d1\u05d5\u05e8 \u05dc\u05d0\u05d9\u05e0\u05d8\u05e8\u05e0\u05d8:\n\n* \u05db\u05dc \u05d4\u05e0\u05ea\u05d5\u05e0\u05d9\u05dd \u05e0\u05e9\u05de\u05e8\u05d9\u05dd \u05d1\u05e6\u05d5\u05e8\u05d4 \u05de\u05d0\u05d5\u05d1\u05d8\u05d7\u05ea \u05e2\u05dc \u05d4\u05de\u05db\u05e9\u05d9\u05e8, \u05e2\u05dd \u05e4\u05e8\u05d8\u05d9\u05d5\u05ea \u05de\u05dc\u05d0\u05d4 \u05d5\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea \u05d2\u05dd \u05dc\u05dc\u05d0 \u05d7\u05d9\u05d1\u05d5\u05e8 \u05dc\u05d0\u05d9\u05e0\u05d8\u05e8\u05e0\u05d8.\n* \u05d0\u05d9\u05df \u05e6\u05d5\u05e8\u05da \u05d1\u05d7\u05d9\u05d1\u05d5\u05e8 \u05dc\u05e8\u05e9\u05ea \u2013 \u05ea\u05d6\u05db\u05d5\u05e8\u05d5\u05ea \u05d4\u05ea\u05e8\u05d5\u05e4\u05d5\u05ea \u05ea\u05de\u05d9\u05d3 \u05d6\u05de\u05d9\u05e0\u05d5\u05ea.\n\nMedTimer \u05d4\u05d9\u05d0 \u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d4 \u05d7\u05d9\u05e0\u05de\u05d9\u05ea \u05d5\u05dc\u05dc\u05d0 \u05e4\u05e8\u05e1\u05d5\u05de\u05d5\u05ea.\n\n\u05e6\u05e4\u05d5 \u05d1\u05d3\u05e3 \u05d4\u05e4\u05e8\u05d5\u05d9\u05e7\u05d8 \u05d1\u2011GitHub: https://github.com/Futsch1/medTimer\n\n\u05d2\u05e8\u05e4\u05d9\u05e7\u05ea \u05d4\u05ea\u05db\u05d5\u05e0\u05d4 \u05e0\u05d5\u05e6\u05e8\u05d4 \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea [https://hotpot.ai](https://hotpot.ai)\n",
+      "nl-NL": "Medicijnherinneringen en -geschiedenis met volledige offline privacy\n\nHoud de controle over uw medicijnen met MedTimer\n\nMedTimer is een open-source medicijnherinneringsapp die is ontworpen om u te helpen uw medicijnen en pillen effectief te beheren en volledige controle te houden over uw gevoelige gegevens.\n\nFlexibele en gepersonaliseerde herinneringen:\n\n- Beheer een onbeperkt aantal medicijnen met aanpasbare herinneringen per medicijn (inclusief eenvoudige standaardinstellingen voor dagelijkse herinneringen).\n- Maak flexibele herinneringen met pauzes en specifieke dagen (bijv. voor anticonceptiepillen).\n- Weekendmodus: Stel herinneringen uit naar een bepaald tijdstip op gekozen dagen.\n- Snooze meldingen voor latere herinneringen of word herhaaldelijk herinnerd.\n- Locatiegebaseerd sluimeren: ontvang een herinnering wanneer je thuiskomt.\n- Voeg extra doses toe wanneer u dat wilt.\n- Maak intervalherinneringen, herinneringen die elkaar in intervallen opvolgen of intervalherinneringen met een begin- en eindtijd per dag.\n- Gebruik alarmherinneringen om meldingen te garanderen, zelfs wanneer het apparaat in de stille modus staat.\n\nEenvoudig en veilig gegevensbeheer:\n\n- Bevestig of verwijder herinneringen om medicatietrouw nauwkeurig vast te leggen.\n- Krijg een overzicht van eerdere doses in een grafiek en een tabelweergave.\n- Exporteer uw medicatiegeschiedenis als een CSV-bestand voor eenvoudige registratie of om te delen met zorgprofessionals.\n- Maak een back-up van uw medicatielijst en herstel deze als JSON-bestand.\n- Houd uw medicijnvoorraad bij en herinner uzelf eraan dat uw medicatie niet op voorraad is.\n- Tag en filter uw medicatie.\n\nPrivacy en offline toegankelijkheid:\n\n- Alle gegevens worden veilig opgeslagen op uw apparaat, waardoor volledige privacy en offline toegankelijkheid worden gegarandeerd.\n- Geen internetverbinding nodig \u2013 uw medicatieherinneringen zijn altijd beschikbaar.\n\nMedTimer is een gratis app zonder advertenties.\n\nBekijk de projectpagina op GitHub: https://github.com/Futsch1/medTimer\n\nDe functieafbeelding is gemaakt met https://hotpot.ai\n",
+      "pl-PL": "Kontroluj swoje leki z MedTimer w pe\u0142ni offline\n\nMedTimer to aplikacja open-source do przypominania o lekach, zaprojektowana tak, aby pomaga\u0107 w skutecznym zarz\u0105dzaniu lekami i tabletkami, zapewniaj\u0105c pe\u0142n\u0105 kontrol\u0119 nad Twoimi danymi osobistymi.\n\nElastyczne i spersonalizowane przypomnienia:\n\n- Zarz\u0105dzaj nieograniczon\u0105 liczb\u0105 lek\u00f3w z konfigurowalnymi przypomnieniami dla ka\u017cdego z nich (w tym prostymi domy\u015blnymi ustawieniami dla codziennych przypomnie\u0144).\n- Tw\u00f3rz elastyczne przypomnienia z przerwami i okre\u015blonymi dniami (np. dla tabletek antykoncepcyjnych).\n- Tryb weekendowy: op\u00f3\u017aniaj przypomnienia do okre\u015blonej godziny w wybrane dni.\n- Drzemka powiadomie\u0144 \u2013 od\u0142\u00f3\u017c przypomnienie na p\u00f3\u017aniej lub ustaw powtarzaj\u0105ce si\u0119 alerty.\n- Drzemka oparta na lokalizacji: otrzymaj ponowne powiadomienie po powrocie do domu.\n- Dodawaj dodatkowe dawki w dowolnym momencie.\n- Tw\u00f3rz przypomnienia oparte na odst\u0119pach czasowych, przypomnienia nast\u0119puj\u0105ce po sobie w okre\u015blonych interwa\u0142ach lub przypomnienia z przedzia\u0142em czasowym ograniczonym godzin\u0105 rozpocz\u0119cia i zako\u0144czenia w ci\u0105gu dnia.\n- U\u017cywaj przypomnie\u0144 typu alarm, aby mie\u0107 pewno\u015b\u0107, \u017ce powiadomienie pojawi si\u0119 nawet wtedy, gdy urz\u0105dzenie jest ustawione w trybie cichym.\n\nProste i bezpieczne zarz\u0105dzanie danymi:\n\n- Potwierdzaj lub odrzucaj przypomnienia, aby dok\u0142adnie rejestrowa\u0107 przestrzeganie dawkowania.\n- Przegl\u0105daj histori\u0119 za\u017cywania lek\u00f3w w formie wykresu i tabeli.\n- Eksportuj histori\u0119 lek\u00f3w do pliku CSV, aby \u0142atwo przechowywa\u0107 dane lub udost\u0119pnia\u0107 je lekarzowi.\n- Tw\u00f3rz kopie zapasowe i przywracaj list\u0119 lek\u00f3w w formacie JSON.\n- \u015aled\u017a stan zapas\u00f3w lek\u00f3w i otrzymuj powiadomienia o ich wyczerpywaniu.\n- Oznaczaj i filtruj swoje leki.\n\nPrywatno\u015b\u0107 i dost\u0119pno\u015b\u0107 offline:\n\n- Wszystkie dane s\u0105 przechowywane bezpiecznie na Twoim urz\u0105dzeniu, gwarantuj\u0105c pe\u0142n\u0105 prywatno\u015b\u0107 i dost\u0119pno\u015b\u0107 offline.\n- Nie wymaga po\u0142\u0105czenia z internetem \u2013 Twoje przypomnienia zawsze b\u0119d\u0105 dost\u0119pne.\n\nMedTimer to darmowa aplikacja bez reklam.\n\nZobacz stron\u0119 projektu na GitHubie: https://github.com/Futsch1/medTimer\n\nGrafika promocyjna zosta\u0142a stworzona za pomoc\u0105: https://hotpot.ai\n",
+      "pt-BR": "Lembretes e hist\u00f3rico de medicamentos com total privacidade offline\n\nMantenha o controle de seus medicamentos com o MedTimer\n\nO MedTimer \u00e9 um aplicativo de lembrete de medicamentos de c\u00f3digo aberto desenvolvido para ajudar voc\u00ea a gerenciar seus medicamentos e p\u00edlulas de forma eficaz e com total controle de seus dados confidenciais.\n\nLembretes Flex\u00edveis e Personalizados:\n\n- Gerencie medicamentos ilimitados com lembretes personaliz\u00e1veis por medicamento (incluindo padr\u00f5es simples para lembretes di\u00e1rios).\n- Crie lembretes flex\u00edveis com intervalos e dias espec\u00edficos (por exemplo, para p\u00edlulas anticoncepcionais).\n- Modo Fim de Semana: Adie os lembretes para um hor\u00e1rio definido em dias selecionados.\n- Adie as notifica\u00e7\u00f5es para lembretes posteriores ou seja lembrado repetidamente.\n- Soneca baseada em localiza\u00e7\u00e3o: receba uma nova notifica\u00e7\u00e3o ao chegar em casa.\n- Adicione doses extras rapidamente.\n- Crie lembretes baseados em intervalos, lembretes que se sucedem em intervalos ou lembretes com intervalos dentro de um hor\u00e1rio di\u00e1rio com in\u00edcio e fim.\n- Use lembretes do tipo alarme que garantem a notifica\u00e7\u00e3o mesmo quando o dispositivo est\u00e1 no modo silencioso.\n\nGerenciamento de Dados Simples e Seguro:\n\n- Confirme ou descarte lembretes para registrar o uso da medica\u00e7\u00e3o com precis\u00e3o.\n- Obtenha uma vis\u00e3o geral das doses anteriores em um gr\u00e1fico e em uma visualiza\u00e7\u00e3o tabular.\n- Exporte seu hist\u00f3rico de medicamentos como um arquivo CSV para facilitar o registro ou o compartilhamento com profissionais de sa\u00fade.\n- Fa\u00e7a backup e restaure sua lista de medicamentos como um arquivo JSON.\n- Acompanhamento do estoque de medicamentos e avisos de baixas no estoque.\n- Categorize e filtre seus medicamentos.\n\nPrivacidade e Acesso Offline:\n\n- Todos os dados s\u00e3o armazenados com seguran\u00e7a em seu dispositivo, garantindo total privacidade e acesso mesmo sem conex\u00e3o \u00e0 rede.\n- N\u00e3o requer conex\u00e3o com a internet \u2013 seus lembretes de medicamentos est\u00e3o sempre dispon\u00edveis.\n\nO MedTimer \u00e9 um aplicativo gratuito sem an\u00fancios.\n\nVeja a p\u00e1gina do projeto no GitHub: https://github.com/Futsch1/medTimer\n\nO gr\u00e1fico em destaque foi criado com https://hotpot.ai\n",
+      "ru-RU": "\u041d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u044f \u0438 \u0438\u0441\u0442\u043e\u0440\u0438\u044f \u043f\u0440\u0438\u0451\u043c\u0430 \u043b\u0435\u043a\u0430\u0440\u0441\u0442\u0432 \u0441 \u043f\u043e\u043b\u043d\u043e\u0439 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u044c\u044e \u0432 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u043e\u043c \u0440\u0435\u0436\u0438\u043c\u0435\n\n\u041a\u043e\u043d\u0442\u0440\u043e\u043b\u0438\u0440\u0443\u0439\u0442\u0435 \u0441\u0432\u043e\u0438 \u043b\u0435\u043a\u0430\u0440\u0441\u0442\u0432\u0430 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e MedTimer\n\nMedTimer - \u044d\u0442\u043e \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0441 \u043e\u0442\u043a\u0440\u044b\u0442\u044b\u043c \u0438\u0441\u0445\u043e\u0434\u043d\u044b\u043c \u043a\u043e\u0434\u043e\u043c \u0434\u043b\u044f \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u0439 \u043e \u043b\u0435\u043a\u0430\u0440\u0441\u0442\u0432\u0430\u0445, \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0430\u043d\u043d\u043e\u0435 \u0434\u043b\u044f \u0442\u043e\u0433\u043e, \u0447\u0442\u043e\u0431\u044b \u043f\u043e\u043c\u043e\u0447\u044c \u0432\u0430\u043c \u044d\u0444\u0444\u0435\u043a\u0442\u0438\u0432\u043d\u043e \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0442\u044c \u0441\u0432\u043e\u0438\u043c\u0438 \u043b\u0435\u043a\u0430\u0440\u0441\u0442\u0432\u0430\u043c\u0438 \u0438 \u0442\u0430\u0431\u043b\u0435\u0442\u043a\u0430\u043c\u0438, \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u0438\u0440\u0443\u044f \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0435 \u0434\u0430\u043d\u043d\u044b\u0435.\n\n\u0413\u0438\u0431\u043a\u0438\u0435 \u0438 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u044f:\n\n- \u0423\u043f\u0440\u0430\u0432\u043b\u044f\u0439\u0442\u0435 \u043d\u0435\u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u043d\u044b\u043c \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e\u043c \u043b\u0435\u043a\u0430\u0440\u0441\u0442\u0432 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u043d\u0430\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0435\u043c\u044b\u0445 \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u0439 \u0434\u043b\u044f \u043a\u0430\u0436\u0434\u043e\u0433\u043e \u043b\u0435\u043a\u0430\u0440\u0441\u0442\u0432\u0430 (\u0432\u043a\u043b\u044e\u0447\u0430\u044f \u043f\u0440\u043e\u0441\u0442\u044b\u0435 \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u044f \u043f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e \u0434\u043b\u044f \u0435\u0436\u0435\u0434\u043d\u0435\u0432\u043d\u044b\u0445 \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u0439).\n- \u0421\u043e\u0437\u0434\u0430\u0432\u0430\u0439\u0442\u0435 \u0433\u0438\u0431\u043a\u0438\u0435 \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u044f \u0441 \u043f\u0435\u0440\u0435\u0440\u044b\u0432\u0430\u043c\u0438 \u0438 \u0432 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u043d\u044b\u0435 \u0434\u043d\u0438 (\u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \u0434\u043b\u044f \u043f\u0440\u043e\u0442\u0438\u0432\u043e\u0437\u0430\u0447\u0430\u0442\u043e\u0447\u043d\u044b\u0445 \u0442\u0430\u0431\u043b\u0435\u0442\u043e\u043a).\n- \u0420\u0435\u0436\u0438\u043c \u0432\u044b\u0445\u043e\u0434\u043d\u043e\u0433\u043e \u0434\u043d\u044f: \u041e\u0442\u043a\u043b\u0430\u0434\u044b\u0432\u0430\u0439\u0442\u0435 \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u044f \u043d\u0430 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u043d\u043e\u0435 \u0432\u0440\u0435\u043c\u044f \u0432 \u0432\u044b\u0431\u0440\u0430\u043d\u043d\u044b\u0435 \u0434\u043d\u0438.\n- \u041e\u0442\u043a\u043b\u0430\u0434\u044b\u0432\u0430\u043d\u0438\u0435 \u043f\u043e \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044e: \u043f\u043e\u043b\u0443\u0447\u0430\u0439\u0442\u0435 \u043f\u043e\u0432\u0442\u043e\u0440\u043d\u043e\u0435 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u0435 \u043f\u0440\u0438 \u0432\u043e\u0437\u0432\u0440\u0430\u0449\u0435\u043d\u0438\u0438 \u0434\u043e\u043c\u043e\u0439.\n- \u041e\u0442\u043a\u043b\u0430\u0434\u044b\u0432\u0430\u0439\u0442\u0435 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f \u043d\u0430 \u0431\u043e\u043b\u0435\u0435 \u043f\u043e\u0437\u0434\u043d\u0438\u0435 \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u044f \u0438\u043b\u0438 \u043f\u043e\u043b\u0443\u0447\u0430\u0439\u0442\u0435 \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u044f \u043f\u043e\u0432\u0442\u043e\u0440\u043d\u043e.\n- \u0414\u043e\u0431\u0430\u0432\u043b\u044f\u0439\u0442\u0435 \u0434\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u043e\u0437\u044b \u043d\u0430 \u043b\u0435\u0442\u0443.\n- \u0421\u043e\u0437\u0434\u0430\u0432\u0430\u0439\u0442\u0435 \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u044f \u043e \u043f\u0440\u0438\u0435\u043c\u0435 \u0434\u043e\u0437, \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u0445 \u0434\u0440\u0443\u0433 \u0437\u0430 \u0434\u0440\u0443\u0433\u043e\u043c \u0441 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u043d\u044b\u043c\u0438 \u0438\u043d\u0442\u0435\u0440\u0432\u0430\u043b\u0430\u043c\u0438.\n\n\u041f\u0440\u043e\u0441\u0442\u043e\u0435 \u0438 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0434\u0430\u043d\u043d\u044b\u043c\u0438:\n\n- \u041f\u043e\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0430\u0439\u0442\u0435 \u0438\u043b\u0438 \u043e\u0442\u043a\u043b\u043e\u043d\u044f\u0439\u0442\u0435 \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u044f \u0434\u043b\u044f \u0442\u043e\u0447\u043d\u043e\u0433\u043e \u0443\u0447\u0435\u0442\u0430 \u043f\u0440\u0438\u0435\u043c\u0430 \u043b\u0435\u043a\u0430\u0440\u0441\u0442\u0432.\n- \u041f\u043e\u043b\u0443\u0447\u0438\u0442\u0435 \u043e\u0431\u0437\u043e\u0440 \u043f\u0440\u043e\u0448\u043b\u044b\u0445 \u0434\u043e\u0437 \u0432 \u0432\u0438\u0434\u0435 \u0433\u0440\u0430\u0444\u0438\u043a\u0430 \u0438 \u0442\u0430\u0431\u043b\u0438\u0446\u044b.\n- \u042d\u043a\u0441\u043f\u043e\u0440\u0442\u0438\u0440\u0443\u0439\u0442\u0435 \u0438\u0441\u0442\u043e\u0440\u0438\u044e \u043f\u0440\u0438\u0435\u043c\u0430 \u043b\u0435\u043a\u0430\u0440\u0441\u0442\u0432 \u0432 \u0444\u0430\u0439\u043b CSV \u0434\u043b\u044f \u0443\u0434\u043e\u0431\u0441\u0442\u0432\u0430 \u0432\u0435\u0434\u0435\u043d\u0438\u044f \u0443\u0447\u0435\u0442\u0430 \u0438\u043b\u0438 \u043e\u0431\u043c\u0435\u043d\u0430 \u0441 \u043c\u0435\u0434\u0438\u0446\u0438\u043d\u0441\u043a\u0438\u043c\u0438 \u0440\u0430\u0431\u043e\u0442\u043d\u0438\u043a\u0430\u043c\u0438.\n- \u0420\u0435\u0437\u0435\u0440\u0432\u043d\u043e\u0435 \u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0438 \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \u0441\u043f\u0438\u0441\u043a\u0430 \u043b\u0435\u043a\u0430\u0440\u0441\u0442\u0432 \u0432 \u0432\u0438\u0434\u0435 \u0444\u0430\u0439\u043b\u0430 JSON.\n- \u041e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u043d\u0438\u0435 \u0437\u0430\u043f\u0430\u0441\u043e\u0432 \u043b\u0435\u043a\u0430\u0440\u0441\u0442\u0432 \u0438 \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u044f \u043e\u0431 \u0438\u0445 \u043d\u0435\u0445\u0432\u0430\u0442\u043a\u0435.\n- \u041e\u0442\u043c\u0435\u0447\u0430\u0439\u0442\u0435 \u0438 \u0444\u0438\u043b\u044c\u0442\u0440\u0443\u0439\u0442\u0435 \u0441\u0432\u043e\u0438 \u043b\u0435\u043a\u0430\u0440\u0441\u0442\u0432\u0430.\n\n\u041a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u044c \u0438 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u044b\u0439 \u0434\u043e\u0441\u0442\u0443\u043f:\n\n- \u0412\u0441\u0435 \u0434\u0430\u043d\u043d\u044b\u0435 \u043d\u0430\u0434\u0435\u0436\u043d\u043e \u0445\u0440\u0430\u043d\u044f\u0442\u0441\u044f \u043d\u0430 \u0432\u0430\u0448\u0435\u043c \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0435, \u043e\u0431\u0435\u0441\u043f\u0435\u0447\u0438\u0432\u0430\u044f \u043f\u043e\u043b\u043d\u0443\u044e \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u044c \u0438 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u043e\u0441\u0442\u044c \u0432 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u043e\u043c \u0440\u0435\u0436\u0438\u043c\u0435.\n- \u041d\u0435 \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u043a \u0418\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0443 - \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u044f \u043e \u043f\u0440\u0438\u0435\u043c\u0435 \u043b\u0435\u043a\u0430\u0440\u0441\u0442\u0432 \u0432\u0441\u0435\u0433\u0434\u0430 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u044b.\n\nMedTimer - \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0431\u0435\u0437 \u0440\u0435\u043a\u043b\u0430\u043c\u044b.\n\n\u0421\u043c\u043e\u0442\u0440\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443 \u043f\u0440\u043e\u0435\u043a\u0442\u0430 \u043d\u0430 GitHub: https://github.com/Futsch1/medTimer.\n\n\n\u0413\u0440\u0430\u0444\u0438\u043a\u0430 \u0441\u043e\u0437\u0434\u0430\u043d\u0430 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e https://hotpot.ai\n",
+      "sv-SE": "Med reminders and history with full offline privacy\n\nStay In Control of Your Medications with MedTimer\n\nMedTimer is an open-source medication reminder app designed to help you manage your medications and pills effectively and with full control of your sensitive data.\n\nFlexible & Personalized Reminders:\n\n- Manage unlimited medications with customizable reminders per medication (including simple defaults\n  for daily reminders).\n- Create flexible reminders with breaks and specific days (e.g. for birth control pills).\n- Weekend mode: Delay reminders to a defined time on chosen days.\n- Snooze notifications for later reminders or be reminded repeatedly.\n- Location-based snooze: be re-notified when arriving home after snoozing.\n- Add extra doses on the fly.\n- Create interval based reminders or reminders following each other in intervals.\n\nSimple & Secure Data Management:\n\n- Confirm or dismiss reminders to record medication adherence accurately.\n- Get an overview of past doses in a chart and a tabular view.\n- Export your medication history as a CSV file for easy record-keeping or sharing with healthcare professionals.\n- Backup and restore your medication list as JSON file.\n- Medication stock tracking and out of stock reminders.\n- Tag and filter your medication.\n\nPrivacy & Offline Accessibility:\n\n- All data is stored securely on your device, ensuring complete privacy and offline accessibility.\n- No internet connection required \u2013 your medication reminders are always available.\n\nMedTimer is a free app without adds.\n\nSee the project page on GitHub: https://github.com/Futsch1/medTimer\n\nFeature graphic was created with https://hotpot.ai\n",
+      "ta-IN": "\u0bae\u0bc1\u0bb4\u0bc1 \u0b87\u0ba3\u0bc8\u0baa\u0bcd\u0baa\u0bbf\u0bb2\u0bcd\u0bb2\u0bbe\u0ba4 \u0ba4\u0ba9\u0bbf\u0baf\u0bc1\u0bb0\u0bbf\u0bae\u0bc8\u0baf\u0bc1\u0b9f\u0ba9\u0bcd \u0bae\u0bc6\u0b9f\u0bcd \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bc2\u0b9f\u0bcd\u0b9f\u0bb2\u0bcd\u0b95\u0bb3\u0bcd \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0bb5\u0bb0\u0bb2\u0bbe\u0bb1\u0bc1\n\n \u0bae\u0bc6\u0b9f\u0bcd\u0b9f\u0bbf\u0bae\u0bb0\u0bc1\u0b9f\u0ba9\u0bcd \u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1\u0b95\u0bb3\u0bbf\u0ba9\u0bcd \u0b95\u0b9f\u0bcd\u0b9f\u0bc1\u0baa\u0bcd\u0baa\u0bbe\u0b9f\u0bcd\u0b9f\u0bbf\u0bb2\u0bcd \u0b87\u0bb0\u0bc1\u0b99\u0bcd\u0b95\u0bb3\u0bcd\n\n \u0bae\u0bc6\u0b9f\u0bcd\u0b9f\u0bc8\u0bae\u0bb0\u0bcd \u0b8e\u0ba9\u0bcd\u0baa\u0ba4\u0bc1 \u0b92\u0bb0\u0bc1 \u0ba4\u0bbf\u0bb1\u0ba8\u0bcd\u0ba4 \u0bae\u0bc2\u0bb2 \u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bc2\u0b9f\u0bcd\u0b9f\u0bb2\u0bcd \u0baa\u0baf\u0ba9\u0bcd\u0baa\u0bbe\u0b9f\u0bbe\u0b95\u0bc1\u0bae\u0bcd, \u0b87\u0ba4\u0bc1 \u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1\u0b95\u0bb3\u0bcd \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0bae\u0bbe\u0ba4\u0bcd\u0ba4\u0bbf\u0bb0\u0bc8\u0b95\u0bb3\u0bc8 \u0ba4\u0bbf\u0bb1\u0bae\u0bcd\u0baa\u0b9f \u0ba8\u0bbf\u0bb0\u0bcd\u0bb5\u0b95\u0bbf\u0b95\u0bcd\u0b95 \u0b89\u0ba4\u0bb5\u0bc1\u0bae\u0bcd \u0bb5\u0b95\u0bc8\u0baf\u0bbf\u0bb2\u0bcd \u0bb5\u0b9f\u0bbf\u0bb5\u0bae\u0bc8\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0bc1\u0bb3\u0bcd\u0bb3\u0ba4\u0bc1 \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0bae\u0bc1\u0b95\u0bcd\u0b95\u0bbf\u0baf\u0bae\u0bbe\u0ba9 \u0ba4\u0bb0\u0bb5\u0bbf\u0ba9\u0bcd \u0bae\u0bc1\u0bb4\u0bc1 \u0b95\u0b9f\u0bcd\u0b9f\u0bc1\u0baa\u0bcd\u0baa\u0bbe\u0b9f\u0bcd\u0b9f\u0bc8\u0baf\u0bc1\u0bae\u0bcd \u0b95\u0bca\u0ba3\u0bcd\u0b9f\u0bc1\u0bb3\u0bcd\u0bb3\u0ba4\u0bc1.\n\n \u0ba8\u0bc6\u0b95\u0bbf\u0bb4\u0bcd\u0bb5\u0bbe\u0ba9 \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0ba4\u0ba9\u0bbf\u0baa\u0bcd\u0baa\u0baf\u0ba9\u0bbe\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bc2\u0b9f\u0bcd\u0b9f\u0bb2\u0bcd\u0b95\u0bb3\u0bcd:\n\n - \u0b92\u0bb0\u0bc1 \u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0bc1 \u0ba4\u0ba9\u0bbf\u0baa\u0bcd\u0baa\u0baf\u0ba9\u0bbe\u0b95\u0bcd\u0b95\u0b95\u0bcd\u0b95\u0bc2\u0b9f\u0bbf\u0baf \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bc2\u0b9f\u0bcd\u0b9f\u0bb2\u0bcd\u0b95\u0bb3\u0bc1\u0b9f\u0ba9\u0bcd \u0bb5\u0bb0\u0bae\u0bcd\u0baa\u0bb1\u0bcd\u0bb1 \u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1\u0b95\u0bb3\u0bc8 \u0ba8\u0bbf\u0bb0\u0bcd\u0bb5\u0b95\u0bbf\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd (\u0b8e\u0bb3\u0bbf\u0baf \u0b87\u0baf\u0bb2\u0bcd\u0baa\u0bc1\u0ba8\u0bbf\u0bb2\u0bc8 \u0b89\u0b9f\u0bcd\u0baa\u0b9f\n \u0ba8\u0bbe\u0bb3\u0bcd\u0ba4\u0bcb\u0bb1\u0bc1\u0bae\u0bcd \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bc2\u0b9f\u0bcd\u0b9f\u0bb2\u0bcd\u0b95\u0bb3\u0bc1\u0b95\u0bcd\u0b95\u0bc1).\n - \u0b87\u0b9f\u0bc8\u0bb5\u0bc6\u0bb3\u0bbf\u0b95\u0bb3\u0bcd \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0b95\u0bc1\u0bb1\u0bbf\u0baa\u0bcd\u0baa\u0bbf\u0b9f\u0bcd\u0b9f \u0ba8\u0bbe\u0b9f\u0bcd\u0b95\u0bb3\u0bc1\u0b9f\u0ba9\u0bcd \u0ba8\u0bc6\u0b95\u0bbf\u0bb4\u0bcd\u0bb5\u0bbe\u0ba9 \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bc2\u0b9f\u0bcd\u0b9f\u0bb2\u0bcd\u0b95\u0bb3\u0bc8 \u0b89\u0bb0\u0bc1\u0bb5\u0bbe\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd (\u0b8e.\u0b95\u0bbe. \u0baa\u0bbf\u0bb1\u0baa\u0bcd\u0baa\u0bc1 \u0b95\u0b9f\u0bcd\u0b9f\u0bc1\u0baa\u0bcd\u0baa\u0bbe\u0b9f\u0bcd\u0b9f\u0bc1 \u0bae\u0bbe\u0ba4\u0bcd\u0ba4\u0bbf\u0bb0\u0bc8\u0b95\u0bb3\u0bc1\u0b95\u0bcd\u0b95\u0bc1).\n - \u0bb5\u0bbe\u0bb0 \u0b87\u0bb1\u0bc1\u0ba4\u0bbf \u0bae\u0bc1\u0bb1\u0bc8: \u0ba4\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0bc6\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f \u0ba8\u0bbe\u0b9f\u0bcd\u0b95\u0bb3\u0bbf\u0bb2\u0bcd \u0bb5\u0bb0\u0bc8\u0baf\u0bb1\u0bc1\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f \u0ba8\u0bc7\u0bb0\u0ba4\u0bcd\u0ba4\u0bbf\u0bb1\u0bcd\u0b95\u0bc1 \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bc2\u0b9f\u0bcd\u0b9f\u0bb2\u0bcd\u0b95\u0bb3\u0bc8 \u0ba4\u0bbe\u0bae\u0ba4\u0baa\u0bcd\u0baa\u0b9f\u0bc1\u0ba4\u0bcd\u0ba4\u0bc1\u0b99\u0bcd\u0b95\u0bb3\u0bcd.\n - \u0baa\u0bbf\u0bb1\u0bcd\u0b95\u0bbe\u0bb2 \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bc2\u0b9f\u0bcd\u0b9f\u0bb2\u0bcd\u0b95\u0bb3\u0bc1\u0b95\u0bcd\u0b95\u0bbe\u0ba9 \u0b85\u0bb1\u0bbf\u0bb5\u0bbf\u0baa\u0bcd\u0baa\u0bc1\u0b95\u0bb3\u0bcd \u0b89\u0bb1\u0b95\u0bcd\u0b95\u0ba8\u0bbf\u0bb2\u0bc8 \u0b85\u0bb2\u0bcd\u0bb2\u0ba4\u0bc1 \u0bae\u0bc0\u0ba3\u0bcd\u0b9f\u0bc1\u0bae\u0bcd \u0bae\u0bc0\u0ba3\u0bcd\u0b9f\u0bc1\u0bae\u0bcd \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bc2\u0b9f\u0bcd\u0b9f\u0baa\u0bcd\u0baa\u0b9f\u0bc1\u0b95\u0bbf\u0ba9\u0bcd\u0bb1\u0ba9.\n - \u0b87\u0b9f\u0bae\u0bcd \u0b9a\u0bbe\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4 \u0b9a\u0bc1\u0ba3\u0b95\u0bcd\u0b95\u0bae\u0bcd: \u0bb5\u0bc0\u0b9f\u0bc1 \u0ba4\u0bbf\u0bb0\u0bc1\u0bae\u0bcd\u0baa\u0bbf\u0baf\u0ba4\u0bc1\u0bae\u0bcd \u0bae\u0bc0\u0ba3\u0bcd\u0b9f\u0bc1\u0bae\u0bcd \u0b85\u0bb1\u0bbf\u0bb5\u0bbf\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd.\n - \u0baa\u0bb1\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd\u0baa\u0bcb\u0ba4\u0bc1 \u0b95\u0bc2\u0b9f\u0bc1\u0ba4\u0bb2\u0bcd \u0b85\u0bb3\u0bb5\u0bc1\u0b95\u0bb3\u0bc8\u0b9a\u0bcd \u0b9a\u0bc7\u0bb0\u0bcd\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd.\n - \u0b87\u0b9f\u0bc8\u0bb5\u0bc6\u0bb3\u0bbf \u0b85\u0b9f\u0bbf\u0baa\u0bcd\u0baa\u0b9f\u0bc8\u0baf\u0bbf\u0bb2\u0bbe\u0ba9 \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bc2\u0b9f\u0bcd\u0b9f\u0bb2\u0bcd\u0b95\u0bb3\u0bcd \u0b85\u0bb2\u0bcd\u0bb2\u0ba4\u0bc1 \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bc2\u0b9f\u0bcd\u0b9f\u0bb2\u0bcd\u0b95\u0bb3\u0bc8 \u0b87\u0b9f\u0bc8\u0bb5\u0bc6\u0bb3\u0bbf\u0baf\u0bbf\u0bb2\u0bcd \u0baa\u0bbf\u0ba9\u0bcd\u0baa\u0bb1\u0bcd\u0bb1\u0bb5\u0bc1\u0bae\u0bcd.\n\n \u0b8e\u0bb3\u0bbf\u0baf \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0baa\u0bbe\u0ba4\u0bc1\u0b95\u0bbe\u0baa\u0bcd\u0baa\u0bbe\u0ba9 \u0ba4\u0bb0\u0bb5\u0bc1 \u0bae\u0bc7\u0bb2\u0bbe\u0ba3\u0bcd\u0bae\u0bc8:\n\n - \u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1\u0b95\u0bb3\u0bc8 \u0baa\u0bbf\u0ba9\u0bcd\u0baa\u0bb1\u0bcd\u0bb1\u0bc1\u0bb5\u0ba4\u0bc8 \u0ba4\u0bc1\u0bb2\u0bcd\u0bb2\u0bbf\u0baf\u0bae\u0bbe\u0b95 \u0baa\u0ba4\u0bbf\u0bb5\u0bc1 \u0b9a\u0bc6\u0baf\u0bcd\u0bb5\u0ba4\u0bb1\u0bcd\u0b95\u0bbe\u0ba9 \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bc2\u0b9f\u0bcd\u0b9f\u0bb2\u0bcd\u0b95\u0bb3\u0bc8 \u0b89\u0bb1\u0bc1\u0ba4\u0bbf\u0baa\u0bcd\u0baa\u0b9f\u0bc1\u0ba4\u0bcd\u0ba4\u0bb5\u0bc1\u0bae\u0bcd \u0b85\u0bb2\u0bcd\u0bb2\u0ba4\u0bc1 \u0ba8\u0bbf\u0bb0\u0bbe\u0b95\u0bb0\u0bbf\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd.\n - \u0b92\u0bb0\u0bc1 \u0bb5\u0bbf\u0bb3\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0ba4\u0bcd\u0ba4\u0bbf\u0bb2\u0bcd \u0b95\u0b9f\u0ba8\u0bcd\u0ba4 \u0b85\u0bb3\u0bb5\u0bc1\u0b95\u0bb3\u0bbf\u0ba9\u0bcd \u0b95\u0ba3\u0bcd\u0ba3\u0bcb\u0b9f\u0bcd\u0b9f\u0ba4\u0bcd\u0ba4\u0bc8\u0baf\u0bc1\u0bae\u0bcd \u0b92\u0bb0\u0bc1 \u0b85\u0b9f\u0bcd\u0b9f\u0bb5\u0ba3\u0bc8 \u0baa\u0bbe\u0bb0\u0bcd\u0bb5\u0bc8\u0baf\u0bc8\u0baf\u0bc1\u0bae\u0bcd \u0baa\u0bc6\u0bb1\u0bc1\u0b99\u0bcd\u0b95\u0bb3\u0bcd.\n - \u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 \u0bb5\u0bb0\u0bb2\u0bbe\u0bb1\u0bcd\u0bb1\u0bc8 \u0b9a\u0bbf.\u0b8e\u0b9a\u0bcd.\u0bb5\u0bbf \u0b95\u0bcb\u0baa\u0bcd\u0baa\u0bbe\u0b95 \u0b8e\u0bb3\u0bbf\u0ba4\u0bbe\u0b95 \u0baa\u0ba4\u0bbf\u0bb5\u0bc1 \u0b9a\u0bc6\u0baf\u0bcd\u0baf \u0b85\u0bb2\u0bcd\u0bb2\u0ba4\u0bc1 \u0b9a\u0bc1\u0b95\u0bbe\u0ba4\u0bbe\u0bb0 \u0ba8\u0bbf\u0baa\u0bc1\u0ba3\u0bb0\u0bcd\u0b95\u0bb3\u0bc1\u0b9f\u0ba9\u0bcd \u0baa\u0b95\u0bbf\u0bb0\u0bcd\u0bb5\u0ba4\u0bb1\u0bcd\u0b95\u0bc1 \u0b8f\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0ba4\u0bbf \u0b9a\u0bc6\u0baf\u0bcd\u0baf\u0bc1\u0b99\u0bcd\u0b95\u0bb3\u0bcd.\n - \u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 \u0baa\u0b9f\u0bcd\u0b9f\u0bbf\u0baf\u0bb2\u0bc8 \u0b9a\u0bbe\u0ba4\u0bca\u0baa\u0bca\u0b95\u0bc1 \u0b95\u0bcb\u0baa\u0bcd\u0baa\u0bbe\u0b95 \u0b95\u0bbe\u0baa\u0bcd\u0baa\u0bc1\u0baa\u0bcd\u0baa\u0bbf\u0bb0\u0ba4\u0bbf \u0b9a\u0bc6\u0baf\u0bcd\u0ba4\u0bc1 \u0bae\u0bc0\u0b9f\u0bcd\u0b9f\u0bae\u0bc8\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd.\n - \u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 \u0baa\u0b99\u0bcd\u0b95\u0bc1 \u0b95\u0ba3\u0bcd\u0b95\u0bbe\u0ba3\u0bbf\u0baa\u0bcd\u0baa\u0bc1 \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0baa\u0b99\u0bcd\u0b95\u0bc1 \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bc2\u0b9f\u0bcd\u0b9f\u0bb2\u0bcd\u0b95\u0bb3\u0bcd.\n - \u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1\u0b95\u0bb3\u0bc8\u0b95\u0bcd \u0b95\u0bc1\u0bb1\u0bbf\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0bb5\u0b9f\u0bbf\u0b95\u0b9f\u0bcd\u0b9f\u0bb5\u0bc1\u0bae\u0bcd.\n\n \u0ba4\u0ba9\u0bbf\u0baf\u0bc1\u0bb0\u0bbf\u0bae\u0bc8 \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0b87\u0ba3\u0bc8\u0baa\u0bcd\u0baa\u0bbf\u0bb2\u0bcd\u0bb2\u0bbe\u0ba4 \u0b85\u0ba3\u0bc1\u0b95\u0bb2\u0bcd:\n\n - \u0b8e\u0bb2\u0bcd\u0bb2\u0bbe \u0ba4\u0bb0\u0bb5\u0bc1\u0b95\u0bb3\u0bc1\u0bae\u0bcd \u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0b9a\u0bbe\u0ba4\u0ba9\u0ba4\u0bcd\u0ba4\u0bbf\u0bb2\u0bcd \u0baa\u0bbe\u0ba4\u0bc1\u0b95\u0bbe\u0baa\u0bcd\u0baa\u0bbe\u0b95 \u0b9a\u0bc7\u0bae\u0bbf\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bc1\u0b95\u0bbf\u0ba9\u0bcd\u0bb1\u0ba9, \u0b87\u0ba4\u0bc1 \u0bae\u0bc1\u0bb4\u0bc1\u0bae\u0bc8\u0baf\u0bbe\u0ba9 \u0ba4\u0ba9\u0bbf\u0baf\u0bc1\u0bb0\u0bbf\u0bae\u0bc8 \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0b87\u0ba3\u0bc8\u0baa\u0bcd\u0baa\u0bbf\u0bb2\u0bcd\u0bb2\u0bbe\u0ba4 \u0b85\u0ba3\u0bc1\u0b95\u0bb2\u0bc8 \u0b89\u0bb1\u0bc1\u0ba4\u0bbf \u0b9a\u0bc6\u0baf\u0bcd\u0b95\u0bbf\u0bb1\u0ba4\u0bc1.\n - \u0b87\u0ba3\u0bc8\u0baf \u0b87\u0ba3\u0bc8\u0baa\u0bcd\u0baa\u0bc1 \u0ba4\u0bc7\u0bb5\u0bc8\u0baf\u0bbf\u0bb2\u0bcd\u0bb2\u0bc8 - \u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bc2\u0b9f\u0bcd\u0b9f\u0bb2\u0bcd\u0b95\u0bb3\u0bcd \u0b8e\u0baa\u0bcd\u0baa\u0bcb\u0ba4\u0bc1\u0bae\u0bcd \u0b95\u0bbf\u0b9f\u0bc8\u0b95\u0bcd\u0b95\u0bbf\u0ba9\u0bcd\u0bb1\u0ba9.\n\n \u0bae\u0bc6\u0b9f\u0bcd\u0b9f\u0bbf\u0bae\u0bb0\u0bcd \u0b8e\u0ba9\u0bcd\u0baa\u0ba4\u0bc1 \u0b9a\u0bc7\u0bb0\u0bcd\u0b95\u0bcd\u0b95\u0bbe\u0bae\u0bb2\u0bcd \u0b92\u0bb0\u0bc1 \u0b87\u0bb2\u0bb5\u0b9a \u0baa\u0baf\u0ba9\u0bcd\u0baa\u0bbe\u0b9f\u0bbe\u0b95\u0bc1\u0bae\u0bcd.\n\n \u0b95\u0bbf\u0ba4\u0bc2\u0baa\u0bcd\u0baa\u0bbf\u0bb2\u0bcd \u0ba4\u0bbf\u0b9f\u0bcd\u0b9f\u0baa\u0bcd \u0baa\u0b95\u0bcd\u0b95\u0ba4\u0bcd\u0ba4\u0bc8\u0baa\u0bcd \u0baa\u0bbe\u0bb0\u0bcd\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd: https://github.com/futsch1/medtimer\n\n \u0b85\u0bae\u0bcd\u0b9a \u0b95\u0bbf\u0bb0\u0bbe\u0b83\u0baa\u0bbf\u0b95\u0bcd https://hotpot.ai \u0b89\u0b9f\u0ba9\u0bcd \u0b89\u0bb0\u0bc1\u0bb5\u0bbe\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0ba4\u0bc1\n",
+      "tr-TR": "Tam \u00e7evrimd\u0131\u015f\u0131 gizlilik ile ila\u00e7 hat\u0131rlat\u0131c\u0131lar\u0131 ve ge\u00e7mi\u015fi\n\nMedTimer ile \u0130la\u00e7lar\u0131n\u0131z\u0131 Kontrol Alt\u0131nda Tutun\n\nMedTimer, ila\u00e7lar\u0131n\u0131z\u0131 ve haplar\u0131n\u0131z\u0131 etkili bir \u015fekilde ve hassas verilerinizin tam kontrol\u00fc ile y\u00f6netmenize yard\u0131mc\u0131 olmak i\u00e7in tasarlanm\u0131\u015f a\u00e7\u0131k kaynakl\u0131 bir ila\u00e7 hat\u0131rlatma uygulamas\u0131d\u0131r.\n\nEsnek ve Ki\u015fiselle\u015ftirilmi\u015f Hat\u0131rlat\u0131c\u0131lar:\n\n- \u0130la\u00e7 ba\u015f\u0131na \u00f6zelle\u015ftirilebilir hat\u0131rlat\u0131c\u0131larla s\u0131n\u0131rs\u0131z say\u0131da ilac\u0131 y\u00f6netin (g\u00fcnl\u00fck hat\u0131rlat\u0131c\u0131lar i\u00e7in basit varsay\u0131lanlar dahil).\n- Molalar ve belirli g\u00fcnler i\u00e7in esnek hat\u0131rlat\u0131c\u0131lar olu\u015fturun (\u00f6rn. do\u011fum kontrol haplar\u0131 i\u00e7in).\n- Hafta sonu modu: Hat\u0131rlat\u0131c\u0131lar\u0131 se\u00e7ilen g\u00fcnlerde tan\u0131mlanm\u0131\u015f bir zamana erteleyin.\n- Daha sonraki hat\u0131rlatmalar i\u00e7in bildirimleri erteleyin veya tekrar tekrar hat\u0131rlat\u0131n.\n- Konuma dayal\u0131 erteleme: eve gelince yeniden bildirim al.\n- An\u0131nda ekstra dozlar ekleyin.\n- Aral\u0131klarla birbirini takip eden dozlar\u0131 almak i\u00e7in hat\u0131rlat\u0131c\u0131lar olu\u015fturun.\n\nBasit ve G\u00fcvenli Veri Y\u00f6netimi:\n\n- \u0130la\u00e7lara uyumu do\u011fru bir \u015fekilde kaydetmek i\u00e7in hat\u0131rlat\u0131c\u0131lar\u0131 onaylay\u0131n veya reddedin.\n- Ge\u00e7mi\u015f dozlara bir grafik ve tablo g\u00f6r\u00fcn\u00fcm\u00fcnde genel bir bak\u0131\u015f elde edin.\n- Kolay kay\u0131t tutmak veya sa\u011fl\u0131k uzmanlar\u0131yla payla\u015fmak i\u00e7in ila\u00e7 ge\u00e7mi\u015finizi CSV dosyas\u0131 olarak d\u0131\u015fa aktar\u0131n.\n- \u0130la\u00e7 listenizi JSON dosyas\u0131 olarak yedekleyin ve geri y\u00fckleyin.\n- \u0130la\u00e7 stok takibi ve stok t\u00fckenme hat\u0131rlatmalar\u0131.\n- \u0130la\u00e7lar\u0131n\u0131z\u0131 etiketleyin ve filtreleyin.\n\nGizlilik ve \u00c7evrimd\u0131\u015f\u0131 Eri\u015filebilirlik:\n\n- T\u00fcm veriler cihaz\u0131n\u0131zda g\u00fcvenli bir \u015fekilde saklanarak tam gizlilik ve \u00e7evrimd\u0131\u015f\u0131 eri\u015filebilirlik sa\u011flan\u0131r.\n- \u0130nternet ba\u011flant\u0131s\u0131 gerekmez - ila\u00e7 hat\u0131rlatmalar\u0131n\u0131z her zaman kullan\u0131labilir.\n\nMedTimer eklentisiz \u00fccretsiz bir uygulamad\u0131r.\n\nGitHub'daki proje sayfas\u0131na bak\u0131n: https://github.com/Futsch1/medTimer\n\n\u00d6zellik grafi\u011fi https://hotpot.ai ile olu\u015fturulmu\u015ftur.\n",
+      "uk": "\u041d\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043d\u043d\u044f \u043f\u0440\u043e \u043b\u0456\u043a\u0438 \u0442\u0430 \u0456\u0441\u0442\u043e\u0440\u0456\u044f \u0437 \u043f\u043e\u0432\u043d\u043e\u044e \u043e\u0444\u043b\u0430\u0439\u043d-\u043f\u0440\u0438\u0432\u0430\u0442\u043d\u0456\u0441\u0442\u044e\n\n\u041a\u0435\u0440\u0443\u0439\u0442\u0435 \u0441\u0432\u043e\u0457\u043c\u0438 \u043b\u0456\u043a\u0430\u043c\u0438 \u0440\u0430\u0437\u043e\u043c \u0456\u0437 MedTimer\n\nMedTimer \u2014 \u0446\u0435 \u0437\u0430\u0441\u0442\u043e\u0441\u0443\u043d\u043e\u043a \u0437 \u0432\u0456\u0434\u043a\u0440\u0438\u0442\u0438\u043c \u043a\u043e\u0434\u043e\u043c \u0434\u043b\u044f \u043d\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043d\u043d\u044f \u043f\u0440\u043e \u043f\u0440\u0438\u0439\u043e\u043c \u043b\u0456\u043a\u0456\u0432, \u0441\u0442\u0432\u043e\u0440\u0435\u043d\u0438\u0439, \u0449\u043e\u0431 \u0434\u043e\u043f\u043e\u043c\u043e\u0433\u0442\u0438 \u0432\u0430\u043c \u0435\u0444\u0435\u043a\u0442\u0438\u0432\u043d\u043e \u043a\u0435\u0440\u0443\u0432\u0430\u0442\u0438 \u0441\u0432\u043e\u0457\u043c\u0438 \u043f\u0440\u0435\u043f\u0430\u0440\u0430\u0442\u0430\u043c\u0438 \u0442\u0430 \u043f\u0456\u0433\u0443\u043b\u043a\u0430\u043c\u0438, \u0437 \u043f\u043e\u0432\u043d\u0438\u043c \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u0435\u043c \u043d\u0430\u0434 \u0432\u0430\u0448\u0438\u043c\u0438 \u0447\u0443\u0442\u043b\u0438\u0432\u0438\u043c\u0438 \u0434\u0430\u043d\u0438\u043c\u0438.\n\n\u0413\u043d\u0443\u0447\u043a\u0456 \u0442\u0430 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u0456\u0437\u043e\u0432\u0430\u043d\u0456 \u043d\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043d\u043d\u044f\n\n- \u041a\u0435\u0440\u0443\u0439\u0442\u0435 \u043d\u0435\u043e\u0431\u043c\u0435\u0436\u0435\u043d\u043e\u044e \u043a\u0456\u043b\u044c\u043a\u0456\u0441\u0442\u044e \u043b\u0456\u043a\u0456\u0432 \u0437 \u0456\u043d\u0434\u0438\u0432\u0456\u0434\u0443\u0430\u043b\u044c\u043d\u0438\u043c\u0438 \u043d\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043d\u043d\u044f\u043c\u0438 \u0434\u043b\u044f \u043a\u043e\u0436\u043d\u043e\u0433\u043e (\u0443 \u0442\u043e\u043c\u0443 \u0447\u0438\u0441\u043b\u0456 \u0437 \u043f\u0440\u043e\u0441\u0442\u0438\u043c\u0438 \u0449\u043e\u0434\u0435\u043d\u043d\u0438\u043c\u0438 \u0448\u0430\u0431\u043b\u043e\u043d\u0430\u043c\u0438).\n- \u0421\u0442\u0432\u043e\u0440\u044e\u0439\u0442\u0435 \u0433\u043d\u0443\u0447\u043a\u0456 \u043d\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043d\u043d\u044f \u0437 \u043f\u0435\u0440\u0435\u0440\u0432\u0430\u043c\u0438 \u0442\u0430 \u0434\u043b\u044f \u043e\u043a\u0440\u0435\u043c\u0438\u0445 \u0434\u043d\u0456\u0432 (\u043d\u0430\u043f\u0440\u0438\u043a\u043b\u0430\u0434, \u0434\u043b\u044f \u043f\u0440\u043e\u0442\u0438\u0437\u0430\u043f\u043b\u0456\u0434\u043d\u0438\u0445 \u0442\u0430\u0431\u043b\u0435\u0442\u043e\u043a).\n- \u0420\u0435\u0436\u0438\u043c \u0432\u0438\u0445\u0456\u0434\u043d\u0438\u0445: \u0432\u0456\u0434\u043a\u043b\u0430\u0434\u0430\u0439\u0442\u0435 \u043d\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043d\u043d\u044f \u043d\u0430 \u0432\u0438\u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0439 \u0447\u0430\u0441 \u0443 \u0432\u0438\u0431\u0440\u0430\u043d\u0456 \u0434\u043d\u0456.\n- \u0412\u0456\u0434\u043a\u043b\u0430\u0434\u0435\u043d\u043d\u044f \u0437\u0430 \u043c\u0456\u0441\u0446\u0435\u0437\u043d\u0430\u0445\u043e\u0434\u0436\u0435\u043d\u043d\u044f\u043c: \u043f\u043e\u0432\u0442\u043e\u0440\u043d\u0435 \u043f\u043e\u0432\u0456\u0434\u043e\u043c\u043b\u0435\u043d\u043d\u044f \u043f\u0440\u0438 \u043f\u043e\u0432\u0435\u0440\u043d\u0435\u043d\u043d\u0456 \u0434\u043e\u0434\u043e\u043c\u0443.\n- \u0412\u0456\u0434\u043a\u043b\u0430\u0434\u0430\u0439\u0442\u0435 \u0441\u043f\u043e\u0432\u0456\u0449\u0435\u043d\u043d\u044f (snooze) \u0430\u0431\u043e \u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435 \u043f\u043e\u0432\u0442\u043e\u0440\u043d\u0456 \u043d\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043d\u043d\u044f.\n- \u0414\u043e\u0434\u0430\u0432\u0430\u0439\u0442\u0435 \u0434\u043e\u0434\u0430\u0442\u043a\u043e\u0432\u0456 \u0434\u043e\u0437\u0438 \u043d\u0430 \u0445\u043e\u0434\u0443.\n- \u0421\u0442\u0432\u043e\u0440\u044e\u0439\u0442\u0435 \u0456\u043d\u0442\u0435\u0440\u0432\u0430\u043b\u044c\u043d\u0456 \u043d\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043d\u043d\u044f, \u043b\u0430\u043d\u0446\u044e\u0436\u043a\u0438 \u043d\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043d\u044c \u0430\u0431\u043e \u0456\u043d\u0442\u0435\u0440\u0432\u0430\u043b\u044c\u043d\u0456 \u043d\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043d\u043d\u044f \u0437 \u043e\u0431\u043c\u0435\u0436\u0435\u043d\u043d\u044f\u043c \u0437\u0430 \u0447\u0430\u0441\u043e\u043c (\u043f\u043e\u0447\u0430\u0442\u043e\u043a \u0456 \u043a\u0456\u043d\u0435\u0446\u044c \u0434\u043d\u044f).\n- \u0412\u0438\u043a\u043e\u0440\u0438\u0441\u0442\u043e\u0432\u0443\u0439\u0442\u0435 \u043d\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043d\u043d\u044f \u0442\u0438\u043f\u0443 \u201c\u0431\u0443\u0434\u0438\u043b\u044c\u043d\u0438\u043a\u201d, \u0449\u043e\u0431 \u043e\u0442\u0440\u0438\u043c\u0443\u0432\u0430\u0442\u0438 \u0441\u043f\u043e\u0432\u0456\u0449\u0435\u043d\u043d\u044f \u043d\u0430\u0432\u0456\u0442\u044c \u0443 \u0431\u0435\u0437\u0437\u0432\u0443\u0447\u043d\u043e\u043c\u0443 \u0440\u0435\u0436\u0438\u043c\u0456.\n\n\u041f\u0440\u043e\u0441\u0442\u0435 \u0442\u0430 \u0431\u0435\u0437\u043f\u0435\u0447\u043d\u0435 \u043a\u0435\u0440\u0443\u0432\u0430\u043d\u043d\u044f \u0434\u0430\u043d\u0438\u043c\u0438\n\n- \u041f\u0456\u0434\u0442\u0432\u0435\u0440\u0434\u0436\u0443\u0439\u0442\u0435 \u0430\u0431\u043e \u0441\u043a\u0430\u0441\u043e\u0432\u0443\u0439\u0442\u0435 \u043d\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043d\u043d\u044f, \u0449\u043e\u0431 \u0442\u043e\u0447\u043d\u043e \u0444\u0456\u043a\u0441\u0443\u0432\u0430\u0442\u0438 \u043f\u0440\u0438\u0439\u043e\u043c \u043b\u0456\u043a\u0456\u0432.\n- \u041f\u0435\u0440\u0435\u0433\u043b\u044f\u0434\u0430\u0439\u0442\u0435 \u0456\u0441\u0442\u043e\u0440\u0456\u044e \u0434\u043e\u0437 \u0443 \u0432\u0438\u0433\u043b\u044f\u0434\u0456 \u0433\u0440\u0430\u0444\u0456\u043a\u0430 \u0442\u0430 \u0442\u0430\u0431\u043b\u0438\u0446\u0456.\n- \u0415\u043a\u0441\u043f\u043e\u0440\u0442\u0443\u0439\u0442\u0435 \u0456\u0441\u0442\u043e\u0440\u0456\u044e \u043f\u0440\u0438\u0439\u043e\u043c\u0443 \u0443 \u0444\u043e\u0440\u043c\u0430\u0442\u0456 CSV \u0434\u043b\u044f \u0437\u0431\u0435\u0440\u0456\u0433\u0430\u043d\u043d\u044f \u0430\u0431\u043e \u043f\u0435\u0440\u0435\u0434\u0430\u0447\u0456 \u043b\u0456\u043a\u0430\u0440\u044e.\n- \u0421\u0442\u0432\u043e\u0440\u044e\u0439\u0442\u0435 \u0440\u0435\u0437\u0435\u0440\u0432\u043d\u0456 \u043a\u043e\u043f\u0456\u0457 \u0442\u0430 \u0432\u0456\u0434\u043d\u043e\u0432\u043b\u044e\u0439\u0442\u0435 \u0441\u043f\u0438\u0441\u043e\u043a \u043b\u0456\u043a\u0456\u0432 \u0443 \u0444\u043e\u0440\u043c\u0430\u0442\u0456 JSON.\n- \u0412\u0456\u0434\u0441\u0442\u0435\u0436\u0443\u0439\u0442\u0435 \u0437\u0430\u043b\u0438\u0448\u043a\u0438 \u043b\u0456\u043a\u0456\u0432 \u0442\u0430 \u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435 \u043d\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043d\u043d\u044f \u043f\u0440\u043e \u0457\u0445 \u0437\u0430\u043a\u0456\u043d\u0447\u0435\u043d\u043d\u044f.\n- \u0414\u043e\u0434\u0430\u0432\u0430\u0439\u0442\u0435 \u0442\u0435\u0433\u0438 \u0439 \u0444\u0456\u043b\u044c\u0442\u0440\u0443\u0439\u0442\u0435 \u043b\u0456\u043a\u0438.\n\n\u041f\u0440\u0438\u0432\u0430\u0442\u043d\u0456\u0441\u0442\u044c \u0442\u0430 \u043e\u0444\u043b\u0430\u0439\u043d-\u0434\u043e\u0441\u0442\u0443\u043f\n\n- \u0423\u0441\u0456 \u0434\u0430\u043d\u0456 \u0437\u0431\u0435\u0440\u0456\u0433\u0430\u044e\u0442\u044c\u0441\u044f \u043b\u0438\u0448\u0435 \u043d\u0430 \u0432\u0430\u0448\u043e\u043c\u0443 \u043f\u0440\u0438\u0441\u0442\u0440\u043e\u0457, \u0449\u043e \u0433\u0430\u0440\u0430\u043d\u0442\u0443\u0454 \u043f\u043e\u0432\u043d\u0443 \u043a\u043e\u043d\u0444\u0456\u0434\u0435\u043d\u0446\u0456\u0439\u043d\u0456\u0441\u0442\u044c \u0442\u0430 \u0440\u043e\u0431\u043e\u0442\u0443 \u0431\u0435\u0437 \u0456\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0443.\n- \u041f\u0456\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u043d\u044f \u0434\u043e \u043c\u0435\u0440\u0435\u0436\u0456 \u043d\u0435 \u043f\u043e\u0442\u0440\u0456\u0431\u043d\u0435 \u2014 \u043d\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043d\u043d\u044f \u0437\u0430\u0432\u0436\u0434\u0438 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u0456.\n\nMedTimer \u2014 \u0431\u0435\u0437\u043a\u043e\u0448\u0442\u043e\u0432\u043d\u0438\u0439 \u0437\u0430\u0441\u0442\u043e\u0441\u0443\u043d\u043e\u043a \u0431\u0435\u0437 \u0440\u0435\u043a\u043b\u0430\u043c\u0438.\n\n\u0421\u0442\u043e\u0440\u0456\u043d\u043a\u0430 \u043f\u0440\u043e\u0454\u043a\u0442\u0443 \u043d\u0430 GitHub:\nhttps://github.com/Futsch1/medTimer\n\n\u0413\u0440\u0430\u0444\u0456\u0447\u043d\u0438\u0439 \u0431\u0430\u043d\u0435\u0440 \u0441\u0442\u0432\u043e\u0440\u0435\u043d\u043e \u0437\u0430 \u0434\u043e\u043f\u043e\u043c\u043e\u0433\u043e\u044e: https://hotpot.ai\n",
+      "zh-CN": "\u5177\u6709\u5b8c\u5168\u79bb\u7ebf\u9690\u79c1\u7684\u7528\u836f\u63d0\u9192\u548c\u5386\u53f2\u8bb0\u5f55\n\n\u4f7f\u7528 MedTimer \u63a7\u5236\u60a8\u7684\u836f\u7269\n\nMedTimer \u662f\u4e00\u6b3e\u5f00\u6e90\u7684\u836f\u7269\u63d0\u9192\u5e94\u7528\u7a0b\u5e8f\uff0c\u65e8\u5728\u5e2e\u52a9\u60a8\u6709\u6548\u7ba1\u7406\u836f\u7269\u548c\u836f\u4e38\uff0c\u5e76\u5b8c\u5168\u63a7\u5236\u60a8\u7684\u654f\u611f\u6570\u636e\u3002\n\n\u7075\u6d3b\u7684\u4e2a\u6027\u5316\u63d0\u9192\uff1a\n\n- \u7ba1\u7406\u65e0\u9650\u91cf\u7684\u836f\u7269\uff0c\u6bcf\u79cd\u836f\u7269\u90fd\u6709\u53ef\u5b9a\u5236\u7684\u63d0\u9192\uff08\u5305\u62ec\u6bcf\u65e5\u63d0\u9192\u7684\u7b80\u5355\u9ed8\u8ba4\u503c\uff09\u3002\n- \u521b\u5efa\u5177\u6709\u4f11\u606f\u65f6\u95f4\u548c\u7279\u5b9a\u65e5\u671f\uff08\u5982\u907f\u5b55\u836f\uff09\u7684\u7075\u6d3b\u63d0\u9192\u3002\n- \u5468\u672b\u6a21\u5f0f\uff1a \u5c06\u63d0\u9192\u5ef6\u8fdf\u5230\u9009\u5b9a\u65e5\u671f\u7684\u6307\u5b9a\u65f6\u95f4\u3002\n- \u4e3a\u7a0d\u540e\u7684\u63d0\u9192\u53d1\u51fa \u201c\u8d2a\u7761 \u201d\u901a\u77e5\uff0c\u6216\u91cd\u590d\u63d0\u9192\u3002\n- \u57fa\u4e8e\u4f4d\u7f6e\u7684\u5c0f\u7761\uff1a\u5230\u5bb6\u540e\u91cd\u65b0\u63d0\u9192\u3002\n- \u5373\u65f6\u6dfb\u52a0\u989d\u5916\u5242\u91cf\u3002\n- \u521b\u5efa\u670d\u836f\u95f4\u9694\u63d0\u9192\u3002\n\n\u7b80\u5355\u5b89\u5168\u7684\u6570\u636e\u7ba1\u7406\uff1a\n\n- \u786e\u8ba4\u6216\u53d6\u6d88\u63d0\u9192\uff0c\u51c6\u786e\u8bb0\u5f55\u670d\u836f\u60c5\u51b5\u3002\n- \u901a\u8fc7\u56fe\u8868\u548c\u8868\u683c\u6982\u89c8\u8fc7\u53bb\u7684\u670d\u836f\u60c5\u51b5\u3002\n- \u5c06\u7528\u836f\u8bb0\u5f55\u5bfc\u51fa\u4e3a CSV \u6587\u4ef6\uff0c\u4fbf\u4e8e\u4fdd\u5b58\u8bb0\u5f55\u6216\u4e0e\u533b\u62a4\u4eba\u5458\u5171\u4eab\u3002\n- \u4ee5 JSON \u6587\u4ef6\u5f62\u5f0f\u5907\u4efd\u548c\u6062\u590d\u7528\u836f\u6e05\u5355\u3002\n- \u836f\u54c1\u5e93\u5b58\u8ddf\u8e2a\u548c\u7f3a\u8d27\u63d0\u9192\n- \u6807\u8bb0\u5e76\u7b5b\u9009\u60a8\u7684\u836f\u7269\u3002\n\n\u9690\u79c1\u548c\u79bb\u7ebf\u8bbf\u95ee\uff1a\n\n- \u6240\u6709\u6570\u636e\u90fd\u5b89\u5168\u5730\u5b58\u50a8\u5728\u60a8\u7684\u8bbe\u5907\u4e0a\uff0c\u786e\u4fdd\u5b8c\u5168\u9690\u79c1\u548c\u79bb\u7ebf\u8bbf\u95ee\u3002\n- \u65e0\u9700\u8fde\u63a5\u4e92\u8054\u7f51--\u60a8\u7684\u7528\u836f\u63d0\u9192\u968f\u65f6\u53ef\u7528\u3002\n\nMedTimer \u662f\u4e00\u6b3e\u65e0\u9644\u52a0\u529f\u80fd\u7684\u514d\u8d39\u5e94\u7528\u7a0b\u5e8f\u3002\n\n\u8bf7\u53c2\u89c1 GitHub \u4e0a\u7684\u9879\u76ee\u9875\u9762\uff1ahttps://github.com/Futsch1/medTimer\n\n\u529f\u80fd\u56fe\u7247\u7531 https://hotpot.ai \u5236\u4f5c\n",
+      "zh-TW": "\u7528\u85e5\u63d0\u9192\u8207\u6b77\u53f2\u7d00\u9304\uff0c\u5b8c\u6574\u96e2\u7dda\u96b1\u79c1\u4fdd\u8b77\n\n\u4f7f\u7528 MedTimer \u638c\u63e1\u60a8\u7684\u7528\u85e5\u7ba1\u7406\n\nMedTimer \u662f\u4e00\u6b3e\u958b\u6e90\u7684\u7528\u85e5\u63d0\u9192\u61c9\u7528\u7a0b\u5f0f\uff0c\u5354\u52a9\u60a8\u6709\u6548\u7ba1\u7406\u85e5\u7269\u8207\u85e5\u4e38\uff0c\u540c\u6642\u5b8c\u5168\u638c\u63a7\u500b\u4eba\u654f\u611f\u8cc7\u6599\u3002\n\n\u9748\u6d3b\u4e14\u500b\u4eba\u5316\u7684\u63d0\u9192\u529f\u80fd\uff1a\n\n- \u7ba1\u7406\u4e0d\u9650\u6578\u91cf\u7684\u85e5\u7269\uff0c\u4e26\u53ef\u70ba\u6bcf\u7a2e\u85e5\u7269\u8a2d\u5b9a\u81ea\u8a02\u63d0\u9192\uff08\u4e5f\u53ef\u4f7f\u7528\u6bcf\u65e5\u63d0\u9192\u7684\u7c21\u6613\u9810\u8a2d\uff09\u3002\n- \u5efa\u7acb\u5177\u5f48\u6027\u7684\u63d0\u9192\uff0c\u53ef\u8a2d\u5b9a\u4f11\u606f\u671f\u9593\u8207\u7279\u5b9a\u670d\u85e5\u65e5\uff08\u5982\u907f\u5b55\u85e5\uff09\u3002\n- \u9031\u672b\u6a21\u5f0f\uff1a\u53ef\u5728\u9078\u5b9a\u7684\u65e5\u5b50\u5ef6\u5f8c\u63d0\u9192\u6642\u9593\u3002\n- \u57fa\u65bc\u4f4d\u7f6e\u7684\u5c0f\u7761\uff1a\u5230\u5bb6\u5f8c\u91cd\u65b0\u63d0\u9192\u3002\n- \u53ef\u5ef6\u5f8c\uff08Snooze\uff09\u901a\u77e5\u6216\u8a2d\u5b9a\u91cd\u8907\u63d0\u9192\u3002\n- \u5373\u6642\u65b0\u589e\u984d\u5916\u5291\u91cf\u3002\n- \u5efa\u7acb\u9593\u9694\u5f0f\u63d0\u9192\u6216\u4f9d\u5e8f\u9593\u9694\u7684\u9023\u7e8c\u63d0\u9192\u6216\u662f\u4ee5\u6bcf\u5929\u958b\u59cb\u8207\u7d50\u675f\u6642\u9593\u9650\u5236\u7684\u9593\u9694\u63d0\u9192\u6216\u662f\u4ee5\u6bcf\u5929\u958b\u59cb\u8207\u7d50\u675f\u6642\u9593\u9650\u5236\u7684\u9593\u9694\u63d0\u9192\u3002\n- \u4f7f\u7528\u9b27\u9418\u985e\u578b\u63d0\u9192\u78ba\u4fdd\u5373\u4f7f\u8a2d\u5099\u8a2d\u7f6e\u70ba\u975c\u97f3\u6a21\u5f0f\u6642\u4e5f\u80fd\u6536\u5230\u901a\u77e5\u3002\n\n\u7c21\u55ae\u53c8\u5b89\u5168\u7684\u8cc7\u6599\u7ba1\u7406\uff1a\n\n- \u53ef\u78ba\u8a8d\u6216\u5ffd\u7565\u63d0\u9192\uff0c\u4ee5\u6e96\u78ba\u8a18\u9304\u670d\u85e5\u72c0\u6cc1\u3002\n- \u63d0\u4f9b\u5716\u8868\u8207\u8868\u683c\u6aa2\u8996\u904e\u53bb\u7684\u670d\u85e5\u7d00\u9304\u3002\n- \u53ef\u5c07\u7528\u85e5\u6b77\u53f2\u532f\u51fa\u70ba CSV \u6a94\uff0c\u65b9\u4fbf\u4fdd\u5b58\u6216\u8207\u91ab\u7642\u5c08\u696d\u4eba\u54e1\u5206\u4eab\u3002\n- \u652f\u63f4\u4ee5 JSON \u6a94\u5099\u4efd\u8207\u9084\u539f\u7528\u85e5\u6e05\u55ae\u3002\n- \u63d0\u4f9b\u85e5\u54c1\u5eab\u5b58\u8ffd\u8e64\u8207\u5eab\u5b58\u4e0d\u8db3\u63d0\u9192\u3002\n- \u53ef\u70ba\u85e5\u54c1\u52a0\u4e0a\u6a19\u7c64\u4e26\u9032\u884c\u7be9\u9078\u3002\n\n\u96b1\u79c1\u8207\u96e2\u7dda\u5b58\u53d6\uff1a\n\n- \u6240\u6709\u8cc7\u6599\u7686\u5b89\u5168\u5132\u5b58\u5728\u60a8\u7684\u88dd\u7f6e\u4e2d\uff0c\u78ba\u4fdd\u5b8c\u5168\u7684\u96b1\u79c1\u8207\u96e2\u7dda\u53ef\u7528\u6027\u3002\n-  \u7121\u9700\u7db2\u8def\u9023\u7dda\uff0c\u60a8\u7684\u7528\u85e5\u63d0\u9192\u96a8\u6642\u53ef\u7528\u3002\n\nMedTimer \u70ba\u514d\u8cbb\u3001\u7121\u5ee3\u544a\u7684\u61c9\u7528\u7a0b\u5f0f\u3002\n\n\u5c08\u6848\u9801\u9762\uff08GitHub\uff09\uff1ahttps://github.com/Futsch1/medTimer\n\n\u529f\u80fd\u5716\u793a\u7531 https://hotpot.ai \u88fd\u4f5c\n"
+    },
+    "donate": [
+      "https://www.buymeacoffee.com/futsch1"
+    ],
+    "featureGraphic": {
+      "de-DE": {
+        "name": "/com.futsch1.medtimer/de-DE/featureGraphic_SZGdkYWzQS4hqK6Qkkp77wzyyZRguDRQI2N2ikI_KM4=.png",
+        "sha256": "49919d9185b3412e21a8ae90924a7bef0cf2c99460b834502363768a423f28ce",
+        "size": 108987
+      },
+      "en-US": {
+        "name": "/com.futsch1.medtimer/en-US/featureGraphic_1OmFBpWFAv-VtXMEwm1iLmoR_WZTympU9vcwiVPAsw0=.png",
+        "sha256": "d4e98506958502ff95b57304c26d622e6a11fd6653ca6a54f6f7308953c0b30d",
+        "size": 102223
+      },
+      "es-ES": {
+        "name": "/com.futsch1.medtimer/es-ES/featureGraphic_Z-LEFENq6OJfxKEcW_ygZJs_dtvJwMxYhiNmPGdBGE4=.png",
+        "sha256": "67e2c414436ae8e25fc4a11c5bfca0649b3f76dbc9c0cc588623663c6741184e",
+        "size": 59533
+      },
+      "fr-FR": {
+        "name": "/com.futsch1.medtimer/fr-FR/featureGraphic_Z-LEFENq6OJfxKEcW_ygZJs_dtvJwMxYhiNmPGdBGE4=.png",
+        "sha256": "67e2c414436ae8e25fc4a11c5bfca0649b3f76dbc9c0cc588623663c6741184e",
+        "size": 59533
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/com.futsch1.medtimer/en-US/icon_xLgkIq8ircRfYUyaODGW0Li4WgzWWPdrhrGaO9ZKVSU=.png",
+        "sha256": "c4b82422af22adc45f614c9a383196d0b8b85a0cd658f76b86b19a3bd64a5525",
+        "size": 36397
+      },
+      "es-ES": {
+        "name": "/com.futsch1.medtimer/es-ES/icon_xLgkIq8ircRfYUyaODGW0Li4WgzWWPdrhrGaO9ZKVSU=.png",
+        "sha256": "c4b82422af22adc45f614c9a383196d0b8b85a0cd658f76b86b19a3bd64a5525",
+        "size": 36397
+      },
+      "fr-FR": {
+        "name": "/com.futsch1.medtimer/fr-FR/icon_xLgkIq8ircRfYUyaODGW0Li4WgzWWPdrhrGaO9ZKVSU=.png",
+        "sha256": "c4b82422af22adc45f614c9a383196d0b8b85a0cd658f76b86b19a3bd64a5525",
+        "size": 36397
+      }
+    },
+    "issueTracker": "https://github.com/Futsch1/medTimer/issues",
+    "lastUpdated": 1779632797957,
+    "license": "MIT",
+    "name": {
+      "ar": "MedTimer: \u062a\u0630\u0643\u064a\u0631 \u0623\u062f\u0648\u064a\u0629 \u0648\u062d\u0628\u0648\u0628",
+      "bg": "MedTimer: \u041b\u0435\u043a\u0430\u0440\u0441\u0442\u0432\u0430 \u0438 \u0445\u0430\u043f\u0447\u0435\u0442\u0430",
+      "cs-CZ": "MedTimer: P\u0159ipomenut\u00ed l\u00e9k\u016f",
+      "da-DK": "MedTimer: Pille-p\u00e5mindelse",
+      "de-DE": "MedTimer: Pillen-Erinnerungen",
+      "el-GR": "MedTimer: \u03a5\u03c0\u03b5\u03bd\u03b8\u03cd\u03bc\u03b9\u03c3\u03b7 \u03c6\u03b1\u03c1\u03bc\u03b1\u03ba\u03b5\u03c5\u03c4\u03b9\u03ba\u03ce\u03bd \u03b1\u03b3\u03c9\u03b3\u03ce\u03bd",
+      "en-US": "MedTimer: Med & Pill Reminder",
+      "es-ES": "MedTimer: Recordatorio de Meds",
+      "fi-FI": "MedTimer: L\u00e4\u00e4kemuistutus",
+      "fr-FR": "MedTimer: Rappel de pilules",
+      "hu-HU": "MedTimer: Gy\u00f3gyszer & Pilla",
+      "it-IT": "MedTimer: Promemoria farmaci",
+      "iw-IL": "MedTimer: \u05ea\u05d6\u05db\u05d5\u05e8\u05ea \u05dc\u05ea\u05e8\u05d5\u05e4\u05d5\u05ea",
+      "nl-NL": "MedTimer: Medicijn Herinnering",
+      "pl-PL": "MedTimer: Leki i pigu\u0142ki",
+      "pt-BR": "MedTimer: Rem\u00e9dios e p\u00edlulas",
+      "ru-RU": "MedTimer: \u041b\u0435\u043a\u0430\u0440\u0441\u0442\u0432\u0430 \u0438 \u0442\u0430\u0431\u043b\u0435\u0442\u043a\u0438",
+      "sv-SE": "MedTimer: Medicinp\u00e5minnelse",
+      "ta-IN": "MedTimer: \u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 \u0bae\u0bbe\u0ba4\u0bcd\u0ba4\u0bbf\u0bb0\u0bc8",
+      "tr-TR": "MedTimer: \u0130la\u00e7 Hat\u0131rlat\u0131c\u0131",
+      "uk": "MedTimer: \u041d\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043d\u043d\u044f \u043f\u0440\u043e \u043b\u0456\u043a\u0438",
+      "zh-CN": "MedTimer: \u836f\u7269\u548c\u836f\u4e38\u63d0\u9192",
+      "zh-TW": "MedTimer: \u85e5\u7269\u548c\u85e5\u4e38\u63d0\u9192"
+    },
+    "preferredSigner": "69bc7c72e499045b44c87fc8463f599472deb408c48de38de8554ae7754b9d84",
+    "screenshots": {
+      "phone": {
+        "ar": [
+          {
+            "name": "/com.futsch1.medtimer/ar/phoneScreenshots/1.png",
+            "sha256": "e1899a40b395215f10fb5a977b68827109d20362270cd25505253fd5398ba531",
+            "size": 286822
+          },
+          {
+            "name": "/com.futsch1.medtimer/ar/phoneScreenshots/2.png",
+            "sha256": "ecb724cd0056065fc25de1d3fba6ffed8f701f5f14cace008f4e996c323d923f",
+            "size": 202523
+          },
+          {
+            "name": "/com.futsch1.medtimer/ar/phoneScreenshots/3.png",
+            "sha256": "c3119e51bbfcc8f3e477c982bcd05ea5deb5580957165260f882da6173af03da",
+            "size": 174928
+          },
+          {
+            "name": "/com.futsch1.medtimer/ar/phoneScreenshots/4.png",
+            "sha256": "20d42fc9baaaf9be6861f9851607caa0d7b35e24b172bc7caac621491692ffcd",
+            "size": 87820
+          },
+          {
+            "name": "/com.futsch1.medtimer/ar/phoneScreenshots/5.png",
+            "sha256": "6960e9313763cebde93267e078ad33651ddf330824e181ed85afe5ce76bb422b",
+            "size": 187196
+          },
+          {
+            "name": "/com.futsch1.medtimer/ar/phoneScreenshots/6.png",
+            "sha256": "95efd4b51836b1a3559418509ad81b478d58c4ff60ba174a2466e251a33356c5",
+            "size": 92473
+          },
+          {
+            "name": "/com.futsch1.medtimer/ar/phoneScreenshots/7.png",
+            "sha256": "63012fb8c512a2e11fc3921abdc53a3a3d23384a3bf278b3d06b5fef710717f3",
+            "size": 128449
+          },
+          {
+            "name": "/com.futsch1.medtimer/ar/phoneScreenshots/8.png",
+            "sha256": "78ea2ef0561fec266e63e541407a9ffd696b5e0d87559348d72400742c62dffd",
+            "size": 146352
+          }
+        ],
+        "ar-AE": [
+          {
+            "name": "/com.futsch1.medtimer/ar-AE/phoneScreenshots/1.png",
+            "sha256": "b4b51f35cc7b404796da9961a46ce5716ddf53ff5f7ebe470547ff8b943a62ff",
+            "size": 168660
+          },
+          {
+            "name": "/com.futsch1.medtimer/ar-AE/phoneScreenshots/2.png",
+            "sha256": "093b4beb5b6594a8f19b98491a1d098022ed70e05257fb294ba92d3af5785e71",
+            "size": 173667
+          },
+          {
+            "name": "/com.futsch1.medtimer/ar-AE/phoneScreenshots/3.png",
+            "sha256": "776ce1e13910e618c52b2929447067907e53e7b06226a2f0aace3f088fe5cb93",
+            "size": 144967
+          },
+          {
+            "name": "/com.futsch1.medtimer/ar-AE/phoneScreenshots/4.png",
+            "sha256": "990b1c184765c49652986bf4a3c7a665c4d272259257fc0ed2665a1782fc1f8c",
+            "size": 126084
+          },
+          {
+            "name": "/com.futsch1.medtimer/ar-AE/phoneScreenshots/5.png",
+            "sha256": "dafddcda56fc57b353f23cf8a6709920cbcb5f25c85ece7a21d9d3215d37e421",
+            "size": 203834
+          },
+          {
+            "name": "/com.futsch1.medtimer/ar-AE/phoneScreenshots/6.png",
+            "sha256": "09864cf25e4d0af3d89a95a24bced5fefaca08398e0dfffad61840b2c119bced",
+            "size": 88163
+          },
+          {
+            "name": "/com.futsch1.medtimer/ar-AE/phoneScreenshots/7.png",
+            "sha256": "c8607b78b360a8a1b01cac0e35d1fefec48533c5cea6cb54c2c47f57a956836e",
+            "size": 95879
+          },
+          {
+            "name": "/com.futsch1.medtimer/ar-AE/phoneScreenshots/8.png",
+            "sha256": "d70af01363cf2c4e737bfd5bc92c5fe238029923ff7f843f4deec5cfe5324ef4",
+            "size": 131303
+          }
+        ],
+        "bg": [
+          {
+            "name": "/com.futsch1.medtimer/bg/phoneScreenshots/1.png",
+            "sha256": "25480465bff3d5175cd720bf1db841ff5c8c02268d5ced65c2fdde06c3db5bc7",
+            "size": 276531
+          },
+          {
+            "name": "/com.futsch1.medtimer/bg/phoneScreenshots/2.png",
+            "sha256": "91b15b74fb5f6538b46df7dedf8234d32d9136c2a9efa2845de968254f6d1dc0",
+            "size": 209162
+          },
+          {
+            "name": "/com.futsch1.medtimer/bg/phoneScreenshots/3.png",
+            "sha256": "f69c59cda46f4b55b437945e67c2491a13eda8203c8b030ef6a7e7d8e963989a",
+            "size": 183926
+          },
+          {
+            "name": "/com.futsch1.medtimer/bg/phoneScreenshots/4.png",
+            "sha256": "8bf8eefa3a6892651a0d88998c239d4d778ce9c780ac40e8fd3067c4e4229b79",
+            "size": 92973
+          },
+          {
+            "name": "/com.futsch1.medtimer/bg/phoneScreenshots/5.png",
+            "sha256": "b912e3635974d9d55fe970d1d5b5cd762b7ca3284779da83f230de3d917311d4",
+            "size": 197674
+          },
+          {
+            "name": "/com.futsch1.medtimer/bg/phoneScreenshots/6.png",
+            "sha256": "55289f2faa63ee56e88d2202a8f12997d18dbca00184018ed712ca5416963701",
+            "size": 84930
+          },
+          {
+            "name": "/com.futsch1.medtimer/bg/phoneScreenshots/7.png",
+            "sha256": "3558871e9507ae6d8aad839483568a9d4c76123ecb8d1e59723aca68ed4cf61b",
+            "size": 122248
+          },
+          {
+            "name": "/com.futsch1.medtimer/bg/phoneScreenshots/8.png",
+            "sha256": "6bee56d3fea8bb241e94bca58b0711de4b7e28dfa88a9c88faa46ef0e836bee6",
+            "size": 180399
+          }
+        ],
+        "cs": [
+          {
+            "name": "/com.futsch1.medtimer/cs/phoneScreenshots/1.png",
+            "sha256": "65694541a31bc523f7593512c837082e395e575dd23ec13685b5eb851ada91e1",
+            "size": 273129
+          },
+          {
+            "name": "/com.futsch1.medtimer/cs/phoneScreenshots/2.png",
+            "sha256": "1f357c05f4b80007b01bc21d58ef4750f8b162496f1cb1bb92787b044e908426",
+            "size": 207869
+          },
+          {
+            "name": "/com.futsch1.medtimer/cs/phoneScreenshots/3.png",
+            "sha256": "2612ba83cd365a2260a705f10a4c1b4b4fc37daf3d3dc933d8812c036d6d6bf9",
+            "size": 177306
+          },
+          {
+            "name": "/com.futsch1.medtimer/cs/phoneScreenshots/4.png",
+            "sha256": "5a4c02786e54463108513bd421b3442d576132547dd8577e376da4d75f7ec6f9",
+            "size": 89700
+          },
+          {
+            "name": "/com.futsch1.medtimer/cs/phoneScreenshots/5.png",
+            "sha256": "7a0c52abc41df08a930f438a34e27c72b8b818aadb14ff9728462a2ab4836d10",
+            "size": 155683
+          },
+          {
+            "name": "/com.futsch1.medtimer/cs/phoneScreenshots/6.png",
+            "sha256": "590bf5e2aeadbf0752ae5d626cb68690e1f9c9022a98cdefc593c3f595091fc8",
+            "size": 91013
+          },
+          {
+            "name": "/com.futsch1.medtimer/cs/phoneScreenshots/7.png",
+            "sha256": "ceb47d2e550243e150b1a112224ec6471e4d1633e6fdfe7d7c98e517cd939df1",
+            "size": 121656
+          },
+          {
+            "name": "/com.futsch1.medtimer/cs/phoneScreenshots/8.png",
+            "sha256": "3afc07f86254e78aac2070a966fec7cc9f2b7e623d1ecfc6b8d574e6baffbef0",
+            "size": 176884
+          }
+        ],
+        "cs-CZ": [
+          {
+            "name": "/com.futsch1.medtimer/cs-CZ/phoneScreenshots/1.png",
+            "sha256": "65694541a31bc523f7593512c837082e395e575dd23ec13685b5eb851ada91e1",
+            "size": 273129
+          },
+          {
+            "name": "/com.futsch1.medtimer/cs-CZ/phoneScreenshots/2.png",
+            "sha256": "1f357c05f4b80007b01bc21d58ef4750f8b162496f1cb1bb92787b044e908426",
+            "size": 207869
+          },
+          {
+            "name": "/com.futsch1.medtimer/cs-CZ/phoneScreenshots/3.png",
+            "sha256": "2612ba83cd365a2260a705f10a4c1b4b4fc37daf3d3dc933d8812c036d6d6bf9",
+            "size": 177306
+          },
+          {
+            "name": "/com.futsch1.medtimer/cs-CZ/phoneScreenshots/4.png",
+            "sha256": "5a4c02786e54463108513bd421b3442d576132547dd8577e376da4d75f7ec6f9",
+            "size": 89700
+          },
+          {
+            "name": "/com.futsch1.medtimer/cs-CZ/phoneScreenshots/5.png",
+            "sha256": "7a0c52abc41df08a930f438a34e27c72b8b818aadb14ff9728462a2ab4836d10",
+            "size": 155683
+          },
+          {
+            "name": "/com.futsch1.medtimer/cs-CZ/phoneScreenshots/6.png",
+            "sha256": "590bf5e2aeadbf0752ae5d626cb68690e1f9c9022a98cdefc593c3f595091fc8",
+            "size": 91013
+          },
+          {
+            "name": "/com.futsch1.medtimer/cs-CZ/phoneScreenshots/7.png",
+            "sha256": "ceb47d2e550243e150b1a112224ec6471e4d1633e6fdfe7d7c98e517cd939df1",
+            "size": 121656
+          },
+          {
+            "name": "/com.futsch1.medtimer/cs-CZ/phoneScreenshots/8.png",
+            "sha256": "3afc07f86254e78aac2070a966fec7cc9f2b7e623d1ecfc6b8d574e6baffbef0",
+            "size": 176884
+          }
+        ],
+        "da-DK": [
+          {
+            "name": "/com.futsch1.medtimer/da-DK/phoneScreenshots/1.png",
+            "sha256": "3d95242375fab86d18d29a584fc7dbb795738f2bfc7902232d3b7b32cbeea9cd",
+            "size": 276869
+          },
+          {
+            "name": "/com.futsch1.medtimer/da-DK/phoneScreenshots/2.png",
+            "sha256": "40294b73f785f0b120a8b015b4f8bac910c98a77267b551ec1a93be1f5fc24fa",
+            "size": 208124
+          },
+          {
+            "name": "/com.futsch1.medtimer/da-DK/phoneScreenshots/3.png",
+            "sha256": "28a65e8063c26a29b0a444e8fa8614c128a8b53715432f1661dd968f2c9db7f9",
+            "size": 188112
+          },
+          {
+            "name": "/com.futsch1.medtimer/da-DK/phoneScreenshots/4.png",
+            "sha256": "0f7210fc40d720627d6b110fa960642db7f2624c0fe86cb29970eb4b4756ec41",
+            "size": 94246
+          },
+          {
+            "name": "/com.futsch1.medtimer/da-DK/phoneScreenshots/5.png",
+            "sha256": "37b2ec8bba8968455986b24fb5e226cb172b691ab0016c690166e796d833eafd",
+            "size": 198651
+          },
+          {
+            "name": "/com.futsch1.medtimer/da-DK/phoneScreenshots/6.png",
+            "sha256": "e3c3525f5a735db0d4cc385a79a3fcd3afa2a71d6be5c4ba43aa96d0e35e42a2",
+            "size": 96913
+          },
+          {
+            "name": "/com.futsch1.medtimer/da-DK/phoneScreenshots/7.png",
+            "sha256": "35a436b90890027c38a5d6bdca27203c872a9a7b2881cccdf67f667a6031a0c3",
+            "size": 125975
+          },
+          {
+            "name": "/com.futsch1.medtimer/da-DK/phoneScreenshots/8.png",
+            "sha256": "7af2f54df550dfbe6f228228f324bdd135242bcdeb1add509ddd389742763584",
+            "size": 184868
+          }
+        ],
+        "de-DE": [
+          {
+            "name": "/com.futsch1.medtimer/de-DE/phoneScreenshots/1.png",
+            "sha256": "98c53ce068ffbdb1494c4e44c3dae603d065803903c0fef36bff5bcf20ecb813",
+            "size": 275481
+          },
+          {
+            "name": "/com.futsch1.medtimer/de-DE/phoneScreenshots/2.png",
+            "sha256": "2d4456f0b0165515597a735366df3ebafa564a0c4a20f170c28cefac6ed3f202",
+            "size": 210100
+          },
+          {
+            "name": "/com.futsch1.medtimer/de-DE/phoneScreenshots/3.png",
+            "sha256": "677801fead06d46cbef63c11a00ed65aafdc85339213fa3ed4c8561da9175079",
+            "size": 183617
+          },
+          {
+            "name": "/com.futsch1.medtimer/de-DE/phoneScreenshots/4.png",
+            "sha256": "912396475b431a6ad447a933272f7f5ffff6e1c701f8d3a989e4f0a09e091c47",
+            "size": 94264
+          },
+          {
+            "name": "/com.futsch1.medtimer/de-DE/phoneScreenshots/5.png",
+            "sha256": "982b613118be34354159dd320860f67b62118dcb2b12b22295e7a37d4db083b7",
+            "size": 169850
+          },
+          {
+            "name": "/com.futsch1.medtimer/de-DE/phoneScreenshots/6.png",
+            "sha256": "a60953862c70a633e0b1a396e55fe5b4a71039dd3d62efa226fd2752857ef2b2",
+            "size": 95026
+          },
+          {
+            "name": "/com.futsch1.medtimer/de-DE/phoneScreenshots/7.png",
+            "sha256": "0b62303b242fcceb37fe57a8ec3242cac0b07c1223a1f675d3a38acd1436f3ba",
+            "size": 124258
+          },
+          {
+            "name": "/com.futsch1.medtimer/de-DE/phoneScreenshots/8.png",
+            "sha256": "21da77c617e09f2b9d754d57e3aead04bf00d163ad9c00ab8fa8573c1dc2f561",
+            "size": 180655
+          }
+        ],
+        "el-GR": [
+          {
+            "name": "/com.futsch1.medtimer/el-GR/phoneScreenshots/1.png",
+            "sha256": "01322a064223cf7a48284ec69bcfba46b879296e0d3a44711354d0d1d77bed0c",
+            "size": 285117
+          },
+          {
+            "name": "/com.futsch1.medtimer/el-GR/phoneScreenshots/2.png",
+            "sha256": "f1d6bd8abfd0c6a00b63cdd155076a547a74ae07dd0a3ddf19c190801387734d",
+            "size": 231534
+          },
+          {
+            "name": "/com.futsch1.medtimer/el-GR/phoneScreenshots/3.png",
+            "sha256": "a82a1e11df5c24828c17448ded02a57f043e1db5807316bccee82bdbad93cf45",
+            "size": 209674
+          },
+          {
+            "name": "/com.futsch1.medtimer/el-GR/phoneScreenshots/4.png",
+            "sha256": "955d690c489347e688435b5288652b686a5c2139aa33c2d301aeda5df6951118",
+            "size": 116948
+          },
+          {
+            "name": "/com.futsch1.medtimer/el-GR/phoneScreenshots/5.png",
+            "sha256": "dce471a1ea64978af68829292000285679c3b7cd021b0f93bea7f50a29d1ab19",
+            "size": 201561
+          },
+          {
+            "name": "/com.futsch1.medtimer/el-GR/phoneScreenshots/6.png",
+            "sha256": "d8bbf4b20cfb02a81dbb4c4f8bb7210abde2614d105ed87ad2c5662dc5000ef2",
+            "size": 102316
+          },
+          {
+            "name": "/com.futsch1.medtimer/el-GR/phoneScreenshots/7.png",
+            "sha256": "c12e24a9178ce709e9c9ed2ea061145e27bca9cfc424058b503e54f3fa6509a4",
+            "size": 138445
+          },
+          {
+            "name": "/com.futsch1.medtimer/el-GR/phoneScreenshots/8.png",
+            "sha256": "518b7bc8a4ac4cd0ba1622aef64abdb7fec4b5763a6cc693c0d2b5c2dbe5a12e",
+            "size": 189515
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/com.futsch1.medtimer/en-US/phoneScreenshots/1.png",
+            "sha256": "11e6470f8b146709396d110dc0e4e1af17ee2c56366ec249b73526053ec29875",
+            "size": 284835
+          },
+          {
+            "name": "/com.futsch1.medtimer/en-US/phoneScreenshots/2.png",
+            "sha256": "bf837e0542726485ea37e01e690f266dd02646be159ca5f90153d9a1c794f323",
+            "size": 206661
+          },
+          {
+            "name": "/com.futsch1.medtimer/en-US/phoneScreenshots/3.png",
+            "sha256": "d2b9c46d3610de18f366801260ea78ecd639527b76f1b52e8468fbed09031093",
+            "size": 191474
+          },
+          {
+            "name": "/com.futsch1.medtimer/en-US/phoneScreenshots/4.png",
+            "sha256": "2063106d70d8e8d2831b57ea3d6cfdcd67507c7e246779cfaebe7d2d3cd1818a",
+            "size": 87394
+          },
+          {
+            "name": "/com.futsch1.medtimer/en-US/phoneScreenshots/5.png",
+            "sha256": "74ebd5bba70166da2e46eaa35de18947f34e469c87031fc73650c7339e0c506a",
+            "size": 184972
+          },
+          {
+            "name": "/com.futsch1.medtimer/en-US/phoneScreenshots/6.png",
+            "sha256": "1471efb050868af1c33ef27b0d99402c969ac46d7c6ebb714c2e1b2a86ea8b82",
+            "size": 92642
+          },
+          {
+            "name": "/com.futsch1.medtimer/en-US/phoneScreenshots/7.png",
+            "sha256": "890ee18ddcad028758107d4af58802e7dfead6768b17634fa4e7ff1f0e0848da",
+            "size": 126716
+          },
+          {
+            "name": "/com.futsch1.medtimer/en-US/phoneScreenshots/8.png",
+            "sha256": "2dd72e417b66fb84df326359c89f96fdcbb95530a8cbd54f9a57e82e8158a0c7",
+            "size": 165138
+          }
+        ],
+        "es-ES": [
+          {
+            "name": "/com.futsch1.medtimer/es-ES/phoneScreenshots/1.png",
+            "sha256": "2bd6330cffb62ba9d8a5ef364890a4cbb84ce6dca208f70e9b277f54e3f08650",
+            "size": 275614
+          },
+          {
+            "name": "/com.futsch1.medtimer/es-ES/phoneScreenshots/2.png",
+            "sha256": "d08d94f930867305f0ac9aae3284f8fe78ddcd1bbcdfcb59562f9dc4404e99a7",
+            "size": 214779
+          },
+          {
+            "name": "/com.futsch1.medtimer/es-ES/phoneScreenshots/3.png",
+            "sha256": "0ea01d43e1040355aa1cc036fd2a85354167463fbae3fb7b84efd2a73ce0a596",
+            "size": 182983
+          },
+          {
+            "name": "/com.futsch1.medtimer/es-ES/phoneScreenshots/4.png",
+            "sha256": "33d1d99ac9cb82604e7e7a084ffa10a69e547f3e9ab4b2bf07e8cf9f96c3731d",
+            "size": 97676
+          },
+          {
+            "name": "/com.futsch1.medtimer/es-ES/phoneScreenshots/5.png",
+            "sha256": "4b5aedbcc33f3e325c35dbfa844aa67cc674fe3552f0de250d9bb3ea69fd8ed0",
+            "size": 167920
+          },
+          {
+            "name": "/com.futsch1.medtimer/es-ES/phoneScreenshots/6.png",
+            "sha256": "b1390cb0393a3e1dcfc9c81dc6496d495c9b2ab33f54d03c2806b8db6b90d54f",
+            "size": 93107
+          },
+          {
+            "name": "/com.futsch1.medtimer/es-ES/phoneScreenshots/7.png",
+            "sha256": "7da32e12fd2a122e42191fdddb3ace0fbfad7940ec45dc0ef13c9d6509766d50",
+            "size": 130370
+          },
+          {
+            "name": "/com.futsch1.medtimer/es-ES/phoneScreenshots/8.png",
+            "sha256": "9bd85a913c8952b089f2e4d654b3bed78ca5241b53b8d51c92e9c35435617120",
+            "size": 179671
+          }
+        ],
+        "fi-FI": [
+          {
+            "name": "/com.futsch1.medtimer/fi-FI/phoneScreenshots/1.png",
+            "sha256": "620665562b154d0af38fa3f76b4e9e9aa5dc31102a4418804caa78ae9c41e6de",
+            "size": 273784
+          },
+          {
+            "name": "/com.futsch1.medtimer/fi-FI/phoneScreenshots/2.png",
+            "sha256": "92ba13645d0b5081ce1dc6b550fe55e82662339bf7b583774a79f6cbf091c65c",
+            "size": 191604
+          },
+          {
+            "name": "/com.futsch1.medtimer/fi-FI/phoneScreenshots/3.png",
+            "sha256": "eb0fd6d233674fbc19c7dddd88ef592cfc52b9589c4359b3e289c125733fa81a",
+            "size": 173199
+          },
+          {
+            "name": "/com.futsch1.medtimer/fi-FI/phoneScreenshots/4.png",
+            "sha256": "a58a396c33a139734a0a74e3ae413562746c0b0263fe1397c33886c403b3768e",
+            "size": 79554
+          },
+          {
+            "name": "/com.futsch1.medtimer/fi-FI/phoneScreenshots/5.png",
+            "sha256": "ae32dc5cb189ac970d861b9fa274b4d48c3f4230993e16366799b4e1322e0b7a",
+            "size": 188234
+          },
+          {
+            "name": "/com.futsch1.medtimer/fi-FI/phoneScreenshots/6.png",
+            "sha256": "1f31335e5706ceaa32511cfc2d85890f0a82f8fb330402bbcf1cc1634efd8432",
+            "size": 93223
+          },
+          {
+            "name": "/com.futsch1.medtimer/fi-FI/phoneScreenshots/7.png",
+            "sha256": "8404b0165a77d4150654736e216a9bf29e9c93b85348ee6e3f4f706ddf06471d",
+            "size": 127217
+          },
+          {
+            "name": "/com.futsch1.medtimer/fi-FI/phoneScreenshots/8.png",
+            "sha256": "5439308f76264d956f17f4bfc662e287e41476adbaf0f16bf7989c04a3f1adb5",
+            "size": 176281
+          }
+        ],
+        "fr-FR": [
+          {
+            "name": "/com.futsch1.medtimer/fr-FR/phoneScreenshots/1.png",
+            "sha256": "984e5171a6d0640093c6b33bb9adfa5c1c16a358f1d514ac59033af293ec8f1d",
+            "size": 281398
+          },
+          {
+            "name": "/com.futsch1.medtimer/fr-FR/phoneScreenshots/2.png",
+            "sha256": "d68caee919455532f49afed4710f419022b791f72495807fb01c95bcde39d4cb",
+            "size": 211337
+          },
+          {
+            "name": "/com.futsch1.medtimer/fr-FR/phoneScreenshots/3.png",
+            "sha256": "1c7c8fcf98eb1ce69214fba402091455a7e374caf9b535b35d285f186c9ac50e",
+            "size": 194536
+          },
+          {
+            "name": "/com.futsch1.medtimer/fr-FR/phoneScreenshots/4.png",
+            "sha256": "86c5ac0b998808edec508506a160ffb0d7998eb30df7f714f7e292eef6d8f998",
+            "size": 93281
+          },
+          {
+            "name": "/com.futsch1.medtimer/fr-FR/phoneScreenshots/5.png",
+            "sha256": "36a163f336c23f14f3322ac8be5c365ecf0da69a707e87e7a5560e768a4969fb",
+            "size": 172719
+          },
+          {
+            "name": "/com.futsch1.medtimer/fr-FR/phoneScreenshots/6.png",
+            "sha256": "579aae5c8b4ceec2bb666916c70296eab1a544afabd4c8e65930d62c5fe47ea6",
+            "size": 95368
+          },
+          {
+            "name": "/com.futsch1.medtimer/fr-FR/phoneScreenshots/7.png",
+            "sha256": "78ccab2e45a129ef28e2b4a9ac0e4207cdde2059d62b6dbf06d1162994b7cc28",
+            "size": 124190
+          },
+          {
+            "name": "/com.futsch1.medtimer/fr-FR/phoneScreenshots/8.png",
+            "sha256": "7a999e1fb09d6f50ee5f1e19ba51be38fe479537be37681b72ff30d26dde3316",
+            "size": 183499
+          }
+        ],
+        "hu-HU": [
+          {
+            "name": "/com.futsch1.medtimer/hu-HU/phoneScreenshots/1.png",
+            "sha256": "f782136b127ffc18e32d3357e8b00f097d2b9b335c3744d65fc4ff531ee1b199",
+            "size": 278338
+          },
+          {
+            "name": "/com.futsch1.medtimer/hu-HU/phoneScreenshots/2.png",
+            "sha256": "d588fa84441dbb01402074a2b42754c11dc2491c75f21a6fd4b882370daf6837",
+            "size": 207819
+          },
+          {
+            "name": "/com.futsch1.medtimer/hu-HU/phoneScreenshots/3.png",
+            "sha256": "a6ac56e506efc43950a23fa587fc488a63803e392a0cb29f976ef62a17258765",
+            "size": 187250
+          },
+          {
+            "name": "/com.futsch1.medtimer/hu-HU/phoneScreenshots/4.png",
+            "sha256": "5cb6fbd97cbac8956c0c6731a6e3e07927fea07260c5aea9927a4c93c75b8834",
+            "size": 97636
+          },
+          {
+            "name": "/com.futsch1.medtimer/hu-HU/phoneScreenshots/5.png",
+            "sha256": "d7f3f926ede4fd1923f8fb2ec56703926b39ea2b8cd01b7824da809e164d1fb3",
+            "size": 211026
+          },
+          {
+            "name": "/com.futsch1.medtimer/hu-HU/phoneScreenshots/6.png",
+            "sha256": "921da9d81e44aca3aabf546e67a021312ea25a0afa8bfef686ff64fca9fe8f1e",
+            "size": 93152
+          },
+          {
+            "name": "/com.futsch1.medtimer/hu-HU/phoneScreenshots/7.png",
+            "sha256": "e0e7287ce8de11c267e861e7eb22eb694b1cde3a0356fe0fa270ef8895b5c2e8",
+            "size": 125043
+          },
+          {
+            "name": "/com.futsch1.medtimer/hu-HU/phoneScreenshots/8.png",
+            "sha256": "173b8fe7b0d223142dac048c1a8f7e9b935ba588472afbae8c2661e5dd6d966e",
+            "size": 181953
+          }
+        ],
+        "it-IT": [
+          {
+            "name": "/com.futsch1.medtimer/it-IT/phoneScreenshots/1.png",
+            "sha256": "20d7900b9d3e78128c545cc6780341344298bf848acd358d27b81aa5576466a1",
+            "size": 273026
+          },
+          {
+            "name": "/com.futsch1.medtimer/it-IT/phoneScreenshots/2.png",
+            "sha256": "aa01852168aca51bff192621a0a470c3f5404882805046fb80d0dd6a5f564105",
+            "size": 204872
+          },
+          {
+            "name": "/com.futsch1.medtimer/it-IT/phoneScreenshots/3.png",
+            "sha256": "f9e64ddabcab74e674814841220db49c87425540efb8467cced0b6da8ed7b911",
+            "size": 187472
+          },
+          {
+            "name": "/com.futsch1.medtimer/it-IT/phoneScreenshots/4.png",
+            "sha256": "107a541cca8324bef2a9c1dd3533d746e5eb0b5607d892b765f6b1832ded64dd",
+            "size": 91943
+          },
+          {
+            "name": "/com.futsch1.medtimer/it-IT/phoneScreenshots/5.png",
+            "sha256": "0dcad40258281b1cce6b36c7157c3792ee4a7797f575540735a18252fa60b120",
+            "size": 166833
+          },
+          {
+            "name": "/com.futsch1.medtimer/it-IT/phoneScreenshots/6.png",
+            "sha256": "65f3b2a498bad49619cc90c2f469150699161345891d00350e7964b86857b455",
+            "size": 90701
+          },
+          {
+            "name": "/com.futsch1.medtimer/it-IT/phoneScreenshots/7.png",
+            "sha256": "ac9544912be31e4de99ed5d46ac5d737f22651c4facaea84db93b385813baa90",
+            "size": 120945
+          },
+          {
+            "name": "/com.futsch1.medtimer/it-IT/phoneScreenshots/8.png",
+            "sha256": "97f7bc356a2d37d2a800bbf40fc1c285010fce9d2bfc4f5567df9caefbfbcfe8",
+            "size": 181744
+          }
+        ],
+        "iw-IL": [
+          {
+            "name": "/com.futsch1.medtimer/iw-IL/phoneScreenshots/1.png",
+            "sha256": "0fc797982535e5adb992721dfdfe8fb5140d85f2c511a8d0bfde2e63fd06994f",
+            "size": 268642
+          },
+          {
+            "name": "/com.futsch1.medtimer/iw-IL/phoneScreenshots/2.png",
+            "sha256": "e7451794a03eb1eceba22f9ca8c8fcefe064f811406ad7971fd7c778d1142154",
+            "size": 176387
+          },
+          {
+            "name": "/com.futsch1.medtimer/iw-IL/phoneScreenshots/3.png",
+            "sha256": "5465c5ea682e36ea49d883e99b90cc1b995739a2e2b087062186e9e310677f0a",
+            "size": 151184
+          },
+          {
+            "name": "/com.futsch1.medtimer/iw-IL/phoneScreenshots/4.png",
+            "sha256": "4896ad9d18b199f5c5f3b1a7e31d3f0fb363c68f64f914017fb0bd65b9f65195",
+            "size": 63692
+          },
+          {
+            "name": "/com.futsch1.medtimer/iw-IL/phoneScreenshots/5.png",
+            "sha256": "238f45b6d151b572ca3f89f8756d93773638ee445353ee77b1d469653a8c11a3",
+            "size": 133380
+          },
+          {
+            "name": "/com.futsch1.medtimer/iw-IL/phoneScreenshots/6.png",
+            "sha256": "3dd92ca2a6d20192cc781ab50756ac1a41bb9c3828b44e487733cdc5228e3bcd",
+            "size": 83945
+          },
+          {
+            "name": "/com.futsch1.medtimer/iw-IL/phoneScreenshots/7.png",
+            "sha256": "d192eb52021b432abe0b83bd00221e1ec6180548030650b28aec799ba53f3151",
+            "size": 115511
+          },
+          {
+            "name": "/com.futsch1.medtimer/iw-IL/phoneScreenshots/8.png",
+            "sha256": "9304930e9a1a44b5a1e6310eefb4ef96880a7d7d8ecf1f20f12e4321fe314ec0",
+            "size": 137388
+          }
+        ],
+        "nl-NL": [
+          {
+            "name": "/com.futsch1.medtimer/nl-NL/phoneScreenshots/1.png",
+            "sha256": "49fddc3a3a4381a36dd02a3554357cb07d99ce491e07745de77c2f993a6c09c5",
+            "size": 272517
+          },
+          {
+            "name": "/com.futsch1.medtimer/nl-NL/phoneScreenshots/2.png",
+            "sha256": "76414f2cd3e2a0cfc695f7f99940bd413e15c964a06e48038684f2048ad2602a",
+            "size": 200065
+          },
+          {
+            "name": "/com.futsch1.medtimer/nl-NL/phoneScreenshots/3.png",
+            "sha256": "943b091a7798bb90dcf48d6a2b2398f8e06b3d2d1624799c805f4a9c91a88b93",
+            "size": 190031
+          },
+          {
+            "name": "/com.futsch1.medtimer/nl-NL/phoneScreenshots/4.png",
+            "sha256": "df4fce3f6dbcdc980468f4e3e3dc4899072e02b0a9e6484b1b8254d1a8432e4e",
+            "size": 93693
+          },
+          {
+            "name": "/com.futsch1.medtimer/nl-NL/phoneScreenshots/5.png",
+            "sha256": "5fd6770df1b825df1462d72df435d60d2c64c84b09af8f930d524382ea7ff641",
+            "size": 177055
+          },
+          {
+            "name": "/com.futsch1.medtimer/nl-NL/phoneScreenshots/6.png",
+            "sha256": "05dc4d8e9f34fe4c84ed82a5057e8b21f8462b50956a2f518efcbf3dcb230f6a",
+            "size": 89905
+          },
+          {
+            "name": "/com.futsch1.medtimer/nl-NL/phoneScreenshots/7.png",
+            "sha256": "1596418e72f83dc14405fb09599efe81f499ef440d408b48d257da034c1b72bf",
+            "size": 123000
+          },
+          {
+            "name": "/com.futsch1.medtimer/nl-NL/phoneScreenshots/8.png",
+            "sha256": "3c7f20ac411ca497dde8c1c3542022499ad4f7699eec7484bcd73425b39079de",
+            "size": 182195
+          }
+        ],
+        "pl-PL": [
+          {
+            "name": "/com.futsch1.medtimer/pl-PL/phoneScreenshots/1.png",
+            "sha256": "441d23dec167449b05908b031b05cd6bb52aa14e88f81e9511831bae350caeaf",
+            "size": 280342
+          },
+          {
+            "name": "/com.futsch1.medtimer/pl-PL/phoneScreenshots/2.png",
+            "sha256": "c8054a93a594c9e81bae857474e620324a43c34be2751e74f7ce5293783ce829",
+            "size": 218440
+          },
+          {
+            "name": "/com.futsch1.medtimer/pl-PL/phoneScreenshots/3.png",
+            "sha256": "eb6342463b9237f6f23333600292797f5c0b08baac923778b926599bbdf8b1f2",
+            "size": 181436
+          },
+          {
+            "name": "/com.futsch1.medtimer/pl-PL/phoneScreenshots/4.png",
+            "sha256": "081d310633699bddf1bccf542485136b9596299a0828f327c51656263cb7a14e",
+            "size": 89182
+          },
+          {
+            "name": "/com.futsch1.medtimer/pl-PL/phoneScreenshots/5.png",
+            "sha256": "512213489f4c705d05e6ebc06e3478fd3b25da6cc1f74bcc811cbfb6b9b73c24",
+            "size": 154109
+          },
+          {
+            "name": "/com.futsch1.medtimer/pl-PL/phoneScreenshots/6.png",
+            "sha256": "070edfb66a1bc7ea049308521201dc800144fe6fc7ba44f9accaacc8019f9296",
+            "size": 90373
+          },
+          {
+            "name": "/com.futsch1.medtimer/pl-PL/phoneScreenshots/7.png",
+            "sha256": "cc90cfe14536f21c2905a678ba70c8a1266077b1611d4c7f940f6754472bb2d0",
+            "size": 123665
+          },
+          {
+            "name": "/com.futsch1.medtimer/pl-PL/phoneScreenshots/8.png",
+            "sha256": "76b36121972e06493fca184c3c1dfc0345f8ff13dcd45d3e319dbc97d9c7201b",
+            "size": 181022
+          }
+        ],
+        "pt-BR": [
+          {
+            "name": "/com.futsch1.medtimer/pt-BR/phoneScreenshots/1.png",
+            "sha256": "e699be3455b940c7e26dcb4e911663c4d7e8d7690a4d2baf96d1504aae2cefae",
+            "size": 283090
+          },
+          {
+            "name": "/com.futsch1.medtimer/pt-BR/phoneScreenshots/2.png",
+            "sha256": "7000211d032af5bd3d3d9289a5037876b3afaac72e0b2a7a84acb18aebc907ad",
+            "size": 206222
+          },
+          {
+            "name": "/com.futsch1.medtimer/pt-BR/phoneScreenshots/3.png",
+            "sha256": "451ce75baa9b358260a2ded53d51d9cb160e686793736e89c7c4492fb9dd35d9",
+            "size": 196967
+          },
+          {
+            "name": "/com.futsch1.medtimer/pt-BR/phoneScreenshots/4.png",
+            "sha256": "357ddee082f29b3a25c4d2a23212aee64c9c3926b98e1fc6c509569bf3ac9f5a",
+            "size": 95868
+          },
+          {
+            "name": "/com.futsch1.medtimer/pt-BR/phoneScreenshots/5.png",
+            "sha256": "758ec914893ab493c03798ad96e7c3423efae5aa98d0c0982e4d5709fa52fef4",
+            "size": 148437
+          },
+          {
+            "name": "/com.futsch1.medtimer/pt-BR/phoneScreenshots/6.png",
+            "sha256": "5cd9f6c5ff29f45a8e89a7330ba46672b9da2ada42f8a87456586a17fc0ef7f3",
+            "size": 92002
+          },
+          {
+            "name": "/com.futsch1.medtimer/pt-BR/phoneScreenshots/7.png",
+            "sha256": "ba6997b4fd318ebfbeda71319227cf2e8de77d73f8b904858b410175772e5532",
+            "size": 123906
+          },
+          {
+            "name": "/com.futsch1.medtimer/pt-BR/phoneScreenshots/8.png",
+            "sha256": "a53bb07899ffd9df1a3edcacfa6d362873c0781cbf7fc4c086f6a78878447882",
+            "size": 165382
+          }
+        ],
+        "ru-RU": [
+          {
+            "name": "/com.futsch1.medtimer/ru-RU/phoneScreenshots/1.png",
+            "sha256": "b234bf2496f68ed5c644ba14fd075e5ad864baf890f81b06191d4c9049614c31",
+            "size": 278246
+          },
+          {
+            "name": "/com.futsch1.medtimer/ru-RU/phoneScreenshots/2.png",
+            "sha256": "8aa79e34aba4e4fc957acd9830e423981663e12889bd68047163ae695f928f6d",
+            "size": 214738
+          },
+          {
+            "name": "/com.futsch1.medtimer/ru-RU/phoneScreenshots/3.png",
+            "sha256": "93664f4f05ab05fc44b74f98b15773d219e02bdd81a24b448990ec989d9bcfbd",
+            "size": 185899
+          },
+          {
+            "name": "/com.futsch1.medtimer/ru-RU/phoneScreenshots/4.png",
+            "sha256": "0c54ff4d013d7c368307583bc8f1dc9d64006dc94c9b2e4c393452a619112ccb",
+            "size": 95210
+          },
+          {
+            "name": "/com.futsch1.medtimer/ru-RU/phoneScreenshots/5.png",
+            "sha256": "536ec07f7b3c957f299e3320f9784a5754e054984190f24129c0a01b4a8466de",
+            "size": 210022
+          },
+          {
+            "name": "/com.futsch1.medtimer/ru-RU/phoneScreenshots/6.png",
+            "sha256": "765d7137dcd927f427e5a740ced193d1a2b1426f248ba414ae8179a9256f7ad1",
+            "size": 91961
+          },
+          {
+            "name": "/com.futsch1.medtimer/ru-RU/phoneScreenshots/7.png",
+            "sha256": "236cf8b5d145eccc10ecccb6ef3cae8442a370dbf74d36da25a718aeee024e74",
+            "size": 125390
+          },
+          {
+            "name": "/com.futsch1.medtimer/ru-RU/phoneScreenshots/8.png",
+            "sha256": "66f6f58d07a45548adab2ec293f9d89ee1d08afa3732d7986888b1a982765595",
+            "size": 179291
+          }
+        ],
+        "sv-SE": [
+          {
+            "name": "/com.futsch1.medtimer/sv-SE/phoneScreenshots/1.png",
+            "sha256": "db6ef172f8956ff4e4290c3151c155acdcd4ec905c00d444f999bd45a3d4202b",
+            "size": 276812
+          },
+          {
+            "name": "/com.futsch1.medtimer/sv-SE/phoneScreenshots/2.png",
+            "sha256": "f9a05f06d294995d93aeaee037e892120cc8752b3ffceab70cfe15314abc390e",
+            "size": 206584
+          },
+          {
+            "name": "/com.futsch1.medtimer/sv-SE/phoneScreenshots/3.png",
+            "sha256": "e7e11f2dd36abbf91a523e6c49c797cb98953a1aba1bb1dec008ee169ff3cc20",
+            "size": 189081
+          },
+          {
+            "name": "/com.futsch1.medtimer/sv-SE/phoneScreenshots/4.png",
+            "sha256": "ea72dceb359271fc5749dc07b21ca407733793e8dfc6390d3bd3193efecfcc0e",
+            "size": 95952
+          },
+          {
+            "name": "/com.futsch1.medtimer/sv-SE/phoneScreenshots/5.png",
+            "sha256": "568a195c2f27055c9dad5a92b5d26eda9922947fb54b5d8dcea27e6f7c092608",
+            "size": 147867
+          },
+          {
+            "name": "/com.futsch1.medtimer/sv-SE/phoneScreenshots/6.png",
+            "sha256": "9879dcc8bae6c1d9b91fb6443a699a39b7462dfff9cf960adc9576b69d18a79e",
+            "size": 94618
+          },
+          {
+            "name": "/com.futsch1.medtimer/sv-SE/phoneScreenshots/7.png",
+            "sha256": "735c657fce942c49d45acd66780804a6f3ba424fa0299bdc7eb47082920294a9",
+            "size": 123448
+          },
+          {
+            "name": "/com.futsch1.medtimer/sv-SE/phoneScreenshots/8.png",
+            "sha256": "f7b2cd6b704dd85c52804fb3c282bd2fc789af6e6842d60bc123303eabb3b875",
+            "size": 184306
+          }
+        ],
+        "sv-SV": [
+          {
+            "name": "/com.futsch1.medtimer/sv-SV/phoneScreenshots/1.png",
+            "sha256": "b2a154f2cfa91d52db27c2f8687392ab6f46b0c63733074fc5b26e4b32efb7e0",
+            "size": 227535
+          },
+          {
+            "name": "/com.futsch1.medtimer/sv-SV/phoneScreenshots/2.png",
+            "sha256": "22f0e5b4a81165eb101562079040675a9e566bfd3657cd44faf56a479259c205",
+            "size": 166913
+          },
+          {
+            "name": "/com.futsch1.medtimer/sv-SV/phoneScreenshots/3.png",
+            "sha256": "b75bc9f0d22c7e6e021eb4913df2dd881661f8c77c2882db4f453310476d2b36",
+            "size": 153438
+          },
+          {
+            "name": "/com.futsch1.medtimer/sv-SV/phoneScreenshots/4.png",
+            "sha256": "e686d0d57026a2265a4a337e64faeafc291254d76311bc77118eda83a54b454b",
+            "size": 96728
+          },
+          {
+            "name": "/com.futsch1.medtimer/sv-SV/phoneScreenshots/5.png",
+            "sha256": "e24c816dab74f0bab49267a3fbe9dc2f86703082a89f47aef297e1fda9266201",
+            "size": 198768
+          },
+          {
+            "name": "/com.futsch1.medtimer/sv-SV/phoneScreenshots/6.png",
+            "sha256": "26d08620eadc9b65a33c461f3d17f432c0a8d07287d3715412feed5e37880e1f",
+            "size": 85873
+          },
+          {
+            "name": "/com.futsch1.medtimer/sv-SV/phoneScreenshots/7.png",
+            "sha256": "2734cbc8799ff4448a283277af45b2ef8600505566183a697d73db081711a0a9",
+            "size": 95219
+          },
+          {
+            "name": "/com.futsch1.medtimer/sv-SV/phoneScreenshots/8.png",
+            "sha256": "da4fa4c54e2fc5565730bd2bb014e423831e9a8e931eeb701fb590e98cc1090c",
+            "size": 129563
+          }
+        ],
+        "ta-IN": [
+          {
+            "name": "/com.futsch1.medtimer/ta-IN/phoneScreenshots/1.png",
+            "sha256": "ccaf32ae5b8b353bd52dff313c8d33a29750dd21089f0019d9e05080fa4899a6",
+            "size": 291554
+          },
+          {
+            "name": "/com.futsch1.medtimer/ta-IN/phoneScreenshots/2.png",
+            "sha256": "3bb3cd5acd4b56bfe3985abc40b9f5243cdd578e04a4c4012391b79d9577e7ce",
+            "size": 264476
+          },
+          {
+            "name": "/com.futsch1.medtimer/ta-IN/phoneScreenshots/3.png",
+            "sha256": "a2163bc3955a87312593fe61fb77e97f04f434fe3b00b88ffccffd64d5c62ef1",
+            "size": 207432
+          },
+          {
+            "name": "/com.futsch1.medtimer/ta-IN/phoneScreenshots/4.png",
+            "sha256": "8357b75bd7c4a16459cb71a0e92f92ecec12b71b8772d2494f77b4177809de58",
+            "size": 129260
+          },
+          {
+            "name": "/com.futsch1.medtimer/ta-IN/phoneScreenshots/5.png",
+            "sha256": "544bdedfff84997a76c7d121c01c000496d5f86b0a4df659e08dbc9300455594",
+            "size": 249356
+          },
+          {
+            "name": "/com.futsch1.medtimer/ta-IN/phoneScreenshots/6.png",
+            "sha256": "1878c2af075478d4fda3c2b9d2c72a9e728db877a7a127d61d10c0f315434f5e",
+            "size": 99549
+          },
+          {
+            "name": "/com.futsch1.medtimer/ta-IN/phoneScreenshots/7.png",
+            "sha256": "b7dfc3f64bc929b0d0e3f3673fb18f00874ae24da786a3506e1121e41f00b955",
+            "size": 129367
+          },
+          {
+            "name": "/com.futsch1.medtimer/ta-IN/phoneScreenshots/8.png",
+            "sha256": "91dc92223bad93faa99f3da25a32cf939431c22d6cdf2e19f97837f633a3edad",
+            "size": 161962
+          }
+        ],
+        "tr-TR": [
+          {
+            "name": "/com.futsch1.medtimer/tr-TR/phoneScreenshots/1.png",
+            "sha256": "b97354e512edee37e52659935ab0cbc7bbab3ee4b037f32b596f7c9ca219c052",
+            "size": 276511
+          },
+          {
+            "name": "/com.futsch1.medtimer/tr-TR/phoneScreenshots/2.png",
+            "sha256": "69a294ad05419f9497ee17f8f54023638c93e74b21ec0b897538aaa0f896df6b",
+            "size": 191463
+          },
+          {
+            "name": "/com.futsch1.medtimer/tr-TR/phoneScreenshots/3.png",
+            "sha256": "b078b944da03b719cb19ad57f9c6cb29bc10129908997e8c14d525d4b11876a7",
+            "size": 172681
+          },
+          {
+            "name": "/com.futsch1.medtimer/tr-TR/phoneScreenshots/4.png",
+            "sha256": "d4f79733ebb0c5fa4c01ddb9734291af0fba412681347a7648c07afc7d422222",
+            "size": 83456
+          },
+          {
+            "name": "/com.futsch1.medtimer/tr-TR/phoneScreenshots/5.png",
+            "sha256": "62c2921c6ab5bb5ba116993e319c57294dc65c68296c990ef9d09331ef7d8c1c",
+            "size": 143906
+          },
+          {
+            "name": "/com.futsch1.medtimer/tr-TR/phoneScreenshots/6.png",
+            "sha256": "10e5567422a9d207de3ee885988999ebe1dca8556edd6ac0aa09c74d583bb93d",
+            "size": 88794
+          },
+          {
+            "name": "/com.futsch1.medtimer/tr-TR/phoneScreenshots/7.png",
+            "sha256": "f8ec6d15bf7bb1ce82e86f4c44df6cc2805dbcb13abd777ef9cb68ec98d9f23c",
+            "size": 120004
+          },
+          {
+            "name": "/com.futsch1.medtimer/tr-TR/phoneScreenshots/8.png",
+            "sha256": "87ae205ee2ea4abca22da759768dc275cc715622009848a9869699fc3dc3d102",
+            "size": 181042
+          }
+        ],
+        "uk": [
+          {
+            "name": "/com.futsch1.medtimer/uk/phoneScreenshots/1.png",
+            "sha256": "e88fa41cf5361db4be80246e09b9c6c816fc37f97021745e8b5dee451d44efba",
+            "size": 269681
+          },
+          {
+            "name": "/com.futsch1.medtimer/uk/phoneScreenshots/2.png",
+            "sha256": "384a730932b012f8796c564cbb4ab73ca15ce0afb0dad1bd374b7b9613882de4",
+            "size": 202890
+          },
+          {
+            "name": "/com.futsch1.medtimer/uk/phoneScreenshots/3.png",
+            "sha256": "e152fd217b86056d6fc583d4a7e30408e25b49a5ff6d1a90159c00f47e059ee5",
+            "size": 172250
+          },
+          {
+            "name": "/com.futsch1.medtimer/uk/phoneScreenshots/4.png",
+            "sha256": "d96b0bcb02bf161cb462443a3829111e71a6d6b053647fd0111570c88abb52b7",
+            "size": 84439
+          },
+          {
+            "name": "/com.futsch1.medtimer/uk/phoneScreenshots/5.png",
+            "sha256": "a0d81a278f8347bca8527f665b83a36e3723fdc58929d076f3583a848f2d521a",
+            "size": 200121
+          },
+          {
+            "name": "/com.futsch1.medtimer/uk/phoneScreenshots/6.png",
+            "sha256": "46d837f86aefb86b3346277aa19eaceefc72360f9f97aee8d4d2204aa6515425",
+            "size": 89778
+          },
+          {
+            "name": "/com.futsch1.medtimer/uk/phoneScreenshots/7.png",
+            "sha256": "c4de993274b381b8cb86e3b73987c4a0568f5026748b6be6e5dd85b66d65ac16",
+            "size": 122539
+          },
+          {
+            "name": "/com.futsch1.medtimer/uk/phoneScreenshots/8.png",
+            "sha256": "b3abf6b9250c1aa6dea25e2eaafcef35c55f193ee2f252594428ad31a66bd368",
+            "size": 176926
+          }
+        ],
+        "uk-UK": [
+          {
+            "name": "/com.futsch1.medtimer/uk-UK/phoneScreenshots/1.png",
+            "sha256": "fc6224a1ec05c37f044ca52c00771939fcb242f42737816c916472114db4bfb8",
+            "size": 211786
+          },
+          {
+            "name": "/com.futsch1.medtimer/uk-UK/phoneScreenshots/2.png",
+            "sha256": "baec812a5d07c14db75a5ad3fec6ec6caaa877847a187b88e1969ca877a96aec",
+            "size": 144100
+          },
+          {
+            "name": "/com.futsch1.medtimer/uk-UK/phoneScreenshots/3.png",
+            "sha256": "235418233195c6153a9cacb15e11f1697db9b7756d70ba392ecbfde39da4a352",
+            "size": 147961
+          },
+          {
+            "name": "/com.futsch1.medtimer/uk-UK/phoneScreenshots/4.png",
+            "sha256": "05dfc009c84b56d2b6865053e1fb79929a4932ff6b6aed6c5383bb38591098e9",
+            "size": 96919
+          },
+          {
+            "name": "/com.futsch1.medtimer/uk-UK/phoneScreenshots/5.png",
+            "sha256": "b0466fd18333c5be8d67faf5ec907413c2a14312565033aecd5447621292f6bd",
+            "size": 205749
+          },
+          {
+            "name": "/com.futsch1.medtimer/uk-UK/phoneScreenshots/6.png",
+            "sha256": "5680040915edf15224d35f46c54645f9150cac45b5e73076a82799b5028ef2a2",
+            "size": 82788
+          },
+          {
+            "name": "/com.futsch1.medtimer/uk-UK/phoneScreenshots/7.png",
+            "sha256": "232bad87eac823232410640ca079b9af706af899dcbd09dd1fb7142f31f928d2",
+            "size": 94722
+          },
+          {
+            "name": "/com.futsch1.medtimer/uk-UK/phoneScreenshots/8.png",
+            "sha256": "2f5198ecc967f06afdc7c3ff7e5873aa9cee1613b8725e24a38cb697132bb416",
+            "size": 129699
+          }
+        ],
+        "zh-CN": [
+          {
+            "name": "/com.futsch1.medtimer/zh-CN/phoneScreenshots/1.png",
+            "sha256": "3992643cc002e9032def818b114460b83762b27161e253971537f39ee2a2baa0",
+            "size": 270871
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-CN/phoneScreenshots/2.png",
+            "sha256": "46d97d96b22f1fcf2e4e26233c9ffc359d06360b596c9506ab7541c956b3ff97",
+            "size": 210309
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-CN/phoneScreenshots/3.png",
+            "sha256": "44dd0e4cd1883bec67a752421a4a78a7e7c6f175165e82de1971f38eb6f1d78c",
+            "size": 190666
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-CN/phoneScreenshots/4.png",
+            "sha256": "afc58ac1e4944b42002bc4d212c416a044fd048a5dc0b3068f8e339d43b3b526",
+            "size": 90657
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-CN/phoneScreenshots/5.png",
+            "sha256": "0fa562d18b4614e0d8f428c72a2a66e408defb434c076661d293182defbacf49",
+            "size": 161639
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-CN/phoneScreenshots/6.png",
+            "sha256": "03f1fbc7e5f963b0c6fa7193a7b8e639f952c87d044b341da6529bc2e6b2364c",
+            "size": 95103
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-CN/phoneScreenshots/7.png",
+            "sha256": "44676abb68502d71cdd306d3d227174e2a3079918e9a6398e5674d6b6de39250",
+            "size": 132049
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-CN/phoneScreenshots/8.png",
+            "sha256": "ed4c06d0d14d3069030fa15cc5699383fe08c65abe462a540ac0ea6d8eb6e97f",
+            "size": 161083
+          }
+        ],
+        "zh-TW": [
+          {
+            "name": "/com.futsch1.medtimer/zh-TW/phoneScreenshots/1.png",
+            "sha256": "290b6df984618c6dc8c8cddbf95cd5a51acf7db9dd3af31724a8a490dfea4b12",
+            "size": 278921
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-TW/phoneScreenshots/2.png",
+            "sha256": "16a4e5b18762ef7e62c8cb2f4c489d02feb590c13769ccb2b2bb162f6bce6904",
+            "size": 217121
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-TW/phoneScreenshots/3.png",
+            "sha256": "977dcceced60d342013f5186a50c06f343d6691eecaad434b908805b666984b5",
+            "size": 178808
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-TW/phoneScreenshots/4.png",
+            "sha256": "ffcb05a27950bef2f9883f981b50b6560c8cf50b9d2dee108497c95787e45b57",
+            "size": 89503
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-TW/phoneScreenshots/5.png",
+            "sha256": "17c3c4254fd1e34d8a53467e002cc07fc2689bb63fe4953265a4341f4a3ee1c4",
+            "size": 171140
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-TW/phoneScreenshots/6.png",
+            "sha256": "06b7a8248e5780ae00e4281d00b045259b76f15d291eb78f5aaefcbe5d9d0f90",
+            "size": 90580
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-TW/phoneScreenshots/7.png",
+            "sha256": "a8b3d1fa297379016bf0c78521431e2d640a5057917499ccdac42e9e8f69cb49",
+            "size": 127991
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-TW/phoneScreenshots/8.png",
+            "sha256": "7721a0be34c3e60564ff88a5e621de967b056783411f23d64c87d0c0ce919952",
+            "size": 138633
+          }
+        ],
+        "zh-rCN": [
+          {
+            "name": "/com.futsch1.medtimer/zh-rCN/phoneScreenshots/1.png",
+            "sha256": "b5d984eecb1afa459a4cc90570085f5bb9ed3955da2cea1e19138df3cefbd317",
+            "size": 163231
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-rCN/phoneScreenshots/2.png",
+            "sha256": "10bc74e2dfb3a77bb4304614f17bff7639f7cacb212c5fa9cd97437b40fd2fe8",
+            "size": 180067
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-rCN/phoneScreenshots/3.png",
+            "sha256": "2feeda1d308f09171b5b36698fb23ae18286aed95a8b45e7a4457c791c5b1592",
+            "size": 157663
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-rCN/phoneScreenshots/4.png",
+            "sha256": "5e31060282e24b77c600e87f1b779adefc471b4748a9ed72516448345ddfff56",
+            "size": 147156
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-rCN/phoneScreenshots/5.png",
+            "sha256": "aad7158cae27b2251f9ea410f9757dfe9fdaefbc966e9f4dcf1662b1de40c7b0",
+            "size": 176651
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-rCN/phoneScreenshots/6.png",
+            "sha256": "54ca3ed696f9313c7bd31bce24c028480f2fa114c1c8da014f6a9b51f9b87447",
+            "size": 90914
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-rCN/phoneScreenshots/7.png",
+            "sha256": "828250d63183f79637b039ad7bc2feb828149d94d0061215a2316f70e9d8fe03",
+            "size": 102921
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-rCN/phoneScreenshots/8.png",
+            "sha256": "2be895d3a2b2d33a506c6c06aab7a9d4e6bf955daa221bce6b268ae3d3451bb2",
+            "size": 132109
+          }
+        ],
+        "zh-rTW": [
+          {
+            "name": "/com.futsch1.medtimer/zh-rTW/phoneScreenshots/1.png",
+            "sha256": "c0940986a75307ca6301971e03dd4bcfd251ebb337df24fd874ca0850e2c700f",
+            "size": 179868
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-rTW/phoneScreenshots/2.png",
+            "sha256": "43385d74fef35648815521d53f3a966d88c267b1829936a393d7de501e2437d3",
+            "size": 180164
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-rTW/phoneScreenshots/3.png",
+            "sha256": "01c0ee4b2c02ef65199641d87dfccba371b10d4bc7405d087f3dd0761b279b98",
+            "size": 159185
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-rTW/phoneScreenshots/4.png",
+            "sha256": "e2502c0794f67053b63ca48eb210ff1f4acb246844d19e488fdd5adefaa86190",
+            "size": 147003
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-rTW/phoneScreenshots/5.png",
+            "sha256": "3282f26b7cd36a223f56dc3e239ae90e641b223d35953f24b057d66b6720d886",
+            "size": 162154
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-rTW/phoneScreenshots/6.png",
+            "sha256": "78b950db2ce2811b91e3fa963594b3b1034dc27b1d73284bc7102b9bf6350ac1",
+            "size": 88561
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-rTW/phoneScreenshots/7.png",
+            "sha256": "567343b1a19a5ce348ae8ccc464319219f7583aea27e926692898316d8dce29c",
+            "size": 107253
+          },
+          {
+            "name": "/com.futsch1.medtimer/zh-rTW/phoneScreenshots/8.png",
+            "sha256": "2ebeebd68d24077605b4b6e26a10c8c575c3ac18011ede60a1d6e49be25ff3fb",
+            "size": 145089
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/Futsch1/medTimer",
+    "summary": {
+      "ar": "\u062a\u0630\u0643\u064a\u0631 \u0628\u0627\u0644\u0623\u062f\u0648\u064a\u0629 \u0648\u0627\u0644\u062d\u0628\u0648\u0628 \u0645\u0639 \u0633\u062c\u0644\u060c \u064a\u0639\u0645\u0644 \u0628\u0627\u0644\u0643\u0627\u0645\u0644 \u0628\u062f\u0648\u0646 \u0627\u0646\u062a\u0631\u0646\u062a \u0648\u064a\u0631\u0643\u0632 \u0639\u0644\u0649 \u0627\u0644\u062e\u0635\u0648\u0635\u064a\u0629",
+      "bg": "\u041d\u0430\u043f\u043e\u043c\u043d\u044f\u043d\u0435 \u0437\u0430 \u043b\u0435\u043a\u0430\u0440\u0441\u0442\u0432\u0430 \u0438 \u0445\u0430\u043f\u0447\u0435\u0442\u0430 \u0441 \u0434\u043d\u0435\u0432\u043d\u0438\u043a, \u043e\u0444\u043b\u0430\u0439\u043d \u0438 \u043f\u043e\u0432\u0435\u0440\u0438\u0442\u0435\u043b\u043d\u043e.",
+      "cs-CZ": "P\u0159ipomenut\u00ed l\u00e9k\u016f a pilulek s den\u00edkem, pln\u011b offline a zam\u011b\u0159en\u00e9 na soukrom\u00ed",
+      "da-DK": "Medicin- og pillep\u00e5mindelse med log, offline og privat.",
+      "de-DE": "Medikamenten- & Pillenerinnerung mit Log, offline & datenschutzfreundlich",
+      "el-GR": "\u03a5\u03c0\u03b5\u03bd\u03b8\u03c5\u03bc\u03af\u03c3\u03b5\u03b9\u03c2 \u03c6\u03b1\u03c1\u03bc\u03ac\u03ba\u03c9\u03bd & \u03b9\u03c3\u03c4\u03bf\u03c1\u03b9\u03ba\u03cc. Offline \u03bb\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 & \u03b1\u03c0\u03cc\u03bb\u03c5\u03c4\u03b7 \u03b9\u03b4\u03b9\u03c9\u03c4\u03b9\u03ba\u03cc\u03c4\u03b7\u03c4\u03b1.",
+      "en-US": "Medication and pill reminder with log, fully offline and privacy focused",
+      "es-ES": "Recordatorio de medicamentos y pastillas con registro, offline y privado",
+      "fi-FI": "L\u00e4\u00e4ke- ja pillerimuistutus lokilla, offline ja yksityinen.",
+      "fr-FR": "Rappel de pilules et m\u00e9dicaments avec log, hors ligne et priv\u00e9.",
+      "hu-HU": "Gy\u00f3gyszer \u00e9s tabletta eml\u00e9keztet\u0151 napl\u00f3val, offline \u00e9s priv\u00e1t.",
+      "it-IT": "Promemoria farmaci e pillole con registro, offline e privato.",
+      "iw-IL": "\u05ea\u05d6\u05db\u05d5\u05e8\u05ea \u05dc\u05ea\u05e8\u05d5\u05e4\u05d5\u05ea \u05d5\u05db\u05d3\u05d5\u05e8\u05d9\u05dd \u05e2\u05dd \u05d9\u05d5\u05de\u05df, \u05d1\u05de\u05e6\u05d1 \u05dc\u05d0 \u05de\u05e7\u05d5\u05d5\u05df \u05dc\u05d7\u05dc\u05d5\u05d8\u05d9\u05df \u05d5\u05de\u05ea\u05de\u05e7\u05d3 \u05d1\u05e4\u05e8\u05d8\u05d9\u05d5\u05ea",
+      "nl-NL": "Medicijn- en pilherinnering met log, offline en priv\u00e9.",
+      "pl-PL": "Przypomnienia o lekach: dziennik i rejestr pigu\u0142ek. Dzia\u0142a offline. Prywatnie.",
+      "pt-BR": "Lembrete de medicamentos e p\u00edlulas com log, offline e privado.",
+      "ru-RU": "\u041d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u0435 \u043e \u043b\u0435\u043a\u0430\u0440\u0441\u0442\u0432\u0430\u0445 \u0438 \u0442\u0430\u0431\u043b\u0435\u0442\u043a\u0430\u0445 \u0441 \u0436\u0443\u0440\u043d\u0430\u043b\u043e\u043c, \u043e\u0444\u043b\u0430\u0439\u043d \u0438 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e.",
+      "sv-SE": "Medicin- och pillerp\u00e5minnelse med logg, offline och privat.",
+      "ta-IN": "\u0bae\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0bae\u0bbe\u0ba4\u0bcd\u0ba4\u0bbf\u0bb0\u0bc8 \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bc2\u0b9f\u0bcd\u0b9f\u0bb2\u0bcd \u0baa\u0ba4\u0bbf\u0bb5\u0bc1, \u0b86\u0b83\u0baa\u0bcd\u0bb2\u0bc8\u0ba9\u0bcd \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c96\u0cbe\u0cb8\u0c97\u0cbf.",
+      "tr-TR": "\u0130la\u00e7 ve hap hat\u0131rlat\u0131c\u0131s\u0131, g\u00fcnl\u00fck, tamamen \u00e7evrimd\u0131\u015f\u0131 ve gizlilik odakl\u0131",
+      "uk": "\u041d\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043d\u043d\u044f \u043f\u0440\u043e \u043b\u0456\u043a\u0438 \u0442\u0430 \u0442\u0430\u0431\u043b\u0435\u0442\u043a\u0438 \u0437 \u0436\u0443\u0440\u043d\u0430\u043b\u043e\u043c, \u043e\u0444\u043b\u0430\u0439\u043d \u0442\u0430 \u043f\u0440\u0438\u0432\u0430\u0442\u043d\u0435.",
+      "zh-CN": "\u836f\u7269\u548c\u836f\u4e38\u63d0\u9192\uff0c\u5e26\u65e5\u5fd7\uff0c\u5b8c\u5168\u79bb\u7ebf\uff0c\u6ce8\u91cd\u9690\u79c1",
+      "zh-TW": "\u85e5\u7269\u548c\u85e5\u4e38\u63d0\u9192\uff0c\u5e36\u65e5\u8a8c\uff0c\u5b8c\u5168\u96e2\u7dda\uff0c\u6ce8\u91cd\u96b1\u79c1"
+    }
+  },
+  "version": {
+    "added": 1779632797957,
+    "file": {
+      "ipfsCIDv1": "bafybeif4c34gr3epukcbjjrbpbd3trxsaa63oxjot37gnpuhnhx6bqzfie",
+      "name": "/com.futsch1.medtimer_173.apk",
+      "sha256": "b115ed1c08693bd30f80e05570b4b208f674c3d61c95b863747ca4d50d579866",
+      "size": 26539785
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "69bc7c72e499045b44c87fc8463f599472deb408c48de38de8554ae7754b9d84"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.SCHEDULE_EXACT_ALARM"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "com.futsch1.medtimer.NOTIFICATION_PROCESSED"
+        },
+        {
+          "name": "android.permission.ACCESS_NOTIFICATION_POLICY"
+        },
+        {
+          "name": "android.permission.USE_FULL_SCREEN_INTENT"
+        },
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+        },
+        {
+          "name": "android.permission.USE_BIOMETRIC"
+        },
+        {
+          "name": "android.permission.USE_FINGERPRINT"
+        },
+        {
+          "name": "com.futsch1.medtimer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 28,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 173,
+      "versionName": "1.22.18"
+    },
+    "src": {
+      "name": "/com.futsch1.medtimer_173_src.tar.gz",
+      "sha256": "567232343f99c3beefbaa456a05d6ec3a21e1f3a8991df2010e52c3b6ad271fc",
+      "size": 40808778
+    }
+  }
+}

@@ -73,5 +73,5 @@ Expected behavior:
 
 - Clear APK: exact version when evidence is strong.
 - Light obfuscation: exact or likely version.
-- Shrinking/R8: version range or uncertain candidates.
+- Shrinking/R8: low-confidence candidate or uncertain output.
 - Packing/dynamic loading: unsupported or low-confidence status.

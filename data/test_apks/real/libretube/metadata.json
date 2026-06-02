@@ -1,0 +1,64 @@
+{
+  "apk": {
+    "expected_sha256": "80878a8fc2aa22ec9383f5176b0f5376116d04911bb72cbf606c0d8ee2a4c947",
+    "index_size": 9187236,
+    "path": "data/test_apks/real/libretube/libretube.apk",
+    "sha256": "80878a8fc2aa22ec9383f5176b0f5376116d04911bb72cbf606c0d8ee2a4c947",
+    "size": 9187236,
+    "url": "https://f-droid.org/repo/com.github.libretube_70.apk"
+  },
+  "app": "LibreTube",
+  "categories": [
+    "Internet",
+    "Multimedia",
+    "Online Media Player"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "internet",
+    "multimedia",
+    "online-media-player",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.github.libretube/",
+  "license": "GPL-3.0-or-later",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.github.libretube",
+  "proof_status": "report-generated",
+  "reason": "No-native internet/media app with source tarball metadata, target SDK 36, and a medium APK; useful as another modern media-family clean-candidate probe.",
+  "report": {
+    "detected_component_count": 13,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v6/report-real-libretube",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v6/report-real-libretube/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v6/report-real-libretube/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v6/report-real-libretube/sbom.cdx.json",
+    "sbom_component_count": 13,
+    "status": "ok"
+  },
+  "slug": "libretube",
+  "source_repo": "https://github.com/libre-tube/LibreTube",
+  "source_tarball": {
+    "sha256": "0aba089518c3ce4f174a99eb9c9bfa31c2c904f4e20ad5a19fabe15c1f6c5d69",
+    "size": 7218772,
+    "url": "https://f-droid.org/repo/com.github.libretube_70_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 70,
+  "version_name": "31.4"
+}

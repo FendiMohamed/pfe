@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "added": 1535587200000,
+    "authorEmail": "peter@typeblog.net",
+    "authorName": "PeterCxy",
+    "categories": [
+      "App Manager",
+      "Security"
+    ],
+    "changelog": "https://gitea.angry.im/PeterCxy/Shelter/src/branch/master/CHANGELOG.md",
+    "description": {
+      "en-US": "Shelter is a Free and Open-Source (FOSS) app that leverages the \"Work Profile\" feature of Android to provide an isolated space that you can install or clone apps into.\n\nFor a full description, please read <https://cgit.typeblog.net/Shelter/about/> from the Git repository of Shelter. A summary is provided below.\n\nThe main use-cases of Shelter include:\n\n- Installing apps inside a work profile for isolation\n- \"Freeze\" apps inside the work profile to prevent them from running or being woken up when you are not actively using them\n- Installing two copies of the same app on the same device\n\nNote that Shelter depends on the Work Profile feature of the Android system, so any bugs related to Work Profiles in the Android-derived system you are using will affect Shelter. In addition, Shelter can only be as secure as the Work Profile implementation.\n"
+    },
+    "donate": [
+      "https://www.patreon.com/PeterCxy"
+    ],
+    "icon": {
+      "en-US": {
+        "name": "/net.typeblog.shelter/en-US/icon_SadI7N5owTo-UKqex_wGEQdfXb3rvqoD4y_DXKRRRl8=.png",
+        "sha256": "49a748ecde68c13a3e50aa9ec7fc0611075f5dbdebbeaa03e32fc35ca451465f",
+        "size": 43256
+      }
+    },
+    "issueTracker": "https://lists.sr.ht/~petercxy/shelter",
+    "lastUpdated": 1702386858000,
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-US": "Shelter"
+    },
+    "preferredSigner": "2d4837134f3519a11d104630ed42a4a795f4ab2327e1c9899cbebfbf89aba483",
+    "sourceCode": "https://gitea.angry.im/PeterCxy/Shelter",
+    "summary": {
+      "en-US": "Isolate and run multiple instances of apps using Work Profiles"
+    },
+    "translation": "https://weblate.typeblog.net/projects/shelter/shelter/"
+  },
+  "version": {
+    "added": 1702386858000,
+    "file": {
+      "ipfsCIDv1": "bafybeiceopdyfzap6ehsx3hz3rn6372xnmgedy373yom5rsqw4xk7fgeky",
+      "name": "/net.typeblog.shelter_445.apk",
+      "sha256": "d6d67b22f066d40f8771d8d7c0e0efe9315b37224d5b7e724f4c0e9b0eecca07",
+      "size": 2756345
+    },
+    "manifest": {
+      "features": [
+        {
+          "name": "android.software.managed_users"
+        }
+      ],
+      "signer": {
+        "sha256": [
+          "2d4837134f3519a11d104630ed42a4a795f4ab2327e1c9899cbebfbf89aba483"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.REQUEST_INSTALL_PACKAGES"
+        },
+        {
+          "name": "android.permission.REQUEST_DELETE_PACKAGES"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED"
+        },
+        {
+          "maxSdkVersion": 25,
+          "name": "com.android.launcher.permission.INSTALL_SHORTCUT"
+        },
+        {
+          "name": "android.permission.MANAGE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.SYSTEM_ALERT_WINDOW"
+        },
+        {
+          "name": "android.permission.PACKAGE_USAGE_STATS"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.NFC"
+        },
+        {
+          "name": "net.typeblog.shelter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 24,
+        "targetSdkVersion": 34
+      },
+      "versionCode": 445,
+      "versionName": "1.9.1"
+    },
+    "src": {
+      "name": "/net.typeblog.shelter_445_src.tar.gz",
+      "sha256": "de065eb4f4409947b3fd1f9f30c9eaad9f59513df27e9ec1042bbd10196643ee",
+      "size": 1187952
+    }
+  }
+}

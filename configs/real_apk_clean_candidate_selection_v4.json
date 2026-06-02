@@ -1,0 +1,79 @@
+{
+  "selections": [
+    {
+      "app": "Cryptomator",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "security",
+        "cloud-storage",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.cryptomator.lite",
+      "reason": "No-native security/cloud-storage app with a non-trivial APK size; likely to expose richer AndroidX/Kotlin Maven evidence.",
+      "slug": "cryptomator-lite",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Daily Dozen",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "health",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.nutritionfacts.dailydozen",
+      "reason": "No-native health app with source tarball metadata and moderate dependency surface; useful as another clean/non-sparse candidate.",
+      "slug": "daily-dozen",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Privacy Browser",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "browser",
+        "security",
+        "source-linked"
+      ],
+      "package_name": "com.stoutner.privacybrowser.standard",
+      "reason": "No-native browser/security app with source tarball metadata; tests a different app family without native library claims.",
+      "slug": "privacy-browser",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "MoneyWallet",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "finance",
+        "older-profile",
+        "source-linked"
+      ],
+      "package_name": "com.oriondev.moneywallet",
+      "reason": "No-native finance app that may expose older dependency/version-band behavior while still avoiding native/toolchain blockers.",
+      "slug": "moneywallet",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Easy Xkcd",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "reader",
+        "source-linked"
+      ],
+      "package_name": "de.tap.easy_xkcd",
+      "reason": "No-native reader app with source tarball metadata; useful as a compact candidate if it emits more than sparse Maven evidence.",
+      "slug": "easy-xkcd",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    }
+  ]
+}

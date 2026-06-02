@@ -1,0 +1,153 @@
+{
+  "apk_path": "data/test_apks/real/jitsi-meet/jitsi-meet.apk",
+  "apk_sha256": "72aab4912b08431a2340fc1fb1f181be3a07e8b7ac607e0bb9e4c3814c2e4248",
+  "apk_size": 19461610,
+  "dex_files": [
+    "classes.dex",
+    "classes2.dex"
+  ],
+  "forensic_summary": {
+    "extraction_risk": "low",
+    "indicators": [
+      {
+        "code": "native-heavy",
+        "detail": "APK contains 13 native libraries.",
+        "severity": "info"
+      }
+    ],
+    "native_abis": [
+      "x86_64"
+    ],
+    "native_library_count": 13,
+    "nonstandard_dex_files": [],
+    "standard_dex_files": [
+      "classes.dex",
+      "classes2.dex"
+    ],
+    "zip_entries": 1851
+  },
+  "has_multidex": true,
+  "manifest_metadata": {
+    "min_sdk": "26",
+    "package_name": "org.jitsi.meet",
+    "parse_error": null,
+    "parse_status": "parsed",
+    "permissions": [
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.ACCESS_WIFI_STATE",
+      "android.permission.BLUETOOTH",
+      "android.permission.CAMERA",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
+      "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+      "android.permission.INTERNET",
+      "android.permission.MANAGE_OWN_CALLS",
+      "android.permission.MODIFY_AUDIO_SETTINGS",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.READ_CALENDAR",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.WAKE_LOCK",
+      "android.permission.WRITE_CALENDAR",
+      "org.jitsi.meet.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "target_sdk": "35",
+    "version_code": "26000004",
+    "version_name": "26.0.0"
+  },
+  "manifest_present": true,
+  "native_libraries": [
+    {
+      "abi": "x86_64",
+      "filename": "libc++_shared.so",
+      "path": "lib/x86_64/libc++_shared.so",
+      "sha256": "0a2c7afa35b183fdd5a3cb20e2080ad54cbea06c2a4f0bc8f122cb7d1e9e0b9f",
+      "size": 1252080
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libfbjni.so",
+      "path": "lib/x86_64/libfbjni.so",
+      "sha256": "a51410366a0394e05bc04052cfb237c70dcf7d4d53a56e1d00a041436cb0b653",
+      "size": 172952
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libhermes.so",
+      "path": "lib/x86_64/libhermes.so",
+      "sha256": "87c6a2062a00b89aab717f8878860c6b3e2c9e6eebefa7be05dd24789af09cb3",
+      "size": 2273768
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libhermestooling.so",
+      "path": "lib/x86_64/libhermestooling.so",
+      "sha256": "61a0f3fc8f164ee29f7559e65d87b438094f1fc6b0dd5521533c30503a0f7d46",
+      "size": 145664
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libimagepipeline.so",
+      "path": "lib/x86_64/libimagepipeline.so",
+      "sha256": "1d5fa5753d6bdaf598c302fe5f73cbc150a3653425a5aafc46ed93b416143417",
+      "size": 8464
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libjingle_peerconnection_so.so",
+      "path": "lib/x86_64/libjingle_peerconnection_so.so",
+      "sha256": "a7cca25a989b396de6ca536e3b19c706926f78b590c9993a8992f1041c952ba7",
+      "size": 12751280
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libjsctooling.so",
+      "path": "lib/x86_64/libjsctooling.so",
+      "sha256": "28e4f2e2f2d7071b4ba4b9661e75521edb335e0f3a255f8e16416a1132466288",
+      "size": 129520
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libjsi.so",
+      "path": "lib/x86_64/libjsi.so",
+      "sha256": "41589d8fd79d406b1acd8bae18c0384c7283a4e8ca9465818d2c3e9279c3e946",
+      "size": 416624
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libnative-filters.so",
+      "path": "lib/x86_64/libnative-filters.so",
+      "sha256": "a6b9d9433a1369bd76ec831196245eea8ae488fcb8a85c254b34fd6d0f6886c4",
+      "size": 30528
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libnative-imagetranscoder.so",
+      "path": "lib/x86_64/libnative-imagetranscoder.so",
+      "sha256": "ff7c8b0975e7909ee38765e2487da96773dee5457bb464dd3ae2a0eb86af2a6e",
+      "size": 720432
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libreactnative.so",
+      "path": "lib/x86_64/libreactnative.so",
+      "sha256": "7729a4994d0535d21c8fe6ef29575fbf42d0a8309a236cc36d70e1b485a7c878",
+      "size": 6415008
+    },
+    {
+      "abi": "x86_64",
+      "filename": "librnscreens.so",
+      "path": "lib/x86_64/librnscreens.so",
+      "sha256": "a1c88c8e715499daa0859506f15ba69fca4a56944a5f9fbf06272f5032c5f0e2",
+      "size": 60544
+    },
+    {
+      "abi": "x86_64",
+      "filename": "librnworklets.so",
+      "path": "lib/x86_64/librnworklets.so",
+      "sha256": "3820706f9ec3896cf2efad04c39754c160dd282bee0b50af9854265658aadbb7",
+      "size": 527160
+    }
+  ],
+  "resources_arsc_present": true
+}

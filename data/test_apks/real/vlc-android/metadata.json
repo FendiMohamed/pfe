@@ -1,0 +1,105 @@
+{
+  "apk_path": "data/test_apks/real/vlc-android/vlc-android.apk",
+  "apk_sha256": "355ff246a0348c094a256926ea31cbec92701a2faca3d41d49170798c550ee3b",
+  "apk_size": 47990842,
+  "dex_files": [
+    "classes.dex",
+    "classes2.dex",
+    "classes3.dex",
+    "classes4.dex",
+    "classes5.dex",
+    "classes6.dex"
+  ],
+  "forensic_summary": {
+    "extraction_risk": "low",
+    "indicators": [],
+    "native_abis": [
+      "arm64-v8a"
+    ],
+    "native_library_count": 4,
+    "nonstandard_dex_files": [],
+    "standard_dex_files": [
+      "classes.dex",
+      "classes2.dex",
+      "classes3.dex",
+      "classes4.dex",
+      "classes5.dex",
+      "classes6.dex"
+    ],
+    "zip_entries": 2618
+  },
+  "has_multidex": true,
+  "manifest_metadata": {
+    "min_sdk": "17",
+    "package_name": "org.videolan.vlc",
+    "parse_error": null,
+    "parse_status": "parsed",
+    "permissions": [
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.BLUETOOTH",
+      "android.permission.BLUETOOTH_CONNECT",
+      "android.permission.CHANGE_NETWORK_STATE",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+      "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "android.permission.FOREGROUND_SERVICE_SPECIAL_USE",
+      "android.permission.INTERNET",
+      "android.permission.MANAGE_EXTERNAL_STORAGE",
+      "android.permission.MODIFY_AUDIO_SETTINGS",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.READ_LOGS",
+      "android.permission.READ_MEDIA_AUDIO",
+      "android.permission.READ_MEDIA_IMAGES",
+      "android.permission.READ_MEDIA_VIDEO",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.SYSTEM_ALERT_WINDOW",
+      "android.permission.VIBRATE",
+      "android.permission.WAKE_LOCK",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "android.permission.WRITE_SETTINGS",
+      "com.android.providers.tv.permission.READ_EPG_DATA",
+      "com.android.providers.tv.permission.WRITE_EPG_DATA",
+      "org.videolan.vlc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+      "org.videolan.vlc.MEDIA",
+      "org.videolan.vlc.permission.BIND_DATA_CONSUMER",
+      "org.videolan.vlc.permission.READ_EXTENSION_DATA"
+    ],
+    "target_sdk": "36",
+    "version_code": "13070106",
+    "version_name": "3.7.1"
+  },
+  "manifest_present": true,
+  "native_libraries": [
+    {
+      "abi": "arm64-v8a",
+      "filename": "libc++_shared.so",
+      "path": "lib/arm64-v8a/libc++_shared.so",
+      "sha256": "cd61762848882a16c8244c964a6f396c0caa0b440588a210ce9cc4ab0e6d9f0c",
+      "size": 1253544
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libmla.so",
+      "path": "lib/arm64-v8a/libmla.so",
+      "sha256": "d271097f8b4ecc3376a4a6bebf0cf3a88df4ee233a04bff5dc6641706be2fddd",
+      "size": 5304024
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libvlc.so",
+      "path": "lib/arm64-v8a/libvlc.so",
+      "sha256": "5155c767d8d28294296f358bffb890ac537df99eb9a5cc26931bbeb08b5b2ad4",
+      "size": 42827720
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libvlcjni.so",
+      "path": "lib/arm64-v8a/libvlcjni.so",
+      "sha256": "93d40e1fb2b2cefdbc1a01c3494eef11883be00cb33eaa3d29044f93742081fb",
+      "size": 94296
+    }
+  ],
+  "resources_arsc_present": true
+}

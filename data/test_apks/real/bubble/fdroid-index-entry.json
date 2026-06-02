@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "added": 1634860800000,
+    "authorName": "woheller69",
+    "categories": [
+      "Science & Education"
+    ],
+    "description": {
+      "de-DE": "Mit Bubble k\u00f6nnen Sie Winkel und Neigungen messen.\n\nRichten Sie einfach eine der vier Seiten Ihres Telefons an einem Objekt aus oder legen Sie es auf eine ebene Oberfl\u00e4che, um seine Ausrichtung zu bestimmen.\n\nEin Lineal in cm und inch ist ebenfalls verf\u00fcgbar.\n\nErleben Sie eine benutzerfreundliche und werbefreie L\u00f6sung, die keine Berechtigungen erfordert.\n\n",
+      "en-US": "With Bubble you can measure angles and inclination.\n\nSimply align one of your phone's four sides with an object or place it on a level surface to determine its orientation.\n\nA ruler in cm and inches is also available.\n\nExperience a user-friendly and ad-free solution with no permissions required.\n",
+      "ru": "\u0421 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u041f\u0443\u0437\u044b\u0440\u044c\u043a\u0430 \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0438\u0437\u043c\u0435\u0440\u044f\u0442\u044c \u0443\u0433\u043b\u044b \u0438 \u043d\u0430\u043a\u043b\u043e\u043d.\n\n\u041f\u0440\u043e\u0441\u0442\u043e \u0441\u043e\u0432\u043c\u0435\u0441\u0442\u0438\u0442\u0435 \u043e\u0434\u043d\u0443 \u0438\u0437 \u0447\u0435\u0442\u044b\u0440\u0435\u0445 \u0441\u0442\u043e\u0440\u043e\u043d \u0432\u0430\u0448\u0435\u0433\u043e \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0430 \u0441 \u043e\u0431\u044a\u0435\u043a\u0442\u043e\u043c \u0438\u043b\u0438 \u043f\u043e\u043b\u043e\u0436\u0438\u0442\u0435 \u0435\u0433\u043e \u043d\u0430 \u0440\u043e\u0432\u043d\u0443\u044e \u043f\u043e\u0432\u0435\u0440\u0445\u043d\u043e\u0441\u0442\u044c \u0447\u0442\u043e\u0431\u044b \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0438\u0442\u044c \u0435\u0433\u043e \u043e\u0440\u0438\u0435\u043d\u0442\u0430\u0446\u0438\u044e.\n\n\u0422\u0430\u043a\u0436\u0435 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u0430 \u043b\u0438\u043d\u0435\u0439\u043a\u0430 \u0432 \u0441\u0430\u043d\u0442\u0438\u043c\u0435\u0442\u0440\u0430\u0445 \u0438 \u0434\u044e\u0439\u043c\u0430\u0445.\n",
+      "tr-TR": "Bubble ile a\u00e7\u0131lar\u0131 ve e\u011fimi \u00f6l\u00e7ebilirsiniz.\n\nY\u00f6n\u00fcn\u00fc belirlemek i\u00e7in telefonunuzun d\u00f6rt kenar\u0131ndan birini bir nesneyle hizalaman\u0131z veya d\u00fcz bir y\u00fczeye yerle\u015ftirmeniz yeterlidir.\n\nAyr\u0131ca cm ve in\u00e7 cinsinden bir cetvel de mevcuttur.\n\n\u0130zin gerektirmeyen, kullan\u0131c\u0131 dostu ve reklams\u0131z bir \u00e7\u00f6z\u00fcm\u00fc deneyimleyin.\n"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/org.woheller69.level/en-US/icon_qdaodZGMhv0yefCJPnfxpKoIR9zwO8iO_jasafDMBXM=.png",
+        "sha256": "a9d6a875918c86fd3279f0893e77f1a4aa0847dcf03bc88efe36ac69f0cc0573",
+        "size": 10934
+      }
+    },
+    "issueTracker": "https://github.com/woheller69/level/issues",
+    "lastUpdated": 1774820776827,
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "de-DE": "Wasserwaage",
+      "en-US": "Bubble",
+      "ru": "\u041f\u0443\u0437\u044b\u0440\u0451\u043a",
+      "tr-TR": "Bubble"
+    },
+    "preferredSigner": "234ebfa74fee9820292966977748b6d95cd75b4fcb1eed381d8648b36e14f5ca",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/org.woheller69.level/en-US/phoneScreenshots/Bubble1.png",
+            "sha256": "e63cdc16d375e1cdcb0dfdc9cbb64b2c222d49345930004557f391a6cc5868f4",
+            "size": 37894
+          },
+          {
+            "name": "/org.woheller69.level/en-US/phoneScreenshots/Bubble2.png",
+            "sha256": "d689453b7c40270e09886f940ba22f9186288c2baf9fb225691b07418335d814",
+            "size": 73973
+          },
+          {
+            "name": "/org.woheller69.level/en-US/phoneScreenshots/Bubble3.png",
+            "sha256": "2a6971a40a01307bd703e8f429301d2ca24ce8c18698891cb9470d8aa2176408",
+            "size": 27947
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/woheller69/level",
+    "summary": {
+      "de-DE": "Wasserwaage und Lineal",
+      "en-US": "Spirit level and ruler",
+      "ru": "\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442 \u0443\u0440\u043e\u0432\u043d\u044f (\u0432\u0430\u0442\u0435\u0440\u043f\u0430\u0441) \u0438 \u043b\u0438\u043d\u0435\u0439\u043a\u0430",
+      "tr-TR": "Su terazisi ve cetvel"
+    }
+  },
+  "version": {
+    "added": 1774820776827,
+    "file": {
+      "ipfsCIDv1": "bafybeiea24w3vi75bmk74dpdpyhbrx2eooffabtdflzcmfhq3kgwlednb4",
+      "name": "/org.woheller69.level_34.apk",
+      "sha256": "fa8028c4d7323e64757486baba1eeaf6e3c7f9ff4349ae84b0d88fe2a8f5428c",
+      "size": 1333966
+    },
+    "manifest": {
+      "features": [
+        {
+          "name": "android.hardware.sensor.accelerometer"
+        }
+      ],
+      "signer": {
+        "sha256": [
+          "234ebfa74fee9820292966977748b6d95cd75b4fcb1eed381d8648b36e14f5ca"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "org.woheller69.level.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 16,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 34,
+      "versionName": "3.4"
+    },
+    "src": {
+      "name": "/org.woheller69.level_34_src.tar.gz",
+      "sha256": "064cf479b4bd1ace0f076f4b45c99df7519df9ebb1658cf999d62b4b96881f29",
+      "size": 262928
+    },
+    "whatsNew": {
+      "de-DE": "Fehlerbehebung\n",
+      "en-US": "Bugfix\n"
+    }
+  }
+}

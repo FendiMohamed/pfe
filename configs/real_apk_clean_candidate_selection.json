@@ -1,0 +1,49 @@
+{
+  "selections": [
+    {
+      "app": "Foxy Droid",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "app-store-client",
+        "androidx-likely",
+        "source-linked"
+      ],
+      "package_name": "nya.kitsunyan.foxydroid",
+      "reason": "No-native F-Droid app-store client with source tarball metadata; likely to emit non-sparse Java/Kotlin Maven evidence.",
+      "slug": "foxy-droid",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "WebRadio",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "network-media",
+        "androidx-likely",
+        "source-linked"
+      ],
+      "package_name": "starcom.snd",
+      "reason": "Small no-native radio/network app with source tarball metadata; useful as a low-friction clean/non-sparse candidate if the report emits Maven components.",
+      "slug": "webradio",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Equate",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "utility",
+        "androidx-likely",
+        "source-linked"
+      ],
+      "package_name": "com.llamacorp.equate",
+      "reason": "No-native unit-converter app with source tarball metadata; included as a compact Java/Kotlin control candidate.",
+      "slug": "equate",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+﻿{
+  "apk_path": "data/test_apks/real/k9-thunderbird-android/k9-thunderbird-android.apk",
+  "apk_sha256": "1381c04bd9619749ed965c9f26fe8de8196e2b0dbb8a4eda345f99d19dfed43b",
+  "apk_size": 9936080,
+  "dex_files": [
+    "classes.dex",
+    "classes2.dex"
+  ],
+  "forensic_summary": {
+    "extraction_risk": "low",
+    "indicators": [],
+    "native_abis": [
+      "arm64-v8a",
+      "armeabi-v7a",
+      "x86",
+      "x86_64"
+    ],
+    "native_library_count": 8,
+    "nonstandard_dex_files": [],
+    "standard_dex_files": [
+      "classes.dex",
+      "classes2.dex"
+    ],
+    "zip_entries": 1087
+  },
+  "has_multidex": true,
+  "manifest_metadata": {
+    "min_sdk": "23",
+    "package_name": "com.fsck.k9",
+    "parse_error": null,
+    "parse_status": "parsed",
+    "permissions": [
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.CAMERA",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+      "android.permission.FOREGROUND_SERVICE_SPECIAL_USE",
+      "android.permission.INTERNET",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.READ_CONTACTS",
+      "android.permission.READ_SYNC_SETTINGS",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.SCHEDULE_EXACT_ALARM",
+      "android.permission.USE_BIOMETRIC",
+      "android.permission.USE_FINGERPRINT",
+      "android.permission.VIBRATE",
+      "android.permission.WAKE_LOCK",
+      "com.fsck.k9.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "target_sdk": "35",
+    "version_code": "39035",
+    "version_name": "18.0"
+  },
+  "manifest_present": true,
+  "native_libraries": [
+    {
+      "abi": "arm64-v8a",
+      "filename": "libandroidx.graphics.path.so",
+      "path": "lib/arm64-v8a/libandroidx.graphics.path.so",
+      "sha256": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+      "size": 10096
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libdatastore_shared_counter.so",
+      "path": "lib/arm64-v8a/libdatastore_shared_counter.so",
+      "sha256": "83075d475735b5c095534d52365a8d4d983b48b48604dc0e2121a91e97245030",
+      "size": 54304
+    },
+    {
+      "abi": "armeabi-v7a",
+      "filename": "libandroidx.graphics.path.so",
+      "path": "lib/armeabi-v7a/libandroidx.graphics.path.so",
+      "sha256": "41399eba6fc2a60f6f14642375c1824f3cf25eb8fec7397d753730a3ceda3e2b",
+      "size": 7252
+    },
+    {
+      "abi": "armeabi-v7a",
+      "filename": "libdatastore_shared_counter.so",
+      "path": "lib/armeabi-v7a/libdatastore_shared_counter.so",
+      "sha256": "e52559ce38cc3a60c70772dfa418b8348682f6adba64e964fdc57585e1fa2d3a",
+      "size": 53412
+    },
+    {
+      "abi": "x86",
+      "filename": "libandroidx.graphics.path.so",
+      "path": "lib/x86/libandroidx.graphics.path.so",
+      "sha256": "eb0570b41fd3bff25d8204a967c03bd7550719e768b791f680cc40cbe35f29af",
+      "size": 9284
+    },
+    {
+      "abi": "x86",
+      "filename": "libdatastore_shared_counter.so",
+      "path": "lib/x86/libdatastore_shared_counter.so",
+      "sha256": "6e1db98a8177050ca3bb3920e03f2a597c109b02e610bc6138755477bcc9da34",
+      "size": 52852
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libandroidx.graphics.path.so",
+      "path": "lib/x86_64/libandroidx.graphics.path.so",
+      "sha256": "4e56c996f13670e70082658de7880c4020eabf4f25e43387f88ed78a713fc9f0",
+      "size": 10760
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libdatastore_shared_counter.so",
+      "path": "lib/x86_64/libdatastore_shared_counter.so",
+      "sha256": "ae83eabf68d35b80b3f63939d6d5bfbb4dc08c9f9a9f85ef8b5d7621f46bd547",
+      "size": 53840
+    }
+  ],
+  "resources_arsc_present": true
+}

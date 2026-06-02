@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "added": 1592611200000,
+    "authorEmail": "kitsunyan@airmail.cc",
+    "authorName": "Foxy McFoxtail",
+    "categories": [
+      "App Store & Updater",
+      "System"
+    ],
+    "description": {
+      "en-US": "Unofficial F-Droid client in the style of the classic one.\n\nJump over the lazy dog, manage repositories, and install software quickly. No privileged extension, root installation, or sharing local repositories nearby.\n\nFeatures:\n\n* Classic F-Droid style\n* No cards or inappropriate animations\n* Fast repository syncing\n* Standard Android components and minimal dependencies\n"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/icons/nya.kitsunyan.foxydroid.4.png",
+        "sha256": "8dae530888fedc14e1c08ed392ddc6a0c0c7a076d26d1ca8ab82405f54b0ddc0",
+        "size": 2233
+      }
+    },
+    "issueTracker": "https://github.com/kitsunyan/foxy-droid/issues",
+    "lastUpdated": 1597190400000,
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "en-US": "Foxy Droid"
+    },
+    "preferredSigner": "60e54d9c628c1a5512616900ac991c541244a8ec661f4bd128f7848f16582a5c",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/nya.kitsunyan.foxydroid/en-US/phoneScreenshots/1.png",
+            "sha256": "9b50566c3cc5a21dc17e17b5c29364ad16016705562d7997c21a54aef590f385",
+            "size": 65142
+          },
+          {
+            "name": "/nya.kitsunyan.foxydroid/en-US/phoneScreenshots/2.png",
+            "sha256": "4e482076ecf260e2ddaa7b012919bdfd6d68b90d85da3ce89acde99a0e15ed25",
+            "size": 163313
+          },
+          {
+            "name": "/nya.kitsunyan.foxydroid/en-US/phoneScreenshots/3.png",
+            "sha256": "3ca11ce8a5610c3089844fdcdaba297546d8db8124cd70bc203a4523478fdaff",
+            "size": 138109
+          },
+          {
+            "name": "/nya.kitsunyan.foxydroid/en-US/phoneScreenshots/4.png",
+            "sha256": "d532979cdb56dcd7e6bbec942ff5d6b17f702633ed4a79c83734265480ace6ee",
+            "size": 66088
+          },
+          {
+            "name": "/nya.kitsunyan.foxydroid/en-US/phoneScreenshots/5.png",
+            "sha256": "4d4ba47dd438e62f6c9f101fef1bd1c6cb5213e4991bf992c6a965f6b1165b78",
+            "size": 140719
+          },
+          {
+            "name": "/nya.kitsunyan.foxydroid/en-US/phoneScreenshots/6.png",
+            "sha256": "bdac21d20c5d2999f83e6caa709ded5876553c2d2a71950f63a9dbde6a57aadf",
+            "size": 124135
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/kitsunyan/foxy-droid",
+    "summary": {
+      "en-US": "Yet another F-Droid client"
+    }
+  },
+  "version": {
+    "added": 1597190400000,
+    "file": {
+      "ipfsCIDv1": "bafybeidk7gp2skouws7moihqrep5i4rxxfkdxfwpizraxlslscfm55hg3u",
+      "name": "/nya.kitsunyan.foxydroid_4.apk",
+      "sha256": "09205b109cdac34845385e0738731f27eaf2bec8af29191eae66587fcfc499bc",
+      "size": 1061073
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "60e54d9c628c1a5512616900ac991c541244a8ec661f4bd128f7848f16582a5c"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.REQUEST_INSTALL_PACKAGES"
+        },
+        {
+          "name": "android.permission.REQUEST_DELETE_PACKAGES"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 29
+      },
+      "versionCode": 4,
+      "versionName": "1.3"
+    },
+    "src": {
+      "name": "/nya.kitsunyan.foxydroid_4_src.tar.gz",
+      "sha256": "3e248b9810751b5c38190a4b0e0210a322c4cfbd4dd03abe3cf85ae0b092881c",
+      "size": 662672
+    },
+    "whatsNew": {
+      "en-US": "* Full text search\n* Search results ranking\n* Allow to view packages per repository\n* Automatic day/night theme for Android 10\n"
+    }
+  }
+}

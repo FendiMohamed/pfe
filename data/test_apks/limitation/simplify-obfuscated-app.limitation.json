@@ -1,0 +1,52 @@
+{
+  "apk_path": "data/test_apks/limitation/simplify-obfuscated-app/simplify-obfuscated-app.apk",
+  "apk_sha256": "a8d5d044fb78c5b3c01d53c659e3dac09149442c58c8c34f8d0be798240016d1",
+  "builder": "downloaded-public-sample",
+  "dataset_layer": "limitation",
+  "validation_level": "L5 limitation sample",
+  "metrics_allowed": [
+    "forensic warning quality",
+    "limitation behavior",
+    "candidate confidence behavior"
+  ],
+  "package_name": "org.cf.obfuscated",
+  "download_source": "https://raw.githubusercontent.com/CalebFenton/simplify/master/simplify/obfuscated-app.apk",
+  "source_type": "public obfuscated sample APK from Simplify repository",
+  "source_validation_status": "limitation only; no Gradle dependency tree",
+  "release_era": "research sample",
+  "build_type": "public obfuscated Android sample",
+  "fixture_mode": "real obfuscated sample APK",
+  "primary_language": "Java/Android",
+  "language": "Java/Android",
+  "framework_type": "Android obfuscation sample",
+  "framework_or_library_type": "control-flow/string-obfuscation sample",
+  "main_library_families": [
+    "AndroidX candidate evidence only"
+  ],
+  "androidx_jetpack_usage": "candidate evidence emitted by matcher; not source-confirmed",
+  "kotlin_kmp_artifacts": "none observed",
+  "expected_third_party_dependency_count": 0,
+  "transitive_dependency_complexity": "unknown",
+  "overlapping_artifact_families": "unknown",
+  "known_vulnerable_dependency_expected": "unknown",
+  "variant": "simplify-obfuscated-app",
+  "r8_used": "unknown",
+  "r8_proguard_status": "unknown; repository documents the APK as obfuscated",
+  "r8_mode": "unknown",
+  "obfuscation": "public obfuscated APK sample used by the Simplify deobfuscator project",
+  "obfuscation_level": "medium",
+  "obfuscation_details": "Normal APK/DEX layout, but report diagnostics show medium obfuscation risk driven by low-confidence candidate ratio, structural-over-package evidence, and large class/method coverage gaps.",
+  "minification_evidence": "Repository sample purpose plus APK-side report diagnostics",
+  "resource_shrinking": "not detected",
+  "dynamic_loading_indicators": "none detected; standard classes.dex layout",
+  "expected_behavior": {
+    "accuracy_claim": "none",
+    "forensic_indicators": [
+      "medium-obfuscation-risk",
+      "class-method-coverage-loss",
+      "low-confidence-candidate-ratio",
+      "structural-over-package-evidence"
+    ],
+    "reporting_expectation": "The MVP may emit low-confidence Maven candidates, but this sample must remain limitation evidence because no source dependency tree is available and the APK is explicitly obfuscated."
+  }
+}

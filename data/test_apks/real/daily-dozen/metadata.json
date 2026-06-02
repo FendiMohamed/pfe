@@ -1,0 +1,61 @@
+{
+  "apk": {
+    "expected_sha256": "d85ac3c4e04a99629e84e9e91bdc4dcb2680a1db3477a23b966800b91fa304e4",
+    "index_size": 23383298,
+    "path": "data/test_apks/real/daily-dozen/daily-dozen.apk",
+    "sha256": "d85ac3c4e04a99629e84e9e91bdc4dcb2680a1db3477a23b966800b91fa304e4",
+    "size": 23383298,
+    "url": "https://f-droid.org/repo/org.nutritionfacts.dailydozen_93.apk"
+  },
+  "app": "Daily Dozen",
+  "categories": [
+    "Diet",
+    "Sports & Health"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "health",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/org.nutritionfacts.dailydozen/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "org.nutritionfacts.dailydozen",
+  "proof_status": "report-generated",
+  "reason": "No-native health app with source tarball metadata and moderate dependency surface; useful as another clean/non-sparse candidate.",
+  "report": {
+    "detected_component_count": 2,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v4/report-real-daily-dozen",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v4/report-real-daily-dozen/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v4/report-real-daily-dozen/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v4/report-real-daily-dozen/sbom.cdx.json",
+    "sbom_component_count": 2,
+    "status": "ok"
+  },
+  "slug": "daily-dozen",
+  "source_repo": "https://github.com/nutritionfactsorg/daily-dozen-android",
+  "source_tarball": {
+    "sha256": "fef05394388b138874261364b8cf96e5db8ff730a78b5c7ca64e39ea73a2a45d",
+    "size": 19911576,
+    "url": "https://f-droid.org/repo/org.nutritionfacts.dailydozen_93_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 93,
+  "version_name": "28"
+}

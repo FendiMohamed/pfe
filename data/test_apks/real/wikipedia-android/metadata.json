@@ -1,0 +1,30 @@
+{
+  "apk_path": "data\\test_apks\\real\\wikipedia-android\\wikipedia-android.apk",
+  "size": 89757973,
+  "sha256": "257a76008b01960b21ffe09d4138fd63d8eb73ec388c84f0ceabf559511d893c",
+  "dex_files": [
+    "classes.dex",
+    "classes2.dex"
+  ],
+  "dex_count": 2,
+  "has_multidex": true,
+  "native_files": [
+    "lib/arm64-v8a/libandroidx.graphics.path.so",
+    "lib/arm64-v8a/libmaplibre.so",
+    "lib/armeabi-v7a/libandroidx.graphics.path.so",
+    "lib/armeabi-v7a/libmaplibre.so",
+    "lib/x86/libandroidx.graphics.path.so",
+    "lib/x86/libmaplibre.so",
+    "lib/x86_64/libandroidx.graphics.path.so",
+    "lib/x86_64/libmaplibre.so"
+  ],
+  "native_count": 8,
+  "native_abis": [
+    "arm64-v8a",
+    "armeabi-v7a",
+    "x86",
+    "x86_64"
+  ],
+  "has_manifest": true,
+  "has_resources_arsc": true
+}

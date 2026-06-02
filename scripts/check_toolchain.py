@@ -19,12 +19,19 @@ class ToolStatus:
 CLI_TOOLS = {
     "python": ["python", "--version"],
     "java": ["java", "-version"],
+    "gradle": ["gradle", "--version"],
     "apktool": ["apktool", "--version"],
     "jadx": ["jadx", "--version"],
     "d8": ["d8", "--version"],
     "trivy": ["trivy", "--version"],
     "grype": ["grype", "version"],
     "cyclonedx": ["cyclonedx", "--version"],
+    "cyclonedx-cli": ["cyclonedx-cli", "--version"],
+    "syft": ["syft", "version"],
+    "cdxgen": ["cdxgen", "--version"],
+    "node": ["node", "--version"],
+    "npm": ["npm", "--version"],
+    "dotnet": ["dotnet", "--version"],
 }
 
 PYTHON_PACKAGES = [
@@ -103,4 +110,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

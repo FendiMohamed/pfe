@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "8fa68144623e16fc72b1c187a798c25be17846ac28ab5fac59c13b2316079c4c",
+    "index_size": 8944313,
+    "path": "data/test_apks/real/andstatus/andstatus.apk",
+    "sha256": "8fa68144623e16fc72b1c187a798c25be17846ac28ab5fac59c13b2316079c4c",
+    "size": 8944313,
+    "url": "https://f-droid.org/repo/org.andstatus.app_370.apk"
+  },
+  "app": "AndStatus",
+  "categories": [
+    "Internet",
+    "Social Network"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "internet",
+    "social-network",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/org.andstatus.app/",
+  "license": "Apache-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "org.andstatus.app",
+  "proof_status": "report-generated",
+  "reason": "No-native social/internet app with a medium APK, target SDK 35, source tarball metadata, and a size profile that may yield richer emitted Maven evidence.",
+  "report": {
+    "detected_component_count": 19,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-andstatus",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-andstatus/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-andstatus/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-andstatus/sbom.cdx.json",
+    "sbom_component_count": 19,
+    "status": "ok"
+  },
+  "slug": "andstatus",
+  "source_repo": "https://github.com/andstatus/andstatus",
+  "source_tarball": {
+    "sha256": "afe8967188d40a0aeeffec7607dfcb19857aa5079def33ba137a2fa3b26ff49c",
+    "size": 12815007,
+    "url": "https://f-droid.org/repo/org.andstatus.app_370_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 370,
+  "version_name": "62.03"
+}

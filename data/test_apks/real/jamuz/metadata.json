@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "d75ce16615e2b9693c8cee1c77c608b3488ab5a0fcea5ce5263b3c9959e2bd3e",
+    "index_size": 8054008,
+    "path": "data/test_apks/real/jamuz/jamuz.apk",
+    "sha256": "d75ce16615e2b9693c8cee1c77c608b3488ab5a0fcea5ce5263b3c9959e2bd3e",
+    "size": 8054008,
+    "url": "https://f-droid.org/repo/org.phramusca.jamuz_21.apk"
+  },
+  "app": "JaMuz",
+  "categories": [
+    "Multimedia",
+    "Online Media Player"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "internet",
+    "multimedia",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/org.phramusca.jamuz/",
+  "license": "GPL-3.0-or-later",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "org.phramusca.jamuz",
+  "proof_status": "report-generated",
+  "reason": "No-native media/internet client with target SDK 36, a balanced APK size, and a large source tarball that looks promising for non-sparse emitted Maven evidence.",
+  "report": {
+    "detected_component_count": 21,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v8/report-real-jamuz",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v8/report-real-jamuz/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v8/report-real-jamuz/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v8/report-real-jamuz/sbom.cdx.json",
+    "sbom_component_count": 21,
+    "status": "ok"
+  },
+  "slug": "jamuz",
+  "source_repo": "https://github.com/phramusca/JaMuz-Remote",
+  "source_tarball": {
+    "sha256": "21ce970f64281f295e53141a711f3a005616f7ce5e99752ad57b756730ecb5ca",
+    "size": 11684909,
+    "url": "https://f-droid.org/repo/org.phramusca.jamuz_21_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 21,
+  "version_name": "0.6.14"
+}

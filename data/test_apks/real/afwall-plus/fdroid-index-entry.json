@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "added": 1363651200000,
+    "authorEmail": "contact@portgenix.com",
+    "authorName": "portgenix",
+    "categories": [
+      "Firewall",
+      "Internet",
+      "Security"
+    ],
+    "changelog": "https://github.com/ukanth/afwall/blob/HEAD/Changelog.md",
+    "description": {
+      "en-US": "Firewall (iptables frontend), based on DroidWall which is no longer being\ndeveloped. A paid \"donate\"-version with more features it advertised within the\napp.\n\n* Import/Export Rules to external storage\n* Search Applications\n* Multiple profiles with custom names\n* Highlights system applications with custom color\n* Notify on new installations\n* VPN Support\n* Device Admin support to protect against being uninstalled\n\nRequires root: Yes. iptables must run as root."
+    },
+    "donate": [
+      "https://github.com/ukanth/afwall/wiki#making-donations"
+    ],
+    "issueTracker": "https://github.com/ukanth/afwall/issues",
+    "lastUpdated": 1772397999000,
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-US": "AFWall+"
+    },
+    "preferredSigner": "495a21da7f3bc15aab880156422b5ab255738b597e7def40d1407640116e0160",
+    "sourceCode": "https://github.com/ukanth/afwall",
+    "summary": {
+      "ar": "\u0627\u0644\u062a\u062d\u0643\u0645 \u0641\u064a \u062d\u0631\u0643\u0629 \u0645\u0631\u0648\u0631 \u0627\u0644\u0634\u0628\u0643\u0629",
+      "ba": "\u0421\u0435\u043b\u0442\u04d9\u0440 \u0442\u0440\u0430\u0444\u0438\u0433\u044b\u043d \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u043b\u04d9\u04af",
+      "ca": "Controla el tr\u00e0nsit de xarxa",
+      "cs": "\u0158\u00edzen\u00ed s\u00ed\u0165ov\u00e9ho provozu",
+      "de": "Netzwerkdatenverkehr kontrollieren",
+      "en-US": "Control network traffic",
+      "es": "Controla el tr\u00e1fico de la red",
+      "fr": "Contr\u00f4ler le trafic r\u00e9seau",
+      "ga": "Tr\u00e1cht l\u00edonra rialaithe",
+      "he": "\u05e9\u05dc\u05d9\u05d8\u05d4 \u05d1\u05ea\u05e2\u05d1\u05d5\u05e8\u05ea \u05d4\u05e8\u05e9\u05ea",
+      "id": "Mengontrol lalu lintas jaringan",
+      "is": "St\u00fdr\u00f0u netumfer\u00f0",
+      "it": "Controlla il traffico di rete",
+      "ja": "\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u8ee2\u9001\u3092\u5236\u5fa1",
+      "nb": "Kontroller nettverkstrafikk",
+      "pl": "Kontrola ruchu sieciowego",
+      "pt": "Controlar o tr\u00e1fego de rede",
+      "pt-BR": "Controle o tr\u00e1fego da rede",
+      "pt-PT": "Controlar o tr\u00e1fego de rede",
+      "ro": "Controlul traficului de re\u021bea",
+      "ru": "\u041a\u043e\u043d\u0442\u0440\u043e\u043b\u044c \u0441\u0435\u0442\u0435\u0432\u043e\u0433\u043e \u0442\u0440\u0430\u0444\u0438\u043a\u0430",
+      "sq": "Kontrolloni trafik rrjeti",
+      "sr": "\u041a\u043e\u043d\u0442\u0440\u043e\u043b\u0438\u0448\u0438\u0442\u0435 \u043c\u0440\u0435\u0436\u043d\u0438 \u0441\u0430\u043e\u0431\u0440\u0430\u045b\u0430\u0458",
+      "sw": "Dhibiti trafiki ya mtandao",
+      "ta": "\u0baa\u0bbf\u0ba3\u0bc8\u0baf \u0baa\u0bcb\u0b95\u0bcd\u0b95\u0bc1\u0bb5\u0bb0\u0ba4\u0bcd\u0ba4\u0bc8 \u0b95\u0b9f\u0bcd\u0b9f\u0bc1\u0baa\u0bcd\u0baa\u0b9f\u0bc1\u0ba4\u0bcd\u0ba4\u0bb5\u0bc1\u0bae\u0bcd",
+      "tr": "A\u011f trafi\u011fini denetleyin",
+      "uk": "\u041a\u043e\u043d\u0442\u0440\u043e\u043b\u044e\u0439\u0442\u0435 \u043c\u0435\u0440\u0435\u0436\u0435\u0432\u0438\u0439 \u0442\u0440\u0430\u0444\u0456\u043a",
+      "zh-CN": "\u63a7\u5236\u7f51\u7edc\u6d41\u91cf"
+    },
+    "translation": "https://crowdin.net/project/afwall",
+    "webSite": "https://github.com/ukanth/afwall/wiki"
+  },
+  "version": {
+    "added": 1772397999000,
+    "antiFeatures": {
+      "NonFreeAdd": {}
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeibww4zdes6wqudb7bqigqzxfb2e2wa6v4xl6v7ufqwsu3xnjuzlrq",
+      "name": "/dev.ukanth.ufirewall_20260301.apk",
+      "sha256": "243de7e55695f199e32241037be404cb5c9bf915cbedf1fc4b678ed7be31eb8d",
+      "size": 13081820
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "495a21da7f3bc15aab880156422b5ab255738b597e7def40d1407640116e0160"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "maxSdkVersion": 28,
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_WIFI_STATE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+        },
+        {
+          "name": "android.permission.BLUETOOTH"
+        },
+        {
+          "name": "android.permission.BLUETOOTH_ADMIN"
+        },
+        {
+          "name": "android.permission.USE_FINGERPRINT"
+        },
+        {
+          "name": "android.permission.USE_BIOMETRIC"
+        },
+        {
+          "name": "android.permission.BLUETOOTH_CONNECT"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "dev.ukanth.ufirewall.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "maxSdkVersion": 28,
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 20260301,
+      "versionName": "4.0.3"
+    },
+    "src": {
+      "name": "/dev.ukanth.ufirewall_20260301_src.tar.gz",
+      "sha256": "2887d5727b79ecee5d492f38cae3c6bf5e50d9ec7c1807cefd1c8cf62f0049e6",
+      "size": 1887565
+    }
+  }
+}

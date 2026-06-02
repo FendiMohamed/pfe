@@ -1,0 +1,63 @@
+{
+  "apk": {
+    "expected_sha256": "6b32bf73dac5440558026e022e41e81a9fecdac52215b0966ed49c9c9e0274ce",
+    "index_size": 18540302,
+    "path": "data/test_apks/real/yetcalc/yetcalc.apk",
+    "sha256": "6b32bf73dac5440558026e022e41e81a9fecdac52215b0966ed49c9c9e0274ce",
+    "size": 18540302,
+    "url": "https://f-droid.org/repo/yetzio.yetcalc_24.apk"
+  },
+  "app": "yetCalc",
+  "categories": [
+    "Calculator",
+    "Science & Education",
+    "Unit Convertor"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "calculator",
+    "science-education",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/yetzio.yetcalc/",
+  "license": "BSD-3-Clause",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "yetzio.yetcalc",
+  "proof_status": "report-generated",
+  "reason": "No-native modern calculator/unit-converter app with source tarball metadata and a non-trivial APK size; candidate for clean non-sparse Maven evidence.",
+  "report": {
+    "detected_component_count": 17,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v5/report-real-yetcalc",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v5/report-real-yetcalc/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v5/report-real-yetcalc/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v5/report-real-yetcalc/sbom.cdx.json",
+    "sbom_component_count": 17,
+    "status": "ok"
+  },
+  "slug": "yetcalc",
+  "source_repo": "https://github.com/Yet-Zio/yetCalc",
+  "source_tarball": {
+    "sha256": "1beca734acfb2e056e295439cc14eaceb4de8b705bb4bf9284380f5802e623a6",
+    "size": 6229782,
+    "url": "https://f-droid.org/repo/yetzio.yetcalc_24_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 24,
+  "version_name": "2.0.8"
+}

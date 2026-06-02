@@ -1,0 +1,149 @@
+﻿{
+  "apk_path": "data/test_apks/real/termux/termux.apk",
+  "apk_sha256": "fdd476982cd74f2f00aac12d3683b1fa260a0b2d146411b94e09d773be3a7b56",
+  "apk_size": 114920926,
+  "dex_files": [
+    "classes.dex",
+    "classes2.dex"
+  ],
+  "forensic_summary": {
+    "extraction_risk": "low",
+    "indicators": [
+      {
+        "code": "native-heavy",
+        "detail": "APK contains 12 native libraries.",
+        "severity": "info"
+      }
+    ],
+    "native_abis": [
+      "arm64-v8a",
+      "armeabi-v7a",
+      "x86",
+      "x86_64"
+    ],
+    "native_library_count": 12,
+    "nonstandard_dex_files": [],
+    "standard_dex_files": [
+      "classes.dex",
+      "classes2.dex"
+    ],
+    "zip_entries": 745
+  },
+  "has_multidex": true,
+  "manifest_metadata": {
+    "min_sdk": "24",
+    "package_name": "com.termux",
+    "parse_error": null,
+    "parse_status": "parsed",
+    "permissions": [
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.DUMP",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.INTERNET",
+      "android.permission.MANAGE_EXTERNAL_STORAGE",
+      "android.permission.PACKAGE_USAGE_STATS",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.READ_LOGS",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+      "android.permission.REQUEST_INSTALL_PACKAGES",
+      "android.permission.SYSTEM_ALERT_WINDOW",
+      "android.permission.VIBRATE",
+      "android.permission.WAKE_LOCK",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "android.permission.WRITE_SECURE_SETTINGS",
+      "com.android.alarm.permission.SET_ALARM"
+    ],
+    "target_sdk": "28",
+    "version_code": "1022",
+    "version_name": "0.119.0-beta.3"
+  },
+  "manifest_present": true,
+  "native_libraries": [
+    {
+      "abi": "arm64-v8a",
+      "filename": "liblocal-socket.so",
+      "path": "lib/arm64-v8a/liblocal-socket.so",
+      "sha256": "1e7be2321e0ad655ca977f1f0adf2c0a39ce12c4c37392535a8936d754be3882",
+      "size": 844496
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libtermux-bootstrap.so",
+      "path": "lib/arm64-v8a/libtermux-bootstrap.so",
+      "sha256": "6ebaabb7d42234077f0cabdcc4581d0b680077ef858e926aba915c24b58178d8",
+      "size": 29392992
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libtermux.so",
+      "path": "lib/arm64-v8a/libtermux.so",
+      "sha256": "bbabe157612c83567c85e32ad1fe30a25d0eea4464bd1d8f264e93d517d3c4cc",
+      "size": 9304
+    },
+    {
+      "abi": "armeabi-v7a",
+      "filename": "liblocal-socket.so",
+      "path": "lib/armeabi-v7a/liblocal-socket.so",
+      "sha256": "69550e0e891af69f50d6584b86cc2d81f0a8d34292ddbb75b053805b06e41d3f",
+      "size": 490788
+    },
+    {
+      "abi": "armeabi-v7a",
+      "filename": "libtermux-bootstrap.so",
+      "path": "lib/armeabi-v7a/libtermux-bootstrap.so",
+      "sha256": "86459840c62a81e67433706b4c93d2d4732514704746abf71036329b9074c441",
+      "size": 26517580
+    },
+    {
+      "abi": "armeabi-v7a",
+      "filename": "libtermux.so",
+      "path": "lib/armeabi-v7a/libtermux.so",
+      "sha256": "836bd06fdeb3db458a7b533960ba2558b86eceeded3bce56372acea5f69684c5",
+      "size": 6760
+    },
+    {
+      "abi": "x86",
+      "filename": "liblocal-socket.so",
+      "path": "lib/x86/liblocal-socket.so",
+      "sha256": "31b6f056173ac4ec1cdeda1f558c34648ae34ab1d4e7c938d82390ad567b3ec3",
+      "size": 837644
+    },
+    {
+      "abi": "x86",
+      "filename": "libtermux-bootstrap.so",
+      "path": "lib/x86/libtermux-bootstrap.so",
+      "sha256": "b9eb2a4b3acfb83a661ca363e4e70949f60bee942473d05438f42533d35a9991",
+      "size": 28649312
+    },
+    {
+      "abi": "x86",
+      "filename": "libtermux.so",
+      "path": "lib/x86/libtermux.so",
+      "sha256": "0b279fb606e887fffb2c2195078937438f867b8d77b72b47cec5ad4270cb63f8",
+      "size": 7628
+    },
+    {
+      "abi": "x86_64",
+      "filename": "liblocal-socket.so",
+      "path": "lib/x86_64/liblocal-socket.so",
+      "sha256": "3535d9eb1bf83585a4afbd924c1a3a73e134b09f94c3d8925c18e65a3fb2bc64",
+      "size": 885992
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libtermux-bootstrap.so",
+      "path": "lib/x86_64/libtermux-bootstrap.so",
+      "sha256": "54d1beeb476c0a07355cc2a74b41a974e115343b245a907e1886733065fd8af7",
+      "size": 29476832
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libtermux.so",
+      "path": "lib/x86_64/libtermux.so",
+      "sha256": "53f0b10a9f07f24a60328348f8d465191b49e8c61d1f64f38b6d08fdae9b76f2",
+      "size": 9496
+    }
+  ],
+  "resources_arsc_present": true
+}

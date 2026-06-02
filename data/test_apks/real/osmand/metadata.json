@@ -1,0 +1,126 @@
+﻿{
+  "apk_path": "data/test_apks/real/osmand/osmand.apk",
+  "apk_sha256": "27f1eb82d288a9939b7c0bdd0fb94f78749824ffc753d32d421e01cbe487e5e0",
+  "apk_size": 162183115,
+  "dex_files": [
+    "classes.dex",
+    "classes2.dex",
+    "classes3.dex",
+    "classes4.dex",
+    "classes5.dex",
+    "classes6.dex",
+    "classes7.dex",
+    "classes8.dex"
+  ],
+  "forensic_summary": {
+    "extraction_risk": "medium",
+    "indicators": [
+      {
+        "code": "protector-name-hint",
+        "detail": "File names contain packer/protector-like terms: assets/OsmAndCore_ResourcesBundle/map/icons/c_osmc_shell.svg.qz, assets/OsmAndCore_ResourcesBundle/map/icons/c_osmc_shell_modern.svg.qz, assets/OsmAndCore_ResourcesBundle/map/icons/c_osmc_white_shell.svg.qz, assets/OsmAndCore_ResourcesBundle/map/icons/c_osmc_white_shell_modern.svg.qz, assets/OsmAndCore_ResourcesBundle/map/icons/c_osmc_yellow_shell.svg.qz",
+        "severity": "warning"
+      }
+    ],
+    "native_abis": [
+      "arm64-v8a"
+    ],
+    "native_library_count": 6,
+    "nonstandard_dex_files": [],
+    "standard_dex_files": [
+      "classes.dex",
+      "classes2.dex",
+      "classes3.dex",
+      "classes4.dex",
+      "classes5.dex",
+      "classes6.dex",
+      "classes7.dex",
+      "classes8.dex"
+    ],
+    "zip_entries": 16740
+  },
+  "has_multidex": true,
+  "manifest_metadata": {
+    "min_sdk": "24",
+    "package_name": "net.osmand.plus",
+    "parse_error": null,
+    "parse_status": "parsed",
+    "permissions": [
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.ACCESS_WIFI_STATE",
+      "android.permission.BLUETOOTH",
+      "android.permission.BLUETOOTH_ADMIN",
+      "android.permission.BLUETOOTH_CONNECT",
+      "android.permission.BLUETOOTH_SCAN",
+      "android.permission.CAMERA",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+      "android.permission.FOREGROUND_SERVICE_LOCATION",
+      "android.permission.INTERNET",
+      "android.permission.MANAGE_EXTERNAL_STORAGE",
+      "android.permission.MODIFY_AUDIO_SETTINGS",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.REQUEST_INSTALL_PACKAGES",
+      "android.permission.STORAGE",
+      "android.permission.VIBRATE",
+      "android.permission.WAKE_LOCK",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "androidx.car.app.ACCESS_SURFACE",
+      "androidx.car.app.MAP_TEMPLATES",
+      "androidx.car.app.NAVIGATION_TEMPLATES",
+      "net.osmand.plus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "target_sdk": "35",
+    "version_code": "531003",
+    "version_name": "5.3.10"
+  },
+  "manifest_present": true,
+  "native_libraries": [
+    {
+      "abi": "arm64-v8a",
+      "filename": "libOsmAndCoreWithJNI.so",
+      "path": "lib/arm64-v8a/libOsmAndCoreWithJNI.so",
+      "sha256": "3f2c3f81ac084d2bf45caa59103c80e1a836ab6072929cd0bfba53c9380089d7",
+      "size": 38073640
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libQt5Core.so",
+      "path": "lib/arm64-v8a/libQt5Core.so",
+      "sha256": "9cc85fd23d565d69a460d491cfee7a11a70f68d8c7ec08a0083ff2c65052677a",
+      "size": 8087416
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libQt5Network.so",
+      "path": "lib/arm64-v8a/libQt5Network.so",
+      "sha256": "7d60baa3b5d8aa567808b1b6126508b85b2d357d3e76e3cc88486e252b20e6e5",
+      "size": 1708136
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libQt5Sql.so",
+      "path": "lib/arm64-v8a/libQt5Sql.so",
+      "sha256": "83e443e3e201d852553c39e82c70b8f6492dc8e013bca0cf3ee9f9b7cc3930ad",
+      "size": 331200
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libc++_shared.so",
+      "path": "lib/arm64-v8a/libc++_shared.so",
+      "sha256": "ab4e6c71b96b851de45a8a9bd86369e7dbc2130a44b3b4520564be94847910f2",
+      "size": 9236352
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libosmand.so",
+      "path": "lib/arm64-v8a/libosmand.so",
+      "sha256": "d99805857dfce82e4dfde15e0601122544fb81bd5aaf9fda41d93536da129b07",
+      "size": 8661496
+    }
+  ],
+  "resources_arsc_present": true
+}

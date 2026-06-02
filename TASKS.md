@@ -2,6 +2,8 @@
 
 Status legend: `todo`, `doing`, `done`, `blocked`.
 
+See `docs/planning/OPTIMIZATION_BACKLOG.md` for deferred MVP-safe and later-risk optimization ideas.
+
 ## Phase 0 - Project Organization
 
 | Status | Task |
@@ -22,45 +24,196 @@ Status legend: `todo`, `doing`, `done`, `blocked`.
 | done | Implement APK extraction: DEX, manifest, resources, native files. |
 | done | Implement minimal DEX feature extraction with Androguard. |
 | done | Implement Maven reference metadata schema. |
-| doing | Generate first minimal CycloneDX SBOM from mocked detection results. |
+| done | Generate first minimal CycloneDX SBOM from mocked detection results. |
 
 ## Phase 2 - Reference DB And Matching
 
 | Status | Task |
 |---|---|
-| todo | Download selected Maven JAR/AAR versions. |
-| todo | Convert reference libraries to DEX with D8. |
-| todo | Extract reference features into SQLite. |
-| todo | Implement package/class/method overlap matcher. |
-| todo | Implement opcode fingerprint matcher. |
-| todo | Implement initial version scorer and confidence thresholds. |
+| done | Download selected Maven JAR/AAR versions. |
+| done | Convert reference libraries to DEX with D8. |
+| done | Extract reference features into SQLite. |
+| done | Implement package/class/method overlap matcher. |
+| done | Implement opcode fingerprint matcher. |
+| done | Implement initial version scorer and confidence thresholds. |
 
 ## Phase 3 - SBOM And Vulnerability Output
 
 | Status | Task |
 |---|---|
-| todo | Generate CycloneDX JSON with PURL, version, evidence, and confidence. |
-| todo | Validate generated SBOM with cyclonedx-cli if installed. |
-| todo | Query OSV API for detected Maven package versions. |
-| todo | Optionally scan generated SBOM with Trivy or Grype. |
-| todo | Generate final JSON/Markdown report. |
+| done | Generate CycloneDX JSON with PURL, version, evidence, and confidence. |
+| done | Validate selected generated SBOMs with CycloneDX CLI schema validation and external scanner tooling in Docker. |
+| done | Query OSV API for detected Maven package versions. |
+| done | Optionally scan generated SBOM with Trivy or Grype. |
+| done | Generate final JSON/Markdown report. |
 
 ## Phase 4 - Evaluation And Paper
 
 | Status | Task |
 |---|---|
-| todo | Build controlled test APKs with known dependencies. |
-| todo | Build clear, ProGuard/R8 rename, and R8 shrink variants. |
-| todo | Measure library-level and version-level precision/recall/F1. |
-| todo | Compare against simple baselines: package-name match, class overlap, hash match. |
-| todo | Write results tables and limitation analysis. |
+| done | Build controlled test APKs with known dependencies. |
+| done | Build clear, ProGuard/R8 rename, and R8 shrink variants. |
+| done | Measure library-level and version-level precision/recall/F1. |
+| done | Compare against simple baselines: package-name match, class overlap, hash match. |
+| done | Write results tables and limitation analysis. |
+| done | Expand controlled evaluation to 9 fixtures across 5 Maven coordinates. |
+| done | Run first real-world APK case study on `data/test_apks/real/F-Droid.apk`. |
+| done | Validate the F-Droid real APK result against the `fdroidclient` source tag `1.23.2`. |
 
 ## Stretch Goals
 
 | Status | Task |
 |---|---|
-| todo | Add class dependency graph matching with NetworkX. |
-| todo | Add version tie-breakers using literals and changed classes. |
-| todo | Expand reference DB to 30-50 popular libraries. |
-| todo | Add basic native `.so` component reporting. |
-| todo | Add HTML report or simple dashboard. |
+| done | Add class dependency graph matching with NetworkX. |
+| done | Add version tie-breakers using literals and changed classes. |
+| done | Expand reference DB to 30-50 popular libraries. |
+| done | Add 100+ popular Android/Maven reference catalog and automated config expansion command. |
+| done | Build expanded reference DB in batches from `configs/libraries.expanded.json`. |
+| done | Add `--offset` batch controls for Maven download, D8 conversion, and reference feature extraction; build first 10-artifact expanded batch. |
+| done | Build first 60 expanded catalog artifacts into 31 usable DEX components and a 58-component combined evaluation DB. |
+| done | Advance expanded catalog batch through offset 69; expanded DB now has 32 usable DEX components and the combined evaluation DB has 59 components. |
+| done | Advance expanded catalog batch through offset 79; offset 70 found 10 already-cached artifacts, so the expanded DB remains at 32 usable DEX components and the combined evaluation DB remains at 59 components. |
+| done | Advance expanded catalog batch through offset 89; offset 80 downloaded 7 new artifacts, added 6 usable DEX components and 1 no-bytecode skip, and rebuilt a 65-component combined evaluation DB. |
+| done | Advance expanded catalog batch through offset 99; fixed `tink-android` packaging from AAR to JAR, added 10 usable DEX components, and rebuilt a 75-component combined evaluation DB. |
+| done | Advance expanded catalog batches through offset 119; fixed `dagger-android` packaging from JAR to AAR, added 19 usable DEX components plus 1 Firebase no-bytecode skip, and rebuilt a 94-component combined evaluation DB. |
+| done | Complete expanded catalog batches through the final offset 162; fixed `eventbus` packaging from JAR to AAR, built 108 expanded DEX components, and rebuilt a 133-component combined evaluation DB. |
+| done | Run full-expanded F-Droid smoke validation: 26 SBOM components, 12 confirmed versions, 13 version mismatches, and 1 missing coordinate against source. |
+| done | Add thesis-facing MVP results summary. |
+| done | Separate library identity confidence from version confidence in matcher decisions, CycloneDX properties, Markdown/HTML reports, and JSON output. |
+| done | Make vulnerability findings confidence-aware so exact/high version matches are confirmed findings and low-confidence versions are potential findings. |
+| done | Add APK extraction forensic summary with nonstandard DEX detection, extraction indicators, and manifest metadata hints. |
+| done | Add app package/version/SDK metadata to reports and CycloneDX application properties. |
+| done | Add candidate reason summaries and obfuscation risk warnings to JSON/Markdown/HTML reports. |
+| done | Add OSV severity parsing and advisory deduplication by OSV/GHSA/CVE identity. |
+| done | Generate final calibrated F-Droid supervisor demo report after forensic/report optimizations. |
+| done | Rerun F-Droid source validation for final demo SBOM after two-app calibration: 23/23 confirmed, 0 mismatches, 0 missing. |
+| done | Generate OSV-enabled final F-Droid supervisor demo report: OSV returned 0 vulnerable components and 0 vulnerabilities. |
+| done | Rerun source validation for OSV-enabled final demo SBOM: 23/23 confirmed, 0 mismatches, 0 missing. |
+| done | Add supervisor demo commands, expected outputs, and artifact list to the runbook. |
+| done | Generate paired OSV demo reports: vulnerable Jackson fixture returns 3 confirmed HIGH advisories; clean F-Droid case returns 0 vulnerabilities. |
+| done | Refresh the separate paired clean F-Droid OSV demo folder with the current 23-component calibrated DB: 23/23 confirmed, 0 mismatches, 0 missing, OSV 0 vulnerabilities. |
+| done | Add APK testset inventory with controlled fixture ground truth, F-Droid source-confirmed components, obfuscation/R8 notes, multidex/native details, and FP/FN comparison fields. |
+| done | Add codebase audit and supervisor brief documenting workflow integrity, hardcoded/manual-result checks, source file roles, architecture choices, state-of-the-art synthesis, demo method, and meeting email draft. |
+| done | Add research dataset design with layered APK counts, validation levels, R8/obfuscation/multidex/native/old-new/source criteria, and milestone targets. |
+| done | Add real APK candidate selection table and extend the APK inventory generator/output with research classification fields for dataset layer, validation level, R8 mode, obfuscation, source proof, native ABI, dependency profile, and metric eligibility. |
+| done | Add structured real APK candidate matrix config and generator; first-batch candidates are OpenTracks, NewPipe, Tusky, K-9/Thunderbird Android, and Organic Maps. |
+| done | Verify first-batch F-Droid metadata and add generated proof-bundle checklists for OpenTracks, NewPipe, Tusky, K-9/Thunderbird Android, and Organic Maps. |
+| done | Download OpenTracks APK/source proof artifacts, generate an MVP report, and run a partial direct-dependency comparison against source `build.gradle`. |
+| done | Add Gradle 9.5.0 to the Docker runtime and use it to generate OpenTracks `irreproducibleReleaseRuntimeClasspath`. |
+| done | Complete OpenTracks resolved Gradle dependency-tree validation: 19/19 emitted SBOM components confirmed, 0 mismatches, 0 missing, OSV 0 vulnerabilities. |
+| done | Add Lifecycle public-vs-Android target artifact disambiguation with version-coherence evidence; F-Droid and OpenTracks both validate cleanly on the shared calibrated DB. |
+| done | Add dataset criteria coverage matrix for controlled and real APK diversity planning. |
+| done | Add generated APK-type evaluation summary that groups controlled, clean source-validated, partial source-validated, blocked, and limitation cases by APK family instead of chasing a perfect global score. |
+| done | Add generated thesis evaluation tables with claim wording, clean/partial source-validated splits, per-APK rates, and explicit exclusions from accuracy metrics. |
+| done | Draft thesis evaluation/results chapter text from the current evaluation tables, keeping clean, partial, blocked, and limitation cases separate. |
+| done | Add a current PFE report draft that integrates the literature framing, implemented architecture, evaluation metrics, limitations, and next work. |
+| done | Add a presentation outline that turns the current MVP story, evaluation split, and demo path into slide-ready structure. |
+| done | Add a generated thesis artifact index mapping each main claim to source tables, proof bundles, reports, validation artifacts, demo files, figure sources, and final-report checklist items. |
+| done | Add a controlled multidex fixture with exact ground truth to close the dataset coverage gap. |
+| done | Add a controlled multi-library fixture with exact ground truth to test package discovery. |
+| done | Collect the current NewPipe/Tusky proof-bundle attempt and Organic Maps/Termux native-heavy limitation reports. |
+| done | Complete NewPipe source validation after rebuilding Docker with a JDK compiler: dependency tree generated, 5/12 emitted SBOM versions confirmed, 7 version mismatches, 0 missing. |
+| done | Calibrate Tusky source-used `com.squareup.retrofit2:retrofit@3.0.0`, then rerun Tusky report and source validation: 1/1 confirmed, 0 mismatches, 0 missing. |
+| done | Run a NewPipe calibration pass with additional source-used AndroidX/Okio versions (`activity@1.8.1`, `startup-runtime@1.2.0`, `lifecycle-runtime@2.9.4`, `viewpager2@1.1.0`, `work-runtime@2.10.5`, `okio-jvm@3.16.4`), rebuild the calibrated DB, and rerun validation: improved to 6/11 confirmed, 5 mismatches, 0 missing; F-Droid/OpenTracks/Tusky remained clean. |
+| done | Add matcher-level version disambiguation using version-distinctive feature evidence plus low-confidence Lifecycle public-vs-Android target fallback; NewPipe improved to 10/11 confirmed, 1 mismatch, 0 missing, while F-Droid/OpenTracks/Tusky stayed clean. |
+| done | Collect K-9/Thunderbird Android `18.0` APK/source/report proof: APK/source hashes recorded, manifest matches F-Droid versionCode `39035`, report emits 11 Maven components plus 8 native file components with OSV 0, and source version-catalog evidence is saved. |
+| done | Collect and validate AntennaPod `3.11.4` proof bundle: APK/source/report/dependency-tree collected; after adding source-used `androidx.work:work-runtime@2.10.3` and `androidx.core:core@1.16.0` to calibration, validation is 19/20 confirmed, 1 AndroidX Core mismatch, 0 missing, OSV 0. |
+| done | Collect and validate KDE Connect `1.35.5` proof bundle: APK/source/report/dependency-tree collected; validation is now 8/9 confirmed after scoped Lifecycle artifact-family coherence, with 1 remaining `viewpager2` beta mismatch, 0 missing, OSV 0. |
+| done | Collect and validate Wikipedia Android `r/50586-r-2026-05-12` proof bundle: APK/source/report/dependency-tree collected; after adding source-used `gson@2.10.1`, bytecode-bearing `okhttp-android@5.3.2`, and generic OkHttp public-vs-Android target disambiguation, validation is 11/13 confirmed, 2 version mismatches, 0 missing, OSV 0. |
+| done | Collect and validate Conversations `2.20.0+free` proof bundle: APK/source/report/dependency-tree collected; after adding source-used `gson@2.13.1`, validation is 6/9 confirmed, 2 AndroidX near-version mismatches, 1 Lifecycle artifact-family nuance, OSV 0. |
+| done | Add a limitation fixture with hidden DEX/protector-style indicators: `controlled-hidden-dex-loader-limitation.apk` raises `nonstandard-dex`, `tiny-primary-dex`, `protector-name-hint`, and `large-opaque-assets`; report emits 0 Maven components, 1 native hash-only component, high obfuscation risk, and no accuracy claim. |
+| done | Collect and validate FairEmail `1.2315` proof bundle: APK/source/report artifacts collected; no-native validation source copy bypassed the missing NDK only for dependency resolution; validation is 7/13 confirmed, 6 AndroidX version mismatches, 0 missing, OSV 0. |
+| done | Collect and validate Aegis Authenticator `3.4.2` proof bundle: APK/source/report/dependency-tree collected; after adding source-used `androidx.lifecycle:lifecycle-runtime-android@2.9.0` to calibration, validation is 6/7 confirmed, 1 ViewPager2 mismatch, 0 missing, OSV 0. |
+| done | Collect and validate Markor `2.16.1` proof bundle: APK/source/report/dependency-tree collected; guarded shared-DB validation is now 7/19 confirmed, 12 older-dependency version mismatches, 0 missing, OSV 0. |
+| done | Run a Markor source-used-version calibration experiment: adding Markor's older dependency stack improves Markor from 6/19 to 19/19 confirmed, but broad global inclusion regresses newer controls, so the 19/19 result is preserved only as an app-specific calibration experiment. |
+| done | Collect and validate Nextcloud Android `33.1.0` proof bundle: APK/source/report/dependency-tree collected; validation is 15/29 confirmed, 13 modern version-band mismatches, 1 OkHttp public-vs-Android target artifact-family nuance, OSV 0. |
+| done | Run a Nextcloud source-used-version calibration experiment: adding 11 Nextcloud source versions improves Nextcloud from 15/29 to 24/29 confirmed, but global inclusion regresses F-Droid, NewPipe, and AntennaPod, so the shared DB stays unchanged and the result is preserved only as an experiment. |
+| done | Promote the guarded subset of six Nextcloud source versions (`foundation-android@1.10.6`, `ui-android@1.10.6`, `ui-tooling-preview-android@1.10.6`, `recyclerview@1.3.2`, `gson@2.13.2`, `kotlin-stdlib@2.3.10`) into the shared calibrated DB: Nextcloud improves from fresh-control 15/29 to 21/29 confirmed, while F-Droid, OpenTracks, Tusky, NewPipe, AntennaPod, KDE Connect, Wikipedia, Conversations, Aegis, and Markor remain unchanged versus the pre-promotion control. |
+| done | Add scoped Compose app-era coherence and promote only `androidx.compose.runtime:runtime-android@1.10.6`: runtime-only regression improves Nextcloud from 21/28 to 22/29 confirmed and leaves F-Droid, OpenTracks, Tusky, NewPipe, AntennaPod, KDE Connect, Wikipedia, Conversations, Aegis, and Markor unchanged versus fresh current control. |
+| done | Add version-band tie evidence audit and isolated promotion tests: `scripts/analyze_version_band_ties.py` classifies risky AndroidX/Okio mismatches; Activity `1.9.2` only improves Nextcloud but regresses F-Droid, and ViewPager2 `1.1.0-beta02` only improves Nextcloud but regresses NewPipe and AntennaPod, so neither is globally promotable. |
+| done | Expand generated controlled APK testing by category: added 20 fixtures covering clear version-band, R8 rename, R8 shrink, and multi-library multidex cases; that pass took the controlled evaluation to 30 fixtures / 35 expected Maven components with 35/35 exact confirmations. |
+| done | Expand the generated dataset by classification before Phase 6: add 18 dataset-growth-v2 fixtures covering Okio JVM artifact-family/version bands, newer OkHttp, Ktor JVM framework modules, modern networking multidex, modern framework multidex, and an Okio R8 stress slice; the canonical generated batch is now 62 fixtures / 73 expected components with 0 failures and 1.000 exact-version recall, and the full controlled inventory is 72 fixtures / 84 expected versions with 84/84 exact confirmations. |
+| done | Add the real APK category-growth queue at `docs/evaluation/NEXT_REAL_APK_GROWTH_QUEUE.md`: before Phase 6/ML, the next real batch must include clean non-sparse, older dependency, real R8/minified, protected/heavy-obfuscated, Flutter/Unity or framework-boundary, native-heavy, vulnerable-expected, and no-native simple classes, with source-validated metrics admitted only after full proof bundles. |
+| done | Collect and report a category-balanced real APK smoke batch before Phase 6/ML: add LocalSend, OpenVPN for Android, KeePassDX, Gadgetbridge, DAVx5, Shelter, TheXTech, and Fennec F-Droid with SHA-256-verified F-Droid downloads, metadata snapshots, calibrated no-OSV reports, and explicit exclusion from source-validated metrics until proof bundles are complete. |
+| done | Promote four rows from the 8-APK smoke batch into source-validated partial evidence: DAVx5 confirms 3/5 emitted Maven versions, OpenVPN for Android confirms 13/20 through a no-native validation copy, Gadgetbridge confirms 17/21 after deriving the matching F-Droid source tarball, and Shelter confirms 3/3 through a documented app-only/toolchain-compatibility validation copy. LocalSend, KeePassDX, TheXTech, and Fennec F-Droid remain smoke/blocked until their proof bundles complete. |
+| done | Add a low-risk APK preflight and proof batch for apps chosen to avoid source/build blockers: Stopwatch, Bubble, Audio Source, and Blue Square Speedometer all have source tarballs, no native ABI, modern Gradle roots, APK reports, dependency trees, and source-validation output. Stopwatch confirms 4/5 emitted Maven versions, Bubble confirms 1/7, Audio Source confirms 0/3, and Blue Square Speedometer is recorded as a successful no-Maven-signal control with 0/0 emitted Maven components. |
+| done | Run guarded reference-coverage experiments for the low-risk APK batch: a 10-version source-used experiment DB improves Bubble and Audio Source but regresses Blue Square Speedometer plus existing controls. Narrow checks keep `androidx.recyclerview:recyclerview@1.0.0` and `androidx.lifecycle:lifecycle-runtime@2.1.0` experiment-only because they regress NewPipe and F-Droid/NewPipe/KDE Connect/Aegis respectively. Keep the shared calibrated DB unchanged until stronger version-band discrimination exists. |
+| done | Add reproducible low-risk version-band diagnostics: `scripts/build_low_risk_version_band_diagnostics.py` generates per-coordinate evidence showing 9 resolved target mismatch rows but 13 new mismatch rows elsewhere. AppCompat, Core, Fragment, Lifecycle Runtime, and Lifecycle ViewModel each show cross-app conflicts; RecyclerView and Lifecycle Runtime still fail narrow control gates. Keep all 10 versions experiment-only and leave default matcher scoring unchanged. |
+| done | Add an opt-in scoped old-version-steal diagnostic for AppCompat/Core: `apk-sbom version-band-experiment` evaluates APK-side version-band anchors against the low-risk experiment fixtures, flags 7/13 newly introduced mismatch rows for confidence downgrade, and blocks 0/9 resolved target rows. Keep it experiment-only: it does not choose replacement versions, change matcher scoring, alter SBOM output, or promote the shared DB. |
+| done | Add an opt-in Lifecycle public-vs-Android family separation diagnostic: `apk-sbom lifecycle-family-experiment` inspects the 5 introduced low-risk Lifecycle mismatch rows, identifies 2 public-coordinate claims eligible for diagnostic downgrade, keeps 1 patch-level target near-tie ambiguous, leaves 2 weak rows unresolved, and blocks 0/3 resolved target rows. Keep it experiment-only and do not force Android-target replacement versions. |
+| done | Surface the AppCompat/Core and Lifecycle diagnostics as opt-in report-only annotations: `generate-report --include-version-band-experiments` attaches saved diagnostic evidence to JSON/Markdown/HTML and adds CycloneDX application metadata properties, while detected components, selected versions, SBOM component selection, vulnerability labels, source-validation metrics, matcher scoring, and the shared DB remain unchanged. |
+| done | Generate annotated low-risk real APK reports for Stopwatch, Bubble, Audio Source, and Blue Square Speedometer with `--include-version-band-experiments`; baseline detected components and CycloneDX components remain unchanged for all four reports, while Stopwatch receives one matching AppCompat downgrade annotation. |
+| done | Sweep additional no-native clean-candidate real APKs and promote the useful rows honestly as source-validated partial evidence: Gotify confirms 11/23 emitted Maven versions, BetterCounter confirms 5/7, and Coffee confirms 10/11 with only a `kotlinx-coroutines-android` mismatch. The clean non-sparse bucket remains open; see `docs/evaluation/CLEAN_REAL_APK_CANDIDATE_PROOF_RESULTS.md`. |
+| done | Run clean-candidate sweep v3 for no-native real APKs: Simple Time Tracker, MedTimer, Doodle, and KeePassVault were collected and reported; MedTimer validates 12/18, Doodle 3/6, Simple Time Tracker 6/12, and KeePassVault 8/24 as source-validated partial evidence. The clean non-sparse bucket remains open; see `docs/evaluation/CLEAN_REAL_APK_CANDIDATE_PROOF_RESULTS_V3.md`. |
+| done | Run clean-candidate sweep v4 for no-native real APKs: Cryptomator Lite, Daily Dozen, Privacy Browser, MoneyWallet, and Easy Xkcd were collected and reported; Daily Dozen validates cleanly at 2/2 and is admitted as clean-but-sparse evidence. A Docker Gradle 8.13 validation lane unblocked Cryptomator Lite at 13/24 and Easy Xkcd at 6/23, a Docker Gradle 9.5 / Android platform 36 lane resolves Privacy Browser as a 0/0 no-Maven-signal control, and a JDK 11/Gradle 6.1.1 validation lane unblocked MoneyWallet at 2/9 with 6 mismatches and 1 missing coordinate. The clean non-sparse bucket remains open; see `docs/evaluation/CLEAN_REAL_APK_CANDIDATE_PROOF_RESULTS_V4.md`. |
+| done | Run clean-candidate sweep v5 for no-native real APKs: yetCalc, Loop Habit Tracker, QuickDic, Cirrus, and AFWall+ were collected, source-linked, dependency-tree validated, and source-validated in Docker. QuickDic is clean but sparse at 2/2, while Cirrus validates 14/19, AFWall+ 12/18, Loop Habit Tracker 7/11, and yetCalc 6/17 as source-validated partial evidence. The clean non-sparse bucket remains open; see `docs/evaluation/CLEAN_REAL_APK_CANDIDATE_PROOF_RESULTS_V5.md`. |
+| done | Run clean-candidate sweep v6 for no-native real APKs: microMathematics Plus, Retro Music, Broccoli, Diaguard, and LibreTube were collected, source-linked, dependency-tree validated, and source-validated in Docker. Broccoli validates 11/20, LibreTube 9/13, Retro Music 4/6, microMathematics Plus 4/16, and Diaguard 2/5 as source-validated partial evidence. The clean non-sparse bucket remains open; see `docs/evaluation/CLEAN_REAL_APK_CANDIDATE_PROOF_RESULTS_V6.md`. |
+| done | Run clean-candidate sweep v7 for no-native real APKs: AndStatus, Fulguris Web Browser, I2P, Working Time Account, and Mastodon were collected, source-linked, dependency-tree validated, and source-validated in Docker. Fulguris validates 17/21, Working Time Account 12/15, AndStatus 12/19, and I2P 10/18 as source-validated partial evidence; Mastodon resolves as a 0/0 no-Maven-signal control. The clean non-sparse bucket remains open; see `docs/evaluation/CLEAN_REAL_APK_CANDIDATE_PROOF_RESULTS_V7.md`. |
+| done | Run clean-candidate sweep v8 for no-native real APKs: Drift // Audio, JaMuz, monocles browser, Conceal Mobile, and Ltt.rs were collected, source-linked, and advanced through Docker proof gates. Drift // Audio validates 7/13 and JaMuz 14/21 as source-validated partial evidence; monocles browser resolves as a 0/0 no-Maven-signal control; Conceal Mobile and Ltt.rs remain source-linked blocked on Gradle dependency-tree generation. This pushes the source-validated real APK set to 50 while the clean non-sparse bucket remains open; see `docs/evaluation/CLEAN_REAL_APK_CANDIDATE_PROOF_RESULTS_V8.md`. |
+| done | Retry K-9/Thunderbird Android source validation with a validation-only repository-order change and add catalog-only validation; the retry still times out before `fossReleaseRuntimeClasspath`, while the catalog check records 3 exact confirmations, 2 exact mismatches, 1 artifact-family confirmation, 1 artifact-family mismatch, and 4 not-in-catalog components. |
+| done | Collect the next clean source-validated real APK proof bundle after OpenTracks: Tusky is clean but sparse after Retrofit 3.0.0 calibration. |
+| todo | Resolve K-9/Thunderbird Android Gradle dependency-tree generation: Gradle `9.5.0`, source-declared `9.4.0`, and the repository-order retry stall after included `build-plugin` setup, so K-9 remains `partial-gradle-blocked` rather than source-validated. |
+| done | Resolve FairEmail dependency-tree generation by using a validation-only source copy with native build disabled; FairEmail is now `source-validated-partial` for Maven runtime dependencies, not `partial-toolchain-blocked`. |
+| done | Add scoped Lifecycle artifact-family coherence for weak public-coordinate vs Android-target-variant cases; KDE Connect improved from 7/9 to 8/9 confirmed without regressing F-Droid, OpenTracks, Tusky, NewPipe, or AntennaPod validation. |
+| done | Investigate broader safe metadata-coherence handling for bytecode-near-equivalent AndroidX versions, still seen in NewPipe `startup-runtime`, AntennaPod `androidx.core:core`, and KDE Connect `viewpager2`: Maven POM dependency metadata is now downloaded, parsed, carried through conversion, stored in SQLite, and loaded with matcher candidates. |
+| done | Add a conservative matcher scoring rule that uses stored Maven POM dependency metadata only when related detected coordinates provide independent support; regression runs showed it stays dormant on the current APK set and does not force NewPipe's remaining `startup-runtime` near-tie. |
+| done | Add API/member-reference feature extraction and storage plus optional matcher scoring (`--api-reference-weight`, default `0.0`) so future calibrated DB rebuilds can test API-call fingerprints without changing current baseline outputs. |
+| done | Rebuild a separate calibrated API-reference experiment DB (`reference_features_calibrated_combined_api_refs.sqlite`) and run guarded offline weight `0.05` regressions across F-Droid, OpenTracks, Aegis, Markor, and NewPipe: no source-validation metric changed versus weight `0.0`, so keep API-reference weighting disabled by default. |
+| done | Investigate fresh NewPipe regeneration drift under the current matcher state: the added Aegis `lifecycle-runtime-android@2.9.0` reference creates a `0.000024` score lead over NewPipe's source `2.9.4`; the same micro-tie is correct for Aegis but wrong for NewPipe, so a generic newer-patch tie-break would regress Aegis. |
+| done | Add a version-ambiguity reporting signal for feature-equivalent ties: Startup `1.1.1` vs `1.2.0` is now labeled in NewPipe, Wikipedia, and Conversations reports as a version-band limitation, with source-validation metrics unchanged versus current control. |
+| done | Extend version-ambiguity reporting to close near-ties without matched version-unique evidence: the matcher now labels sub-0.006 score ties as version-band uncertainty instead of presenting one candidate as silently exact. |
+| done | Export ambiguous version sets as structured report/SBOM data: `VersionDecision`, detected component JSON, Markdown/HTML reports, CycloneDX properties, and SBOM reload now preserve competing nearby versions. |
+| done | Add paper-backed MVP improvement notes that preserve current cons, experiment evidence, state-of-the-art basis, and the next thesis/report plan. |
+| done | Add a generated operational MVP cons/improvement plan that ranks weak points, links them to paper/experiment evidence, and separates safe-next, guardrail, diagnostic-only, blocked, and boundary work. |
+| done | Add R8/obfuscation as an explicit late-stage operational con in the MVP improvement plan, after nearer-term version-band, reference coverage, artifact-family, metadata, native, scanner, CVE, and dataset work. |
+| done | Build a diagnostic per-coordinate reranker report for current AndroidX/Kotlin version-band ties; it finds no clean independent signal that justifies a matcher scoring change today. |
+| done | Add a source-version candidate queue that records target benefit, control regressions, and promotion decisions before any future reference DB experiment; after the Markor coverage pass, 13 candidates remain queued and 4 are rejected global regressions. |
+| done | Run isolated experiment-labeled coverage tests for queued Markor-era coverage gaps with a fresh current-control matrix: the full three-version set improves Markor 6/19 -> 9/19 but regresses 7 controls; `androidx.core:core@1.9.0` alone improves Markor to 7/19 with no control regressions and was promoted; `activity@1.6.0` and `concurrent-futures@1.0.0` stay rejected globally. |
+| done | Grow the next source-validated real APK batch by classification with VLC Android `3.7.1`: source validation confirms 6/26 emitted Maven versions, 20 mismatches, 0 missing, plus 4 native hash-only file components. |
+| done | Collect Jitsi Meet `26.0.0` as a React Native/native-heavy source-linked framework-boundary case: APK/source/report artifacts are collected, but dependency-tree validation is blocked by missing Node/npm/F-Droid prebuild tooling, so it is excluded from source-validated accuracy metrics. |
+| done | Collect OsmAnd `5.3.10` as a maps/native stress source-validated partial case: APK/source/report/dependency-tree proof is collected, validation confirms 16/25 emitted Maven versions, with 9 mismatches and 0 missing coordinates. |
+| done | Add OSV/source-validation triage for real APKs: `docs/evaluation/OSV_SOURCE_VALIDATION_TRIAGE.md` separates source-confirmed vulnerability evidence from source-version-mismatch and report-only scanner findings. |
+| done | Implement source-validation-aware vulnerability labels in report output: `generate-report --source-validation-json` now writes source-confirmed/source-version-mismatch/source-missing labels into OSV JSON, Markdown, and HTML; regenerated OsmAnd report downgrades its Jackson/Gson advisories to potential source-version-mismatch findings. |
+| done | Resolve the external SBOM scanner validation con with real scanner evidence: Docker now installs CycloneDX CLI, Trivy, Grype, Syft, cdxgen, node, and npm; `docs/evaluation/EXTERNAL_SCANNER_VALIDATION.md` records 6/6 successful Grype/Trivy runs and 6/6 CycloneDX schema-validation runs across clean, vulnerable, and partial SBOM targets. |
+| done | Complete the dataset-growth con for this pass with Material Files `1.7.4` as a file-manager/network-storage/native-JNI source-validated partial case: report emits 2 Maven components plus 16 native file components; source validation confirms 0/2 exact versions with 2 mismatches and 0 missing coordinates. |
+| done | Complete the P2 artifact-family handling con: `docs/evaluation/ARTIFACT_FAMILY_DIAGNOSTICS.md` records 41 existing scoped disambiguation rows and 4 risky family/tie rows all covered by existing Okio/OkHttp/Lifecycle scoped rules, so no new global artifact-family rule is justified. |
+| done | Complete the opcode/API diagnostic-only con: `docs/evaluation/OPCODE_API_SIGNAL_DIAGNOSTICS.md` records API-reference weight `0.05` changing no source-validation metrics across 5 cases and opcode tri-gram weight `0.02` regressing OpenTracks and Conversations across 11 cases, so both global weights stay disabled. |
+| done | Complete the native-boundary con: `docs/evaluation/NATIVE_BOUNDARY_DIAGNOSTICS.md` records 18 native APK cases and 130 native `.so` files represented as hash-only CycloneDX file components, not native package/version claims. |
+| done | Complete the K-9 blocked con for the current MVP: `docs/evaluation/K9_BLOCKER_DIAGNOSTICS.md` records catalog-only evidence plus 4 bounded Gradle attempts, including a 2026-05-27 Docker retry that still timed out before `fossReleaseRuntimeClasspath`, so K-9 remains source-linked blocked. |
+| done | Complete the hidden-DEX limitation con: `docs/evaluation/HIDDEN_DEX_DIAGNOSTICS.md` confirms medium extraction risk, high obfuscation risk, nonstandard/protector indicators, 0 Maven components, and 1 hash-only native file component. |
+| done | Add a legal public obfuscated APK limitation sample from the Simplify repository: `org.cf.obfuscated` has standard `classes.dex`, no native files, medium obfuscation risk, large class/method coverage-loss diagnostics, and three low-confidence AndroidX Maven candidates; it stays outside source-validated metrics. |
+| done | Complete the research/method-selection gate for the final P4 R8/obfuscation con: `docs/research/R8_OBFUSCATION_METHOD_SELECTION.md` selects an explainable multi-scale R8-aware evidence layer, rejects global opcode/API weighting for now, defers ML-first implementation, and keeps matcher scoring unchanged. |
+| done | Build the final P4 R8/obfuscation diagnostic/evaluation report from the selected method: `docs/evaluation/R8_OBFUSCATION_DIAGNOSTICS.md` records controlled R8 rename/shrink coverage, real R8/minified partial behavior, hidden-code boundaries, rejected global opcode/API evidence, and 8 classifier gaps with scoring unchanged. |
+| done | Add the R8/obfuscation con execution plan and continuation prompt: `docs/planning/R8_OBFUSCATION_CON_EXECUTION_PLAN.md` explains the best-of-tools implementation sequence, and `docs/codex/R8_OBFUSCATION_CON_CONTINUATION_PROMPT.md` gives a future Codex prompt for resuming the con safely. |
+| done | Complete Phase 1 of the final P4 R8/obfuscation con: add report-only diagnostics to `inspect-apk` and JSON/Markdown/HTML `generate-report` output for short-name density, package flattening/repackaging, class/method coverage loss, low structural coverage, low-confidence component ratio, nonstandard DEX/protector hints, resource-shrinking symptoms, and method-inlining/class-merging indicators, with matcher scoring and selected components unchanged. |
+| done | Complete Phase 2 of the final P4 R8/obfuscation con: expanded the generated controlled R8 matrix to 44 fixtures / 48 expected Maven components with 0 failures and 1.000 component, exact-version, and candidate-version recall across rename, shrink, optimize, shrink+optimize, package flattening/repackaging, inline-like call-site stress, clear, and multidex/multi-library controls, with matcher scoring unchanged. |
+| done | Complete Phase 3 of the final P4 R8/obfuscation con: add inert multi-scale feature extraction only, with scoring disabled, for call-chain opcode fingerprints, basic-block opcode fingerprints, class-neighbor summaries, field-operation sequences, and version-unique literal/context features; store them in reference DB tables and surface report availability without changing scoring or SBOM selection. |
+| done | Complete the initial Phase 4 controlled-only diagnostic for the final P4 R8/obfuscation con: run an offline scoped multi-scale diagnostic across 24 controlled R8 cases; 20 rows stay aligned but 4 Commons Codec rows would regress, so global multi-scale scoring remains rejected and all default matcher/report/SBOM behavior stays unchanged. |
+| done | Expand Phase 4 with a calibrated layered generated+real APK diagnostic: rebuild a 100-component multi-scale calibrated reference DB, rank 24 controlled R8 cases plus 262 real APK component rows, find 4 real source-validated improvement candidates, but keep Phase 5 scoring unstarted because 6 controlled regressions, 30 real source-validated regressions, and 8 clean-real regressions block promotion. |
+| done | Start Phase 5 as an experiment-only scoped R8 trigger: add `src/apk_sbom/r8_scoped_reranker.py` and `docs/evaluation/R8_PHASE5_SCOPED_TRIGGER_DIAGNOSTICS.md`; the trigger applies to 4 target rows and 0 regression/conflict rows across 286 Phase 4 rows, while matcher scoring, selected versions, SBOM output, vulnerability labels, and source-validation metrics remain unchanged. |
+| done | Validate the Phase 5 scoped R8 trigger against current controls: `docs/evaluation/R8_PHASE5_TRIGGER_CONTROL_VALIDATION.md` records 11 passing gates, including 24 controlled rows blocked, 43 clean real rows blocked, 36 boundary rows blocked, 4 target improvements kept, and 0 triggered regressions/conflicts. |
+| done | Add the explicit opt-in `r8-phase5-experiment` CLI command: it runs the scoped trigger diagnostic from the Phase 4 JSON artifact and writes experiment JSON/Markdown only; default matcher scoring, selected versions, SBOM output, vulnerability labels, and source-validation metrics remain unchanged. |
+| done | Add opt-in report-only Phase 5 evidence to `generate-report --include-r8-phase5-experiment`: JSON/Markdown/HTML reports can show the scoped trigger summary and matching suggestions, while detected components, selected versions, SBOM output, vulnerability labels, and source-validation metrics remain unchanged. |
+| done | Validate the report-only Phase 5 surface on the four current target APKs: `docs/evaluation/R8_PHASE5_REPORT_EVIDENCE.md` records 4 opt-in suggestions, 4 SBOM artifacts, and 0 default selection changes, with verdict `phase5-report-evidence-clean-experiment-only`. |
+| done | Add a paper-ready experiment decision ledger at `docs/thesis/EXPERIMENT_DECISION_LEDGER.md` documenting implemented, rejected, disabled, blocked, and deferred methods with paper/tool motivation and project evidence. |
+| done | Complete the P1 source-version/reference-coverage guardrail for the current MVP: `docs/evaluation/SOURCE_VERSION_CANDIDATE_QUEUE.md` records 13 candidates with target cases, known control regressions, and promote/reject decisions before any shared DB change. |
+| done | Complete the P2 dependency/POM coherence diagnostics con: `docs/evaluation/POM_COHERENCE_DIAGNOSTICS.md` explains all 19 risky tie rows and records why no metadata-driven scorer change is justified today. |
+| done | Work the P2 artifact-family handling con only with scoped proof/control evidence: reviewed Okio/OkHttp/Lifecycle family ambiguity in `docs/evaluation/ARTIFACT_FAMILY_DIAGNOSTICS.md` and kept the result as no-new-global-rule evidence. |
+| done | Add paper-to-implementation traceability matrix and wire it into the report draft, presentation outline, and thesis artifact index generator. |
+| done | Assemble a university-ready final report draft that merges the MVP story, paper-backed design decisions, evaluation results, limitations, and appendix pointers. |
+| done | Add a slide-ready presentation deck script with slide claims, proof objects, speaker notes, demo flow, and defense Q&A. |
+| done | Build an editable 12-slide PPTX defense deck from the slide script, with rendered previews, contact-sheet QA, embedded speaker notes, and thesis artifact index links. |
+| done | Add opcode tri-gram extraction/storage plus optional matcher scoring (`--opcode-ngram-weight`, default `0.0`) so future calibrated DB rebuilds can test an independent sequence signal without changing current baseline outputs. |
+| done | Rebuild a separate opcode-tri-gram experiment DB (`reference_features_calibrated_combined_opcode_ngrams.sqlite`) and run a guarded `0.02` weight regression matrix: no risky tie improved, while OpenTracks and Conversations regressed, so keep opcode tri-gram weighting disabled globally. |
+| done | Complete the current opcode/API signal con as diagnostic-only: keep API-reference and opcode tri-gram global weights disabled, with future use limited to scoped diagnostic/per-coordinate rerankers and fresh controls. |
+| done | Add confidence cap for one-version coordinates so latest-only expanded references are emitted as cautious candidates unless the match is essentially complete. |
+| done | Add Android target variants for KMP/AndroidX wrapper coordinates such as Compose/DataStore/Lifecycle where the direct artifact has no bytecode. |
+| done | Add multiple versions or source-used versions for expanded AndroidX coordinates before making the expanded DB the default. |
+| done | Build a calibrated F-Droid reference DB and validate 19/19 emitted SBOM components against the source dependency tree. |
+| done | Rerun full verification after calibrated DB/configuration updates: pytest and compileall pass. |
+| done | Add F-Droid source-confirmed dependencies to the reference DB, especially OkHttp `4.12.0`, Okio 3.x variants, and Ktor `2.3.12`. |
+| done | Improve overlapping artifact handling for related coordinates such as `com.squareup.okio:okio` and `com.squareup.okio:okio-jvm`. |
+| done | Add source/dependency-tree validation for real APK case studies when source is available. |
+| done | Automate source dependency validation comparison for future case studies. |
+| done | Add basic native `.so` component reporting. |
+| done | Add HTML report or simple dashboard. |

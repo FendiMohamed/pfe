@@ -1,0 +1,812 @@
+{
+  "metadata": {
+    "added": 1622505600000,
+    "authorEmail": "arne@monocles.de",
+    "authorName": "Arne-Br\u00fcn Vogelsang",
+    "categories": [
+      "Browser",
+      "Internet"
+    ],
+    "changelog": "https://codeberg.org/Arne/monocles_browser/releases",
+    "description": {
+      "de-DE": "Beim Umgang mit dem Browser mit den richtigen Einstellungen (Verzicht auf Javascript und Cookies) ist er sehr stark, Ihre Privatsph\u00e4re und auch Sicherheit zu sch\u00fctzen!\n\nBitte nutzen Sie das aktuelle Sicherheitsupdate Ihrer Android Version. In den Voreinstellungen verwendet der monocles browser die monocles-Webansicht, so ist es wichtig, neuere Versionen als Android 4.4.+ zu haben.\n\nIn den Standardeinstellungen sind Javascript und Cookies deaktiviert, um die gr\u00f6\u00dftm\u00f6gliche Sicherheit zu gew\u00e4hrleisten. Zur besseren Nutzung der monocles Seiten wird jedoch empfohlen f\u00fcr diese Javascript und Cookies zuzulassen. F\u00fcgen Sie sie dazu einfach im Men\u00fc zu den vertrauensw\u00fcrdigen Domains hinzu. Die monocles Metasuchmaschine speichert weder Ihre IP noch sonst irgendwelche Daten.\n\n<b>Features:</b>\n\n* Integrierter EasyList-Werbeblocker\n* TOR-Proxy-Unterst\u00fctzung mittels Orbot\n* Verankerung von SSL-Zertifikaten (Pinning)\n* Import/Export von Einstellungen und Lesezeichen\n",
+      "en-US": "When dealing with the browser with the correct settings (restricted to Javascript and cookies), it is very strong to protect your privacy and also safety!\n\nPlease use the current security updates of your Android version. In the defaults, the monocles browser uses the monocles webview, so it is important to have newer versions as Android 4.4.+.\n\nIn the default settings, Javascript and cookies are deactivated to ensure the greatest possible security. However, for better use of the monocles pages it is recommended to allow for this Javascript and cookies. Simply add to the trusted domains in the menu. The monocles metasearch machine does not store your IP or any other data.\n\n<b>Features:</b>\n\n* Integrated EasyList ad blocking.\n* Tor Orbot proxy support.\n* SSL certificate pinning.\n* Import/export of settings and bookmarks.\n",
+      "es-ES": "Al tratar con el navegador con la configuraci\u00f3n correcta (restricted to Javascript and cookies), es muy fuerte para proteger su privacidad y tambi\u00e9n su seguridad!\n\nPor favor, utilice las actualizaciones de seguridad actuales de su versi\u00f3n Android. En los defectos, el navegador monocles utiliza la vista web de monocles, por lo que es importante tener versiones m\u00e1s nuevas como Android 4.4.+.\n\nEn la configuraci\u00f3n predeterminada, Javascript y cookies se desactivan para garantizar la mayor seguridad posible. Sin embargo, para un mejor uso de las p\u00e1ginas de monocles se recomienda permitir este Javascript y cookies. Simplemente agregue a los dominios de confianza en el men\u00fa. La m\u00e1quina de metab\u00fas monocles no almacena su IP ni ning\u00fan otro dato.\n\n<b>Caracter\u00edsticas:</b>\n\n* Bloqueo de anuncios EasyList integrado.\n* Soporte para proxy de Tor Orbot.\n* Fijaci\u00f3n de certificados SSL.\n* Importar/exportar la configuraci\u00f3n y los marcadores.\n",
+      "fr-FR": "En traitant avec le navigateur avec les param\u00e8tres corrects (restrict\u00e9 \u00e0 Javascript et les cookies), il est tr\u00e8s fort pour prot\u00e9ger votre vie priv\u00e9e et aussi la s\u00e9curit\u00e9!\n\nUtilisez les mises \u00e0 jour de s\u00e9curit\u00e9 actuelles de votre version Android. Dans les d\u00e9fauts, le navigateur monocles utilise la vue Web monocles, il est donc important d'avoir des versions plus r\u00e9centes comme Android 4.4.+.\n\nDans les param\u00e8tres par d\u00e9faut, Javascript et les cookies sont d\u00e9sactiv\u00e9s pour assurer la plus grande s\u00e9curit\u00e9 possible. Cependant, pour une meilleure utilisation des pages monocles, il est recommand\u00e9 de permettre ce Javascript et les cookies. Il suffit d'ajouter aux domaines de confiance dans le menu. La machine \u00e0 m\u00e9tacher les monocles ne stocke pas votre IP ou d'autres donn\u00e9es.\n\n<b>Fonctionnalit\u00e9s:</b>\n\n* Blocage int\u00e9gr\u00e9 des publicit\u00e9s EasyList.\n* Prise en charge du proxy Tor Orbot.\n* \u00c9pinglage de certificat SSL.\n* Importation / exportation des param\u00e8tres et des favoris.\n",
+      "it-IT": "Quando si tratta del browser con le impostazioni corrette (restricted a Javascript e cookie), \u00e8 molto forte per proteggere la vostra privacy e anche la sicurezza!\n\nSi prega di utilizzare gli aggiornamenti di sicurezza attuali della vostra versione Android. Nelle impostazioni predefinite, il browser monocles utilizza la vista web monocles, quindi \u00e8 importante avere versioni pi\u00f9 recenti come Android 4.4.+.\n\nNelle impostazioni predefinite, Javascript e i cookie vengono disattivati per garantire la massima sicurezza possibile. Tuttavia, per un migliore utilizzo delle pagine dei monocles si raccomanda di consentire questo Javascript e i cookie. Basta aggiungere ai domini di fiducia nel menu. La macchina monocles metasearch non memorizza il vostro IP o altri dati.\n\n<b>Funzionalit\u00e0:</b>\n\n* Blocco degli annunci EasyList integrato.\n* Possibilit\u00e0 di utilizzare il proxy Tor Orbot.\n* Salvataggio dei certificati SSL.\n* Import/export delle impostazioni e dei segnalibri.\n",
+      "pt-BR": "A \u00fanica maneira de evitar que os dados sejam mal-usados \u00e9, em primeiro lugar, impedir que eles sejam coletados. O monocles browser tem dois objetivos principais.\n\n1. Minimizar os dados que s\u00e3o enviados para a internet.\n\n2. Minimizar os dados armazenados no dispositivo.\n\nA maioria dos navegadores fornece silenciosamente aos sites grandes quantidades de informa\u00e7\u00f5es que permitem que eles rastreiem voc\u00ea e comprometam sua privacidade. Sites e redes de an\u00fancios usam tecnologias como JavaScript, cookies, armazenamento DOM, agentes de usu\u00e1rio e muitas outras coisas para identificar exclusivamente cada usu\u00e1rio e rastre\u00e1-los entre as visitas e na web.\n\nPor outro lado, funcionalidades sens\u00edveis \u00e0 privacidade s\u00e3o desativados por padr\u00e3o no monocles browser. Se uma dessas tecnologias for necess\u00e1ria para um site funcionar corretamente, o usu\u00e1rio pode optar por ativ\u00e1-la apenas para essa visita. Ou podem usar as configura\u00e7\u00f5es de dom\u00ednio para ativar automaticamente determinados recursos ao entrar em um site espec\u00edfico e desativ\u00e1-los novamente ao sair.\n\nAtualmente, o monocles browser usa o WebView integrado do Android para renderizar p\u00e1ginas da web. Como tal, funciona melhor quando a vers\u00e3o mais recente do WebView est\u00e1 instalada (consulte https://www.stoutner.com/privacy-browser/common-settings/webview/). Na s\u00e9rie 4.x, o monocles browser mudar\u00e1 para uma vers\u00e3o bifurcada do WebView do Android chamada Privacy WebView, que permitir\u00e1 recursos avan\u00e7ados de privacidade.\n\n<b>Caracter\u00edsticas:</b>\n\n* Bloqueio de an\u00fancios EasyList integrado.\n* Suporte de proxy Tor Orbot.\n* Fixa\u00e7\u00e3o de certificado SSL.\n* Importa\u00e7\u00e3o/exporta\u00e7\u00e3o de configura\u00e7\u00f5es e favoritos.\n",
+      "ru-RU": "\u041f\u0440\u0438 \u0440\u0430\u0431\u043e\u0442\u0435 \u0441 \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u043e\u043c \u0441 \u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u044b\u043c\u0438 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430\u043c\u0438 (\u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u044b Javascript \u0438 cookies), \u043e\u043d \u043e\u0447\u0435\u043d\u044c \u0441\u0438\u043b\u044c\u043d\u043e \u0437\u0430\u0449\u0438\u0449\u0430\u0435\u0442 \u0432\u0430\u0448\u0443 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u044c, \u0430 \u0442\u0430\u043a\u0436\u0435 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c!\n\n\u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0439\u0442\u0435 \u0442\u0435\u043a\u0443\u0449\u0438\u0435 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438 \u0432\u0430\u0448\u0435\u0439 \u0432\u0435\u0440\u0441\u0438\u0438 Android. \u0412 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430\u0445 \u043f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e \u0431\u0440\u0430\u0443\u0437\u0435\u0440 monocles \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442 monocles webview, \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u0432\u0430\u0436\u043d\u043e \u0438\u043c\u0435\u0442\u044c \u0431\u043e\u043b\u0435\u0435 \u043d\u043e\u0432\u044b\u0435 \u0432\u0435\u0440\u0441\u0438\u0438, \u043a\u0430\u043a Android 4.4.+.\n\n\u0412 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430\u0445 \u043f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e Javascript \u0438 cookies \u0434\u0435\u0430\u043a\u0442\u0438\u0432\u0438\u0440\u043e\u0432\u0430\u043d\u044b \u0434\u043b\u044f \u043e\u0431\u0435\u0441\u043f\u0435\u0447\u0435\u043d\u0438\u044f \u043c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u044c\u043d\u043e \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0439 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438. \u041e\u0434\u043d\u0430\u043a\u043e \u0434\u043b\u044f \u043b\u0443\u0447\u0448\u0435\u0433\u043e \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446 monocles \u0440\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0443\u0435\u0442\u0441\u044f \u0440\u0430\u0437\u0440\u0435\u0448\u0438\u0442\u044c Javascript \u0438 cookies. \u041f\u0440\u043e\u0441\u0442\u043e \u0434\u043e\u0431\u0430\u0432\u044c\u0442\u0435 \u0432 \u043c\u0435\u043d\u044e \u0434\u043e\u0432\u0435\u0440\u0435\u043d\u043d\u044b\u0435 \u0434\u043e\u043c\u0435\u043d\u044b. \u041c\u0435\u0442\u0430\u043f\u043e\u0438\u0441\u043a\u043e\u0432\u0430\u044f \u043c\u0430\u0448\u0438\u043d\u0430 monocles \u043d\u0435 \u0441\u043e\u0445\u0440\u0430\u043d\u044f\u0435\u0442 \u0432\u0430\u0448 IP \u0438\u043b\u0438 \u043b\u044e\u0431\u044b\u0435 \u0434\u0440\u0443\u0433\u0438\u0435 \u0434\u0430\u043d\u043d\u044b\u0435.\n\n<b>\u041e\u0441\u043e\u0431\u0435\u043d\u043d\u043e\u0441\u0442\u0438:</b>\n\n* \u0412\u0441\u0442\u0440\u043e\u0435\u043d\u043d\u0430\u044f \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430 \u0440\u0435\u043a\u043b\u0430\u043c\u044b EasyList.\n* \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 \u043f\u0440\u043e\u043a\u0441\u0438 Tor Orbot.\n* \u041f\u0440\u0438\u0432\u044f\u0437\u043a\u0430 SSL-\u0441\u0435\u0440\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u0430.\n* \u0418\u043c\u043f\u043e\u0440\u0442/\u044d\u043a\u0441\u043f\u043e\u0440\u0442 \u043d\u0430\u0441\u0442\u0440\u043e\u0435\u043a \u0438 \u0437\u0430\u043a\u043b\u0430\u0434\u043e\u043a.\n",
+      "tr-TR": "Taray\u0131c\u0131 ile do\u011fru ayarlarla u\u011fra\u015f\u0131rken (Javascript ve \u00e7erezler yok) gizlili\u011finizi ve g\u00fcvenli\u011finizi korumak \u00e7ok g\u00fc\u00e7l\u00fcd\u00fcr!\n\nL\u00fctfen Android s\u00fcr\u00fcm\u00fcn\u00fcz i\u00e7in en son g\u00fcvenlik g\u00fcncellemelerini kullan\u0131n. Tercihlerde, monokles taray\u0131c\u0131s\u0131 monocles web g\u00f6r\u00fcn\u00fcm\u00fcn\u00fc kullan\u0131r, bu nedenle Android 4.4.+ 'dan daha yeni s\u00fcr\u00fcmlere sahip olmak \u00f6nemlidir.\n\nVarsay\u0131lan olarak, maksimum g\u00fcvenlik sa\u011flamak i\u00e7in Javascript ve \u00e7erezler devre d\u0131\u015f\u0131 b\u0131rak\u0131l\u0131r. Ancak, monocles sayfalar\u0131n\u0131n daha iyi kullan\u0131lmas\u0131 i\u00e7in bu Javascript ve \u00e7erezlere izin verilmesi \u00f6nerilir. Men\u00fcdeki G\u00fcvenilen Etki Alanlar\u0131na eklemeniz yeterlidir. monocles metasearch altyap\u0131s\u0131 IP'nizi veya ba\u015fka bir veriyi depolamaz.\n\n<b>\u00d6zellikler:</b>\n\n* Entegre EasyList reklam engelleme.\n* Tor Orbot vekil sunucusu deste\u011fi.\n* SSL sertifika sabitlemesi.\n* Yer imlerin ve ayarlar\u0131n \u0130\u00e7e/D\u0131\u015fa Aktar\u0131lmas\u0131.\n",
+      "zh_CN": "\u4fdd\u62a4\u9690\u79c1\u4e0d\u88ab\u6ee5\u7528\u7684\u552f\u4e00\u65b9\u6cd5\u662f\u9996\u5148\u9632\u6b62\u9690\u79c1\u88ab\u6536\u96c6\u3002monocles browser\u6709\u4e24\u4e2a\u76ee\u6807\u3002 \n1.\u51cf\u5c11\u5728\u4e92\u8054\u7f51\u4e2d\u53d1\u9001\u7684\u6570\u636e\u3002\n2.\u51cf\u5c11\u6570\u636e\u50a8\u5b58\u5230\u8bbe\u5907\u3002\n\u5927\u591a\u6570\u6d4f\u89c8\u5668\u9ed8\u9ed8\u7684\u50cf\u7f51\u9875\u63d0\u4f9b\u5927\u91cf\u4fe1\u606f\uff0c\u5141\u8bb8\u4ed6\u4eec\u8ffd\u8e2a\u4f60\uff0c\u635f\u5bb3\u4f60\u7684\u9690\u79c1\u3002\u7f51\u7ad9\u548c\u5e7f\u544a\u7f51\u7edc\u4f7f\u7528JavaScript\uff0ccookies\uff0cDOM\u5b58\u50a8\uff0cUA\u548c\u5176\u4ed6\u7684\u7279\u5b9a\u7684\u8eab\u4efd\u9274\u522b\u6280\u672f\u6765\u5728\u7528\u6237\u8bbf\u95ee\u65f6\u8bc6\u522b\u7528\u6237\u8ffd\u8e2a\u4ed6\u4eec\u3002\n\u76f8\u6bd4\u4e4b\u4e0b\uff0cmonocles browser\u9ed8\u8ba4\u7981\u7528\u9690\u79c1\u76f8\u5173\u7684\u529f\u80fd\uff0c\u5982\u679c\u7f51\u9875\u5408\u6cd5\u7684\u8bf7\u6c42\u8fd9\u4e9b\u529f\u80fd\uff0c\u7528\u6237\u53ef\u4ee5\u9009\u62e9\u5728\u8fd9\u4e2a\u8bbf\u95ee\u65f6\u6253\u5f00\u76f8\u5e94\u7684\u529f\u80fd\uff0c\u6216\u8005\u53ef\u4ee5\u4f7f\u7528\u57df\u8bbe\u7f6e\u6765\u5728\u4ed6\u4eec\u8bbf\u95ee\u7279\u5b9a\u7f51\u9875\u65f6\u81ea\u52a8\u6253\u5f00\u67d0\u4e9b\u529f\u80fd\uff0c\u5e76\u5728\u79bb\u5f00\u65f6\u5173\u95ed\u3002\n\nmonocles browser\u76ee\u524d\u4f7f\u7528\u5b89\u5353\u5185\u7f6e\u7684WebView\u6765\u5448\u73b0\u7f51\u9875\uff0c\u56e0\u6b64\u5b83\u5728\u6700\u65b0\u7248\u672c\u7684WebView\u6548\u679c\u6700\u597d\u3002(see https://www.stoutner.com/privacy-browser/common-settings/webview/). \u57284.x\u7cfb\u5217\u4e2d\uff0cmonocles browser\u5c06\u5207\u6362\u5230\u53ebmonocles WebView\u7684\u5b89\u5353WebView\u7684\u5206\u652f\uff0c\u5b83\u5141\u8bb8\u66f4\u9ad8\u7684\u9690\u79c1\u529f\u80fd\u3002\n\n<b>\u529f\u80fd:</b>\n\n* \u96c6\u6210EasyList\u62e6\u622a\u5e7f\u544a\n* \u652f\u6301Tor Orbot\u901a\u9053\n* \u56fa\u5b9aSSL\u8bc1\u4e66\n* \u652f\u6301\u5bfc\u5165/\u5bfc\u51fa\u8bbe\u7f6e\u548c\u4e66\u7b7e\n"
+    },
+    "donate": [
+      "https://monocles.de/more/#donation-section"
+    ],
+    "featureGraphic": {
+      "en-US": {
+        "name": "/de.monocles.browser/en-US/featureGraphic_J2VqbWOwtMtMQCuMixXZEDtMcSU3B3YFlBG4MghFrqE=.png",
+        "sha256": "27656a6d63b0b4cb4c402b8c8b15d9103b4c7125370776059411b8320845aea1",
+        "size": 38969
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/de.monocles.browser/en-US/icon_o_-IUFPXsC-UXiD_X9LzEmADmsHVzUlzQr7f00NXAWw=.png",
+        "sha256": "a3ff885053d7b02f945e20ff5fd2f31260039ac1d5cd497342bedfd34357016c",
+        "size": 57796
+      }
+    },
+    "issueTracker": "https://codeberg.org/Arne/monocles_browser/issues",
+    "lastUpdated": 1755768594000,
+    "license": "GPL-3.0-only",
+    "name": {
+      "de-DE": "monocles browser",
+      "en-US": "monocles browser",
+      "es-ES": "navegador de browser",
+      "fr-FR": "navigateur browser",
+      "it-IT": "monocles browser",
+      "pt-BR": "Navegador Privado",
+      "ru-RU": "\u0431\u0440\u0430\u0443\u0437\u0435\u0440 monocles",
+      "tr-TR": "monocles browser",
+      "zh_CN": "Privacy Browser"
+    },
+    "preferredSigner": "152b492084fd356f5695f8a917d58d4e21ef91cabb2ffc23a4d7c67a2fe4cd43",
+    "promoGraphic": {
+      "en-US": {
+        "name": "/de.monocles.browser/en-US/promoGraphic_NFu1EA76YMFqAaJG6wAsKrH7Sc5dxA24Qq84HZsZ8LM=.png",
+        "sha256": "345bb5100efa60c16a01a246eb002c2ab1fb49ce5dc40db842af381d9b19f0b3",
+        "size": 5856
+      }
+    },
+    "screenshots": {
+      "phone": {
+        "de-DE": [
+          {
+            "name": "/de.monocles.browser/de-DE/phoneScreenshots/01 - Homepage - de.png",
+            "sha256": "bf90947659c271083e31d6282cab5c48c6bb14a429a7cd4173c5e87933c0a85f",
+            "size": 127930
+          },
+          {
+            "name": "/de.monocles.browser/de-DE/phoneScreenshots/01-Homepage.png",
+            "sha256": "c902819020cb85a3c81152535f3d51b381daac783b09892918d97c82398c427f",
+            "size": 97095
+          },
+          {
+            "name": "/de.monocles.browser/de-DE/phoneScreenshots/02 - Navigation Menu - de.png",
+            "sha256": "b810811c62161af5f877a57b9db6803d07741023373e4526c3811149432cba86",
+            "size": 115451
+          },
+          {
+            "name": "/de.monocles.browser/de-DE/phoneScreenshots/02-NavigationMenu-de.png",
+            "sha256": "dd9f40d70271ac39bf80ab56059fed0858bd4b48db25d6df2e2969d883f9dbb0",
+            "size": 117451
+          },
+          {
+            "name": "/de.monocles.browser/de-DE/phoneScreenshots/02-NavigationMenu.png",
+            "sha256": "0cf5c1abe6dda5d826c31ebcde64bc006628096c3698711c897f76cd4981cc36",
+            "size": 88421
+          },
+          {
+            "name": "/de.monocles.browser/de-DE/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "99299ee218e587b307903bc9d0b913c00fac9611497789a4ed03408db9019254",
+            "size": 134564
+          },
+          {
+            "name": "/de.monocles.browser/de-DE/phoneScreenshots/04-Tor.png",
+            "sha256": "4c2006c6bbca227db5e583fe0a51a07d1b4ca6ca681cf3e221928a1699144773",
+            "size": 185420
+          },
+          {
+            "name": "/de.monocles.browser/de-DE/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "c325690ee32a42c99393997a83b057db3bb853b7d7f5432d41fe3b5264bfe066",
+            "size": 73546
+          },
+          {
+            "name": "/de.monocles.browser/de-DE/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "ce7d2e1116b6f74167174ea8e055c29ad7c862199aa773572b6ce9dcfa7e4998",
+            "size": 92440
+          },
+          {
+            "name": "/de.monocles.browser/de-DE/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "df3b84458509d6a61dfe600cd96094aa500f75221f4f70f29191166253609c2f",
+            "size": 92221
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/de.monocles.browser/en-US/phoneScreenshots/01 - Homepage - en.png",
+            "sha256": "e44e089b3a502afd16b34df6422290818c9f392e4c940102c1d3a1a28a9e080b",
+            "size": 128024
+          },
+          {
+            "name": "/de.monocles.browser/en-US/phoneScreenshots/01-Homepage.png",
+            "sha256": "100c37146f704f323e29bb1ea16236db468bcecaf0a89bf0ad87062f9afda082",
+            "size": 96878
+          },
+          {
+            "name": "/de.monocles.browser/en-US/phoneScreenshots/02 - Navigation Menu - en.png",
+            "sha256": "b982a18c5eb6a40a6808ac187047becd6d9e7510e8db591178c66be13f6799ee",
+            "size": 111327
+          },
+          {
+            "name": "/de.monocles.browser/en-US/phoneScreenshots/02-NavigationMenu-en.png",
+            "sha256": "0298c27064b535c6ab7e2ee83aa46399109c67b617f2a3e73ae8a8590b0108a2",
+            "size": 114170
+          },
+          {
+            "name": "/de.monocles.browser/en-US/phoneScreenshots/02-NavigationMenu.png",
+            "sha256": "0cf19ea61089886e476a2ec72830a77eaff8dd2f41d74b1fa74c15761babd08e",
+            "size": 85311
+          },
+          {
+            "name": "/de.monocles.browser/en-US/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "99299ee218e587b307903bc9d0b913c00fac9611497789a4ed03408db9019254",
+            "size": 134564
+          },
+          {
+            "name": "/de.monocles.browser/en-US/phoneScreenshots/04-Tor.png",
+            "sha256": "184d0bd33204041a704bdffd3111a25d97b0c80910efa3a71ea432b0dd317651",
+            "size": 185080
+          },
+          {
+            "name": "/de.monocles.browser/en-US/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "71763860cceb39e843e88c4f3ca44280ed0240f3c935bdb0c23901b6fcaf2099",
+            "size": 72969
+          },
+          {
+            "name": "/de.monocles.browser/en-US/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "ce7d2e1116b6f74167174ea8e055c29ad7c862199aa773572b6ce9dcfa7e4998",
+            "size": 92440
+          },
+          {
+            "name": "/de.monocles.browser/en-US/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "df3b84458509d6a61dfe600cd96094aa500f75221f4f70f29191166253609c2f",
+            "size": 92221
+          }
+        ],
+        "es-ES": [
+          {
+            "name": "/de.monocles.browser/es-ES/phoneScreenshots/01 - Homepage - es.png",
+            "sha256": "5b33e26624eca25cd239e3a3551194fee31fdf73ae7222365a0baa9c62c302e2",
+            "size": 126829
+          },
+          {
+            "name": "/de.monocles.browser/es-ES/phoneScreenshots/01-Homepage.png",
+            "sha256": "100c37146f704f323e29bb1ea16236db468bcecaf0a89bf0ad87062f9afda082",
+            "size": 96878
+          },
+          {
+            "name": "/de.monocles.browser/es-ES/phoneScreenshots/02 - Navigation Menu - es.png",
+            "sha256": "efb5fa4dc97bdab83a20ca62958d10c121daf919a596be3e052141c2f952795f",
+            "size": 113324
+          },
+          {
+            "name": "/de.monocles.browser/es-ES/phoneScreenshots/02-NavigationMenu-es.png",
+            "sha256": "c7c89bbd11940a70cb1f53d631bdfb8363ab85e50ff46e749d4faa31aa75885a",
+            "size": 117223
+          },
+          {
+            "name": "/de.monocles.browser/es-ES/phoneScreenshots/02-NavigationMenu.png",
+            "sha256": "0cf19ea61089886e476a2ec72830a77eaff8dd2f41d74b1fa74c15761babd08e",
+            "size": 85311
+          },
+          {
+            "name": "/de.monocles.browser/es-ES/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "300080fcbf2c1419aa08c767b0e09b76e50b6a94d7f4ed478e62f194d5d21ca1",
+            "size": 134905
+          },
+          {
+            "name": "/de.monocles.browser/es-ES/phoneScreenshots/04-Tor.png",
+            "sha256": "184d0bd33204041a704bdffd3111a25d97b0c80910efa3a71ea432b0dd317651",
+            "size": 185080
+          },
+          {
+            "name": "/de.monocles.browser/es-ES/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "71763860cceb39e843e88c4f3ca44280ed0240f3c935bdb0c23901b6fcaf2099",
+            "size": 72969
+          },
+          {
+            "name": "/de.monocles.browser/es-ES/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "ce7d2e1116b6f74167174ea8e055c29ad7c862199aa773572b6ce9dcfa7e4998",
+            "size": 92440
+          },
+          {
+            "name": "/de.monocles.browser/es-ES/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "fb938e1fa8e4859f44f0d2ac0a0c148d9f46d6bc66ef1da5d99efe7e112f3838",
+            "size": 92562
+          }
+        ],
+        "fr-FR": [
+          {
+            "name": "/de.monocles.browser/fr-FR/phoneScreenshots/01 - Homepage - fr.png",
+            "sha256": "5c859fdcf2d6d9a9478df7165bafe1f04be1444f62a20ca3ee7ae2fd57b0d59f",
+            "size": 126926
+          },
+          {
+            "name": "/de.monocles.browser/fr-FR/phoneScreenshots/01-Homepage.png",
+            "sha256": "100c37146f704f323e29bb1ea16236db468bcecaf0a89bf0ad87062f9afda082",
+            "size": 96878
+          },
+          {
+            "name": "/de.monocles.browser/fr-FR/phoneScreenshots/02 - Navigation Menu - fr.png",
+            "sha256": "2161639b38a0efe36fa48498758c51558dbf08d9160dfb78f32943fee868a52d",
+            "size": 117645
+          },
+          {
+            "name": "/de.monocles.browser/fr-FR/phoneScreenshots/02-NavigationMenu-fr.png",
+            "sha256": "f3eccb4f9bd1d6e4d9683ac1e93a0007d2be463c493e681d07fb18fbf6e8069b",
+            "size": 120779
+          },
+          {
+            "name": "/de.monocles.browser/fr-FR/phoneScreenshots/02-NavigationMenu.png",
+            "sha256": "0cf19ea61089886e476a2ec72830a77eaff8dd2f41d74b1fa74c15761babd08e",
+            "size": 85311
+          },
+          {
+            "name": "/de.monocles.browser/fr-FR/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "300080fcbf2c1419aa08c767b0e09b76e50b6a94d7f4ed478e62f194d5d21ca1",
+            "size": 134905
+          },
+          {
+            "name": "/de.monocles.browser/fr-FR/phoneScreenshots/04-Tor.png",
+            "sha256": "184d0bd33204041a704bdffd3111a25d97b0c80910efa3a71ea432b0dd317651",
+            "size": 185080
+          },
+          {
+            "name": "/de.monocles.browser/fr-FR/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "71763860cceb39e843e88c4f3ca44280ed0240f3c935bdb0c23901b6fcaf2099",
+            "size": 72969
+          },
+          {
+            "name": "/de.monocles.browser/fr-FR/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "ce7d2e1116b6f74167174ea8e055c29ad7c862199aa773572b6ce9dcfa7e4998",
+            "size": 92440
+          },
+          {
+            "name": "/de.monocles.browser/fr-FR/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "fb938e1fa8e4859f44f0d2ac0a0c148d9f46d6bc66ef1da5d99efe7e112f3838",
+            "size": 92562
+          }
+        ],
+        "it-IT": [
+          {
+            "name": "/de.monocles.browser/it-IT/phoneScreenshots/01 - Homepage - it.png",
+            "sha256": "30287da3869623fdcdd286009883c687fa56472bd40c946faceb8569d8d332dd",
+            "size": 126016
+          },
+          {
+            "name": "/de.monocles.browser/it-IT/phoneScreenshots/01-Homepage.png",
+            "sha256": "100c37146f704f323e29bb1ea16236db468bcecaf0a89bf0ad87062f9afda082",
+            "size": 96878
+          },
+          {
+            "name": "/de.monocles.browser/it-IT/phoneScreenshots/02 - Navigation Menu - it.png",
+            "sha256": "70bc671deca9fafcdac675202fb772b3a0b0daa75faa8027c6c7ce4b7e7d4dad",
+            "size": 106968
+          },
+          {
+            "name": "/de.monocles.browser/it-IT/phoneScreenshots/02-NavigationMenu-it.png",
+            "sha256": "09048d23ef78b9790496b1033c5362047b1a543ca96cb1c6bd505587d65371cf",
+            "size": 111116
+          },
+          {
+            "name": "/de.monocles.browser/it-IT/phoneScreenshots/02-NavigationMenu.png",
+            "sha256": "0cf19ea61089886e476a2ec72830a77eaff8dd2f41d74b1fa74c15761babd08e",
+            "size": 85311
+          },
+          {
+            "name": "/de.monocles.browser/it-IT/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "300080fcbf2c1419aa08c767b0e09b76e50b6a94d7f4ed478e62f194d5d21ca1",
+            "size": 134905
+          },
+          {
+            "name": "/de.monocles.browser/it-IT/phoneScreenshots/04-Tor.png",
+            "sha256": "184d0bd33204041a704bdffd3111a25d97b0c80910efa3a71ea432b0dd317651",
+            "size": 185080
+          },
+          {
+            "name": "/de.monocles.browser/it-IT/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "71763860cceb39e843e88c4f3ca44280ed0240f3c935bdb0c23901b6fcaf2099",
+            "size": 72969
+          },
+          {
+            "name": "/de.monocles.browser/it-IT/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "ce7d2e1116b6f74167174ea8e055c29ad7c862199aa773572b6ce9dcfa7e4998",
+            "size": 92440
+          },
+          {
+            "name": "/de.monocles.browser/it-IT/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "fb938e1fa8e4859f44f0d2ac0a0c148d9f46d6bc66ef1da5d99efe7e112f3838",
+            "size": 92562
+          }
+        ],
+        "pt-BR": [
+          {
+            "name": "/de.monocles.browser/pt-BR/phoneScreenshots/01 - Homepage - pt-rBR.png",
+            "sha256": "e2f9b68e81ed8215c5d503419c2fcf11b2ff4ba842c0e616866a6f2041ab9439",
+            "size": 127447
+          },
+          {
+            "name": "/de.monocles.browser/pt-BR/phoneScreenshots/01-Homepage.png",
+            "sha256": "100c37146f704f323e29bb1ea16236db468bcecaf0a89bf0ad87062f9afda082",
+            "size": 96878
+          },
+          {
+            "name": "/de.monocles.browser/pt-BR/phoneScreenshots/02 - Navigation Menu - pt-rBR.png",
+            "sha256": "d40d47ab891044004829c1ad896f1825ff0e069dcf3aff7d03d3f366c9e91b33",
+            "size": 113005
+          },
+          {
+            "name": "/de.monocles.browser/pt-BR/phoneScreenshots/02-NavigationMenu-pt-rBR.png",
+            "sha256": "509b84ce98df43d85eb0af772c0b00b8e11dffb0b157b126d785d1220f3ad912",
+            "size": 115350
+          },
+          {
+            "name": "/de.monocles.browser/pt-BR/phoneScreenshots/02-NavigationMenu.png",
+            "sha256": "0cf19ea61089886e476a2ec72830a77eaff8dd2f41d74b1fa74c15761babd08e",
+            "size": 85311
+          },
+          {
+            "name": "/de.monocles.browser/pt-BR/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "300080fcbf2c1419aa08c767b0e09b76e50b6a94d7f4ed478e62f194d5d21ca1",
+            "size": 134905
+          },
+          {
+            "name": "/de.monocles.browser/pt-BR/phoneScreenshots/04-Tor.png",
+            "sha256": "184d0bd33204041a704bdffd3111a25d97b0c80910efa3a71ea432b0dd317651",
+            "size": 185080
+          },
+          {
+            "name": "/de.monocles.browser/pt-BR/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "71763860cceb39e843e88c4f3ca44280ed0240f3c935bdb0c23901b6fcaf2099",
+            "size": 72969
+          },
+          {
+            "name": "/de.monocles.browser/pt-BR/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "ce7d2e1116b6f74167174ea8e055c29ad7c862199aa773572b6ce9dcfa7e4998",
+            "size": 92440
+          },
+          {
+            "name": "/de.monocles.browser/pt-BR/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "fb938e1fa8e4859f44f0d2ac0a0c148d9f46d6bc66ef1da5d99efe7e112f3838",
+            "size": 92562
+          }
+        ],
+        "ru-RU": [
+          {
+            "name": "/de.monocles.browser/ru-RU/phoneScreenshots/01 - Homepage - ru.png",
+            "sha256": "9bb26d72a8e2292745dcd815a14dad5a98f93b66766846162ecd9bca4d4001f9",
+            "size": 128295
+          },
+          {
+            "name": "/de.monocles.browser/ru-RU/phoneScreenshots/01-Homepage.png",
+            "sha256": "100c37146f704f323e29bb1ea16236db468bcecaf0a89bf0ad87062f9afda082",
+            "size": 96878
+          },
+          {
+            "name": "/de.monocles.browser/ru-RU/phoneScreenshots/02 - Navigation Menu - ru.png",
+            "sha256": "93aa899d2c82eec41e8dcb30118416cd1904f93dcd70d6123d9ab4c3f1bbaff5",
+            "size": 112951
+          },
+          {
+            "name": "/de.monocles.browser/ru-RU/phoneScreenshots/02-NavigationMenu-ru.png",
+            "sha256": "e1e9a5fe10e9883de038777b3ab506013ca5c68bedaf53cf70d4b0c804d112c2",
+            "size": 118321
+          },
+          {
+            "name": "/de.monocles.browser/ru-RU/phoneScreenshots/02-NavigationMenu.png",
+            "sha256": "0cf19ea61089886e476a2ec72830a77eaff8dd2f41d74b1fa74c15761babd08e",
+            "size": 85311
+          },
+          {
+            "name": "/de.monocles.browser/ru-RU/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "300080fcbf2c1419aa08c767b0e09b76e50b6a94d7f4ed478e62f194d5d21ca1",
+            "size": 134905
+          },
+          {
+            "name": "/de.monocles.browser/ru-RU/phoneScreenshots/04-Tor.png",
+            "sha256": "184d0bd33204041a704bdffd3111a25d97b0c80910efa3a71ea432b0dd317651",
+            "size": 185080
+          },
+          {
+            "name": "/de.monocles.browser/ru-RU/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "71763860cceb39e843e88c4f3ca44280ed0240f3c935bdb0c23901b6fcaf2099",
+            "size": 72969
+          },
+          {
+            "name": "/de.monocles.browser/ru-RU/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "ce7d2e1116b6f74167174ea8e055c29ad7c862199aa773572b6ce9dcfa7e4998",
+            "size": 92440
+          },
+          {
+            "name": "/de.monocles.browser/ru-RU/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "fb938e1fa8e4859f44f0d2ac0a0c148d9f46d6bc66ef1da5d99efe7e112f3838",
+            "size": 92562
+          }
+        ],
+        "tr-TR": [
+          {
+            "name": "/de.monocles.browser/tr-TR/phoneScreenshots/01 - Homepage - tr.png",
+            "sha256": "aeea1eea89538ee3eee36643c379eab00857d8c40773bc13d50896be284cf3a9",
+            "size": 128535
+          },
+          {
+            "name": "/de.monocles.browser/tr-TR/phoneScreenshots/01-Homepage.png",
+            "sha256": "100c37146f704f323e29bb1ea16236db468bcecaf0a89bf0ad87062f9afda082",
+            "size": 96878
+          },
+          {
+            "name": "/de.monocles.browser/tr-TR/phoneScreenshots/02 - Navigation Menu - tr.png",
+            "sha256": "39f6fd2f32e810635d73d98efe4cccb6bb4488155733a668439747dac5a17798",
+            "size": 108673
+          },
+          {
+            "name": "/de.monocles.browser/tr-TR/phoneScreenshots/02-NavigationMenu-tr.png",
+            "sha256": "6f234233d2e32ab4916b87887ca8a1042aaff80e47cabad66ebed46c9d828108",
+            "size": 107742
+          },
+          {
+            "name": "/de.monocles.browser/tr-TR/phoneScreenshots/02-NavigationMenu.png",
+            "sha256": "0cf19ea61089886e476a2ec72830a77eaff8dd2f41d74b1fa74c15761babd08e",
+            "size": 85311
+          },
+          {
+            "name": "/de.monocles.browser/tr-TR/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "300080fcbf2c1419aa08c767b0e09b76e50b6a94d7f4ed478e62f194d5d21ca1",
+            "size": 134905
+          },
+          {
+            "name": "/de.monocles.browser/tr-TR/phoneScreenshots/04-Tor.png",
+            "sha256": "184d0bd33204041a704bdffd3111a25d97b0c80910efa3a71ea432b0dd317651",
+            "size": 185080
+          },
+          {
+            "name": "/de.monocles.browser/tr-TR/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "71763860cceb39e843e88c4f3ca44280ed0240f3c935bdb0c23901b6fcaf2099",
+            "size": 72969
+          },
+          {
+            "name": "/de.monocles.browser/tr-TR/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "ce7d2e1116b6f74167174ea8e055c29ad7c862199aa773572b6ce9dcfa7e4998",
+            "size": 92440
+          },
+          {
+            "name": "/de.monocles.browser/tr-TR/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "fb938e1fa8e4859f44f0d2ac0a0c148d9f46d6bc66ef1da5d99efe7e112f3838",
+            "size": 92562
+          }
+        ],
+        "zh-CN": [
+          {
+            "name": "/de.monocles.browser/zh-CN/phoneScreenshots/01-Homepage.png",
+            "sha256": "100c37146f704f323e29bb1ea16236db468bcecaf0a89bf0ad87062f9afda082",
+            "size": 96878
+          },
+          {
+            "name": "/de.monocles.browser/zh-CN/phoneScreenshots/02 - Navigation Menu - zh-rCN.png",
+            "sha256": "7ccc9427ca6dd475631a5aae8eef99b2a122ed4d3c92f6118b8d69e03500855f",
+            "size": 101850
+          },
+          {
+            "name": "/de.monocles.browser/zh-CN/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "99299ee218e587b307903bc9d0b913c00fac9611497789a4ed03408db9019254",
+            "size": 134564
+          },
+          {
+            "name": "/de.monocles.browser/zh-CN/phoneScreenshots/04-Tor.png",
+            "sha256": "184d0bd33204041a704bdffd3111a25d97b0c80910efa3a71ea432b0dd317651",
+            "size": 185080
+          },
+          {
+            "name": "/de.monocles.browser/zh-CN/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "71763860cceb39e843e88c4f3ca44280ed0240f3c935bdb0c23901b6fcaf2099",
+            "size": 72969
+          },
+          {
+            "name": "/de.monocles.browser/zh-CN/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "ce7d2e1116b6f74167174ea8e055c29ad7c862199aa773572b6ce9dcfa7e4998",
+            "size": 92440
+          },
+          {
+            "name": "/de.monocles.browser/zh-CN/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "df3b84458509d6a61dfe600cd96094aa500f75221f4f70f29191166253609c2f",
+            "size": 92221
+          }
+        ],
+        "zh_CN": [
+          {
+            "name": "/de.monocles.browser/zh_CN/phoneScreenshots/01 - Homepage - zh-rCN.png",
+            "sha256": "8624294d3bbc0a62059da85964c499d52f91a6b141502d7f0fd4a5309cbfbc58",
+            "size": 126885
+          },
+          {
+            "name": "/de.monocles.browser/zh_CN/phoneScreenshots/01-Homepage.png",
+            "sha256": "100c37146f704f323e29bb1ea16236db468bcecaf0a89bf0ad87062f9afda082",
+            "size": 96878
+          },
+          {
+            "name": "/de.monocles.browser/zh_CN/phoneScreenshots/02-NavigationMenu-zh-rCN.png",
+            "sha256": "611a32334eb17bb966108f517b30f4492153b668a8dfe6525fc9f0f94f64b3f4",
+            "size": 100226
+          },
+          {
+            "name": "/de.monocles.browser/zh_CN/phoneScreenshots/03-OptionsMenu-zh-rCN.png",
+            "sha256": "f534204a24967f3601ddc4efd88d083b1f710902998cba369421d5ee5bc75dcd",
+            "size": 154718
+          },
+          {
+            "name": "/de.monocles.browser/zh_CN/phoneScreenshots/03-OptionsMenu.png",
+            "sha256": "99299ee218e587b307903bc9d0b913c00fac9611497789a4ed03408db9019254",
+            "size": 134564
+          },
+          {
+            "name": "/de.monocles.browser/zh_CN/phoneScreenshots/04-Tor-zh-rCN.png",
+            "sha256": "14979671f1caed48386782ec3d999d50462f486d8cea43c273348db60296ce3f",
+            "size": 189646
+          },
+          {
+            "name": "/de.monocles.browser/zh_CN/phoneScreenshots/04-Tor.png",
+            "sha256": "184d0bd33204041a704bdffd3111a25d97b0c80910efa3a71ea432b0dd317651",
+            "size": 185080
+          },
+          {
+            "name": "/de.monocles.browser/zh_CN/phoneScreenshots/05-7-InchTabletRequestDetails.png",
+            "sha256": "71763860cceb39e843e88c4f3ca44280ed0240f3c935bdb0c23901b6fcaf2099",
+            "size": 72969
+          },
+          {
+            "name": "/de.monocles.browser/zh_CN/phoneScreenshots/05-RequestDetails-zh-rCN.png",
+            "sha256": "6ae39ea14b244b7d9eea772c6b8e2b77ea31b4e5e7506379760d6c0c96e6e06b",
+            "size": 196811
+          },
+          {
+            "name": "/de.monocles.browser/zh_CN/phoneScreenshots/06-7-InchTabletDarkTheme.png",
+            "sha256": "ce7d2e1116b6f74167174ea8e055c29ad7c862199aa773572b6ce9dcfa7e4998",
+            "size": 92440
+          },
+          {
+            "name": "/de.monocles.browser/zh_CN/phoneScreenshots/06-DarkTheme-zh-rCN.png",
+            "sha256": "4a8b3ecb8d60c14d119654fc352fa4122f1b10cde58a005c8e45262a97be5b2d",
+            "size": 126796
+          },
+          {
+            "name": "/de.monocles.browser/zh_CN/phoneScreenshots/07-10-InchTabletDomains.png",
+            "sha256": "df3b84458509d6a61dfe600cd96094aa500f75221f4f70f29191166253609c2f",
+            "size": 92221
+          },
+          {
+            "name": "/de.monocles.browser/zh_CN/phoneScreenshots/07-Domains.png",
+            "sha256": "17ed7b546e9dc1547b6119e5269ca96cfa714e925df5f6b8f4bcd52b075546fe",
+            "size": 173407
+          }
+        ]
+      },
+      "sevenInch": {
+        "de-DE": [
+          {
+            "name": "/de.monocles.browser/de-DE/sevenInchScreenshots/01-DarkTheme.png",
+            "sha256": "198253feebea1fe9c16a18238e7e3d609e130d4310a87dccec9ca714c96b49af",
+            "size": 63207
+          },
+          {
+            "name": "/de.monocles.browser/de-DE/sevenInchScreenshots/02-RequestDetails.png",
+            "sha256": "533a446aa6e12ad266d74cbaabaa8c334f11fa71a744799369e6933a378207fc",
+            "size": 73887
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/de.monocles.browser/en-US/sevenInchScreenshots/01-DarkTheme.png",
+            "sha256": "2a0c840d42fb626f542259ec3e69edcd18b0b9f877be1a6f062fc3a4fd3aeafb",
+            "size": 92781
+          },
+          {
+            "name": "/de.monocles.browser/en-US/sevenInchScreenshots/02-RequestDetails.png",
+            "sha256": "3be5e4b36b307edfb5f036de2c8d8b9a14a1d629211dfed59d8e211e816e0f15",
+            "size": 73310
+          }
+        ],
+        "es-ES": [
+          {
+            "name": "/de.monocles.browser/es-ES/sevenInchScreenshots/01-DarkTheme.png",
+            "sha256": "2a0c840d42fb626f542259ec3e69edcd18b0b9f877be1a6f062fc3a4fd3aeafb",
+            "size": 92781
+          },
+          {
+            "name": "/de.monocles.browser/es-ES/sevenInchScreenshots/02-RequestDetails.png",
+            "sha256": "3be5e4b36b307edfb5f036de2c8d8b9a14a1d629211dfed59d8e211e816e0f15",
+            "size": 73310
+          }
+        ],
+        "fr-FR": [
+          {
+            "name": "/de.monocles.browser/fr-FR/sevenInchScreenshots/01-DarkTheme.png",
+            "sha256": "2a0c840d42fb626f542259ec3e69edcd18b0b9f877be1a6f062fc3a4fd3aeafb",
+            "size": 92781
+          },
+          {
+            "name": "/de.monocles.browser/fr-FR/sevenInchScreenshots/02-RequestDetails.png",
+            "sha256": "3be5e4b36b307edfb5f036de2c8d8b9a14a1d629211dfed59d8e211e816e0f15",
+            "size": 73310
+          }
+        ],
+        "it-IT": [
+          {
+            "name": "/de.monocles.browser/it-IT/sevenInchScreenshots/01-DarkTheme.png",
+            "sha256": "2a0c840d42fb626f542259ec3e69edcd18b0b9f877be1a6f062fc3a4fd3aeafb",
+            "size": 92781
+          },
+          {
+            "name": "/de.monocles.browser/it-IT/sevenInchScreenshots/02-RequestDetails.png",
+            "sha256": "3be5e4b36b307edfb5f036de2c8d8b9a14a1d629211dfed59d8e211e816e0f15",
+            "size": 73310
+          }
+        ],
+        "pt-BR": [
+          {
+            "name": "/de.monocles.browser/pt-BR/sevenInchScreenshots/01-DarkTheme.png",
+            "sha256": "2a0c840d42fb626f542259ec3e69edcd18b0b9f877be1a6f062fc3a4fd3aeafb",
+            "size": 92781
+          },
+          {
+            "name": "/de.monocles.browser/pt-BR/sevenInchScreenshots/02-RequestDetails.png",
+            "sha256": "3be5e4b36b307edfb5f036de2c8d8b9a14a1d629211dfed59d8e211e816e0f15",
+            "size": 73310
+          }
+        ],
+        "ru-RU": [
+          {
+            "name": "/de.monocles.browser/ru-RU/sevenInchScreenshots/01-DarkTheme.png",
+            "sha256": "2a0c840d42fb626f542259ec3e69edcd18b0b9f877be1a6f062fc3a4fd3aeafb",
+            "size": 92781
+          },
+          {
+            "name": "/de.monocles.browser/ru-RU/sevenInchScreenshots/02-RequestDetails.png",
+            "sha256": "3be5e4b36b307edfb5f036de2c8d8b9a14a1d629211dfed59d8e211e816e0f15",
+            "size": 73310
+          }
+        ],
+        "tr-TR": [
+          {
+            "name": "/de.monocles.browser/tr-TR/sevenInchScreenshots/01-DarkTheme.png",
+            "sha256": "2a0c840d42fb626f542259ec3e69edcd18b0b9f877be1a6f062fc3a4fd3aeafb",
+            "size": 92781
+          },
+          {
+            "name": "/de.monocles.browser/tr-TR/sevenInchScreenshots/02-RequestDetails.png",
+            "sha256": "3be5e4b36b307edfb5f036de2c8d8b9a14a1d629211dfed59d8e211e816e0f15",
+            "size": 73310
+          }
+        ]
+      },
+      "tenInch": {
+        "de-DE": [
+          {
+            "name": "/de.monocles.browser/de-DE/tenInchScreenshots/01-Domains.png",
+            "sha256": "d57ab82e2619a26b30bcc6b9d43f7a9d9e91e13c0253c505b1227faf19be712a",
+            "size": 93781
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/de.monocles.browser/en-US/tenInchScreenshots/01-Domains.png",
+            "sha256": "fb938e1fa8e4859f44f0d2ac0a0c148d9f46d6bc66ef1da5d99efe7e112f3838",
+            "size": 92562
+          }
+        ],
+        "es-ES": [
+          {
+            "name": "/de.monocles.browser/es-ES/tenInchScreenshots/01-Domains.png",
+            "sha256": "fb938e1fa8e4859f44f0d2ac0a0c148d9f46d6bc66ef1da5d99efe7e112f3838",
+            "size": 92562
+          }
+        ],
+        "fr-FR": [
+          {
+            "name": "/de.monocles.browser/fr-FR/tenInchScreenshots/01-Domains.png",
+            "sha256": "fb938e1fa8e4859f44f0d2ac0a0c148d9f46d6bc66ef1da5d99efe7e112f3838",
+            "size": 92562
+          }
+        ],
+        "it-IT": [
+          {
+            "name": "/de.monocles.browser/it-IT/tenInchScreenshots/01-Domains.png",
+            "sha256": "fb938e1fa8e4859f44f0d2ac0a0c148d9f46d6bc66ef1da5d99efe7e112f3838",
+            "size": 92562
+          }
+        ],
+        "pt-BR": [
+          {
+            "name": "/de.monocles.browser/pt-BR/tenInchScreenshots/01-Domains.png",
+            "sha256": "fb938e1fa8e4859f44f0d2ac0a0c148d9f46d6bc66ef1da5d99efe7e112f3838",
+            "size": 92562
+          }
+        ],
+        "ru-RU": [
+          {
+            "name": "/de.monocles.browser/ru-RU/tenInchScreenshots/01-Domains.png",
+            "sha256": "fb938e1fa8e4859f44f0d2ac0a0c148d9f46d6bc66ef1da5d99efe7e112f3838",
+            "size": 92562
+          }
+        ],
+        "tr-TR": [
+          {
+            "name": "/de.monocles.browser/tr-TR/tenInchScreenshots/01-Domains.png",
+            "sha256": "fb938e1fa8e4859f44f0d2ac0a0c148d9f46d6bc66ef1da5d99efe7e112f3838",
+            "size": 92562
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://codeberg.org/Arne/monocles_browser",
+    "summary": {
+      "de-DE": "Ein Browser, der Ihre Privatsph\u00e4re sch\u00fctzt.",
+      "en-US": "A web browser that respects your privacy.",
+      "es-ES": "Un navegador web que respeta tu privacidad.",
+      "fr-FR": "Un navigateur Web qui respecte votre vie priv\u00e9e.",
+      "it-IT": "Il browser web che rispetta la tua privacy.",
+      "pt-BR": "Um navegador da web que respeita sua privacidade.",
+      "ru-RU": "\u0412\u0435\u0431-\u0431\u0440\u0430\u0443\u0437\u0435\u0440, \u0443\u0432\u0430\u0436\u0430\u044e\u0449\u0438\u0439 \u0432\u0430\u0448\u0443 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u044c.",
+      "tr-TR": "Gizlili\u011finize sayg\u0131 duyan web taray\u0131c\u0131s\u0131.",
+      "zh_CN": "\u4e00\u4e2a\u5c0a\u91cd\u4f60\u9690\u79c1\u7684\u6d4f\u89c8\u5668\u3002"
+    },
+    "tvBanner": {
+      "en-US": {
+        "name": "/de.monocles.browser/en-US/tvBanner_GnoHgiB9CNwxqavmwyZD0DBZp2jl2WYgMA9ZVZL3ICU=.png",
+        "sha256": "1a7a0782207d08dc31a9abe6c32643d03059a768e5d96620300f595592f72025",
+        "size": 29432
+      }
+    },
+    "webSite": "https://monocles.de/more/"
+  },
+  "version": {
+    "added": 1755768594000,
+    "file": {
+      "ipfsCIDv1": "bafybeigodqr27tbo4nnnckuskjwxyv3xx4mbvrethb7g3jj6ex5nu3ria4",
+      "name": "/de.monocles.browser_14.apk",
+      "sha256": "a3a2973a78f556b2c4eb855d477da2c2d582b1588f903674cdc2323c8e0fa6a6",
+      "size": 14815396
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "152b492084fd356f5695f8a917d58d4e21ef91cabb2ffc23a4d7c67a2fe4cd43"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "com.android.launcher.permission.INSTALL_SHORTCUT"
+        },
+        {
+          "name": "de.monocles.browser.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 14,
+      "versionName": "1.9.3"
+    },
+    "src": {
+      "name": "/de.monocles.browser_14_src.tar.gz",
+      "sha256": "5b5b4ac0b1003d6ddda9b81f4c989d7c2f0fdca926fdbc18a7c996ec23272d3c",
+      "size": 19229808
+    },
+    "whatsNew": {
+      "de-DE": "* Upstream zusammenf\u00fchren\n* Vorbereitung f\u00fcr Android 16\n* Verbesserung der Benutzeroberfl\u00e4che der URL-Leiste\n",
+      "en-US": "* Merge upstream\n* Prepare for Android 16\n* Improve URL bar UI\n",
+      "es-ES": "* Fusionar con la versi\u00f3n anterior\n* Prepararse para Android 16\n* Mejorar la interfaz de usuario de la barra de direcciones URL\n",
+      "fr-FR": "* Fusionner en amont\n* Pr\u00e9parer Android 16\n* Am\u00e9liorer l'interface utilisateur de la barre d'URL\n",
+      "it-IT": "* Unisci upstream\n* Preparati per Android 16\n* Migliora l'interfaccia utente della barra degli indirizzi\n",
+      "pt-BR": "* Mesclar upstream\n* Preparar para o Android 16\n* Melhorar a interface do usu\u00e1rio da barra de URL\n",
+      "ru-RU": "* \u041e\u0431\u044a\u0435\u0434\u0438\u043d\u0438\u0442\u044c \u0438\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u043a\u043e\u0434\n* \u041f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u0438\u0442\u044c\u0441\u044f \u043a Android 16\n* \u0423\u043b\u0443\u0447\u0448\u0438\u0442\u044c \u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441 \u0430\u0434\u0440\u0435\u0441\u043d\u043e\u0439 \u0441\u0442\u0440\u043e\u043a\u0438\n",
+      "tr-TR": "* Yukar\u0131 ak\u0131\u015f\u0131 birle\u015ftir\n* Android 16 i\u00e7in haz\u0131rl\u0131k yap\n* URL \u00e7ubu\u011fu kullan\u0131c\u0131 aray\u00fcz\u00fcn\u00fc iyile\u015ftir\n",
+      "zh-CN": "* \u5408\u5e76\u4e0a\u6e38\u4ee3\u7801\n* \u4e3a Android 16 \u505a\u597d\u51c6\u5907\n* \u6539\u8fdb URL \u680f\u7528\u6237\u754c\u9762\n",
+      "zh_CN": "* \u5408\u5e76\u4e0a\u6e38\u4ee3\u7801\n* \u4e3a Android 16 \u505a\u597d\u51c6\u5907\n* \u6539\u8fdb URL \u680f\u7528\u6237\u754c\u9762\n"
+    }
+  }
+}

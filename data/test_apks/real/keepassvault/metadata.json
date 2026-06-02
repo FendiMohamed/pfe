@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "0c66628a9b6478f2d9fc0f3210c3a41f8cdff477f5347f381a301d93999040ab",
+    "index_size": 18595226,
+    "path": "data/test_apks/real/keepassvault/keepassvault.apk",
+    "sha256": "0c66628a9b6478f2d9fc0f3210c3a41f8cdff477f5347f381a301d93999040ab",
+    "size": 18595226,
+    "url": "https://f-droid.org/repo/com.ivanovsky.passnotes_11600.apk"
+  },
+  "app": "KeePassVault",
+  "categories": [
+    "Password & 2FA",
+    "Security"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "security",
+    "password-manager",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.ivanovsky.passnotes/",
+  "license": "Apache-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.ivanovsky.passnotes",
+  "proof_status": "report-generated",
+  "reason": "No-native security/password-manager app with source tarball metadata; tests whether a more dependency-rich security app can become clean source-validated evidence.",
+  "report": {
+    "detected_component_count": 24,
+    "dex_file_count": 4,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v3/report-real-keepassvault",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v3/report-real-keepassvault/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v3/report-real-keepassvault/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v3/report-real-keepassvault/sbom.cdx.json",
+    "sbom_component_count": 24,
+    "status": "ok"
+  },
+  "slug": "keepassvault",
+  "source_repo": "https://github.com/aivanovski/kpassnotes",
+  "source_tarball": {
+    "sha256": "7b08371c10f2620840426ff60dbe6384bb11eecd2cd29d17573a5deb3980f1fd",
+    "size": 1411777,
+    "url": "https://f-droid.org/repo/com.ivanovsky.passnotes_11600_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 11600,
+  "version_name": "1.16.0"
+}

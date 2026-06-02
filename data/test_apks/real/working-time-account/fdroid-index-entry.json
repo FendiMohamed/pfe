@@ -1,0 +1,252 @@
+{
+  "metadata": {
+    "added": 1739103786000,
+    "categories": [
+      "Money",
+      "Time"
+    ],
+    "description": {
+      "de": "Arbeitszeitkonto dient dazu, Ihre pers\u00f6nlichen Arbeits- und Freizeiten zu erfassen und \u00fcbersichtlich aufzubereiten.\n\n<b>Was kann Arbeitszeitkonto?</b>\n\n- Arbeitszeiten erfassen\n- \u00dcberstunden berechnen\n- Abwesenheiten (Krank, Urlaub etc.) zu dokumentieren\n- beliebige Zusatzwerte (Einsatzorte, Notizen, Spesen Fahrzeiten etc.) erfassen und in die Berechnung von Verdienst und Stunden einbeziehen\n- Urlaubstage verwalten\n- verschiedene \u00dcbersichten (Jahr, Monat, Woche und Tag) mit Arbeitszeitberechnung in der App anzeigen\n- konfigurierbare Berichte als PDF, CSV und iCal Dateien erzeugen und an Drucker-, Mail- oder Messanger Apps weitergeben\n- mehrere Arbeitspl\u00e4tze, Projekte oder Auftraggeber verwalten\n- Datensicherungen anlegen (auch autom. wenn gew\u00fcnscht) und wiederherstellen\n- zwei Schichtmodelle (Wechselschicht und Teilschicht)\n- mehrere Arbeitszeitmodelle (Rollende Woche, Monatsstunden, 5 Tage Woche, 6 Tage Woche, x Tage Woche)\n- Stunden mit NFC stempeln\n- Feiertage aus .ics Dateien importieren und in leere Tage autom. eintragen\n\nIn der App befindet sich ein Handbuch als PDF Datei, diese erkl\u00e4rt alle Funktionen der App und f\u00fchrt in die Arbeitszeitberechnung ein.\n\n\n<b>Was kann die App nicht</b>\n\n- Werbung anzeigen\n- Katzenvideos oder -bilder anzeigen\n- Ihre Daten an dritte weitergeben\n- im Internet Bestellungen aufgeben\n- die Welt retten\n\n\n<b>Danke an</b>\n\n- alle, die mir mit Fehlerberichten, Vorschl\u00e4gen und Kritik geholfen haben\n- Freepik.com & dr. Web f\u00fcr die Human Pictos\n- das Team \"Code-Troopers\" f\u00fcr Ihr Projekt \"BetterPickers\"\n- die Teams von IzzySoft und F-Droid f\u00fcr ihre Unterst\u00fctzung bei der Ver\u00f6ffentlichung\n\n\n<b>Ben\u00f6tigte Rechte</b>\n\n- schreiben von Dateien zum Speichern der Berichte und Datenbanksicherungen\n- lesen von Dateien zum wiederherstellen von Datensicherungen\n\n\nBitte beachten Sie, das ich keine Haftung f\u00fcr das korrekte funktionieren der Software oder die eingegebenen/berechneten Zeiten \u00fcbernehme.\n\nBei Fehlfunktionen oder anderen Merkw\u00fcrdigkeiten melden Sie sich bitte bei mir (askanimus@gmail.com) damit wir gemeinsam eine L\u00f6sung finden.",
+      "en-US": "Working time account is used to record your personal working hours and time off and to prepare them clearly.\n\n<b>What can the working time account do? </b>\n\n- Record working hours\n- Calculate overtime\n- Document absences (sick, vacation, etc.)\n- Record\n any additional values (work locations, notes, expenses, travel times, etc.) and include them in the calculation of earnings and hours - Manage vacation days - Various overviews (year, month, week and day). Manage vacation days\n- Display various overviews (year, month, week and day) with working time calculation in the app\n- Generate configurable reports as PDF, CSV and iCal files and forward them to printer, mail or messenger apps\n- Manage multiple workstations, projects or clients\n- Create data backups (also autom. two shift models (alternating shift and partial shift)\n- several working time models (rolling week, monthly hours, 5-day week, 6-day week, x-day week)\n- stamp hours with NFC\n- Import public holidays from .ics files and enter them automatically in empty days\n\nThe app includes a manual as a PDF file, which explains all the app's functions and provides an introduction to working time calculation.\n\n\n<b>What the app can't do</b>\n\n- display advertising\n- display cat videos or pictures\n- pass on your data to third parties\n- place orders online\n- save the world\n\n\n<b>Thanks to</b>\n\n- everyone who helped me with bug reports, suggestions and criticism\n- Freepik.com & dr. Web for the Human Pictos\n- the team \"Code-Troopers\" for their project \"BetterPickers\"\n- the teams of IzzySoft and F-Droid for their support in publishing\n\n\n<b>Required permissions</b>\n\n- writing files to save the reports and database backups\n- reading files to restore backups\n\n\nPlease note that I am not liable for the correct functioning of the software or the entered/calculated times.\n\nIn case of malfunctions or other oddities, please contact me (askanimus@gmail.com) so that we can find a solution together.",
+      "it": "Il conto ore di lavoro serve a registrare e organizzare in modo chiaro le ore di lavoro e le ferie personali.\n\n<b>Cosa pu\u00f2 fare il conto ore di lavoro? </b>\n\n- Registrare gli orari di lavoro\n- Calcolare gli straordinari\n- Documentare le assenze (malattia, ferie, ecc.)\n- Registrare\n eventuali valori aggiuntivi (luoghi di lavoro, note, spese, tempi di viaggio, ecc.) e includerli nel calcolo dei guadagni e delle ore - Gestire le ferie - Visualizzare varie panoramiche (anno, mese, settimana e giorno) con i guadagni e le ore - Gestire le ferie - Visualizzare varie panoramiche (anno, mese, settimana e giorno) con i guadagni e le ore. Gestire le ferie\n- Visualizzare varie panoramiche (anno, mese, settimana e giorno) con il calcolo dell'orario di lavoro nell'app\n- Generare report configurabili come file PDF, CSV e iCal e inoltrarli a stampanti, mail o app di messaggistica\n- Gestire pi\u00f9 postazioni di lavoro, progetti o clienti\n- Creare backup dei dati (anche automatizzati, se lo si desidera) e ripristinarli - Due turni di lavoro, due note, note e tempi di viaggio, ecc. due modelli di turni (turno alternato e turno parziale)\n- diversi modelli di orario di lavoro (settimana mobile, ore mensili, settimana di 5 giorni, settimana di 6 giorni, settimana di x giorni)\n- registrazione delle ore con NFC\n- Importa i giorni festivi da file .ics e li inserisce automaticamente nei giorni vuoti\n\nL'applicazione include un manuale in formato PDF che spiega tutte le funzioni dell'app e fornisce un'introduzione al calcolo dell'orario di lavoro.\n\n\n<b>Cosa non pu\u00f2 fare l'app</b>\n\n- visualizzare pubblicit\u00e0\n- visualizzare video o immagini di gatti\n- trasmettere i propri dati a terzi\n- effettuare ordini online\n- salvare il mondo\n\n\n<b>Grazie a</b>\n\n- tutti coloro che mi hanno aiutato con segnalazioni di bug, suggerimenti e critiche\n- Freepik.com & dr. Web per gli Human Pictos\n- il team \"Code-Troopers\" per il loro progetto \"BetterPickers\"\n- i team di IzzySoft e F-Droid per il loro supporto nella pubblicazione\n\n\n<b>Autorizzazioni richieste</b>\n\n- scrittura di file per salvare i report e i backup del database\n- lettura di file per ripristinare i backup\n\n\nSi prega di notare che non sono responsabile del corretto funzionamento del software o dei tempi inseriti/calcolati.\n\nIn caso di malfunzionamenti o altre stranezze, contattatemi (askanimus@gmail.com) in modo da trovare insieme una soluzione."
+    },
+    "featureGraphic": {
+      "de": {
+        "name": "/askanimus.arbeitszeiterfassung2/de/featureGraphic_G2Hp652M18857nCKk4DIG1FyXNTy_AbE003i_fW-MeU=.png",
+        "sha256": "1b61e9eb9d8cd7cf39ee708a9380c81b51725cd4f2fc06c4d34de2fdf5be31e5",
+        "size": 110892
+      },
+      "en-US": {
+        "name": "/askanimus.arbeitszeiterfassung2/en-US/featureGraphic_G2Hp652M18857nCKk4DIG1FyXNTy_AbE003i_fW-MeU=.png",
+        "sha256": "1b61e9eb9d8cd7cf39ee708a9380c81b51725cd4f2fc06c4d34de2fdf5be31e5",
+        "size": 110892
+      },
+      "it": {
+        "name": "/askanimus.arbeitszeiterfassung2/it/featureGraphic_G2Hp652M18857nCKk4DIG1FyXNTy_AbE003i_fW-MeU=.png",
+        "sha256": "1b61e9eb9d8cd7cf39ee708a9380c81b51725cd4f2fc06c4d34de2fdf5be31e5",
+        "size": 110892
+      }
+    },
+    "icon": {
+      "de": {
+        "name": "/askanimus.arbeitszeiterfassung2/de/icon_U8Ehc6xa7Z99RWnqwAAhY_twnySG_W7Tgx-vAP-0uvQ=.png",
+        "sha256": "53c12173ac5aed9f7d4569eac0002163fb709f2486fd6ed3831faf00ffb4baf4",
+        "size": 185593
+      },
+      "en-US": {
+        "name": "/askanimus.arbeitszeiterfassung2/en-US/icon_U8Ehc6xa7Z99RWnqwAAhY_twnySG_W7Tgx-vAP-0uvQ=.png",
+        "sha256": "53c12173ac5aed9f7d4569eac0002163fb709f2486fd6ed3831faf00ffb4baf4",
+        "size": 185593
+      },
+      "it": {
+        "name": "/askanimus.arbeitszeiterfassung2/it/icon_U8Ehc6xa7Z99RWnqwAAhY_twnySG_W7Tgx-vAP-0uvQ=.png",
+        "sha256": "53c12173ac5aed9f7d4569eac0002163fb709f2486fd6ed3831faf00ffb4baf4",
+        "size": 185593
+      }
+    },
+    "issueTracker": "https://gitlab.com/Askanimus/arbeitszeitkonto/issues",
+    "lastUpdated": 1775633565753,
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "de": "Arbeitszeitkonto",
+      "en-US": "Working Time Account",
+      "it": "conto ore di lavoro"
+    },
+    "preferredSigner": "ee6c8949703d230e4ee54e7dd3b938e891eb7c7821f86e83f22fbc8175be2483",
+    "screenshots": {
+      "phone": {
+        "de": [
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/de/phoneScreenshots/datensicherung.png",
+            "sha256": "cb119d6e7f9ef4b9bf8a5aeab26deb3e19314280f669e6fe51c6f1b9e9ac70e1",
+            "size": 74585
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/de/phoneScreenshots/diagramm.png",
+            "sha256": "71ba0c6cc094b3330c7ab206bfe85dc7ea9b6367f09c0ae28f2f88a054432fc9",
+            "size": 145807
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/de/phoneScreenshots/export_monat.png",
+            "sha256": "91a02f26afffaab2b88757b6ddc5de823eff36e73502b07f728693811a92106d",
+            "size": 150142
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/de/phoneScreenshots/jahresansicht.png",
+            "sha256": "7acd817b8354506fe2152c74a2f3d30e9a05819087a0e05c3cf4787d11704ee1",
+            "size": 229770
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/de/phoneScreenshots/monatsansicht_dunkel.png",
+            "sha256": "701147d7987a4c7c48f74f29281f55441ebd048c498ac242ee305117bebdea3c",
+            "size": 190210
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/de/phoneScreenshots/monatsansicht_hel.png",
+            "sha256": "6ec41f2057f82e476b123b8880a6c7a48ebc2829bfe201de8b60552ecf3810cc",
+            "size": 194201
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/de/phoneScreenshots/navigation.png",
+            "sha256": "1afa284a2f22f5bb37b553b8fe4fc9d003fef7eecd5cbe4eb0e69fd400989fc5",
+            "size": 162763
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/de/phoneScreenshots/tagesansicht_dunkel.png",
+            "sha256": "af9343e72ab6b274f51d0ad37f088897163acbca2623ed010fd3f5ca72aaf9f0",
+            "size": 119739
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/de/phoneScreenshots/tagesansicht_hell.png",
+            "sha256": "2bf263cb2ee48ffdbfce4b193005d9dd576fed471312d814767d8b8bb4831f53",
+            "size": 119784
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/en-US/phoneScreenshots/datensicherung.png",
+            "sha256": "94dfbe90dbced66103142afacfa0a4374aeb2f7c22f8c924d82e1f9cce780b92",
+            "size": 88470
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/en-US/phoneScreenshots/diagramm.png",
+            "sha256": "a932bae92a76e7fcbcc5db2ce801feb2f21bf474b3265bba25e34678a9f250b1",
+            "size": 145644
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/en-US/phoneScreenshots/export_monat.png",
+            "sha256": "0fb2074a7c0ac3e6c43c6e59b5bfb2b330948b6b7314ffda6777a725392a3a52",
+            "size": 150301
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/en-US/phoneScreenshots/jahresansicht.png",
+            "sha256": "fae363bef713630fefbf9b7ba10a4bc5dca2113973d3186d9314ebf60e1d7356",
+            "size": 147708
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/en-US/phoneScreenshots/monatsansicht_dunkel.png",
+            "sha256": "45bd3ce087fd868a7292efc65fd9d6cd45df8b7e28783606151d03682a9e2062",
+            "size": 183713
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/en-US/phoneScreenshots/monatsansicht_hell.png",
+            "sha256": "f38750a143c4f902a86eb3006dd8598975be34a50bb85cfef62b8ff98fb87cbb",
+            "size": 186760
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/en-US/phoneScreenshots/navigation.png",
+            "sha256": "23392384a37767efb79dce79abf6f49fc5e4cf7357a4b5cc8d417d5cb733e96b",
+            "size": 150326
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/en-US/phoneScreenshots/tagesansicht_dunkel.png",
+            "sha256": "a05e10d36a4929c9f51ce8d85c4b610203f5e9e9a20ae19971e26d4a0e455043",
+            "size": 121524
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/en-US/phoneScreenshots/tagesansicht_hell.png",
+            "sha256": "1836c25683a5da99b33db5968046752cfb3070724adb354e2cf1b812af585fdb",
+            "size": 122441
+          }
+        ],
+        "it": [
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/it/phoneScreenshots/datensicherung.png",
+            "sha256": "23c0272db97d3f547167f7745d4a753722e00019a093572cc6a0f9155d0ba560",
+            "size": 93459
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/it/phoneScreenshots/diagramme.png",
+            "sha256": "a678ea3f37f370fb40734a574d0246ee21d71babc5095402281bc16c9e9130a0",
+            "size": 144628
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/it/phoneScreenshots/export_monat.png",
+            "sha256": "5befecc11859c3b8416a906d87d48edce43e865b991b359bfc3e69335c9894d9",
+            "size": 151957
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/it/phoneScreenshots/jahresansicht.png",
+            "sha256": "5eb89697a31c0973bd4e718cb3280b694eb584c98cc306b8177d55598685b7d0",
+            "size": 141307
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/it/phoneScreenshots/monatsansicht.png",
+            "sha256": "9517ed74ee36fff5c4bc81b46dbea69b63b9881f560e72593f6863956b929bdd",
+            "size": 196922
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/it/phoneScreenshots/navigation.png",
+            "sha256": "d13e6ae8c24bc6900529adf5cc0f7bda8959afc400915c2d925055a28e98f734",
+            "size": 159376
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/it/phoneScreenshots/tagesansicht_dunklel.png",
+            "sha256": "017e49601868f26450acb4094bd24a1a452d036e29e45493b37793b9526428f6",
+            "size": 113219
+          },
+          {
+            "name": "/askanimus.arbeitszeiterfassung2/it/phoneScreenshots/tagesansicht_hell.png",
+            "sha256": "fe143df3f2719ee312d2e98075f4b5da55b4d558462947d44855b5e2ddaa4f8e",
+            "size": 112674
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://gitlab.com/Askanimus/arbeitszeitkonto",
+    "summary": {
+      "de": "Erfassen von Arbeitszeiten, erzeugen und versenden von Berichten (PDF, CSV, ICS)",
+      "en-US": "Record working hours, generate and send reports (PDF, CSV and ICS)",
+      "it": "Annotazione delle ore di lavoro, generazione e invio di rapporti (PDF, CSV, ICS)"
+    }
+  },
+  "version": {
+    "added": 1775633565753,
+    "file": {
+      "ipfsCIDv1": "bafybeicpwkowjqsxni27j5umvsza5ziogebqhrcuird6joiajfmcmswnce",
+      "name": "/askanimus.arbeitszeiterfassung2_211012.apk",
+      "sha256": "0bdafb823df0cf9a7d12401f2fd8723727c4047838a5e9a7890f62b4f23bc12a",
+      "size": 7777409
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "ee6c8949703d230e4ee54e7dd3b938e891eb7c7821f86e83f22fbc8175be2483"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.NFC"
+        },
+        {
+          "name": "askanimus.arbeitszeiterfassung2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 211012,
+      "versionName": "2.11.012"
+    },
+    "src": {
+      "name": "/askanimus.arbeitszeiterfassung2_211012_src.tar.gz",
+      "sha256": "b8490b5bae3960034cf9f0db9f33d5f7b4a2bd9860ff484a5c913e54ab188363",
+      "size": 9978365
+    }
+  }
+}

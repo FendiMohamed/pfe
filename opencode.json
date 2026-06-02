@@ -1,0 +1,35 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "cve-mcp": {
+      "type": "local",
+      "command": ["npx", "-y", "cve-mcp"],
+      "enabled": true,
+      "timeout": 60000
+    },
+    "sequential-thinking": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "enabled": true,
+      "timeout": 60000
+    },
+    "memory": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-memory"],
+      "enabled": true,
+      "timeout": 60000
+    },
+    "apktool-mcp": {
+      "type": "local",
+      "command": ["uvx", "apktool-mcp-server"],
+      "enabled": false,
+      "timeout": 120000
+    },
+    "android-security-analyzer": {
+      "type": "remote",
+      "url": "https://android-security-analyzer.ako-labs.workers.dev/mcp",
+      "enabled": false,
+      "timeout": 30000
+    }
+  }
+}
