@@ -160,6 +160,8 @@ as accuracy evidence.
 
 Scope:
 
+Boundary dashboard artifact: `docs/evaluation/LIMITATION_BOUNDARY_DASHBOARD.md`.
+
 | Case | Boundary |
 |---|---|
 | Organic Maps 2026.05.08-4 | Native-heavy `.so` boundary. |
@@ -195,6 +197,24 @@ Acceptance gate:
 boundary case -> report scope and risk clearly
 boundary case -> no Maven accuracy claim unless source-visible Maven ground truth exists
 ```
+
+Current boundary-dashboard outcome:
+
+```text
+verdict -> boundary-dashboard-ready
+explicit limitation/boundary cases -> 4
+limitation cases counted in accuracy -> 0
+native-heavy limitation cases -> 2
+obfuscation limitation cases -> 2
+hybrid source-validated boundary cases -> 1
+visible limitation Maven components not counted -> 21
+limitation native files hash-only -> 17
+hybrid native files hash-only -> 13
+```
+
+Next implementation step: move to wrong-version rows, starting with repeated
+Kotlin/AndroidX version-band families, while keeping these boundary rows
+separate from emitted Maven version accuracy.
 
 ### 4. Wrong-Version Rows
 

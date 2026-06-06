@@ -196,6 +196,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as dashboard seed evidence for `me.grishka.litex:*` fork-family candidates and weak direct Gson evidence without converting them into SBOM claims.",
         },
         {
+            "table": "Limitation boundary dashboard",
+            "source": "docs/evaluation/LIMITATION_BOUNDARY_DASHBOARD.md",
+            "use": "Use as the dashboard-ready summary separating explicit limitation rows from hybrid source-validated framework/native boundary evidence.",
+        },
+        {
             "table": "Dataset coverage matrix",
             "source": "docs/evaluation/DATASET_COVERAGE_MATRIX.md",
             "use": "Justify APK selection by classification instead of convenience.",

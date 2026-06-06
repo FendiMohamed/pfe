@@ -34,7 +34,7 @@ Rows that fail any gate stay report-only, source-linked blocked, smoke-real, or 
 | v14 | 8 new source-validated rows | 83 |
 | v15 | 8 new source-validated rows after strict blocker rescue | 91 |
 | v16 | 11 new source-validated rows after Password Master strict-module rescue plus Flying Carpet/FitoTrack Gradle 8.13 rescue | 102 |
-| v17 | no-Maven-signal audit, report-only AndroidX experiment, and Mastodon fork-family audit; boundary tightening or clean non-sparse quality pass next | 102+ |
+| v17 | no-Maven-signal audit, report-only AndroidX experiment, Mastodon fork-family audit, and limitation-boundary dashboard; wrong-version lane or clean non-sparse quality pass next | 102+ |
 | v18 | optional diversity/top-up rows if needed | 100+ |
 
 Each batch should select more candidates than the desired promoted count because some APKs will be sparse, no-Maven-signal, Gradle-blocked, or unsuitable after report generation.

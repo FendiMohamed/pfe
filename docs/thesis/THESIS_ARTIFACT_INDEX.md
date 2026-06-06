@@ -34,6 +34,7 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | No-Maven-signal audit | `docs/evaluation/NO_MAVEN_SIGNAL_AUDIT.md` | Use to explain why the four no-Maven rows stay outside accuracy metrics and how AndroidX identity misses differ from Mastodon's fork-family boundary. |
 | No-Maven AndroidX report-only experiment | `docs/evaluation/NO_MAVEN_ANDROIDX_REPORT_ONLY_EXPERIMENT.md` | Use as dashboard seed evidence for six source-backed AndroidX report-only candidates with zero SBOM or source-validation metric changes. |
 | Mastodon fork-family report-only audit | `docs/evaluation/MASTODON_FORK_FAMILY_REPORT_ONLY_AUDIT.md` | Use as dashboard seed evidence for `me.grishka.litex:*` fork-family candidates and weak direct Gson evidence without converting them into SBOM claims. |
+| Limitation boundary dashboard | `docs/evaluation/LIMITATION_BOUNDARY_DASHBOARD.md` | Use as the dashboard-ready summary separating explicit limitation rows from hybrid source-validated framework/native boundary evidence. |
 | Dataset coverage matrix | `docs/evaluation/DATASET_COVERAGE_MATRIX.md` | Justify APK selection by classification instead of convenience. |
 | Next real APK growth queue | `docs/evaluation/NEXT_REAL_APK_GROWTH_QUEUE.md` | Justify why the next real APK batch must be selected by class balance before Phase 6 or ML experiments. |
 | Real APK growth batch V2 | `docs/evaluation/REAL_APK_GROWTH_BATCH_V2.md` | Show the 8-app category-balanced smoke/report batch while keeping it separate from source-validated accuracy claims. |
