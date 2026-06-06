@@ -98,6 +98,7 @@ similar future blockers is strict module/config probing:
 :ultrasonic:dependencies --configuration releaseRuntimeClasspath
 :app:dependencies --configuration latestReleaseRuntimeClasspath
 :passwordmaster:dependencies --configuration releaseRuntimeClasspath
+:app:dependencies --configuration releaseRuntimeClasspath with /opt/gradle-8.13/bin/gradle
 ```
 
 For the v15 rows, those strict probes succeeded and produced source-validation
@@ -105,16 +106,14 @@ output: Ultrasonic 12/39, RunnerUp 16/39, and ImapNotes3 11/39 confirmed emitted
 Maven versions. Password Master from v16 was also resolved by strict
 `:passwordmaster` probing and validated 13/18 emitted Maven versions.
 
-The current v16 source-linked blocked rows are Flying Carpet and FitoTrack.
-Both have APK/source/report evidence, but Docker proof did not capture a runtime
-dependency tree after 60 attempted configurations. Their shared failure class is
-modern Gradle/toolchain configuration, including
-`org/gradle/api/artifacts/SelfResolvingDependency`; FitoTrack also reports
-`compileSdkVersion is not specified`. If strict probes fail or no better app
-module/configuration exists, use validation-only copies that preserve runtime
-dependency declarations and disable only the build-time configuration that
-blocks dependency-tree capture. Keep both rows blocked until dependency-tree
-capture and `validate-source-deps` succeed.
+The v16 source-linked blocked rows are now resolved. Flying Carpet and FitoTrack
+both failed under the default Docker Gradle lane with
+`org/gradle/api/artifacts/SelfResolvingDependency`; FitoTrack also surfaced
+`compileSdkVersion is not specified`. A source-compatible Gradle 8.13 runtime
+lane captured `:app` `releaseRuntimeClasspath` without validation-copy source
+edits, then `validate-source-deps` promoted Flying Carpet at 11/17 confirmed
+emitted Maven versions and FitoTrack at 5/18. No current source-linked blocked
+rows remain.
 
 ## Run Pattern
 

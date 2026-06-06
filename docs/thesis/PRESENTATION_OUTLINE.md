@@ -123,8 +123,8 @@ Evaluation is by APK family, not a single polished score.
 |---|---:|
 | Controlled fixtures | 84/84 confirmed across 72 fixtures |
 | Clean source-validated real APKs | 47/47 confirmed |
-| Partial source-validated real APKs | 864/1755 confirmed |
-| All source-validated real APKs | 911/1802 confirmed |
+| Partial source-validated real APKs | 880/1790 confirmed |
+| All source-validated real APKs | 927/1837 confirmed |
 
 Use the phrase: emitted Maven version confirmation rate.
 

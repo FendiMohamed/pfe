@@ -16,9 +16,9 @@ Companion notes:
 |---|---:|
 | Controlled fixtures | 84/84 |
 | Clean source-validated real APKs | 47/47 |
-| Partial source-validated real APKs | 864/1755 |
-| Overall source-validated real APKs | 911/1802 |
-| Source-linked blocked cases | 2 |
+| Partial source-validated real APKs | 880/1790 |
+| Overall source-validated real APKs | 927/1837 |
+| Source-linked blocked cases | 0 |
 | Limitation/boundary cases | 4 |
 
 Use these as emitted Maven version confirmation counts, not full dependency recall.

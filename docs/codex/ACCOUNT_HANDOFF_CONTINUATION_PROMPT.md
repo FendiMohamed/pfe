@@ -26,22 +26,24 @@ Important behavior:
 
 Latest completed checkpoint:
 
-- v16 reached the 100 source-validated real APK target.
+- v16 reached and then exceeded the 100 source-validated real APK target.
 - v16 selected 12 F-Droid APKs: OceanNex for DigitalOcean, Praktika Vortaro, MsgGo, AF Weather Widget, Study Tracker, Calliope mini, ProseReader, Flying Carpet, FitoTrack, F-Droid Build Status, Password Master, and Todo List (PFA).
 - Reports generated for 12/12 APKs under `data/results/evaluation/clean-real-apk-candidate-sweep-v16/`.
 - ProseReader emitted no Maven signal and stays report-only/no-Maven-signal.
-- Eleven source-linked rows advanced through Docker proof gates; nine were promoted honestly as source-validated partial:
+- Eleven source-linked rows advanced through Docker proof gates; all eleven were promoted honestly as source-validated partial after the blocker rescue pass:
   - OceanNex for DigitalOcean 1.0.0: 16/21 confirmed, 5 mismatches, 0 missing from `:app` `freeReleaseRuntimeClasspath`.
   - Praktika Vortaro 0.26: 0/1 confirmed, 1 mismatch, 0 missing from `:app` `releaseRuntimeClasspath`.
   - MsgGo 3.9: 1/4 confirmed, 3 mismatches, 0 missing from `:app` `releaseRuntimeClasspath`.
   - AF Weather Widget 3.2: 13/18 confirmed, 5 mismatches, 0 missing from `:app` `releaseRuntimeClasspath`.
   - Study Tracker 1.0.7: 3/15 confirmed, 12 mismatches, 0 missing from `:app` `releaseRuntimeClasspath`.
   - Calliope mini 2.0.9: 11/18 confirmed, 7 mismatches, 0 missing from `:app` `releaseRuntimeClasspath`.
+  - Flying Carpet 9.0.8: 11/17 confirmed, 6 mismatches, 0 missing from `:app` `releaseRuntimeClasspath` with `/opt/gradle-8.13/bin/gradle`.
+  - FitoTrack 15.6: 5/18 confirmed, 13 mismatches, 0 missing from `:app` `releaseRuntimeClasspath` with `/opt/gradle-8.13/bin/gradle`.
   - F-Droid Build Status 5.14.0: 16/24 confirmed, 8 mismatches, 0 missing from `:app` `releaseRuntimeClasspath`.
   - Password Master 1.5.1: 13/18 confirmed, 5 mismatches, 0 missing after strict `:passwordmaster` `releaseRuntimeClasspath` probing.
   - Todo List (PFA) 3.4.0: 9/17 confirmed, 8 mismatches, 0 missing from `:app` `releaseRuntimeClasspath`.
-- Flying Carpet and FitoTrack remain source-linked blocked. APK/source/report evidence exists, but no resolved runtime dependency tree was captured, so both stay excluded from source-validated metrics.
-- The 100-real-APK target is now reached at 100/100. The clean non-sparse bucket remains open.
+- Flying Carpet and FitoTrack are no longer source-linked blocked. They were counted only after runtime dependency-tree capture and `validate-source-deps` output existed.
+- The 100-real-APK target is now exceeded at 102/100. The clean non-sparse bucket remains open.
 
 Previous completed checkpoint:
 
@@ -158,15 +160,15 @@ Previous completed checkpoint:
   - Jitsi Meet 26.0.0: 5/7 confirmed, 2 mismatches, 0 missing after a React Native/Node/npm source-compatible Gradle 8.13 rescue for `:app` `releaseRuntimeClasspath`.
 - The clean non-sparse bucket remains open.
 
-Latest thesis/evaluation stats after the v16 sweep and Password Master rescue:
+Latest thesis/evaluation stats after the v16 blocker rescue:
 
 - Controlled fixtures: 72 cases, 84/84 expected versions confirmed.
 - Clean source-validated real APKs: 5 cases, 47/47 emitted Maven versions confirmed.
-- Partial source-validated real APKs: 95 cases, 864/1755 emitted Maven versions confirmed.
-- Overall source-validated real APKs: 100 cases, 911/1802 emitted Maven versions confirmed.
-- Source-linked blocked cases: 2.
+- Partial source-validated real APKs: 97 cases, 880/1790 emitted Maven versions confirmed.
+- Overall source-validated real APKs: 102 cases, 927/1837 emitted Maven versions confirmed.
+- Source-linked blocked cases: 0.
 - Limitation/boundary cases: 4.
-- 100-real-APK target: 100/100 source-validated real APKs, 0 remaining.
+- 100-real-APK target: 102/100 source-validated real APKs, 0 remaining.
 
 Latest v16 artifacts:
 
@@ -298,7 +300,7 @@ Latest verification after the v16 sweep and thesis/doc resync:
 What changed in MVP architecture/tool behavior recently:
 
 - The v14 real-APK pass and follow-up blocker rescue did not change matcher scoring, selected Maven versions, SBOM component selection, CVE/OSV labeling, reference DB contents, or production architecture. It added eight source-validated partial metrics rows: Bimba, wX, Egyptian Writer, Smouldering Durtles, DNS Hero, Baby Books, Odysee, and RadarWeather. The three former v14 blockers were rescued through validation-only Gradle/Cordova/AGP lanes and are now counted only because dependency-tree capture and `validate-source-deps` both succeeded.
-- The v16 real-APK pass did not change matcher scoring, selected Maven versions, SBOM component selection, CVE/OSV labeling, reference DB contents, or production architecture. It added nine source-validated partial metrics rows: OceanNex, Praktika Vortaro, MsgGo, AF Weather Widget, Study Tracker, Calliope mini, F-Droid Build Status, Password Master, and Todo List (PFA). Password Master added one strict `:passwordmaster` runtime dependency-tree rescue profile. Flying Carpet and FitoTrack remain source-linked blocked and excluded from source-validated metrics until dependency-tree capture and `validate-source-deps` succeed.
+- The v16 real-APK pass did not change matcher scoring, selected Maven versions, SBOM component selection, CVE/OSV labeling, reference DB contents, or production architecture. It added eleven source-validated partial metrics rows: OceanNex, Praktika Vortaro, MsgGo, AF Weather Widget, Study Tracker, Calliope mini, Flying Carpet, FitoTrack, F-Droid Build Status, Password Master, and Todo List (PFA). Password Master added one strict `:passwordmaster` runtime dependency-tree rescue profile. Flying Carpet and FitoTrack added a Gradle 8.13 runtime-lane rescue profile and are counted only because dependency-tree capture and `validate-source-deps` succeeded.
 - The v15 real-APK pass did not change matcher scoring, selected Maven versions, SBOM component selection, CVE/OSV labeling, reference DB contents, or production architecture. It added eight source-validated partial metrics rows: Clock, Poet Assistant, Ultrasonic, FTPClient, RunnerUp, Json List, ImapNotes3, and Forecastie. Poet Assistant added one validation-only JCenter-to-Maven-Central rescue lane for dependency-tree capture; Ultrasonic, RunnerUp, and ImapNotes3 were later rescued through strict module/flavor runtime dependency-tree profiles.
 - The v13 real-APK pass did not change matcher scoring, selected Maven versions, SBOM component selection, CVE/OSV labeling, reference DB contents, or production architecture. It added four source-validated partial metrics rows: OpenTopoMap Viewer, Railway station photos, LinkDroid for Linkwarden, and Quasseldroid.
 - The v12 real-APK pass did not change matcher scoring, selected Maven versions, SBOM component selection, CVE/OSV labeling, reference DB contents, or production architecture. It added four source-validated partial metrics rows: Password Generator, Todo Agenda, Keep it up, and c3nav. It also added strict module hints for `:passwordgenerator`, `:keepitupmain`, and c3nav `:app`, plus a validation-only Todo Agenda archive-name compatibility copy for dependency-tree capture.
@@ -311,7 +313,7 @@ What changed in MVP architecture/tool behavior recently:
 
 Next recommended task:
 
-Continue from docs/evaluation/NEXT_REAL_APK_GROWTH_QUEUE.md and docs/evaluation/REAL_APK_100_SOURCE_VALIDATION_PLAN.md. The target of 100 source-validated real APKs is reached at 100/100. The next useful move is either a targeted blocker rescue for Flying Carpet and FitoTrack, or a quality-focused clean non-sparse/category-diversity pass; do not add rows just to inflate the count.
+Continue from docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md, docs/evaluation/NEXT_REAL_APK_GROWTH_QUEUE.md, and docs/evaluation/REAL_APK_100_SOURCE_VALIDATION_PLAN.md. The target of 100 source-validated real APKs is exceeded at 102/100, and no current source-linked blocked rows remain. The next useful move is the no-Maven-signal audit, followed by limitation/boundary tightening and wrong-version/missing-source optimization; do not add rows just to inflate the count.
 
 Suggested first actions:
 

@@ -596,7 +596,7 @@ def build_markdown(payload: dict[str, Any]) -> str:
         f"| Emitted package-missing rows | {version_stats['missing_from_source_tree']} |",
         f"| Confirmation rate | {version_stats['confirmation_rate_percent']}% |",
         "",
-        "Important: the 100 count is clean plus partial source-validated real APKs. Flying Carpet and FitoTrack are still source-linked blocked and excluded from that metric.",
+        "Important: the counted source-validated real APK total is clean plus partial rows only. No-Maven-signal, source-linked blocked, smoke-only, and limitation rows stay outside emitted-version accuracy metrics until their proof gates qualify them.",
         "",
         "## Dashboard Files",
         "",

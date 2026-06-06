@@ -6,12 +6,12 @@ This plan tracks the evaluation-growth goal: reach 100 source-validated real APK
 
 | Metric | Value |
 |---|---:|
-| Current source-validated real APKs | 100 |
+| Current source-validated real APKs | 102 |
 | Target source-validated real APKs | 100 |
 | Remaining source-validated real APKs needed | 0 |
 | Current clean source-validated real APKs | 5 |
-| Current partial source-validated real APKs | 95 |
-| Current source-linked blocked APKs | 2 |
+| Current partial source-validated real APKs | 97 |
+| Current source-linked blocked APKs | 0 |
 
 The clean non-sparse bucket remains open. Count growth must not weaken the proof gates.
 
@@ -33,8 +33,8 @@ Rows that fail any gate stay report-only, source-linked blocked, smoke-real, or 
 |---|---:|---:|
 | v14 | 8 new source-validated rows | 83 |
 | v15 | 8 new source-validated rows after strict blocker rescue | 91 |
-| v16 | 9 new source-validated rows after Password Master strict-module rescue | 100 |
-| v17 | optional blocked-row rescue or clean non-sparse quality pass | 100+ |
+| v16 | 11 new source-validated rows after Password Master strict-module rescue plus Flying Carpet/FitoTrack Gradle 8.13 rescue | 102 |
+| v17 | optional no-Maven-signal audit or clean non-sparse quality pass | 102+ |
 | v18 | optional diversity/top-up rows if needed | 100+ |
 
 Each batch should select more candidates than the desired promoted count because some APKs will be sparse, no-Maven-signal, Gradle-blocked, or unsuitable after report generation.
@@ -110,7 +110,7 @@ The v16 batch is saved in `configs/real_apk_clean_candidate_selection_v16.json`.
 
 ## v16 Result
 
-v16 reported 12/12 selected APKs. ProseReader emitted no Maven signal and stays report-only. Eleven source-linked rows advanced to proof, and nine were promoted as source-validated partial rows:
+v16 reported 12/12 selected APKs. ProseReader emitted no Maven signal and stays report-only. Eleven source-linked rows advanced to proof, and all eleven were promoted as source-validated partial rows after the blocker rescue pass:
 
 - OceanNex for DigitalOcean: 16/21 confirmed, 5 mismatches, 0 missing.
 - Praktika Vortaro: 0/1 confirmed, 1 mismatch, 0 missing.
@@ -118,8 +118,10 @@ v16 reported 12/12 selected APKs. ProseReader emitted no Maven signal and stays 
 - AF Weather Widget: 13/18 confirmed, 5 mismatches, 0 missing.
 - Study Tracker: 3/15 confirmed, 12 mismatches, 0 missing.
 - Calliope mini: 11/18 confirmed, 7 mismatches, 0 missing.
+- Flying Carpet: 11/17 confirmed, 6 mismatches, 0 missing after a Gradle 8.13 runtime-lane rescue for `:app` `releaseRuntimeClasspath`.
+- FitoTrack: 5/18 confirmed, 13 mismatches, 0 missing after a Gradle 8.13 runtime-lane rescue for `:app` `releaseRuntimeClasspath`.
 - F-Droid Build Status: 16/24 confirmed, 8 mismatches, 0 missing.
 - Password Master: 13/18 confirmed, 5 mismatches, 0 missing after strict `:passwordmaster` module probing.
 - Todo List (PFA): 9/17 confirmed, 8 mismatches, 0 missing.
 
-The 100-source-validated-real-APK target is now reached at 100/100. Flying Carpet and FitoTrack remain source-linked blocked because Docker proof captured APK/source/report evidence but no resolved runtime dependency tree. They are excluded from source-validated metrics until `validate-source-deps` completes.
+The 100-source-validated-real-APK target is now exceeded at 102/100. No current source-linked blocked rows remain. Flying Carpet and FitoTrack were counted only after Docker proof captured runtime dependency trees and `validate-source-deps` completed.

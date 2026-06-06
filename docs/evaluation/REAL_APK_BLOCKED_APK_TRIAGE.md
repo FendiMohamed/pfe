@@ -2,33 +2,34 @@
 
 Generated on 2026-06-06.
 
-This note consolidates the remaining `source-linked-blocked` APK rows so the
-next rescue pass can target repeated build-system issues instead of rediscovering
-them from scattered proof logs. Primitive FTPd, DoliDroid, RadioDroid,
+This note consolidates `source-linked-blocked` APK rows so future rescue passes
+can target repeated build-system issues instead of rediscovering them from
+scattered proof logs. Primitive FTPd, DoliDroid, RadioDroid,
 OpenKeychain, SimpleLogin, Omni Notes, ownCloud, Jitsi Meet, and K-9 /
 Thunderbird Android were part of the original 9-row blocked set; Baby Books,
 Odysee, and RadarWeather were the later v14 blocked rows. All of those are now
 resolved as source-validated partial evidence. v15 later added three blocked
 rows, Ultrasonic, RunnerUp, and ImapNotes3; strict module/flavor rescue profiles
 also resolved those rows as source-validated partial evidence. v16 added two
-current blocked rows, Flying Carpet and FitoTrack, after APK/source/report proof
-succeeded but runtime dependency-tree capture failed. This note does not change
-matcher scoring, selected versions, SBOM output, vulnerability labels, reference
-DB contents, or source-validated metrics.
+blocked rows, Flying Carpet and FitoTrack, after APK/source/report proof
+succeeded but runtime dependency-tree capture failed under the default Gradle
+lane; both are now resolved through a Gradle 8.13 runtime-lane rescue. This note
+does not change matcher scoring, selected versions, SBOM output, vulnerability
+labels, reference DB contents, or source-validated metrics.
 
 ## Current Blocked Set
 
-The canonical remaining blocked set is:
+The canonical remaining blocked set is empty:
 
 | APK | Proof status | Current blocker |
 |---|---|---|
-| Flying Carpet 9.0.8 | `source-linked-blocked` | APK/source/report evidence exists, but 60 attempted runtime configurations failed before dependency-tree capture. The visible failure signature includes `org/gradle/api/artifacts/SelfResolvingDependency`. |
-| FitoTrack 15.6 | `source-linked-blocked` | APK/source/report evidence exists, but 60 attempted runtime configurations failed before dependency-tree capture. The visible failure signatures include `org/gradle/api/artifacts/SelfResolvingDependency` and `compileSdkVersion is not specified`. |
+| none | n/a | No current source-linked blocked APK rows remain. |
 
 All rows from the original blocker triage, the later v14 blocker set, and the
 v15 blocker set have resolved runtime dependency trees and `validate-source-deps`
-outputs. Flying Carpet and FitoTrack are current v16 blockers and remain
-excluded from source-validated metrics.
+outputs. Flying Carpet and FitoTrack now also have resolved runtime dependency
+trees and `validate-source-deps` outputs, so they are source-validated partial
+rows rather than blocked rows.
 
 ## Existing Prior Work Found
 
@@ -61,7 +62,7 @@ previously consolidate all 9 original blocked rows into one fix-oriented table:
 | Android module/root probing blocker | Baby Books resolved | Generic module probing reached unrelated frontend modules and modern Gradle hit removed APIs before the Android runtime tree. | Resolved by a validation-only copy that pins `:android` and `:library`, adds Docker SDK metadata, and captures `releaseRuntimeClasspath`; validation confirms 10/29 emitted Maven versions. |
 | Cordova Gradle blocker | Odysee resolved | Cordova Android Gradle script failed on Groovy `XmlParser` compatibility before runtime tree capture. | Resolved by a Cordova validation copy that adds Docker SDK metadata and `XmlParser` compatibility, then captures `:app` `releaseRuntimeClasspath`; validation confirms 10/15 emitted Maven versions. |
 | Old AGP/modern Gradle blocker | RadarWeather resolved | AGP 7.1.1 build logic used Gradle APIs removed by modern Gradle before `:app` runtime tree capture. | Resolved by a validation-only old-AGP copy that upgrades the validation path, adds namespace/BuildConfig settings, and captures `:app` `releaseRuntimeClasspath`; validation confirms 5/17 emitted Maven versions. |
-| v16 Gradle internal API/configuration blocker | Flying Carpet and FitoTrack current | `org/gradle/api/artifacts/SelfResolvingDependency`; FitoTrack also reports `compileSdkVersion is not specified` | Try a narrow validation copy or source-wrapper-compatible Gradle lane that preserves runtime dependencies and fixes only build configuration/toolchain blockers. Keep blocked until a runtime dependency tree and source validation exist. |
+| v16 Gradle internal API/configuration blocker | Flying Carpet and FitoTrack resolved | `org/gradle/api/artifacts/SelfResolvingDependency`; FitoTrack also reported `compileSdkVersion is not specified` | Resolved by a source-compatible Gradle 8.13 runtime lane with strict `:app:dependencies --configuration releaseRuntimeClasspath`; no validation-copy source edits were needed. Flying Carpet validates 11/17 and FitoTrack validates 5/18 emitted Maven versions. |
 
 ## Former v15 Per-APK Triage
 
@@ -92,12 +93,14 @@ previously consolidate all 9 original blocked rows into one fix-oriented table:
 | RunnerUp 2.11.0.1 | Added a strict flavor runtime profile for `:app:dependencies` with `latestReleaseRuntimeClasspath`/`latestDebugRuntimeClasspath`. | `source-validated-partial`: 16/39 confirmed, 4 mismatches, 19 missing. |
 | ImapNotes3 v1.4-07 | Added a strict module runtime profile for `:ImapNotes3:dependencies` with `releaseRuntimeClasspath`/`debugRuntimeClasspath`, avoiding the generic root/`:app` probes. | `source-validated-partial`: 11/39 confirmed, 6 mismatches, 22 missing. |
 | Password Master 1.5.1 | Added a strict module runtime profile for `:passwordmaster:dependencies` with `releaseRuntimeClasspath`/`debugRuntimeClasspath`, avoiding the generic `:app` probe. | `source-validated-partial`: 13/18 confirmed, 5 mismatches, 0 missing. |
+| Flying Carpet 9.0.8 | Added a Gradle 8.13 runtime-lane profile for `:app:dependencies` with `releaseRuntimeClasspath`/`debugRuntimeClasspath`, avoiding the default Gradle lane that hit `SelfResolvingDependency`. | `source-validated-partial`: 11/17 confirmed, 6 mismatches, 0 missing. |
+| FitoTrack 15.6 | Added the same Gradle 8.13 runtime-lane profile for `:app:dependencies` with `releaseRuntimeClasspath`/`debugRuntimeClasspath`, avoiding the default Gradle lane that hit `SelfResolvingDependency` and `compileSdkVersion is not specified`. | `source-validated-partial`: 5/18 confirmed, 13 mismatches, 0 missing. |
 
 ## Recommended Next Order
 
-1. Triage Flying Carpet and FitoTrack with the v16 proof logs under `data/results/source-validation/csv16/`.
-2. Try strict module/flavor probing only if the source tree exposes a more precise Android app module or runtime configuration; otherwise use a validation-only Gradle/toolchain copy that preserves runtime dependencies.
-3. Keep both rows source-linked blocked until dependency-tree capture and `validate-source-deps` succeed.
+1. No current blocked rows remain; move to the no-Maven-signal audit in `docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md`.
+2. For future blocked rows, try strict module/flavor probing only if the source tree exposes a more precise Android app module or runtime configuration; otherwise use a validation-only Gradle/toolchain copy that preserves runtime dependencies.
+3. Keep any future row source-linked blocked until dependency-tree capture and `validate-source-deps` succeed.
 
 ## Metric Rule
 

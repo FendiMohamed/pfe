@@ -12,7 +12,7 @@ The strongest result is not that the tool identifies every dependency. The stron
 
 For the broader evaluation, use `docs/evaluation/APK_TYPE_EVALUATION.md`: it reports results by APK family and validation level, separating clean source-validated cases from partial, blocked, native-heavy, and hidden-code limitation cases.
 
-For thesis-ready result tables, use `docs/evaluation/THESIS_EVALUATION_TABLES.md`: it summarizes 84/84 controlled expected versions across 72 fixtures, 47/47 clean real emitted Maven versions, 864/1755 partial real emitted Maven versions, and 911/1802 overall source-validated emitted Maven versions. The metric is an emitted-version confirmation rate, not full dependency recall. For prose that can be integrated into the thesis, use `docs/evaluation/THESIS_EVALUATION_CHAPTER_DRAFT.md`.
+For thesis-ready result tables, use `docs/evaluation/THESIS_EVALUATION_TABLES.md`: it summarizes 84/84 controlled expected versions across 72 fixtures, 47/47 clean real emitted Maven versions, 880/1790 partial real emitted Maven versions, and 927/1837 overall source-validated emitted Maven versions. The metric is an emitted-version confirmation rate, not full dependency recall. For prose that can be integrated into the thesis, use `docs/evaluation/THESIS_EVALUATION_CHAPTER_DRAFT.md`.
 
 ## Implemented Pipeline
 

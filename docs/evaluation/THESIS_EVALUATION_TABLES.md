@@ -12,9 +12,9 @@ This file packages the current MVP evidence into thesis-ready claims and tables.
 | Controlled expected Maven versions | 84 |
 | Controlled exact confirmations | 84 |
 | Clean source-validated real APKs | 5 |
-| Partial source-validated real APKs | 95 |
-| All source-validated real APKs | 100 |
-| Blocked source-linked APKs | 2 |
+| Partial source-validated real APKs | 97 |
+| All source-validated real APKs | 102 |
+| Blocked source-linked APKs | 0 |
 | Limitation/boundary cases | 4 |
 
 ## Thesis Claim Table
@@ -23,8 +23,8 @@ This file packages the current MVP evidence into thesis-ready claims and tables.
 |---|---|---|---|
 | The MVP can recover exact Maven component versions on controlled APKs. | 84/84 expected controlled versions confirmed. | Controlled generated fixture set with known ground truth, including clear, R8 rename, R8 shrink, R8 optimize, shrink+optimize, package flattening/repackaging, inline-like call-site stress, and multidex/multi-library cases. | Not a claim of perfect real-world APK coverage. |
 | The MVP can produce exact emitted Maven versions for clean source-validated real APKs. | 47/47 emitted Maven versions confirmed across 5 clean real APKs. | F-Droid, OpenTracks, Tusky, Daily Dozen, and QuickDic; Tusky, Daily Dozen, and QuickDic are clean but sparse. | Clean cases should not be used alone as the global real-world score. |
-| Harder APK families remain useful partial results, not total failures. | 864/1755 emitted Maven versions confirmed across 95 partial source-validated APKs. | Modern AndroidX/Kotlin, R8/minified, email/security, old-dependency, native-heavy media, and large dependency-tree APKs. | Remaining mismatches are reported as version-band, artifact-family, or reference-coverage limitations. |
-| The evaluation separates source validation from report-only and boundary evidence. | 2 source-linked blocked APKs and 4 limitation/boundary cases are excluded from accuracy metrics. | K-9 is now source-validated partial; Organic Maps, Termux, Jitsi Meet's native files, the hidden-DEX fixture, and the Simplify obfuscated sample define native/hidden-code/obfuscation boundaries. | Native package/version identification is outside the MVP; native files are hash-only SBOM file components. |
+| Harder APK families remain useful partial results, not total failures. | 880/1790 emitted Maven versions confirmed across 97 partial source-validated APKs. | Modern AndroidX/Kotlin, R8/minified, email/security, old-dependency, native-heavy media, and large dependency-tree APKs. | Remaining mismatches are reported as version-band, artifact-family, or reference-coverage limitations. |
+| The evaluation separates source validation from report-only and boundary evidence. | 0 source-linked blocked APKs and 4 limitation/boundary cases are excluded from accuracy metrics. | K-9 is now source-validated partial; Organic Maps, Termux, Jitsi Meet's native files, the hidden-DEX fixture, and the Simplify obfuscated sample define native/hidden-code/obfuscation boundaries. | Native package/version identification is outside the MVP; native files are hash-only SBOM file components. |
 
 ## Metric Table
 
@@ -32,8 +32,8 @@ This file packages the current MVP evidence into thesis-ready claims and tables.
 |---|---:|---:|---:|---:|---:|---:|---|
 | Controlled APKs | 72 | 84 | 84 | 0 | 0 | 100.0% | Known ground truth; validates matcher mechanics and confidence handling. |
 | Clean source-validated real APKs | 5 | 47 | 47 | 0 | 0 | 100.0% | Strongest exact-version real APK evidence. |
-| Partial source-validated real APKs | 95 | 1755 | 864 | 617 | 274 | 49.2% | Hard APK-family evidence; report by type, not as failure. |
-| All source-validated real APKs | 100 | 1802 | 911 | 617 | 274 | 50.6% | Overall emitted-version confirmation rate; use with the clean/partial split. |
+| Partial source-validated real APKs | 97 | 1790 | 880 | 636 | 274 | 49.2% | Hard APK-family evidence; report by type, not as failure. |
+| All source-validated real APKs | 102 | 1837 | 927 | 636 | 274 | 50.5% | Overall emitted-version confirmation rate; use with the clean/partial split. |
 
 ## Per-APK Table
 
@@ -113,8 +113,8 @@ This file packages the current MVP evidence into thesis-ready claims and tables.
 | F-Droid Build Status 5.14.0 | source-validated-partial | real, partial, source-validated, clean-candidate, no-native, fdroid, development, monitoring, gradle-9.5 | 24 | 0 | 2 | 16/24 | 66.7% | Strong v16 F-Droid/development partial row: 16 emitted versions validate while eight mismatches remain honest. |
 | Password Master 1.5.1 | source-validated-partial | real, partial, source-validated, clean-candidate, no-native, password, security, strict-module-rescue | 18 | 0 | 3 | 13/18 | 72.2% | Useful v16 security partial row: a strict module rescue captured the runtime tree and validated 13 emitted versions. |
 | Todo List (PFA) 3.4.0 | source-validated-partial | real, partial, source-validated, clean-candidate, no-native, privacy-friendly, todo, productivity, gradle-9.5 | 17 | 0 | 3 | 9/17 | 52.9% | Useful v16 productivity partial row: source validation confirms nine emitted versions and records eight mismatches. |
-| Flying Carpet 9.0.8 | source-linked-blocked | real, source-linked, blocked, clean-candidate, no-native, file-transfer, gradle-blocked | 17 | 0 | 2 | not counted | n/a | Source tarball and APK report exist, but every attempted runtime configuration fails before dependency-tree validation. |
-| FitoTrack 15.6 | source-linked-blocked | real, source-linked, blocked, clean-candidate, no-native, fitness, gps-tracker, gradle-blocked | 18 | 0 | 4 | not counted | n/a | Source tarball and APK report exist, but the attempted runtime configurations fail before source validation can run. |
+| Flying Carpet 9.0.8 | source-validated-partial | real, partial, source-validated, clean-candidate, no-native, file-transfer, multidex, gradle-8.13-rescue | 17 | 0 | 2 | 11/17 | 64.7% | Useful v16 file-transfer partial row: a Gradle 8.13 rescue captured the runtime tree and validates most emitted Maven coordinates while preserving six version mismatches. |
+| FitoTrack 15.6 | source-validated-partial | real, partial, source-validated, clean-candidate, no-native, fitness, gps-tracker, multidex, gradle-8.13-rescue | 18 | 0 | 4 | 5/18 | 27.8% | Useful v16 fitness/GPS partial row: a Gradle 8.13 rescue reaches source validation, but most selected AndroidX/support versions still drift from source. |
 | NewPipe 0.28.5 | source-validated-partial | real, partial, source-validated, modern-androidx, multidex, native | 11 | 4 | 2 | 9/11 | 81.8% | Good identity recovery, but version ties remain; this is a partial result, not a failure. |
 | AntennaPod 3.11.4 | source-validated-partial | real, partial, source-validated, modern-androidx, multidex, native | 20 | 4 | 3 | 19/20 | 95.0% | Strong partial case; one AndroidX Core near-tie remains after calibration. |
 | KDE Connect 1.35.5 | source-validated-partial | real, partial, source-validated, androidx, multidex, native | 9 | 4 | 2 | 8/9 | 88.9% | Lifecycle coherence helped, but ViewPager2 beta remains unsafe to force globally. |
@@ -154,8 +154,6 @@ This file packages the current MVP evidence into thesis-ready claims and tables.
 
 | Case | Category | Why not accuracy | Thesis use |
 |---|---|---|---|
-| Flying Carpet 9.0.8 | source-linked blocked | Resolved dependency tree is not available yet. | Dataset diversity and blocker evidence only. |
-| FitoTrack 15.6 | source-linked blocked | Resolved dependency tree is not available yet. | Dataset diversity and blocker evidence only. |
 | Organic Maps 2026.05.08-4 | native-heavy | Outside exact Maven version claim. | Scope boundary and limitation evidence. |
 | Termux 0.119.0-beta.3 | native-heavy | Outside exact Maven version claim. | Scope boundary and limitation evidence. |
 | Hidden DEX loader fixture | obfuscation | Outside exact Maven version claim. | Scope boundary and limitation evidence. |

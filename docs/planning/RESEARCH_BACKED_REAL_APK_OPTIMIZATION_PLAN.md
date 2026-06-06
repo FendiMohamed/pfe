@@ -3,9 +3,9 @@
 Generated on 2026-06-06.
 
 This plan is the working order for the next optimization phase after reaching
-100 counted source-validated real APKs. It is deliberately based on the local
-paper synthesis and existing project diagnostics, not on random one-off
-suggestions. The core rule is:
+and exceeding 100 counted source-validated real APKs. It is deliberately based
+on the local paper synthesis and existing project diagnostics, not on random
+one-off suggestions. The core rule is:
 
 ```text
 fix ground-truth blockers first;
@@ -18,25 +18,26 @@ signals and guarded reference-DB promotion.
 
 | Metric | Value |
 |---|---:|
-| Counted source-validated real APKs | 100 |
+| Counted source-validated real APKs | 102 |
 | Clean source-validated real APKs | 5 |
-| Partial source-validated real APKs | 95 |
+| Partial source-validated real APKs | 97 |
 | Source-validated no-Maven-signal APKs | 4 |
-| Current source-linked blocked APKs | 2 |
+| Current source-linked blocked APKs | 0 |
 | Limitation/boundary cases | 4 |
-| Confirmed emitted Maven versions | 911/1802 |
-| Emitted wrong-version rows | 617 |
+| Confirmed emitted Maven versions | 927/1837 |
+| Emitted wrong-version rows | 636 |
 | Emitted missing-from-source rows | 274 |
-| Dashboard miss rows | 892 |
+| Dashboard miss rows | 911 |
 
-The dashboard miss-row total is one row higher than `617 + 274` because the
+The dashboard miss-row total is one row higher than `636 + 274` because the
 dashboard also keeps a candidate-only wrong-version row for analysis. Do not
 mix that dashboard diagnostic count with the official emitted-version numerator
 and denominator.
 
-The 100 real APK metric is `5 clean + 95 partial`. Flying Carpet and FitoTrack
-are still source-linked blocked, so the current state is not "100 source
-validated and 0 blocked"; it is `100 source-validated, 2 source-linked blocked`.
+The counted real APK metric is `5 clean + 97 partial`. Flying Carpet and
+FitoTrack are now source-validated partial rows because runtime dependency trees
+and `validate-source-deps` output exist. The current state is `102
+source-validated, 0 source-linked blocked`.
 
 ## Research Basis
 
@@ -60,27 +61,26 @@ Scope:
 
 | APK | Current blocker | Current status |
 |---|---|---|
-| Flying Carpet 9.0.8 | `org/gradle/api/artifacts/SelfResolvingDependency`; 60 runtime configuration attempts failed. | Source tarball and APK report exist, but no runtime dependency tree. |
-| FitoTrack 15.6 | `org/gradle/api/artifacts/SelfResolvingDependency`; also `compileSdkVersion is not specified`. | Source tarball and APK report exist, but no runtime dependency tree. |
+| Flying Carpet 9.0.8 | Default Gradle lane failed with `org/gradle/api/artifacts/SelfResolvingDependency`. | Resolved by Gradle 8.13 `:app` `releaseRuntimeClasspath`; source validation confirms 11/17 emitted Maven versions. |
+| FitoTrack 15.6 | Default Gradle lane failed with `org/gradle/api/artifacts/SelfResolvingDependency`; also `compileSdkVersion is not specified`. | Resolved by Gradle 8.13 `:app` `releaseRuntimeClasspath`; source validation confirms 5/18 emitted Maven versions. |
 
 Optimal lane:
 
-1. Treat both as ground-truth acquisition blockers, not matcher failures.
-2. Inspect source modules/configurations first, following the successful strict
+1. Completed: treat both as ground-truth acquisition blockers, not matcher failures.
+2. Completed: inspect source modules/configurations first, following the successful strict
    module/flavor rescue pattern used for Ultrasonic, RunnerUp, ImapNotes3, and
    Password Master.
-3. If strict probing still fails, create validation-only Gradle/toolchain copies
-   that preserve runtime `implementation`/`api` dependencies and patch only the
-   build-system blockers.
-4. Keep both excluded until all admission gates exist: runtime dependency tree,
-   `validate-source-deps` JSON/Markdown, refreshed proof docs, and regenerated
-   thesis/evaluation tables if counts change.
+3. Completed: use a source-compatible Gradle 8.13 runtime lane that preserves
+   runtime `implementation`/`api` dependencies; no validation-copy source edits
+   were needed.
+4. Completed: admit only after runtime dependency trees, `validate-source-deps`
+   JSON/Markdown, refreshed proof docs, and regenerated thesis/evaluation tables exist.
 
 Why this is optimal:
 
-The blocker rows are not missing Maven coordinates and they are not wrong
-version rows. They lack source-side runtime ground truth. The evidence-backed
-fix is the existing rescue workflow, not scorer tuning.
+The blocker rows were not missing Maven coordinates and they were not wrong
+version rows. They lacked source-side runtime ground truth. The evidence-backed
+fix was the existing rescue workflow, not scorer tuning.
 
 Acceptance gate:
 
@@ -101,7 +101,7 @@ Scope:
 | Blue Square Speedometer 1.1.0 | Source-validated no-Maven-signal control. |
 
 `ProseReader` is also listed in the growth queue as a report-only/no-Maven
-candidate, but it is not part of the 100 counted source-validated metric.
+candidate, but it is not part of the counted source-validated metric.
 
 Optimal lane:
 
@@ -173,7 +173,7 @@ boundary case -> no Maven accuracy claim unless source-visible Maven ground trut
 
 Scope:
 
-There are 617 emitted wrong-version rows. These are the highest-value accuracy
+There are 636 emitted wrong-version rows. These are the highest-value accuracy
 optimization rows because the emitted coordinate is source-present, but the
 selected version differs from the source-resolved version.
 
@@ -181,11 +181,11 @@ Initial priority coordinates from the dashboard:
 
 | Coordinate family | Why it comes first |
 |---|---|
-| `org.jetbrains.kotlin:kotlin-stdlib` | 54 wrong-version rows; repeated Kotlin era/version-band drift. |
-| `androidx.core:core-ktx` and `androidx.core:core` | 96 combined rows; common AndroidX near-version confusion. |
-| `org.jetbrains.kotlinx:kotlinx-coroutines-*` | 87 combined rows; repeated source/tool selected version bands. |
+| `org.jetbrains.kotlin:kotlin-stdlib` | 56 wrong-version rows; repeated Kotlin era/version-band drift. |
+| `androidx.core:core-ktx` and `androidx.core:core` | 99 combined rows; common AndroidX near-version confusion. |
+| `org.jetbrains.kotlinx:kotlinx-coroutines-*` | 91 combined rows; repeated source/tool selected version bands. |
 | `androidx.activity`, `androidx.fragment`, `androidx.lifecycle:*` | High-volume AndroidX bands with adjacent-version ambiguity. |
-| `androidx.viewpager2:viewpager2` | Known beta/stable ambiguity from earlier proof bundles. |
+| `androidx.viewpager2:viewpager2` | 27 wrong-version rows; known beta/stable ambiguity from earlier proof bundles. |
 | Okio/OkHttp/Gson/Jackson families | Lower volume but CVE/SBOM impact is higher when exact versions matter. |
 
 Optimal lane:
@@ -305,9 +305,9 @@ Required views:
 
 | View | Purpose |
 |---|---|
-| Overview KPIs | 100 source-validated, 2 blocked, 4 no-Maven, 4 boundary, 911/1802 confirmed. |
+| Overview KPIs | 102 source-validated, 0 blocked, 4 no-Maven, 4 boundary, 927/1837 confirmed. |
 | Per-APK classification | Show bucket, APK family, framework/native/R8 labels, validation ratio, evidence paths. |
-| Blocker board | Flying Carpet/FitoTrack rescue state, failure signature, next attempted lane, admission gate. |
+| Blocker board | Empty current blocker state, plus resolved Flying Carpet/FitoTrack rescue evidence, failure signatures, and admission gate. |
 | No-Maven board | True no-signal controls vs rows needing identity-coverage diagnostics. |
 | Boundary board | Native/framework/hidden-code cases excluded from Maven accuracy. |
 | Wrong-version heatmap | Coordinate/version bands, source versions seen, selected versions seen, APK families affected. |

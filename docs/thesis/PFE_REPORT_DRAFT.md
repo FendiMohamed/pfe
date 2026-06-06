@@ -10,7 +10,7 @@ Software Bills of Materials are increasingly used to identify vulnerable depende
 
 This project implements a static APK-to-SBOM MVP that extracts DEX, manifest, resource, and native-file evidence from Android APKs; compares bytecode features against a Maven reference database; estimates Maven library versions with confidence labels; emits CycloneDX SBOMs; and queries OSV for vulnerabilities. The tool combines package, class, method, opcode, class-dependency-graph, literal, Maven metadata, API-reference, and optional opcode-trigram evidence, while deliberately separating library identity confidence from exact version confidence.
 
-The evaluation is organized by APK family instead of presenting a single perfect-looking score. The MVP confirms 84/84 expected Maven versions across 72 controlled fixtures, 47/47 emitted Maven versions on 5 clean source-validated real APKs, and 864/1755 emitted Maven versions on 95 harder source-validated real APKs. Overall, the current source-validated real APK set reaches a 911/1802 emitted Maven version confirmation rate. The remaining mismatches are reported as version-band, artifact-family, source-reference-coverage, or native/hidden-code limitations rather than hidden from the results.
+The evaluation is organized by APK family instead of presenting a single perfect-looking score. The MVP confirms 84/84 expected Maven versions across 72 controlled fixtures, 47/47 emitted Maven versions on 5 clean source-validated real APKs, and 880/1790 emitted Maven versions on 97 harder source-validated real APKs. Overall, the current source-validated real APK set reaches a 927/1837 emitted Maven version confirmation rate. The remaining mismatches are reported as version-band, artifact-family, source-reference-coverage, or native/hidden-code limitations rather than hidden from the results.
 
 ## 1. Introduction
 
@@ -146,8 +146,8 @@ The detailed evaluation prose is available in `docs/evaluation/THESIS_EVALUATION
 |---|---:|---|
 | Controlled generated APKs | 72 | Known ground truth for matcher mechanics across clear, R8, and multidex/multi-library categories. |
 | Clean source-validated real APKs | 5 | Strong exact-version real APK evidence. |
-| Partial source-validated real APKs | 83 | Hard APK families with useful partial results. |
-| Source-linked blocked APKs | 3 | Diversity evidence is tracked separately; these rows have source/report evidence but no runtime dependency tree yet. |
+| Partial source-validated real APKs | 97 | Hard APK families with useful partial results. |
+| Source-linked blocked APKs | 0 | No current blocked rows remain; future rows stay here until dependency-tree and source-validation gates pass. |
 | Limitation/boundary cases | 4 | Native/hidden-code boundaries, excluded from exact-version accuracy. |
 
 ### 5.2 Main Metric
@@ -166,8 +166,8 @@ This is not full dependency recall. It asks whether the Maven components emitted
 |---|---:|---:|---:|---:|---:|---:|
 | Controlled APKs | 72 | 84 | 84 | 0 | 0 | 100.0% |
 | Clean source-validated real APKs | 5 | 47 | 47 | 0 | 0 | 100.0% |
-| Partial source-validated real APKs | 95 | 1755 | 864 | 617 | 274 | 49.2% |
-| All source-validated real APKs | 100 | 1802 | 911 | 617 | 274 | 50.6% |
+| Partial source-validated real APKs | 97 | 1790 | 880 | 636 | 274 | 49.2% |
+| All source-validated real APKs | 102 | 1837 | 927 | 636 | 274 | 50.5% |
 
 The clean cases show that the MVP can produce exact source-confirmed versions when reference coverage and bytecode evidence are strong. The partial cases are the more important realism test: they show that the tool remains useful on modern AndroidX/Kotlin, R8/minified, older-dependency, native-heavy media, large-tree, and security/email apps while exposing unresolved version ties.
 

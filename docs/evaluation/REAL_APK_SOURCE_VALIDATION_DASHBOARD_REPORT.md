@@ -8,18 +8,18 @@ This report is meant as a dashboard seed: the Markdown is human-readable, while 
 
 | Metric | Value |
 |---|---:|
-| Counted source-validated real APKs | 100 |
+| Counted source-validated real APKs | 102 |
 | Clean source-validated APKs | 5 |
-| Partial source-validated APKs | 95 |
+| Partial source-validated APKs | 97 |
 | Source-validated no-Maven-signal APKs | 4 |
-| Current source-linked blocked APKs | 2 |
+| Current source-linked blocked APKs | 0 |
 | Limitation/boundary cases | 4 |
-| Confirmed emitted Maven versions | 911/1802 |
-| Emitted wrong-version rows | 617 |
+| Confirmed emitted Maven versions | 927/1837 |
+| Emitted wrong-version rows | 636 |
 | Emitted package-missing rows | 274 |
-| Confirmation rate | 50.6% |
+| Confirmation rate | 50.5% |
 
-Important: the 100 count is clean plus partial source-validated real APKs. Flying Carpet and FitoTrack are still source-linked blocked and excluded from that metric.
+Important: the counted source-validated real APK total is clean plus partial rows only. No-Maven-signal, source-linked blocked, smoke-only, and limitation rows stay outside emitted-version accuracy metrics until their proof gates qualify them.
 
 ## Dashboard Files
 
@@ -107,8 +107,8 @@ Important: the 100 count is clean plus partial source-validated real APKs. Flyin
 | F-Droid Build Status 5.14.0 | counted-source-validated | modern target SDK, multidex, no native .so files, partial source-validated. Strong v16 F-Droid/development partial row: 16 emitted versions validate while eight mismatches remain honest. | 16/24 | 8 | 0 | 30 | `report`, `validation`, `proof` |
 | Password Master 1.5.1 | counted-source-validated | modern target SDK, multidex, no native .so files, partial source-validated, security, strict module rescue. Useful v16 security partial row: a strict module rescue captured the runtime tree and validated 13 emitted versions. | 13/18 | 5 | 0 | 35 | `report`, `validation`, `proof` |
 | Todo List (PFA) 3.4.0 | counted-source-validated | modern target SDK, multidex, no native .so files, partial source-validated, productivity. Useful v16 productivity partial row: source validation confirms nine emitted versions and records eight mismatches. | 9/17 | 8 | 0 | 34 | `report`, `validation`, `proof` |
-| Flying Carpet 9.0.8 | source-linked-blocked | file transfer, modern target SDK, multidex, no native .so files, source-linked blocked. Source tarball and APK report exist, but every attempted runtime configuration fails before dependency-tree validation. | not counted | 0 | 0 | 32 | `report`, `proof` |
-| FitoTrack 15.6 | source-linked-blocked | multidex, no native .so files, recent target SDK, source-linked blocked. Source tarball and APK report exist, but the attempted runtime configurations fail before source validation can run. | not counted | 0 | 0 | 33 | `report`, `proof` |
+| Flying Carpet 9.0.8 | counted-source-validated | file transfer, modern target SDK, multidex, no native .so files, partial source-validated. Useful v16 file-transfer partial row: a Gradle 8.13 rescue captured the runtime tree and validates most emitted Maven coordinates while preserving six version mismatches. | 11/17 | 6 | 0 | 32 | `report`, `validation`, `proof` |
+| FitoTrack 15.6 | counted-source-validated | multidex, no native .so files, partial source-validated, recent target SDK. Useful v16 fitness/GPS partial row: a Gradle 8.13 rescue reaches source validation, but most selected AndroidX/support versions still drift from source. | 5/18 | 13 | 0 | 33 | `report`, `validation`, `proof` |
 | NewPipe 0.28.5 | counted-source-validated | modern target SDK, multidex, native .so files, partial source-validated. Good identity recovery, but version ties remain; this is a partial result, not a failure. | 9/11 | 2 | 0 | 0 | `report`, `validation`, `proof` |
 | AntennaPod 3.11.4 | counted-source-validated | modern target SDK, multidex, native .so files, partial source-validated. Strong partial case; one AndroidX Core near-tie remains after calibration. | 19/20 | 1 | 0 | 0 | `report`, `validation`, `proof` |
 | KDE Connect 1.35.5 | counted-source-validated | modern target SDK, multidex, native .so files, partial source-validated. Lifecycle coherence helped, but ViewPager2 beta remains unsafe to force globally. | 8/9 | 1 | 0 | 0 | `report`, `validation`, `proof` |
@@ -148,32 +148,32 @@ Important: the 100 count is clean plus partial source-validated real APKs. Flyin
 
 | Coordinate | Count | Source versions seen | Tool-selected versions seen |
 |---|---:|---|---|
-| `org.jetbrains.kotlin:kotlin-stdlib` | 54 | 1.8.22 (9), 2.2.21 (7), 1.7.10 (4), 2.0.21 (4), 2.3.0 (4), 2.1.20 (4), 2.1.10 (3), 1.9.24 (3), 1.9.22 (2), 2.2.0 (2), 1.8.20 (1), 2.2.20 (1), 1.8.10 (1), 2.0.0 (1), 1.9.21 (1), 2.3.20 (1), 2.1.21 (1), 2.1.0 (1), 1.9.10 (1), 1.6.20 (1), 2.3.10 (1), 2.3.21 (1) | 2.2.10 (40), 2.3.10 (14) |
-| `androidx.core:core-ktx` | 53 | 1.13.0 (12), 1.16.0 (10), 1.17.0 (9), 1.15.0 (5), 1.13.1 (4), 1.12.0 (4), 1.9.0 (3), 1.10.1 (3), 1.8.0 (2), 1.10.0 (1) | 1.18.0 (53) |
-| `org.jetbrains.kotlinx:kotlinx-coroutines-android` | 46 | 1.6.4 (18), 1.10.2 (7), 1.8.1 (7), 1.6.1 (6), 1.7.1 (5), 1.10.1 (3) | 1.7.3 (33), 1.9.0 (13) |
-| `androidx.core:core` | 43 | 1.13.0 (14), 1.17.0 (10), 1.13.1 (5), 1.12.0 (4), 1.10.1 (3), 1.8.0 (2), 1.10.0 (1), 1.1.0 (1), 1.5.0 (1), 1.16.0 (1), 1.3.0 (1) | 1.15.0 (19), 1.9.0 (14), 1.18.0 (10) |
-| `org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm` | 41 | 1.6.4 (17), 1.8.1 (7), 1.10.2 (6), 1.6.1 (5), 1.7.1 (4), 1.10.1 (2) | 1.7.3 (33), 1.9.0 (8) |
-| `androidx.activity:activity` | 39 | 1.11.0 (4), 1.6.0 (4), 1.8.2 (4), 1.12.2 (4), 1.9.3 (3), 1.5.1 (3), 1.8.0 (3), 1.9.0 (3), 1.8.1 (2), 1.7.0 (2), 1.7.1 (1), 1.2.0-alpha08 (1), 1.12.4 (1), 1.9.1 (1), 1.1.0 (1), 1.9.2 (1), 1.7.2 (1) | 1.10.1 (20), 1.8.0 (8), 1.8.1 (6), 1.13.0 (5) |
-| `androidx.fragment:fragment` | 33 | 1.3.6 (12), 1.6.2 (10), 1.5.7 (3), 1.8.8 (1), 1.3.0-alpha08 (1), 1.8.7 (1), 1.8.4 (1), 1.8.2 (1), 1.2.0 (1), 1.2.5 (1), 1.8.5 (1) | 1.5.4 (18), 1.6.1 (10), 1.8.9 (5) |
+| `org.jetbrains.kotlin:kotlin-stdlib` | 56 | 1.8.22 (9), 2.2.21 (7), 1.7.10 (4), 2.0.21 (4), 2.3.0 (4), 2.1.20 (4), 2.1.10 (3), 1.9.24 (3), 1.9.22 (2), 2.2.0 (2), 1.8.20 (1), 2.2.20 (1), 1.8.10 (1), 2.0.0 (1), 1.9.21 (1), 2.3.20 (1), 2.1.21 (1), 2.1.0 (1), 1.9.10 (1), 1.6.20 (1), 2.3.10 (1), 2.3.21 (1), 1.9.20 (1), 1.8.0 (1) | 2.2.10 (42), 2.3.10 (14) |
+| `androidx.core:core-ktx` | 55 | 1.13.0 (12), 1.16.0 (10), 1.17.0 (9), 1.15.0 (5), 1.13.1 (5), 1.9.0 (4), 1.12.0 (4), 1.10.1 (3), 1.8.0 (2), 1.10.0 (1) | 1.18.0 (55) |
+| `org.jetbrains.kotlinx:kotlinx-coroutines-android` | 48 | 1.6.4 (20), 1.10.2 (7), 1.8.1 (7), 1.6.1 (6), 1.7.1 (5), 1.10.1 (3) | 1.7.3 (35), 1.9.0 (13) |
+| `androidx.core:core` | 44 | 1.13.0 (14), 1.17.0 (10), 1.13.1 (6), 1.12.0 (4), 1.10.1 (3), 1.8.0 (2), 1.10.0 (1), 1.1.0 (1), 1.5.0 (1), 1.16.0 (1), 1.3.0 (1) | 1.15.0 (20), 1.9.0 (14), 1.18.0 (10) |
+| `org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm` | 43 | 1.6.4 (19), 1.8.1 (7), 1.10.2 (6), 1.6.1 (5), 1.7.1 (4), 1.10.1 (2) | 1.7.3 (35), 1.9.0 (8) |
+| `androidx.activity:activity` | 40 | 1.6.0 (5), 1.11.0 (4), 1.8.2 (4), 1.12.2 (4), 1.9.3 (3), 1.5.1 (3), 1.8.0 (3), 1.9.0 (3), 1.8.1 (2), 1.7.0 (2), 1.7.1 (1), 1.2.0-alpha08 (1), 1.12.4 (1), 1.9.1 (1), 1.1.0 (1), 1.9.2 (1), 1.7.2 (1) | 1.10.1 (21), 1.8.0 (8), 1.8.1 (6), 1.13.0 (5) |
+| `androidx.fragment:fragment` | 34 | 1.3.6 (13), 1.6.2 (10), 1.5.7 (3), 1.8.8 (1), 1.3.0-alpha08 (1), 1.8.7 (1), 1.8.4 (1), 1.8.2 (1), 1.2.0 (1), 1.2.5 (1), 1.8.5 (1) | 1.5.4 (19), 1.6.1 (10), 1.8.9 (5) |
 | `androidx.viewpager2:viewpager2` | 27 | 1.1.0-beta02 (25), 1.1.0 (2) | 1.1.0 (24), 1.0.0 (3) |
-| `androidx.lifecycle:lifecycle-viewmodel` | 25 | 2.5.1 (9), 2.6.1 (4), 2.10.0 (4), 2.7.0 (3), 2.9.0 (1), 2.8.7 (1), 2.2.0 (1), 2.8.4 (1), 2.8.6 (1) | 2.6.2 (25) |
+| `androidx.lifecycle:lifecycle-viewmodel` | 26 | 2.5.1 (10), 2.6.1 (4), 2.10.0 (4), 2.7.0 (3), 2.9.0 (1), 2.8.7 (1), 2.2.0 (1), 2.8.4 (1), 2.8.6 (1) | 2.6.2 (26) |
+| `androidx.recyclerview:recyclerview` | 23 | 1.1.0 (10), 1.0.0 (5), 1.3.0 (4), 1.3.2 (3), 1.3.1 (1) | 1.2.1 (23) |
 | `androidx.swiperefreshlayout:swiperefreshlayout` | 23 | 1.1.0 (13), 1.2.0 (9), 1.2.0-beta01 (1) | 1.0.0 (22), 1.2.0 (1) |
-| `androidx.recyclerview:recyclerview` | 22 | 1.1.0 (9), 1.0.0 (5), 1.3.0 (4), 1.3.2 (3), 1.3.1 (1) | 1.2.1 (22) |
+| `androidx.lifecycle:lifecycle-runtime` | 22 | 2.5.1 (7), 2.6.1 (4), 2.10.0 (4), 2.3.0-alpha07 (1), 2.9.1 (1), 2.7.0 (1), 2.8.2 (1), 2.1.0 (1), 2.8.4 (1), 2.8.6 (1) | 2.6.2 (22) |
 | `androidx.lifecycle:lifecycle-livedata` | 21 | 2.9.0 (5), 2.6.1 (4), 2.9.4 (3), 2.2.0 (2), 2.7.0 (2), 2.5.1 (1), 2.0.0 (1), 2.8.4 (1), 2.8.7 (1), 2.9.3 (1) | 2.10.0 (9), 2.6.2 (7), 2.8.7 (5) |
-| `androidx.lifecycle:lifecycle-runtime` | 21 | 2.5.1 (6), 2.6.1 (4), 2.10.0 (4), 2.3.0-alpha07 (1), 2.9.1 (1), 2.7.0 (1), 2.8.2 (1), 2.1.0 (1), 2.8.4 (1), 2.8.6 (1) | 2.6.2 (21) |
-| `androidx.appcompat:appcompat` | 19 | 1.6.1 (10), 1.2.0 (4), 1.5.1 (2), 1.0.0 (1), 1.6.0 (1), 1.5.0 (1) | 1.7.0 (14), 1.7.1 (5) |
-| `com.google.android.material:material` | 18 | 1.9.0 (4), 1.8.0 (2), 1.11.0 (2), 1.14.0 (2), 1.6.1 (2), 1.3.0 (1), 1.8.0-beta01 (1), 1.14.0-alpha05 (1), 1.14.0-beta01 (1), 1.2.1 (1), 1.14.0-alpha09 (1) | 1.12.0 (13), 1.13.0 (5) |
-| `androidx.concurrent:concurrent-futures` | 12 | 1.0.0 (7), 1.2.0 (4), 1.3.0 (1) | 1.1.0 (9), 1.3.0 (3) |
+| `androidx.appcompat:appcompat` | 20 | 1.6.1 (11), 1.2.0 (4), 1.5.1 (2), 1.0.0 (1), 1.6.0 (1), 1.5.0 (1) | 1.7.0 (15), 1.7.1 (5) |
+| `com.google.android.material:material` | 19 | 1.9.0 (4), 1.8.0 (3), 1.11.0 (2), 1.14.0 (2), 1.6.1 (2), 1.3.0 (1), 1.8.0-beta01 (1), 1.14.0-alpha05 (1), 1.14.0-beta01 (1), 1.2.1 (1), 1.14.0-alpha09 (1) | 1.12.0 (14), 1.13.0 (5) |
+| `androidx.concurrent:concurrent-futures` | 13 | 1.0.0 (8), 1.2.0 (4), 1.3.0 (1) | 1.1.0 (10), 1.3.0 (3) |
 | `androidx.exifinterface:exifinterface` | 12 | 1.3.3 (4), 1.0.0 (3), 1.2.0 (2), 1.3.7 (2), 1.4.1 (1) | 1.3.6 (11), 1.4.2 (1) |
-| `androidx.work:work-runtime` | 11 | 2.11.0 (3), 2.8.1 (2), 2.9.0 (2), 2.7.1 (1), 2.10.2 (1), 2.10.4 (1), 2.11.1 (1) | 2.11.2 (7), 2.10.3 (2), 2.10.0 (2) |
+| `androidx.work:work-runtime` | 12 | 2.11.0 (3), 2.8.1 (2), 2.9.0 (2), 2.7.1 (1), 2.10.2 (1), 2.10.4 (1), 2.8.0 (1), 2.11.1 (1) | 2.11.2 (8), 2.10.3 (2), 2.10.0 (2) |
 | `androidx.lifecycle:lifecycle-viewmodel-android` | 10 | 2.9.0 (5), 2.9.4 (3), 2.8.4 (1), 2.9.3 (1) | 2.8.7 (10) |
 | `androidx.startup:startup-runtime` | 9 | 1.2.0 (8), 1.1.1 (1) | 1.1.1 (8), 1.2.0 (1) |
 | `com.squareup.okio:okio-jvm` | 9 | 3.9.0 (3), 3.15.0 (2), 3.12.0 (1), 3.2.0 (1), 3.1.0 (1), 3.10.2 (1) | 3.7.0 (6), 3.0.0 (2), 3.16.4 (1) |
+| `com.fasterxml.jackson.core:jackson-databind` | 8 | 2.18.0 (1), 2.15.4 (1), 2.12.0 (1), 2.15.0 (1), 2.21.1 (1), 2.20.1 (1), 2.12.7 (1), 2.11.2 (1) | 2.15.2 (5), 2.12.7.1 (2), 2.9.10.8 (1) |
 | `com.google.code.gson:gson` | 8 | 2.14.0 (3), 2.9.1 (2), 2.2.4 (1), 2.10 (1), 2.8.0 (1) | 2.10.1 (3), 2.13.2 (3), 2.8.5 (2) |
 | `com.squareup.okhttp3:okhttp` | 8 | 4.9.3 (2), 3.14.9 (1), 3.12.13 (1), 5.0.0-alpha.7 (1), 5.0.0-alpha.6 (1), 3.10.0 (1), 4.7.2 (1) | 4.10.0 (5), 4.9.1 (2), 4.8.0 (1) |
 | `androidx.lifecycle:lifecycle-runtime-android` | 7 | 2.9.4 (4), 2.9.0 (1), 2.8.4 (1), 2.9.3 (1) | 2.9.0 (5), 2.10.0 (1), 2.8.7 (1) |
 | `androidx.localbroadcastmanager:localbroadcastmanager` | 7 | 1.1.0 (7) | 1.0.0 (7) |
-| `com.fasterxml.jackson.core:jackson-databind` | 7 | 2.18.0 (1), 2.15.4 (1), 2.12.0 (1), 2.15.0 (1), 2.21.1 (1), 2.20.1 (1), 2.11.2 (1) | 2.15.2 (5), 2.12.7.1 (1), 2.9.10.8 (1) |
 | `com.squareup.okio:okio` | 4 | 3.7.0 (1), 2.7.0 (1), 3.16.4 (1), 2.6.0 (1) | 2.8.0 (4) |
 | `commons-codec:commons-codec` | 4 | 1.11 (2), 1.19.0 (1), 1.10 (1) | 1.15 (3), 1.16.1 (1) |
 | `androidx.compose.foundation:foundation-android` | 3 | 1.6.8 (2), 1.6.0 (1) | 1.7.8 (3) |
@@ -198,8 +198,8 @@ These are emitted or candidate coordinates that did not appear in the resolved s
 | `io.ktor:ktor-http-jvm` | 13 | baby-books, bimba, clock, etar, forecastie, ftpclient, imapnotes3, json-list, omni-notes, poet-assistant, primitive-ftpd, radiodroid, runnerup, simplelogin, ultrasonic, vlc-android |
 | `io.ktor:ktor-io-jvm` | 13 | baby-books, clock, etar, forecastie, ftpclient, imapnotes3, json-list, omni-notes, poet-assistant, primitive-ftpd, radiodroid, runnerup, simplelogin, ultrasonic, vlc-android |
 | `io.ktor:ktor-utils-jvm` | 13 | baby-books, bimba, clock, etar, forecastie, ftpclient, imapnotes3, json-list, omni-notes, poet-assistant, primitive-ftpd, radiodroid, runnerup, simplelogin, ultrasonic, vlc-android |
-| `androidx.work:work-runtime` | 12 | af-weather-widget, cirrus, clock, easy-xkcd, fdroid-build-status, forecastie, ftpclient, gadgetbridge, homefeed-rss-widget, imapnotes3, json-list, nightdream, omni-notes, opencloud, openkeychain, owncloud, poet-assistant, primitive-ftpd, radiodroid, runnerup, simplelogin, smouldering-durtles, ultrasonic |
-| `com.fasterxml.jackson.core:jackson-databind` | 12 | andstatus, broccoli, clock, cryptomator-lite, etar, fdroid-build-status, forecastie, ftpclient, imapnotes3, json-list, omni-notes, osmand, poet-assistant, primitive-ftpd, radiodroid, runnerup, simplelogin, smouldering-durtles, ultrasonic |
+| `androidx.work:work-runtime` | 12 | af-weather-widget, cirrus, clock, easy-xkcd, fdroid-build-status, fitotrack, forecastie, ftpclient, gadgetbridge, homefeed-rss-widget, imapnotes3, json-list, nightdream, omni-notes, opencloud, openkeychain, owncloud, poet-assistant, primitive-ftpd, radiodroid, runnerup, simplelogin, smouldering-durtles, ultrasonic |
+| `com.fasterxml.jackson.core:jackson-databind` | 12 | andstatus, broccoli, clock, cryptomator-lite, etar, fdroid-build-status, fitotrack, forecastie, ftpclient, imapnotes3, json-list, omni-notes, osmand, poet-assistant, primitive-ftpd, radiodroid, runnerup, simplelogin, smouldering-durtles, ultrasonic |
 | `com.squareup.retrofit2:retrofit` | 12 | clock, easy-xkcd, etar, forecastie, ftpclient, imapnotes3, json-list, omni-notes, poet-assistant, primitive-ftpd, radiodroid, runnerup, simplelogin, vlc-android |
 | `commons-codec:commons-codec` | 12 | clock, cryptomator-lite, etar, forecastie, ftpclient, imapnotes3, json-list, markor, omni-notes, osmand, poet-assistant, primitive-ftpd, radiodroid, runnerup, simplelogin, ultrasonic |
 | `androidx.lifecycle:lifecycle-runtime-android` | 10 | baby-books, bettercounter, bimba, conversations, doodle, forecastie, foxy-droid, gotify, keep-it-up, keepassvault, newpipe, openvpn-for-android, owncloud, radiodroid, todo-list-pfa, working-time-account, yetcalc |
@@ -208,9 +208,9 @@ These are emitted or candidate coordinates that did not appear in the resolved s
 | `com.squareup.okio:okio-jvm` | 9 | baby-books, clock, cryptomator-lite, dns-hero, etar, ftpclient, gotify, imapnotes3, keepassvault, nextcloud, omni-notes, osmand, owncloud, poet-assistant, primitive-ftpd, radiodroid, retro-music, simplelogin |
 | `androidx.localbroadcastmanager:localbroadcastmanager` | 8 | bettercounter, calliope-mini, clock, etar, fairemail, fdroid-build-status, forecastie, ftpclient, gadgetbridge, imapnotes3, json-list, k9, primitive-ftpd, ultrasonic, wx |
 | `com.squareup.okhttp3:okhttp-android` | 8 | clock, cryptomator-lite, dns-hero, etar, ftpclient, imapnotes3, nextcloud, omni-notes, poet-assistant, primitive-ftpd |
-| `androidx.concurrent:concurrent-futures` | 1 | conversations, forecastie, markor, micromathematics-plus, nextcloud, nightdream, omni-notes, opentopomap-viewer, owncloud, radarweather, radiodroid, smouldering-durtles, ultrasonic |
-| `androidx.core:core-ktx` | 1 | af-weather-widget, afwall-plus, andstatus, baby-books, bimba, broccoli, c3nav, calliope-mini, cirrus, clock, cryptomator-lite, dolidroid, drift-audio, easy-xkcd, egyptian-writer, fdroid-build-status, floccus, forecastie, fulguris-web-browser, gotify, homefeed-rss-widget, i2p, imapnotes3, jamuz, json-list, keepassvault, linkdroid, markor, micromathematics-plus, nightdream, oceannex, odysee, omni-notes, opencloud, openvpn-for-android, osmand, owncloud, password-generator, poet-assistant, primitive-ftpd, radarweather, radiodroid, railway-station-photos, runnerup, simplelogin, smouldering-durtles, study-tracker, todo-agenda, todo-list-pfa, ultrasonic, vlc-android, waistline, wx, yetcalc |
-| `org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm` | 1 | afwall-plus, andstatus, bimba, broccoli, c3nav, clock, cryptomator-lite, dolidroid, drift-audio, easy-xkcd, etar, forecastie, fulguris-web-browser, gotify, homefeed-rss-widget, i2p, imapnotes3, jamuz, json-list, markor, micromathematics-plus, msggo, odysee, omni-notes, opencloud, opentopomap-viewer, openvpn-for-android, osmand, password-generator, poet-assistant, radarweather, radiodroid, simplelogin, smouldering-durtles, study-tracker, todo-agenda, todo-list-pfa, ultrasonic, vlc-android, waistline, wx, yetcalc |
+| `androidx.concurrent:concurrent-futures` | 1 | conversations, fitotrack, forecastie, markor, micromathematics-plus, nextcloud, nightdream, omni-notes, opentopomap-viewer, owncloud, radarweather, radiodroid, smouldering-durtles, ultrasonic |
+| `androidx.core:core-ktx` | 1 | af-weather-widget, afwall-plus, andstatus, baby-books, bimba, broccoli, c3nav, calliope-mini, cirrus, clock, cryptomator-lite, dolidroid, drift-audio, easy-xkcd, egyptian-writer, fdroid-build-status, fitotrack, floccus, flying-carpet, forecastie, fulguris-web-browser, gotify, homefeed-rss-widget, i2p, imapnotes3, jamuz, json-list, keepassvault, linkdroid, markor, micromathematics-plus, nightdream, oceannex, odysee, omni-notes, opencloud, openvpn-for-android, osmand, owncloud, password-generator, poet-assistant, primitive-ftpd, radarweather, radiodroid, railway-station-photos, runnerup, simplelogin, smouldering-durtles, study-tracker, todo-agenda, todo-list-pfa, ultrasonic, vlc-android, waistline, wx, yetcalc |
+| `org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm` | 1 | afwall-plus, andstatus, bimba, broccoli, c3nav, clock, cryptomator-lite, dolidroid, drift-audio, easy-xkcd, etar, fitotrack, flying-carpet, forecastie, fulguris-web-browser, gotify, homefeed-rss-widget, i2p, imapnotes3, jamuz, json-list, markor, micromathematics-plus, msggo, odysee, omni-notes, opencloud, opentopomap-viewer, openvpn-for-android, osmand, password-generator, poet-assistant, radarweather, radiodroid, simplelogin, smouldering-durtles, study-tracker, todo-agenda, todo-list-pfa, ultrasonic, vlc-android, waistline, wx, yetcalc |
 
 ## Top DB Growth Candidates From Source Versions
 
@@ -219,45 +219,45 @@ These rows are source-resolved versions observed in wrong-version results. They 
 | Coordinate | Source version | Mismatch count |
 |---|---|---:|
 | `androidx.viewpager2:viewpager2` | `1.1.0-beta02` | 25 |
-| `org.jetbrains.kotlinx:kotlinx-coroutines-android` | `1.6.4` | 18 |
-| `org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm` | `1.6.4` | 17 |
+| `org.jetbrains.kotlinx:kotlinx-coroutines-android` | `1.6.4` | 20 |
+| `org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm` | `1.6.4` | 19 |
 | `androidx.core:core` | `1.13.0` | 14 |
+| `androidx.fragment:fragment` | `1.3.6` | 13 |
 | `androidx.swiperefreshlayout:swiperefreshlayout` | `1.1.0` | 13 |
 | `androidx.core:core-ktx` | `1.13.0` | 12 |
-| `androidx.fragment:fragment` | `1.3.6` | 12 |
-| `androidx.appcompat:appcompat` | `1.6.1` | 10 |
+| `androidx.appcompat:appcompat` | `1.6.1` | 11 |
 | `androidx.core:core` | `1.17.0` | 10 |
 | `androidx.core:core-ktx` | `1.16.0` | 10 |
 | `androidx.fragment:fragment` | `1.6.2` | 10 |
+| `androidx.lifecycle:lifecycle-viewmodel` | `2.5.1` | 10 |
+| `androidx.recyclerview:recyclerview` | `1.1.0` | 10 |
 | `androidx.core:core-ktx` | `1.17.0` | 9 |
-| `androidx.lifecycle:lifecycle-viewmodel` | `2.5.1` | 9 |
-| `androidx.recyclerview:recyclerview` | `1.1.0` | 9 |
 | `androidx.swiperefreshlayout:swiperefreshlayout` | `1.2.0` | 9 |
 | `org.jetbrains.kotlin:kotlin-stdlib` | `1.8.22` | 9 |
+| `androidx.concurrent:concurrent-futures` | `1.0.0` | 8 |
 | `androidx.startup:startup-runtime` | `1.2.0` | 8 |
-| `androidx.concurrent:concurrent-futures` | `1.0.0` | 7 |
+| `androidx.lifecycle:lifecycle-runtime` | `2.5.1` | 7 |
 | `androidx.localbroadcastmanager:localbroadcastmanager` | `1.1.0` | 7 |
 | `org.jetbrains.kotlin:kotlin-stdlib` | `2.2.21` | 7 |
 | `org.jetbrains.kotlinx:kotlinx-coroutines-android` | `1.10.2` | 7 |
 | `org.jetbrains.kotlinx:kotlinx-coroutines-android` | `1.8.1` | 7 |
 | `org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm` | `1.8.1` | 7 |
-| `androidx.lifecycle:lifecycle-runtime` | `2.5.1` | 6 |
+| `androidx.core:core` | `1.13.1` | 6 |
 | `org.jetbrains.kotlinx:kotlinx-coroutines-android` | `1.6.1` | 6 |
 | `org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm` | `1.10.2` | 6 |
-| `androidx.core:core` | `1.13.1` | 5 |
+| `androidx.activity:activity` | `1.6.0` | 5 |
 | `androidx.core:core-ktx` | `1.15.0` | 5 |
+| `androidx.core:core-ktx` | `1.13.1` | 5 |
 | `androidx.lifecycle:lifecycle-livedata` | `2.9.0` | 5 |
 | `androidx.lifecycle:lifecycle-viewmodel-android` | `2.9.0` | 5 |
 | `androidx.recyclerview:recyclerview` | `1.0.0` | 5 |
 | `org.jetbrains.kotlinx:kotlinx-coroutines-android` | `1.7.1` | 5 |
 | `org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm` | `1.6.1` | 5 |
 | `androidx.activity:activity` | `1.11.0` | 4 |
-| `androidx.activity:activity` | `1.6.0` | 4 |
 | `androidx.activity:activity` | `1.8.2` | 4 |
 | `androidx.activity:activity` | `1.12.2` | 4 |
 | `androidx.appcompat:appcompat` | `1.2.0` | 4 |
 | `androidx.concurrent:concurrent-futures` | `1.2.0` | 4 |
-| `androidx.core:core` | `1.12.0` | 4 |
 
 ## Metric Rules
 

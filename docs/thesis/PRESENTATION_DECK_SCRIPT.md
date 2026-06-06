@@ -211,14 +211,14 @@ This split is essential. A single global score can hide why the tool succeeds or
 |---|---:|
 | Controlled APKs | 84/84 expected versions |
 | Clean source-validated real APKs | 47/47 emitted versions |
-| Partial source-validated real APKs | 864/1755 emitted versions |
-| All source-validated real APKs | 911/1802 emitted versions |
+| Partial source-validated real APKs | 880/1790 emitted versions |
+| All source-validated real APKs | 927/1837 emitted versions |
 
 **Required phrase:** emitted Maven version confirmation rate.
 
 **Speaker notes:**
 
-The controlled set validates the mechanics. Clean real APKs show that source-confirmed emitted versions are possible. Partial real APKs show realistic behavior on harder APK families. The overall 911/1802 number is useful, but it must be reported together with the clean/partial split.
+The controlled set validates the mechanics. Clean real APKs show that source-confirmed emitted versions are possible. Partial real APKs show realistic behavior on harder APK families. The overall 927/1837 number is useful, but it must be reported together with the clean/partial split.
 
 **Do not say:** full dependency recall.
 

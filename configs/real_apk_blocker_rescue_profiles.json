@@ -113,6 +113,14 @@
         "do not patch source files until a strict module/config retry proves the blocker is not only wrong-module probing"
       ]
     },
+    "modern-agp8-gradle813-runtime-config": {
+      "purpose": "Retry modern Android Gradle Plugin 8.x source trees with the Docker Gradle 8.13 lane when the default Gradle 9.x lane fails before runtime classpath resolution.",
+      "allowed_validation_copy_edits": [
+        "do not patch source files for this profile",
+        "switch only the validation Gradle launcher to /opt/gradle-8.13/bin/gradle",
+        "preserve declared app-module runtime dependency configurations"
+      ]
+    },
     "todo-agenda-archive-name-validation-copy": {
       "purpose": "Retry Todo Agenda where obsolete APK archive output naming fails before runtime classpath resolution under the current Docker Gradle/AGP lane.",
       "allowed_validation_copy_edits": [
@@ -575,6 +583,51 @@
       ],
       "blocker_seen": [
         "generic proof runner probed :app, but settings.gradle includes the real app module as :passwordmaster"
+      ]
+    },
+    "flying-carpet": {
+      "profiles": [
+        "strict-module-runtime-config",
+        "modern-agp8-gradle813-runtime-config"
+      ],
+      "validation_copy": false,
+      "strict_configurations": true,
+      "gradle_command": [
+        "/opt/gradle-8.13/bin/gradle"
+      ],
+      "tasks": [
+        ":app:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "default Docker Gradle lane failed before runtime classpath resolution with org/gradle/api/artifacts/SelfResolvingDependency",
+        "direct Gradle 8.13 retry against :app releaseRuntimeClasspath produced a runtime dependency tree"
+      ]
+    },
+    "fitotrack": {
+      "profiles": [
+        "strict-module-runtime-config",
+        "modern-agp8-gradle813-runtime-config"
+      ],
+      "validation_copy": false,
+      "strict_configurations": true,
+      "gradle_command": [
+        "/opt/gradle-8.13/bin/gradle"
+      ],
+      "tasks": [
+        ":app:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "default Docker Gradle lane failed before runtime classpath resolution with org/gradle/api/artifacts/SelfResolvingDependency",
+        "default lane also surfaced compileSdkVersion is not specified while configuring app",
+        "direct Gradle 8.13 retry against :app releaseRuntimeClasspath produced a runtime dependency tree"
       ]
     },
     "jitsi-meet": {
