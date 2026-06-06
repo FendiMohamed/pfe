@@ -212,9 +212,9 @@ limitation native files hash-only -> 17
 hybrid native files hash-only -> 13
 ```
 
-Next implementation step: move to wrong-version rows, starting with repeated
-Kotlin/AndroidX version-band families, while keeping these boundary rows
-separate from emitted Maven version accuracy.
+Next implementation step: use the wrong-version dashboard to run the first
+guarded P1 Kotlin/coroutines or AndroidX source-version experiment, while
+keeping these boundary rows separate from emitted Maven version accuracy.
 
 ### 4. Wrong-Version Rows
 
@@ -266,6 +266,27 @@ Acceptance gate:
 promote only if target rows improve and controlled/clean/partial controls do not regress
 reject if the change creates new missing-source emissions or false version flips
 ```
+
+Current wrong-version dashboard outcome:
+
+```text
+artifact -> docs/evaluation/WRONG_VERSION_OPTIMIZATION_DASHBOARD.md
+verdict -> wrong-version-dashboard-ready
+emitted wrong-version rows -> 636
+unique coordinates -> 38
+unique APK cases -> 96
+source-linked blocked rows in scope -> 0
+metric changes -> 0
+P1 Kotlin/coroutines lane -> 147 rows across 3 coordinates and 66 APK cases
+P1 AndroidX core/activity/fragment/lifecycle lane -> 259 rows across 9 coordinates and 83 APK cases
+P2 ViewPager2/support AndroidX lane -> 157 rows across 13 coordinates and 80 APK cases
+P2 CVE-sensitive networking/JSON lane -> 38 rows across 6 coordinates and 27 APK cases
+```
+
+The dashboard keeps all rows diagnostic/reporting-only. The next implementation
+step is an isolated source-version/reference-DB experiment for a high-volume P1
+family, then a current-control comparison before any shared DB or scoring
+change.
 
 ### 5. Missing-From-Source Rows
 

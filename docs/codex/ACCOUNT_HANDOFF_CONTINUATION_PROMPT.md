@@ -26,6 +26,13 @@ Important behavior:
 
 Latest completed checkpoint:
 
+- Post-v16 optimization checkpoint:
+  - Source-linked blockers remain closed at 0.
+  - The no-Maven-signal lane is complete with an audit, AndroidX report-only experiment, and Mastodon fork-family report-only audit.
+  - The limitation/boundary lane is complete with `docs/evaluation/LIMITATION_BOUNDARY_DASHBOARD.md`: 4 explicit limitation/boundary cases, 0 counted in accuracy, 2 native-heavy limitation rows, 2 obfuscation limitation rows, and Jitsi recorded as the hybrid Maven-validated/framework-native boundary case.
+  - The wrong-version lane now has `docs/evaluation/WRONG_VERSION_OPTIMIZATION_DASHBOARD.md`: 636 emitted wrong-version rows, 38 unique coordinates, 96 APK cases, 0 source-linked blocked rows in scope, and 0 metric/scoring/SBOM changes.
+  - Priority lanes are P1 Kotlin/coroutines source-version controls (147 rows), P1 AndroidX core/activity/fragment/lifecycle controls (259 rows), P2 ViewPager2/support AndroidX controls (157 rows), and P2 CVE-sensitive networking/JSON audits (38 rows).
+  - Next work should run the first isolated P1 source-version/reference-DB experiment with current-control comparison before any shared DB or matcher/scoring change.
 - v16 reached and then exceeded the 100 source-validated real APK target.
 - v16 selected 12 F-Droid APKs: OceanNex for DigitalOcean, Praktika Vortaro, MsgGo, AF Weather Widget, Study Tracker, Calliope mini, ProseReader, Flying Carpet, FitoTrack, F-Droid Build Status, Password Master, and Todo List (PFA).
 - Reports generated for 12/12 APKs under `data/results/evaluation/clean-real-apk-candidate-sweep-v16/`.
@@ -313,20 +320,21 @@ What changed in MVP architecture/tool behavior recently:
 
 Next recommended task:
 
-Continue from docs/evaluation/NO_MAVEN_SIGNAL_AUDIT.md, docs/evaluation/NO_MAVEN_SIGNAL_DIAGNOSTICS.md, docs/evaluation/NO_MAVEN_ANDROIDX_REPORT_ONLY_EXPERIMENT.md, docs/evaluation/MASTODON_FORK_FAMILY_REPORT_ONLY_AUDIT.md, docs/evaluation/LIMITATION_BOUNDARY_DASHBOARD.md, docs/evaluation/NO_MAVEN_SIGNAL_AUDIT_PREP.md, docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md, docs/evaluation/NEXT_REAL_APK_GROWTH_QUEUE.md, and docs/evaluation/REAL_APK_100_SOURCE_VALIDATION_PLAN.md. The target of 100 source-validated real APKs is exceeded at 102/100, and no current source-linked blocked rows remain. The no-Maven-signal audit is complete: 0/4 are true runtime dependency-free controls, Privacy Browser/monocles browser/Blue Square Speedometer are AndroidX identity-coverage miss controls, and Mastodon is a `me.grishka.litex:*` fork-family/reference boundary with weak direct Gson evidence. `scripts/build_no_maven_signal_diagnostics.py` now generates JSON/CSV/Markdown dashboard seed artifacts. `apk-sbom no-maven-androidx-experiment` and `scripts/build_no_maven_androidx_report_only_experiment.py` now surface 6 source-backed AndroidX report-only candidates, keep 8 weak rows suppressed, and record 0 default/SBOM/source-validation metric changes. `apk-sbom no-maven-fork-family-experiment` and `scripts/build_mastodon_fork_family_report_only_audit.py` now surface 2 `me.grishka.litex:*` fork-family report-only suggestions and 1 weak direct Gson suggestion, keep 7 fork rows suppressed, and record 0 default/SBOM/source-validation metric changes. `scripts/build_limitation_boundary_dashboard.py` now records 4 explicit limitation/boundary cases, 0 counted in accuracy, 2 native-heavy limitation rows, 2 obfuscation limitation rows, and Jitsi as the hybrid framework/native row. The next useful move is wrong-version optimization, followed by missing-source optimization; do not add rows just to inflate the count.
+Continue from docs/evaluation/NO_MAVEN_SIGNAL_AUDIT.md, docs/evaluation/NO_MAVEN_SIGNAL_DIAGNOSTICS.md, docs/evaluation/NO_MAVEN_ANDROIDX_REPORT_ONLY_EXPERIMENT.md, docs/evaluation/MASTODON_FORK_FAMILY_REPORT_ONLY_AUDIT.md, docs/evaluation/LIMITATION_BOUNDARY_DASHBOARD.md, docs/evaluation/WRONG_VERSION_OPTIMIZATION_DASHBOARD.md, docs/evaluation/NO_MAVEN_SIGNAL_AUDIT_PREP.md, docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md, docs/evaluation/NEXT_REAL_APK_GROWTH_QUEUE.md, and docs/evaluation/REAL_APK_100_SOURCE_VALIDATION_PLAN.md. The target of 100 source-validated real APKs is exceeded at 102/100, and no current source-linked blocked rows remain. The no-Maven-signal audit is complete: 0/4 are true runtime dependency-free controls, Privacy Browser/monocles browser/Blue Square Speedometer are AndroidX identity-coverage miss controls, and Mastodon is a `me.grishka.litex:*` fork-family/reference boundary with weak direct Gson evidence. `scripts/build_no_maven_signal_diagnostics.py` now generates JSON/CSV/Markdown dashboard seed artifacts. `apk-sbom no-maven-androidx-experiment` and `scripts/build_no_maven_androidx_report_only_experiment.py` now surface 6 source-backed AndroidX report-only candidates, keep 8 weak rows suppressed, and record 0 default/SBOM/source-validation metric changes. `apk-sbom no-maven-fork-family-experiment` and `scripts/build_mastodon_fork_family_report_only_audit.py` now surface 2 `me.grishka.litex:*` fork-family report-only suggestions and 1 weak direct Gson suggestion, keep 7 fork rows suppressed, and record 0 default/SBOM/source-validation metric changes. `scripts/build_limitation_boundary_dashboard.py` records 4 explicit limitation/boundary cases, 0 counted in accuracy, 2 native-heavy limitation rows, 2 obfuscation limitation rows, and Jitsi as the hybrid framework/native row. `scripts/build_wrong_version_optimization_dashboard.py` records 636 emitted wrong-version rows across 38 coordinates and 96 APK cases, with P1 Kotlin/coroutines and AndroidX lanes ready for guarded experiments. The next useful move is the first isolated P1 source-version/reference-DB experiment with current-control comparison, followed by missing-source optimization; do not add rows just to inflate the count.
 
 Suggested first actions:
 
 1. Run git status --short and do not clean the tree.
 2. Read the files listed above.
-3. Inspect configs/real_apk_clean_candidate_selection_v16.json and previous v5-v15 selection configs to avoid repeat candidates.
-4. For continuation, inspect `configs/real_apk_blocker_rescue_profiles.json` and `docs/evaluation/REAL_APK_BLOCKED_APK_TRIAGE.md` for Flying Carpet/FitoTrack rescue precedent before selecting any new candidates.
-5. Use Docker for report/proof work; local Python lacks required project dependencies.
-6. If selecting another batch, use the local F-Droid index at data/results/evaluation/fdroid-index-v2.json and save it as the next numbered selection config.
-7. Regenerate canonical docs/tables if any row is admitted:
+3. Use `docs/evaluation/WRONG_VERSION_OPTIMIZATION_DASHBOARD.md` to choose the first P1 family lane; prefer a guarded Kotlin/coroutines or AndroidX source-version/reference-DB experiment over app-specific guessing.
+4. Inspect configs/real_apk_clean_candidate_selection_v16.json and previous v5-v15 selection configs only if selecting new APKs; avoid repeat candidates.
+5. For blocker-style continuation, inspect `configs/real_apk_blocker_rescue_profiles.json` and `docs/evaluation/REAL_APK_BLOCKED_APK_TRIAGE.md` for Flying Carpet/FitoTrack rescue precedent before selecting any new candidates.
+6. Use Docker for report/proof work; local Python lacks required project dependencies.
+7. If selecting another batch, use the local F-Droid index at data/results/evaluation/fdroid-index-v2.json and save it as the next numbered selection config.
+8. Regenerate canonical docs/tables if any row is admitted:
    - python scripts/build_apk_type_evaluation.py
    - python scripts/build_thesis_evaluation_tables.py
    - python scripts/build_thesis_artifact_index.py
    - python scripts/build_dataset_coverage_matrix.py
-8. Verify with local compileall, Docker compileall, Docker pytest -q, and git diff --check.
+9. Verify with local compileall, Docker compileall, Docker pytest -q, and git diff --check.
 ```

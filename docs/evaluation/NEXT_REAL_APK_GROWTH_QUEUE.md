@@ -2,7 +2,7 @@
 
 This queue keeps real APK growth category-driven. Do not admit a real APK into source-validated metrics until the APK hash, source tag/commit, resolved dependency tree, generated report, and source-validation output are present. Smoke and limitation APKs may be useful without full ground truth, but they must stay out of precision/recall/version-accuracy metrics.
 
-Post-100 optimization is now governed by `docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md`: the v16 source-linked blockers were rescued first, the no-Maven-signal rows now have an audit, a scoped AndroidX report-only experiment, and Mastodon's fork-family report-only audit. Boundary rows now have `docs/evaluation/LIMITATION_BOUNDARY_DASHBOARD.md`, so the next live lane is wrong-version rows, then missing-source rows, guarded reference DB growth, and dashboard history in that order.
+Post-100 optimization is now governed by `docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md`: the v16 source-linked blockers were rescued first, the no-Maven-signal rows now have an audit, a scoped AndroidX report-only experiment, and Mastodon's fork-family report-only audit. Boundary rows now have `docs/evaluation/LIMITATION_BOUNDARY_DASHBOARD.md`, and wrong-version rows now have `docs/evaluation/WRONG_VERSION_OPTIMIZATION_DASHBOARD.md`: 636 emitted wrong-version rows across 38 coordinates and 96 APK cases, with P1 Kotlin/coroutines and AndroidX lanes identified. The next live lane is the first guarded P1 source-version/reference-DB experiment, then missing-source rows, guarded reference DB growth, and dashboard history in that order.
 
 ## Current Position
 

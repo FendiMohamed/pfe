@@ -201,6 +201,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the dashboard-ready summary separating explicit limitation rows from hybrid source-validated framework/native boundary evidence.",
         },
         {
+            "table": "Wrong-version optimization dashboard",
+            "source": "docs/evaluation/WRONG_VERSION_OPTIMIZATION_DASHBOARD.md",
+            "use": "Use as the ranked, research-backed queue for the 636 emitted wrong-version rows, grouped by APK, coordinate family, source version, and guarded next action.",
+        },
+        {
             "table": "Dataset coverage matrix",
             "source": "docs/evaluation/DATASET_COVERAGE_MATRIX.md",
             "use": "Justify APK selection by classification instead of convenience.",
