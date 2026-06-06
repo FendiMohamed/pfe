@@ -1,0 +1,241 @@
+{
+  "metadata": {
+    "added": 1403913600000,
+    "authorName": "Janne Mareike Koschinski",
+    "categories": [
+      "Internet",
+      "Messaging"
+    ],
+    "description": {
+      "de-DE": "Chat comfortably. Everywhere.\n\n\nBEN\u00d6TIGT EINEN QUASSEL CORE \u2013 FUNKTIONIERT NICHT OHNE\n\n\u2022 <b>Benutze IRC unterwegs</b> \u2013 dank des Quassel Cores wirst du nichts verpassen\n\u2022 <b>Habe immer alle deine Chats in der Hosentasche</b> \u2013 einfach hochscrollen um das zu laden, was du verpasst hast\n\u2022 <b>Benachrichtigungen, wenn dich jemand anschreibt oder erw\u00e4hnt</b> \u2013 selbst wenn du w\u00e4hrenddessen offline warst\n\nWenn du nach dem Komfort suchst, den du von modernen Chat Apps kennst, ist Quasseldroid der beste freie Android IRC Client f\u00fcr dich \u2014 mit Profilbildern, einem UI basierend auf Material Design, und all den Features, die du liebst.\n\nUnd das Beste an all dem: Es ist komplett umsonst und Open Source.\n\n<b>Anforderungen:</b>\n\nDu ben\u00f6tigst einen Account auf einem Quassel Core, um diese App zu nutzen. Wenn du noch keinen hast, kannst du dir entweder einen eigenen Core aufsetzen, oder versuchen, einen Account auf dem Core von jemand anderem zu bekommen.\n\nDiese App ben\u00f6tigt einen Quassel Core Version 0.10 oder neuer, damit alle Features verf\u00fcgbar sind wird Quassel Version 0.13 ben\u00f6tigt.\n\nUm zu lernen, wie du einen Quassel Core selber aufsetzt, lies <a href=\"http://bugs.quassel-irc.org/projects/quassel-irc/wiki\">das Wiki</a>.\n\n<b>Hast du Probleme oder Anregungen?</b> Schreib uns eine E-Mail an support@kuschku.de",
+      "en-GB": "Chat comfortably. Everywhere.\n\n\nREQUIRES A QUASSEL CORE \u2013 DOES NOT WORK AS STANDALONE IRC CLIENT\n\n\u2022 <b>Use IRC on the go</b> \u2013 thanks to the Quassel core, you\u2019ll never miss anything\n\u2022 <b>Always have your entire chat history available</b> \u2013 just scroll up to load older messages, the core keeps them for you\n\u2022 <b>Be notified when someone messages you</b> \u2013 even if you had no connection in the meantime\n\nIf you are looking for the comfort you\u2019re used to from modern chat apps, Quasseldroid is the best free android IRC client for you \u2014 you\u2019ll get profile pictures, a beautiful UI based on Material Design, and all the features you love.\n\nAnd best of all, it\u2019s fully free and open source.\n\n<b>Requirements:</b>\n\nYou need to have an account on a Quassel core to use this app. If you have none, you can either set a core up yourself, or check if you can get an account on someone else\u2019s core.\n\nThis app only works with cores that run at least Quassel v0.10, for all features to be available you\u2019ll need Quassel v0.13\n\nTo learn about how to set up a quassel core, see <a href=\"http://bugs.quassel-irc.org/projects/quassel-irc/wiki\">the wiki</a>\n\n<b>Having trouble or feedback?:</b> Send us an email at support@kuschku.de",
+      "en-US": "Chat comfortably. Everywhere.\n\n\nREQUIRES A QUASSEL CORE \u2013 DOES NOT WORK AS STANDALONE IRC CLIENT\n\n\u2022 <b>Use IRC on the go</b> \u2013 thanks to the Quassel core, you\u2019ll never miss anything\n\u2022 <b>Always have your entire chat history available</b> \u2013 just scroll up to load older messages, the core keeps them for you\n\u2022 <b>Be notified when someone messages you</b> \u2013 even if you had no connection in the meantime\n\nIf you are looking for the comfort you\u2019re used to from modern chat apps, Quasseldroid is the best free android IRC client for you \u2014 you\u2019ll get profile pictures, a beautiful UI based on Material Design, and all the features you love.\n\nAnd best of all, it\u2019s fully free and open source.\n\n<b>Requirements:</b>\n\nYou need to have an account on a Quassel core to use this app. If you have none, you can either set a core up yourself, or check if you can get an account on someone else\u2019s core.\n\nThis app only works with cores that run at least Quassel v0.10, for all features to be available you\u2019ll need Quassel v0.13\n\nTo learn about how to set up a quassel core, see <a href=\"http://bugs.quassel-irc.org/projects/quassel-irc/wiki\">the wiki</a>\n\n<b>Having trouble or feedback?:</b> Send us an email at support@kuschku.de\n",
+      "fr-CA": "Chat comfortably. Everywhere.\n\n\nREQUIRES A QUASSEL CORE \u2013 DOES NOT WORK AS STANDALONE IRC CLIENT\n\n\u2022 <b>Use IRC on the go</b> \u2013 thanks to the Quassel core, you\u2019ll never miss anything\n\u2022 <b>Always have your entire chat history available</b> \u2013 just scroll up to load older messages, the core keeps them for you\n\u2022 <b>Be notified when someone messages you</b> \u2013 even if you had no connection in the meantime\n\nIf you are looking for the comfort you\u2019re used to from modern chat apps, Quasseldroid is the best free android IRC client for you \u2014 you\u2019ll get profile pictures, a beautiful UI based on Material Design, and all the features you love.\n\nAnd best of all, it\u2019s fully free and open source.\n\n<b>Requirements:</b>\n\nYou need to have an account on a Quassel core to use this app. If you have none, you can either set a core up yourself, or check if you can get an account on someone else\u2019s core.\n\nThis app only works with cores that run at least Quassel v0.10, for all features to be available you\u2019ll need Quassel v0.13\n\nTo learn about how to set up a quassel core, see <a href=\"http://bugs.quassel-irc.org/projects/quassel-irc/wiki\">the wiki</a>\n\n<b>Having trouble or feedback?:</b> Send us an email at support@kuschku.de",
+      "fr-FR": "Chat comfortably. Everywhere.\n\n\nREQUIRES A QUASSEL CORE \u2013 DOES NOT WORK AS STANDALONE IRC CLIENT\n\n\u2022 <b>Use IRC on the go</b> \u2013 thanks to the Quassel core, you\u2019ll never miss anything\n\u2022 <b>Always have your entire chat history available</b> \u2013 just scroll up to load older messages, the core keeps them for you\n\u2022 <b>Be notified when someone messages you</b> \u2013 even if you had no connection in the meantime\n\nIf you are looking for the comfort you\u2019re used to from modern chat apps, Quasseldroid is the best free android IRC client for you \u2014 you\u2019ll get profile pictures, a beautiful UI based on Material Design, and all the features you love.\n\nAnd best of all, it\u2019s fully free and open source.\n\n<b>Requirements:</b>\n\nYou need to have an account on a Quassel core to use this app. If you have none, you can either set a core up yourself, or check if you can get an account on someone else\u2019s core.\n\nThis app only works with cores that run at least Quassel v0.10, for all features to be available you\u2019ll need Quassel v0.13\n\nTo learn about how to set up a quassel core, see <a href=\"http://bugs.quassel-irc.org/projects/quassel-irc/wiki\">the wiki</a>\n\n<b>Having trouble or feedback?:</b> Send us an email at support@kuschku.de",
+      "it-IT": "La chat diventa comoda. Ovunque.\n\n\n\u00c8 NECESSARIO UN CORE QUASSEL \u2013 NON FUNZIONA COME CLIENT IRC A S\u00c9 STANTE\n\n\u2022 <b>Usa IRC in movimento</b> \u2013 grazie al core Quassel core non perderai mai nulla\n\u2022 <b>Avrai sempre a disposizione il registro storico delle chat</b> \u2013 basta scorrere verso l\u2019alto per caricare i messaggi meno recenti, il core li conserva per te\n\u2022 <b>Ricevi una notifica quando qualcuno ti scrive un messaggio</b> \u2013 anche se nel frattempo non avevi connessione\n\nSe cerchi un\u2019app di chat comoda e moderna, Quasseldroid \u00e8 la tua miglior scelta per avere su android un client IRC gratuito \u2014 troverai avatar, una bellissima interfaccia grafica basata sul Material Design e tutte le funzionalit\u00e0 che gi\u00e0 ami.\n\nE, qui arriva il bello, \u00e8 completamente gratuita ed open source.\n\n<b>Requisiti:</b>\n\n\u00c8 necessario disporre di un account su un core Quassel per utilizzare questa app. Se non lo hai, puoi configurare tu stesso un core, oppure potresti avere la possibilit\u00e0 di avere un account sul core di qualcun altro.\n\nQuesta app funziona solo con core che eseguono almeno Quassel v0.10, per usufruire di tutte le funzionalit\u00e0 disponibili avrai bisogno di Quassel v0.13\n\nPer saperne di pi\u00f9 su come configurare un core quassel, consulta <a href=\"http://bugs.quassel-irc.org/projects/quassel-irc/wiki\">la wiki</a>\n\n<b>Vuoi segnalare un malfunzionamento o darci un suggerimento?:</b> Inviaci un'email a support@kuschku.de",
+      "lt": "Bendraukite patogiai. Visur ir visada.\n\n\nREIKALINGAS QUASSEL BRANDUOLYS - PROGRAMA NEVEIKS KAIP VISI\u0160KAI SAVARANKI\u0160KAS IRC KLIENTAS\n\n\u2022 <b>Naudokite IRC bet kur</b> \u2013 Quassel branduolio d\u0117ka, niekada nieko nepraleisite\n\u2022 <b>Visada prieinama j\u016bs\u0173 pokalbi\u0173 istorija</b> \u2013 tiesiog slinkite \u012f vir\u0161\u0173, jog branduolys jums rodyt\u0173 senas \u017einutes\n\u2022 <b>Gaukite prane\u0161imus</b> \u2013 net jeigu tuo metu netur\u0117jote interneto ry\u0161io\n\nIf you are looking for the comfort you\u2019re used to from modern chat apps, Quasseldroid is the best free android IRC client for you \u2014 you\u2019ll get profile pictures, a beautiful UI based on Material Design, and all the features you love.\n\nIr geriausia tai, jog programa visi\u0161kai nemokama ir atviro kodo.\n\n<b>Reikalavimai:</b>\n\nJums reikia tur\u0117ti Quassel branduolio paskyr\u0105 norint naudotis \u0161ia programa. Jeigu jos neturite, galite susikurti savo branduol\u012f, arba pasiteirauti paskyros pas tuos kurie turi jau egzistuojant\u012f branduol\u012f.\n\n\u0160i programa veikia tik su branduoliais kurie yra ne senesni nei Quassel v0.10. Norint naudotis visomis funkcijomis reikalingas Quassel v0.13\n\nNorint i\u0161mokti kaip susikurti savo branduol\u012f, paskaitykite <a href=\"http://bugs.quassel-irc.org/projects/quassel-irc/wiki\">wiki</a>\n\n<b>Radote problem\u0173 ar turite pasi\u016blym\u0173?:</b> Susisiekite su mumis elektroniniu pa\u0161tu - support@kuschku.de",
+      "nl-NL": "Chat comfortably. Everywhere.\n\n\nREQUIRES A QUASSEL CORE \u2013 DOES NOT WORK AS STANDALONE IRC CLIENT\n\n\u2022 <b>Use IRC on the go</b> \u2013 thanks to the Quassel core, you\u2019ll never miss anything\n\u2022 <b>Always have your entire chat history available</b> \u2013 just scroll up to load older messages, the core keeps them for you\n\u2022 <b>Be notified when someone messages you</b> \u2013 even if you had no connection in the meantime\n\nIf you are looking for the comfort you\u2019re used to from modern chat apps, Quasseldroid is the best free android IRC client for you \u2014 you\u2019ll get profile pictures, a beautiful UI based on Material Design, and all the features you love.\n\nAnd best of all, it\u2019s fully free and open source.\n\n<b>Requirements:</b>\n\nYou need to have an account on a Quassel core to use this app. If you have none, you can either set a core up yourself, or check if you can get an account on someone else\u2019s core.\n\nThis app only works with cores that run at least Quassel v0.10, for all features to be available you\u2019ll need Quassel v0.13\n\nTo learn about how to set up a quassel core, see <a href=\"http://bugs.quassel-irc.org/projects/quassel-irc/wiki\">the wiki</a>\n\n<b>Having trouble or feedback?:</b> Send us an email at support@kuschku.de",
+      "pt-PT": "Converse confortavelmente. Em qualquer lugar.\n\n\nREQUER UM N\u00daCLEO  QUASSEL - N\u00c3O FUNCIONA COMO CLIENTE DE IRC SOZINHO\n\n\u2022 <b>Use o IRC em movimento</b> \u2013 gra\u00e7as ao n\u00facleo Quassel, voc\u00ea nunca perder\u00e1 nada\n\u2022 Tenha sempre todo o seu hist\u00f3rico de chat dispon\u00edvel</b> \u2013 basta rolar para cima para carregar mensagens mais antigas, o n\u00facleo guarda-as para si\n\u2022 <b>Seja notificado quando algu\u00e9m lhe enviar uma mensagem</b> \u2013 mesmo se voc\u00ea n\u00e3o tivesse conex\u00e3o nesse meio tempo\n\nIf you are looking for the comfort you\u2019re used to from modern chat apps, Quasseldroid is the best free android IRC client for you \u2014 you\u2019ll get profile pictures, a beautiful UI based on Material Design, and all the features you love.\n\nE o melhor de tudo, \u00e9 completamente gratuito e de fonte aberta. \n\n<b>Requisitos:</b>\n\nVoc\u00ea precisa ter uma conta num n\u00facleo Quassel para usar esta aplica\u00e7\u00e3o. Se voc\u00ea n\u00e3o tem nenhum, pode criar o seu pr\u00f3prio n\u00facleo ou tentar onter uma conta no n\u00facleo de outra pessoa.\n\nEsta aplica\u00e7\u00e3o s\u00f3 funciona com n\u00facleos que utilizam pelo menos o Quassel v0.10. Para que todas as funcionalidades estejam dispon\u00edveis, voc\u00ea precisar\u00e1 do Quassel v0.13\n\nPara aprender sobre como configurar um n\u00facleo quassel, veja <a href=\"http://bugs.quassel-irc.org/projects/quassel-irc/wiki\">a wiki</a>\n\n<b>Com problemas ou apenas feedback?:</b> Envie um email para support@kuschku.de ",
+      "sr": "Chat comfortably. Everywhere.\n\n\nREQUIRES A QUASSEL CORE \u2013 DOES NOT WORK AS STANDALONE IRC CLIENT\n\n\u2022 <b>Use IRC on the go</b> \u2013 thanks to the Quassel core, you\u2019ll never miss anything\n\u2022 <b>Always have your entire chat history available</b> \u2013 just scroll up to load older messages, the core keeps them for you\n\u2022 <b>Be notified when someone messages you</b> \u2013 even if you had no connection in the meantime\n\nIf you are looking for the comfort you\u2019re used to from modern chat apps, Quasseldroid is the best free android IRC client for you \u2014 you\u2019ll get profile pictures, a beautiful UI based on Material Design, and all the features you love.\n\nAnd best of all, it\u2019s fully free and open source.\n\n<b>Requirements:</b>\n\nYou need to have an account on a Quassel core to use this app. If you have none, you can either set a core up yourself, or check if you can get an account on someone else\u2019s core.\n\nThis app only works with cores that run at least Quassel v0.10, for all features to be available you\u2019ll need Quassel v0.13\n\nTo learn about how to set up a quassel core, see <a href=\"http://bugs.quassel-irc.org/projects/quassel-irc/wiki\">the wiki</a>\n\n<b>Having trouble or feedback?:</b> Send us an email at support@kuschku.de"
+    },
+    "donate": [
+      "https://www.patreon.com/justjanne"
+    ],
+    "featureGraphic": {
+      "en-US": {
+        "name": "/com.iskrembilen.quasseldroid/en-US/featureGraphic_-Js5sA3qk0uXMG02r2KeHKWAc1ty-yCyDWYUkr6i2kU=.png",
+        "sha256": "f89b39b00dea934b97306d36af629e1ca580735b72fb20b20d661492bea2da45",
+        "size": 168581
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/com.iskrembilen.quasseldroid/en-US/icon_ap2LtPJ_H4HGpRbjJ63xh_3NFN8BAHrKVZjq0D04kak=.png",
+        "sha256": "6a9d8bb4f27f1f81c6a516e327adf187fdcd14df01007aca5598ead03d3891a9",
+        "size": 51292
+      }
+    },
+    "issueTracker": "https://git.kuschku.de/justJanne/QuasselDroid-ng/issues",
+    "lastUpdated": 1775847257581,
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-US": "Quasseldroid"
+    },
+    "preferredSigner": "8e15559a1ea6c6e14484b05145c6f70ac41dc5fd76d21f3116d679333b816bbf",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/phoneScreenshots/01.png",
+            "sha256": "fc18815894a3e96d71b886a490a909c06dee0d83b83959d3177f9fdb0bf741ea",
+            "size": 404044
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/phoneScreenshots/02.png",
+            "sha256": "4656d773e7f0bf197a12a63d050b31c571a5fe7cbaa079b68a54b28f5c23f8ce",
+            "size": 404384
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/phoneScreenshots/03.png",
+            "sha256": "5db58760093a23308c1cb418ac09b1f4de91a39016d6ae37f31b504f9ad2e8ad",
+            "size": 405000
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/phoneScreenshots/04.png",
+            "sha256": "d14ff3b0a05e73c4f2632824ec9298b322cc257594e9ffb400ccd140b945bfe6",
+            "size": 406741
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/phoneScreenshots/05.png",
+            "sha256": "1045b4d0c8da2a45b4806dddd66ab8f1b49b47d39c9d2cdfcb45cbecbcef4e61",
+            "size": 401024
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/phoneScreenshots/06.png",
+            "sha256": "ea3da0ae70ae7e5e66a5f6738877976d494e4b2a387c1beb7fb91ea296fd29bf",
+            "size": 403851
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/phoneScreenshots/07.png",
+            "sha256": "da99142cd0e769ecd5e7783d38e4a5b0427a4380eac473d3b4bb105dd466b19a",
+            "size": 396017
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/phoneScreenshots/08.png",
+            "sha256": "684fe863c1d25a0cf69425ab9e24f4fe24a5210b0de17e93de43c061ca085b9a",
+            "size": 409161
+          }
+        ]
+      },
+      "sevenInch": {
+        "en-US": [
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/sevenInchScreenshots/01.png",
+            "sha256": "ee3b7583e324e6500905c8440e55930138c57fe019b4dd7d1333437778ef1147",
+            "size": 339472
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/sevenInchScreenshots/02.png",
+            "sha256": "8f5c52a27e91a4e9fedb63828670e07a8c457d0f9c16e9c607a7f4b798a3a8a6",
+            "size": 337286
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/sevenInchScreenshots/03.png",
+            "sha256": "7cf08b72d1ad1e254fc9ebc002d5b6756f81304cf7b381002d7245f6dd1e26ff",
+            "size": 338712
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/sevenInchScreenshots/04.png",
+            "sha256": "10eb787e52fc007315b0160402058a3a4cdf69b288d15a69869d51e9a90bc5f0",
+            "size": 343805
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/sevenInchScreenshots/05.png",
+            "sha256": "ffb220b85095f87b3c9d368604a6aad854496ff1c09019bd305b3cd4630ac8a4",
+            "size": 350027
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/sevenInchScreenshots/06.png",
+            "sha256": "f139ae05a6888f9b45abcf1207494bf2c25ad60e552dd688cd5f23e91e8c114b",
+            "size": 338535
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/sevenInchScreenshots/07.png",
+            "sha256": "11dab3cfe85b8000e0f53c27e5a9ed884d8f54112b9eac0dfc24129e44eacff6",
+            "size": 345131
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/sevenInchScreenshots/08.png",
+            "sha256": "14478546ef64a35c366e88e4e614b612c9c57a3a97f7cf85cb3aec3f516a57b4",
+            "size": 345160
+          }
+        ]
+      },
+      "tenInch": {
+        "en-US": [
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/tenInchScreenshots/01.png",
+            "sha256": "4319ff0c193d07fe6174c7594c97f33d4d5724e7a7365c433af1cf9c1bdbfd31",
+            "size": 539307
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/tenInchScreenshots/02.png",
+            "sha256": "7637df89fc03e16e6bddfb42f7befb718b0841f7d56f51142334cca433278808",
+            "size": 533051
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/tenInchScreenshots/03.png",
+            "sha256": "6cdf3b683e7c5d100fac159a34d4ad37aae57e83271096b537646ccc16a5fd77",
+            "size": 544261
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/tenInchScreenshots/04.png",
+            "sha256": "30401cbb44e225f6b3555724a7e1cac7aee3a8227ff866e3e1d604fa06307dcf",
+            "size": 542822
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/tenInchScreenshots/05.png",
+            "sha256": "dd3ed5265430f7e06125399f9359b20d520e5fca501f5bd2ef6bf8c77bd9bd6d",
+            "size": 552560
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/tenInchScreenshots/06.png",
+            "sha256": "fc1919a0cc1d9962e39d0b1d5da48c60cc02bb75ab5c23cb31b6185f5a45c562",
+            "size": 537076
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/tenInchScreenshots/07.png",
+            "sha256": "d58247b9f481cd2af2cd223620089bdd3f3d272c95e97129956d4e81ec83adf0",
+            "size": 547104
+          },
+          {
+            "name": "/com.iskrembilen.quasseldroid/en-US/tenInchScreenshots/08.png",
+            "sha256": "b4de743877e07e50a4006d966ea2ac70a4eeadb70cb92615eec2c55abad41d23",
+            "size": 538654
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://git.kuschku.de/justJanne/QuasselDroid-ng",
+    "summary": {
+      "de-DE": "Chat comfortably. Everywhere.\n\nBEN\u00d6TIGT EINEN QUASSEL CORE",
+      "en-GB": "Chat comfortably. Everywhere.\n\nREQUIRES A QUASSEL CORE",
+      "en-US": "Chat comfortably. Everywhere.\n\nREQUIRES A QUASSEL CORE",
+      "fr-CA": "Chat comfortably. Everywhere.\n\nREQUIRES A QUASSEL CORE",
+      "fr-FR": "Chat comfortably. Everywhere.\n\nREQUIRES A QUASSEL CORE",
+      "it-IT": "La chat diventa comoda. Ovunque.\n\n\u00c8 NECESSARIO UN CORE QUASSEL",
+      "lt": "Bendraukite patogiai. Visur ir visada.\n\nREIKALINGAS QUASSEL BRANDUOLYS",
+      "nl-NL": "Chat comfortably. Everywhere.\n\nREQUIRES A QUASSEL CORE",
+      "pt-PT": "Converse confortavelmente. Em qualquer lugar.\n\nREQUER UM N\u00daCLEO QUASSEL",
+      "sr": "Chat comfortably. Everywhere.\n\nREQUIRES A QUASSEL CORE"
+    },
+    "translation": "https://www.transifex.com/quasseldroid-1/quasseldroid-1/"
+  },
+  "version": {
+    "added": 1775847257581,
+    "file": {
+      "ipfsCIDv1": "bafybeign7sgxwqaou45xtsids5pq4nfsk6jfvhlyh5fnbmiensvo7iro2q",
+      "name": "/com.iskrembilen.quasseldroid_1398.apk",
+      "sha256": "eb0b44580a43f004cdc05fb7cf3c390006f2dcea6ef9dfe0fe9fa64b62e2678d",
+      "size": 4945909
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "8e15559a1ea6c6e14484b05145c6f70ac41dc5fd76d21f3116d679333b816bbf"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "com.iskrembilen.quasseldroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 23,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 1398,
+      "versionName": "1.8.0"
+    },
+    "src": {
+      "name": "/com.iskrembilen.quasseldroid_1398_src.tar.gz",
+      "sha256": "6dfb26c09c03a497dd8b8dca7bcb054305f302bfc483abebd9562608578942ae",
+      "size": 11314255
+    }
+  }
+}

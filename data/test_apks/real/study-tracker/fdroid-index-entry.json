@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "added": 1774736177447,
+    "categories": [
+      "Science & Education"
+    ],
+    "description": {
+      "en-US": "Note: This app is currently only available in Chinese.\n\nStudy Tracker is a lightweight Android application designed to help you quantify your learning efforts. Organize your studies into hierarchical projects (e.g., courses, units), log your study time, and view your progress through intuitive statistics.\n\nKey Features:\n- Hierarchical project management.\n- Progress tracking with automatic completion calculation.\n- Statistical analysis with built-in charts.\n- Local storage using Room database for privacy and speed.\n- Modern UI with Jetpack Compose and Dark Mode support.\n"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/com.edward.studytracker/en-US/icon_vV-lkmB3IGbmtt757QxnpLizyq700f-6zGAml4bsdTE=.png",
+        "sha256": "bd5fa59260772066e6b6def9ed0c67a4b8b3caaef4d1ffbacc60269786ec7531",
+        "size": 66480
+      }
+    },
+    "issueTracker": "https://github.com/FunMax-Edward/study-tracker/issues",
+    "lastUpdated": 1774736177447,
+    "license": "Apache-2.0",
+    "name": {
+      "en-US": "Study Tracker"
+    },
+    "preferredSigner": "ae5927b5820af09e5bb2fee82b5ff8c7d54b5f5074ddeb8e6de1834e17d037a9",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.edward.studytracker/en-US/phoneScreenshots/01.jpg",
+            "sha256": "525f58828aaba0ca7e5fda55a31ebbc43d79b3b79d275da3834e36f5026e0721",
+            "size": 58358
+          },
+          {
+            "name": "/com.edward.studytracker/en-US/phoneScreenshots/02.jpg",
+            "sha256": "dbf7a764f8e171527dbf17e015f630ae32bcd3edc903908c996302e280dc909a",
+            "size": 99007
+          },
+          {
+            "name": "/com.edward.studytracker/en-US/phoneScreenshots/03.jpg",
+            "sha256": "0271421d795bf30fd26b241c6a743b26d08b5ac54cf6d2fcdb22ffc7362ef550",
+            "size": 101873
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/FunMax-Edward/study-tracker",
+    "summary": {
+      "en-US": "A simple and clean study progress tracker built with Jetpack Compose."
+    },
+    "webSite": "https://github.com/FunMax-Edward/study-tracker"
+  },
+  "version": {
+    "added": 1774736177447,
+    "file": {
+      "ipfsCIDv1": "bafybeihnxzfkpdl5bthnww5byjahse3ypjhycei76ymmb2eoylnrijmthe",
+      "name": "/com.edward.studytracker_7.apk",
+      "sha256": "c4a8b041eaea21d6d0a776c1ec8e13979fa2057e921d7a73b46740c7bb57e6eb",
+      "size": 17477891
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "ae5927b5820af09e5bb2fee82b5ff8c7d54b5f5074ddeb8e6de1834e17d037a9"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "com.edward.studytracker.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 31,
+        "targetSdkVersion": 34
+      },
+      "versionCode": 7,
+      "versionName": "1.0.7"
+    },
+    "src": {
+      "name": "/com.edward.studytracker_7_src.tar.gz",
+      "sha256": "877e9ce04edba3fc903bf781d5e65baf4bc764969550bd7cee9eabdedcfa3541",
+      "size": 1600697
+    }
+  }
+}

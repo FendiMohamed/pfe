@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "407fa1cc3491c4e1e0f97ee844756ebfc2e84347ea6fbdf648d137ba38106bd9",
+    "index_size": 3575083,
+    "path": "data/test_apks/real/dns-hero/dns-hero.apk",
+    "sha256": "407fa1cc3491c4e1e0f97ee844756ebfc2e84347ea6fbdf648d137ba38106bd9",
+    "size": 3575083,
+    "url": "https://f-droid.org/repo/com.gianlu.dnshero_42.apk"
+  },
+  "app": "DNS Hero",
+  "categories": [
+    "DNS & Hosts",
+    "Internet"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "internet",
+    "dns",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.gianlu.dnshero/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.gianlu.dnshero",
+  "proof_status": "report-generated",
+  "reason": "No-native DNS/internet utility with target SDK 36 and a manageable APK; selected as a networking utility row with a likely standard Gradle dependency tree.",
+  "report": {
+    "detected_component_count": 11,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v14/report-real-dns-hero",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v14/report-real-dns-hero/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v14/report-real-dns-hero/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v14/report-real-dns-hero/sbom.cdx.json",
+    "sbom_component_count": 11,
+    "status": "ok"
+  },
+  "slug": "dns-hero",
+  "source_repo": "https://github.com/devgianlu/DNSHero",
+  "source_tarball": {
+    "sha256": "8e13778bc58ba986c3424dd6ae02c1175ca425520be43b149a57a5452689264c",
+    "size": 24469687,
+    "url": "https://f-droid.org/repo/com.gianlu.dnshero_42_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 42,
+  "version_name": "1.7.0"
+}

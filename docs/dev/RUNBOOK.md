@@ -222,10 +222,60 @@ python -m compileall src scripts tests
 
 Use this section for a short, stable meeting demo. Do not rebuild the reference DB live; the calibrated DB is already built.
 
+For the full graduation-day rehearsal sequence, open `docs/evaluation/GRADUATION_DEMO_REHEARSAL.md` first. It lists the clean F-Droid proof, vulnerable Jackson proof, K-9/Jitsi partial-boundary proofs, Simplify obfuscation limitation, and surprise-APK fallback wording.
+
 Start from the workspace:
 
 ```powershell
 cd "C:\Users\PC CABA DZ\Documents\pfe-final"
+```
+
+### Graduation-Day Arbitrary APK Fallback
+
+Use this when someone gives you an APK that is not part of the prepared evaluation set. It runs offline by default and writes a small readiness summary alongside the normal report artifacts:
+
+```powershell
+python scripts\run_graduation_demo_report.py path\to\app.apk --output-dir data\results\graduation-demo\app
+```
+
+The wrapper is fail-soft by default for live demos: if the underlying report cannot be generated, it still writes `demo-readiness.json` and `demo-readiness.md` with the exception type, safe wording, and next steps, then exits successfully so the terminal demo remains explainable. Use `--strict-exit` when running it in automation and a failed report should return a non-zero status.
+
+Docker equivalent:
+
+```powershell
+docker compose run --rm apk-sbom python scripts/run_graduation_demo_report.py path/to/app.apk --output-dir data/results/graduation-demo/app
+```
+
+Open these first:
+
+```text
+data/results/graduation-demo/app/demo-readiness.md
+data/results/graduation-demo/app/report.html
+data/results/graduation-demo/app/sbom.cdx.json
+```
+
+Optional OSV-enabled run, only when network access is available:
+
+```powershell
+python scripts\run_graduation_demo_report.py path\to\app.apk --output-dir data\results\graduation-demo\app-osv --query-osv
+```
+
+Source-validation-aware run, only when the matching source-validation artifact already exists:
+
+```powershell
+python scripts\run_graduation_demo_report.py path\to\app.apk --output-dir data\results\graduation-demo\app-source-aware --source-validation-json data\results\source-validation\app\source-validation.json
+```
+
+Safe wording for this path:
+
+```text
+This is an APK-only recovery report. I can show extracted evidence, candidate Maven components, native file hashes, and the generated CycloneDX SBOM. I will not claim source-validated recall unless I also provide a source-validation artifact for this APK/source pair.
+```
+
+If a live APK fails before report generation, use:
+
+```text
+The wrapper did not hide the failure. It wrote a readiness artifact with the exception type and message, so I can explain the input or environment boundary instead of pretending an SBOM was generated.
 ```
 
 1. Prove the project is healthy:
@@ -497,9 +547,9 @@ docs/evaluation/DATASET_COVERAGE_MATRIX.md
 data/results/evaluation/real-apk-proof/index.md
 ```
 
-Admission rule: F-Droid, OpenTracks, Tusky, and Daily Dozen are clean source-validated cases, with Tusky and Daily Dozen labeled as sparse. NewPipe, AntennaPod, KDE Connect, Wikipedia Android, Conversations, Aegis Authenticator, Markor, Nextcloud Android, FairEmail, VLC, OsmAnd, Material Files, Cryptomator Lite, Easy Xkcd, MoneyWallet, Foxy Droid, and the admitted no-native clean-candidate partial rows are source-validated partial-version-mismatch cases. Do not count K-9/Thunderbird Android, Jitsi Meet, native-heavy limitations, hidden-code limitations, or report-only clean-candidate rows as clean source-validated accuracy cases until the per-app proof checklist contains the APK hash, source tag/commit, dependency tree, generated report, and source-validation output.
+Admission rule: F-Droid, OpenTracks, Tusky, Daily Dozen, and QuickDic are clean source-validated cases, with Tusky, Daily Dozen, and QuickDic labeled as sparse. NewPipe, AntennaPod, KDE Connect, Wikipedia Android, Conversations, Aegis Authenticator, Markor, Nextcloud Android, FairEmail, VLC, OsmAnd, Material Files, Jitsi Meet, K-9/Thunderbird Android, Cryptomator Lite, Easy Xkcd, MoneyWallet, Foxy Droid, and the admitted no-native clean-candidate partial rows are source-validated partial-version-mismatch cases. Do not count native-heavy limitations, hidden-code limitations, or report-only/no-Maven-signal clean-candidate rows as source-validated accuracy cases until the per-app proof checklist contains the APK hash, source tag/commit, dependency tree, generated report, and source-validation output.
 
-K-9 / Thunderbird Android `18.0` is currently `partial-gradle-blocked`: APK/source/report/version-catalog proof exists, catalog-only validation gives partial evidence, and the report emits 11 Maven components plus 8 native file components with OSV 0, but resolved `fossReleaseRuntimeClasspath` generation still stalls after K-9's included `build-plugin` setup. Use `docs/evaluation/K9_THUNDERBIRD_PROOF_BUNDLE.md` as the current evidence note, and do not present K-9 as source-validated until the Gradle tree and `validate-source-deps` output exist.
+K-9 / Thunderbird Android `18.0` is now source-validated partial: APK/source/report/version-catalog proof exists, the report emits 11 Maven components plus 8 native file components with OSV 0, and the plugin-lite/runtime-graph validation copy generated `fossReleaseRuntimeClasspath`. Source validation at `data/results/source-validation/k9-thunderbird-android-report-validation/source-validation.md` confirms 5/11 emitted Maven versions, with 6 mismatches and 0 missing. Use `docs/evaluation/K9_THUNDERBIRD_PROOF_BUNDLE.md` and `docs/evaluation/K9_BLOCKER_DIAGNOSTICS.md` as the evidence notes; do not present K-9 as clean because the dependency tree was captured from a validation-only included-build reduction.
 
 FairEmail `1.2315` is a source-validated partial-version-mismatch case for Java/Kotlin Maven dependencies: APK/source/report proof exists, the report emits 13 Maven components plus 4 native `libfairemail.so` file components with OSV 0, and validation confirms 7/13 emitted Maven versions with 6 AndroidX version mismatches and 0 missing coordinates. The original source Gradle run still tries to install Android NDK `27.2.12479018`, so the dependency tree was generated from `data/results/source-validation/fairemail/source-no-native/`, a validation-only source copy with native build disabled only for Maven runtime dependency resolution. Use `docs/evaluation/FAIREMAIL_PROOF_BUNDLE.md`, `data/results/report-real-fairemail/report.html`, and `data/results/source-validation/fairemail-report-validation/source-validation.md` for the evidence; do not claim native build validation.
 

@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "added": 1730971358000,
+    "authorEmail": "timur@timur.mobi",
+    "authorName": "Timur",
+    "authorWebSite": "https://timur.mobi",
+    "categories": [
+      "Ebook Reader",
+      "Reading"
+    ],
+    "description": {
+      "en-US": "ProseReader for Android\n\nEbook/EPUB Viewer\n\nmore: https://timur.mobi/prose/doc/android\n\n\n"
+    },
+    "featureGraphic": {
+      "en-US": {
+        "name": "/timur.prose/en-US/featureGraphic_FEB3U6AMYD8m8wPK7UTXhrq742cDEagdaJUilvuLTps=.png",
+        "sha256": "14407753a00c603f26f303caed44d786babbe3670311a81d68952296fb8b4e9b",
+        "size": 7742
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/timur.prose/en-US/icon_ilbzGDgwSeMw4vEBhS9kR_OUpFv-DuaWwCqCJFKUkuo=.png",
+        "sha256": "8a56f318383049e330e2f101852f6447f394a45bfe0ee696c02a8224529492ea",
+        "size": 11505
+      }
+    },
+    "issueTracker": "https://codeberg.org/timurmobi/prosereader-android/issues",
+    "lastUpdated": 1778507335350,
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-US": "ProseReader"
+    },
+    "preferredSigner": "0b2c8663fafe65f73c5a0ec60d38392c64384d9b91cc9712db3b748874fe5c75",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/timur.prose/en-US/phoneScreenshots/1.png",
+            "sha256": "40e224aa28d468a377bd755c4ebb841c5605bdf87b575bde66f65a4cf0745404",
+            "size": 292596
+          },
+          {
+            "name": "/timur.prose/en-US/phoneScreenshots/2.png",
+            "sha256": "0a8db46cc0c6a46088c3fa25f9ee25bd7aa20b40d4802ab812ee85f13792c466",
+            "size": 323074
+          },
+          {
+            "name": "/timur.prose/en-US/phoneScreenshots/3.png",
+            "sha256": "ac8b193362f6eb309e6ec6cccf356cf4cf44f4ef4de09d621fce5cc340fec483",
+            "size": 152104
+          },
+          {
+            "name": "/timur.prose/en-US/phoneScreenshots/4.png",
+            "sha256": "42772ecb013f263febfa3bf97496a0a4d82ae934222e82660814f4948c349223",
+            "size": 143944
+          },
+          {
+            "name": "/timur.prose/en-US/phoneScreenshots/5.png",
+            "sha256": "bbf9315105366e6fdd4e0f678c12d85fc2d84ea56561adb1aea29ea9bff57a63",
+            "size": 208731
+          }
+        ]
+      },
+      "tenInch": {
+        "en-US": [
+          {
+            "name": "/timur.prose/en-US/tenInchScreenshots/1.png",
+            "sha256": "74069ddc4c0dff84b6b8ebf8affd571ba8ba535d4a9a88190c849cb7de16db5a",
+            "size": 222798
+          },
+          {
+            "name": "/timur.prose/en-US/tenInchScreenshots/2.png",
+            "sha256": "21f4bf20a434af33f8ec411898cb3df14f3c925c3caa484e0d71ab22135c5065",
+            "size": 261372
+          },
+          {
+            "name": "/timur.prose/en-US/tenInchScreenshots/3.png",
+            "sha256": "e30bdb9b2041e35487a7dd58835fba088258ea26eb48d40053a013c8c0f245f4",
+            "size": 121986
+          },
+          {
+            "name": "/timur.prose/en-US/tenInchScreenshots/4.png",
+            "sha256": "e569b63fba0f4419eb531bcc6e3ec8bedfe00f2c07fe0fcdcd8a3c19cf3676bd",
+            "size": 84764
+          },
+          {
+            "name": "/timur.prose/en-US/tenInchScreenshots/5.png",
+            "sha256": "ba4e4884a48d2d59e1c345114e47bbdc4d84cd6780de1868f189084bbbc32eae",
+            "size": 144959
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://codeberg.org/timurmobi/prosereader-android",
+    "summary": {
+      "de": "ProseReader for Android\nEbook/EPUB Viewer\nhttps://timur.mobi/prose/doc/android",
+      "en-US": "ProseReader for Android - Ebook/EPUB Viewer"
+    }
+  },
+  "version": {
+    "added": 1778507335350,
+    "file": {
+      "ipfsCIDv1": "bafybeidm7gi2hb7pgaoaniuszmf2zokw5aoicvyhgmgzrjc22n4pmzfjum",
+      "name": "/timur.prose_10906.apk",
+      "sha256": "66d58af232509bed40b9b988f72c45ebcc220a17d1f3c0fbcad19434ad510410",
+      "size": 13150168
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "0b2c8663fafe65f73c5a0ec60d38392c64384d9b91cc9712db3b748874fe5c75"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "timur.prose.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 24,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 10906,
+      "versionName": "1.9.6"
+    },
+    "src": {
+      "name": "/timur.prose_10906_src.tar.gz",
+      "sha256": "cad3870bfbf8e8eb12d9e926406b67b90e1d6cdde9073d220224193219e43a26",
+      "size": 6212897
+    },
+    "whatsNew": {
+      "en-US": "v1.9.6\n- search feature for recents and bookmarks\n- 100 recents entries\n- one-column info-page for narrow screen\n- footnote display improved\n- bugfix: prevent unintended page forward\n- several small improvements\n"
+    }
+  }
+}

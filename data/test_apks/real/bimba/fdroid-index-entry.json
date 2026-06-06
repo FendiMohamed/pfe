@@ -1,0 +1,477 @@
+{
+  "metadata": {
+    "added": 1682423991000,
+    "authorEmail": "questions@bimba.app",
+    "authorName": "apiote",
+    "authorWebSite": "https://apiote.xyz",
+    "categories": [
+      "Navigation",
+      "Public Transport"
+    ],
+    "changelog": "https://codeberg.org/bimba/czwek/src/branch/stable/CHANGELOG.adoc",
+    "description": {
+      "cs-CZ": "Bimba v\u00e1m umo\u017e\u0148uje zobrazit si j\u00edzdn\u00ed \u0159\u00e1d ve\u0159ejn\u00e9 dopravy s odjezdy v re\u00e1ln\u00e9m \u010dase v n\u011bkolika m\u011bstech.\n\nAktu\u00e1ln\u00ed funkce:\n* zobrazen\u00ed odjezd\u016f podle zast\u00e1vky,\n* hled\u00e1n\u00ed zast\u00e1vek v okol\u00ed,\n* hled\u00e1n\u00ed zast\u00e1vek podle QR k\u00f3du (ve vybran\u00fdch j\u00edzdn\u00edch \u0159\u00e1dech),\n* hled\u00e1n\u00ed zast\u00e1vek na lince,\n* vlastnosti vozidel u odjezd\u016f (v z\u00e1vislosti na dostupn\u00fdch informac\u00edch),\n* vozidla a zast\u00e1vky na map\u011b v re\u00e1ln\u00e9m \u010dase,\n",
+      "de-DE": "Mit Bimba k\u00f6nnen Sie den Fahrplan der \u00f6ffentlichen Verkehrsmittel mit Echtzeit-Abfahrten in mehreren St\u00e4dten ansehen.\n\nAktuelle Funktionen:\n* \u00dcberpr\u00fcfung der Abfahrtszeiten nach Haltestelle,\n* Suche nach Haltestellen in der N\u00e4he,\n* Suche nach Haltestellen \u00fcber QR-Code (in ausgew\u00e4hlten Fahrpl\u00e4nen),\n* Suche nach Haltestellen auf der Linie,\n* Fahrzeugattribute f\u00fcr Abfahrten (je nach verf\u00fcgbaren Informationen),\n* Fahrzeuge und Haltestellen auf der Karte in Echtzeit,\n",
+      "en": "Bimba lets you check public transport timetable with realtime departures in multiple cities.\n\nCurrent features:\n* checking departures by stop,\n* searching nearby stops,\n* searching stops by QR code (in selected timetables),\n* searching stops on line,\n* vehicle attributes for departures (depending on available information),\n* vehicles and stops on map in real time\n* planning journeys (provided by Transitous)\n",
+      "en-US": "Bimba lets you check public transport timetable with realtime departures in multiple cities.\n\nCurrent features:\n* checking departures by stop,\n* searching nearby stops,\n* searching stops by QR code (in selected timetables),\n* searching stops on line,\n* vehicle attributes for departures (depending on available information),\n* vehicles and stops on map in real time,\n",
+      "et": "Bimba abil saad vaadata \u00fchistranspordi s\u00f5iduplaane, sealhulgas mitmetes linnades v\u00e4ljumiste ja muid olulisi andmed reaalajas.\n\nPraegune funktsionaalsus:\n* v\u00e4ljumised peatuste kaupa,\n* l\u00e4himate peatuste otsing,\n* peatuste otsing QR-koodi alusel (valitud s\u00f5iduplaanide puhul),\n* peatuste otsing liini kaupa,\n* v\u00e4ljuva s\u00f5iduki andmed (kui see teave on olemas),\n* s\u00f5idukid ja peatused reaalajas (kui see teave on olemas)\n",
+      "fr-FR": "Bimba vous permet de consulter les horaires des transports publics, avec d\u00e9parts en temps r\u00e9els dans plusieurs villes.\n\nCaract\u00e9ristiques\u202f:\n* consulter les d\u00e9parts par arr\u00eats,\n* chercher les arr\u00eats \u00e0 proximit\u00e9,\n* chercher des arr\u00eats avec un code QR (dans les horaires s\u00e9lectionn\u00e9s),\n* chercher les arr\u00eats sur une ligne,\n* caract\u00e9ristiques des v\u00e9hicules (en fonction des informations disponibles),\n* v\u00e9hicules et arr\u00eats sur la carte en temps r\u00e9el,\n",
+      "nl-NL": "Met Bimba zie je de dienstregeling van het openbaar vervoer met actuele vertrektijden in vele steden.\n\nActuele functies:\n* vertrektijden per halte,\n* zoek haltes in de buurt,\n* zoek haltes met QR code (in sommige dienstregelingen),\n* zoek haltes per lijn,\n* eigenschappen van het voertuig (afhankelijk van beschikbare informatie),\n* voertuigen en haltes op de kaart in realtime,\n",
+      "pl-PL": "Bimba pozwala sprawdzi\u0107 rozk\u0142ad jazdy transportu publicznego, z odjazdami pokazywanymi na \u017cywo, w niejednym mie\u015bcie.\n\nAktualnie dost\u0119pne funkcje:\n* sprawdzanie rozk\u0142adu jazdy wed\u0142ug przystank\u00f3w,\n* wyszukiwanie przystank\u00f3w w pobli\u017cu,\n* szukanie przystank\u00f3w za pomoc\u0105 kod\u00f3w QR (w wybranych rozk\u0142adach),\n* podgl\u0105d przystank\u00f3w na wybranej linii,\n* informacje o pojazdach, takie jak dost\u0119pno\u015b\u0107 dla niepe\u0142nosprawnych (w zale\u017cno\u015bci od udost\u0119pnianych informacji),\n* przystanki i pojazdy na mapie w czasie rzeczywistym\n",
+      "uk": "Bimba \u0434\u043e\u0437\u0432\u043e\u043b\u044f\u0454 \u043f\u0435\u0440\u0435\u0432\u0456\u0440\u044f\u0442\u0438 \u0440\u043e\u0437\u043a\u043b\u0430\u0434 \u0433\u0440\u043e\u043c\u0430\u0434\u0441\u044c\u043a\u043e\u0433\u043e \u0442\u0440\u0430\u043d\u0441\u043f\u043e\u0440\u0442\u0443 \u0437 \u0432\u0456\u0434\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043d\u044f\u043c\u0438 \u0432 \u0440\u0435\u0436\u0438\u043c\u0456 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0447\u0430\u0441\u0443 \u0432 \u043a\u0456\u043b\u044c\u043a\u043e\u0445 \u043c\u0456\u0441\u0442\u0430\u0445.\n\n\u041f\u043e\u0442\u043e\u0447\u043d\u0456 \u0444\u0443\u043d\u043a\u0446\u0456\u0457:\n* \u043f\u0435\u0440\u0435\u0432\u0456\u0440\u043a\u0430 \u0432\u0456\u0434\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u044c \u043f\u043e \u0437\u0443\u043f\u0438\u043d\u0446\u0456,\n* \u043f\u043e\u0448\u0443\u043a \u043d\u0430\u0439\u0431\u043b\u0438\u0436\u0447\u0438\u0445 \u0437\u0443\u043f\u0438\u043d\u043e\u043a,\n* \u043f\u043e\u0448\u0443\u043a \u0437\u0443\u043f\u0438\u043d\u043e\u043a \u0437\u0430 QR-\u043a\u043e\u0434\u043e\u043c (\u0443 \u0432\u0438\u0431\u0440\u0430\u043d\u0438\u0445 \u0440\u043e\u0437\u043a\u043b\u0430\u0434\u0430\u0445),\n* \u043f\u043e\u0448\u0443\u043a \u0437\u0443\u043f\u0438\u043d\u043e\u043a \u043d\u0430 \u043b\u0456\u043d\u0456\u0457,\n* \u0430\u0442\u0440\u0438\u0431\u0443\u0442\u0438 \u0442\u0440\u0430\u043d\u0441\u043f\u043e\u0440\u0442\u043d\u0438\u0445 \u0437\u0430\u0441\u043e\u0431\u0456\u0432 \u0434\u043b\u044f \u0432\u0456\u0434\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u044c (\u0437\u0430\u043b\u0435\u0436\u043d\u043e \u0432\u0456\u0434 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u043e\u0457 \u0456\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u0457),\n* \u0442\u0440\u0430\u043d\u0441\u043f\u043e\u0440\u0442\u043d\u0456 \u0437\u0430\u0441\u043e\u0431\u0438 \u0442\u0430 \u0437\u0443\u043f\u0438\u043d\u043a\u0438 \u043d\u0430 \u043a\u0430\u0440\u0442\u0456 \u0432 \u0440\u0435\u0436\u0438\u043c\u0456 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0447\u0430\u0441\u0443\n"
+    },
+    "donate": [
+      "https://bimba.app/donate"
+    ],
+    "featureGraphic": {
+      "de-DE": {
+        "name": "/xyz.apiote.bimba.czwek/de-DE/featureGraphic_YKwufh9IL72R4cNeDzV3Q4HEhJ4ojLUWsLwlz41Ux9E=.png",
+        "sha256": "60ac2e7e1f482fbd91e1c35e0f35774381c4849e288cb516b0bc25cf8d54c7d1",
+        "size": 31839
+      },
+      "en": {
+        "name": "/xyz.apiote.bimba.czwek/en/featureGraphic_YKwufh9IL72R4cNeDzV3Q4HEhJ4ojLUWsLwlz41Ux9E=.png",
+        "sha256": "60ac2e7e1f482fbd91e1c35e0f35774381c4849e288cb516b0bc25cf8d54c7d1",
+        "size": 31839
+      },
+      "en-GB": {
+        "name": "/xyz.apiote.bimba.czwek/en-GB/featureGraphic_j7k1u8MqvUTAc9YwYDgMcyDvymQGenMk8ZRFCKXIrCY=.png",
+        "sha256": "8fb935bbc32abd44c073d63060380c7320efca64067a7324f1944508a5c8ac26",
+        "size": 26290
+      },
+      "en-US": {
+        "name": "/xyz.apiote.bimba.czwek/en-US/featureGraphic_YKwufh9IL72R4cNeDzV3Q4HEhJ4ojLUWsLwlz41Ux9E=.png",
+        "sha256": "60ac2e7e1f482fbd91e1c35e0f35774381c4849e288cb516b0bc25cf8d54c7d1",
+        "size": 31839
+      },
+      "et": {
+        "name": "/xyz.apiote.bimba.czwek/et/featureGraphic_YKwufh9IL72R4cNeDzV3Q4HEhJ4ojLUWsLwlz41Ux9E=.png",
+        "sha256": "60ac2e7e1f482fbd91e1c35e0f35774381c4849e288cb516b0bc25cf8d54c7d1",
+        "size": 31839
+      },
+      "fr-FR": {
+        "name": "/xyz.apiote.bimba.czwek/fr-FR/featureGraphic_YKwufh9IL72R4cNeDzV3Q4HEhJ4ojLUWsLwlz41Ux9E=.png",
+        "sha256": "60ac2e7e1f482fbd91e1c35e0f35774381c4849e288cb516b0bc25cf8d54c7d1",
+        "size": 31839
+      },
+      "pl-PL": {
+        "name": "/xyz.apiote.bimba.czwek/pl-PL/featureGraphic_YKwufh9IL72R4cNeDzV3Q4HEhJ4ojLUWsLwlz41Ux9E=.png",
+        "sha256": "60ac2e7e1f482fbd91e1c35e0f35774381c4849e288cb516b0bc25cf8d54c7d1",
+        "size": 31839
+      }
+    },
+    "icon": {
+      "de-DE": {
+        "name": "/xyz.apiote.bimba.czwek/de-DE/icon_oQF_a-cKJQnyRiYKl58DivGIOV7vaLeBc9O7wotxI7k=.png",
+        "sha256": "a1017f6be70a2509f246260a979f038af188395eef68b78173d3bbc28b7123b9",
+        "size": 15919
+      },
+      "en": {
+        "name": "/xyz.apiote.bimba.czwek/en/icon_oQF_a-cKJQnyRiYKl58DivGIOV7vaLeBc9O7wotxI7k=.png",
+        "sha256": "a1017f6be70a2509f246260a979f038af188395eef68b78173d3bbc28b7123b9",
+        "size": 15919
+      },
+      "en-GB": {
+        "name": "/xyz.apiote.bimba.czwek/en-GB/icon_FDJ5OEjVG8QC2w1VqOh8oryRHRpqC3B4Ddmk3n-elGM=.png",
+        "sha256": "1432793848d51bc402db0d55a8e87ca2bc911d1a6a0b70780dd9a4de7f9e9463",
+        "size": 13412
+      },
+      "en-US": {
+        "name": "/xyz.apiote.bimba.czwek/en-US/icon_oQF_a-cKJQnyRiYKl58DivGIOV7vaLeBc9O7wotxI7k=.png",
+        "sha256": "a1017f6be70a2509f246260a979f038af188395eef68b78173d3bbc28b7123b9",
+        "size": 15919
+      },
+      "et": {
+        "name": "/xyz.apiote.bimba.czwek/et/icon_oQF_a-cKJQnyRiYKl58DivGIOV7vaLeBc9O7wotxI7k=.png",
+        "sha256": "a1017f6be70a2509f246260a979f038af188395eef68b78173d3bbc28b7123b9",
+        "size": 15919
+      },
+      "fr-FR": {
+        "name": "/xyz.apiote.bimba.czwek/fr-FR/icon_oQF_a-cKJQnyRiYKl58DivGIOV7vaLeBc9O7wotxI7k=.png",
+        "sha256": "a1017f6be70a2509f246260a979f038af188395eef68b78173d3bbc28b7123b9",
+        "size": 15919
+      },
+      "pl-PL": {
+        "name": "/xyz.apiote.bimba.czwek/pl-PL/icon_oQF_a-cKJQnyRiYKl58DivGIOV7vaLeBc9O7wotxI7k=.png",
+        "sha256": "a1017f6be70a2509f246260a979f038af188395eef68b78173d3bbc28b7123b9",
+        "size": 15919
+      }
+    },
+    "issueTracker": "https://roadmap.apiote.xyz",
+    "lastUpdated": 1777330022541,
+    "liberapay": "bimba",
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "cs-CZ": "Bimba",
+      "de-DE": "Bimba",
+      "en": "Bimba",
+      "en-US": "Bimba",
+      "et": "Bimba",
+      "fr-FR": "Bimba",
+      "iw-IL": "\u05d1\u05d9\u05de\u05d1\u05d4",
+      "nl-NL": "Bimba",
+      "pl-PL": "Bimba",
+      "uk": "Bimba"
+    },
+    "preferredSigner": "2786eb169ee9ae8d170f09266e068febc2a0a5a2438ac0d5ef6eafba45cabde1",
+    "screenshots": {
+      "phone": {
+        "en": [
+          {
+            "name": "/xyz.apiote.bimba.czwek/en/phoneScreenshots/Dash.png",
+            "sha256": "ea6895d9d8b38169a17c02f3b341302573dcfceb11b1e6dd9d48acce7c6bd6c8",
+            "size": 84138
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en/phoneScreenshots/StopActivity.png",
+            "sha256": "aac8b765a62db61d86ed511b1a2dfa79e44b27e9893d16e75a0e0c7d4f2bf371",
+            "size": 238544
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en/phoneScreenshots/StopActivity_dark.png",
+            "sha256": "14523a66118cc669c14327c8a2bdc373d0812201169e6984c94b67ffdf88170f",
+            "size": 237732
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en/phoneScreenshots/dash_w_fav.png",
+            "sha256": "45d34807baaf8abfc93e9bc6f924ed96b62934f01788d7f602e607bce2eee29c",
+            "size": 178577
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en/phoneScreenshots/graph.png",
+            "sha256": "b120f6b2024ef20826ebae27c53b7b73f4cb9773588ed5d96c35602d5bd73049",
+            "size": 186028
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en/phoneScreenshots/journey.png",
+            "sha256": "601c9ee5a80aea2d873738e1f58b9c2bbaded5af721912203cbf1319a2842aaa",
+            "size": 2570278
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en/phoneScreenshots/journeyExpanded.png",
+            "sha256": "85242c6afa4832bfa779bfa56217c9420a8ff71628589446bb3cf1f004a85686",
+            "size": 1729406
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en/phoneScreenshots/map.png",
+            "sha256": "6ece8298e4413af4a6baf0c3260aad8506df7247acccdaebfb63df902e493883",
+            "size": 3337174
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en/phoneScreenshots/mapBS.png",
+            "sha256": "a653e987b29c4b3460a9559500f5e1ce43bcfe614b3085f2d2ac1d1796e3025e",
+            "size": 2317488
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en/phoneScreenshots/modification.png",
+            "sha256": "07042f094b4feec2903de11e7f80fde2213226a2e07be5c4d786eb2d46fd05ec",
+            "size": 215771
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en/phoneScreenshots/modification_more.png",
+            "sha256": "64aa9f0777b68d94fdacfaec31284a5657193c5ab11433bdf079f8359e36e41c",
+            "size": 301858
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en/phoneScreenshots/searchStop.png",
+            "sha256": "3c547fdf9bafd3def42a1203a470ab85b9f6b73a6a442d5be715a050f4ffa130",
+            "size": 183032
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en/phoneScreenshots/searchStop_multipleFeeds.png",
+            "sha256": "24f849b9aa5312fbb880401f6739db208739b0c7d30140b676202e8aa9f72a7c",
+            "size": 323456
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en/phoneScreenshots/stopSpecify.png",
+            "sha256": "1afb824d17e9e23697abc4c9f802f45d2da30699435542fb043bb2ef08dd5fc2",
+            "size": 211792
+          }
+        ],
+        "en-GB": [
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-GB/phoneScreenshots/Dash.png",
+            "sha256": "6c24da12e6da11241734c808d36e8b17896a7d1dfcd2f3401b3827c7eaa4d5b8",
+            "size": 96174
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-GB/phoneScreenshots/StopActivity.png",
+            "sha256": "d9710481f6fe29ae82378214d551fbd23e2f2a7ffdd184436d9c2899c15334b9",
+            "size": 266232
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-GB/phoneScreenshots/StopActivity_dark.png",
+            "sha256": "d572f47a5381adfcddacb7c0f672287c9919f5ef7a0ebbd9ed8b1900738e888d",
+            "size": 279689
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-GB/phoneScreenshots/dash_w_fav.png",
+            "sha256": "f44d0b8fd5557cfcd5e30a0465e1ded28f48ae9415bcea7cf68c90af2af8bb75",
+            "size": 152069
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-GB/phoneScreenshots/graph.png",
+            "sha256": "c1cb7beb55ef72cef86db895df9090e5c98795029443ac57833f7ef535b0031a",
+            "size": 244531
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-GB/phoneScreenshots/map.png",
+            "sha256": "b5c6c1bd5f142bf9b46776a6a62d2eaaeb5471a3f0ed4b916ba6d6caac02ef9c",
+            "size": 3998814
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-GB/phoneScreenshots/mapBS.png",
+            "sha256": "9e3284135b588d59848b19aae71f7afcb76bf9d8ac4de9e3134619f01614e16d",
+            "size": 2924219
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-GB/phoneScreenshots/modification.png",
+            "sha256": "36dedaa35ab194f3c5e000b669c7ec0bfb87d810a0e067c527e2c3ae06ab4032",
+            "size": 225211
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-GB/phoneScreenshots/modification_more.png",
+            "sha256": "a162458b5c46a74ec6f5900778c261137bc8837d5d7291f3c552799f350af534",
+            "size": 629452
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-GB/phoneScreenshots/searchStop.png",
+            "sha256": "9b7c124e66ba09e850d3866052d08ff058b5a07076faa577890818b8fa4a4e74",
+            "size": 461498
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-GB/phoneScreenshots/searchStop_multipleFeeds.png",
+            "sha256": "ec65a88cde2206022df682e00fc5abd04c2f7c91dd8619636b97db676fa5d5e0",
+            "size": 364266
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-GB/phoneScreenshots/stopSpecify.png",
+            "sha256": "7dc14cf2846ee8b2fcd7ee3484826c68e8a9186a8c04f725447c695182beff18",
+            "size": 451937
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-US/phoneScreenshots/Dash.png",
+            "sha256": "ea6895d9d8b38169a17c02f3b341302573dcfceb11b1e6dd9d48acce7c6bd6c8",
+            "size": 84138
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-US/phoneScreenshots/StopActivity.png",
+            "sha256": "aac8b765a62db61d86ed511b1a2dfa79e44b27e9893d16e75a0e0c7d4f2bf371",
+            "size": 238544
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-US/phoneScreenshots/StopActivity_dark.png",
+            "sha256": "14523a66118cc669c14327c8a2bdc373d0812201169e6984c94b67ffdf88170f",
+            "size": 237732
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-US/phoneScreenshots/dash_w_fav.png",
+            "sha256": "45d34807baaf8abfc93e9bc6f924ed96b62934f01788d7f602e607bce2eee29c",
+            "size": 178577
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-US/phoneScreenshots/graph.png",
+            "sha256": "b120f6b2024ef20826ebae27c53b7b73f4cb9773588ed5d96c35602d5bd73049",
+            "size": 186028
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-US/phoneScreenshots/journey.png",
+            "sha256": "601c9ee5a80aea2d873738e1f58b9c2bbaded5af721912203cbf1319a2842aaa",
+            "size": 2570278
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-US/phoneScreenshots/journeyExpanded.png",
+            "sha256": "85242c6afa4832bfa779bfa56217c9420a8ff71628589446bb3cf1f004a85686",
+            "size": 1729406
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-US/phoneScreenshots/map.png",
+            "sha256": "6ece8298e4413af4a6baf0c3260aad8506df7247acccdaebfb63df902e493883",
+            "size": 3337174
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-US/phoneScreenshots/mapBS.png",
+            "sha256": "a653e987b29c4b3460a9559500f5e1ce43bcfe614b3085f2d2ac1d1796e3025e",
+            "size": 2317488
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-US/phoneScreenshots/modification.png",
+            "sha256": "07042f094b4feec2903de11e7f80fde2213226a2e07be5c4d786eb2d46fd05ec",
+            "size": 215771
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-US/phoneScreenshots/modification_more.png",
+            "sha256": "64aa9f0777b68d94fdacfaec31284a5657193c5ab11433bdf079f8359e36e41c",
+            "size": 301858
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-US/phoneScreenshots/searchStop.png",
+            "sha256": "3c547fdf9bafd3def42a1203a470ab85b9f6b73a6a442d5be715a050f4ffa130",
+            "size": 183032
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-US/phoneScreenshots/searchStop_multipleFeeds.png",
+            "sha256": "24f849b9aa5312fbb880401f6739db208739b0c7d30140b676202e8aa9f72a7c",
+            "size": 323456
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/en-US/phoneScreenshots/stopSpecify.png",
+            "sha256": "1afb824d17e9e23697abc4c9f802f45d2da30699435542fb043bb2ef08dd5fc2",
+            "size": 211792
+          }
+        ],
+        "pl-PL": [
+          {
+            "name": "/xyz.apiote.bimba.czwek/pl-PL/phoneScreenshots/Dash.png",
+            "sha256": "7fc094bcc5058477298b2459db2f3d3bc5073267936261f3fd0a3bdf6448c4d6",
+            "size": 88488
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/pl-PL/phoneScreenshots/StopActivity.png",
+            "sha256": "9e180d8311b8cbe0e671625b3ced502be66ab2ee7e036c102b4b0f22ee227c6a",
+            "size": 232062
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/pl-PL/phoneScreenshots/StopActivity_dark.png",
+            "sha256": "12cf5737dd300f9c430253bd0557a5d59699af129d5bdb494aa88d02c7e3847a",
+            "size": 237868
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/pl-PL/phoneScreenshots/dash_w_fav.png",
+            "sha256": "4a23b0f844354fa4bb50a15a95ccbfb8dc43ea0678412b7adf603933ff09a6e8",
+            "size": 180628
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/pl-PL/phoneScreenshots/graph.png",
+            "sha256": "7c7845547000f4632311b7e176614ab2698b9e2b53dd16b528b32d44c5654ab6",
+            "size": 227694
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/pl-PL/phoneScreenshots/journey.png",
+            "sha256": "dcbaf1aaa3bb600ec80a6de78e256a735f68a5bc08bc4ce0691c81f4cc78f509",
+            "size": 2574231
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/pl-PL/phoneScreenshots/journeyExpanded.png",
+            "sha256": "328fcf273446eb66ec980a60913c75b0e4a02209cc6db22a5827786fba718247",
+            "size": 1720511
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/pl-PL/phoneScreenshots/map.png",
+            "sha256": "b77da8c242dc853c37b435713353dba6924e88781977144807ddbbaa4bbd565b",
+            "size": 3329004
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/pl-PL/phoneScreenshots/mapBS.png",
+            "sha256": "4e9294be98a1a57d1656c5524211870a2478326758839c18c2f00b6fb9dd9318",
+            "size": 2314103
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/pl-PL/phoneScreenshots/modification.png",
+            "sha256": "99ad9589cf61a8fef8c8254a7358a225e8c14181e60e4d66a986be31ac33308a",
+            "size": 213474
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/pl-PL/phoneScreenshots/modification_more.png",
+            "sha256": "3804fbd4240aa8e8d2cc4b89aea9a451200989e44b3168e0351fde5d7718dbb5",
+            "size": 559493
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/pl-PL/phoneScreenshots/searchStop.png",
+            "sha256": "48b47a8aaa19265903b7cc528757748f0a1ea45935c332a6b827b96f89e46fd6",
+            "size": 182494
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/pl-PL/phoneScreenshots/searchStop_multipleFeeds.png",
+            "sha256": "9f192a1d55c3115646d8d0752599a1d0ebaecd66ab66e2488e3a120ef880570e",
+            "size": 319687
+          },
+          {
+            "name": "/xyz.apiote.bimba.czwek/pl-PL/phoneScreenshots/stopSpecify.png",
+            "sha256": "69dbc81d0557fa2773ce1c2483d7c02c0084befa2894873e052a71c9d90c4b4b",
+            "size": 224178
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://codeberg.org/bimba/czwek",
+    "summary": {
+      "cs-CZ": "FLOSS pr\u016fvodce ve\u0159ejnou dopravou; j\u00edzdn\u00ed \u0159\u00e1d v kapse.",
+      "de-DE": "Open Source \u00d6PNV-Begleiter; der Fahrplan f\u00fcr deine Tasche.",
+      "en": "A public transport companion that\u2019s FLOSS; a timetable in your pocket.",
+      "en-US": "FLOSS public transport passenger companion; a timetable in your pocket.",
+      "et": "Avaandmetel p\u00f5hinev \u00fchistranspordi s\u00f5iduplaanide rakendus.",
+      "fr-FR": "Assistant de transports publics libre\u202f; un horaire dans votre poche.",
+      "nl-NL": "FLOSS metgezel voor OV-reiziger; een dienstregeling in je broekzak.",
+      "pl-PL": "Darmowy i otwarto\u017ar\u00f3d\u0142owy towarzysz transportu; rozk\u0142ad jazdy w Twojej kieszeni.",
+      "uk": "\u0411\u0435\u0437\u043a\u043e\u0448\u0442\u043e\u0432\u043d\u0438\u0439 \u0441\u0443\u043f\u0443\u0442\u043d\u0438\u043a \u043f\u0430\u0441\u0430\u0436\u0438\u0440\u0430 \u0433\u0440\u043e\u043c\u0430\u0434\u0441\u044c\u043a\u043e\u0433\u043e \u0442\u0440\u0430\u043d\u0441\u043f\u043e\u0440\u0442\u0443; \u0440\u043e\u0437\u043a\u043b\u0430\u0434 \u0443 \u0432\u0430\u0448\u0456\u0439 \u043a\u0438\u0448\u0435\u043d\u0456."
+    },
+    "webSite": "https://bimba.app"
+  },
+  "version": {
+    "added": 1777330022541,
+    "file": {
+      "ipfsCIDv1": "bafybeigfq4edoniygn7ycccnabrqpqpcqvf52j3l7gjcjwia4jijjkoava",
+      "name": "/xyz.apiote.bimba.czwek_48.apk",
+      "sha256": "5dd07390c9f2f39d9171c13826d21c426a44c3e1f53caea81ccdc321c5b37d7d",
+      "size": 25246068
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "2786eb169ee9ae8d170f09266e068febc2a0a5a2438ac0d5ef6eafba45cabde1"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_LOCATION"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "xyz.apiote.bimba.czwek.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 48,
+      "versionName": "3.99"
+    },
+    "src": {
+      "name": "/xyz.apiote.bimba.czwek_48_src.tar.gz",
+      "sha256": "a13834bccad9818171555db8125475516f18dd09da49c23ffc76bd767bfe28a9",
+      "size": 30126018
+    },
+    "whatsNew": {
+      "en": "This version is Transitous-only\n\n* Added option to use system font\n* Added option to use light map in dark mode\n* Fixed getting stop times at given date other than current time\n* Removed support for szczanieckiej backend\n",
+      "en-US": "This version is Transitous-only\n\n* Added option to use system font\n* Added option to use light map in dark mode\n* Fixed getting stop times at given date other than current time\n* Removed support for szczanieckiej backend\n",
+      "pl-PL": "Ta wersja wspiera tylko Transitous\n\n* Dodano opcj\u0119 u\u017cywania systemowych kroj\u00f3w pisma\n* Dodano opcj\u0119 u\u017cywania jasnej mapy w trybie ciemnym\n* Naprawiono czasy odjazd\u00f3w po wybraniu daty\n* Usuni\u0119to wsparcie dla backendu szczanieckiej\n"
+    }
+  }
+}

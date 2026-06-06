@@ -1,0 +1,64 @@
+{
+  "apk": {
+    "expected_sha256": "80c6f68ec94a561157ad8db4d335003d2b2c8aeba2b649ab9f446b44743fc0af",
+    "index_size": 8758556,
+    "path": "data/test_apks/real/todo-list-pfa/todo-list-pfa.apk",
+    "sha256": "80c6f68ec94a561157ad8db4d335003d2b2c8aeba2b649ab9f446b44743fc0af",
+    "size": 8758556,
+    "url": "https://f-droid.org/repo/org.secuso.privacyfriendlytodolist_103.apk"
+  },
+  "app": "Todo List (PFA)",
+  "categories": [
+    "Task",
+    "Time",
+    "Writing"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "task",
+    "time",
+    "writing",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/org.secuso.privacyfriendlytodolist/",
+  "license": "GPL-3.0-or-later",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "org.secuso.privacyfriendlytodolist",
+  "proof_status": "report-generated",
+  "reason": "No-native task/time utility with target SDK 36 and a small source tarball; selected as a compact productivity row after Todo Agenda and Working Time Account.",
+  "report": {
+    "detected_component_count": 17,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-todo-list-pfa",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-todo-list-pfa/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-todo-list-pfa/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-todo-list-pfa/sbom.cdx.json",
+    "sbom_component_count": 17,
+    "status": "ok"
+  },
+  "slug": "todo-list-pfa",
+  "source_repo": "https://github.com/SecUSo/privacy-friendly-todo-list",
+  "source_tarball": {
+    "sha256": "b29d33ffedc958412e40b01282b2ded98062fef9df4a989dfd3c2737e5e44989",
+    "size": 890575,
+    "url": "https://f-droid.org/repo/org.secuso.privacyfriendlytodolist_103_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 103,
+  "version_name": "3.4.0"
+}

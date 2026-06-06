@@ -240,9 +240,9 @@
     {
       "id": "k9-thunderbird-android",
       "app": "K-9 Mail / Thunderbird Android",
-      "priority": "first-batch",
+      "priority": "admitted",
       "target_layer": "source-validated-real",
-      "validation_level": "L2 target",
+      "validation_level": "L2 source validated partial",
       "package_name": "com.fsck.k9",
       "apk_source": "F-Droid or GitHub release",
       "source_repo": "https://github.com/thunderbird/thunderbird-android",
@@ -260,10 +260,11 @@
         "multidex",
         "native .so",
         "source-linked",
-        "Gradle dependency-tree blocked"
+        "source-validated",
+        "validation-only included-build rescue"
       ],
-      "reason": "Good old-to-modern evolution case and security-sensitive app. APK/source/report proof is collected, but full resolved Gradle dependency-tree validation is currently blocked by K-9's included Gradle build-plugin setup.",
-      "proof_status": "partial-gradle-blocked",
+      "reason": "Good old-to-modern evolution case and security-sensitive app. APK/source/report proof is collected, and a validation-only included-build/plugin-lite source copy produced the resolved fossReleaseRuntimeClasspath tree. Source validation confirms 5/11 emitted Maven versions with 6 version mismatches and 0 missing coordinates.",
+      "proof_status": "source-validated-partial-mismatch",
       "proof_artifacts": {
         "apk": "data/test_apks/real/k9-thunderbird-android/k9-thunderbird-android.apk",
         "apk_sha256": "1381c04bd9619749ed965c9f26fe8de8196e2b0dbb8a4eda345f99d19dfed43b",
@@ -276,7 +277,11 @@
         "dependency_tree_attempt": "data/results/source-validation/k9-thunderbird-android/fossReleaseRuntimeClasspath.txt",
         "gradle_error_log": "data/results/source-validation/k9-thunderbird-android/gradle-error.log",
         "report": "data/results/report-real-k9-thunderbird-android/report.json",
-        "sbom": "data/results/report-real-k9-thunderbird-android/sbom.cdx.json"
+        "sbom": "data/results/report-real-k9-thunderbird-android/sbom.cdx.json",
+        "validation_source_copy": "data/results/source-validation/k9-thunderbird-android/source-plugin-lite",
+        "runtime_project_graph": "data/results/source-validation/k9-thunderbird-android/source-plugin-lite/k9-runtime-project-graph.txt",
+        "dependency_tree": "data/results/source-validation/k9-thunderbird-android/fossReleaseRuntimeClasspath.plugin-lite-runtimegraph-composefix.txt",
+        "source_validation": "data/results/source-validation/k9-thunderbird-android-report-validation/source-validation.json"
       },
       "proof_checklist_status": {
         "Verify package name on the APK source page.": "done",
@@ -284,9 +289,9 @@
         "Download the APK and record SHA-256.": "done",
         "Download or checkout the matching source tag, commit, or F-Droid source tarball.": "done",
         "Compare APK manifest versionName/versionCode with source metadata.": "done",
-        "Generate the Gradle dependency tree for the release/runtime configuration.": "blocked",
+        "Generate the Gradle dependency tree for the release/runtime configuration.": "done",
         "Generate the MVP APK-to-SBOM report.": "done",
-        "Run source dependency validation against the generated SBOM.": "blocked",
+        "Run source dependency validation against the generated SBOM.": "done",
         "Update candidate config, dataset inventory, and evaluation notes.": "done"
       },
       "proof_notes": [
@@ -294,8 +299,9 @@
         "F-Droid metadata for versionCode `39035` points to source commit `23016c71d2f075700a0e258b9fe374bd06d8257b`, subdir `app-k9mail`, and Gradle flavor `foss`.",
         "APK inspection reports 2 standard DEX files, multidex true, 8 native file components across arm64-v8a/armeabi-v7a/x86/x86_64, minSdk 23, targetSdk 35, and low extraction risk.",
         "Calibrated report `data/results/report-real-k9-thunderbird-android/` emits 11 Maven SBOM components, 8 native file components, and OSV returns 0 vulnerabilities.",
-        "The source version catalog confirms several emitted versions such as AppCompat 1.7.1, RecyclerView 1.4.0, Fragment 1.8.9, and Okio 3.16.4; it also shows likely version mismatches for catalog-declared libraries such as SwipeRefreshLayout 1.1.0 versus selected 1.2.0, Lifecycle 2.10.0 versus selected 2.6.2, and LocalBroadcastManager 1.1.0 versus selected 1.0.0.",
-        "Full resolved dependency-tree validation is blocked: Gradle 9.5.0 and a temporary Gradle 9.4.0 run both stalled after K-9's included `build-plugin` setup; a configuration-cache-disabled Gradle 9.5.0 run failed resolving `org.gradle.kotlin.kotlin-dsl` 6.5.7."
+        "The source version catalog confirms several emitted versions such as AppCompat 1.7.1, RecyclerView 1.4.0, Fragment 1.8.9, and Okio 3.16.4; it also shows version mismatches for catalog-declared libraries such as SwipeRefreshLayout 1.1.0 versus selected 1.2.0, Lifecycle 2.10.0 versus selected 2.6.2, and LocalBroadcastManager 1.1.0 versus selected 1.0.0.",
+        "Resolved dependency-tree validation now works through `data/results/source-validation/k9-thunderbird-android/source-plugin-lite/`, a validation-only copy that keeps the `app-k9mail` foss release runtime graph while disabling build-time quality/test/full-flavor/plugin overhead. Docker Gradle 9.5 captured `fossReleaseRuntimeClasspath` successfully.",
+        "Source validation at `data/results/source-validation/k9-thunderbird-android-report-validation/source-validation.json` confirms 5/11 emitted Maven versions, with 6 version mismatches and 0 missing coordinates. Treat K-9 as source-validated partial, not clean."
       ]
     },
     {
@@ -1106,9 +1112,9 @@
     {
       "id": "jitsi-meet",
       "app": "Jitsi Meet",
-      "priority": "limitation-candidate",
-      "target_layer": "source-linked-blocked",
-      "validation_level": "L4 source-linked framework/toolchain blocked",
+      "priority": "admitted",
+      "target_layer": "source-validated-real",
+      "validation_level": "L2 source validated partial",
       "package_name": "org.jitsi.meet",
       "apk_source": "F-Droid",
       "source_repo": "https://github.com/jitsi/jitsi-meet",
@@ -1124,11 +1130,11 @@
         "Hermes",
         "multidex",
         "modern dependencies",
-        "source-linked",
-        "dependency-tree blocked"
+        "source-validated",
+        "native hash-only boundary"
       ],
-      "reason": "Tests a React Native/native-heavy framework boundary where Java/Kotlin DEX SBOM evidence is incomplete and source dependency-tree validation needs a larger Node/npm toolchain.",
-      "proof_status": "source-linked-framework-blocked",
+      "reason": "Tests a React Native/native-heavy framework boundary where the emitted Maven subset is source-validated but React Native/WebRTC/Hermes native libraries remain hash-only boundary evidence.",
+      "proof_status": "partial-version-mismatch",
       "proof_artifacts": {
         "apk": "data/test_apks/real/jitsi-meet/jitsi-meet.apk",
         "apk_sha256": "72aab4912b08431a2340fc1fb1f181be3a07e8b7ac607e0bb9e4c3814c2e4248",
@@ -1136,11 +1142,13 @@
         "fdroid_metadata": "data/test_apks/real/jitsi-meet/fdroid-metadata.yml",
         "source_tarball": "data/source/jitsi-meet/source.tar.gz",
         "source_tarball_sha256": "1a0ea529821300a824809a3dc21051706d8383e55395ba82fbb638ac3a9ea9bf",
-        "dependency_tree_attempt": "data/results/source-validation/jitsi-meet/releaseRuntimeClasspath.txt",
+        "dependency_tree": "data/results/source-validation/jitsi-meet/releaseRuntimeClasspath.txt",
         "gradle_script": "data/results/source-validation/jitsi-meet/run-gradle-deps.sh",
         "gradle_error_log": "data/results/source-validation/jitsi-meet/gradle-error.log",
+        "gradle_exit_code": "data/results/source-validation/jitsi-meet/gradle-exit-code.txt",
         "report": "data/results/report-real-jitsi-meet/report.json",
-        "sbom": "data/results/report-real-jitsi-meet/sbom.cdx.json"
+        "sbom": "data/results/report-real-jitsi-meet/sbom.cdx.json",
+        "source_validation": "data/results/source-validation/jitsi-meet-report-validation/source-validation.json"
       },
       "proof_checklist_status": {
         "Verify package name on the APK source page.": "done",
@@ -1148,17 +1156,18 @@
         "Download the APK and record SHA-256.": "done",
         "Download or checkout the matching source tag, commit, or F-Droid source tarball.": "done",
         "Compare APK manifest versionName/versionCode with source metadata.": "done",
-        "Generate the Gradle dependency tree for the release/runtime configuration.": "blocked",
+        "Generate the Gradle dependency tree for the release/runtime configuration.": "done",
         "Generate the MVP APK-to-SBOM report.": "done",
-        "Run source dependency validation against the generated SBOM.": "blocked",
+        "Run source dependency validation against the generated SBOM.": "done",
         "Update candidate config, dataset inventory, and evaluation notes.": "done"
       },
       "proof_notes": [
         "APK manifest package/version matches F-Droid target `org.jitsi.meet` versionCode `26000004` and versionName `26.0.0`.",
         "F-Droid metadata for versionCode `26000004` points to source commit `3db92da369b921d73189dbcb55744f9f5459cac0`, subdir `android/app`, and React Native prebuild steps.",
         "The calibrated report `data/results/report-real-jitsi-meet/` emits 7 candidate-confidence Maven SBOM components, 13 native file components, and one potential Gson advisory; no advisory is confirmed.",
-        "Gradle `9.5.0` is incompatible with this source build because it imports `org.gradle.util.VersionNumber`; Gradle `8.14` reaches React Native configuration but fails because `node` is missing in the Docker runtime.",
-        "F-Droid also requires cmake, emscripten, esbuild, make, NDK 27.1/26.1, matrix-olm, and `npm install --build-from-source`; keep Jitsi out of accuracy metrics until the resolved dependency tree exists."
+        "Gradle `9.5.0` is incompatible with this source build because it imports `org.gradle.util.VersionNumber`; the earlier Gradle `8.14` attempt reached React Native configuration but failed because `node` was missing in the Docker runtime.",
+        "After Node/npm became available, Docker Gradle `8.13` captured `:app` `releaseRuntimeClasspath`, with SDK manager installing NDK `27.1.12297006` and `26.1.10909125` during configuration.",
+        "Source validation confirms 5/7 emitted Maven versions, with 2 AndroidX mismatches and 0 missing coordinates; native React Native/WebRTC/Hermes files remain hash-only SBOM file components."
       ]
     }
   ],

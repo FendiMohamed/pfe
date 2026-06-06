@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "added": 1362441600000,
+    "categories": [
+      "Connectivity",
+      "File Transfer"
+    ],
+    "description": {
+      "ca": "Un servidor simple d'FTP i SFTP (transfer\u00e8ncia via SSH). Permet intercanviar\nfitxers amb altres dispositius a trav\u00e9s de WiFi. S'ha acabat haver de cercar\ncables USB. S'executa sense privilegis d'administrador (root). No s'inicia\namb l'arrencada del sistema: teniu el control de quan s'executa el servidor.\nNo obstant, mentre funciona, no permet que el dispositiu entri en mode d'espera\nper evitar que es tallin les pujades o baixades llargues.\n",
+      "en-US": "A simple FTP and SFTP (SSH file transfer) server. Allows to exchange files with\nother machines over WiFi. No more USB cable searching. Runs without root\nprivileges and is not started when device boots: Control yourself when the\nserver runs. However, while it runs it prevents standby to avoid long uploads\nand downloads to abort.\n",
+      "es": "Un servidor simple de FTP y SFTP (transferencia v\u00eda SSH). Permite intercambiar\narchivos entre dispositivos a trav\u00e9s de una red WiFi. Se acab\u00f3 el buscar cables\nUSB. No requiere privilegios de administrador (root). Tampoco se inicia durante\nel arranque del sistema: tienes total control de cu\u00e1ndo se ejecuta el servidor.\nNo obstante, mientras se ejecuta, no permite que el dispositivo entre en modo\nde espera para evitar que se corten las transferencias largas.\n",
+      "hu": "Egy egyszer\u0171 FTP \u00e9s SFTP (SSH f\u00e1jl\u00e1tviteli) szerver. Lehet\u0151v\u00e9 teszi f\u00e1jlok cser\u00e9j\u00e9t\nWiFi-n kereszt\u00fcl m\u00e1s g\u00e9pekel. Nincs t\u00f6bb USB-k\u00e1bel keresg\u00e9l\u00e9s. Az eszk\u00f6z root-ol\u00e1sa n\u00e9lk\u00fcl\nis haszn\u00e1lhat\u00f3 \u00e9s nem indul el az eszk\u00f6z ind\u00edt\u00e1sakor: d\u00f6nts te, hogy mikor\nfusson a szerver. Azonban am\u00edg fut, megakad\u00e1lyozza a k\u00e9szenl\u00e9ti \u00e1llapotot, hogy elker\u00fclje\na lass\u00fa \u00e9s megszakad\u00f3 fel- \u00e9s let\u00f6lt\u00e9seket.\n"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/org.primftpd/en-US/icon_1OgKmaQ-xwDUi_MyHyhcwmXKVRJOhbCjTkSaU3a2S-k=.png",
+        "sha256": "d4e80a99a43ec700d48bf3321f285cc265ca55124e85b0a34e449a5376b64be9",
+        "size": 3545
+      }
+    },
+    "issueTracker": "https://github.com/wolpi/prim-ftpd/issues",
+    "lastUpdated": 1777931336453,
+    "license": "Apache-2.0",
+    "name": {
+      "ca": "Primitive FTPd",
+      "en-US": "Primitive FTPd",
+      "es": "Primitive FTPd",
+      "hu": "Primit\u00edv FTPd"
+    },
+    "preferredSigner": "1a3a3a5b8bd143021b84e8ce9e6924cb73eb45561211e6b900c4f8b3223cd7a0",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/org.primftpd/en-US/phoneScreenshots/1.png",
+            "sha256": "94a5be23d8d5f51d55f77e486034c9a50cfcfdd39677fb08368da272b8afc51c",
+            "size": 397957
+          },
+          {
+            "name": "/org.primftpd/en-US/phoneScreenshots/2.png",
+            "sha256": "d1a594b463457f39f5a54f25985e3a4f296d1aff783a7b7ea7192ba1dae6a2be",
+            "size": 347984
+          }
+        ]
+      },
+      "tv": {
+        "en-US": [
+          {
+            "name": "/org.primftpd/en-US/tvScreenshots/1.png",
+            "sha256": "72bca1895c9780befe44e9d261477e156261d5f5da0d1df3c9a8fdf1572bd8f7",
+            "size": 228738
+          },
+          {
+            "name": "/org.primftpd/en-US/tvScreenshots/2.png",
+            "sha256": "3486aa97d0bedcda459e0344164b2f6027d184521041981254452b11557c9609",
+            "size": 210007
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/wolpi/prim-ftpd",
+    "summary": {
+      "bn": "\u098f\u09ab\u099f\u09bf\u09aa\u09bf \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0",
+      "ca": "Servidor FTP",
+      "cs": "Server FTP",
+      "de": "FTP-Server",
+      "en-US": "FTP server",
+      "es": "Servidor FTP",
+      "fr": "Serveur FTP",
+      "ga": "Freastala\u00ed FTP",
+      "he": "FTP \u05e9\u05e8\u05ea",
+      "hu": "FTP szerver",
+      "id": "Server FTP",
+      "is": "FTP-\u00fej\u00f3nn",
+      "it": "Server FTP",
+      "kab": "Aqeddac",
+      "nb_NO": "FTP-tjener",
+      "nn": "FTP-tenar",
+      "pl": "Serwer FTP",
+      "pt_BR": "Servidor FTP",
+      "pt_PT": "Servidor FTP",
+      "ro": "Serverul FTP",
+      "ru": "FTP-\u0441\u0435\u0440\u0432\u0435\u0440",
+      "sq": "Sh\u00ebrbyes FTP",
+      "sr": "FTP \u0441\u0435\u0440\u0432\u0435\u0440",
+      "sw": "Seva ya FTP",
+      "tr": "FTP sunucusu",
+      "uk": "FTP-\u0441\u0435\u0440\u0432\u0435\u0440",
+      "zh_Hans": "FTP \u670d\u52a1\u5668"
+    }
+  },
+  "version": {
+    "added": 1777931336453,
+    "file": {
+      "ipfsCIDv1": "bafybeidhob3cqn44dsjqv4b3wgys5shjgau6orkxqcbmvr6g5gc5wcnk2u",
+      "name": "/org.primftpd_70.apk",
+      "sha256": "f7dfc07b592b7d41062eaca140b59aabf4edd1cf5fb6a8f2f1333668a01118b8",
+      "size": 11236956
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "1a3a3a5b8bd143021b84e8ce9e6924cb73eb45561211e6b900c4f8b3223cd7a0"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+        },
+        {
+          "name": "android.permission.ACCESS_MEDIA_LOCATION"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "maxSdkVersion": 29,
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.MANAGE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "org.primftpd.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "maxSdkVersion": 29,
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 70,
+      "versionName": "8.1"
+    },
+    "src": {
+      "name": "/org.primftpd_70_src.tar.gz",
+      "sha256": "87af7d3c3a5c6b3c85fd91ca20be37cb18401d1e866d1f1670ff27792002e848",
+      "size": 2266323
+    }
+  }
+}

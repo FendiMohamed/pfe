@@ -171,6 +171,16 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Explain why clean, partial, blocked, and limitation cases are separate.",
         },
         {
+            "table": "Real APK source-validation dashboard seed",
+            "source": "docs/evaluation/REAL_APK_SOURCE_VALIDATION_DASHBOARD_REPORT.md",
+            "use": "Use as the dashboard-ready per-APK classification, wrong-version, missing-package, and DB-growth-candidate source.",
+        },
+        {
+            "table": "Post-100 real APK optimization plan",
+            "source": "docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md",
+            "use": "Use as the research-backed execution roadmap for blocked rows, no-Maven-signal controls, boundary cases, wrong-version rows, missing-source rows, guarded reference DB growth, and dashboard improvement.",
+        },
+        {
             "table": "Dataset coverage matrix",
             "source": "docs/evaluation/DATASET_COVERAGE_MATRIX.md",
             "use": "Justify APK selection by classification instead of convenience.",
@@ -251,6 +261,26 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the opt-in report-surface proof that four target suggestions remain separate from official MVP selected versions and SBOM artifacts.",
         },
         {
+            "table": "R8 optimization-aware diagnostics",
+            "source": "docs/evaluation/R8_OPTIMIZATION_AWARE_DIAGNOSTICS.md",
+            "use": "Use as the decision gate showing why optimization-aware R8/minified logic stays diagnostic/report-only and why confidence/ambiguity policy is the next safe step.",
+        },
+        {
+            "table": "R8 minified confidence policy diagnostics",
+            "source": "docs/evaluation/R8_MINIFIED_CONFIDENCE_POLICY_DIAGNOSTICS.md",
+            "use": "Use as the report-only policy gate classifying minified/R8 ambiguity labels without changing selected versions, SBOM components, vulnerability labels, or source-validation metrics.",
+        },
+        {
+            "table": "R8 minified confidence report evidence",
+            "source": "docs/evaluation/R8_MINIFIED_CONFIDENCE_REPORT_EVIDENCE.md",
+            "use": "Use as the generated-report proof that minified/R8 confidence labels surface only as report-only wording while preserving official selected versions and SBOM artifacts.",
+        },
+        {
+            "table": "Version uncertainty reporting",
+            "source": "docs/evaluation/VERSION_UNCERTAINTY_REPORTING.md",
+            "use": "Use as the report-output proof that near-tie, low-confidence, and single-reference boundary rows are explained without changing selected versions or SBOM components.",
+        },
+        {
             "table": "R8 obfuscation continuation prompt",
             "source": "docs/codex/R8_OBFUSCATION_CON_CONTINUATION_PROMPT.md",
             "use": "Use to resume the con in a later Codex session without losing the paper-backed plan or guardrails.",
@@ -283,7 +313,7 @@ def build_table_sources() -> list[dict[str, str]]:
         {
             "table": "K-9 blocker diagnostics",
             "source": "docs/evaluation/K9_BLOCKER_DIAGNOSTICS.md",
-            "use": "Use as source-linked blocked evidence for K-9 dependency-tree validation.",
+            "use": "Use as K-9 rescue evidence: failed included-build attempts, plugin-lite dependency-tree capture, and source-validated partial admission.",
         },
         {
             "table": "Hidden DEX diagnostics",
@@ -309,6 +339,51 @@ def build_table_sources() -> list[dict[str, str]]:
             "table": "Source-version candidate queue",
             "source": "docs/evaluation/SOURCE_VERSION_CANDIDATE_QUEUE.md",
             "use": "Use before any future reference DB experiment to track target benefit, control regressions, and promotion decisions.",
+        },
+        {
+            "table": "Guarded reference-DB promotion workflow",
+            "source": "docs/evaluation/GUARDED_REFERENCE_DB_PROMOTION_WORKFLOW.md",
+            "use": "Use as the generated policy table for isolated candidate-version comparisons, singleton-safe promotions, bundle-scoped evidence, and app-specific regression guardrails.",
+        },
+        {
+            "table": "Coarse-to-fine candidate-pruning diagnostics",
+            "source": "docs/evaluation/COARSE_TO_FINE_PRUNING_DIAGNOSTICS.md",
+            "use": "Use as diagnostic-only evidence for pre-reportability candidate pressure and the next offline family-identity prefilter simulation.",
+        },
+        {
+            "table": "Family-identity prefilter proxy simulation",
+            "source": "docs/evaluation/FAMILY_IDENTITY_PREFILTER_SIMULATION.md",
+            "use": "Use as rejected-simple-proxy evidence: package/class family pruning loses tracked source families at every reducing margin, so a stronger offline signal is required.",
+        },
+        {
+            "table": "Composite family-shortlist proxy simulation",
+            "source": "docs/evaluation/COMPOSITE_FAMILY_SHORTLIST_SIMULATION.md",
+            "use": "Use as pre-production proxy evidence for the balanced dependency/literal-aware shortlist candidate and its required live offline validation gate.",
+        },
+        {
+            "table": "Composite family-shortlist live validation",
+            "source": "docs/evaluation/COMPOSITE_FAMILY_SHORTLIST_LIVE_VALIDATION.md",
+            "use": "Use as clean live recomputation evidence for the balanced shortlist opt-in candidate; default production matching remains unchanged until a separate opt-in matcher experiment passes fresh controls.",
+        },
+        {
+            "table": "Composite family-shortlist opt-in matcher experiment",
+            "source": "docs/evaluation/COMPOSITE_FAMILY_SHORTLIST_OPT_IN_MATCHER_EXPERIMENT.md",
+            "use": "Use as full all-case opt-in control evidence that the shortlist is default-off, opt-in-only, and reportable-output-clean across controlled and real APK cases.",
+        },
+        {
+            "table": "Composite family-shortlist default-promotion readiness",
+            "source": "docs/evaluation/COMPOSITE_FAMILY_SHORTLIST_DEFAULT_PROMOTION_READINESS.md",
+            "use": "Use as readiness evidence for promoting the shortlist only after full live and opt-in controls pass without reportable selected-version drift.",
+        },
+        {
+            "table": "Composite family-shortlist default-promotion verification",
+            "source": "docs/evaluation/COMPOSITE_FAMILY_SHORTLIST_DEFAULT_PROMOTION_VERIFICATION.md",
+            "use": "Use as the post-promotion proof that the shortlist is now default-on, the disable flag reproduces the baseline, and regression checks passed.",
+        },
+        {
+            "table": "Class-correspondence pruning diagnostics",
+            "source": "docs/evaluation/CLASS_CORRESPONDENCE_PRUNING_DIAGNOSTICS.md",
+            "use": "Use as diagnostic-only evidence that class/package/method correspondence does not add a safer or stronger pruning lane beyond the promoted composite shortlist.",
         },
         {
             "table": "Assembled final report draft",
@@ -466,7 +541,7 @@ def build_final_report_checklist() -> list[dict[str, str]]:
         {
             "section": "Limitations",
             "status": "ready",
-            "next_action": "Use `docs/planning/MVP_CONS_IMPROVEMENT_PLAN.md` and keep K-9, native-heavy, hidden-DEX, and scanner-tool limits visible.",
+            "next_action": "Use `docs/planning/MVP_CONS_IMPROVEMENT_PLAN.md` and keep native-heavy, hidden-DEX, scanner-tool, and K-9 validation-copy caveats visible.",
         },
         {
             "section": "Presentation",

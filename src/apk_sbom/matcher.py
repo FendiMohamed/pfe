@@ -10,6 +10,13 @@ from pathlib import Path
 import networkx as nx
 from packaging.version import InvalidVersion, Version
 
+from apk_sbom.composite_family_shortlist_simulation import (
+    PROFILES,
+    RECOMMENDED_PROFILE_ID,
+    RECOMMENDED_RESCUE_POLICY,
+    composite_score,
+    should_rescue,
+)
 from apk_sbom.dex_analyzer import ApkDexAnalysis, analyze_apk_dex
 from apk_sbom.maven_downloader import MavenPomDependency
 from apk_sbom.models import ComponentEvidence, DetectedLibrary
@@ -31,6 +38,12 @@ VERSION_DISTINCTIVE_SCORE_MARGIN = 0.06
 VERSION_DISTINCTIVE_UNIQUE_ADVANTAGE = 0.04
 VERSION_DISTINCTIVE_MAX_RAW_SCORE = 0.75
 VERSION_DISAMBIGUATION_IDENTITY_TOLERANCE = 0.13
+VERSION_UNIQUE_LITERAL_CONTEXT_SCORE_MARGIN = 0.02
+VERSION_UNIQUE_LITERAL_CONTEXT_MIN_RAW_SCORE = 0.35
+VERSION_UNIQUE_LITERAL_CONTEXT_MIN_SCORE = 0.10
+VERSION_UNIQUE_LITERAL_CONTEXT_MIN_ADVANTAGE = 0.05
+VERSION_UNIQUE_LITERAL_CONTEXT_MIN_MATCHES = 2
+COMPOSITE_FAMILY_SHORTLIST_MARGIN = 0.10
 FEATURE_EQUIVALENT_VERSION_SCORE_MARGIN = 0.001
 FEATURE_EQUIVALENT_VERSION_SIGNAL_TOLERANCE = 0.001
 VERSION_NEAR_TIE_SCORE_MARGIN = 0.006
@@ -325,6 +338,9 @@ class OverlapEvidence:
     reference_unique_literals: int
     unique_literal_score: float
     unique_version_score: float
+    matched_unique_literal_context_features: int = 0
+    reference_unique_literal_context_features: int = 0
+    unique_literal_context_score: float = 0.0
 
 
 @dataclass(frozen=True)
@@ -416,6 +432,9 @@ class MatchSummary:
     candidates: list[MatchCandidate]
     decisions: list[VersionDecision]
     inert_multiscale_features: dict[str, object] = field(default_factory=dict)
+    version_unique_literal_context_reranker_enabled: bool = True
+    composite_family_shortlist_enabled: bool = True
+    composite_family_shortlist_summary: dict[str, object] = field(default_factory=dict)
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -440,6 +459,9 @@ def match_apk_to_reference_db(
     unique_version_weight: float = DEFAULT_UNIQUE_VERSION_WEIGHT,
     api_reference_weight: float = DEFAULT_API_REFERENCE_WEIGHT,
     opcode_ngram_weight: float = DEFAULT_OPCODE_NGRAM_WEIGHT,
+    enable_version_unique_literal_context_reranker: bool = True,
+    enable_composite_family_shortlist: bool = True,
+    composite_family_shortlist_margin: float = COMPOSITE_FAMILY_SHORTLIST_MARGIN,
 ) -> MatchSummary:
     db = Path(db_path)
     if not db.exists():
@@ -450,6 +472,13 @@ def match_apk_to_reference_db(
 
     with sqlite3.connect(db) as connection:
         references = load_reference_components(connection, coordinate=coordinate)
+    shortlist_summary = build_disabled_composite_family_shortlist_summary(references)
+    if enable_composite_family_shortlist:
+        references, shortlist_summary = shortlist_reference_families(
+            apk_features,
+            references,
+            margin=composite_family_shortlist_margin,
+        )
 
     references_by_coordinate: dict[str, list[ReferenceComponentFeatures]] = {}
     for reference in references:
@@ -494,7 +523,12 @@ def match_apk_to_reference_db(
         ),
         reverse=True,
     )
-    decisions = build_version_decisions(candidates)
+    decisions = build_version_decisions(
+        candidates,
+        enable_version_unique_literal_context_reranker=(
+            enable_version_unique_literal_context_reranker
+        ),
+    )
     if top is not None:
         candidates = candidates[:top]
 
@@ -530,6 +564,11 @@ def match_apk_to_reference_db(
             apk_features,
             references,
         ),
+        version_unique_literal_context_reranker_enabled=(
+            enable_version_unique_literal_context_reranker
+        ),
+        composite_family_shortlist_enabled=enable_composite_family_shortlist,
+        composite_family_shortlist_summary=shortlist_summary,
     )
 
 
@@ -627,6 +666,154 @@ def build_inert_multiscale_feature_summary(
         },
         "reference": _reference_multiscale_feature_availability(references),
     }
+
+
+def build_disabled_composite_family_shortlist_summary(
+    references: list[ReferenceComponentFeatures],
+) -> dict[str, object]:
+    coordinate_count = len({reference.coordinate for reference in references})
+    return {
+        "scoring_status": "disabled",
+        "profile_id": RECOMMENDED_PROFILE_ID,
+        "rescue_policy": RECOMMENDED_RESCUE_POLICY,
+        "margin": COMPOSITE_FAMILY_SHORTLIST_MARGIN,
+        "reference_rows_before": len(references),
+        "reference_rows_retained": len(references),
+        "reference_rows_removed": 0,
+        "coordinate_families_before": coordinate_count,
+        "coordinate_families_retained": coordinate_count,
+        "coordinate_families_removed": 0,
+        "coordinate_families_rescued": 0,
+    }
+
+
+def shortlist_reference_families(
+    apk_features: FeatureSet,
+    references: list[ReferenceComponentFeatures],
+    *,
+    margin: float = COMPOSITE_FAMILY_SHORTLIST_MARGIN,
+) -> tuple[list[ReferenceComponentFeatures], dict[str, object]]:
+    if not references:
+        return [], {
+            **build_disabled_composite_family_shortlist_summary([]),
+            "scoring_status": "enabled",
+            "margin": margin,
+        }
+
+    by_coordinate: dict[str, list[ReferenceComponentFeatures]] = {}
+    for reference in references:
+        by_coordinate.setdefault(reference.coordinate, []).append(reference)
+
+    family_rows = []
+    for coordinate, family_references in by_coordinate.items():
+        evidence_rows = [
+            _composite_family_reference_evidence(apk_features, reference)
+            for reference in family_references
+        ]
+        family_rows.append(
+            {
+                "coordinate": coordinate,
+                "reference_versions": len(family_references),
+                "composite_score": max(
+                    (float(row["composite_score"]) for row in evidence_rows),
+                    default=0.0,
+                ),
+                "rescued": any(bool(row["rescued"]) for row in evidence_rows),
+            }
+        )
+
+    best_score = max((float(row["composite_score"]) for row in family_rows), default=0.0)
+    retained_coordinates = {
+        str(row["coordinate"])
+        for row in family_rows
+        if float(row["composite_score"]) + margin >= best_score or bool(row["rescued"])
+    }
+    retained_references = [
+        reference for reference in references if reference.coordinate in retained_coordinates
+    ]
+    removed_family_rows = [
+        row for row in family_rows if row["coordinate"] not in retained_coordinates
+    ]
+    rescued_coordinates = {
+        str(row["coordinate"])
+        for row in family_rows
+        if row["coordinate"] in retained_coordinates and bool(row["rescued"])
+    }
+    return retained_references, {
+        "scoring_status": "enabled",
+        "profile_id": RECOMMENDED_PROFILE_ID,
+        "rescue_policy": RECOMMENDED_RESCUE_POLICY,
+        "margin": margin,
+        "best_composite_score": round(best_score, 6),
+        "reference_rows_before": len(references),
+        "reference_rows_retained": len(retained_references),
+        "reference_rows_removed": len(references) - len(retained_references),
+        "reference_row_reduction_ratio": round(
+            (len(references) - len(retained_references)) / len(references),
+            6,
+        ),
+        "coordinate_families_before": len(by_coordinate),
+        "coordinate_families_retained": len(retained_coordinates),
+        "coordinate_families_removed": len(removed_family_rows),
+        "coordinate_families_rescued": len(rescued_coordinates),
+        "top_removed_coordinates": [
+            {
+                "coordinate": str(row["coordinate"]),
+                "reference_versions": int(row["reference_versions"]),
+                "composite_score": round(float(row["composite_score"]), 6),
+            }
+            for row in sorted(
+                removed_family_rows,
+                key=lambda item: (
+                    int(item["reference_versions"]),
+                    str(item["coordinate"]),
+                ),
+                reverse=True,
+            )[:15]
+        ],
+    }
+
+
+def _composite_family_reference_evidence(
+    apk_features: FeatureSet,
+    reference: ReferenceComponentFeatures,
+) -> dict[str, object]:
+    package_matches = apk_features.packages & reference.features.packages
+    class_matches = apk_features.classes & reference.features.classes
+    method_matches = apk_features.methods & reference.features.methods
+    dependency_matches = apk_features.class_dependencies & reference.features.class_dependencies
+    literal_matches = apk_features.string_literals & reference.features.string_literals
+    dependency_edge_score = _coverage_score(
+        dependency_matches,
+        reference.features.class_dependencies,
+    )
+    row = {
+        "package_score": _coverage_score(package_matches, reference.features.packages),
+        "class_score": _coverage_score(class_matches, reference.features.classes),
+        "method_score": _coverage_score(method_matches, reference.features.methods),
+        "dependency_score": (
+            0.65 * dependency_edge_score
+            + 0.35 * _dependency_shape_similarity(apk_features, reference.features)
+        ),
+        "literal_score": _coverage_score(literal_matches, reference.features.string_literals),
+        "matched_classes": len(class_matches),
+        "matched_methods": len(method_matches),
+        "matched_dependency_edges": len(dependency_matches),
+        "matched_string_literals": len(literal_matches),
+    }
+    return {
+        **row,
+        "composite_score": composite_score(row, _composite_family_profile_weights()),
+        "rescued": should_rescue(row, RECOMMENDED_RESCUE_POLICY),
+    }
+
+
+def _composite_family_profile_weights() -> dict[str, float]:
+    return next(
+        dict(profile["weights"])
+        for profile in PROFILES
+        if profile["profile_id"] == RECOMMENDED_PROFILE_ID
+    )
 
 
 def _reference_multiscale_feature_availability(
@@ -763,9 +950,16 @@ def score_reference_component(
     unique_class_matches = apk_features.classes & unique_features.classes
     unique_method_matches = apk_features.methods & unique_features.methods
     unique_literal_matches = apk_features.string_literals & unique_features.string_literals
+    unique_literal_context_matches = (
+        apk_features.literal_context_features & unique_features.literal_context_features
+    )
     unique_class_score = _coverage_score(unique_class_matches, unique_features.classes)
     unique_method_score = _coverage_score(unique_method_matches, unique_features.methods)
     unique_literal_score = _coverage_score(unique_literal_matches, unique_features.string_literals)
+    unique_literal_context_score = _coverage_score(
+        unique_literal_context_matches,
+        unique_features.literal_context_features,
+    )
     unique_version_score = _weighted_score(
         [
             (unique_class_score, 0.35, bool(unique_features.classes)),
@@ -866,11 +1060,20 @@ def score_reference_component(
             reference_unique_literals=unique_features.string_literals_count,
             unique_literal_score=round(unique_literal_score, 6),
             unique_version_score=round(unique_version_score, 6),
+            matched_unique_literal_context_features=len(unique_literal_context_matches),
+            reference_unique_literal_context_features=(
+                unique_features.literal_context_features_count
+            ),
+            unique_literal_context_score=round(unique_literal_context_score, 6),
         ),
     )
 
 
-def build_version_decisions(candidates: list[MatchCandidate]) -> list[VersionDecision]:
+def build_version_decisions(
+    candidates: list[MatchCandidate],
+    *,
+    enable_version_unique_literal_context_reranker: bool = True,
+) -> list[VersionDecision]:
     by_coordinate: dict[str, list[MatchCandidate]] = {}
     for candidate in candidates:
         by_coordinate.setdefault(candidate.coordinate, []).append(candidate)
@@ -880,7 +1083,12 @@ def build_version_decisions(candidates: list[MatchCandidate]) -> list[VersionDec
         for coordinate, coordinate_candidates in by_coordinate.items()
     }
     preliminary_selections = {
-        coordinate: _choose_version_candidate(ranked)[0]
+        coordinate: _choose_version_candidate(
+            ranked,
+            enable_version_unique_literal_context_reranker=(
+                enable_version_unique_literal_context_reranker
+            ),
+        )[0]
         for coordinate, ranked in ranked_by_coordinate.items()
     }
 
@@ -889,6 +1097,9 @@ def build_version_decisions(candidates: list[MatchCandidate]) -> list[VersionDec
         best, selection_reason = _choose_version_candidate(
             ranked,
             dependency_context=preliminary_selections,
+            enable_version_unique_literal_context_reranker=(
+                enable_version_unique_literal_context_reranker
+            ),
         )
         non_selected = [candidate for candidate in ranked if candidate is not best]
         second = non_selected[0] if non_selected else None
@@ -1166,6 +1377,7 @@ def _choose_version_candidate(
     ranked: list[MatchCandidate],
     *,
     dependency_context: dict[str, MatchCandidate] | None = None,
+    enable_version_unique_literal_context_reranker: bool = True,
 ) -> tuple[MatchCandidate, str | None]:
     raw_best = ranked[0]
     distinctive = _choose_distinctive_version_candidate(ranked)
@@ -1178,6 +1390,26 @@ def _choose_version_candidate(
             f"{VERSION_DISTINCTIVE_SCORE_MARGIN:.3f} score."
         )
         return distinctive, reason
+
+    if enable_version_unique_literal_context_reranker:
+        literal_context = _choose_version_unique_literal_context_candidate(ranked)
+        if literal_context is not None:
+            evidence = literal_context.evidence
+            advantage = _version_unique_literal_context_advantage(
+                literal_context,
+                ranked,
+            )
+            reason = (
+                f"Selected {literal_context.version} over raw-score leader "
+                f"{raw_best.version} because it has stronger version-unique "
+                "literal/context evidence "
+                f"({evidence.matched_unique_literal_context_features}/"
+                f"{evidence.reference_unique_literal_context_features} matches; "
+                f"score={evidence.unique_literal_context_score:.3f}; "
+                f"advantage={advantage:.3f}) while staying within "
+                f"{VERSION_UNIQUE_LITERAL_CONTEXT_SCORE_MARGIN:.3f} raw score."
+            )
+            return literal_context, reason
 
     dependency_coherent = _choose_dependency_coherent_version_candidate(
         ranked,
@@ -1246,6 +1478,61 @@ def _choose_distinctive_version_candidate(
 
 def _has_matched_unique_version_features(candidate: MatchCandidate) -> bool:
     return _matched_unique_feature_count(candidate) > 0
+
+
+def _choose_version_unique_literal_context_candidate(
+    ranked: list[MatchCandidate],
+) -> MatchCandidate | None:
+    raw_best = ranked[0]
+    if raw_best.score < VERSION_UNIQUE_LITERAL_CONTEXT_MIN_RAW_SCORE:
+        return None
+
+    best_identity = identity_confidence_score(raw_best)
+    eligible = [
+        candidate
+        for candidate in ranked[1:]
+        if raw_best.score - candidate.score <= VERSION_UNIQUE_LITERAL_CONTEXT_SCORE_MARGIN
+        and _has_supported_version_unique_literal_context(candidate)
+        and _version_unique_literal_context_advantage(candidate, ranked)
+        >= VERSION_UNIQUE_LITERAL_CONTEXT_MIN_ADVANTAGE
+        and identity_confidence_score(candidate)
+        >= best_identity - VERSION_DISAMBIGUATION_IDENTITY_TOLERANCE
+    ]
+    if not eligible:
+        return None
+
+    return max(
+        eligible,
+        key=lambda candidate: (
+            candidate.evidence.unique_literal_context_score,
+            candidate.evidence.matched_unique_literal_context_features,
+            candidate.score,
+            _version_rank(candidate.version),
+        ),
+    )
+
+
+def _has_supported_version_unique_literal_context(candidate: MatchCandidate) -> bool:
+    evidence = candidate.evidence
+    return (
+        evidence.matched_unique_literal_context_features
+        >= VERSION_UNIQUE_LITERAL_CONTEXT_MIN_MATCHES
+        and evidence.unique_literal_context_score
+        >= VERSION_UNIQUE_LITERAL_CONTEXT_MIN_SCORE
+    )
+
+
+def _version_unique_literal_context_advantage(
+    candidate: MatchCandidate,
+    ranked: list[MatchCandidate],
+) -> float:
+    competing_scores = [
+        item.evidence.unique_literal_context_score
+        for item in ranked
+        if item is not candidate
+    ]
+    next_score = max(competing_scores, default=0.0)
+    return candidate.evidence.unique_literal_context_score - next_score
 
 
 def _version_ambiguity_reason(
@@ -1848,6 +2135,10 @@ def _decision_evidence(decision: VersionDecision) -> list[ComponentEvidence]:
                 f"{evidence.reference_unique_methods}; "
                 f"unique literals {evidence.matched_unique_literals}/"
                 f"{evidence.reference_unique_literals}; "
+                "unique literal/context "
+                f"{evidence.matched_unique_literal_context_features}/"
+                f"{evidence.reference_unique_literal_context_features}; "
+                f"context_score={evidence.unique_literal_context_score:.3f}; "
                 f"score={evidence.unique_version_score:.3f}"
             ),
             weight=evidence.unique_version_score,
@@ -2023,12 +2314,14 @@ def _version_unique_features(reference: FeatureSet, siblings: list[FeatureSet]) 
     sibling_classes = set().union(*(item.classes for item in siblings))
     sibling_methods = set().union(*(item.methods for item in siblings))
     sibling_literals = set().union(*(item.string_literals for item in siblings))
+    sibling_literal_context = set().union(*(item.literal_context_features for item in siblings))
 
     return FeatureSet(
         packages=set(),
         classes=reference.classes - sibling_classes,
         methods=reference.methods - sibling_methods,
         string_literals=reference.string_literals - sibling_literals,
+        literal_context_features=reference.literal_context_features - sibling_literal_context,
     )
 
 

@@ -123,8 +123,8 @@ Evaluation is by APK family, not a single polished score.
 |---|---:|
 | Controlled fixtures | 84/84 confirmed across 72 fixtures |
 | Clean source-validated real APKs | 47/47 confirmed |
-| Partial source-validated real APKs | 355/608 confirmed |
-| All source-validated real APKs | 402/655 confirmed |
+| Partial source-validated real APKs | 864/1755 confirmed |
+| All source-validated real APKs | 911/1802 confirmed |
 
 Use the phrase: emitted Maven version confirmation rate.
 
@@ -148,7 +148,7 @@ Be explicit:
 - reference DB coverage controls exact version recovery;
 - native `.so` versions are not identified, only hashed;
 - hidden DEX/dynamic loading is detected as risk, not fully recovered;
-- K-9 remains source-linked but not source-validated;
+- K-9 is source-validated partial after a validation-only plugin-lite rescue;
 - scanners such as Trivy/Grype are optional and currently blocked by missing tools.
 
 ## Slide 12: Contribution and Next Work

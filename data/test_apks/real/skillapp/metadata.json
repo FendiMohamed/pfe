@@ -1,0 +1,63 @@
+{
+  "apk": {
+    "expected_sha256": "7bfa1d7275b6ae6a2b8e45689ff92527886242915321736f6c7403ebcf1de4db",
+    "index_size": 3687299,
+    "path": "data/test_apks/real/skillapp/skillapp.apk",
+    "sha256": "7bfa1d7275b6ae6a2b8e45689ff92527886242915321736f6c7403ebcf1de4db",
+    "size": 3687299,
+    "url": "https://f-droid.org/repo/com.theskillapp.skillapp_357.apk"
+  },
+  "app": "SkillApp",
+  "categories": [
+    "Time",
+    "Time Tracker"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "time",
+    "time-tracker",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.theskillapp.skillapp/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.theskillapp.skillapp",
+  "proof_status": "report-generated",
+  "reason": "No-native time-tracking app with target SDK 36, moderate APK/source sizes, and a maintained source tarball; selected as a modern Kotlin/AndroidX-style candidate outside the already saturated note/browser families.",
+  "report": {
+    "detected_component_count": 2,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v12/report-real-skillapp",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v12/report-real-skillapp/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v12/report-real-skillapp/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "medium",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates.",
+        "Structural evidence is stronger than package-name evidence."
+      ],
+      "score": 0.4
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v12/report-real-skillapp/sbom.cdx.json",
+    "sbom_component_count": 2,
+    "status": "ok"
+  },
+  "slug": "skillapp",
+  "source_repo": "https://github.com/Jaimies/SkillApp",
+  "source_tarball": {
+    "sha256": "a6001aea57cad8de37f2d3889a26dd9f29c08c002c2c904db9312fe832da7656",
+    "size": 18461474,
+    "url": "https://f-droid.org/repo/com.theskillapp.skillapp_357_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 357,
+  "version_name": "4.1.0"
+}

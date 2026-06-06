@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "added": 1755768380000,
+    "authorName": "Mohsin Shaikh",
+    "categories": [
+      "Internet",
+      "News"
+    ],
+    "changelog": "https://github.com/byter11/rss-widget/releases",
+    "description": {
+      "en-US": "<b>HomeFeed</b> is a customizable RSS feed widget\n\nFeatures:\n\n- Add any RSS feed URL and display articles in a widget\n- Customizable widget header/title\n- Show/hide article descriptions\n- Set maximum number of items to display\n- Material You theme support"
+    },
+    "donate": [
+      "https://patreon.com/byter11"
+    ],
+    "icon": {
+      "en-US": {
+        "name": "/com.byterdevs.rsswidget/en-US/icon_Nzru2991TIQkYn8eIBcNjvSaH1cn19wuO0wR4Lnp7QA=.png",
+        "sha256": "373aeedbdf754c8424627f1e20170d8ef49a1f5727d7dc2e3b4c11e0b9e9ed00",
+        "size": 152674
+      }
+    },
+    "issueTracker": "https://github.com/byter11/rss-widget/issues",
+    "lastUpdated": 1759396013000,
+    "license": "Apache-2.0",
+    "name": {
+      "en-US": "HomeFeed - RSS Widget"
+    },
+    "preferredSigner": "055efe8eaf1773a7ef1480eefb84dc6fe16e62edbed693146848d05e63a5740e",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.byterdevs.rsswidget/en-US/phoneScreenshots/config.png",
+            "sha256": "c2719115cfb9190a317250606edfaf98a69aa86f190c3210d0dadf2430f4f0b1",
+            "size": 178339
+          },
+          {
+            "name": "/com.byterdevs.rsswidget/en-US/phoneScreenshots/dark.png",
+            "sha256": "57856dfebc24bc71f2fbc591f4b52b5e60f09d5c74c8e5c0a69bca786c94e366",
+            "size": 1004997
+          },
+          {
+            "name": "/com.byterdevs.rsswidget/en-US/phoneScreenshots/images.png",
+            "sha256": "c1bffb8d35207909978e42a46da96828a9d58feeaadbc00680e07df39dc1187e",
+            "size": 2386358
+          },
+          {
+            "name": "/com.byterdevs.rsswidget/en-US/phoneScreenshots/light.png",
+            "sha256": "d3bf2de7db196b110645ffc64abaaada8932a46326796742c340103acb1f6955",
+            "size": 799109
+          },
+          {
+            "name": "/com.byterdevs.rsswidget/en-US/phoneScreenshots/reader.png",
+            "sha256": "4521a664212c393f03574d4258c84f342287e85e067a9a2d38df5f33b1f661f4",
+            "size": 511719
+          },
+          {
+            "name": "/com.byterdevs.rsswidget/en-US/phoneScreenshots/webview.png",
+            "sha256": "4f7c540ef64c47f9b4025040c895cbc85f6eef151002d129718ab89fc2f40eeb",
+            "size": 380436
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/byter11/rss-widget",
+    "summary": {
+      "en-US": "HomeFeed is a customizable RSS feed widget"
+    }
+  },
+  "version": {
+    "added": 1759396013000,
+    "file": {
+      "ipfsCIDv1": "bafybeibeuxfxjjlzj2v5y6ip5qt75kgzdqdo3hlqtyda7fcpjro2rv7hw4",
+      "name": "/com.byterdevs.rsswidget_4.apk",
+      "sha256": "95eedc53ecef38e90dba85901b0ee9c278ef2207e6effc8f1aacb09230c4f611",
+      "size": 14230674
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "055efe8eaf1773a7ef1480eefb84dc6fe16e62edbed693146848d05e63a5740e"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "com.byterdevs.rsswidget.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 33,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 4,
+      "versionName": "1.3.0"
+    },
+    "src": {
+      "name": "/com.byterdevs.rsswidget_4_src.tar.gz",
+      "sha256": "3621c2d280aff12964694b3094937eec9f697148e199406bbee1886812f55298",
+      "size": 7039091
+    }
+  }
+}

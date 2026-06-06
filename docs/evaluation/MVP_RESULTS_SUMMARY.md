@@ -12,7 +12,7 @@ The strongest result is not that the tool identifies every dependency. The stron
 
 For the broader evaluation, use `docs/evaluation/APK_TYPE_EVALUATION.md`: it reports results by APK family and validation level, separating clean source-validated cases from partial, blocked, native-heavy, and hidden-code limitation cases.
 
-For thesis-ready result tables, use `docs/evaluation/THESIS_EVALUATION_TABLES.md`: it summarizes 84/84 controlled expected versions across 72 fixtures, 47/47 clean real emitted Maven versions, 376/642 partial real emitted Maven versions, and 423/689 overall source-validated emitted Maven versions. The metric is an emitted-version confirmation rate, not full dependency recall. For prose that can be integrated into the thesis, use `docs/evaluation/THESIS_EVALUATION_CHAPTER_DRAFT.md`.
+For thesis-ready result tables, use `docs/evaluation/THESIS_EVALUATION_TABLES.md`: it summarizes 84/84 controlled expected versions across 72 fixtures, 47/47 clean real emitted Maven versions, 864/1755 partial real emitted Maven versions, and 911/1802 overall source-validated emitted Maven versions. The metric is an emitted-version confirmation rate, not full dependency recall. For prose that can be integrated into the thesis, use `docs/evaluation/THESIS_EVALUATION_CHAPTER_DRAFT.md`.
 
 ## Implemented Pipeline
 
@@ -286,7 +286,8 @@ These fields are warnings and explanations, not hard filters. They improve thesi
 
 | Command | Result |
 |---|---|
-| `docker compose run --rm apk-sbom pytest -q` | `63 passed` |
+| `python -m compileall src scripts tests` | passed |
+| `docker compose run --rm apk-sbom pytest -q` | `212 passed` |
 | `docker compose run --rm apk-sbom python -m compileall src scripts tests` | passed |
 | `git diff --check` | passed with normal Windows LF/CRLF warnings |
 

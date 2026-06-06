@@ -1,0 +1,63 @@
+{
+  "apk": {
+    "expected_sha256": "9166520b10f300e0397dc06ebe85eacd11dadac4cbfad9f07de3081714206551",
+    "index_size": 13107531,
+    "path": "data/test_apks/real/flying-carpet/flying-carpet.apk",
+    "sha256": "9166520b10f300e0397dc06ebe85eacd11dadac4cbfad9f07de3081714206551",
+    "size": 13107531,
+    "url": "https://f-droid.org/repo/dev.spiegl.flyingcarpet_21.apk"
+  },
+  "app": "Flying Carpet",
+  "categories": [
+    "Connectivity",
+    "System"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "connectivity",
+    "file-transfer",
+    "system",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/dev.spiegl.flyingcarpet/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "dev.spiegl.flyingcarpet",
+  "proof_status": "report-generated",
+  "reason": "No-native local file-transfer app with target SDK 35 and a compact Android source tarball; selected to add another connectivity/file-transfer row outside FTPClient.",
+  "report": {
+    "detected_component_count": 17,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-flying-carpet",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-flying-carpet/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-flying-carpet/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-flying-carpet/sbom.cdx.json",
+    "sbom_component_count": 17,
+    "status": "ok"
+  },
+  "slug": "flying-carpet",
+  "source_repo": "https://github.com/spieglt/FlyingCarpet/tree/HEAD/Android/FlyingCarpet",
+  "source_tarball": {
+    "sha256": "14e862cb1373c7bb50b355960e3b78707f957e4b887744fe6e541af7d660768c",
+    "size": 1645669,
+    "url": "https://f-droid.org/repo/dev.spiegl.flyingcarpet_21_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 21,
+  "version_name": "9.0.8"
+}

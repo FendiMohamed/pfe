@@ -9,8 +9,8 @@ This is an offline diagnostic experiment. It ranks controlled R8 cases with the 
 ## Summary
 
 - Controlled cases: `24`
-- Real APK component rows covered by the Phase 4 multi-scale DB: `262`
-- Outcome counts: `aligned-control-clean`=18, `real-aligned-source-clean`=119, `real-conflicting-source-mismatch`=13, `real-layer-covered-unvalidated`=32, `real-potential-target-improvement`=4, `real-regression-risk-do-not-promote`=30, `real-single-reference-not-rankable`=31, `real-unchanged-source-mismatch`=33, `regression-risk-do-not-promote`=6
+- Real APK component rows covered by the Phase 4 multi-scale DB: `1093`
+- Outcome counts: `aligned-control-clean`=18, `real-aligned-source-clean`=400, `real-conflicting-source-mismatch`=90, `real-layer-covered-unvalidated`=85, `real-potential-target-improvement`=10, `real-regression-risk-do-not-promote`=121, `real-single-reference-not-rankable`=176, `real-unchanged-source-mismatch`=211, `regression-risk-do-not-promote`=6
 
 ## Controlled Category Outcomes
 
@@ -54,13 +54,19 @@ This is an offline diagnostic experiment. It ranks controlled R8 cases with the 
 
 ## Phase 5 Candidate Scan
 
-- Potential real source-validated improvements: `4`
+- Potential real source-validated improvements: `10`
 - Controlled regression blockers: `6`
-- Real source-validated regression blockers: `30`
-- Clean real regression blockers: `8`
+- Real source-validated regression blockers: `121`
+- Clean real regression blockers: `10`
 
 | Candidate improvement | Coordinate | Source version(s) | Baseline | Diagnostic |
 |---|---|---|---|---|
+| Cryptomator Lite 1.12.3 | androidx.activity:activity | 1.8.1 | 1.8.0 | 1.8.1 |
+| Easy Xkcd 8.4 | com.squareup.retrofit2:retrofit | 2.9.0 | 2.8.1 | 2.9.0 |
+| Working Time Account 2.11.012 | androidx.lifecycle:lifecycle-runtime-android | 2.9.0 | 2.10.0 | 2.9.0 |
+| Your local weather 6.4.0-FOSS | androidx.swiperefreshlayout:swiperefreshlayout | 1.2.0 | 1.0.0 | 1.2.0 |
+| Primitive FTPd 8.1 | androidx.activity:activity | 1.8.1 | 1.8.0 | 1.8.1 |
+| SambaLite 2.5.1 | androidx.swiperefreshlayout:swiperefreshlayout | 1.2.0 | 1.0.0 | 1.2.0 |
 | AntennaPod 3.11.4 | androidx.core:core | 1.16.0 | 1.15.0 | 1.16.0 |
 | Wikipedia Android r/50586 | androidx.viewpager2:viewpager2 | 1.1.0 | 1.0.0 | 1.1.0 |
 | Aegis Authenticator 3.4.2 | androidx.viewpager2:viewpager2 | 1.1.0 | 1.0.0 | 1.1.0 |
@@ -68,16 +74,16 @@ This is an offline diagnostic experiment. It ranks controlled R8 cases with the 
 
 | Blocking coordinate | Regression rows |
 |---|---:|
+| androidx.appcompat:appcompat | 20 |
+| androidx.swiperefreshlayout:swiperefreshlayout | 19 |
+| androidx.viewpager2:viewpager2 | 18 |
+| androidx.activity:activity | 15 |
+| org.jetbrains.kotlinx:kotlinx-coroutines-android | 11 |
+| androidx.core:core | 9 |
+| androidx.concurrent:concurrent-futures | 6 |
 | commons-codec:commons-codec | 5 |
-| androidx.swiperefreshlayout:swiperefreshlayout | 5 |
-| androidx.core:core | 3 |
-| androidx.appcompat:appcompat | 3 |
-| androidx.viewpager2:viewpager2 | 3 |
-| com.google.code.gson:gson | 2 |
-| androidx.lifecycle:lifecycle-livedata | 2 |
-| com.squareup.okio:okio-jvm | 2 |
-| org.jetbrains.kotlinx:kotlinx-coroutines-android | 2 |
-| androidx.exifinterface:exifinterface | 2 |
+| com.google.code.gson:gson | 4 |
+| com.squareup.okio:okio-jvm | 4 |
 
 ## Real APK Layer Outcomes
 
@@ -85,10 +91,11 @@ These rows use existing real APK reports and source-validation artifacts where a
 
 | Role | Outcomes |
 |---|---|
-| clean-source-validated | `real-aligned-source-clean`=30, `real-regression-risk-do-not-promote`=8, `real-single-reference-not-rankable`=5 |
+| clean-source-validated | `real-aligned-source-clean`=30, `real-regression-risk-do-not-promote`=10, `real-single-reference-not-rankable`=7 |
 | limitation-native-heavy | `real-layer-covered-unvalidated`=15, `real-single-reference-not-rankable`=3 |
-| source-linked-blocked | `real-layer-covered-unvalidated`=16, `real-single-reference-not-rankable`=2 |
-| source-validated-partial | `real-aligned-source-clean`=89, `real-conflicting-source-mismatch`=13, `real-layer-covered-unvalidated`=1, `real-potential-target-improvement`=4, `real-regression-risk-do-not-promote`=22, `real-single-reference-not-rankable`=21, `real-unchanged-source-mismatch`=33 |
+| limitation-obfuscation | `real-layer-covered-unvalidated`=2, `real-single-reference-not-rankable`=1 |
+| source-linked-blocked | `real-layer-covered-unvalidated`=10, `real-single-reference-not-rankable`=1 |
+| source-validated-partial | `real-aligned-source-clean`=370, `real-conflicting-source-mismatch`=90, `real-layer-covered-unvalidated`=58, `real-potential-target-improvement`=10, `real-regression-risk-do-not-promote`=111, `real-single-reference-not-rankable`=164, `real-unchanged-source-mismatch`=211 |
 
 ## Real APK Component Rows
 
@@ -137,6 +144,663 @@ These rows use existing real APK reports and source-validation artifacts where a
 | OpenTracks 4.27.0irreproducible | clean-source-validated | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.9.0 | 1.9.0 | 1.7.3 | `real-regression-risk-do-not-promote` |
 | OpenTracks 4.27.0irreproducible | clean-source-validated | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.9.0 | 1.9.0 | 1.9.0 | `real-aligned-source-clean` |
 | Tusky 32.2 | clean-source-validated | com.squareup.retrofit2:retrofit | 3.0.0 | 3.0.0 | 3.0.0 | `real-aligned-source-clean` |
+| Daily Dozen 28 | clean-source-validated | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Daily Dozen 28 | clean-source-validated | com.google.code.gson:gson | 2.13.2 | 2.13.2 | 2.13.1 | `real-regression-risk-do-not-promote` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | androidx.activity:activity | 1.8.1 | 1.8.0 | 1.8.1 | `real-potential-target-improvement` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.0 | `real-regression-risk-do-not-promote` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | androidx.core:core | 1.16.0 | 1.16.0 | 1.16.0 | `real-aligned-source-clean` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | androidx.core:core-ktx | 1.16.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | androidx.exifinterface:exifinterface | 1.3.3 | 1.3.6 | 1.3.6 | `real-unchanged-source-mismatch` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | androidx.fragment:fragment | 1.8.8 | 1.8.9 | 1.8.9 | `real-unchanged-source-mismatch` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.2 | 2.6.2 | 2.6.2 | `real-aligned-source-clean` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | androidx.recyclerview:recyclerview | 1.2.1 | 1.2.1 | 1.2.1 | `real-aligned-source-clean` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | androidx.startup:startup-runtime | 1.2.0 | 1.2.0 | 1.2.0 | `real-aligned-source-clean` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.1.0 | 1.0.0 | 1.2.0 | `real-conflicting-source-mismatch` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.0.0 | 1.0.0 | 1.1.0 | `real-regression-risk-do-not-promote` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | com.fasterxml.jackson.core:jackson-databind | 2.18.0 | 2.15.2 | 2.15.2 | `real-unchanged-source-mismatch` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | com.google.android.material:material | 1.12.0 | 1.12.0 | 1.12.0 | `real-aligned-source-clean` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | com.google.code.gson:gson | 2.13.1 | 2.13.1 | 2.13.1 | `real-aligned-source-clean` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | com.squareup.okhttp3:okhttp-android | 5.1.0 | 5.3.2 | 5.3.2 | `real-single-reference-not-rankable` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | com.squareup.okio:okio-jvm | 3.15.0 | 3.7.0 | 3.16.4 | `real-conflicting-source-mismatch` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | commons-codec:commons-codec | 1.19.0 | 1.16.1 | 1.16.0 | `real-conflicting-source-mismatch` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.2.10 | 2.2.10 | 2.2.10 | `real-aligned-source-clean` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| Cryptomator Lite 1.12.3 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| Easy Xkcd 8.4 | source-validated-partial | androidx.activity:activity | 1.7.1 | 1.8.1 | 1.8.1 | `real-unchanged-source-mismatch` |
+| Easy Xkcd 8.4 | source-validated-partial | androidx.appcompat:appcompat | 1.2.0 | 1.7.1 | 1.7.0 | `real-conflicting-source-mismatch` |
+| Easy Xkcd 8.4 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Easy Xkcd 8.4 | source-validated-partial | androidx.core:core | 1.10.0 | 1.9.0 | 1.16.0 | `real-conflicting-source-mismatch` |
+| Easy Xkcd 8.4 | source-validated-partial | androidx.core:core-ktx | 1.10.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| Easy Xkcd 8.4 | source-validated-partial | androidx.fragment:fragment | 1.5.7 | 1.5.4 | 1.5.4 | `real-unchanged-source-mismatch` |
+| Easy Xkcd 8.4 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.1 | 2.6.2 | 2.6.2 | `real-unchanged-source-mismatch` |
+| Easy Xkcd 8.4 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.1 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Easy Xkcd 8.4 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.1 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Easy Xkcd 8.4 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| Easy Xkcd 8.4 | source-validated-partial | androidx.recyclerview:recyclerview | 1.1.0 | 1.2.1 | 1.2.1 | `real-unchanged-source-mismatch` |
+| Easy Xkcd 8.4 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Easy Xkcd 8.4 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.1.0 | 1.0.0 | 1.2.0 | `real-conflicting-source-mismatch` |
+| Easy Xkcd 8.4 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.0.0 | 1.0.0 | 1.1.0 | `real-regression-risk-do-not-promote` |
+| Easy Xkcd 8.4 | source-validated-partial | androidx.work:work-runtime | 2.7.1 | 2.11.2 | 2.10.0 | `real-conflicting-source-mismatch` |
+| Easy Xkcd 8.4 | source-validated-partial | com.google.android.material:material | 1.3.0 | 1.12.0 | 1.12.0 | `real-unchanged-source-mismatch` |
+| Easy Xkcd 8.4 | source-validated-partial | com.google.code.gson:gson | 2.8.5 | 2.8.5 | 2.8.5 | `real-aligned-source-clean` |
+| Easy Xkcd 8.4 | source-validated-partial | com.squareup.okhttp3:okhttp | 4.8.0 | 4.8.0 | 4.8.0 | `real-aligned-source-clean` |
+| Easy Xkcd 8.4 | source-validated-partial | com.squareup.okio:okio | 2.7.0 | 2.8.0 | 2.8.0 | `real-unchanged-source-mismatch` |
+| Easy Xkcd 8.4 | source-validated-partial | com.squareup.retrofit2:retrofit | 2.9.0 | 2.8.1 | 2.9.0 | `real-potential-target-improvement` |
+| Easy Xkcd 8.4 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 1.8.20 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| Easy Xkcd 8.4 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| Easy Xkcd 8.4 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| MoneyWallet 4.0.5.10 | source-validated-partial | androidx.activity:activity | 1.2.0-alpha08 | 1.8.1 | 1.8.1 | `real-unchanged-source-mismatch` |
+| MoneyWallet 4.0.5.10 | source-validated-partial | androidx.appcompat:appcompat | 1.0.0 | 1.7.1 | 1.7.1 | `real-unchanged-source-mismatch` |
+| MoneyWallet 4.0.5.10 | source-validated-partial | androidx.core:core | 1.1.0 | 1.9.0 | 1.16.0 | `real-conflicting-source-mismatch` |
+| MoneyWallet 4.0.5.10 | source-validated-partial | androidx.fragment:fragment | 1.3.0-alpha08 | 1.5.4 | 1.5.4 | `real-unchanged-source-mismatch` |
+| MoneyWallet 4.0.5.10 | source-validated-partial | androidx.gridlayout:gridlayout | not validated | 1.0.0 | 1.0.0 | `real-layer-covered-unvalidated` |
+| MoneyWallet 4.0.5.10 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.3.0-alpha07 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| MoneyWallet 4.0.5.10 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| MoneyWallet 4.0.5.10 | source-validated-partial | androidx.recyclerview:recyclerview | 1.0.0 | 1.2.1 | 1.2.1 | `real-unchanged-source-mismatch` |
+| MoneyWallet 4.0.5.10 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.0.0 | 1.0.0 | 1.2.0 | `real-regression-risk-do-not-promote` |
+| QuickDic 5.8.2 | clean-source-validated | androidx.fragment:fragment | 1.5.4 | 1.5.4 | 1.8.9 | `real-regression-risk-do-not-promote` |
+| QuickDic 5.8.2 | clean-source-validated | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Cirrus 4.7 | source-validated-partial | androidx.activity:activity | 1.8.0 | 1.8.0 | 1.8.1 | `real-regression-risk-do-not-promote` |
+| Cirrus 4.7 | source-validated-partial | androidx.appcompat:appcompat | 1.7.0 | 1.7.0 | 1.7.0 | `real-aligned-source-clean` |
+| Cirrus 4.7 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Cirrus 4.7 | source-validated-partial | androidx.core:core | 1.13.0 | 1.15.0 | 1.16.0 | `real-conflicting-source-mismatch` |
+| Cirrus 4.7 | source-validated-partial | androidx.core:core-ktx | 1.13.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| Cirrus 4.7 | source-validated-partial | androidx.fragment:fragment | 1.5.4 | 1.5.4 | 1.5.4 | `real-aligned-source-clean` |
+| Cirrus 4.7 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.2 | 2.6.2 | 2.6.2 | `real-aligned-source-clean` |
+| Cirrus 4.7 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Cirrus 4.7 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Cirrus 4.7 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| Cirrus 4.7 | source-validated-partial | androidx.recyclerview:recyclerview | 1.4.0 | 1.4.0 | 1.4.0 | `real-aligned-source-clean` |
+| Cirrus 4.7 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Cirrus 4.7 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.0.0 | 1.0.0 | 1.2.0 | `real-regression-risk-do-not-promote` |
+| Cirrus 4.7 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0-beta02 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| Cirrus 4.7 | source-validated-partial | androidx.work:work-runtime | 2.10.2 | 2.10.3 | 2.10.0 | `real-conflicting-source-mismatch` |
+| Cirrus 4.7 | source-validated-partial | com.google.android.material:material | 1.12.0 | 1.12.0 | 1.12.0 | `real-aligned-source-clean` |
+| Cirrus 4.7 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 1.8.22 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| Cirrus 4.7 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.7.3 | 1.7.3 | 1.7.3 | `real-aligned-source-clean` |
+| Cirrus 4.7 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.7.3 | 1.7.3 | 1.7.3 | `real-aligned-source-clean` |
+| AFWall+ 4.0.3 | source-validated-partial | androidx.activity:activity | 1.9.3 | 1.10.1 | 1.8.1 | `real-conflicting-source-mismatch` |
+| AFWall+ 4.0.3 | source-validated-partial | androidx.appcompat:appcompat | 1.7.0 | 1.7.0 | 1.7.0 | `real-aligned-source-clean` |
+| AFWall+ 4.0.3 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| AFWall+ 4.0.3 | source-validated-partial | androidx.core:core | 1.15.0 | 1.15.0 | 1.16.0 | `real-regression-risk-do-not-promote` |
+| AFWall+ 4.0.3 | source-validated-partial | androidx.core:core-ktx | 1.15.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| AFWall+ 4.0.3 | source-validated-partial | androidx.fragment:fragment | 1.5.4 | 1.5.4 | 1.5.4 | `real-aligned-source-clean` |
+| AFWall+ 4.0.3 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.2 | 2.6.2 | 2.6.2 | `real-aligned-source-clean` |
+| AFWall+ 4.0.3 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| AFWall+ 4.0.3 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| AFWall+ 4.0.3 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| AFWall+ 4.0.3 | source-validated-partial | androidx.recyclerview:recyclerview | 1.3.2 | 1.3.2 | 1.3.2 | `real-aligned-source-clean` |
+| AFWall+ 4.0.3 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| AFWall+ 4.0.3 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.0.0 | 1.0.0 | 1.2.0 | `real-regression-risk-do-not-promote` |
+| AFWall+ 4.0.3 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0-beta02 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| AFWall+ 4.0.3 | source-validated-partial | com.google.android.material:material | 1.12.0 | 1.12.0 | 1.12.0 | `real-aligned-source-clean` |
+| AFWall+ 4.0.3 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 1.8.22 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| AFWall+ 4.0.3 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| AFWall+ 4.0.3 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| Loop Habit Tracker 2.3.1 | source-validated-partial | androidx.activity:activity | 1.8.0 | 1.8.0 | 1.8.1 | `real-regression-risk-do-not-promote` |
+| Loop Habit Tracker 2.3.1 | source-validated-partial | androidx.appcompat:appcompat | 1.7.0 | 1.7.0 | 1.7.0 | `real-aligned-source-clean` |
+| Loop Habit Tracker 2.3.1 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Loop Habit Tracker 2.3.1 | source-validated-partial | androidx.core:core | 1.13.0 | 1.15.0 | 1.18.0 | `real-conflicting-source-mismatch` |
+| Loop Habit Tracker 2.3.1 | source-validated-partial | androidx.fragment:fragment | 1.5.4 | 1.5.4 | 1.5.4 | `real-aligned-source-clean` |
+| Loop Habit Tracker 2.3.1 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Loop Habit Tracker 2.3.1 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Loop Habit Tracker 2.3.1 | source-validated-partial | androidx.recyclerview:recyclerview | 1.1.0 | 1.2.1 | 1.2.1 | `real-unchanged-source-mismatch` |
+| Loop Habit Tracker 2.3.1 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Loop Habit Tracker 2.3.1 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.1.10 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| Loop Habit Tracker 2.3.1 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.10.1 | 1.9.0 | 1.7.3 | `real-conflicting-source-mismatch` |
+| yetCalc 2.0.8 | source-validated-partial | androidx.activity:activity | 1.11.0 | 1.10.1 | 1.10.1 | `real-unchanged-source-mismatch` |
+| yetCalc 2.0.8 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.0 | `real-regression-risk-do-not-promote` |
+| yetCalc 2.0.8 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| yetCalc 2.0.8 | source-validated-partial | androidx.core:core | 1.17.0 | 1.18.0 | 1.18.0 | `real-unchanged-source-mismatch` |
+| yetCalc 2.0.8 | source-validated-partial | androidx.core:core-ktx | 1.17.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| yetCalc 2.0.8 | source-validated-partial | androidx.fragment:fragment | 1.6.2 | 1.6.1 | 1.6.1 | `real-unchanged-source-mismatch` |
+| yetCalc 2.0.8 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.9.4 | 2.10.0 | 2.10.0 | `real-unchanged-source-mismatch` |
+| yetCalc 2.0.8 | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | 2.9.4 | 2.9.0 | 2.9.0 | `real-unchanged-source-mismatch` |
+| yetCalc 2.0.8 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel-android | 2.9.4 | 2.8.7 | 2.10.0 | `real-conflicting-source-mismatch` |
+| yetCalc 2.0.8 | source-validated-partial | androidx.recyclerview:recyclerview | 1.3.2 | 1.3.2 | 1.3.2 | `real-aligned-source-clean` |
+| yetCalc 2.0.8 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| yetCalc 2.0.8 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0-beta02 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| yetCalc 2.0.8 | source-validated-partial | com.google.android.material:material | 1.13.0 | 1.13.0 | 1.13.0 | `real-aligned-source-clean` |
+| yetCalc 2.0.8 | source-validated-partial | com.google.code.gson:gson | 2.13.2 | 2.13.2 | 2.13.2 | `real-aligned-source-clean` |
+| yetCalc 2.0.8 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.2.21 | 2.3.10 | 2.3.10 | `real-unchanged-source-mismatch` |
+| yetCalc 2.0.8 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.10.2 | 1.9.0 | 1.7.3 | `real-conflicting-source-mismatch` |
+| yetCalc 2.0.8 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.10.2 | 1.9.0 | 1.9.0 | `real-unchanged-source-mismatch` |
+| Broccoli 1.4.4 | source-validated-partial | androidx.activity:activity | 1.8.1 | 1.8.1 | 1.8.1 | `real-aligned-source-clean` |
+| Broccoli 1.4.4 | source-validated-partial | androidx.appcompat:appcompat | 1.7.0 | 1.7.0 | 1.7.0 | `real-aligned-source-clean` |
+| Broccoli 1.4.4 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Broccoli 1.4.4 | source-validated-partial | androidx.core:core | 1.16.0 | 1.16.0 | 1.16.0 | `real-aligned-source-clean` |
+| Broccoli 1.4.4 | source-validated-partial | androidx.core:core-ktx | 1.16.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| Broccoli 1.4.4 | source-validated-partial | androidx.exifinterface:exifinterface | 1.3.3 | 1.3.6 | 1.3.6 | `real-unchanged-source-mismatch` |
+| Broccoli 1.4.4 | source-validated-partial | androidx.fragment:fragment | 1.8.7 | 1.8.9 | 1.8.9 | `real-unchanged-source-mismatch` |
+| Broccoli 1.4.4 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.9.0 | 2.10.0 | 2.10.0 | `real-unchanged-source-mismatch` |
+| Broccoli 1.4.4 | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | 2.9.0 | 2.9.0 | 2.9.0 | `real-aligned-source-clean` |
+| Broccoli 1.4.4 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel-android | 2.9.0 | 2.8.7 | 2.10.0 | `real-conflicting-source-mismatch` |
+| Broccoli 1.4.4 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| Broccoli 1.4.4 | source-validated-partial | androidx.recyclerview:recyclerview | 1.3.2 | 1.3.2 | 1.3.2 | `real-aligned-source-clean` |
+| Broccoli 1.4.4 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Broccoli 1.4.4 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.0.0 | 1.0.0 | 1.2.0 | `real-regression-risk-do-not-promote` |
+| Broccoli 1.4.4 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Broccoli 1.4.4 | source-validated-partial | com.fasterxml.jackson.core:jackson-databind | 2.15.4 | 2.15.2 | 2.15.2 | `real-unchanged-source-mismatch` |
+| Broccoli 1.4.4 | source-validated-partial | com.google.android.material:material | 1.12.0 | 1.12.0 | 1.12.0 | `real-aligned-source-clean` |
+| Broccoli 1.4.4 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.1.10 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| Broccoli 1.4.4 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.8.1 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| Broccoli 1.4.4 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.8.1 | 1.7.3 | 1.9.0 | `real-conflicting-source-mismatch` |
+| LibreTube 31.4 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.1 | `real-aligned-source-clean` |
+| LibreTube 31.4 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| LibreTube 31.4 | source-validated-partial | androidx.exifinterface:exifinterface | 1.4.2 | 1.4.2 | 1.4.2 | `real-aligned-source-clean` |
+| LibreTube 31.4 | source-validated-partial | androidx.fragment:fragment | 1.8.9 | 1.8.9 | 1.8.9 | `real-aligned-source-clean` |
+| LibreTube 31.4 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.10.0 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| LibreTube 31.4 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.10.0 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| LibreTube 31.4 | source-validated-partial | androidx.recyclerview:recyclerview | 1.3.0 | 1.2.1 | 1.2.1 | `real-unchanged-source-mismatch` |
+| LibreTube 31.4 | source-validated-partial | androidx.startup:startup-runtime | 1.2.0 | 1.1.1 | 1.1.1 | `real-unchanged-source-mismatch` |
+| LibreTube 31.4 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.2.0 | 1.2.0 | 1.2.0 | `real-aligned-source-clean` |
+| LibreTube 31.4 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.0.0 | 1.0.0 | 1.1.0 | `real-regression-risk-do-not-promote` |
+| LibreTube 31.4 | source-validated-partial | com.squareup.okhttp3:okhttp-android | 5.3.2 | 5.3.2 | 5.3.2 | `real-single-reference-not-rankable` |
+| LibreTube 31.4 | source-validated-partial | com.squareup.okio:okio-jvm | 3.16.4 | 3.16.4 | 3.16.4 | `real-aligned-source-clean` |
+| LibreTube 31.4 | source-validated-partial | com.squareup.retrofit2:retrofit | 3.0.0 | 3.0.0 | 3.0.0 | `real-aligned-source-clean` |
+| Retro Music 6.6.0 | source-validated-partial | androidx.gridlayout:gridlayout | 1.1.0 | 1.1.0 | 1.0.0 | `real-regression-risk-do-not-promote` |
+| Retro Music 6.6.0 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.9.1 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Retro Music 6.6.0 | source-validated-partial | androidx.recyclerview:recyclerview | 1.4.0 | 1.4.0 | 1.4.0 | `real-aligned-source-clean` |
+| Retro Music 6.6.0 | source-validated-partial | com.google.code.gson:gson | 2.13.1 | 2.13.1 | 2.13.1 | `real-aligned-source-clean` |
+| Retro Music 6.6.0 | source-validated-partial | com.squareup.okio:okio-jvm | 3.12.0 | 3.7.0 | 3.16.4 | `real-conflicting-source-mismatch` |
+| Retro Music 6.6.0 | source-validated-partial | com.squareup.retrofit2:retrofit | 3.0.0 | 3.0.0 | 3.0.0 | `real-aligned-source-clean` |
+| microMathematics Plus 2.23.3 | source-validated-partial | androidx.activity:activity | 1.6.0 | 1.10.1 | 1.8.1 | `real-conflicting-source-mismatch` |
+| microMathematics Plus 2.23.3 | source-validated-partial | androidx.appcompat:appcompat | 1.6.0 | 1.7.0 | 1.7.0 | `real-unchanged-source-mismatch` |
+| microMathematics Plus 2.23.3 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.0.0 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| microMathematics Plus 2.23.3 | source-validated-partial | androidx.core:core | 1.9.0 | 1.9.0 | 1.16.0 | `real-regression-risk-do-not-promote` |
+| microMathematics Plus 2.23.3 | source-validated-partial | androidx.core:core-ktx | 1.9.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| microMathematics Plus 2.23.3 | source-validated-partial | androidx.fragment:fragment | 1.3.6 | 1.5.4 | 1.5.4 | `real-unchanged-source-mismatch` |
+| microMathematics Plus 2.23.3 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.5.1 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| microMathematics Plus 2.23.3 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.5.1 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| microMathematics Plus 2.23.3 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| microMathematics Plus 2.23.3 | source-validated-partial | androidx.recyclerview:recyclerview | 1.1.0 | 1.2.1 | 1.2.1 | `real-unchanged-source-mismatch` |
+| microMathematics Plus 2.23.3 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| microMathematics Plus 2.23.3 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.0.0 | 1.0.0 | 1.1.0 | `real-regression-risk-do-not-promote` |
+| microMathematics Plus 2.23.3 | source-validated-partial | com.google.android.material:material | 1.9.0 | 1.12.0 | 1.12.0 | `real-unchanged-source-mismatch` |
+| microMathematics Plus 2.23.3 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 1.7.10 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| microMathematics Plus 2.23.3 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.6.1 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| microMathematics Plus 2.23.3 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.6.1 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| Diaguard 3.15.1 | source-validated-partial | androidx.fragment:fragment | 1.3.6 | 1.5.4 | 1.8.9 | `real-conflicting-source-mismatch` |
+| Diaguard 3.15.1 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Diaguard 3.15.1 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.1.0 | 1.0.0 | 1.2.0 | `real-conflicting-source-mismatch` |
+| Diaguard 3.15.1 | source-validated-partial | com.squareup.okhttp3:okhttp | 3.14.9 | 4.10.0 | 4.10.0 | `real-unchanged-source-mismatch` |
+| Diaguard 3.15.1 | source-validated-partial | com.squareup.retrofit2:retrofit | 2.9.0 | 2.9.0 | 2.9.0 | `real-aligned-source-clean` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | androidx.activity:activity | 1.8.1 | 1.8.1 | 1.8.1 | `real-aligned-source-clean` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.1 | `real-aligned-source-clean` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | androidx.core:core | 1.16.0 | 1.16.0 | 1.18.0 | `real-regression-risk-do-not-promote` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | androidx.core:core-ktx | 1.16.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | androidx.fragment:fragment | 1.8.9 | 1.8.9 | 1.8.9 | `real-aligned-source-clean` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.2 | 2.6.2 | 2.6.2 | `real-aligned-source-clean` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | androidx.recyclerview:recyclerview | 1.4.0 | 1.4.0 | 1.4.0 | `real-aligned-source-clean` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.1.0 | 1.0.0 | 1.2.0 | `real-conflicting-source-mismatch` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | com.google.android.material:material | 1.13.0 | 1.13.0 | 1.13.0 | `real-aligned-source-clean` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | com.google.code.gson:gson | 2.10.1 | 2.10.1 | 2.10.1 | `real-aligned-source-clean` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | com.squareup.okhttp3:okhttp | 4.12.0 | 4.12.0 | 4.10.0 | `real-regression-risk-do-not-promote` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | com.squareup.okio:okio-jvm | 3.6.0 | 3.6.0 | 3.16.4 | `real-regression-risk-do-not-promote` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.2.10 | 2.2.10 | 2.2.10 | `real-aligned-source-clean` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| Fulguris Web Browser 2.0.10 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| Working Time Account 2.11.012 | source-validated-partial | androidx.activity:activity | 1.13.0 | 1.13.0 | 1.8.1 | `real-regression-risk-do-not-promote` |
+| Working Time Account 2.11.012 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.1 | `real-aligned-source-clean` |
+| Working Time Account 2.11.012 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.3.0 | `real-regression-risk-do-not-promote` |
+| Working Time Account 2.11.012 | source-validated-partial | androidx.core:core | 1.18.0 | 1.18.0 | 1.18.0 | `real-aligned-source-clean` |
+| Working Time Account 2.11.012 | source-validated-partial | androidx.core:core-ktx | 1.18.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| Working Time Account 2.11.012 | source-validated-partial | androidx.fragment:fragment | 1.6.2 | 1.6.1 | 1.6.1 | `real-unchanged-source-mismatch` |
+| Working Time Account 2.11.012 | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | 2.9.0 | 2.10.0 | 2.9.0 | `real-potential-target-improvement` |
+| Working Time Account 2.11.012 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.9.0 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Working Time Account 2.11.012 | source-validated-partial | androidx.recyclerview:recyclerview | 1.2.1 | 1.2.1 | 1.2.1 | `real-aligned-source-clean` |
+| Working Time Account 2.11.012 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Working Time Account 2.11.012 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.0.0 | 1.0.0 | 1.1.0 | `real-regression-risk-do-not-promote` |
+| Working Time Account 2.11.012 | source-validated-partial | com.google.android.material:material | 1.13.0 | 1.13.0 | 1.13.0 | `real-aligned-source-clean` |
+| Working Time Account 2.11.012 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.2.10 | 2.2.10 | 2.2.10 | `real-aligned-source-clean` |
+| Working Time Account 2.11.012 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.9.0 | 1.9.0 | 1.7.3 | `real-regression-risk-do-not-promote` |
+| Working Time Account 2.11.012 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.9.0 | 1.9.0 | 1.9.0 | `real-aligned-source-clean` |
+| AndStatus 62.03 | source-validated-partial | androidx.activity:activity | 1.8.0 | 1.8.0 | 1.8.1 | `real-regression-risk-do-not-promote` |
+| AndStatus 62.03 | source-validated-partial | androidx.appcompat:appcompat | 1.7.0 | 1.7.0 | 1.7.0 | `real-aligned-source-clean` |
+| AndStatus 62.03 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| AndStatus 62.03 | source-validated-partial | androidx.core:core | 1.15.0 | 1.15.0 | 1.16.0 | `real-regression-risk-do-not-promote` |
+| AndStatus 62.03 | source-validated-partial | androidx.core:core-ktx | 1.15.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| AndStatus 62.03 | source-validated-partial | androidx.fragment:fragment | 1.5.4 | 1.5.4 | 1.5.4 | `real-aligned-source-clean` |
+| AndStatus 62.03 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.2 | 2.6.2 | 2.6.2 | `real-aligned-source-clean` |
+| AndStatus 62.03 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| AndStatus 62.03 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| AndStatus 62.03 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| AndStatus 62.03 | source-validated-partial | androidx.recyclerview:recyclerview | 1.3.2 | 1.3.2 | 1.3.2 | `real-aligned-source-clean` |
+| AndStatus 62.03 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| AndStatus 62.03 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.1.0 | 1.0.0 | 1.2.0 | `real-conflicting-source-mismatch` |
+| AndStatus 62.03 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0-beta02 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| AndStatus 62.03 | source-validated-partial | com.fasterxml.jackson.core:jackson-databind | 2.12.0 | 2.12.7.1 | 2.15.2 | `real-conflicting-source-mismatch` |
+| AndStatus 62.03 | source-validated-partial | com.google.android.material:material | 1.12.0 | 1.12.0 | 1.12.0 | `real-aligned-source-clean` |
+| AndStatus 62.03 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.0.21 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| AndStatus 62.03 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| AndStatus 62.03 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| I2P 2.11.0 | source-validated-partial | androidx.activity:activity | 1.8.0 | 1.8.0 | 1.8.1 | `real-regression-risk-do-not-promote` |
+| I2P 2.11.0 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.0 | `real-regression-risk-do-not-promote` |
+| I2P 2.11.0 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| I2P 2.11.0 | source-validated-partial | androidx.core:core | 1.13.0 | 1.15.0 | 1.16.0 | `real-conflicting-source-mismatch` |
+| I2P 2.11.0 | source-validated-partial | androidx.core:core-ktx | 1.13.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| I2P 2.11.0 | source-validated-partial | androidx.fragment:fragment | 1.5.4 | 1.5.4 | 1.5.4 | `real-aligned-source-clean` |
+| I2P 2.11.0 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.2 | 2.6.2 | 2.6.2 | `real-aligned-source-clean` |
+| I2P 2.11.0 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| I2P 2.11.0 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.5.1 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| I2P 2.11.0 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| I2P 2.11.0 | source-validated-partial | androidx.recyclerview:recyclerview | 1.4.0 | 1.4.0 | 1.4.0 | `real-aligned-source-clean` |
+| I2P 2.11.0 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| I2P 2.11.0 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.0.0 | 1.0.0 | 1.2.0 | `real-regression-risk-do-not-promote` |
+| I2P 2.11.0 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0-beta02 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| I2P 2.11.0 | source-validated-partial | com.google.android.material:material | 1.9.0 | 1.12.0 | 1.12.0 | `real-unchanged-source-mismatch` |
+| I2P 2.11.0 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 1.9.24 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| I2P 2.11.0 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.7.1 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| I2P 2.11.0 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.7.1 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| Drift // Audio 0.1.0 | source-validated-partial | androidx.activity:activity | 1.11.0 | 1.10.1 | 1.10.1 | `real-unchanged-source-mismatch` |
+| Drift // Audio 0.1.0 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.0 | `real-regression-risk-do-not-promote` |
+| Drift // Audio 0.1.0 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Drift // Audio 0.1.0 | source-validated-partial | androidx.core:core | 1.17.0 | 1.18.0 | 1.18.0 | `real-unchanged-source-mismatch` |
+| Drift // Audio 0.1.0 | source-validated-partial | androidx.core:core-ktx | 1.17.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| Drift // Audio 0.1.0 | source-validated-partial | androidx.fragment:fragment | 1.8.9 | 1.8.9 | 1.8.9 | `real-aligned-source-clean` |
+| Drift // Audio 0.1.0 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.2 | 2.6.2 | 2.6.2 | `real-aligned-source-clean` |
+| Drift // Audio 0.1.0 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Drift // Audio 0.1.0 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Drift // Audio 0.1.0 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Drift // Audio 0.1.0 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.0.21 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| Drift // Audio 0.1.0 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.8.1 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| Drift // Audio 0.1.0 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.8.1 | 1.7.3 | 1.9.0 | `real-conflicting-source-mismatch` |
+| JaMuz 0.6.14 | source-validated-partial | androidx.activity:activity | 1.8.0 | 1.8.0 | 1.8.1 | `real-regression-risk-do-not-promote` |
+| JaMuz 0.6.14 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.0 | `real-regression-risk-do-not-promote` |
+| JaMuz 0.6.14 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| JaMuz 0.6.14 | source-validated-partial | androidx.core:core | 1.13.0 | 1.15.0 | 1.16.0 | `real-conflicting-source-mismatch` |
+| JaMuz 0.6.14 | source-validated-partial | androidx.core:core-ktx | 1.13.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| JaMuz 0.6.14 | source-validated-partial | androidx.fragment:fragment | 1.5.4 | 1.5.4 | 1.5.4 | `real-aligned-source-clean` |
+| JaMuz 0.6.14 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.2 | 2.6.2 | 2.6.2 | `real-aligned-source-clean` |
+| JaMuz 0.6.14 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| JaMuz 0.6.14 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| JaMuz 0.6.14 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| JaMuz 0.6.14 | source-validated-partial | androidx.recyclerview:recyclerview | 1.4.0 | 1.4.0 | 1.4.0 | `real-aligned-source-clean` |
+| JaMuz 0.6.14 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| JaMuz 0.6.14 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.0.0 | 1.0.0 | 1.2.0 | `real-regression-risk-do-not-promote` |
+| JaMuz 0.6.14 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0-beta02 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| JaMuz 0.6.14 | source-validated-partial | com.google.android.material:material | 1.13.0 | 1.13.0 | 1.13.0 | `real-aligned-source-clean` |
+| JaMuz 0.6.14 | source-validated-partial | com.google.code.gson:gson | 2.13.2 | 2.13.2 | 2.13.2 | `real-aligned-source-clean` |
+| JaMuz 0.6.14 | source-validated-partial | com.squareup.okhttp3:okhttp | 4.9.3 | 4.9.1 | 4.9.1 | `real-unchanged-source-mismatch` |
+| JaMuz 0.6.14 | source-validated-partial | com.squareup.okio:okio | 2.8.0 | 2.8.0 | 2.8.0 | `real-aligned-source-clean` |
+| JaMuz 0.6.14 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 1.8.22 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| JaMuz 0.6.14 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| JaMuz 0.6.14 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | androidx.activity:activity | 1.8.0 | 1.8.0 | 1.8.1 | `real-regression-risk-do-not-promote` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.0 | `real-regression-risk-do-not-promote` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | androidx.core:core | 1.18.0 | 1.18.0 | 1.18.0 | `real-aligned-source-clean` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | androidx.core:core-ktx | 1.18.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | androidx.fragment:fragment | 1.5.4 | 1.5.4 | 1.5.4 | `real-aligned-source-clean` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.2 | 2.6.2 | 2.6.2 | `real-aligned-source-clean` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | androidx.recyclerview:recyclerview | 1.2.1 | 1.2.1 | 1.2.1 | `real-aligned-source-clean` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.2.0 | 1.0.0 | 1.2.0 | `real-potential-target-improvement` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | androidx.viewpager2:viewpager2 | 1.0.0 | 1.0.0 | 1.1.0 | `real-regression-risk-do-not-promote` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | com.google.android.material:material | 1.13.0 | 1.13.0 | 1.13.0 | `real-aligned-source-clean` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.3.0 | 2.3.10 | 2.3.10 | `real-unchanged-source-mismatch` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.9.0 | 1.9.0 | 1.7.3 | `real-regression-risk-do-not-promote` |
+| Your local weather 6.4.0-FOSS | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.9.0 | 1.9.0 | 1.9.0 | `real-aligned-source-clean` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | androidx.activity:activity | 1.8.0 | 1.8.0 | 1.8.1 | `real-regression-risk-do-not-promote` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.0 | `real-regression-risk-do-not-promote` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | androidx.core:core | 1.17.0 | 1.18.0 | 1.18.0 | `real-unchanged-source-mismatch` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | androidx.core:core-ktx | 1.17.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | androidx.fragment:fragment | 1.5.4 | 1.5.4 | 1.5.4 | `real-aligned-source-clean` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.2 | 2.6.2 | 2.6.2 | `real-aligned-source-clean` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | androidx.recyclerview:recyclerview | 1.2.1 | 1.2.1 | 1.2.1 | `real-aligned-source-clean` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.0.0 | 1.0.0 | 1.1.0 | `real-regression-risk-do-not-promote` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | androidx.work:work-runtime | 2.10.4 | 2.10.3 | 2.10.3 | `real-unchanged-source-mismatch` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | com.google.android.material:material | 1.13.0 | 1.13.0 | 1.13.0 | `real-aligned-source-clean` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.2.20 | 2.3.10 | 2.3.10 | `real-unchanged-source-mismatch` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.8.1 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| HomeFeed - RSS Widget 1.3.0 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.8.1 | 1.7.3 | 1.9.0 | `real-conflicting-source-mismatch` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.activity:activity | 1.8.0 | 1.8.0 | 1.8.1 | `real-regression-risk-do-not-promote` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.0 | `real-regression-risk-do-not-promote` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.compose.foundation:foundation-android | not validated | 1.7.8 | 1.11.2 | `real-layer-covered-unvalidated` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.compose.material3:material3-android | not validated | 1.4.0 | 1.4.0 | `real-single-reference-not-rankable` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.compose.material:material-android | not validated | 1.11.2 | 1.11.2 | `real-single-reference-not-rankable` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.compose.runtime:runtime-android | not validated | 1.10.6 | 1.10.6 | `real-layer-covered-unvalidated` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.compose.ui:ui-android | not validated | 1.7.8 | 1.7.8 | `real-layer-covered-unvalidated` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.3.0 | 1.3.0 | 1.1.0 | `real-regression-risk-do-not-promote` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.core:core | 1.18.0 | 1.18.0 | 1.18.0 | `real-aligned-source-clean` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.core:core-ktx | 1.18.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.datastore:datastore-core-android | not validated | 1.2.1 | 1.2.1 | `real-single-reference-not-rankable` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.datastore:datastore-preferences-android | not validated | 1.2.1 | 1.2.1 | `real-single-reference-not-rankable` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.exifinterface:exifinterface | not validated | 1.4.2 | 1.3.6 | `real-layer-covered-unvalidated` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.fragment:fragment | 1.5.4 | 1.5.4 | 1.5.4 | `real-aligned-source-clean` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.gridlayout:gridlayout | not validated | 1.1.0 | 1.0.0 | `real-layer-covered-unvalidated` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.10.0 | 2.10.0 | 2.10.0 | `real-aligned-source-clean` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | 2.10.0 | 2.10.0 | 2.10.0 | `real-aligned-source-clean` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel-android | 2.10.0 | 2.10.0 | 2.10.0 | `real-aligned-source-clean` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | not validated | 1.0.0 | 1.0.0 | `real-layer-covered-unvalidated` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.recyclerview:recyclerview | 1.2.1 | 1.2.1 | 1.2.1 | `real-aligned-source-clean` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.0.0 | 1.0.0 | 1.1.0 | `real-regression-risk-do-not-promote` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | androidx.work:work-runtime | 2.11.2 | 2.11.2 | 2.11.2 | `real-aligned-source-clean` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | com.fasterxml.jackson.core:jackson-databind | not validated | 2.15.2 | 2.15.2 | `real-layer-covered-unvalidated` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | com.google.android.material:material | 1.13.0 | 1.13.0 | 1.13.0 | `real-aligned-source-clean` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | com.google.code.gson:gson | not validated | 2.8.5 | 2.13.1 | `real-layer-covered-unvalidated` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | com.squareup.okhttp3:okhttp-android | not validated | 5.3.2 | 5.3.2 | `real-single-reference-not-rankable` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | com.squareup.okio:okio-jvm | not validated | 3.6.0 | 3.16.4 | `real-layer-covered-unvalidated` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | com.squareup.retrofit2:retrofit | not validated | 2.8.1 | 3.0.0 | `real-layer-covered-unvalidated` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | commons-codec:commons-codec | not validated | 1.15 | 1.16.0 | `real-layer-covered-unvalidated` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | io.ktor:ktor-client-core-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | io.ktor:ktor-client-okhttp-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | io.ktor:ktor-http-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | io.ktor:ktor-io-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | io.ktor:ktor-utils-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.2.10 | 2.2.10 | 2.2.10 | `real-aligned-source-clean` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.10.2 | 1.9.0 | 1.7.3 | `real-conflicting-source-mismatch` |
+| Etar - OpenSource Calendar 1.0.55 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.10.2 | 1.9.0 | 1.9.0 | `real-unchanged-source-mismatch` |
+| DoliDroid 3.0.69 | source-validated-partial | androidx.activity:activity | 1.8.2 | 1.8.0 | 1.8.1 | `real-conflicting-source-mismatch` |
+| DoliDroid 3.0.69 | source-validated-partial | androidx.appcompat:appcompat | 1.7.0 | 1.7.0 | 1.7.0 | `real-aligned-source-clean` |
+| DoliDroid 3.0.69 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| DoliDroid 3.0.69 | source-validated-partial | androidx.core:core | 1.13.0 | 1.15.0 | 1.16.0 | `real-conflicting-source-mismatch` |
+| DoliDroid 3.0.69 | source-validated-partial | androidx.core:core-ktx | 1.13.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| DoliDroid 3.0.69 | source-validated-partial | androidx.fragment:fragment | 1.5.4 | 1.5.4 | 1.5.4 | `real-aligned-source-clean` |
+| DoliDroid 3.0.69 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.2 | 2.6.2 | 2.6.2 | `real-aligned-source-clean` |
+| DoliDroid 3.0.69 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| DoliDroid 3.0.69 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| DoliDroid 3.0.69 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| DoliDroid 3.0.69 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.1.0 | 1.0.0 | 1.2.0 | `real-conflicting-source-mismatch` |
+| DoliDroid 3.0.69 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 1.8.22 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| DoliDroid 3.0.69 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| DoliDroid 3.0.69 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| ownCloud 4.8.0 | source-validated-partial | androidx.activity:activity | 1.6.0 | 1.10.1 | 1.8.1 | `real-conflicting-source-mismatch` |
+| ownCloud 4.8.0 | source-validated-partial | androidx.appcompat:appcompat | 1.6.1 | 1.7.0 | 1.7.0 | `real-unchanged-source-mismatch` |
+| ownCloud 4.8.0 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.0.0 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| ownCloud 4.8.0 | source-validated-partial | androidx.core:core | 1.10.1 | 1.9.0 | 1.16.0 | `real-conflicting-source-mismatch` |
+| ownCloud 4.8.0 | source-validated-partial | androidx.core:core-ktx | 1.10.1 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| ownCloud 4.8.0 | source-validated-partial | androidx.exifinterface:exifinterface | 1.3.3 | 1.3.6 | 1.3.6 | `real-unchanged-source-mismatch` |
+| ownCloud 4.8.0 | source-validated-partial | androidx.fragment:fragment | 1.5.7 | 1.5.4 | 1.5.4 | `real-unchanged-source-mismatch` |
+| ownCloud 4.8.0 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.5.1 | 2.8.7 | 2.10.0 | `real-conflicting-source-mismatch` |
+| ownCloud 4.8.0 | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | not validated | 2.10.0 | 2.9.0 | `real-layer-covered-unvalidated` |
+| ownCloud 4.8.0 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.5.1 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| ownCloud 4.8.0 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| ownCloud 4.8.0 | source-validated-partial | androidx.recyclerview:recyclerview | 1.3.0 | 1.2.1 | 1.2.1 | `real-unchanged-source-mismatch` |
+| ownCloud 4.8.0 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| ownCloud 4.8.0 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.0.0 | 1.0.0 | 1.2.0 | `real-regression-risk-do-not-promote` |
+| ownCloud 4.8.0 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.0.0 | 1.0.0 | 1.1.0 | `real-regression-risk-do-not-promote` |
+| ownCloud 4.8.0 | source-validated-partial | androidx.work:work-runtime | 2.8.1 | 2.11.2 | 2.10.0 | `real-conflicting-source-mismatch` |
+| ownCloud 4.8.0 | source-validated-partial | com.google.android.material:material | 1.8.0 | 1.12.0 | 1.12.0 | `real-unchanged-source-mismatch` |
+| ownCloud 4.8.0 | source-validated-partial | com.squareup.okhttp3:okhttp | 4.10.0 | 4.10.0 | 4.10.0 | `real-aligned-source-clean` |
+| ownCloud 4.8.0 | source-validated-partial | com.squareup.okio:okio-jvm | 3.2.0 | 3.0.0 | 3.0.0 | `real-unchanged-source-mismatch` |
+| ownCloud 4.8.0 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.0.21 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| ownCloud 4.8.0 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.9.0 | 1.9.0 | 1.7.3 | `real-regression-risk-do-not-promote` |
+| ownCloud 4.8.0 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.9.0 | 1.9.0 | 1.9.0 | `real-aligned-source-clean` |
+| OpenKeychain: Easy PGP 6.0.4 | source-validated-partial | androidx.activity:activity | 1.8.0 | 1.8.0 | 1.8.1 | `real-regression-risk-do-not-promote` |
+| OpenKeychain: Easy PGP 6.0.4 | source-validated-partial | androidx.appcompat:appcompat | 1.6.1 | 1.7.0 | 1.7.1 | `real-conflicting-source-mismatch` |
+| OpenKeychain: Easy PGP 6.0.4 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| OpenKeychain: Easy PGP 6.0.4 | source-validated-partial | androidx.core:core | 1.9.0 | 1.9.0 | 1.18.0 | `real-regression-risk-do-not-promote` |
+| OpenKeychain: Easy PGP 6.0.4 | source-validated-partial | androidx.fragment:fragment | 1.3.6 | 1.5.4 | 1.5.4 | `real-unchanged-source-mismatch` |
+| OpenKeychain: Easy PGP 6.0.4 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.1 | 2.6.2 | 2.6.2 | `real-unchanged-source-mismatch` |
+| OpenKeychain: Easy PGP 6.0.4 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.1 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| OpenKeychain: Easy PGP 6.0.4 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.1 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| OpenKeychain: Easy PGP 6.0.4 | source-validated-partial | androidx.recyclerview:recyclerview | 1.3.2 | 1.3.2 | 1.3.2 | `real-aligned-source-clean` |
+| OpenKeychain: Easy PGP 6.0.4 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| OpenKeychain: Easy PGP 6.0.4 | source-validated-partial | androidx.work:work-runtime | 2.9.0 | 2.10.0 | 2.10.0 | `real-unchanged-source-mismatch` |
+| OpenKeychain: Easy PGP 6.0.4 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.7.1 | 1.9.0 | 1.7.3 | `real-conflicting-source-mismatch` |
+| RadioDroid 0.86 | source-validated-partial | androidx.activity:activity | 1.5.1 | 1.10.1 | 1.8.1 | `real-conflicting-source-mismatch` |
+| RadioDroid 0.86 | source-validated-partial | androidx.appcompat:appcompat | 1.5.1 | 1.7.0 | 1.7.0 | `real-unchanged-source-mismatch` |
+| RadioDroid 0.86 | source-validated-partial | androidx.compose.foundation:foundation-android | not validated | 1.7.8 | 1.11.2 | `real-layer-covered-unvalidated` |
+| RadioDroid 0.86 | source-validated-partial | androidx.compose.material3:material3-android | not validated | 1.4.0 | 1.4.0 | `real-single-reference-not-rankable` |
+| RadioDroid 0.86 | source-validated-partial | androidx.compose.material:material-android | not validated | 1.11.2 | 1.11.2 | `real-single-reference-not-rankable` |
+| RadioDroid 0.86 | source-validated-partial | androidx.compose.runtime:runtime-android | not validated | 1.10.6 | 1.10.6 | `real-layer-covered-unvalidated` |
+| RadioDroid 0.86 | source-validated-partial | androidx.compose.ui:ui-android | not validated | 1.7.8 | 1.7.8 | `real-layer-covered-unvalidated` |
+| RadioDroid 0.86 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.0.0 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| RadioDroid 0.86 | source-validated-partial | androidx.core:core | 1.8.0 | 1.9.0 | 1.16.0 | `real-conflicting-source-mismatch` |
+| RadioDroid 0.86 | source-validated-partial | androidx.core:core-ktx | 1.8.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| RadioDroid 0.86 | source-validated-partial | androidx.datastore:datastore-core-android | not validated | 1.2.1 | 1.2.1 | `real-single-reference-not-rankable` |
+| RadioDroid 0.86 | source-validated-partial | androidx.datastore:datastore-preferences-android | not validated | 1.2.1 | 1.2.1 | `real-single-reference-not-rankable` |
+| RadioDroid 0.86 | source-validated-partial | androidx.exifinterface:exifinterface | 1.0.0 | 1.3.6 | 1.3.6 | `real-unchanged-source-mismatch` |
+| RadioDroid 0.86 | source-validated-partial | androidx.fragment:fragment | 1.3.6 | 1.5.4 | 1.5.4 | `real-unchanged-source-mismatch` |
+| RadioDroid 0.86 | source-validated-partial | androidx.gridlayout:gridlayout | not validated | 1.1.0 | 1.0.0 | `real-layer-covered-unvalidated` |
+| RadioDroid 0.86 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.2.0 | 2.8.7 | 2.10.0 | `real-conflicting-source-mismatch` |
+| RadioDroid 0.86 | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | not validated | 2.8.7 | 2.9.0 | `real-layer-covered-unvalidated` |
+| RadioDroid 0.86 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.5.1 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| RadioDroid 0.86 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| RadioDroid 0.86 | source-validated-partial | androidx.recyclerview:recyclerview | 1.2.1 | 1.2.1 | 1.2.1 | `real-aligned-source-clean` |
+| RadioDroid 0.86 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| RadioDroid 0.86 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.0.0 | 1.0.0 | 1.2.0 | `real-regression-risk-do-not-promote` |
+| RadioDroid 0.86 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.0.0 | 1.0.0 | 1.1.0 | `real-regression-risk-do-not-promote` |
+| RadioDroid 0.86 | source-validated-partial | androidx.work:work-runtime | not validated | 2.10.0 | 2.10.0 | `real-layer-covered-unvalidated` |
+| RadioDroid 0.86 | source-validated-partial | com.fasterxml.jackson.core:jackson-databind | not validated | 2.15.2 | 2.15.2 | `real-layer-covered-unvalidated` |
+| RadioDroid 0.86 | source-validated-partial | com.google.android.material:material | 1.8.0-beta01 | 1.12.0 | 1.12.0 | `real-unchanged-source-mismatch` |
+| RadioDroid 0.86 | source-validated-partial | com.google.code.gson:gson | 2.9.1 | 2.10.1 | 2.10.1 | `real-unchanged-source-mismatch` |
+| RadioDroid 0.86 | source-validated-partial | com.squareup.okhttp3:okhttp | 3.12.13 | 4.10.0 | 4.10.0 | `real-unchanged-source-mismatch` |
+| RadioDroid 0.86 | source-validated-partial | com.squareup.okio:okio-jvm | not validated | 3.6.0 | 3.16.4 | `real-layer-covered-unvalidated` |
+| RadioDroid 0.86 | source-validated-partial | com.squareup.retrofit2:retrofit | not validated | 2.8.1 | 3.0.0 | `real-layer-covered-unvalidated` |
+| RadioDroid 0.86 | source-validated-partial | commons-codec:commons-codec | not validated | 1.15 | 1.16.0 | `real-layer-covered-unvalidated` |
+| RadioDroid 0.86 | source-validated-partial | io.ktor:ktor-client-core-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| RadioDroid 0.86 | source-validated-partial | io.ktor:ktor-client-okhttp-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| RadioDroid 0.86 | source-validated-partial | io.ktor:ktor-http-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| RadioDroid 0.86 | source-validated-partial | io.ktor:ktor-io-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| RadioDroid 0.86 | source-validated-partial | io.ktor:ktor-utils-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| RadioDroid 0.86 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 1.7.10 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| RadioDroid 0.86 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.6.1 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| RadioDroid 0.86 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.6.1 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.activity:activity | 1.8.0 | 1.8.0 | 1.8.1 | `real-regression-risk-do-not-promote` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.appcompat:appcompat | 1.7.0 | 1.7.0 | 1.7.0 | `real-aligned-source-clean` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.compose.foundation:foundation-android | not validated | 1.7.8 | 1.11.2 | `real-layer-covered-unvalidated` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.compose.material3:material3-android | not validated | 1.4.0 | 1.4.0 | `real-single-reference-not-rankable` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.compose.material:material-android | not validated | 1.11.2 | 1.11.2 | `real-single-reference-not-rankable` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.compose.runtime:runtime-android | not validated | 1.10.6 | 1.10.6 | `real-layer-covered-unvalidated` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.compose.ui:ui-android | not validated | 1.7.8 | 1.7.8 | `real-layer-covered-unvalidated` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.core:core | 1.13.0 | 1.15.0 | 1.16.0 | `real-conflicting-source-mismatch` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.core:core-ktx | 1.13.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.datastore:datastore-core-android | not validated | 1.2.1 | 1.2.1 | `real-single-reference-not-rankable` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.datastore:datastore-preferences-android | not validated | 1.2.1 | 1.2.1 | `real-single-reference-not-rankable` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.exifinterface:exifinterface | 1.0.0 | 1.3.6 | 1.3.6 | `real-unchanged-source-mismatch` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.fragment:fragment | 1.6.2 | 1.6.1 | 1.6.1 | `real-unchanged-source-mismatch` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.gridlayout:gridlayout | not validated | 1.1.0 | 1.0.0 | `real-layer-covered-unvalidated` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.2 | 2.6.2 | 2.6.2 | `real-aligned-source-clean` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.recyclerview:recyclerview | 1.3.2 | 1.3.2 | 1.3.2 | `real-aligned-source-clean` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.1.0 | 1.0.0 | 1.2.0 | `real-conflicting-source-mismatch` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0-beta02 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | androidx.work:work-runtime | not validated | 2.10.0 | 2.10.0 | `real-layer-covered-unvalidated` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | com.fasterxml.jackson.core:jackson-databind | not validated | 2.15.2 | 2.15.2 | `real-layer-covered-unvalidated` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | com.google.android.material:material | 1.11.0 | 1.12.0 | 1.12.0 | `real-unchanged-source-mismatch` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | com.google.code.gson:gson | 2.9.1 | 2.10.1 | 2.10.1 | `real-unchanged-source-mismatch` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | com.squareup.okhttp3:okhttp | 5.0.0-alpha.7 | 4.10.0 | 4.10.0 | `real-unchanged-source-mismatch` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | com.squareup.okio:okio-jvm | 3.1.0 | 3.0.0 | 3.0.0 | `real-unchanged-source-mismatch` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | com.squareup.retrofit2:retrofit | not validated | 2.8.1 | 3.0.0 | `real-layer-covered-unvalidated` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | commons-codec:commons-codec | not validated | 1.15 | 1.16.0 | `real-layer-covered-unvalidated` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | io.ktor:ktor-client-core-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | io.ktor:ktor-client-okhttp-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | io.ktor:ktor-http-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | io.ktor:ktor-io-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | io.ktor:ktor-utils-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 1.9.22 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| SimpleLogin Anti-spam 1.22.0 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.activity:activity | 1.5.1 | 1.10.1 | 1.8.1 | `real-conflicting-source-mismatch` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.appcompat:appcompat | 1.5.0 | 1.7.0 | 1.7.1 | `real-conflicting-source-mismatch` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.compose.foundation:foundation-android | not validated | 1.7.8 | 1.7.8 | `real-layer-covered-unvalidated` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.compose.material3:material3-android | not validated | 1.4.0 | 1.4.0 | `real-single-reference-not-rankable` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.compose.material:material-android | not validated | 1.11.2 | 1.11.2 | `real-single-reference-not-rankable` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.compose.runtime:runtime-android | not validated | 1.10.6 | 1.10.6 | `real-layer-covered-unvalidated` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.compose.ui:ui-android | not validated | 1.7.8 | 1.7.8 | `real-layer-covered-unvalidated` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.0.0 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.core:core | 1.10.1 | 1.9.0 | 1.18.0 | `real-conflicting-source-mismatch` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.core:core-ktx | 1.10.1 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.datastore:datastore-core-android | not validated | 1.2.1 | 1.2.1 | `real-single-reference-not-rankable` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.datastore:datastore-preferences-android | not validated | 1.2.1 | 1.2.1 | `real-single-reference-not-rankable` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.exifinterface:exifinterface | not validated | 1.4.2 | 1.3.6 | `real-layer-covered-unvalidated` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.fragment:fragment | 1.3.6 | 1.5.4 | 1.5.4 | `real-unchanged-source-mismatch` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.gridlayout:gridlayout | not validated | 1.0.0 | 1.0.0 | `real-layer-covered-unvalidated` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.0.0 | 2.6.2 | 2.6.2 | `real-unchanged-source-mismatch` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.5.1 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.5.1 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.recyclerview:recyclerview | 1.3.2 | 1.3.2 | 1.3.2 | `real-aligned-source-clean` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.0.0 | 1.0.0 | 1.2.0 | `real-regression-risk-do-not-promote` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0-beta02 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| Omni Notes 6.3.1 | source-validated-partial | androidx.work:work-runtime | not validated | 2.10.0 | 2.10.0 | `real-layer-covered-unvalidated` |
+| Omni Notes 6.3.1 | source-validated-partial | com.fasterxml.jackson.core:jackson-databind | not validated | 2.15.2 | 2.15.2 | `real-layer-covered-unvalidated` |
+| Omni Notes 6.3.1 | source-validated-partial | com.google.android.material:material | 1.9.0 | 1.12.0 | 1.12.0 | `real-unchanged-source-mismatch` |
+| Omni Notes 6.3.1 | source-validated-partial | com.google.code.gson:gson | 2.2.4 | 2.8.5 | 2.8.9 | `real-conflicting-source-mismatch` |
+| Omni Notes 6.3.1 | source-validated-partial | com.squareup.okhttp3:okhttp-android | not validated | 5.3.2 | 5.3.2 | `real-single-reference-not-rankable` |
+| Omni Notes 6.3.1 | source-validated-partial | com.squareup.okio:okio-jvm | not validated | 3.6.0 | 3.16.4 | `real-layer-covered-unvalidated` |
+| Omni Notes 6.3.1 | source-validated-partial | com.squareup.retrofit2:retrofit | not validated | 2.8.1 | 3.0.0 | `real-layer-covered-unvalidated` |
+| Omni Notes 6.3.1 | source-validated-partial | commons-codec:commons-codec | 1.11 | 1.15 | 1.16.0 | `real-conflicting-source-mismatch` |
+| Omni Notes 6.3.1 | source-validated-partial | io.ktor:ktor-client-core-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| Omni Notes 6.3.1 | source-validated-partial | io.ktor:ktor-client-okhttp-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| Omni Notes 6.3.1 | source-validated-partial | io.ktor:ktor-http-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| Omni Notes 6.3.1 | source-validated-partial | io.ktor:ktor-io-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| Omni Notes 6.3.1 | source-validated-partial | io.ktor:ktor-utils-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| Omni Notes 6.3.1 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 1.8.10 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| Omni Notes 6.3.1 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.6.1 | 1.9.0 | 1.7.3 | `real-conflicting-source-mismatch` |
+| Omni Notes 6.3.1 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.6.1 | 1.7.3 | 1.9.0 | `real-conflicting-source-mismatch` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.activity:activity | 1.8.1 | 1.8.0 | 1.8.1 | `real-potential-target-improvement` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.0 | `real-regression-risk-do-not-promote` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.compose.foundation:foundation-android | not validated | 1.7.8 | 1.11.2 | `real-layer-covered-unvalidated` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.compose.material3:material3-android | not validated | 1.4.0 | 1.4.0 | `real-single-reference-not-rankable` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.compose.material:material-android | not validated | 1.11.2 | 1.11.2 | `real-single-reference-not-rankable` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.compose.runtime:runtime-android | not validated | 1.10.6 | 1.10.6 | `real-layer-covered-unvalidated` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.compose.ui:ui-android | not validated | 1.7.8 | 1.7.8 | `real-layer-covered-unvalidated` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.core:core | 1.13.1 | 1.15.0 | 1.16.0 | `real-conflicting-source-mismatch` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.core:core-ktx | 1.13.1 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.datastore:datastore-core-android | not validated | 1.2.1 | 1.2.1 | `real-single-reference-not-rankable` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.datastore:datastore-preferences-android | not validated | 1.2.1 | 1.2.1 | `real-single-reference-not-rankable` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.exifinterface:exifinterface | not validated | 1.4.2 | 1.3.6 | `real-layer-covered-unvalidated` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.fragment:fragment | 1.8.9 | 1.8.9 | 1.8.9 | `real-aligned-source-clean` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.gridlayout:gridlayout | not validated | 1.1.0 | 1.0.0 | `real-layer-covered-unvalidated` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.10.0 | 2.10.0 | 2.10.0 | `real-aligned-source-clean` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | 2.10.0 | 2.10.0 | 2.10.0 | `real-aligned-source-clean` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel-android | 2.10.0 | 2.10.0 | 2.10.0 | `real-aligned-source-clean` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | not validated | 1.0.0 | 1.0.0 | `real-layer-covered-unvalidated` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.recyclerview:recyclerview | 1.4.0 | 1.4.0 | 1.4.0 | `real-aligned-source-clean` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0-beta02 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| Primitive FTPd 8.1 | source-validated-partial | androidx.work:work-runtime | not validated | 2.10.0 | 2.10.0 | `real-layer-covered-unvalidated` |
+| Primitive FTPd 8.1 | source-validated-partial | com.fasterxml.jackson.core:jackson-databind | not validated | 2.15.2 | 2.15.2 | `real-layer-covered-unvalidated` |
+| Primitive FTPd 8.1 | source-validated-partial | com.google.android.material:material | 1.13.0 | 1.13.0 | 1.13.0 | `real-aligned-source-clean` |
+| Primitive FTPd 8.1 | source-validated-partial | com.google.code.gson:gson | not validated | 2.8.5 | 2.13.1 | `real-layer-covered-unvalidated` |
+| Primitive FTPd 8.1 | source-validated-partial | com.squareup.okhttp3:okhttp-android | not validated | 5.3.2 | 5.3.2 | `real-single-reference-not-rankable` |
+| Primitive FTPd 8.1 | source-validated-partial | com.squareup.okio:okio-jvm | not validated | 3.6.0 | 3.16.4 | `real-layer-covered-unvalidated` |
+| Primitive FTPd 8.1 | source-validated-partial | com.squareup.retrofit2:retrofit | not validated | 2.8.1 | 3.0.0 | `real-layer-covered-unvalidated` |
+| Primitive FTPd 8.1 | source-validated-partial | commons-codec:commons-codec | not validated | 1.15 | 1.16.0 | `real-layer-covered-unvalidated` |
+| Primitive FTPd 8.1 | source-validated-partial | io.ktor:ktor-client-core-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| Primitive FTPd 8.1 | source-validated-partial | io.ktor:ktor-client-okhttp-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| Primitive FTPd 8.1 | source-validated-partial | io.ktor:ktor-http-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| Primitive FTPd 8.1 | source-validated-partial | io.ktor:ktor-io-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| Primitive FTPd 8.1 | source-validated-partial | io.ktor:ktor-utils-jvm | not validated | 2.3.12 | 2.3.12 | `real-single-reference-not-rankable` |
+| Primitive FTPd 8.1 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.2.10 | 2.2.10 | 2.2.10 | `real-aligned-source-clean` |
+| Primitive FTPd 8.1 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.9.0 | 1.9.0 | 1.7.3 | `real-regression-risk-do-not-promote` |
+| Primitive FTPd 8.1 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.9.0 | 1.9.0 | 1.9.0 | `real-aligned-source-clean` |
+| floccus bookmark sync 5.9.1 | source-validated-partial | androidx.activity:activity | 1.9.3 | 1.10.1 | 1.10.1 | `real-unchanged-source-mismatch` |
+| floccus bookmark sync 5.9.1 | source-validated-partial | androidx.appcompat:appcompat | 1.7.0 | 1.7.0 | 1.7.0 | `real-aligned-source-clean` |
+| floccus bookmark sync 5.9.1 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| floccus bookmark sync 5.9.1 | source-validated-partial | androidx.core:core | 1.15.0 | 1.15.0 | 1.16.0 | `real-regression-risk-do-not-promote` |
+| floccus bookmark sync 5.9.1 | source-validated-partial | androidx.core:core-ktx | 1.15.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| floccus bookmark sync 5.9.1 | source-validated-partial | androidx.fragment:fragment | 1.8.4 | 1.8.9 | 1.8.9 | `real-unchanged-source-mismatch` |
+| floccus bookmark sync 5.9.1 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.2 | 2.6.2 | 2.6.2 | `real-aligned-source-clean` |
+| floccus bookmark sync 5.9.1 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| floccus bookmark sync 5.9.1 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| floccus bookmark sync 5.9.1 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| floccus bookmark sync 5.9.1 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.0.0 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| floccus bookmark sync 5.9.1 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.9.0 | 1.9.0 | 1.7.3 | `real-regression-risk-do-not-promote` |
+| floccus bookmark sync 5.9.1 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.9.0 | 1.9.0 | 1.9.0 | `real-aligned-source-clean` |
+| OpenCloud 1.2.3 | source-validated-partial | androidx.activity:activity | 1.8.0 | 1.8.0 | 1.8.1 | `real-regression-risk-do-not-promote` |
+| OpenCloud 1.2.3 | source-validated-partial | androidx.appcompat:appcompat | 1.6.1 | 1.7.0 | 1.7.0 | `real-unchanged-source-mismatch` |
+| OpenCloud 1.2.3 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| OpenCloud 1.2.3 | source-validated-partial | androidx.core:core | 1.10.1 | 1.9.0 | 1.18.0 | `real-conflicting-source-mismatch` |
+| OpenCloud 1.2.3 | source-validated-partial | androidx.core:core-ktx | 1.10.1 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| OpenCloud 1.2.3 | source-validated-partial | androidx.exifinterface:exifinterface | 1.3.3 | 1.3.6 | 1.3.6 | `real-unchanged-source-mismatch` |
+| OpenCloud 1.2.3 | source-validated-partial | androidx.fragment:fragment | 1.5.7 | 1.5.4 | 1.5.4 | `real-unchanged-source-mismatch` |
+| OpenCloud 1.2.3 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.1 | 2.6.2 | 2.10.0 | `real-conflicting-source-mismatch` |
+| OpenCloud 1.2.3 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.1 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| OpenCloud 1.2.3 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.1 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| OpenCloud 1.2.3 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| OpenCloud 1.2.3 | source-validated-partial | androidx.recyclerview:recyclerview | 1.3.0 | 1.2.1 | 1.2.1 | `real-unchanged-source-mismatch` |
+| OpenCloud 1.2.3 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| OpenCloud 1.2.3 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.0.0 | 1.0.0 | 1.2.0 | `real-regression-risk-do-not-promote` |
+| OpenCloud 1.2.3 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.0.0 | 1.0.0 | 1.1.0 | `real-regression-risk-do-not-promote` |
+| OpenCloud 1.2.3 | source-validated-partial | androidx.work:work-runtime | 2.8.1 | 2.11.2 | 2.10.0 | `real-conflicting-source-mismatch` |
+| OpenCloud 1.2.3 | source-validated-partial | com.google.android.material:material | 1.8.0 | 1.12.0 | 1.12.0 | `real-unchanged-source-mismatch` |
+| OpenCloud 1.2.3 | source-validated-partial | com.squareup.okhttp3:okhttp | 4.10.0 | 4.10.0 | 4.10.0 | `real-aligned-source-clean` |
+| OpenCloud 1.2.3 | source-validated-partial | com.squareup.okio:okio-jvm | 3.7.0 | 3.7.0 | 3.16.4 | `real-regression-risk-do-not-promote` |
+| OpenCloud 1.2.3 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 1.9.21 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| OpenCloud 1.2.3 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| OpenCloud 1.2.3 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| SambaLite 2.5.1 | source-validated-partial | androidx.activity:activity | 1.13.0 | 1.13.0 | 1.13.0 | `real-aligned-source-clean` |
+| SambaLite 2.5.1 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.0 | `real-regression-risk-do-not-promote` |
+| SambaLite 2.5.1 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| SambaLite 2.5.1 | source-validated-partial | androidx.core:core | 1.18.0 | 1.18.0 | 1.18.0 | `real-aligned-source-clean` |
+| SambaLite 2.5.1 | source-validated-partial | androidx.core:core-ktx | 1.18.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| SambaLite 2.5.1 | source-validated-partial | androidx.fragment:fragment | 1.5.4 | 1.5.4 | 1.5.4 | `real-aligned-source-clean` |
+| SambaLite 2.5.1 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.10.0 | 2.10.0 | 2.10.0 | `real-aligned-source-clean` |
+| SambaLite 2.5.1 | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | 2.10.0 | 2.10.0 | 2.10.0 | `real-aligned-source-clean` |
+| SambaLite 2.5.1 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel-android | 2.10.0 | 2.10.0 | 2.10.0 | `real-aligned-source-clean` |
+| SambaLite 2.5.1 | source-validated-partial | androidx.recyclerview:recyclerview | 1.4.0 | 1.4.0 | 1.4.0 | `real-aligned-source-clean` |
+| SambaLite 2.5.1 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| SambaLite 2.5.1 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.2.0 | 1.0.0 | 1.2.0 | `real-potential-target-improvement` |
+| SambaLite 2.5.1 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0-beta02 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| SambaLite 2.5.1 | source-validated-partial | androidx.work:work-runtime | 2.11.2 | 2.11.2 | 2.11.2 | `real-aligned-source-clean` |
+| SambaLite 2.5.1 | source-validated-partial | com.google.android.material:material | 1.13.0 | 1.13.0 | 1.13.0 | `real-aligned-source-clean` |
+| SambaLite 2.5.1 | source-validated-partial | com.google.code.gson:gson | 2.8.9 | 2.8.9 | 2.8.9 | `real-aligned-source-clean` |
+| SambaLite 2.5.1 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.1.20 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| SambaLite 2.5.1 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.9.0 | 1.9.0 | 1.7.3 | `real-regression-risk-do-not-promote` |
+| SambaLite 2.5.1 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.9.0 | 1.9.0 | 1.9.0 | `real-aligned-source-clean` |
+| NightDream 2.11.26 | source-validated-partial | androidx.activity:activity | 1.12.2 | 1.13.0 | 1.13.0 | `real-unchanged-source-mismatch` |
+| NightDream 2.11.26 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.0 | `real-regression-risk-do-not-promote` |
+| NightDream 2.11.26 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.2.0 | 1.3.0 | 1.1.0 | `real-conflicting-source-mismatch` |
+| NightDream 2.11.26 | source-validated-partial | androidx.core:core | 1.16.0 | 1.16.0 | 1.16.0 | `real-aligned-source-clean` |
+| NightDream 2.11.26 | source-validated-partial | androidx.core:core-ktx | 1.16.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| NightDream 2.11.26 | source-validated-partial | androidx.exifinterface:exifinterface | 1.4.2 | 1.4.2 | 1.3.6 | `real-regression-risk-do-not-promote` |
+| NightDream 2.11.26 | source-validated-partial | androidx.fragment:fragment | 1.8.9 | 1.8.9 | 1.8.9 | `real-aligned-source-clean` |
+| NightDream 2.11.26 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.10.0 | 2.10.0 | 2.10.0 | `real-aligned-source-clean` |
+| NightDream 2.11.26 | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | 2.10.0 | 2.10.0 | 2.10.0 | `real-aligned-source-clean` |
+| NightDream 2.11.26 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel-android | 2.10.0 | 2.10.0 | 2.10.0 | `real-aligned-source-clean` |
+| NightDream 2.11.26 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| NightDream 2.11.26 | source-validated-partial | androidx.recyclerview:recyclerview | 1.3.0 | 1.2.1 | 1.2.1 | `real-unchanged-source-mismatch` |
+| NightDream 2.11.26 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| NightDream 2.11.26 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.0.0 | 1.0.0 | 1.2.0 | `real-regression-risk-do-not-promote` |
+| NightDream 2.11.26 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.0.0 | 1.0.0 | 1.1.0 | `real-regression-risk-do-not-promote` |
+| NightDream 2.11.26 | source-validated-partial | androidx.work:work-runtime | 2.11.0 | 2.11.2 | 2.11.2 | `real-unchanged-source-mismatch` |
+| NightDream 2.11.26 | source-validated-partial | com.google.android.material:material | 1.13.0 | 1.13.0 | 1.13.0 | `real-aligned-source-clean` |
+| NightDream 2.11.26 | source-validated-partial | com.google.code.gson:gson | 2.13.2 | 2.13.2 | 2.13.2 | `real-aligned-source-clean` |
+| NightDream 2.11.26 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.1.20 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| NightDream 2.11.26 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.9.0 | 1.9.0 | 1.7.3 | `real-regression-risk-do-not-promote` |
+| NightDream 2.11.26 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.9.0 | 1.9.0 | 1.9.0 | `real-aligned-source-clean` |
+| Waistline 3.10.1 | source-validated-partial | androidx.activity:activity | 1.7.0 | 1.8.0 | 1.8.1 | `real-conflicting-source-mismatch` |
+| Waistline 3.10.1 | source-validated-partial | androidx.appcompat:appcompat | 1.7.0 | 1.7.0 | 1.7.0 | `real-aligned-source-clean` |
+| Waistline 3.10.1 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Waistline 3.10.1 | source-validated-partial | androidx.core:core | 1.13.0 | 1.15.0 | 1.16.0 | `real-conflicting-source-mismatch` |
+| Waistline 3.10.1 | source-validated-partial | androidx.core:core-ktx | 1.13.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| Waistline 3.10.1 | source-validated-partial | androidx.fragment:fragment | 1.5.4 | 1.5.4 | 1.5.4 | `real-aligned-source-clean` |
+| Waistline 3.10.1 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.6.2 | 2.6.2 | 2.6.2 | `real-aligned-source-clean` |
+| Waistline 3.10.1 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Waistline 3.10.1 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Waistline 3.10.1 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| Waistline 3.10.1 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Waistline 3.10.1 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.0.0 | 1.0.0 | 1.2.0 | `real-regression-risk-do-not-promote` |
+| Waistline 3.10.1 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 1.9.24 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| Waistline 3.10.1 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| Waistline 3.10.1 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
 | NewPipe 0.28.5 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.1 | `real-aligned-source-clean` |
 | NewPipe 0.28.5 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
 | NewPipe 0.28.5 | source-validated-partial | androidx.exifinterface:exifinterface | 1.4.2 | 1.4.2 | 1.3.6 | `real-regression-risk-do-not-promote` |
@@ -307,6 +971,177 @@ These rows use existing real APK reports and source-validation artifacts where a
 | OsmAnd~ 5.3.10 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.10.1 | 1.9.0 | 1.9.0 | `real-unchanged-source-mismatch` |
 | Material Files 1.7.4 | source-validated-partial | androidx.activity:activity | 1.9.0 | 1.10.1 | 1.8.1 | `real-conflicting-source-mismatch` |
 | Material Files 1.7.4 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.8.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| DAVx5 4.5.12-ose | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.0 | `real-regression-risk-do-not-promote` |
+| DAVx5 4.5.12-ose | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| DAVx5 4.5.12-ose | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | 2.10.0 | 2.10.0 | 2.9.0 | `real-regression-risk-do-not-promote` |
+| DAVx5 4.5.12-ose | source-validated-partial | androidx.startup:startup-runtime | 1.2.0 | 1.1.1 | 1.1.1 | `real-unchanged-source-mismatch` |
+| DAVx5 4.5.12-ose | source-validated-partial | com.squareup.okio:okio | 3.16.4 | 2.8.0 | 2.9.0 | `real-conflicting-source-mismatch` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | androidx.activity:activity | 1.10.1 | 1.10.1 | 1.10.1 | `real-aligned-source-clean` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.0 | `real-regression-risk-do-not-promote` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.3.0 | `real-regression-risk-do-not-promote` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | androidx.core:core | 1.17.0 | 1.18.0 | 1.18.0 | `real-unchanged-source-mismatch` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | androidx.core:core-ktx | 1.17.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | androidx.fragment:fragment | 1.8.9 | 1.8.9 | 1.8.9 | `real-aligned-source-clean` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.9.3 | 2.10.0 | 2.10.0 | `real-unchanged-source-mismatch` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | 2.9.3 | 2.9.0 | 2.9.0 | `real-unchanged-source-mismatch` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel-android | 2.9.3 | 2.8.7 | 2.10.0 | `real-conflicting-source-mismatch` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | androidx.recyclerview:recyclerview | 1.4.0 | 1.4.0 | 1.4.0 | `real-aligned-source-clean` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | com.google.android.material:material | 1.12.0 | 1.12.0 | 1.12.0 | `real-aligned-source-clean` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | com.google.code.gson:gson | 2.8.9 | 2.8.9 | 2.8.9 | `real-aligned-source-clean` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | com.squareup.okhttp3:okhttp | 4.10.0 | 4.10.0 | 4.10.0 | `real-aligned-source-clean` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | com.squareup.okio:okio-jvm | 3.0.0 | 3.0.0 | 3.0.0 | `real-aligned-source-clean` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.2.10 | 2.2.10 | 2.2.10 | `real-aligned-source-clean` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.8.1 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| OpenVPN for Android 0.7.64 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.8.1 | 1.7.3 | 1.9.0 | `real-conflicting-source-mismatch` |
+| Gadgetbridge 0.91.1 | source-validated-partial | androidx.activity:activity | 1.13.0 | 1.13.0 | 1.13.0 | `real-aligned-source-clean` |
+| Gadgetbridge 0.91.1 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.0 | `real-regression-risk-do-not-promote` |
+| Gadgetbridge 0.91.1 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.3.0 | `real-regression-risk-do-not-promote` |
+| Gadgetbridge 0.91.1 | source-validated-partial | androidx.core:core | 1.18.0 | 1.18.0 | 1.18.0 | `real-aligned-source-clean` |
+| Gadgetbridge 0.91.1 | source-validated-partial | androidx.exifinterface:exifinterface | 1.4.2 | 1.4.2 | 1.3.6 | `real-regression-risk-do-not-promote` |
+| Gadgetbridge 0.91.1 | source-validated-partial | androidx.fragment:fragment | 1.8.9 | 1.8.9 | 1.8.9 | `real-aligned-source-clean` |
+| Gadgetbridge 0.91.1 | source-validated-partial | androidx.gridlayout:gridlayout | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Gadgetbridge 0.91.1 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.10.0 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Gadgetbridge 0.91.1 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.10.0 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Gadgetbridge 0.91.1 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.1.0 | 1.0.0 | 1.0.0 | `real-unchanged-source-mismatch` |
+| Gadgetbridge 0.91.1 | source-validated-partial | androidx.recyclerview:recyclerview | 1.4.0 | 1.4.0 | 1.4.0 | `real-aligned-source-clean` |
+| Gadgetbridge 0.91.1 | source-validated-partial | androidx.startup:startup-runtime | 1.2.0 | 1.2.0 | 1.2.0 | `real-aligned-source-clean` |
+| Gadgetbridge 0.91.1 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.0.0 | 1.0.0 | 1.2.0 | `real-regression-risk-do-not-promote` |
+| Gadgetbridge 0.91.1 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Gadgetbridge 0.91.1 | source-validated-partial | androidx.work:work-runtime | 2.11.1 | 2.11.2 | 2.11.2 | `real-unchanged-source-mismatch` |
+| Gadgetbridge 0.91.1 | source-validated-partial | com.google.android.material:material | 1.13.0 | 1.13.0 | 1.13.0 | `real-aligned-source-clean` |
+| Gadgetbridge 0.91.1 | source-validated-partial | com.google.code.gson:gson | 2.13.2 | 2.13.2 | 2.13.2 | `real-aligned-source-clean` |
+| Gadgetbridge 0.91.1 | source-validated-partial | com.squareup.okhttp3:okhttp-android | 5.3.2 | 5.3.2 | 5.3.2 | `real-single-reference-not-rankable` |
+| Gadgetbridge 0.91.1 | source-validated-partial | com.squareup.okio:okio-jvm | 3.16.4 | 3.16.4 | 3.16.4 | `real-aligned-source-clean` |
+| Gadgetbridge 0.91.1 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.9.0 | 1.9.0 | 1.7.3 | `real-regression-risk-do-not-promote` |
+| Gadgetbridge 0.91.1 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.9.0 | 1.9.0 | 1.9.0 | `real-aligned-source-clean` |
+| Shelter 1.9.1 | source-validated-partial | androidx.fragment:fragment | 1.6.1 | 1.6.1 | 1.6.1 | `real-aligned-source-clean` |
+| Shelter 1.9.1 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.0.0 | 1.0.0 | 1.2.0 | `real-regression-risk-do-not-promote` |
+| Shelter 1.9.1 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.0.0 | 1.0.0 | 1.1.0 | `real-regression-risk-do-not-promote` |
+| Stopwatch 1.6 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.1 | `real-aligned-source-clean` |
+| Stopwatch 1.6 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.3.0 | `real-regression-risk-do-not-promote` |
+| Stopwatch 1.6 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Stopwatch 1.6 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Stopwatch 1.6 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.6.4 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| Bubble 3.4 | source-validated-partial | androidx.appcompat:appcompat | 1.6.1 | 1.7.0 | 1.7.1 | `real-conflicting-source-mismatch` |
+| Bubble 3.4 | source-validated-partial | androidx.fragment:fragment | 1.3.6 | 1.5.4 | 1.5.4 | `real-unchanged-source-mismatch` |
+| Bubble 3.4 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.5.1 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Bubble 3.4 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.5.1 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Bubble 3.4 | source-validated-partial | androidx.recyclerview:recyclerview | 1.0.0 | 1.2.1 | 1.2.1 | `real-unchanged-source-mismatch` |
+| Bubble 3.4 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Bubble 3.4 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.6.1 | 1.9.0 | 1.7.3 | `real-conflicting-source-mismatch` |
+| Audio Source 1.5 | source-validated-partial | androidx.appcompat:appcompat | 1.2.0 | 1.7.1 | 1.7.1 | `real-unchanged-source-mismatch` |
+| Audio Source 1.5 | source-validated-partial | androidx.core:core | 1.3.0 | 1.9.0 | 1.16.0 | `real-conflicting-source-mismatch` |
+| Audio Source 1.5 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.1.0 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Gotify 2.10.0 | source-validated-partial | androidx.activity:activity | 1.8.0 | 1.8.0 | 1.8.1 | `real-regression-risk-do-not-promote` |
+| Gotify 2.10.0 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.0 | `real-regression-risk-do-not-promote` |
+| Gotify 2.10.0 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Gotify 2.10.0 | source-validated-partial | androidx.core:core | 1.13.0 | 1.15.0 | 1.16.0 | `real-conflicting-source-mismatch` |
+| Gotify 2.10.0 | source-validated-partial | androidx.core:core-ktx | 1.13.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| Gotify 2.10.0 | source-validated-partial | androidx.exifinterface:exifinterface | 1.3.7 | 1.3.6 | 1.3.6 | `real-unchanged-source-mismatch` |
+| Gotify 2.10.0 | source-validated-partial | androidx.fragment:fragment | 1.5.4 | 1.5.4 | 1.5.4 | `real-aligned-source-clean` |
+| Gotify 2.10.0 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.7.0 | 2.8.7 | 2.8.7 | `real-unchanged-source-mismatch` |
+| Gotify 2.10.0 | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | not validated | 2.8.7 | 2.8.7 | `real-layer-covered-unvalidated` |
+| Gotify 2.10.0 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.7.0 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Gotify 2.10.0 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| Gotify 2.10.0 | source-validated-partial | androidx.recyclerview:recyclerview | 1.1.0 | 1.2.1 | 1.2.1 | `real-unchanged-source-mismatch` |
+| Gotify 2.10.0 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Gotify 2.10.0 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.1.0 | 1.0.0 | 1.2.0 | `real-conflicting-source-mismatch` |
+| Gotify 2.10.0 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.0.0 | 1.0.0 | 1.1.0 | `real-regression-risk-do-not-promote` |
+| Gotify 2.10.0 | source-validated-partial | com.google.android.material:material | 1.12.0 | 1.12.0 | 1.12.0 | `real-aligned-source-clean` |
+| Gotify 2.10.0 | source-validated-partial | com.google.code.gson:gson | 2.13.1 | 2.13.1 | 2.13.1 | `real-aligned-source-clean` |
+| Gotify 2.10.0 | source-validated-partial | com.squareup.okhttp3:okhttp | 4.12.0 | 4.12.0 | 4.12.0 | `real-aligned-source-clean` |
+| Gotify 2.10.0 | source-validated-partial | com.squareup.okio:okio-jvm | 3.9.0 | 3.7.0 | 3.16.4 | `real-conflicting-source-mismatch` |
+| Gotify 2.10.0 | source-validated-partial | com.squareup.retrofit2:retrofit | 3.0.0 | 3.0.0 | 3.0.0 | `real-aligned-source-clean` |
+| Gotify 2.10.0 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.2.0 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| Gotify 2.10.0 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.8.1 | 1.7.3 | 1.7.3 | `real-unchanged-source-mismatch` |
+| Gotify 2.10.0 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.8.1 | 1.7.3 | 1.9.0 | `real-conflicting-source-mismatch` |
+| Foxy Droid 1.3 | source-validated-partial | androidx.fragment:fragment | 1.2.5 | 1.5.4 | 1.8.9 | `real-conflicting-source-mismatch` |
+| Foxy Droid 1.3 | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | not validated | 2.10.0 | 2.8.7 | `real-layer-covered-unvalidated` |
+| Foxy Droid 1.3 | source-validated-partial | androidx.recyclerview:recyclerview | 1.1.0 | 1.2.1 | 1.2.1 | `real-unchanged-source-mismatch` |
+| Foxy Droid 1.3 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.0.0 | 1.0.0 | 1.1.0 | `real-regression-risk-do-not-promote` |
+| Foxy Droid 1.3 | source-validated-partial | com.squareup.okhttp3:okhttp | 4.7.2 | 4.8.0 | 4.8.0 | `real-unchanged-source-mismatch` |
+| Foxy Droid 1.3 | source-validated-partial | com.squareup.okio:okio | 2.6.0 | 2.8.0 | 2.9.0 | `real-conflicting-source-mismatch` |
+| BetterCounter 6.0.3 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.1 | `real-aligned-source-clean` |
+| BetterCounter 6.0.3 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| BetterCounter 6.0.3 | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | not validated | 2.9.0 | 2.9.0 | `real-layer-covered-unvalidated` |
+| BetterCounter 6.0.3 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.1.0 | 1.0.0 | 1.0.0 | `real-unchanged-source-mismatch` |
+| BetterCounter 6.0.3 | source-validated-partial | androidx.recyclerview:recyclerview | 1.4.0 | 1.4.0 | 1.4.0 | `real-aligned-source-clean` |
+| BetterCounter 6.0.3 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| BetterCounter 6.0.3 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.7.3 | 1.7.3 | 1.7.3 | `real-aligned-source-clean` |
+| Coffee 2.26 | source-validated-partial | androidx.activity:activity | 1.8.1 | 1.8.1 | 1.8.1 | `real-aligned-source-clean` |
+| Coffee 2.26 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.1 | `real-aligned-source-clean` |
+| Coffee 2.26 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Coffee 2.26 | source-validated-partial | androidx.core:core | 1.18.0 | 1.18.0 | 1.18.0 | `real-aligned-source-clean` |
+| Coffee 2.26 | source-validated-partial | androidx.fragment:fragment | 1.8.9 | 1.8.9 | 1.8.9 | `real-aligned-source-clean` |
+| Coffee 2.26 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Coffee 2.26 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Coffee 2.26 | source-validated-partial | androidx.recyclerview:recyclerview | 1.3.2 | 1.3.2 | 1.3.2 | `real-aligned-source-clean` |
+| Coffee 2.26 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Coffee 2.26 | source-validated-partial | com.google.android.material:material | 1.13.0 | 1.13.0 | 1.13.0 | `real-aligned-source-clean` |
+| Coffee 2.26 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.10.2 | 1.9.0 | 1.7.3 | `real-conflicting-source-mismatch` |
+| MedTimer 1.22.18 | source-validated-partial | androidx.activity:activity | 1.8.0 | 1.8.0 | 1.8.1 | `real-regression-risk-do-not-promote` |
+| MedTimer 1.22.18 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.0 | `real-regression-risk-do-not-promote` |
+| MedTimer 1.22.18 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| MedTimer 1.22.18 | source-validated-partial | androidx.core:core | 1.18.0 | 1.18.0 | 1.18.0 | `real-aligned-source-clean` |
+| MedTimer 1.22.18 | source-validated-partial | androidx.core:core-ktx | 1.18.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| MedTimer 1.22.18 | source-validated-partial | androidx.exifinterface:exifinterface | 1.2.0 | 1.3.6 | 1.3.6 | `real-unchanged-source-mismatch` |
+| MedTimer 1.22.18 | source-validated-partial | androidx.fragment:fragment | 1.6.2 | 1.6.1 | 1.6.1 | `real-unchanged-source-mismatch` |
+| MedTimer 1.22.18 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.10.0 | 2.10.0 | 2.10.0 | `real-aligned-source-clean` |
+| MedTimer 1.22.18 | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | 2.10.0 | 2.10.0 | 2.10.0 | `real-aligned-source-clean` |
+| MedTimer 1.22.18 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel-android | 2.10.0 | 2.10.0 | 2.10.0 | `real-aligned-source-clean` |
+| MedTimer 1.22.18 | source-validated-partial | androidx.recyclerview:recyclerview | 1.4.0 | 1.4.0 | 1.4.0 | `real-aligned-source-clean` |
+| MedTimer 1.22.18 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| MedTimer 1.22.18 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0-beta02 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| MedTimer 1.22.18 | source-validated-partial | com.google.android.material:material | 1.14.0 | 1.13.0 | 1.13.0 | `real-unchanged-source-mismatch` |
+| MedTimer 1.22.18 | source-validated-partial | com.google.code.gson:gson | 2.14.0 | 2.13.2 | 2.13.1 | `real-conflicting-source-mismatch` |
+| MedTimer 1.22.18 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 2.3.0 | 2.3.10 | 2.3.10 | `real-unchanged-source-mismatch` |
+| MedTimer 1.22.18 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.9.0 | 1.9.0 | 1.7.3 | `real-regression-risk-do-not-promote` |
+| MedTimer 1.22.18 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.9.0 | 1.9.0 | 1.9.0 | `real-aligned-source-clean` |
+| Doodle 6.0.0 | source-validated-partial | androidx.appcompat:appcompat | 1.7.0 | 1.7.0 | 1.7.1 | `real-regression-risk-do-not-promote` |
+| Doodle 6.0.0 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Doodle 6.0.0 | source-validated-partial | androidx.fragment:fragment | 1.8.5 | 1.8.9 | 1.8.9 | `real-unchanged-source-mismatch` |
+| Doodle 6.0.0 | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | not validated | 2.8.7 | 2.8.7 | `real-layer-covered-unvalidated` |
+| Doodle 6.0.0 | source-validated-partial | androidx.recyclerview:recyclerview | 1.1.0 | 1.2.1 | 1.2.1 | `real-unchanged-source-mismatch` |
+| Doodle 6.0.0 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Simple Time Tracker 1.57 | source-validated-partial | androidx.activity:activity | 1.8.2 | 1.8.1 | 1.8.1 | `real-unchanged-source-mismatch` |
+| Simple Time Tracker 1.57 | source-validated-partial | androidx.appcompat:appcompat | 1.7.0 | 1.7.0 | 1.7.0 | `real-aligned-source-clean` |
+| Simple Time Tracker 1.57 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| Simple Time Tracker 1.57 | source-validated-partial | androidx.core:core | 1.13.0 | 1.15.0 | 1.16.0 | `real-conflicting-source-mismatch` |
+| Simple Time Tracker 1.57 | source-validated-partial | androidx.fragment:fragment | 1.6.2 | 1.6.1 | 1.6.1 | `real-unchanged-source-mismatch` |
+| Simple Time Tracker 1.57 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.8.4 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Simple Time Tracker 1.57 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.8.4 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Simple Time Tracker 1.57 | source-validated-partial | androidx.recyclerview:recyclerview | 1.3.2 | 1.3.2 | 1.3.2 | `real-aligned-source-clean` |
+| Simple Time Tracker 1.57 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Simple Time Tracker 1.57 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0-beta02 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| Simple Time Tracker 1.57 | source-validated-partial | com.google.android.material:material | 1.12.0 | 1.12.0 | 1.12.0 | `real-aligned-source-clean` |
+| Simple Time Tracker 1.57 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.7.3 | 1.7.3 | 1.7.3 | `real-aligned-source-clean` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.activity:activity | 1.7.2 | 1.8.0 | 1.8.1 | `real-conflicting-source-mismatch` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.appcompat:appcompat | 1.6.1 | 1.7.0 | 1.7.0 | `real-unchanged-source-mismatch` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.compose.foundation:foundation-android | 1.6.8 | 1.7.8 | 1.7.8 | `real-unchanged-source-mismatch` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.compose.runtime:runtime-android | 1.6.8 | 1.10.6 | 1.10.6 | `real-unchanged-source-mismatch` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.compose.ui:ui-android | 1.6.8 | 1.7.8 | 1.7.8 | `real-unchanged-source-mismatch` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.compose.ui:ui-tooling-preview-android | 1.6.8 | 1.10.6 | 1.10.6 | `real-unchanged-source-mismatch` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.core:core | 1.12.0 | 1.9.0 | 1.18.0 | `real-conflicting-source-mismatch` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.core:core-ktx | 1.12.0 | 1.18.0 | 1.18.0 | `real-single-reference-not-rankable` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.fragment:fragment | 1.6.1 | 1.6.1 | 1.6.1 | `real-aligned-source-clean` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.lifecycle:lifecycle-livedata | 2.7.0 | 2.8.7 | 2.10.0 | `real-conflicting-source-mismatch` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.lifecycle:lifecycle-runtime-android | not validated | 2.8.7 | 2.8.7 | `real-layer-covered-unvalidated` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.lifecycle:lifecycle-viewmodel | 2.7.0 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.localbroadcastmanager:localbroadcastmanager | 1.0.0 | 1.0.0 | 1.0.0 | `real-aligned-source-clean` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.recyclerview:recyclerview | 1.3.2 | 1.2.1 | 1.2.1 | `real-unchanged-source-mismatch` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| KeePassVault 1.16.0 | source-validated-partial | androidx.viewpager2:viewpager2 | 1.1.0-beta02 | 1.1.0 | 1.1.0 | `real-unchanged-source-mismatch` |
+| KeePassVault 1.16.0 | source-validated-partial | com.google.android.material:material | 1.9.0 | 1.12.0 | 1.12.0 | `real-unchanged-source-mismatch` |
+| KeePassVault 1.16.0 | source-validated-partial | com.squareup.okhttp3:okhttp | 4.12.0 | 4.12.0 | 4.12.0 | `real-aligned-source-clean` |
+| KeePassVault 1.16.0 | source-validated-partial | com.squareup.okio:okio-jvm | 3.9.0 | 3.7.0 | 3.7.0 | `real-unchanged-source-mismatch` |
+| KeePassVault 1.16.0 | source-validated-partial | commons-codec:commons-codec | 1.15 | 1.15 | 1.15 | `real-aligned-source-clean` |
+| KeePassVault 1.16.0 | source-validated-partial | org.jetbrains.kotlin:kotlin-stdlib | 1.9.24 | 2.2.10 | 2.2.10 | `real-unchanged-source-mismatch` |
+| KeePassVault 1.16.0 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-android | 1.7.3 | 1.7.3 | 1.7.3 | `real-aligned-source-clean` |
+| KeePassVault 1.16.0 | source-validated-partial | org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm | 1.7.3 | 1.7.3 | 1.7.3 | `real-aligned-source-clean` |
 | K-9 / Thunderbird Android 18.0 | source-linked-blocked | androidx.appcompat:appcompat | not validated | 1.7.1 | 1.7.1 | `real-layer-covered-unvalidated` |
 | K-9 / Thunderbird Android 18.0 | source-linked-blocked | androidx.concurrent:concurrent-futures | not validated | 1.1.0 | 1.1.0 | `real-layer-covered-unvalidated` |
 | K-9 / Thunderbird Android 18.0 | source-linked-blocked | androidx.exifinterface:exifinterface | not validated | 1.4.2 | 1.4.2 | `real-layer-covered-unvalidated` |
@@ -318,13 +1153,13 @@ These rows use existing real APK reports and source-validation artifacts where a
 | K-9 / Thunderbird Android 18.0 | source-linked-blocked | androidx.swiperefreshlayout:swiperefreshlayout | not validated | 1.2.0 | 1.2.0 | `real-layer-covered-unvalidated` |
 | K-9 / Thunderbird Android 18.0 | source-linked-blocked | androidx.viewpager2:viewpager2 | not validated | 1.0.0 | 1.1.0 | `real-layer-covered-unvalidated` |
 | K-9 / Thunderbird Android 18.0 | source-linked-blocked | com.squareup.okio:okio-jvm | not validated | 3.16.4 | 3.16.4 | `real-layer-covered-unvalidated` |
-| Jitsi Meet 26.0.0 | source-linked-blocked | androidx.activity:activity | not validated | 1.10.1 | 1.8.1 | `real-layer-covered-unvalidated` |
-| Jitsi Meet 26.0.0 | source-linked-blocked | androidx.exifinterface:exifinterface | not validated | 1.3.6 | 1.3.6 | `real-layer-covered-unvalidated` |
-| Jitsi Meet 26.0.0 | source-linked-blocked | androidx.fragment:fragment | not validated | 1.6.1 | 1.8.9 | `real-layer-covered-unvalidated` |
-| Jitsi Meet 26.0.0 | source-linked-blocked | androidx.lifecycle:lifecycle-runtime | not validated | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
-| Jitsi Meet 26.0.0 | source-linked-blocked | androidx.startup:startup-runtime | not validated | 1.1.1 | 1.1.1 | `real-layer-covered-unvalidated` |
-| Jitsi Meet 26.0.0 | source-linked-blocked | androidx.swiperefreshlayout:swiperefreshlayout | not validated | 1.0.0 | 1.2.0 | `real-layer-covered-unvalidated` |
-| Jitsi Meet 26.0.0 | source-linked-blocked | com.google.code.gson:gson | not validated | 2.8.6 | 2.13.1 | `real-layer-covered-unvalidated` |
+| Jitsi Meet 26.0.0 | source-validated-partial | androidx.activity:activity | 1.9.3 | 1.10.1 | 1.8.1 | `real-conflicting-source-mismatch` |
+| Jitsi Meet 26.0.0 | source-validated-partial | androidx.exifinterface:exifinterface | 1.3.6 | 1.3.6 | 1.3.6 | `real-aligned-source-clean` |
+| Jitsi Meet 26.0.0 | source-validated-partial | androidx.fragment:fragment | 1.6.1 | 1.6.1 | 1.8.9 | `real-regression-risk-do-not-promote` |
+| Jitsi Meet 26.0.0 | source-validated-partial | androidx.lifecycle:lifecycle-runtime | 2.6.2 | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
+| Jitsi Meet 26.0.0 | source-validated-partial | androidx.startup:startup-runtime | 1.1.1 | 1.1.1 | 1.1.1 | `real-aligned-source-clean` |
+| Jitsi Meet 26.0.0 | source-validated-partial | androidx.swiperefreshlayout:swiperefreshlayout | 1.1.0 | 1.0.0 | 1.2.0 | `real-conflicting-source-mismatch` |
+| Jitsi Meet 26.0.0 | source-validated-partial | com.google.code.gson:gson | 2.8.6 | 2.8.6 | 2.13.1 | `real-regression-risk-do-not-promote` |
 | FairEmail 1.2315 | source-validated-partial | androidx.activity:activity | 1.11.0 | 1.10.1 | 1.13.0 | `real-conflicting-source-mismatch` |
 | FairEmail 1.2315 | source-validated-partial | androidx.appcompat:appcompat | 1.7.1 | 1.7.1 | 1.7.1 | `real-aligned-source-clean` |
 | FairEmail 1.2315 | source-validated-partial | androidx.concurrent:concurrent-futures | 1.1.0 | 1.1.0 | 1.1.0 | `real-aligned-source-clean` |
@@ -356,6 +1191,9 @@ These rows use existing real APK reports and source-validation artifacts where a
 | Termux 0.119.0-beta.3 | limitation-native-heavy | androidx.lifecycle:lifecycle-runtime | not validated | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
 | Termux 0.119.0-beta.3 | limitation-native-heavy | androidx.recyclerview:recyclerview | not validated | 1.2.1 | 1.2.1 | `real-layer-covered-unvalidated` |
 | Termux 0.119.0-beta.3 | limitation-native-heavy | org.jetbrains.kotlinx:kotlinx-coroutines-android | not validated | 1.9.0 | 1.7.3 | `real-layer-covered-unvalidated` |
+| Simplify obfuscated sample | limitation-obfuscation | androidx.appcompat:appcompat | not validated | 1.7.1 | 1.7.1 | `real-layer-covered-unvalidated` |
+| Simplify obfuscated sample | limitation-obfuscation | androidx.core:core | not validated | 1.9.0 | 1.16.0 | `real-layer-covered-unvalidated` |
+| Simplify obfuscated sample | limitation-obfuscation | androidx.lifecycle:lifecycle-runtime | not validated | 2.6.2 | 2.6.2 | `real-single-reference-not-rankable` |
 
 ## Feature Blend
 

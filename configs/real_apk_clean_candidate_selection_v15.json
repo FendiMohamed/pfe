@@ -1,0 +1,139 @@
+{
+  "selections": [
+    {
+      "app": "Clock",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "time",
+        "clock",
+        "timer",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.best.deskclock",
+      "reason": "No-native clock/timer app with target SDK 36, a 12 MB APK, and a moderate source tarball; selected as a dependency-rich time utility outside the already counted Todo Agenda and Working Time rows.",
+      "slug": "clock",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Poet Assistant",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "writing",
+        "dictionary",
+        "tts",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "ca.rmen.android.poetassistant",
+      "reason": "No-native writing/dictionary app with target SDK 35, a large APK, and source tarball metadata; selected as a likely non-sparse reading/writing row with different dependencies from prior note apps.",
+      "slug": "poet-assistant",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Ultrasonic",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "multimedia",
+        "music-streaming",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.moire.ultrasonic",
+      "reason": "No-native Subsonic music client with target SDK 36, a medium APK, and a source tarball; selected to broaden media/internet evidence without native `.so` boundaries.",
+      "slug": "ultrasonic",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "FTPClient",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "cloud-storage",
+        "file-transfer",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "de.qwerty287.ftpclient",
+      "reason": "No-native FTP/FTPS/SFTP client with target SDK 36 and a 10 MB APK; selected as a compact connectivity/file-transfer row likely to expose networking dependencies.",
+      "slug": "ftpclient",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "RunnerUp",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "sports-health",
+        "workout",
+        "gps-tracker",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.runnerup.free",
+      "reason": "No-native workout/GPS tracker with target SDK 36, a medium APK, and a manageable source tarball; selected for a sports-health row with likely AndroidX/location/audio dependency evidence.",
+      "slug": "runnerup",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Json List",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "development",
+        "json-viewer",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.sjapps.jsonlist",
+      "reason": "No-native development/JSON viewer app with target SDK 36, a moderate APK, and a source tarball; selected to add a development-tool row outside browser, note, and media categories.",
+      "slug": "json-list",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "ImapNotes3",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "email",
+        "internet",
+        "notes",
+        "writing",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "de.niendo.ImapNotes3",
+      "reason": "No-native IMAP note/checklist app with target SDK 35 and a non-sparse generated report; selected as an email/internet writing row that exercises mail and sync dependencies without native code.",
+      "slug": "imapnotes3",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Forecastie",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "weather",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "cz.martykan.forecastie",
+      "reason": "No-native weather app with target SDK 36, a manageable APK/source pair, and likely standard Gradle wiring; selected as a weather/internet row after v14 proved this family can produce useful partial evidence.",
+      "slug": "forecastie",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    }
+  ]
+}

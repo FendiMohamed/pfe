@@ -1,0 +1,61 @@
+{
+  "apk": {
+    "expected_sha256": "c4a8b041eaea21d6d0a776c1ec8e13979fa2057e921d7a73b46740c7bb57e6eb",
+    "index_size": 17477891,
+    "path": "data/test_apks/real/study-tracker/study-tracker.apk",
+    "sha256": "c4a8b041eaea21d6d0a776c1ec8e13979fa2057e921d7a73b46740c7bb57e6eb",
+    "size": 17477891,
+    "url": "https://f-droid.org/repo/com.edward.studytracker_7.apk"
+  },
+  "app": "Study Tracker",
+  "categories": [
+    "Science & Education"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "education",
+    "study-tracking",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.edward.studytracker/",
+  "license": "Apache-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.edward.studytracker",
+  "proof_status": "report-generated",
+  "reason": "No-native education/study tracker with target SDK 34, a medium APK, and a compact source tarball; selected to add a student/productivity row with likely AndroidX/Compose evidence.",
+  "report": {
+    "detected_component_count": 15,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-study-tracker",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-study-tracker/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-study-tracker/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-study-tracker/sbom.cdx.json",
+    "sbom_component_count": 15,
+    "status": "ok"
+  },
+  "slug": "study-tracker",
+  "source_repo": "https://github.com/FunMax-Edward/study-tracker",
+  "source_tarball": {
+    "sha256": "877e9ce04edba3fc903bf781d5e65baf4bc764969550bd7cee9eabdedcfa3541",
+    "size": 1600697,
+    "url": "https://f-droid.org/repo/com.edward.studytracker_7_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 7,
+  "version_name": "1.0.7"
+}

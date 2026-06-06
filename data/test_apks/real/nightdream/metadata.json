@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "76cd759101a19ba34e84ffe920ae2dd726b53b2952dda497f4a533cf10a7d669",
+    "index_size": 11140815,
+    "path": "data/test_apks/real/nightdream/nightdream.apk",
+    "sha256": "76cd759101a19ba34e84ffe920ae2dd726b53b2952dda497f4a533cf10a7d669",
+    "size": 11140815,
+    "url": "https://f-droid.org/repo/com.firebirdberlin.nightdream.noGms_348.apk"
+  },
+  "app": "NightDream",
+  "categories": [
+    "Clock",
+    "Weather"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "clock",
+    "weather",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.firebirdberlin.nightdream.noGms/",
+  "license": "GPL-3.0-or-later",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.firebirdberlin.nightdream.noGms",
+  "proof_status": "report-generated",
+  "reason": "No-native clock/weather app with target SDK 36, medium APK size, and a sizeable source tarball; selected for a compact utility/media-adjacent clean non-sparse attempt.",
+  "report": {
+    "detected_component_count": 21,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-nightdream",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-nightdream/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-nightdream/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-nightdream/sbom.cdx.json",
+    "sbom_component_count": 21,
+    "status": "ok"
+  },
+  "slug": "nightdream",
+  "source_repo": "https://github.com/firebirdberlin/nightdream",
+  "source_tarball": {
+    "sha256": "f51ce691810647d58239264b0e2b6f8834ee2c344679339175dc87e49134dcc7",
+    "size": 36022002,
+    "url": "https://f-droid.org/repo/com.firebirdberlin.nightdream.noGms_348_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 348,
+  "version_name": "2.11.26"
+}

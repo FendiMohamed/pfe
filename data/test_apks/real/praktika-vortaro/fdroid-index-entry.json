@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "added": 1737566883000,
+    "authorName": "Du\u0161an Jureti\u0107",
+    "categories": [
+      "Reading",
+      "Science & Education",
+      "Translation & Dictionary"
+    ],
+    "description": {
+      "en-US": "Praktika Vortaro is an Esperanto dictionary, based on Reta Vortaro. It works offline, without Internet access.",
+      "eo": "Praktika Vortaro estas Esperanta vortaro, bazita sur Reta Vortaro. \u011ci funkcias senkonekte, sen retaliro."
+    },
+    "icon": {
+      "en-US": {
+        "name": "/com.esperantajvortaroj.app/en-US/icon_VLpBM2iuqYh_ZViVDfYA0tkX2iP1iJkOJSWBIeuHFD0=.png",
+        "sha256": "54ba413368aea9887f6558950df600d2d917da23f588990e25258121eb87143d",
+        "size": 16904
+      }
+    },
+    "issueTracker": "https://github.com/djuretic/praktika-vortaro/issues",
+    "lastUpdated": 1737566883000,
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-US": "Praktika Vortaro"
+    },
+    "preferredSigner": "670cb15029acf3624fcc2ac28c0655460e794c9d135bfc3c85be26491b8b936c",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.esperantajvortaroj.app/en-US/phoneScreenshots/1.png",
+            "sha256": "b9a2449e4507188d22c7ccfc60bc0b1f888cd80a4de55f491e1eb84cd5dde546",
+            "size": 238215
+          },
+          {
+            "name": "/com.esperantajvortaroj.app/en-US/phoneScreenshots/2.png",
+            "sha256": "514a5d28f543623a7198e95553f305ef03e0aca83cb6d54f690088acaf8be56b",
+            "size": 303329
+          },
+          {
+            "name": "/com.esperantajvortaroj.app/en-US/phoneScreenshots/3.png",
+            "sha256": "836e1b022aae363d6048425c6e1f2327daae8e929a5f25139dec8f7213e98cce",
+            "size": 174689
+          },
+          {
+            "name": "/com.esperantajvortaroj.app/en-US/phoneScreenshots/4.png",
+            "sha256": "79e7e2cfbcb48a388ef5fde1259690a5dba474d81739610c2644225bc0237dc8",
+            "size": 175869
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/djuretic/praktika-vortaro",
+    "summary": {
+      "en-US": "Offline Esperanto dictionary",
+      "eo": "Senkonekta esperanta vortaro"
+    }
+  },
+  "version": {
+    "added": 1737566883000,
+    "file": {
+      "ipfsCIDv1": "bafybeics5zxhyitp3sb4w7nus66yegyhnoiuu467b6oi64mfz3jxgecbea",
+      "name": "/com.esperantajvortaroj.app_26.apk",
+      "sha256": "27a94fa3ed9a4d916ab24747852a5310e892eb93f55ec5e7c112cc49ae8f067b",
+      "size": 22086164
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "670cb15029acf3624fcc2ac28c0655460e794c9d135bfc3c85be26491b8b936c"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "com.esperantajvortaroj.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 16,
+        "targetSdkVersion": 34
+      },
+      "versionCode": 26,
+      "versionName": "0.26"
+    },
+    "src": {
+      "name": "/com.esperantajvortaroj.app_26_src.tar.gz",
+      "sha256": "528f90a506d6235b825c85e94bb7e9549574070420c42497fe36ff05916f917e",
+      "size": 950875
+    }
+  }
+}

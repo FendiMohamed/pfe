@@ -1,6 +1,6 @@
 # K-9 / Thunderbird Android Proof Bundle
 
-This note records the current K-9 / Thunderbird Android proof attempt. It is a useful source-linked real APK case, but it is not admitted as a clean source-validated accuracy case because the resolved Gradle dependency tree is currently blocked.
+This note records the current K-9 / Thunderbird Android proof. It is now admitted as source-validated partial evidence after a validation-only included-build/plugin-lite rescue produced the resolved `fossReleaseRuntimeClasspath` tree. It is not a clean source-validated accuracy case because 6 of 11 emitted Maven versions still mismatch source.
 
 ## APK And Source Proof
 
@@ -51,11 +51,11 @@ Detected Maven components:
 | `androidx.recyclerview:recyclerview` | `1.4.0` | catalog declares `1.4.0` |
 | `androidx.fragment:fragment` | `1.8.9` | catalog declares `1.8.9` |
 | `com.squareup.okio:okio-jvm` | `3.16.4` | catalog declares Okio `3.16.4`; JVM artifact-family mapping is expected |
-| `androidx.swiperefreshlayout:swiperefreshlayout` | `1.2.0` | catalog declares `1.1.0`; likely mismatch until resolved tree confirms |
-| `androidx.lifecycle:lifecycle-runtime` | `2.6.2` | catalog declares Lifecycle `2.10.0`; likely mismatch until resolved tree confirms |
-| `androidx.localbroadcastmanager:localbroadcastmanager` | `1.0.0` | catalog declares `1.1.0`; likely mismatch until resolved tree confirms |
+| `androidx.swiperefreshlayout:swiperefreshlayout` | `1.2.0` | resolved tree confirms source version `1.1.0`, version mismatch |
+| `androidx.lifecycle:lifecycle-runtime` | `2.6.2` | resolved tree confirms source version `2.10.0`, version mismatch |
+| `androidx.localbroadcastmanager:localbroadcastmanager` | `1.0.0` | resolved tree confirms source version `1.1.0`, version mismatch |
 
-The remaining emitted components are likely transitive and require the full resolved Gradle tree before making version-correctness claims.
+The remaining emitted components are now compared against the resolved Gradle tree in the source-validation report.
 
 ## Version Catalog Check
 
@@ -77,7 +77,7 @@ Summary:
 | Artifact-family version mismatches | 1 |
 | Not declared in catalog | 4 |
 
-The catalog check supports using K-9 as a source-linked diversity case, but it is not enough to admit K-9 into source-validated accuracy metrics.
+The catalog check is retained as weak supporting evidence. K-9 is admitted because the resolved runtime dependency tree and `validate-source-deps` output now exist.
 
 ## Gradle Dependency Tree Status
 
@@ -94,19 +94,47 @@ sed -i -e 's|maven.mozilla.org/maven2|jitpack.io|' -e '/glean/d' -e '/googleplay
 sed -i -e 's/feature.funding.googleplay/feature.funding.link/' build.gradle.kts
 ```
 
-Current blocker:
+Older blocker context:
 
 - Gradle `9.5.0` and a temporary source-declared Gradle `9.4.0` both stalled after K-9's included `build-plugin` setup for 30 minutes.
 - A configuration-cache-disabled Gradle `9.5.0` run failed resolving `org.gradle.kotlin.kotlin-dsl` `6.5.7`.
 - A fresh validation-only extraction added `google()` and `mavenCentral()` before `gradlePluginPortal()` in the included build-plugin settings to avoid resolving TensorFlow metadata through the plugin portal first. That retry advanced into the included `build-plugin` Kotlin/resource tasks, but still timed out before producing `fossReleaseRuntimeClasspath`.
 
-Therefore K-9 is currently classified as `partial-gradle-blocked`, not `source-validated-real`.
+Successful rescue:
+
+- A validation-only source copy at `data/results/source-validation/k9-thunderbird-android/source-plugin-lite/` keeps the `app-k9mail` `fossRelease` runtime project graph while disabling build-time quality, test, full-flavor, and plugin overhead that is irrelevant to dependency-tree capture.
+- Docker Gradle `9.5.0` generated `data/results/source-validation/k9-thunderbird-android/fossReleaseRuntimeClasspath.plugin-lite-runtimegraph-composefix.txt`.
+- The tree contains 333 parsed source components and ends with `BUILD SUCCESSFUL in 7m 11s`.
+
+## Source Dependency Validation
+
+`validate-source-deps` was run against:
+
+```text
+data/results/report-real-k9-thunderbird-android/sbom.cdx.json
+data/results/source-validation/k9-thunderbird-android/fossReleaseRuntimeClasspath.plugin-lite-runtimegraph-composefix.txt
+```
+
+Output:
+
+```text
+data/results/source-validation/k9-thunderbird-android-report-validation/source-validation.md
+data/results/source-validation/k9-thunderbird-android-report-validation/source-validation.json
+```
+
+Summary:
+
+| Group | Components | Confirmed | Version mismatch | Missing |
+|---|---:|---:|---:|---:|
+| SBOM components | 11 | 5 | 6 | 0 |
+
+K-9 is now classified as `source-validated-partial`, not blocked.
 
 ## Interpretation
 
 This is a valuable research case precisely because it is not perfect:
 
 - it confirms APK extraction, manifest metadata, multidex, native file reporting, and OSV querying on a modern security-sensitive app;
-- it provides source and version-catalog evidence for some emitted components;
-- it exposes a realistic source-validation blocker caused by complex Gradle build logic;
-- it must not be used for precision/recall or full version-accuracy claims until the resolved dependency tree is generated.
+- it provides resolved source dependency evidence for 11 emitted Maven components;
+- it exposes a realistic build-system rescue pattern for complex included Gradle build logic;
+- it must not be described as clean because 6 emitted Maven versions still mismatch source.

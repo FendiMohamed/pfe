@@ -196,14 +196,14 @@ K-9 / Thunderbird Android `18.0` is collected as a source-linked candidate, but 
 Maven SBOM components: 11
 Native file components: 8
 OSV vulnerabilities: 0
-Source validation: blocked before resolved dependency tree
+Source validation: 5/11 confirmed, 6 mismatches, 0 missing
 ```
 
 The APK/source proof is strong: manifest package `com.fsck.k9`, versionName `18.0`, and versionCode `39035` match the F-Droid build record. F-Droid metadata points to commit `23016c71d2f075700a0e258b9fe374bd06d8257b`, subdir `app-k9mail`, and flavor `foss`.
 
-The source version catalog check confirms some emitted versions, including AppCompat `1.7.1`, RecyclerView `1.4.0`, Fragment `1.8.9`, and Okio `3.16.4` through artifact-family mapping. It also exposes likely mismatches that need resolved-tree validation, including SwipeRefreshLayout `1.1.0` vs selected `1.2.0`, Lifecycle `2.10.0` vs selected `2.6.2`, and LocalBroadcastManager `1.1.0` vs selected `1.0.0`. The catalog-only validation result is 3 exact confirmations, 2 exact catalog mismatches, 1 artifact-family confirmation, 1 artifact-family mismatch, and 4 not-in-catalog emitted components.
+The source version catalog check confirms some emitted versions, including AppCompat `1.7.1`, RecyclerView `1.4.0`, Fragment `1.8.9`, and Okio `3.16.4` through artifact-family mapping. It also exposed likely mismatches that needed resolved-tree validation, including SwipeRefreshLayout `1.1.0` vs selected `1.2.0`, Lifecycle `2.10.0` vs selected `2.6.2`, and LocalBroadcastManager `1.1.0` vs selected `1.0.0`. The catalog-only validation result remains historical partial evidence: 3 exact confirmations, 2 exact catalog mismatches, 1 artifact-family confirmation, 1 artifact-family mismatch, and 4 not-in-catalog emitted components.
 
-Dependency-tree generation was attempted with Gradle `9.5.0`, a temporary source-declared Gradle `9.4.0`, and a fresh validation-only source copy where the included build-plugin repositories prefer `google()` and `mavenCentral()` before `gradlePluginPortal()`. The repository-order retry advanced into included `build-plugin` Kotlin/resource tasks, but still timed out before producing `fossReleaseRuntimeClasspath`. A configuration-cache-disabled Gradle `9.5.0` run failed resolving `org.gradle.kotlin.kotlin-dsl` `6.5.7`. Keep K-9 as `partial-gradle-blocked` until this is solved.
+Dependency-tree generation was first attempted with Gradle `9.5.0`, a temporary source-declared Gradle `9.4.0`, and a fresh validation-only source copy where the included build-plugin repositories prefer `google()` and `mavenCentral()` before `gradlePluginPortal()`. Those attempts stalled after K-9's included `build-plugin` setup. The later 2026-06-05 validation-only plugin-lite/runtime-graph copy generated `fossReleaseRuntimeClasspath` at `data/results/source-validation/k9-thunderbird-android/fossReleaseRuntimeClasspath.plugin-lite-runtimegraph-composefix.txt`; source validation at `data/results/source-validation/k9-thunderbird-android-report-validation/source-validation.md` promotes K-9 to source-validated partial, not clean evidence.
 
 ## FairEmail Source Validation Result
 

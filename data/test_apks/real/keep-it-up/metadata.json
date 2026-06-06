@@ -1,0 +1,64 @@
+{
+  "apk": {
+    "expected_sha256": "a01f3b2bf71b7976b83c988dcd0bfdb94e94e7dc9732a112e7ff94ccf667ef3e",
+    "index_size": 4119641,
+    "path": "data/test_apks/real/keep-it-up/keep-it-up.apk",
+    "sha256": "a01f3b2bf71b7976b83c988dcd0bfdb94e94e7dc9732a112e7ff94ccf667ef3e",
+    "size": 4119641,
+    "url": "https://f-droid.org/repo/net.ibbaa.keepitup_20.apk"
+  },
+  "app": "Keep it up",
+  "categories": [
+    "Connectivity",
+    "Internet",
+    "Network Analyzer"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "connectivity",
+    "internet",
+    "network-monitor",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/net.ibbaa.keepitup/",
+  "license": "Apache-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "net.ibbaa.keepitup",
+  "proof_status": "report-generated",
+  "reason": "No-native network-monitoring app with target SDK 36, internet/connectivity behavior, and manageable source size; selected for a likely non-sparse dependency tree without native code.",
+  "report": {
+    "detected_component_count": 5,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v12/report-real-keep-it-up",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v12/report-real-keep-it-up/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v12/report-real-keep-it-up/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v12/report-real-keep-it-up/sbom.cdx.json",
+    "sbom_component_count": 5,
+    "status": "ok"
+  },
+  "slug": "keep-it-up",
+  "source_repo": "https://github.com/ibbaa/keepitup",
+  "source_tarball": {
+    "sha256": "a27938fc43651a81880db04e044a5a8fe11b219ff3c8aafa71496c875c4bab54",
+    "size": 18176983,
+    "url": "https://f-droid.org/repo/net.ibbaa.keepitup_20_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 20,
+  "version_name": "1.11.1"
+}

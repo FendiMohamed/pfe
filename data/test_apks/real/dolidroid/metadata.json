@@ -1,0 +1,61 @@
+{
+  "apk": {
+    "expected_sha256": "48078a09b0c10e39cde5bfe373b056d8f7da80d3967b80fe49ec33832b1e1517",
+    "index_size": 11497897,
+    "path": "data/test_apks/real/dolidroid/dolidroid.apk",
+    "sha256": "48078a09b0c10e39cde5bfe373b056d8f7da80d3967b80fe49ec33832b1e1517",
+    "size": 11497897,
+    "url": "https://f-droid.org/repo/com.nltechno.dolidroidpro_69.apk"
+  },
+  "app": "DoliDroid",
+  "categories": [
+    "Internet"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "internet",
+    "erp-crm",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.nltechno.dolidroidpro/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.nltechno.dolidroidpro",
+  "proof_status": "report-generated",
+  "reason": "No-native ERP/CRM front-end with target SDK 36, a medium APK, and a large source tarball; useful for another dependency-rich internet/business clean-candidate probe.",
+  "report": {
+    "detected_component_count": 14,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v9/report-real-dolidroid",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v9/report-real-dolidroid/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v9/report-real-dolidroid/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v9/report-real-dolidroid/sbom.cdx.json",
+    "sbom_component_count": 14,
+    "status": "ok"
+  },
+  "slug": "dolidroid",
+  "source_repo": "https://github.com/DoliCloud/dolidroid",
+  "source_tarball": {
+    "sha256": "c5e49561b0b19acc966d26b8590bb18ba870be5601dad220967ba563be1c0c74",
+    "size": 43004026,
+    "url": "https://f-droid.org/repo/com.nltechno.dolidroidpro_69_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 69,
+  "version_name": "3.0.69"
+}

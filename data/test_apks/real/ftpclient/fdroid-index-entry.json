@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "added": 1652054400000,
+    "authorEmail": "qwerty287@posteo.de",
+    "authorName": "qwerty287",
+    "categories": [
+      "Cloud Storage & File Sync",
+      "Internet"
+    ],
+    "changelog": "https://codeberg.org/qwerty287/ftpclient/releases",
+    "description": {
+      "en-US": "FTPClient is a very simple FTP, FTPS and SFTP client for Android 5.0+, using Apache Commons Net (https://commons.apache.org/proper/commons-net) and SSHJ (https://github.com/hierynomus/sshj/).\n\n<b>Features</b>\n\n- view directory content\n- upload files to servers\n- create directories\n- download files\n- view file and directory properties\n- rename files and directories\n- view text and image files\n- edit text files\n"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/de.qwerty287.ftpclient/en-US/icon_L5D6pwscb5in8ysU8OPqlHxNlrCscxQDjzIACXgpahY=.png",
+        "sha256": "2f90faa70b1c6f98a7f32b14f0e3ea947c4d96b0ac7314038f32000978296a16",
+        "size": 8021
+      }
+    },
+    "issueTracker": "https://codeberg.org/qwerty287/ftpclient/issues",
+    "lastUpdated": 1776019596620,
+    "license": "MIT",
+    "name": {
+      "en-US": "FTPClient"
+    },
+    "preferredSigner": "942b8b8da846384118ffdb431e2a8db1af41de30a39bc9f240ec7bd9b448fe3d",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/de.qwerty287.ftpclient/en-US/phoneScreenshots/001.png",
+            "sha256": "bfcf0b3cee819cccf642b15c9d1bd582828385274a6b1d9588b2e4394790c69b",
+            "size": 29366
+          },
+          {
+            "name": "/de.qwerty287.ftpclient/en-US/phoneScreenshots/002.png",
+            "sha256": "1b8f20dde58ed47c429d8e7f376b9fb77708f35b08bf0e27a52e38305076b861",
+            "size": 37918
+          },
+          {
+            "name": "/de.qwerty287.ftpclient/en-US/phoneScreenshots/003.png",
+            "sha256": "c48c377283ae8f2b87bb62cc15b37767b640d72dbc02efad654b98b270e33648",
+            "size": 18920
+          },
+          {
+            "name": "/de.qwerty287.ftpclient/en-US/phoneScreenshots/004.png",
+            "sha256": "89ffcd3496646dbf607b4a3523083d6b696a993e216f11b46147c2b39c0eb5b9",
+            "size": 33005
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://codeberg.org/qwerty287/ftpclient",
+    "summary": {
+      "en-US": "A simple FTP, FTPS and SFTP client for Android"
+    },
+    "translation": "https://translate.codeberg.org/projects/ftpclient/"
+  },
+  "version": {
+    "added": 1776019596620,
+    "file": {
+      "ipfsCIDv1": "bafybeigwcxru6n2dmj6yrbynznoq55ebhmtib7uc25izryapel7q3iq7ty",
+      "name": "/de.qwerty287.ftpclient_27.apk",
+      "sha256": "6ff2549f7e9d1bf38fb0abf989d43d14cfce313877faf9de072f295f612391d3",
+      "size": 10440604
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "942b8b8da846384118ffdb431e2a8db1af41de30a39bc9f240ec7bd9b448fe3d"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "de.qwerty287.ftpclient.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 23,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 27,
+      "versionName": "3.0.1"
+    },
+    "src": {
+      "name": "/de.qwerty287.ftpclient_27_src.tar.gz",
+      "sha256": "fec9581c3cf2e17918264fd6f9f128e296d9c2e0311ade11e667c73669a3b52a",
+      "size": 276692
+    },
+    "whatsNew": {
+      "en-US": "- fix buttons below navigation bars, thanks to @cromeiro\n- update dependencies\n"
+    }
+  }
+}

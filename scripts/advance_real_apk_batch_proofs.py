@@ -17,6 +17,7 @@ DEFAULT_SOURCE_ROOT = Path("data/source/real-apk-growth-batch-v2")
 DEFAULT_VALIDATION_ROOT = Path("data/results/source-validation/real-apk-growth-batch-v2")
 DEFAULT_DOC = Path("docs/evaluation/REAL_APK_GROWTH_BATCH_V2_PROOF_STATUS.md")
 DEFAULT_JSON = Path("data/results/evaluation/real-apk-growth-batch-v2-proof-status.json")
+DEFAULT_RESCUE_PROFILE_JSON = Path("configs/real_apk_blocker_rescue_profiles.json")
 
 COMMON_CONFIGURATIONS = [
     "releaseRuntimeClasspath",
@@ -44,6 +45,19 @@ COMMON_DEPENDENCY_TASKS = [
 ]
 
 SLUG_CONFIGURATIONS = {
+    "floccus": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath",
+        "fdroidReleaseRuntimeClasspath",
+    ],
+    "opencloud": [
+        "originalReleaseRuntimeClasspath",
+        "qaReleaseRuntimeClasspath",
+        "originalDebugRuntimeClasspath",
+        "qaDebugRuntimeClasspath",
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath",
+    ],
     "localsend": ["prodReleaseRuntimeClasspath", "releaseRuntimeClasspath"],
     "davx5": ["oseReleaseRuntimeClasspath", "releaseRuntimeClasspath"],
     "keepassdx": ["libreReleaseRuntimeClasspath", "releaseRuntimeClasspath"],
@@ -62,6 +76,8 @@ SLUG_CONFIGURATIONS = {
 }
 
 SLUG_DEPENDENCY_TASKS = {
+    "floccus": [":app:dependencies"],
+    "opencloud": [":opencloudApp:dependencies"],
     "davx5": [":app-ose:dependencies", "dependencies"],
     "openvpn-for-android": [":main:dependencies", "dependencies"],
     "shelter": [":app:dependencies", "dependencies"],
@@ -69,7 +85,10 @@ SLUG_DEPENDENCY_TASKS = {
     "gadgetbridge": [":app:dependencies", "dependencies"],
 }
 
-VALIDATION_COPY_SLUGS = {"openvpn-for-android", "shelter"}
+VALIDATION_COPY_SLUGS = {"openvpn-for-android", "shelter", "opencloud"}
+VALIDATION_COPY_ONLY_SLUGS: set[str] = set()
+STRICT_CONFIGURATION_SLUGS: set[str] = set()
+SLUG_GRADLE_COMMANDS: dict[str, list[str]] = {}
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -86,6 +105,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--skip-extract", action="store_true")
     parser.add_argument("--attempt-gradle", action="store_true")
     parser.add_argument("--gradle-timeout", type=int, default=300)
+    parser.add_argument("--rescue-profile-json", default=str(DEFAULT_RESCUE_PROFILE_JSON))
     parser.add_argument(
         "--reuse-existing-proofs",
         action="store_true",
@@ -95,6 +115,43 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
+def read_rescue_profiles(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        return {}
+    payload = read_json(path)
+    return payload.get("assignments", {})
+
+
+def apply_rescue_profile_hints(rows: list[dict[str, Any]], assignments: dict[str, Any]) -> None:
+    for row in rows:
+        slug = row.get("slug")
+        profile = assignments.get(slug) or {}
+        configs = profile.get("configurations") or []
+        tasks = profile.get("tasks") or []
+        if configs:
+            if profile.get("strict_configurations"):
+                SLUG_CONFIGURATIONS[slug] = [str(item) for item in configs]
+            else:
+                SLUG_CONFIGURATIONS[slug] = list(
+                    dict.fromkeys([str(item) for item in configs] + SLUG_CONFIGURATIONS.get(slug, []))
+                )
+        if tasks:
+            SLUG_DEPENDENCY_TASKS[slug] = list(
+                dict.fromkeys([str(item) for item in tasks] + SLUG_DEPENDENCY_TASKS.get(slug, []))
+            )
+        if profile.get("validation_copy"):
+            VALIDATION_COPY_SLUGS.add(slug)
+        if profile.get("validation_copy_only"):
+            VALIDATION_COPY_ONLY_SLUGS.add(slug)
+        if profile.get("strict_configurations"):
+            STRICT_CONFIGURATION_SLUGS.add(slug)
+        gradle_command_hint = profile.get("gradle_command")
+        if isinstance(gradle_command_hint, str):
+            SLUG_GRADLE_COMMANDS[slug] = [gradle_command_hint]
+        elif isinstance(gradle_command_hint, list):
+            SLUG_GRADLE_COMMANDS[slug] = [str(item) for item in gradle_command_hint]
+
+
 def main() -> int:
     args = build_parser().parse_args()
     batch = read_json(Path(args.batch_json))
@@ -102,6 +159,8 @@ def main() -> int:
     if args.slug:
         wanted = set(args.slug)
         rows = [row for row in rows if row["slug"] in wanted]
+    rescue_profiles = read_rescue_profiles(Path(args.rescue_profile_json))
+    apply_rescue_profile_hints(rows, rescue_profiles)
     if args.reuse_existing_proofs:
         result = reuse_existing_proofs(
             rows=rows,
@@ -188,7 +247,13 @@ def reuse_existing_proofs(
     for row in rows:
         proof_path = validation_root / row["slug"] / "proof-status.json"
         if proof_path.exists():
-            proofs.append(read_json(proof_path))
+            proof = read_json(proof_path)
+            if normalize_proof_metric_eligibility(proof):
+                proof_path.write_text(
+                    json.dumps(proof, indent=2, sort_keys=True) + "\n",
+                    encoding="utf-8",
+                )
+            proofs.append(proof)
             continue
         failures += 1
         if not continue_on_error:
@@ -285,9 +350,14 @@ def advance_one(
     )
     dependency_tree = {"status": "not-attempted", "reason": "run with --attempt-gradle"}
     if attempt_gradle:
+        active_gradle_roots = (
+            [root["root"] for root in validation_gradle_roots]
+            if slug in VALIDATION_COPY_ONLY_SLUGS and validation_gradle_roots
+            else [root["root"] for root in validation_gradle_roots] + gradle_roots
+        )
         dependency_tree = attempt_dependency_tree(
             slug=slug,
-            gradle_roots=[root["root"] for root in validation_gradle_roots] + gradle_roots,
+            gradle_roots=active_gradle_roots,
             validation_root_metadata=validation_root_metadata(validation_gradle_roots),
             validation_dir=validation_dir,
             timeout=gradle_timeout,
@@ -312,7 +382,7 @@ def advance_one(
         "version_code": row.get("version_code"),
         "target_layer": row["target_layer"],
         "validation_level": row["validation_level"],
-        "metric_eligibility": "excluded-from-source-validated-metrics",
+        "metric_eligibility": metric_eligibility_for(proof_status),
         "proof_status": proof_status,
         "source": {
             "status": source_status,
@@ -426,6 +496,28 @@ def prepare_validation_gradle_roots(
         return [prepare_openvpn_validation_copy(source_project_root, validation_dir)]
     if slug == "shelter":
         return [prepare_shelter_validation_copy(source_project_root, validation_dir)]
+    if slug == "opencloud":
+        return [prepare_opencloud_validation_copy(source_project_root, validation_dir)]
+    if slug == "owncloud":
+        return [prepare_owncloud_validation_copy(source_project_root, validation_dir)]
+    if slug == "waistline":
+        return [prepare_waistline_validation_copy(source_project_root, validation_dir)]
+    if slug == "odysee":
+        return [prepare_odysee_validation_copy(source_project_root, validation_dir)]
+    if slug == "baby-books":
+        return [prepare_baby_books_validation_copy(source_project_root, validation_dir)]
+    if slug == "radarweather":
+        return [prepare_radarweather_validation_copy(source_project_root, validation_dir)]
+    if slug == "simplelogin":
+        return [prepare_simplelogin_validation_copy(source_project_root, validation_dir)]
+    if slug == "omni-notes":
+        return [prepare_omni_notes_validation_copy(source_project_root, validation_dir)]
+    if slug == "openkeychain":
+        return [prepare_openkeychain_validation_copy(source_project_root, validation_dir)]
+    if slug == "todo-agenda":
+        return [prepare_todo_agenda_validation_copy(source_project_root, validation_dir)]
+    if slug in {"dolidroid", "radiodroid", "poet-assistant"}:
+        return [prepare_jcenter_repository_validation_copy(source_project_root, validation_dir, slug)]
     return []
 
 
@@ -536,6 +628,597 @@ def prepare_shelter_validation_copy(source_root: Path, validation_dir: Path) -> 
     }
 
 
+def prepare_opencloud_validation_copy(source_root: Path, validation_dir: Path) -> dict[str, Any]:
+    destination = recreate_validation_copy(
+        source_root=source_root,
+        destination=validation_dir / "validation-source-opencloud-runtime-tree",
+        allowed_root=validation_dir,
+    )
+    modified_files: list[Path] = []
+    root_build = destination / "build.gradle"
+    if root_build.exists():
+        text = root_build.read_text(encoding="utf-8")
+        patched = text.replace(
+            "    alias libs.plugins.sonarqube\n"
+            "    alias libs.plugins.ksp apply false\n"
+            "    alias libs.plugins.detekt\n",
+            "    // Validation copy: analysis/codegen plugins disabled for dependency-tree capture.\n",
+        )
+        patched = patched.replace(
+            '    apply plugin: "com.google.devtools.ksp"\n',
+            '    // Validation copy: KSP disabled for dependency-tree capture.\n',
+        )
+        patched = patched.replace(
+            '    apply plugin: "io.gitlab.arturbosch.detekt"\n',
+            '    // Validation copy: Detekt disabled for dependency-tree capture.\n',
+        )
+        if patched != text:
+            root_build.write_text(patched, encoding="utf-8")
+            modified_files.append(root_build)
+    for build_file in destination.rglob("build.gradle"):
+        text = build_file.read_text(encoding="utf-8")
+        patched = patch_opencloud_module_build(text)
+        if build_file.name == "build.gradle" and build_file.parent.name == "opencloudApp":
+            patched = (
+                "// Validation copy: output-name helper expects this legacy property.\n"
+                "ext.archivesBaseName = 'opencloudApp'\n"
+                + patched
+            )
+        if patched != text:
+            build_file.write_text(patched, encoding="utf-8")
+            modified_files.append(build_file)
+    return {
+        "root": destination,
+        "reason": "Validation copy disables OpenCloud KSP/Kotlin/Parcelize/Detekt/Sonar build-time plugins that use Gradle APIs incompatible with the current Docker Gradle fallback; runtime dependency declarations are preserved for source-validation tree capture.",
+        "modified_files": modified_files,
+    }
+
+
+def patch_opencloud_module_build(text: str) -> str:
+    lines = text.splitlines()
+    patched_lines: list[str] = []
+    skip_block_depth = 0
+    for line in lines:
+        stripped = line.strip()
+        if skip_block_depth:
+            skip_block_depth += line.count("{") - line.count("}")
+            if skip_block_depth <= 0:
+                skip_block_depth = 0
+            continue
+        if stripped == "apply plugin: 'com.google.devtools.ksp'":
+            patched_lines.append("// Validation copy: KSP plugin disabled for dependency-tree capture.")
+            continue
+        if stripped in {"apply plugin: 'kotlin-android'", "apply plugin: 'kotlin-parcelize'"}:
+            patched_lines.append("// Validation copy: Kotlin build plugin disabled for dependency-tree capture.")
+            continue
+        if stripped == "ksp {":
+            skip_block_depth = 1
+            patched_lines.append("// Validation copy: KSP configuration omitted for runtime dependency-tree capture.")
+            continue
+        if stripped == "kotlinOptions {":
+            skip_block_depth = 1
+            patched_lines.append("// Validation copy: Kotlin compiler options omitted for dependency-tree capture.")
+            continue
+        if stripped.startswith("ksp ") or stripped.startswith("ksp("):
+            patched_lines.append("// Validation copy: KSP dependency omitted for runtime dependency-tree capture.")
+            continue
+        if stripped.startswith("detektPlugins "):
+            patched_lines.append("// Validation copy: Detekt dependency omitted for runtime dependency-tree capture.")
+            continue
+        if stripped.startswith("tasks.withType(io.gitlab.arturbosch.detekt.Detekt)"):
+            skip_block_depth = line.count("{") - line.count("}")
+            patched_lines.append("// Validation copy: Detekt task configuration omitted for dependency-tree capture.")
+            if skip_block_depth <= 0:
+                skip_block_depth = 0
+            continue
+        patched_lines.append(line)
+    return "\n".join(patched_lines) + ("\n" if text.endswith("\n") else "")
+
+
+def prepare_owncloud_validation_copy(source_root: Path, validation_dir: Path) -> dict[str, Any]:
+    destination = recreate_validation_copy(
+        source_root=source_root,
+        destination=validation_dir / "validation-source-owncloud-runtime-tree",
+        allowed_root=validation_dir,
+    )
+    modified_files: list[Path] = []
+    root_build = destination / "build.gradle"
+    if root_build.exists():
+        text = root_build.read_text(encoding="utf-8")
+        patched = patch_owncloud_root_build(text)
+        if patched != text:
+            root_build.write_text(patched, encoding="utf-8")
+            modified_files.append(root_build)
+    for build_file in destination.rglob("build.gradle"):
+        text = build_file.read_text(encoding="utf-8")
+        patched = patch_opencloud_module_build(text)
+        if build_file.name == "build.gradle" and build_file.parent.name == "owncloudApp":
+            patched = (
+                "// Validation copy: output-name helper expects this legacy property.\n"
+                "ext.archivesBaseName = 'owncloudApp'\n"
+                + patched
+            )
+        if patched != text:
+            build_file.write_text(patched, encoding="utf-8")
+            modified_files.append(build_file)
+    return {
+        "root": destination,
+        "reason": "Validation copy disables ownCloud Kotlin/KSP/Parcelize/Ktlint/Detekt/Sonar/CycloneDX build-time wiring that fails before runtime dependency-tree capture; runtime implementation/api dependencies and local project module links are preserved.",
+        "modified_files": modified_files,
+    }
+
+
+def patch_owncloud_root_build(text: str) -> str:
+    lines = text.splitlines()
+    patched_lines: list[str] = []
+    skip_block_depth = 0
+    for line in lines:
+        stripped = line.strip()
+        if skip_block_depth:
+            skip_block_depth += line.count("{") - line.count("}")
+            if skip_block_depth <= 0:
+                skip_block_depth = 0
+            continue
+        if stripped.startswith("alias libs.plugins."):
+            patched_lines.append("    // Validation copy: root plugin alias disabled for dependency-tree capture.")
+            continue
+        if stripped.startswith('apply plugin: "com.google.devtools.ksp"'):
+            patched_lines.append('    // Validation copy: KSP plugin disabled for dependency-tree capture.')
+            continue
+        if stripped.startswith('apply plugin: "org.jlleitschuh.gradle.ktlint"'):
+            patched_lines.append('    // Validation copy: Ktlint plugin disabled for dependency-tree capture.')
+            continue
+        if stripped.startswith('apply plugin: "org.sonarqube"'):
+            patched_lines.append('    // Validation copy: SonarQube plugin disabled for dependency-tree capture.')
+            continue
+        if stripped.startswith('apply plugin: "io.gitlab.arturbosch.detekt"'):
+            patched_lines.append('    // Validation copy: Detekt plugin disabled for dependency-tree capture.')
+            continue
+        if stripped == "sonarqube {":
+            skip_block_depth = 1
+            patched_lines.append("// Validation copy: SonarQube configuration omitted for dependency-tree capture.")
+            continue
+        patched_lines.append(line)
+    return "\n".join(patched_lines) + ("\n" if text.endswith("\n") else "")
+
+
+def prepare_simplelogin_validation_copy(source_root: Path, validation_dir: Path) -> dict[str, Any]:
+    project_root = source_root / "SimpleLogin"
+    if not project_root.exists():
+        project_root = source_root
+    destination = recreate_validation_copy(
+        source_root=project_root,
+        destination=validation_dir / "validation-source-simplelogin-detekt-runtime-tree",
+        allowed_root=validation_dir,
+    )
+    modified_files: list[Path] = []
+    root_build = destination / "build.gradle"
+    if root_build.exists():
+        text = root_build.read_text(encoding="utf-8")
+        patched = patch_simplelogin_root_build(text)
+        if patched != text:
+            root_build.write_text(patched, encoding="utf-8")
+            modified_files.append(root_build)
+    return {
+        "root": destination,
+        "reason": "Validation copy disables the SimpleLogin Detekt build-time analysis plugin/configuration that requires removed Gradle ConfigureUtil APIs; runtime dependency declarations are preserved for source-validation tree capture.",
+        "modified_files": modified_files,
+    }
+
+
+def patch_simplelogin_root_build(text: str) -> str:
+    lines = text.splitlines()
+    patched_lines: list[str] = []
+    skip_block_depth = 0
+    for line in lines:
+        stripped = line.strip()
+        if skip_block_depth:
+            skip_block_depth += line.count("{") - line.count("}")
+            if skip_block_depth <= 0:
+                skip_block_depth = 0
+            continue
+        if stripped.startswith('id("io.gitlab.arturbosch.detekt")'):
+            patched_lines.append("    // Validation copy: Detekt plugin disabled for dependency-tree capture.")
+            continue
+        if stripped == "detekt {":
+            skip_block_depth = 1
+            patched_lines.append("// Validation copy: Detekt configuration omitted for dependency-tree capture.")
+            continue
+        patched_lines.append(line)
+    return "\n".join(patched_lines) + ("\n" if text.endswith("\n") else "")
+
+
+def prepare_omni_notes_validation_copy(source_root: Path, validation_dir: Path) -> dict[str, Any]:
+    destination = recreate_validation_copy(
+        source_root=source_root,
+        destination=validation_dir / "validation-source-omni-notes-runtime-tree",
+        allowed_root=validation_dir,
+    )
+    modified_files: list[Path] = []
+    root_build = destination / "build.gradle"
+    if root_build.exists():
+        text = root_build.read_text(encoding="utf-8")
+        patched = patch_omni_notes_root_build(text)
+        if patched != text:
+            root_build.write_text(patched, encoding="utf-8")
+            modified_files.append(root_build)
+    app_build = destination / "omniNotes" / "build.gradle"
+    if app_build.exists():
+        text = app_build.read_text(encoding="utf-8")
+        patched = patch_omni_notes_app_build(text)
+        if patched != text:
+            app_build.write_text(patched, encoding="utf-8")
+            modified_files.append(app_build)
+    return {
+        "root": destination,
+        "reason": "Validation copy disables Omni Notes SonarQube/test-logger/Jacoco build-time analysis wiring that uses Gradle APIs incompatible with the current Docker Gradle lanes; runtime implementation/api dependencies are preserved for source-validation tree capture.",
+        "modified_files": modified_files,
+    }
+
+
+def patch_omni_notes_root_build(text: str) -> str:
+    patched_lines: list[str] = []
+    for line in text.splitlines():
+        stripped = line.strip()
+        if "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin" in stripped:
+            patched_lines.append("        // Validation copy: SonarQube plugin classpath disabled for dependency-tree capture.")
+            continue
+        if "com.adarshr:gradle-test-logger-plugin" in stripped:
+            patched_lines.append("        // Validation copy: test-logger plugin classpath disabled for dependency-tree capture.")
+            continue
+        patched_lines.append(line)
+    return "\n".join(patched_lines) + ("\n" if text.endswith("\n") else "")
+
+
+def patch_omni_notes_app_build(text: str) -> str:
+    lines = text.splitlines()
+    patched_lines: list[str] = []
+    skip_block_depth = 0
+    for line in lines:
+        stripped = line.strip()
+        if skip_block_depth:
+            skip_block_depth += line.count("{") - line.count("}")
+            if skip_block_depth <= 0:
+                skip_block_depth = 0
+            continue
+        if stripped == "apply plugin: 'jacoco'":
+            patched_lines.append("// Validation copy: Jacoco plugin disabled for dependency-tree capture.")
+            continue
+        if stripped == "jacoco {":
+            skip_block_depth = 1
+            patched_lines.append("// Validation copy: Jacoco configuration omitted for dependency-tree capture.")
+            continue
+        if stripped.startswith("task jacocoTestReport("):
+            skip_block_depth = line.count("{") - line.count("}")
+            patched_lines.append("// Validation copy: Jacoco report task omitted for dependency-tree capture.")
+            if skip_block_depth <= 0:
+                skip_block_depth = 0
+            continue
+        if stripped == "apply plugin: 'com.adarshr.test-logger'":
+            patched_lines.append("// Validation copy: test-logger plugin disabled for dependency-tree capture.")
+            continue
+        if stripped.startswith("tasks.withType(Test).configureEach"):
+            skip_block_depth = line.count("{") - line.count("}")
+            patched_lines.append("// Validation copy: test task logging/Jacoco wiring omitted for dependency-tree capture.")
+            if skip_block_depth <= 0:
+                skip_block_depth = 0
+            continue
+        patched_lines.append(line)
+    return "\n".join(patched_lines) + ("\n" if text.endswith("\n") else "")
+
+
+def prepare_waistline_validation_copy(source_root: Path, validation_dir: Path) -> dict[str, Any]:
+    android_source_root = source_root / "platforms" / "android"
+    if not android_source_root.exists():
+        android_source_root = source_root
+    destination = recreate_validation_copy(
+        source_root=android_source_root,
+        destination=validation_dir / "validation-source-waistline-cordova-android-runtime-tree",
+        allowed_root=validation_dir,
+    )
+    modified_files: list[Path] = []
+    local_properties = destination / "local.properties"
+    local_properties.write_text("sdk.dir=/opt/android-sdk\nsdk-location=/opt/android-sdk\n", encoding="utf-8")
+    modified_files.append(local_properties)
+    cdv_config = destination / "cdv-gradle-config.json"
+    if cdv_config.exists():
+        config_payload = json.loads(cdv_config.read_text(encoding="utf-8"))
+        if config_payload.get("MIN_BUILD_TOOLS_VERSION") != "36.0.0":
+            config_payload["MIN_BUILD_TOOLS_VERSION"] = "36.0.0"
+            cdv_config.write_text(json.dumps(config_payload, indent=2) + "\n", encoding="utf-8")
+            modified_files.append(cdv_config)
+    cordova_gradle = destination / "CordovaLib" / "cordova.gradle"
+    if cordova_gradle.exists():
+        text = cordova_gradle.read_text(encoding="utf-8")
+        patched = text
+        if "import groovy.xml.XmlParser" not in patched:
+            patched = patched.replace(
+                "import java.util.regex.Pattern\n",
+                "import java.util.regex.Pattern\nimport groovy.xml.XmlParser\n",
+            )
+        if patched != text:
+            cordova_gradle.write_text(patched, encoding="utf-8")
+            modified_files.append(cordova_gradle)
+    barcode_gradle = destination / "phonegap-plugin-barcodescanner" / "line-barcodescanner.gradle"
+    if barcode_gradle.exists():
+        text = barcode_gradle.read_text(encoding="utf-8")
+        patched = text.replace(
+            "    jcenter()\n",
+            '    maven {\n        url "https://jcenter.bintray.com"\n    }\n',
+        )
+        if patched != text:
+            barcode_gradle.write_text(patched, encoding="utf-8")
+            modified_files.append(barcode_gradle)
+    return {
+        "root": destination,
+        "reason": "Validation copy clones only the Cordova Android Gradle project, adds Docker Android SDK local.properties, imports the Cordova Groovy XML parser class, aligns Cordova build-tools metadata with Docker build-tools 36.0.0, and replaces a removed plugin jcenter() repository call with the archived Maven URL; runtime dependency declarations are preserved for source-validation tree capture.",
+        "modified_files": modified_files,
+    }
+
+
+def prepare_odysee_validation_copy(source_root: Path, validation_dir: Path) -> dict[str, Any]:
+    destination = recreate_validation_copy(
+        source_root=source_root,
+        destination=validation_dir / "validation-source-odysee-cordova-runtime-tree",
+        allowed_root=validation_dir,
+    )
+    modified_files = patch_cordova_runtime_tree_copy(destination)
+    return {
+        "root": destination,
+        "reason": "Validation copy keeps Odysee's Cordova Android project intact, adds Docker Android SDK local.properties, and imports the Cordova Groovy XML parser class so Gradle can expose the app runtime dependency tree; runtime dependency declarations are preserved.",
+        "modified_files": modified_files,
+    }
+
+
+def patch_cordova_runtime_tree_copy(destination: Path) -> list[Path]:
+    modified_files: list[Path] = []
+    local_properties = destination / "local.properties"
+    local_properties.write_text("sdk.dir=/opt/android-sdk\nsdk-location=/opt/android-sdk\n", encoding="utf-8")
+    modified_files.append(local_properties)
+    cdv_config = destination / "cdv-gradle-config.json"
+    if cdv_config.exists():
+        config_payload = json.loads(cdv_config.read_text(encoding="utf-8"))
+        if config_payload.get("MIN_BUILD_TOOLS_VERSION") != "36.0.0":
+            config_payload["MIN_BUILD_TOOLS_VERSION"] = "36.0.0"
+            cdv_config.write_text(json.dumps(config_payload, indent=2) + "\n", encoding="utf-8")
+            modified_files.append(cdv_config)
+    cordova_gradle = destination / "CordovaLib" / "cordova.gradle"
+    if cordova_gradle.exists():
+        text = cordova_gradle.read_text(encoding="utf-8")
+        patched = text
+        if "import groovy.xml.XmlParser" not in patched:
+            patched = patched.replace(
+                "import java.util.regex.Pattern\n",
+                "import java.util.regex.Pattern\nimport groovy.xml.XmlParser\n",
+            )
+        if patched != text:
+            cordova_gradle.write_text(patched, encoding="utf-8")
+            modified_files.append(cordova_gradle)
+    return modified_files
+
+
+def prepare_baby_books_validation_copy(source_root: Path, validation_dir: Path) -> dict[str, Any]:
+    destination = recreate_validation_copy(
+        source_root=source_root,
+        destination=validation_dir / "validation-source-baby-books-android-runtime-tree",
+        allowed_root=validation_dir,
+    )
+    modified_files: list[Path] = []
+    settings = destination / "settings.gradle"
+    settings.write_text(
+        "pluginManagement {\n"
+        "    repositories {\n"
+        "        google()\n"
+        "        mavenCentral()\n"
+        "        gradlePluginPortal()\n"
+        "    }\n"
+        "}\n"
+        "\n"
+        "dependencyResolutionManagement {\n"
+        "    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)\n"
+        "    repositories {\n"
+        "        google()\n"
+        "        mavenCentral()\n"
+        "        maven { url 'https://jitpack.io' }\n"
+        "    }\n"
+        "}\n"
+        "\n"
+        "rootProject.name = 'Baby Book validation'\n"
+        "include ':android'\n"
+        "include ':library'\n",
+        encoding="utf-8",
+    )
+    modified_files.append(settings)
+    local_properties = destination / "local.properties"
+    local_properties.write_text("sdk.dir=/opt/android-sdk\nsdk-location=/opt/android-sdk\n", encoding="utf-8")
+    modified_files.append(local_properties)
+    root_build = destination / "build.gradle"
+    if root_build.exists():
+        text = root_build.read_text(encoding="utf-8")
+        patched = text.replace(
+            "tasks.register('stage') { dependsOn[':web:dist'] }\n",
+            "// Validation copy: web deployment task omitted for Android runtime dependency-tree capture.\n",
+        )
+        if patched != text:
+            root_build.write_text(patched, encoding="utf-8")
+            modified_files.append(root_build)
+    return {
+        "root": destination,
+        "reason": "Validation copy limits Baby Books to the Android app and shared library modules, omitting unrelated frontend/web/CLI modules that block Gradle configuration; Android runtime dependency declarations are preserved.",
+        "modified_files": modified_files,
+    }
+
+
+def prepare_radarweather_validation_copy(source_root: Path, validation_dir: Path) -> dict[str, Any]:
+    destination = recreate_validation_copy(
+        source_root=source_root,
+        destination=validation_dir / "validation-source-radarweather-agp-runtime-tree",
+        allowed_root=validation_dir,
+    )
+    modified_files: list[Path] = []
+    root_build = destination / "build.gradle"
+    if root_build.exists():
+        text = root_build.read_text(encoding="utf-8")
+        patched = text.replace(
+            "classpath 'com.android.tools.build:gradle:7.1.1'",
+            "classpath 'com.android.tools.build:gradle:8.13.2'",
+        )
+        if patched != text:
+            root_build.write_text(patched, encoding="utf-8")
+            modified_files.append(root_build)
+    app_build = destination / "app" / "build.gradle"
+    if app_build.exists():
+        text = app_build.read_text(encoding="utf-8")
+        patched = text.replace(
+            "android {\n\n    compileSdkVersion 34\n",
+            "android {\n\n    namespace \"org.woheller69.weather\"\n    compileSdkVersion 34\n\n    buildFeatures {\n        buildConfig true\n    }\n",
+        )
+        if patched != text:
+            app_build.write_text(patched, encoding="utf-8")
+            modified_files.append(app_build)
+    local_properties = destination / "local.properties"
+    local_properties.write_text("sdk.dir=/opt/android-sdk\nsdk-location=/opt/android-sdk\n", encoding="utf-8")
+    modified_files.append(local_properties)
+    return {
+        "root": destination,
+        "reason": "Validation copy upgrades RadarWeather's obsolete Android Gradle plugin only for dependency-tree capture, adds the AGP-required namespace/BuildConfig settings, and preserves declared Maven runtime dependencies.",
+        "modified_files": modified_files,
+    }
+
+
+def prepare_jcenter_repository_validation_copy(
+    source_root: Path,
+    validation_dir: Path,
+    slug: str,
+) -> dict[str, Any]:
+    destination = recreate_validation_copy(
+        source_root=source_root,
+        destination=validation_dir / f"validation-source-{slug}-maven-central-runtime-tree",
+        allowed_root=validation_dir,
+    )
+    modified_files: list[Path] = []
+    for build_file in destination.rglob("build.gradle"):
+        text = build_file.read_text(encoding="utf-8")
+        patched = text.replace("jcenter()", "mavenCentral()")
+        if patched != text:
+            build_file.write_text(patched, encoding="utf-8")
+            modified_files.append(build_file)
+    return {
+        "root": destination,
+        "reason": "Validation copy replaces removed Gradle jcenter() repository calls with Maven Central only for runtime dependency-tree capture; declared runtime dependencies are preserved.",
+        "modified_files": modified_files,
+    }
+
+
+def prepare_todo_agenda_validation_copy(source_root: Path, validation_dir: Path) -> dict[str, Any]:
+    destination = recreate_validation_copy(
+        source_root=source_root,
+        destination=validation_dir / "validation-source-todo-agenda-runtime-tree",
+        allowed_root=validation_dir,
+    )
+    modified_files: list[Path] = []
+    app_build = destination / "app" / "build.gradle"
+    if app_build.exists():
+        text = app_build.read_text(encoding="utf-8")
+        patched = text.replace(
+            '        archivesBaseName = "TodoAgenda-$versionName".toString()\n',
+            "        // Validation copy: obsolete APK archive naming omitted for dependency-tree capture.\n",
+        )
+        if patched != text:
+            app_build.write_text(patched, encoding="utf-8")
+            modified_files.append(app_build)
+    return {
+        "root": destination,
+        "reason": "Validation copy omits Todo Agenda's obsolete defaultConfig archivesBaseName output naming that fails under the current Docker Gradle/AGP lane; runtime implementation/api/project dependencies are preserved for source-validation tree capture.",
+        "modified_files": modified_files,
+    }
+
+
+def prepare_openkeychain_validation_copy(source_root: Path, validation_dir: Path) -> dict[str, Any]:
+    destination = validation_dir / "validation-source-openkeychain-runtime-tree-v2"
+    allowed = validation_dir.resolve()
+    target = destination.resolve()
+    if target != allowed and allowed not in target.parents:
+        raise ValueError(f"refusing to recreate validation copy outside {allowed}: {target}")
+    if destination.exists():
+        shutil.rmtree(destination)
+    destination.mkdir(parents=True)
+    modified_files: list[Path] = []
+    root_build = source_root / "build.gradle"
+    if root_build.exists():
+        shutil.copy2(root_build, destination / "build.gradle")
+    openkeychain_source = source_root / "OpenKeychain"
+    if openkeychain_source.exists():
+        shutil.copytree(
+            openkeychain_source,
+            destination / "OpenKeychain",
+            ignore=shutil.ignore_patterns(".gradle", "build", ".idea"),
+        )
+    material_source = source_root / "extern" / "MaterialChipsInput"
+    if material_source.exists():
+        shutil.copytree(
+            material_source,
+            destination / "extern" / "MaterialChipsInput",
+            ignore=shutil.ignore_patterns(".gradle", "build", ".idea"),
+        )
+    settings = destination / "settings.gradle"
+    settings.write_text(
+        "rootProject.name = 'openkeychain-validation'\n"
+        "include ':OpenKeychain'\n"
+        "include ':extern:MaterialChipsInput'\n",
+        encoding="utf-8",
+    )
+    modified_files.append(settings)
+    local_properties = destination / "local.properties"
+    local_properties.write_text("sdk.dir=/opt/android-sdk\nsdk-location=/opt/android-sdk\n", encoding="utf-8")
+    modified_files.append(local_properties)
+    gradle_properties = destination / "gradle.properties"
+    gradle_properties.write_text("android.useAndroidX=true\n", encoding="utf-8")
+    modified_files.append(gradle_properties)
+    for build_file in destination.rglob("build.gradle"):
+        text = build_file.read_text(encoding="utf-8")
+        patched = text.replace("jcenter()", "mavenCentral()")
+        if build_file == destination / "OpenKeychain" / "build.gradle":
+            patched = patch_openkeychain_app_build(patched, destination)
+        if patched != text:
+            build_file.write_text(patched, encoding="utf-8")
+            modified_files.append(build_file)
+    return {
+        "root": destination,
+        "reason": "Validation copy adds the missing wrapper-root settings.gradle, replaces removed jcenter() calls with Maven Central, enables AGP-required BuildConfig/AndroidX properties, and omits unavailable local project dependency wires; declared Maven runtime dependencies are preserved for OpenKeychain dependency-tree capture.",
+        "modified_files": modified_files,
+    }
+
+
+def patch_openkeychain_app_build(text: str, destination: Path) -> str:
+    text = text.replace(
+        "    buildFeatures {\n        dataBinding true\n    }\n",
+        "    buildFeatures {\n        dataBinding true\n        buildConfig true\n    }\n",
+    )
+    missing_projects = {
+        "openpgp-api-lib": destination / "extern" / "openpgp-api-lib",
+        "nfcsweetspot": destination / "nfcsweetspot",
+        "sshauthentication-api": destination / "sshauthentication-api",
+        "extern:bouncycastle:pg": destination / "extern" / "bouncycastle" / "pg",
+    }
+    patched_lines: list[str] = []
+    for line in text.splitlines():
+        stripped = line.strip()
+        omitted = False
+        for project_name, project_dir in missing_projects.items():
+            if f"project(':{project_name}')" in stripped and (
+                project_name == "extern:bouncycastle:pg" or not project_dir.exists()
+            ):
+                patched_lines.append(
+                    f"    // Validation copy: omitted unavailable local project dependency {project_name!r}."
+                )
+                omitted = True
+                break
+        if not omitted:
+            patched_lines.append(line)
+    return "\n".join(patched_lines) + ("\n" if text.endswith("\n") else "")
+
+
 def recreate_validation_copy(*, source_root: Path, destination: Path, allowed_root: Path) -> Path:
     allowed = allowed_root.resolve()
     target = destination.resolve()
@@ -566,12 +1249,13 @@ def attempt_dependency_tree(
     validation_dir.mkdir(parents=True, exist_ok=True)
     if not gradle_roots:
         return {"status": "blocked", "reason": "no Gradle root found in extracted source"}
-    configs = list(dict.fromkeys(SLUG_CONFIGURATIONS.get(slug, []) + COMMON_CONFIGURATIONS))
+    slug_configs = SLUG_CONFIGURATIONS.get(slug, [])
+    configs = list(dict.fromkeys(slug_configs if slug in STRICT_CONFIGURATION_SLUGS else slug_configs + COMMON_CONFIGURATIONS))
     tasks = list(dict.fromkeys(SLUG_DEPENDENCY_TASKS.get(slug, COMMON_DEPENDENCY_TASKS)))
     attempts = []
     for root_index, root in enumerate(gradle_roots[:3], start=1):
         metadata = (validation_root_metadata or {}).get(normalize_path(root))
-        gradle_cmd = gradle_command(root)
+        gradle_cmd = gradle_command(root, slug)
         for task in tasks:
             for config in configs:
                 label = attempt_label(root_index, task, config)
@@ -689,6 +1373,27 @@ def classify_status(
     return "source-downloaded"
 
 
+def metric_eligibility_for(proof_status: str) -> str:
+    if proof_status == "source-validated-clean":
+        return "clean-source-validated-metrics"
+    if proof_status == "source-validated-partial":
+        return "partial-source-validated-metrics"
+    if proof_status == "source-validated-no-maven-signal":
+        return "source-validated-no-maven-signal-control"
+    return "excluded-from-source-validated-metrics"
+
+
+def normalize_proof_metric_eligibility(proof: dict[str, Any]) -> bool:
+    proof_status = proof.get("proof_status")
+    if not isinstance(proof_status, str):
+        return False
+    expected = metric_eligibility_for(proof_status)
+    if proof.get("metric_eligibility") == expected:
+        return False
+    proof["metric_eligibility"] = expected
+    return True
+
+
 def find_gradle_roots(root: Path) -> list[Path]:
     if not root.exists():
         return []
@@ -703,7 +1408,9 @@ def find_gradle_roots(root: Path) -> list[Path]:
     return sorted(set(roots), key=lambda path: (len(path.parts), str(path)))[:10]
 
 
-def gradle_command(root: Path) -> list[str]:
+def gradle_command(root: Path, slug: str) -> list[str]:
+    if slug in SLUG_GRADLE_COMMANDS:
+        return SLUG_GRADLE_COMMANDS[slug]
     wrapper = root / ("gradlew.bat" if sys.platform == "win32" else "gradlew")
     if wrapper.exists():
         if sys.platform != "win32":

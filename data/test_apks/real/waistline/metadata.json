@@ -1,0 +1,63 @@
+{
+  "apk": {
+    "expected_sha256": "4a0bbe4e215ec135851de5b66fe9351007742e2aaed3ec758a69c65d72ca2abb",
+    "index_size": 13486740,
+    "path": "data/test_apks/real/waistline/waistline.apk",
+    "sha256": "4a0bbe4e215ec135851de5b66fe9351007742e2aaed3ec758a69c65d72ca2abb",
+    "size": 13486740,
+    "url": "https://f-droid.org/repo/com.waist.line_31001.apk"
+  },
+  "app": "Waistline",
+  "categories": [
+    "Diet",
+    "Health Manager",
+    "Sports & Health"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "health",
+    "diet",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.waist.line/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.waist.line",
+  "proof_status": "report-generated",
+  "reason": "No-native health/diet tracker with target SDK 35, non-trivial APK and source sizes, and a maintained GitHub source link; useful for a dependency-rich non-sparse clean probe outside internet apps.",
+  "report": {
+    "detected_component_count": 15,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-waistline",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-waistline/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-waistline/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-waistline/sbom.cdx.json",
+    "sbom_component_count": 15,
+    "status": "ok"
+  },
+  "slug": "waistline",
+  "source_repo": "https://github.com/davidhealey/waistline",
+  "source_tarball": {
+    "sha256": "86b7d39f12b94d8b342dd21fa7625c3f937c9ca5470c09d17732ed2d85f61675",
+    "size": 40492087,
+    "url": "https://f-droid.org/repo/com.waist.line_31001_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 31001,
+  "version_name": "3.10.1"
+}

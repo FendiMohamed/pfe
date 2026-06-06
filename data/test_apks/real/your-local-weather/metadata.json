@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "63a458e146211de201f59da1edd699a8243fd5cba4e3b05de759043991ad84ad",
+    "index_size": 15389511,
+    "path": "data/test_apks/real/your-local-weather/your-local-weather.apk",
+    "sha256": "63a458e146211de201f59da1edd699a8243fd5cba4e3b05de759043991ad84ad",
+    "size": 15389511,
+    "url": "https://f-droid.org/repo/org.thosp.yourlocalweather_193.apk"
+  },
+  "app": "Your local weather",
+  "categories": [
+    "Internet",
+    "Weather"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "internet",
+    "weather",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/org.thosp.yourlocalweather/",
+  "license": "GPL-3.0-or-later",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "org.thosp.yourlocalweather",
+  "proof_status": "report-generated",
+  "reason": "No-native weather app with target SDK 36, medium APK/source sizes, and internet/weather coverage distinct from earlier weather candidates.",
+  "report": {
+    "detected_component_count": 17,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v9/report-real-your-local-weather",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v9/report-real-your-local-weather/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v9/report-real-your-local-weather/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v9/report-real-your-local-weather/sbom.cdx.json",
+    "sbom_component_count": 17,
+    "status": "ok"
+  },
+  "slug": "your-local-weather",
+  "source_repo": "https://github.com/thuryn/your-local-weather",
+  "source_tarball": {
+    "sha256": "043ed56fa930a1ba1dff9ed15e60502d24648913e8106ab028455159348b555c",
+    "size": 12256001,
+    "url": "https://f-droid.org/repo/org.thosp.yourlocalweather_193_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 193,
+  "version_name": "6.4.0-FOSS"
+}

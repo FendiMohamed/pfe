@@ -1,0 +1,63 @@
+{
+  "apk": {
+    "expected_sha256": "a2ec5deb14f9a140289db8b2bb11e381bdbb4c9a847d77f579e233d448fe55b4",
+    "index_size": 15995575,
+    "path": "data/test_apks/real/sambalite/sambalite.apk",
+    "sha256": "a2ec5deb14f9a140289db8b2bb11e381bdbb4c9a847d77f579e233d448fe55b4",
+    "size": 15995575,
+    "url": "https://f-droid.org/repo/de.schliweb.sambalite_20501.apk"
+  },
+  "app": "SambaLite",
+  "categories": [
+    "Cloud Storage & File Sync",
+    "Connectivity"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "cloud-storage",
+    "connectivity",
+    "file-transfer",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/de.schliweb.sambalite/",
+  "license": "Apache-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "de.schliweb.sambalite",
+  "proof_status": "report-generated",
+  "reason": "No-native SMB/CIFS client with target SDK 36, medium APK size, and source tarball metadata; broadens the clean sweep into connectivity/file-transfer without repeating Primitive FTPd.",
+  "report": {
+    "detected_component_count": 19,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-sambalite",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-sambalite/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-sambalite/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-sambalite/sbom.cdx.json",
+    "sbom_component_count": 19,
+    "status": "ok"
+  },
+  "slug": "sambalite",
+  "source_repo": "https://github.com/egdels/SambaLite",
+  "source_tarball": {
+    "sha256": "33bdf1b71fa448def629fc7ee6b8df819d09c88f17ac27f387a767627809a5ed",
+    "size": 2901420,
+    "url": "https://f-droid.org/repo/de.schliweb.sambalite_20501_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 20501,
+  "version_name": "2.5.1"
+}

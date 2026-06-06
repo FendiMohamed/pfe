@@ -1,0 +1,63 @@
+{
+  "apk": {
+    "expected_sha256": "2910e300a29f655377a3c2b06b8fa2e49b2b18a2470968dec8e5b0c5c71daa7e",
+    "index_size": 7022894,
+    "path": "data/test_apks/real/simplelogin/simplelogin.apk",
+    "sha256": "2910e300a29f655377a3c2b06b8fa2e49b2b18a2470968dec8e5b0c5c71daa7e",
+    "size": 7022894,
+    "url": "https://f-droid.org/repo/io.simplelogin.android.fdroid_12200.apk"
+  },
+  "app": "SimpleLogin Anti-spam",
+  "categories": [
+    "Email",
+    "Internet"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "email",
+    "internet",
+    "security",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/io.simplelogin.android.fdroid/",
+  "license": "Apache-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "io.simplelogin.android.fdroid",
+  "proof_status": "report-generated",
+  "reason": "No-native email/security app with target SDK 34 and source tarball metadata; useful for a compact modern account/security clean-candidate probe.",
+  "report": {
+    "detected_component_count": 39,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v10/report-real-simplelogin",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v10/report-real-simplelogin/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v10/report-real-simplelogin/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v10/report-real-simplelogin/sbom.cdx.json",
+    "sbom_component_count": 39,
+    "status": "ok"
+  },
+  "slug": "simplelogin",
+  "source_repo": "https://github.com/simple-login/Simple-Login-Android",
+  "source_tarball": {
+    "sha256": "85d37e3e0033bb974cd2f87fd39ce4ac16d415e2af84c391f11ee3e5f9a17a49",
+    "size": 1836869,
+    "url": "https://f-droid.org/repo/io.simplelogin.android.fdroid_12200_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 12200,
+  "version_name": "1.22.0"
+}

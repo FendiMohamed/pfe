@@ -16,8 +16,8 @@ Companion notes:
 |---|---:|
 | Controlled fixtures | 84/84 |
 | Clean source-validated real APKs | 47/47 |
-| Partial source-validated real APKs | 355/608 |
-| Overall source-validated real APKs | 402/655 |
+| Partial source-validated real APKs | 864/1755 |
+| Overall source-validated real APKs | 911/1802 |
 | Source-linked blocked cases | 2 |
 | Limitation/boundary cases | 4 |
 
@@ -55,7 +55,7 @@ Risky tie rows audited: 19
 | 2 | `completed` | Dependency metadata helps, but metadata alone is not APK evidence. | Completed for the current MVP: keep POM coherence diagnostic-only unless a future row has stronger independently selected APK-side dependency support and passes a current-control matrix. | diagnostic before scoring changes |
 | 2 | `completed` | Opcode/API signals can regress if globally weighted. | Completed for the current MVP: keep both weights disabled by default and revisit only as a scoped per-coordinate experiment with a fresh current-control matrix. | rejected for current global weights |
 | 3 | `completed` | Native libraries are outside Maven version recovery. | Completed for the current MVP: keep native-heavy cases as limitation/stress evidence and do not claim native package/version recovery without a separate native-analysis module. | not applicable |
-| 3 | `completed-blocked` | K-9 / Thunderbird Android is source-linked but not dependency-tree validated. | Completed as blocked for the current MVP: preserve K-9 as source-linked blocked evidence unless a deeper K-9 build-system investigation becomes a separate task. | not applicable |
+| 3 | `completed` | K-9 / Thunderbird Android needed a validation-only included-build rescue. | Completed for the current MVP: preserve the K-9 blocker diagnostics as rescue evidence and use the source-validation JSON for thesis metrics. | not applicable |
 | 3 | `completed` | CVE matching can mislead when version evidence is uncertain. | Completed for the MVP: `generate-report --source-validation-json ...` writes source-confirmed/source-version-mismatch/source-missing labels into OSV JSON, Markdown, and HTML report output. | not applicable |
 | 3 | `completed` | External SBOM scanner validation needed a reproducible local toolchain. | Completed: keep `docs/evaluation/EXTERNAL_SCANNER_VALIDATION.md` regenerated when scanner inputs or scanner versions change. | not applicable |
 | 3 | `completed` | Dataset size should grow by APK family, not convenience. | Use the four promoted rows as partial source-validated family coverage, keep the four blocked/framework rows as smoke or limitation evidence, and acquire a legal protected/packed real APK separately as limitation evidence. | not applicable |
@@ -127,22 +127,22 @@ Risky tie rows audited: 19
 ### P3 - Native libraries are outside Maven version recovery.
 
 - Status: `completed`
-- Evidence: The native-boundary diagnostic covers 18 native APK cases with 130 native .so files represented as hash-only file components; 13 cases are source-validated native APKs and 5 are boundary or blocked native cases.
+- Evidence: The native-boundary diagnostic covers 21 native APK cases with 170 native .so files represented as hash-only file components; 17 cases are source-validated native APKs and 4 are boundary or blocked native cases.
 - Paper/tool basis: CycloneDX supports file components; native identity/version recovery is a separate research area from DEX Maven TPL detection.
 - Current policy: Report .so files as hash-only CycloneDX file components and exclude them from Maven-version accuracy.
 - Safe next action: Completed for the current MVP: keep native-heavy cases as limitation/stress evidence and do not claim native package/version recovery without a separate native-analysis module.
 - Global promotion rule: not applicable
 - Artifacts: `docs/evaluation/NATIVE_BOUNDARY_DIAGNOSTICS.md`, `data/results/evaluation/native-boundary-diagnostics.json`, `docs/evaluation/THESIS_EVALUATION_TABLES.md`, `src/apk_sbom/apk_extractor.py`, `src/apk_sbom/sbom.py`
 
-### P3 - K-9 / Thunderbird Android is source-linked but not dependency-tree validated.
+### P3 - K-9 / Thunderbird Android needed a validation-only included-build rescue.
 
-- Status: `completed-blocked`
-- Evidence: K-9 blocker diagnostics record APK/source/report/catalog evidence plus 4 bounded Gradle attempts; the latest 2026-05-27 Docker retry still timed out after 600 seconds before producing fossReleaseRuntimeClasspath.
+- Status: `completed`
+- Evidence: K-9 blocker diagnostics now record the bounded failed Gradle attempts plus the successful 2026-06-05 plugin-lite validation copy: fossReleaseRuntimeClasspath was generated and source validation confirmed 5/11 emitted Maven versions, with 6 mismatches and 0 missing.
 - Paper/tool basis: Evaluation methodology papers support keeping blocked cases separate from validated accuracy cases.
-- Current policy: Keep K-9 as partial-gradle-blocked and do not count it in source-validated metrics.
-- Safe next action: Completed as blocked for the current MVP: preserve K-9 as source-linked blocked evidence unless a deeper K-9 build-system investigation becomes a separate task.
+- Current policy: Count K-9 as source-validated partial, not clean evidence, because the dependency tree came from a validation-only build-system reduction.
+- Safe next action: Completed for the current MVP: preserve the K-9 blocker diagnostics as rescue evidence and use the source-validation JSON for thesis metrics.
 - Global promotion rule: not applicable
-- Artifacts: `docs/evaluation/K9_BLOCKER_DIAGNOSTICS.md`, `data/results/source-validation/k9-thunderbird-android/k9-blocker-diagnostics.json`, `docs/evaluation/K9_THUNDERBIRD_PROOF_BUNDLE.md`, `data/results/source-validation/k9-thunderbird-android/k9-version-catalog-validation.md`
+- Artifacts: `docs/evaluation/K9_BLOCKER_DIAGNOSTICS.md`, `data/results/source-validation/k9-thunderbird-android/k9-blocker-diagnostics.json`, `docs/evaluation/K9_THUNDERBIRD_PROOF_BUNDLE.md`, `data/results/source-validation/k9-thunderbird-android-report-validation/source-validation.md`, `data/results/source-validation/k9-thunderbird-android/fossReleaseRuntimeClasspath.plugin-lite-runtimegraph-composefix.txt`
 
 ### P3 - CVE matching can mislead when version evidence is uncertain.
 
@@ -204,7 +204,7 @@ Risky tie rows audited: 19
 
 ## What Not To Do
 
-- Do not count K-9 as source-validated until a resolved dependency tree exists.
+- Do not treat K-9 as clean evidence; keep the validation-only plugin-lite rescue caveat visible.
 - Do not promote Activity `1.9.2`, ViewPager2 `1.1.0-beta02`, Concurrent Futures, or Okio-JVM changes globally without a clean control matrix.
 - Do not turn API-reference or opcode tri-gram signals on globally based only on feature availability.
 - Do not promote the Phase 4 multi-scale blend globally or the Phase 5 scoped trigger by default without a fresh control-clean pass.

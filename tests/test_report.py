@@ -15,6 +15,7 @@ from apk_sbom.report import (
     build_html_report,
     build_json_report,
     build_markdown_report,
+    build_version_uncertainty_summary,
     generate_final_report,
 )
 from apk_sbom.vulnerability import OsvComponentResult, OsvScanSummary, OsvVulnerability
@@ -210,12 +211,61 @@ def make_r8_phase5_experiment() -> dict:
     }
 
 
+def make_r8_minified_confidence_policy() -> dict:
+    return {
+        "report_only": True,
+        "source": "data/results/experiments/r8-minified-confidence-policy-diagnostics.json",
+        "verdict": "r8-minified-confidence-policy-report-only-ready",
+        "policy": ["report-only"],
+        "summary": {
+            "rows_classified": 286,
+            "regression_rows_blocked": 36,
+            "phase5_report_only_suggestions": 4,
+            "report_default_selection_changes": 0,
+            "matching_rows": 2,
+            "matching_report_only_suggestions": 1,
+            "matching_blocked_regression_risks": 1,
+        },
+        "matching_rows": [],
+        "matching_report_only_suggestions": [
+            {
+                "case": "sample",
+                "coordinate": "androidx.viewpager2:viewpager2",
+                "baseline_selected_version": "1.0.0",
+                "diagnostic_selected_version": "1.1.0",
+                "confidence_label": "low-confidence-source-backed",
+                "policy_action": "surface-report-only-suggestion",
+                "signals": ["baseline-low-confidence", "phase5-report-only-trigger"],
+            }
+        ],
+        "matching_blocked_regression_risks": [
+            {
+                "case": "sample",
+                "coordinate": "androidx.viewpager2:viewpager2",
+                "baseline_selected_version": "1.0.0",
+                "diagnostic_selected_version": "1.2.0",
+                "policy_action": "do-not-change-selected-version",
+                "signals": ["source-rejects-diagnostic", "near-zero-score-margin"],
+            }
+        ],
+    }
+
+
 def test_generate_final_report_passes_api_reference_weight(tmp_path, monkeypatch):
-    seen: dict[str, float] = {}
+    seen: dict[str, float | bool] = {}
 
     def fake_match_apk_to_reference_db(*args, **kwargs):
         seen["api_reference_weight"] = kwargs["api_reference_weight"]
         seen["opcode_ngram_weight"] = kwargs["opcode_ngram_weight"]
+        seen["enable_version_unique_literal_context_reranker"] = kwargs[
+            "enable_version_unique_literal_context_reranker"
+        ]
+        seen["enable_composite_family_shortlist"] = kwargs[
+            "enable_composite_family_shortlist"
+        ]
+        seen["composite_family_shortlist_margin"] = kwargs[
+            "composite_family_shortlist_margin"
+        ]
         return make_match_summary()
 
     monkeypatch.setattr("apk_sbom.report.inspect_apk", lambda apk_path: make_apk())
@@ -230,10 +280,62 @@ def test_generate_final_report_passes_api_reference_weight(tmp_path, monkeypatch
         query_osv=False,
         api_reference_weight=0.05,
         opcode_ngram_weight=0.07,
+        enable_version_unique_literal_context_reranker=True,
+        enable_composite_family_shortlist=True,
+        composite_family_shortlist_margin=0.2,
     )
 
     assert seen["api_reference_weight"] == 0.05
     assert seen["opcode_ngram_weight"] == 0.07
+    assert seen["enable_version_unique_literal_context_reranker"] is True
+    assert seen["enable_composite_family_shortlist"] is True
+    assert seen["composite_family_shortlist_margin"] == 0.2
+
+
+def test_generate_final_report_enables_version_unique_literal_context_by_default(
+    tmp_path,
+    monkeypatch,
+):
+    seen: dict[str, bool] = {}
+
+    def fake_match_apk_to_reference_db(*args, **kwargs):
+        seen["enable_version_unique_literal_context_reranker"] = kwargs[
+            "enable_version_unique_literal_context_reranker"
+        ]
+        return make_match_summary()
+
+    monkeypatch.setattr("apk_sbom.report.inspect_apk", lambda apk_path: make_apk())
+    monkeypatch.setattr(
+        "apk_sbom.report.match_apk_to_reference_db",
+        fake_match_apk_to_reference_db,
+    )
+
+    generate_final_report("sample.apk", output_dir=tmp_path, query_osv=False)
+
+    assert seen["enable_version_unique_literal_context_reranker"] is True
+
+
+def test_generate_final_report_enables_composite_family_shortlist_by_default(
+    tmp_path,
+    monkeypatch,
+):
+    seen: dict[str, bool] = {}
+
+    def fake_match_apk_to_reference_db(*args, **kwargs):
+        seen["enable_composite_family_shortlist"] = kwargs[
+            "enable_composite_family_shortlist"
+        ]
+        return make_match_summary()
+
+    monkeypatch.setattr("apk_sbom.report.inspect_apk", lambda apk_path: make_apk())
+    monkeypatch.setattr(
+        "apk_sbom.report.match_apk_to_reference_db",
+        fake_match_apk_to_reference_db,
+    )
+
+    generate_final_report("sample.apk", output_dir=tmp_path, query_osv=False)
+
+    assert seen["enable_composite_family_shortlist"] is True
 
 
 def test_generate_final_report_attaches_r8_phase5_evidence_only_when_requested(
@@ -437,6 +539,117 @@ def test_generate_final_report_attaches_version_band_evidence_as_report_only(
         "apk-sbom:mvp:version-band-experiment-summary"
     ]
     assert artifacts.sbom_json.endswith("sbom.cdx.json")
+
+
+def test_generate_final_report_attaches_r8_minified_confidence_policy_as_report_only(
+    tmp_path,
+    monkeypatch,
+):
+    component = DetectedLibrary(
+        group="androidx.viewpager2",
+        artifact="viewpager2",
+        version="1.0.0",
+        confidence=0.42,
+        match_type="hybrid-candidate",
+        evidence=[],
+    )
+    policy_path = tmp_path / "r8-minified-policy.json"
+    policy_path.write_text(
+        json.dumps(
+            {
+                "verdict": "r8-minified-confidence-policy-report-only-ready",
+                "summary": {
+                    "rows_classified": 2,
+                    "regression_rows_blocked": 1,
+                    "phase5_report_only_suggestions": 1,
+                    "report_default_selection_changes": 0,
+                },
+                "rows": [
+                    {
+                        "case": "sample",
+                        "apk_path": "sample.apk",
+                        "coordinate": component.coordinate,
+                        "baseline_selected_version": "1.0.0",
+                        "diagnostic_selected_version": "1.1.0",
+                        "source_versions": ["1.1.0"],
+                        "confidence_label": "low-confidence-source-backed",
+                        "policy_action": "surface-report-only-suggestion",
+                        "policy_label": "report-only-source-backed-low-confidence-suggestion",
+                        "signals": [
+                            "baseline-low-confidence",
+                            "phase5-report-only-trigger",
+                        ],
+                    },
+                    {
+                        "case": "sample",
+                        "apk_path": "sample.apk",
+                        "coordinate": component.coordinate,
+                        "baseline_selected_version": "1.0.0",
+                        "diagnostic_selected_version": "1.2.0",
+                        "confidence_label": "ambiguous",
+                        "policy_action": "do-not-change-selected-version",
+                        "policy_label": "block-default-change-regression-risk",
+                        "signals": [
+                            "source-rejects-diagnostic",
+                            "near-zero-score-margin",
+                        ],
+                    },
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    monkeypatch.setattr("apk_sbom.report.inspect_apk", lambda apk_path: make_apk())
+    monkeypatch.setattr(
+        "apk_sbom.report.match_apk_to_reference_db",
+        lambda *args, **kwargs: make_match_summary(),
+    )
+    monkeypatch.setattr(
+        "apk_sbom.report.detected_libraries_from_match_summary",
+        lambda *args, **kwargs: [component],
+    )
+
+    generate_final_report(
+        "sample.apk",
+        output_dir=tmp_path / "report",
+        query_osv=False,
+        r8_minified_confidence_policy_json=policy_path,
+    )
+    report = json.loads((tmp_path / "report" / "report.json").read_text(encoding="utf-8"))
+    markdown = (tmp_path / "report" / "report.md").read_text(encoding="utf-8")
+    html = (tmp_path / "report" / "report.html").read_text(encoding="utf-8")
+    sbom = json.loads((tmp_path / "report" / "sbom.cdx.json").read_text(encoding="utf-8"))
+
+    assert report["detected_components"][0]["version"] == "1.0.0"
+    assert report["r8_minified_confidence_policy"]["report_only"] is True
+    assert report["r8_minified_confidence_policy"]["summary"]["matching_rows"] == 2
+    assert (
+        report["r8_minified_confidence_policy"]["summary"][
+            "matching_report_only_suggestions"
+        ]
+        == 1
+    )
+    assert (
+        report["r8_minified_confidence_policy"]["summary"][
+            "matching_blocked_regression_risks"
+        ]
+        == 1
+    )
+    assert (
+        report["r8_minified_confidence_policy"]["matching_report_only_suggestions"][0][
+            "diagnostic_selected_version"
+        ]
+        == "1.1.0"
+    )
+    assert "Experimental R8 Minified Confidence Policy" in markdown
+    assert "does not change detected components" in markdown
+    assert "1.1.0" in markdown
+    assert "Experimental R8 Minified Confidence Policy" in html
+    sbom_component_versions = {
+        component["bom-ref"]: component["version"] for component in sbom["components"]
+    }
+    assert sbom_component_versions["pkg:maven/androidx.viewpager2/viewpager2@1.0.0"] == "1.0.0"
 
 
 def test_generate_final_report_applies_source_validation_to_osv(tmp_path, monkeypatch):
@@ -798,6 +1011,102 @@ def test_reports_surface_version_ambiguity_notes():
         "Version ambiguity"
     )
     assert payload["match_summary"]["decisions"][0]["ambiguous_versions"][1]["version"] == "1.2.0"
+
+
+def test_reports_surface_generic_version_uncertainty_summary_without_selection_change():
+    near_tie = VersionDecision(
+        coordinate="androidx.startup:startup-runtime",
+        group_id="androidx.startup",
+        artifact_id="startup-runtime",
+        selected_version="1.1.1",
+        purl="pkg:maven/androidx.startup/startup-runtime@1.1.1",
+        score=0.548511,
+        confidence=0.548511,
+        confidence_label="low",
+        version_decision="candidate",
+        gap_to_next=0.000655,
+        reference_versions_considered=2,
+        evidence=make_overlap_evidence(),
+        alternatives=[
+            VersionAlternative(
+                version="1.2.0",
+                purl="pkg:maven/androidx.startup/startup-runtime@1.2.0",
+                score=0.547856,
+            )
+        ],
+        identity_confidence=0.55,
+        identity_confidence_label="low",
+        identity_status="candidate",
+        version_confidence=0.548511,
+        version_confidence_label="low",
+        version_status="candidate",
+        version_ambiguity_reason=(
+            "Version near-tie: 1.1.1 and 1.2.0 are within 0.001 score."
+        ),
+        ambiguous_versions=[
+            VersionAlternative(
+                version="1.1.1",
+                purl="pkg:maven/androidx.startup/startup-runtime@1.1.1",
+                score=0.548511,
+            ),
+            VersionAlternative(
+                version="1.2.0",
+                purl="pkg:maven/androidx.startup/startup-runtime@1.2.0",
+                score=0.547856,
+            ),
+        ],
+    )
+    single_reference = VersionDecision(
+        coordinate="example:single",
+        group_id="example",
+        artifact_id="single",
+        selected_version="1.0.0",
+        purl="pkg:maven/example/single@1.0.0",
+        score=0.75,
+        confidence=0.75,
+        confidence_label="low",
+        version_decision="candidate",
+        gap_to_next=0.75,
+        reference_versions_considered=1,
+        evidence=make_overlap_evidence(),
+        alternatives=[],
+        identity_confidence=0.9,
+        identity_confidence_label="high",
+        identity_status="likely",
+        version_confidence=0.75,
+        version_confidence_label="low",
+        version_status="candidate",
+    )
+    component = DetectedLibrary(
+        group="androidx.startup",
+        artifact="startup-runtime",
+        version="1.1.1",
+        confidence=0.548511,
+        match_type="hybrid-candidate",
+        evidence=[],
+    )
+    summary = make_match_summary(decisions=[near_tie, single_reference])
+
+    uncertainty = build_version_uncertainty_summary(summary, [component])
+    markdown = build_markdown_report(make_apk(), summary, [component], None, make_artifacts())
+    html = build_html_report(make_apk(), summary, [component], None, make_artifacts())
+    payload = build_json_report(make_apk(), summary, [component], None, make_artifacts())
+
+    counts = uncertainty["summary"]["category_counts"]
+    assert counts["near-tie"] == 1
+    assert counts["single-reference-boundary"] == 1
+    assert counts["low-confidence-version"] == 2
+    assert uncertainty["rows"][0]["emitted_component"] is True
+    assert payload["detected_components"][0]["version"] == "1.1.1"
+    assert payload["version_uncertainty_summary"]["report_only"] is True
+    assert (
+        payload["version_uncertainty_summary"]["summary"]["uncertainty_rows"] == 2
+    )
+    assert "Version Uncertainty Summary" in markdown
+    assert "single-reference-boundary" in markdown
+    assert "does not change matcher scoring" in markdown
+    assert "Version Uncertainty Summary" in html
+    assert "near-tie" in html
 
 
 def test_report_only_obfuscation_diagnostics_keep_selected_component_unchanged():

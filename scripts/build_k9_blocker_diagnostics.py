@@ -21,11 +21,18 @@ DEFAULT_DEPENDENCY_ATTEMPT = Path(
 DEFAULT_RETRY_ATTEMPT = Path(
     "data/results/source-validation/k9-thunderbird-android/fossReleaseRuntimeClasspath.retry-google-first.txt"
 )
+DEFAULT_PLUGIN_LITE_TREE = Path(
+    "data/results/source-validation/k9-thunderbird-android/fossReleaseRuntimeClasspath.plugin-lite-runtimegraph-composefix.txt"
+)
+DEFAULT_PLUGIN_LITE_SOURCE = Path("data/results/source-validation/k9-thunderbird-android/source-plugin-lite")
+DEFAULT_SOURCE_VALIDATION = Path(
+    "data/results/source-validation/k9-thunderbird-android-report-validation/source-validation.md"
+)
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Summarize K-9 dependency-tree blocker evidence.",
+        description="Summarize K-9 dependency-tree blocker and rescue evidence.",
     )
     parser.add_argument("--output-json", default=str(DEFAULT_OUTPUT_JSON))
     parser.add_argument("--output-doc", default=str(DEFAULT_OUTPUT_DOC))
@@ -63,12 +70,12 @@ def build_payload() -> dict[str, Any]:
     return {
         "schema_version": 1,
         "case_id": "k9-thunderbird-android",
-        "status": "completed-blocked",
-        "classification": "source-linked-blocked",
+        "status": "rescued-source-validated-partial",
+        "classification": "source-validated-partial",
         "policy": [
-            "Do not count K-9 in source-validated accuracy metrics until a resolved Gradle dependency tree exists.",
-            "Catalog-only validation is useful source-linked evidence, but it is weaker than runtime classpath validation.",
-            "The blocker is in source/Gradle build configuration, not in APK extraction or matcher scoring.",
+            "Count K-9 as source-validated partial only because a resolved runtime dependency tree and validate-source-deps output now exist.",
+            "Keep the catalog-only validation as weak supporting evidence, not as the promotion gate.",
+            "The rescue uses a validation-only source copy to isolate build-time Gradle plugin overhead while preserving the app-k9mail foss release runtime dependency graph.",
         ],
         "artifacts": {
             "proof_bundle": normalize_path(DEFAULT_PROOF_BUNDLE),
@@ -76,6 +83,9 @@ def build_payload() -> dict[str, Any]:
             "initial_dependency_attempt": normalize_path(DEFAULT_DEPENDENCY_ATTEMPT),
             "repository_order_retry_attempt": normalize_path(DEFAULT_RETRY_ATTEMPT),
             "gradle_projects_error": normalize_path(DEFAULT_GRADLE_PROJECTS_ERROR),
+            "plugin_lite_source_copy": normalize_path(DEFAULT_PLUGIN_LITE_SOURCE),
+            "plugin_lite_dependency_tree": normalize_path(DEFAULT_PLUGIN_LITE_TREE),
+            "source_validation": normalize_path(DEFAULT_SOURCE_VALIDATION),
         },
         "attempts": [
             {
@@ -106,6 +116,18 @@ def build_payload() -> dict[str, Any]:
                 ),
                 "interpretation": "A fresh bounded retry confirms the blocker is still active in the current Docker runtime.",
             },
+            {
+                "name": "2026-06-05 plugin-lite runtime-graph rescue",
+                "result": "succeeded",
+                "evidence": summarize_text(DEFAULT_PLUGIN_LITE_TREE),
+                "interpretation": "A validation-only source copy disabled build-time quality/test/full-flavor/plugin overhead, kept the app-k9mail foss runtime project graph, and produced a resolved fossReleaseRuntimeClasspath tree.",
+            },
+            {
+                "name": "2026-06-05 source dependency validation",
+                "result": "source-validated-partial",
+                "evidence": "validate-source-deps confirmed 5/11 emitted Maven versions, with 6 version mismatches and 0 missing coordinates.",
+                "interpretation": "K-9 is promoted out of source-linked blocked and into source-validated partial evidence.",
+            },
         ],
         "catalog_summary": {
             "exact_confirmations": 3,
@@ -114,10 +136,17 @@ def build_payload() -> dict[str, Any]:
             "artifact_family_mismatches": 1,
             "not_in_catalog": 4,
         },
+        "source_validation_summary": {
+            "confirmed": 5,
+            "version_mismatches": 6,
+            "missing": 0,
+            "sbom_components": 11,
+            "source_components": 333,
+        },
         "conclusion": (
-            "Complete for the current MVP as a blocked con: K-9 has APK/source/report/catalog evidence, "
-            "but repeated bounded Gradle attempts still do not produce a resolved fossReleaseRuntimeClasspath. "
-            "Keep it as source-linked blocked evidence unless a deeper K-9 build-system investigation becomes a separate task."
+            "K-9 is rescued as source-validated partial evidence: the plugin-lite validation copy produced "
+            "fossReleaseRuntimeClasspath and validate-source-deps confirms 5/11 emitted Maven versions with "
+            "6 mismatches and 0 missing coordinates."
         ),
     }
 
@@ -128,7 +157,7 @@ def build_markdown(payload: dict[str, Any]) -> str:
         "",
         "Generated by `scripts/build_k9_blocker_diagnostics.py`.",
         "",
-        "This diagnostic records the current K-9 / Thunderbird Android dependency-tree blocker. It does not change matcher output or source-validation metrics.",
+        "This diagnostic records the K-9 / Thunderbird Android dependency-tree blocker history and the validation-only rescue that moved it into source-validated partial evidence. It does not change matcher output or source-validation metrics.",
         "",
         "## Policy",
         "",
@@ -142,6 +171,7 @@ def build_markdown(payload: dict[str, Any]) -> str:
             f"- Status: `{payload['status']}`",
             f"- Classification: `{payload['classification']}`",
             f"- Conclusion: {payload['conclusion']}",
+            f"- Source validation: `{payload['source_validation_summary']['confirmed']}/{payload['source_validation_summary']['sbom_components']}` confirmed, `{payload['source_validation_summary']['version_mismatches']}` mismatches, `{payload['source_validation_summary']['missing']}` missing.",
             "",
             "## Catalog-Only Validation",
             "",
@@ -180,9 +210,9 @@ def build_markdown(payload: dict[str, Any]) -> str:
             "",
             "## Decision",
             "",
-            "- Keep K-9 excluded from source-validated accuracy metrics.",
-            "- Preserve the catalog-only validation as weak source-linked evidence.",
-            "- Treat another K-9 retry as a separate build-system investigation, not as matcher work.",
+            "- Promote K-9 to source-validated partial evidence.",
+            "- Preserve the older failed Gradle attempts as blocker context and the plugin-lite source copy as rescue proof.",
+            "- Do not treat K-9 as clean: six emitted Maven versions still mismatch source.",
             "",
         ]
     )

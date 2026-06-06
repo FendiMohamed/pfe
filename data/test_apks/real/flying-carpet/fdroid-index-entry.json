@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "added": 1711278688000,
+    "authorEmail": "theron@spiegl.dev",
+    "authorName": "Theron Spiegl",
+    "authorWebSite": "https://github.com/spieglt",
+    "categories": [
+      "Connectivity",
+      "System"
+    ],
+    "description": {
+      "en-US": "Send and receive files between Android, iOS, Linux, macOS, and Windows over ad hoc WiFi. No shared network or cell connection required, just two devices with WiFi chips in close range.\n\nDon't have a flash drive? Don't have access to a wireless network? Need to move a file larger than 2GB between different filesystems but don't want to set up a network share? Try it out!"
+    },
+    "donate": [
+      "https://github.com/sponsors/spieglt"
+    ],
+    "issueTracker": "https://github.com/spieglt/FlyingCarpet/issues",
+    "lastUpdated": 1764603166000,
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-US": "Flying Carpet"
+    },
+    "preferredSigner": "b6b7891c141f0c3c28e757d8dcfe5f18921b6fdb7e710f8e9d6ee4bcfc211405",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/dev.spiegl.flyingcarpet/en-US/phoneScreenshots/1.png",
+            "sha256": "67de0565d9b56b0941e56e0a9689a2ccd7737d44bca4d0896bbfa63d85e4f9e0",
+            "size": 248721
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/spieglt/FlyingCarpet/tree/HEAD/Android/FlyingCarpet",
+    "summary": {
+      "en-US": "Cross-platform AirDrop between Android/iOS/Linux/macOS/Windows via ad hoc WiFi"
+    }
+  },
+  "version": {
+    "added": 1764603166000,
+    "file": {
+      "ipfsCIDv1": "bafybeid3ebtatyxvb7aamcf36otq3mydwxfc35ny3va3ttm77f2kykt4y4",
+      "name": "/dev.spiegl.flyingcarpet_21.apk",
+      "sha256": "9166520b10f300e0397dc06ebe85eacd11dadac4cbfad9f07de3081714206551",
+      "size": 13107531
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "b6b7891c141f0c3c28e757d8dcfe5f18921b6fdb7e710f8e9d6ee4bcfc211405"
+        ]
+      },
+      "usesPermission": [
+        {
+          "maxSdkVersion": 30,
+          "name": "android.permission.BLUETOOTH"
+        },
+        {
+          "maxSdkVersion": 30,
+          "name": "android.permission.BLUETOOTH_ADMIN"
+        },
+        {
+          "name": "android.permission.BLUETOOTH_ADVERTISE"
+        },
+        {
+          "name": "android.permission.BLUETOOTH_CONNECT"
+        },
+        {
+          "name": "android.permission.BLUETOOTH_SCAN"
+        },
+        {
+          "name": "android.permission.CHANGE_WIFI_STATE"
+        },
+        {
+          "name": "android.permission.NEARBY_WIFI_DEVICES"
+        },
+        {
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "name": "android.permission.CHANGE_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "dev.spiegl.flyingcarpet.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "name": "android.permission.CAMERA"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 29,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 21,
+      "versionName": "9.0.8"
+    },
+    "src": {
+      "name": "/dev.spiegl.flyingcarpet_21_src.tar.gz",
+      "sha256": "14e862cb1373c7bb50b355960e3b78707f957e4b887744fe6e541af7d660768c",
+      "size": 1645669
+    }
+  }
+}

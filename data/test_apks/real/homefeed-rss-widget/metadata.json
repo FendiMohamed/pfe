@@ -1,0 +1,63 @@
+{
+  "apk": {
+    "expected_sha256": "95eedc53ecef38e90dba85901b0ee9c278ef2207e6effc8f1aacb09230c4f611",
+    "index_size": 14230674,
+    "path": "data/test_apks/real/homefeed-rss-widget/homefeed-rss-widget.apk",
+    "sha256": "95eedc53ecef38e90dba85901b0ee9c278ef2207e6effc8f1aacb09230c4f611",
+    "size": 14230674,
+    "url": "https://f-droid.org/repo/com.byterdevs.rsswidget_4.apk"
+  },
+  "app": "HomeFeed - RSS Widget",
+  "categories": [
+    "Internet",
+    "News"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "internet",
+    "news",
+    "rss-widget",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.byterdevs.rsswidget/",
+  "license": "Apache-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.byterdevs.rsswidget",
+  "proof_status": "report-generated",
+  "reason": "No-native RSS/news widget with target SDK 36 and a moderate source tree; adds a compact modern internet/news candidate to the clean non-sparse probe.",
+  "report": {
+    "detected_component_count": 17,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v9/report-real-homefeed-rss-widget",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v9/report-real-homefeed-rss-widget/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v9/report-real-homefeed-rss-widget/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v9/report-real-homefeed-rss-widget/sbom.cdx.json",
+    "sbom_component_count": 17,
+    "status": "ok"
+  },
+  "slug": "homefeed-rss-widget",
+  "source_repo": "https://github.com/byter11/rss-widget",
+  "source_tarball": {
+    "sha256": "3621c2d280aff12964694b3094937eec9f697148e199406bbee1886812f55298",
+    "size": 7039091,
+    "url": "https://f-droid.org/repo/com.byterdevs.rsswidget_4_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 4,
+  "version_name": "1.3.0"
+}

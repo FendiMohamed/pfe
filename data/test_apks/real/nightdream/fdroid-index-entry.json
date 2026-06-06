@@ -1,0 +1,181 @@
+{
+  "metadata": {
+    "added": 1774736177447,
+    "authorEmail": "stefan.fruhner@googlemail.com",
+    "authorName": "Stefan Fruhner",
+    "categories": [
+      "Clock",
+      "Weather"
+    ],
+    "description": {
+      "en-US": "<b>Nightdream</b><br/>\nAn open-source desk clock and screensaver, perfect for day and night. It shows a digital clock with auto-brightness, battery level, date, and notifications. Night mode offers a dark display (pure black on AMOLED). Adjust font size with a two-finger zoom.\n<br/><br/>\n<b>Customizable Design</b><br/>\nAdapt colors, fonts, and analog watch faces. Resize the clock with a two-finger zoom.\n<br/><br/>\n<b>Widgets</b><br/>\nAdd a clock widget to your home screen.\n<br/><br/>\n<b>Screensaver (Daydream)</b><br/>\nUse as a screensaver on Android 4.2+. The screen can turn off at night and reactivate based on light or sound.\n<br/><br/>\n<b>Alarms &amp; Radio</b><br/>\nSet quick alarms with a swipe. Listen to internet radio stations and use them for your alarm. The app can manage Wi-Fi for uninterrupted streaming.\n<br/><br/>\n<b>Smart Home Integration</b><br/>\nConnect to your AVM smart home environment.\n<br/><br/>\n<b>Battery Status</b><br/>\nSee the estimated time until fully charged.\n<br/><br/>\n<b>Notifications</b><br/>\nDisplay notifications from your favorite apps (requires Notification Access).\n<br/><br/>\n<b>Weather</b><br/>\nShow current weather and a 5-day forecast from providers like OpenWeatherMap, Bright Sky, and Met.no.\n<br/><br/>\n<b>Extra Features</b><br/>\n<ul>\n  <li>Built-in flashlight.</li>\n</ul>\n<br/><br/>\n<b>Open Source &amp; Donations</b><br/>\nNightdream is free, open-source software. The source code is available for review. Support development through donations.\n<br/><br/>\n<b>Permissions Explained:</b><br/>\n<ul>\n  <li><b>FOREGROUND_SERVICE:</b> Play radio in the background.</li>\n  <li><b>MODIFY_AUDIO_SETTINGS:</b> Silence device in night mode.</li>\n  <li><b>WAKE_LOCK:</b> Keep screen on or wake device for alarms.</li>\n  <li><b>READ_EXTERNAL_STORAGE:</b> Use custom background images.</li>\n  <li><b>INTERNET &amp; ACCESS_NETWORK_STATE:</b> For weather, radio, and crash reports.</li>\n  <li><b>RECEIVE_BOOT_COMPLETED:</b> Reschedule alarms after reboot.</li>\n  <li><b>VIBRATE:</b> Vibrate for alarms.</li>\n  <li><b>SET_ALARM, USE_EXACT_ALARM, &amp; SCHEDULE_EXACT_ALARM:</b> Set alarms.</li>\n  <li><b>ACCESS_COARSE_LOCATION:</b> Get weather for your location.</li>\n  <li><b>POST_NOTIFICATIONS:</b> Show alarm notifications.</li>\n  <li><b>READ_MEDIA_AUDIO:</b> Use custom alarm sounds.</li>\n  <li><b>SYSTEM_ALERT_WINDOW:</b> Display clock over other apps.</li>\n  <li><b>FLASHLIGHT:</b> Use the flashlight.</li>\n  <li><b>ACCESS_NOTIFICATION_POLICY:</b> Control Do Not Disturb.</li>\n</ul>"
+    },
+    "donate": [
+      "https://buymeacoffee.com/firebirdberlin"
+    ],
+    "featureGraphic": {
+      "en-US": {
+        "name": "/com.firebirdberlin.nightdream.noGms/en-US/featureGraphic_nuTin4Sqd7ppHc-o59dqbQY9qG4BdVf8khVLSkylLHU=.png",
+        "sha256": "9ee4e29f84aa77ba691dcfa8e7d76a6d063da86e017557fc92154b4a4ca52c75",
+        "size": 273798
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/com.firebirdberlin.nightdream.noGms/en-US/icon_aEkmoO8DiriJ46ybWqUQ3Ri-BWn06L1Gr5Ey-_A1XGA=.png",
+        "sha256": "684926a0ef038ab889e3ac9b5aa510dd18be0569f4e8bd46af9132fbf0355c60",
+        "size": 121372
+      }
+    },
+    "issueTracker": "https://github.com/firebirdberlin/nightdream/issues",
+    "lastUpdated": 1774736177447,
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "en-US": "NightDream"
+    },
+    "preferredSigner": "069a8ec4457adc2981d411f89d9ee098533d6d0b64003d7e728df59a548edf47",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.firebirdberlin.nightdream.noGms/en-US/phoneScreenshots/store01.png",
+            "sha256": "e7f8dd1ead57c331357596e817fea9fa3f42935e57d333e82707f0f666c08c58",
+            "size": 270317
+          },
+          {
+            "name": "/com.firebirdberlin.nightdream.noGms/en-US/phoneScreenshots/store02.png",
+            "sha256": "f91a7b4fae49d922262a19456bbfe08283095605a80bdf32e1feba69fbea9620",
+            "size": 327036
+          },
+          {
+            "name": "/com.firebirdberlin.nightdream.noGms/en-US/phoneScreenshots/store03.png",
+            "sha256": "643f186033a43930115bea82ff73f5ec0635a901824494e58979b220d26f4209",
+            "size": 314351
+          },
+          {
+            "name": "/com.firebirdberlin.nightdream.noGms/en-US/phoneScreenshots/store04.png",
+            "sha256": "55a24aa9c5056ff2c7a946e0fa782b948d84d81fe7b30bb518654ad04c97808d",
+            "size": 411855
+          },
+          {
+            "name": "/com.firebirdberlin.nightdream.noGms/en-US/phoneScreenshots/store05.png",
+            "sha256": "c23b62b6ddfa2b4d40126292fdf95e1497a19dee3663cbc0ef912d7de38d9b65",
+            "size": 1996325
+          },
+          {
+            "name": "/com.firebirdberlin.nightdream.noGms/en-US/phoneScreenshots/store06.png",
+            "sha256": "61a272c26fab99cebb34a62ef631f0f8e67620ba9c1af7c14d27303aea02af1a",
+            "size": 599507
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/firebirdberlin/nightdream",
+    "summary": {
+      "en-US": "Clock, screensaver & radio with dynamic brightness & custom layouts."
+    },
+    "webSite": "https://firebirdberlin.github.io/nightdream"
+  },
+  "version": {
+    "added": 1774736177447,
+    "antiFeatures": {
+      "NonFreeNet": {
+        "en-US": "Rely on met.no for weather"
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeibzwxmkg5abltblatfm4p7porv526htkuu55anacme4ymjeirzxwa",
+      "name": "/com.firebirdberlin.nightdream.noGms_348.apk",
+      "sha256": "76cd759101a19ba34e84ffe920ae2dd726b53b2952dda497f4a533cf10a7d669",
+      "size": 11140815
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "069a8ec4457adc2981d411f89d9ee098533d6d0b64003d7e728df59a548edf47"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.CHANGE_WIFI_STATE"
+        },
+        {
+          "name": "android.permission.FLASHLIGHT"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.MODIFY_AUDIO_SETTINGS"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "com.android.alarm.permission.SET_ALARM"
+        },
+        {
+          "name": "android.permission.READ_CALENDAR"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+        },
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_NOTIFICATION_POLICY"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_AUDIO"
+        },
+        {
+          "name": "android.permission.SYSTEM_ALERT_WINDOW"
+        },
+        {
+          "name": "android.permission.USE_EXACT_ALARM"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.SCHEDULE_EXACT_ALARM"
+        },
+        {
+          "name": "com.firebirdberlin.nightdream.noGms.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 24,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 348,
+      "versionName": "2.11.26"
+    },
+    "src": {
+      "name": "/com.firebirdberlin.nightdream.noGms_348_src.tar.gz",
+      "sha256": "f51ce691810647d58239264b0e2b6f8834ee2c344679339175dc87e49134dcc7",
+      "size": 36022002
+    }
+  }
+}

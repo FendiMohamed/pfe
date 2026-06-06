@@ -1,0 +1,323 @@
+{
+  "metadata": {
+    "added": 1372464000000,
+    "authorName": "Nextcloud GmbH",
+    "categories": [
+      "Internet",
+      "News",
+      "Podcast"
+    ],
+    "changelog": "https://github.com/nextcloud/news-android/blob/HEAD/CHANGELOG.md",
+    "description": {
+      "de-DE": "Die Nextcloud News App erm\u00f6glicht die Synchronisierung von Artikeln zwischen Android und der Webbasierten Nextcloud News Anwendung.\n\n- Anpassbare Listenansicht\n- Dark/Light Theme\n- Podcasts anh\u00f6ren\n- Android Auto Unterst\u00fctzung\n- Artikel Offline lesen\n- Bilder offline zwischenspeichern\n- Hintergrund-Synchronisierung\n- Als gelesen markieren beim scrollen\n- Schriftart einstellbar\n- Widget\n- uvm.\n\n\nUm die neuste Beta Version zu verwenden, klicke bitte auf den folgenden Link:\nhttps://play.google.com/apps/testing/de.luhmer.owncloudnewsreader\n\nDie App steht unter der AGPLv3 Lizenz und ist eine freie Software deren Quellcode unter folgendem Link verf\u00fcgbar ist. Jeder kann dazu beitragen die App weiter zu verbessern.\nhttps://github.com/nextcloud/news-android\n\nBitte beachten Sie, dass zur Verwendung dieser App ein Nextcloud Instanz mit installierter News App ben\u00f6tigt wird.",
+      "en-US": "The Nextcloud News Reader App makes it possible to synchronize feeds between Android and the Nextcloud News App.\n\n- Dark/Light Theme\n- podcast support\n- support for Android Auto\n- Offline reading\n- Cache images offline\n- Background synchronization\n- Customizable Listview\n- Customizable font\n- Mark as read while scrolling\n- Widget\n- and many more!\n\nIn order to use the newest beta version, please click on the following link:\nhttps://play.google.com/apps/testing/de.luhmer.owncloudnewsreader\n\n\nThe App is under AGPLv3 license terms. It is free and the source code is available under:\nhttps://github.com/nextcloud/news-android\n\nPlease note that in order to use this app you will need to have a nextcloud instance running with the news app installed."
+    },
+    "donate": [
+      "https://www.paypal.com/donate?hosted_button_id=5TJ6LTEVTDF5J"
+    ],
+    "featureGraphic": {
+      "de-DE": {
+        "name": "/de.luhmer.owncloudnewsreader/de-DE/featureGraphic_UGCV3ABEXbh8GuchNyKvOemYqxdCaEzpisKLWuZPXF4=.png",
+        "sha256": "506095dc00445db87c1ae7213722af39e998ab1742684ce98ac28b5ae64f5c5e",
+        "size": 34487
+      }
+    },
+    "icon": {
+      "de-DE": {
+        "name": "/de.luhmer.owncloudnewsreader/de-DE/icon_Fq3lbrj86vfpoDswPgn-lUxNSEpASbTfy0mn9_iNtnc=.png",
+        "sha256": "16ade56eb8fceaf7e9a03b303e09fe954c4d484a4049b4dfcb49a7f7f88db677",
+        "size": 20326
+      }
+    },
+    "issueTracker": "https://github.com/nextcloud/news-android/issues",
+    "lastUpdated": 1775422458666,
+    "license": "AGPL-3.0-or-later",
+    "name": {
+      "de-DE": "Nextcloud News",
+      "en-US": "Nextcloud News"
+    },
+    "preferredSigner": "c6e3a1a20a7e021829d4f51b36cb27fa815f2a9c2213d980e26a31b49e78ea75",
+    "screenshots": {
+      "phone": {
+        "de-DE": [
+          {
+            "name": "/de.luhmer.owncloudnewsreader/de-DE/phoneScreenshots/1_de-DE.png",
+            "sha256": "8f4ff33090fc102464540d3699762916401d6bc0b5a29205daccad603553c884",
+            "size": 441059
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/de-DE/phoneScreenshots/2_de-DE.png",
+            "sha256": "691deb43beae68318f39c5839aa485e5d3c65e9dafdc546f132864b34fb30b83",
+            "size": 414706
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/de-DE/phoneScreenshots/3_de-DE.png",
+            "sha256": "e24e4272ca30613f9fc32409e3e725c8ab1d375db1f6a7c88420e57b2df6780c",
+            "size": 549343
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/de-DE/phoneScreenshots/4_de-DE.png",
+            "sha256": "132a849a1a3737b64160ffff800ef8ddeec124a43214cd1feaebb7de62004478",
+            "size": 904904
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/de-DE/phoneScreenshots/5_de-DE.png",
+            "sha256": "e80d9af66c5a0aa46f006313dc48507742b4d0a34e6f103ac6f1b0366190350b",
+            "size": 911075
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/de-DE/phoneScreenshots/6_de-DE.png",
+            "sha256": "7a567500db46867aec8bb88ca965a47e2ad5d9e1e01aa0f5f4cad9b87e5ee37f",
+            "size": 1594233
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/1-Screen.png",
+            "sha256": "50d0b58566c39e3da881d95fefcf1c923ead84125948d321078d92857382619c",
+            "size": 130968
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/1.png",
+            "sha256": "8f4ff33090fc102464540d3699762916401d6bc0b5a29205daccad603553c884",
+            "size": 441059
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/1_en-US.png",
+            "sha256": "98b0ec01ae0781eb718f149baf013b3ca26a02e3d069bfa4a1b440f0b2508585",
+            "size": 670660
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/2-Screen.png",
+            "sha256": "7086c14f7183eda24ccabd582c6f6d231092b3a0898898d60324df95cb5a9b4b",
+            "size": 144402
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/2.png",
+            "sha256": "691deb43beae68318f39c5839aa485e5d3c65e9dafdc546f132864b34fb30b83",
+            "size": 414706
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/2_en-US.png",
+            "sha256": "6344865e746ad21518f8302b213a329ecacde9dccc396f35ee14ac88b1e7fec2",
+            "size": 317151
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/3-Screen.png",
+            "sha256": "75630c4e479a496d084408bfb69013c299dfa1a68ab149b94b5e356c68c7c9cd",
+            "size": 127494
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/3.png",
+            "sha256": "e24e4272ca30613f9fc32409e3e725c8ab1d375db1f6a7c88420e57b2df6780c",
+            "size": 549343
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/3_en-US.png",
+            "sha256": "06f765923a33b085537004ae9c80386aec3765ae0b2c6595908a148a03f1c187",
+            "size": 651350
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/4-Screen.png",
+            "sha256": "cc745e0acf80a41d3556388165f2adf23cafb599dc429724650d67f63b89549c",
+            "size": 129295
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/4.png",
+            "sha256": "132a849a1a3737b64160ffff800ef8ddeec124a43214cd1feaebb7de62004478",
+            "size": 904904
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/4_en-US.png",
+            "sha256": "c78c0ae1629f4ec8db159c7869a0beed8f9ec3e52afa23ff5a69a69503b06d19",
+            "size": 270615
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/5-Screen.png",
+            "sha256": "38c7d577b5cd9792894af13cb08577e8f37356c21d7e77370861db4ed5b441e5",
+            "size": 128783
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/5.png",
+            "sha256": "e80d9af66c5a0aa46f006313dc48507742b4d0a34e6f103ac6f1b0366190350b",
+            "size": 911075
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/6-Screen.png",
+            "sha256": "a215533989a1c41b6d6aefad9f0d9aca10ed7984d1fae7a75d3f67b2fb7598f2",
+            "size": 245614
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/6.png",
+            "sha256": "7a567500db46867aec8bb88ca965a47e2ad5d9e1e01aa0f5f4cad9b87e5ee37f",
+            "size": 1594233
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/7.png",
+            "sha256": "38c7d577b5cd9792894af13cb08577e8f37356c21d7e77370861db4ed5b441e5",
+            "size": 128783
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/phoneScreenshots/8.png",
+            "sha256": "a215533989a1c41b6d6aefad9f0d9aca10ed7984d1fae7a75d3f67b2fb7598f2",
+            "size": 245614
+          }
+        ]
+      },
+      "sevenInch": {
+        "de-DE": [
+          {
+            "name": "/de.luhmer.owncloudnewsreader/de-DE/sevenInchScreenshots/1_de-DE.png",
+            "sha256": "90fb342c7b580f1a46ea3cbcd79fcba0d5818d22d549aa646fc57d4b93c3cd43",
+            "size": 521082
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/de-DE/sevenInchScreenshots/2_de-DE.png",
+            "sha256": "7f9b97d82003c6e25d181ba35459051ebce23bf11d5a470d1a885be6a7e00306",
+            "size": 489567
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/de-DE/sevenInchScreenshots/3_de-DE.png",
+            "sha256": "e6f68ff2903124ee037308882175521dc7c102cda767be1e152e495d195a77cd",
+            "size": 1805313
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/sevenInchScreenshots/1_en-US.png",
+            "sha256": "502f27a2526293f365746c7f30d8caf0cf6aeb41f9e227ed8002cde994e1b6c5",
+            "size": 518388
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/sevenInchScreenshots/2_en-US.png",
+            "sha256": "7f9b97d82003c6e25d181ba35459051ebce23bf11d5a470d1a885be6a7e00306",
+            "size": 489567
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/sevenInchScreenshots/3_en-US.png",
+            "sha256": "e6f68ff2903124ee037308882175521dc7c102cda767be1e152e495d195a77cd",
+            "size": 1805313
+          }
+        ]
+      },
+      "tenInch": {
+        "de-DE": [
+          {
+            "name": "/de.luhmer.owncloudnewsreader/de-DE/tenInchScreenshots/1_de-DE.png",
+            "sha256": "90fb342c7b580f1a46ea3cbcd79fcba0d5818d22d549aa646fc57d4b93c3cd43",
+            "size": 521082
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/de-DE/tenInchScreenshots/2_de-DE.png",
+            "sha256": "7f9b97d82003c6e25d181ba35459051ebce23bf11d5a470d1a885be6a7e00306",
+            "size": 489567
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/de-DE/tenInchScreenshots/3_de-DE.png",
+            "sha256": "e6f68ff2903124ee037308882175521dc7c102cda767be1e152e495d195a77cd",
+            "size": 1805313
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/tenInchScreenshots/1_en-US.png",
+            "sha256": "502f27a2526293f365746c7f30d8caf0cf6aeb41f9e227ed8002cde994e1b6c5",
+            "size": 518388
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/tenInchScreenshots/2_en-US.png",
+            "sha256": "7f9b97d82003c6e25d181ba35459051ebce23bf11d5a470d1a885be6a7e00306",
+            "size": 489567
+          },
+          {
+            "name": "/de.luhmer.owncloudnewsreader/en-US/tenInchScreenshots/3_en-US.png",
+            "sha256": "e6f68ff2903124ee037308882175521dc7c102cda767be1e152e495d195a77cd",
+            "size": 1805313
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/nextcloud/news-android",
+    "summary": {
+      "de-DE": "Android App f\u00fcr Nextcloud News App (Ben\u00f6tigt eine eigene Nextcloud Instanz)",
+      "en-US": "Android App for Nextcloud News App (requires own Nextcloud instance)"
+    },
+    "translation": "https://www.transifex.com/nextcloud/nextcloud/"
+  },
+  "version": {
+    "added": 1775422458666,
+    "file": {
+      "ipfsCIDv1": "bafybeig2vl4ksr5c62ou7yz5s3wioiocriko2hrmmqvqgzytvmq7bt5sx4",
+      "name": "/de.luhmer.owncloudnewsreader_196.apk",
+      "sha256": "529f25f74afb4e83d956dd72355c5788c3e18aac55f46ab0f2c81d10f0361c17",
+      "size": 4081103
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "c6e3a1a20a7e021829d4f51b36cb27fa815f2a9c2213d980e26a31b49e78ea75"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.READ_PHONE_STATE"
+        },
+        {
+          "name": "android.permission.READ_SYNC_SETTINGS"
+        },
+        {
+          "name": "android.permission.WRITE_SYNC_SETTINGS"
+        },
+        {
+          "maxSdkVersion": 22,
+          "name": "android.permission.AUTHENTICATE_ACCOUNTS"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+        },
+        {
+          "name": "android.permission.GET_ACCOUNTS"
+        },
+        {
+          "name": "de.luhmer.owncloudnewsreader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 196,
+      "versionName": "0.9.9.95"
+    },
+    "src": {
+      "name": "/de.luhmer.owncloudnewsreader_196_src.tar.gz",
+      "sha256": "f713381251655603d30937db2a0fcbfb6a7ea08b3a5210a7b4b4aaa94cf9a0c5",
+      "size": 20495430
+    },
+    "whatsNew": {
+      "de-DE": "- Dependency updates\n- Fixed - !1637 - Fix bug in \"Mark all unread items as read\" feature (thanks to @Unpublished)\n",
+      "en-US": "- Dependency updates\n- Fixed - !1637 - Fix bug in \"Mark all unread items as read\" feature (thanks to @Unpublished)\n"
+    }
+  }
+}

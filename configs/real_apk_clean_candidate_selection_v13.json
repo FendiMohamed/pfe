@@ -1,0 +1,102 @@
+{
+  "selections": [
+    {
+      "app": "LibChecker",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "system",
+        "library-inspection",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.absinthe.libchecker",
+      "reason": "No-native system/library-inspection app with target SDK 36, a moderate APK, and a nontrivial source tarball; selected as a modern AndroidX/Kotlin-style candidate likely to exercise useful dependency evidence without native boundaries.",
+      "slug": "libchecker",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "OpenTopoMap Viewer",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "navigation",
+        "maps",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.nitri.opentopo",
+      "reason": "No-native navigation/map app with target SDK 36, a medium APK, source tarball, and internet/location behavior; selected for non-sparse map-style Android dependencies without native map libraries.",
+      "slug": "opentopomap-viewer",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Railway station photos",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "navigation",
+        "public-transport",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "de.bahnhoefe.deutschlands.bahnhofsfotos",
+      "reason": "No-native public-transport/navigation app with target SDK 36, source tarball, and location/network permissions; selected to diversify clean-candidate evidence beyond notes, browsers, and password utilities.",
+      "slug": "railway-station-photos",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "LinkDroid for Linkwarden",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "bookmark",
+        "reading",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.sbv.linkdroid",
+      "reason": "No-native internet/bookmark client with target SDK 36, manageable source size, and likely modern networking/UI dependencies; selected as a practical sync-client-style clean candidate.",
+      "slug": "linkdroid",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Quasseldroid",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "messaging",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.iskrembilen.quasseldroid",
+      "reason": "No-native internet/messaging app with target SDK 36 and a larger source tarball; selected as a real networking client likely to produce a meaningful runtime dependency tree.",
+      "slug": "quasseldroid",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "TTRSS-Reader",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "news",
+        "rss",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.ttrssreader",
+      "reason": "No-native RSS/news client with target SDK 36, source tarball, and network/background-service behavior; selected as a likely non-sparse internet app while avoiding already-used Nextcloud News and HomeFeed rows.",
+      "slug": "ttrss-reader",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "apk": {
+    "expected_sha256": "52d908498b5dd8555dbf0f82661f1e2348740766be72813dc6fca9ce9f4d4b18",
+    "index_size": 16738240,
+    "path": "data/test_apks/real/oceannex/oceannex.apk",
+    "sha256": "52d908498b5dd8555dbf0f82661f1e2348740766be72813dc6fca9ce9f4d4b18",
+    "size": 16738240,
+    "url": "https://f-droid.org/repo/com.swatian.oceannex.free_100.apk"
+  },
+  "app": "OceanNex for DigitalOcean",
+  "categories": [
+    "Internet"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "internet",
+    "cloud-admin",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.swatian.oceannex.free/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.swatian.oceannex.free",
+  "proof_status": "report-generated",
+  "reason": "No-native DigitalOcean administration client with target SDK 36, a 16 MB APK, and a compact source tarball; selected to add a cloud/admin internet row outside the earlier file-transfer and weather batches.",
+  "report": {
+    "detected_component_count": 21,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-oceannex",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-oceannex/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-oceannex/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-oceannex/sbom.cdx.json",
+    "sbom_component_count": 21,
+    "status": "ok"
+  },
+  "slug": "oceannex",
+  "source_repo": "https://codeberg.org/swatian/OceanNex",
+  "source_tarball": {
+    "sha256": "0834eca0071f527505186c23c7bae8d880516e69000957eec2a9a56a7fa698f0",
+    "size": 1916913,
+    "url": "https://f-droid.org/repo/com.swatian.oceannex.free_100_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 100,
+  "version_name": "1.0.0"
+}

@@ -703,7 +703,7 @@ Outputs:
 - `data/results/evaluation/real-apk-proof/<candidate-id>/proof-checklist.md`
 - `data/results/evaluation/real-apk-proof/<candidate-id>/proof-checklist.json`
 
-The current first-batch targets are OpenTracks `v4.27.0irreproducible`/6653, NewPipe `0.28.5`/1010, Tusky `32.2`/142, K-9/Thunderbird Android `18.0`/39035, AntennaPod `3.11.4`/3110495, KDE Connect `1.35.5`/13505, and Organic Maps `2026.05.08-4-FDroid`/26050804. OpenTracks and Tusky are clean source-validated cases; AntennaPod is source-validated with 19/20 confirmed and one AndroidX Core near-tie mismatch; KDE Connect is source-validated with 8/9 confirmed and one ViewPager2 beta-version mismatch; NewPipe has a complete proof attempt but remains a partial-version-mismatch case; K-9 is partial-gradle-blocked; Organic Maps is limitation-complete.
+The current first-batch targets are OpenTracks `v4.27.0irreproducible`/6653, NewPipe `0.28.5`/1010, Tusky `32.2`/142, K-9/Thunderbird Android `18.0`/39035, AntennaPod `3.11.4`/3110495, KDE Connect `1.35.5`/13505, and Organic Maps `2026.05.08-4-FDroid`/26050804. OpenTracks and Tusky are clean source-validated cases; AntennaPod is source-validated with 19/20 confirmed and one AndroidX Core near-tie mismatch; KDE Connect is source-validated with 8/9 confirmed and one ViewPager2 beta-version mismatch; NewPipe has a complete proof attempt but remains a partial-version-mismatch case; K-9 is source-validated partial at 5/11 confirmed after the plugin-lite validation-copy rescue; Organic Maps is limitation-complete.
 
 OpenTracks completed proof status:
 

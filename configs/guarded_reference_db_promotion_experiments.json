@@ -1,0 +1,106 @@
+{
+  "experiments": [
+    {
+      "candidate_versions": [
+        "androidx.activity:activity@1.9.2",
+        "androidx.compose.foundation:foundation-android@1.10.6",
+        "androidx.compose.runtime:runtime-android@1.10.6",
+        "androidx.compose.ui:ui-android@1.10.6",
+        "androidx.compose.ui:ui-tooling-preview-android@1.10.6",
+        "androidx.concurrent:concurrent-futures@1.2.0",
+        "androidx.recyclerview:recyclerview@1.3.2",
+        "androidx.viewpager2:viewpager2@1.1.0-beta02",
+        "com.google.code.gson:gson@2.13.2",
+        "com.squareup.okio:okio-jvm@3.9.0",
+        "org.jetbrains.kotlin:kotlin-stdlib@2.3.10"
+      ],
+      "comparison_json": "data/results/experiments/nextcloud-current-control-comparison/full-nextcloud-experiment-vs-current-control.json",
+      "id": "nextcloud-full-source-stack",
+      "scope": "tested-bundle",
+      "target_cases": [
+        "nextcloud-android"
+      ],
+      "title": "Nextcloud full source-used stack"
+    },
+    {
+      "candidate_versions": [
+        "androidx.compose.foundation:foundation-android@1.10.6",
+        "androidx.compose.ui:ui-android@1.10.6",
+        "androidx.compose.ui:ui-tooling-preview-android@1.10.6",
+        "androidx.recyclerview:recyclerview@1.3.2",
+        "com.google.code.gson:gson@2.13.2",
+        "org.jetbrains.kotlin:kotlin-stdlib@2.3.10"
+      ],
+      "comparison_json": "data/results/experiments/nextcloud-current-control-comparison/guarded-subset-v2-vs-current-control.json",
+      "id": "nextcloud-guarded-subset-v2",
+      "scope": "tested-bundle",
+      "target_cases": [
+        "nextcloud-android"
+      ],
+      "title": "Nextcloud guarded six-version subset"
+    },
+    {
+      "candidate_versions": [
+        "androidx.compose.runtime:runtime-android@1.10.6"
+      ],
+      "comparison_json": "data/results/experiments/app-era-coherence-runtime-only-vs-current-control.json",
+      "id": "nextcloud-runtime-only",
+      "scope": "singleton",
+      "target_cases": [
+        "nextcloud-android"
+      ],
+      "title": "Nextcloud Compose runtime singleton"
+    },
+    {
+      "candidate_versions": [
+        "androidx.activity:activity@1.9.2"
+      ],
+      "comparison_json": "data/results/experiments/app-era-coherence-activity-only-vs-current-control.json",
+      "id": "nextcloud-activity-only",
+      "scope": "singleton",
+      "target_cases": [
+        "nextcloud-android"
+      ],
+      "title": "Nextcloud Activity singleton"
+    },
+    {
+      "candidate_versions": [
+        "androidx.viewpager2:viewpager2@1.1.0-beta02"
+      ],
+      "comparison_json": "data/results/experiments/app-era-coherence-viewpager-beta-only-vs-current-control.json",
+      "id": "nextcloud-viewpager-beta-only",
+      "scope": "singleton",
+      "target_cases": [
+        "nextcloud-android"
+      ],
+      "title": "Nextcloud ViewPager2 beta singleton"
+    },
+    {
+      "candidate_versions": [
+        "androidx.activity:activity@1.6.0",
+        "androidx.concurrent:concurrent-futures@1.0.0",
+        "androidx.core:core@1.9.0"
+      ],
+      "comparison_json": "data/results/experiments/markor-coverage-gaps-vs-current-control.json",
+      "id": "markor-coverage-gap-bundle",
+      "scope": "tested-bundle",
+      "target_cases": [
+        "markor"
+      ],
+      "title": "Markor older dependency coverage bundle"
+    },
+    {
+      "candidate_versions": [
+        "androidx.core:core@1.9.0"
+      ],
+      "comparison_json": "data/results/experiments/markor-core-1-9-0-vs-current-control.json",
+      "id": "markor-core-1-9-0-only",
+      "scope": "singleton",
+      "target_cases": [
+        "markor"
+      ],
+      "title": "Markor Core singleton"
+    }
+  ],
+  "schema_version": 1
+}

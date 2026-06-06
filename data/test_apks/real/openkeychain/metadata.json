@@ -1,0 +1,61 @@
+{
+  "apk": {
+    "expected_sha256": "f88374b9113aa9ddba865258bd989eb3ac2ca1577d92e59d6e84228e080674ce",
+    "index_size": 12043256,
+    "path": "data/test_apks/real/openkeychain/openkeychain.apk",
+    "sha256": "f88374b9113aa9ddba865258bd989eb3ac2ca1577d92e59d6e84228e080674ce",
+    "size": 12043256,
+    "url": "https://f-droid.org/repo/org.sufficientlysecure.keychain_60400.apk"
+  },
+  "app": "OpenKeychain: Easy PGP",
+  "categories": [
+    "Security"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "security",
+    "crypto",
+    "older-profile",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/org.sufficientlysecure.keychain/",
+  "license": "GPL-3.0-or-later",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "org.sufficientlysecure.keychain",
+  "proof_status": "report-generated",
+  "reason": "No-native security/PGP app with target SDK 34 and a sizeable source tree; useful as a security-family clean-candidate attempt and an older-profile comparison row.",
+  "report": {
+    "detected_component_count": 12,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v9/report-real-openkeychain",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v9/report-real-openkeychain/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v9/report-real-openkeychain/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v9/report-real-openkeychain/sbom.cdx.json",
+    "sbom_component_count": 12,
+    "status": "ok"
+  },
+  "slug": "openkeychain",
+  "source_repo": "https://github.com/open-keychain/open-keychain",
+  "source_tarball": {
+    "sha256": "33cbfc0316cef3ca36b794e1d85ac6bef05b9b86808b373779412a4ee9ebc9de",
+    "size": 26020446,
+    "url": "https://f-droid.org/repo/org.sufficientlysecure.keychain_60400_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 60400,
+  "version_name": "6.0.4"
+}

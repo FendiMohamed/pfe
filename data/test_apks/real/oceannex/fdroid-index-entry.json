@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "added": 1774386746254,
+    "authorName": "M M Arif",
+    "categories": [
+      "Internet"
+    ],
+    "changelog": "https://codeberg.org/swatian/OceanNex/releases",
+    "description": {
+      "en-US": "A powerful native Android app to control your DigitalOcean droplets, domains, managed databases, firewalls, volumes and more...\n\n<h2>Features</h2>\n- Multiple accounts support\n- Theme to blend with your system UI (dynamic colors)\n- Biometric support for security\n- Set your default home screen\n- Change to your native language, if available\n- Dashboard to view all important info\n- Create and view droplets\n- View all events\n- View and create firewalls\n- Manage domains with records\n- Reboot, rebuild, delete, destroy, rename, reset password of droplet and more..\n- Enable and manage droplet backups\n- Manage droplet snapshots\n- View regions, OS images and marketplace apps, plans and sizes\n- View and create VPCs\n- Manage and create your certificates\n- Add and manage your uptime checks\n- View, manage, add, delete managed cluster databases\n- Add and remove users and databases for a database cluster\n- View billing info, invoices and recent history\n- Download invoices as PDF\n- Create and manage your projects\n- and many more...\n\n<p>Complete list of features: https://codeberg.org/swatian/OceanNex/wiki/Features</p>\n<p>Source code: https://codeberg.org/swatian/OceanNex</p>\n<p>Developer: https://mastodon.social/@mmarif</p>\n"
+    },
+    "donate": [
+      "https://www.patreon.com/mmarif"
+    ],
+    "featureGraphic": {
+      "en-US": {
+        "name": "/com.swatian.oceannex.free/en-US/featureGraphic_JOdMmTrjj_AOdgKEerVg-4g4NBF5kzOGLTTxVTUi6Ac=.png",
+        "sha256": "24e74c993ae38ff00e7602847ab560fb88383411799333862d34f1553522e807",
+        "size": 71078
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/com.swatian.oceannex.free/en-US/icon_ihqwWDaltGxbioUSdtD2f95RTY0Ep-gXKHnrbA0dlgs=.png",
+        "sha256": "8a1ab05836a5b46c5b8a851276d0f67fde514d8d04a7e8172879eb6c0d1d960b",
+        "size": 12392
+      }
+    },
+    "issueTracker": "https://codeberg.org/swatian/OceanNex/issues",
+    "lastUpdated": 1774386746254,
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-US": "OceanNex for DigitalOcean"
+    },
+    "preferredSigner": "c86313df9bed3595fdeae427ada1858ddda374e60ebc01a65a2ace36b73db42b",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.swatian.oceannex.free/en-US/phoneScreenshots/01.png",
+            "sha256": "a5e056a0241f8fdc7d6c90908cb45a25fe44fac6e69243823985f642a7af757f",
+            "size": 154555
+          },
+          {
+            "name": "/com.swatian.oceannex.free/en-US/phoneScreenshots/02.png",
+            "sha256": "c6454a0fa5f100bc047abd5f6f1414ab3804f8ca7d0baf5ebeccd0cf47e84684",
+            "size": 152875
+          },
+          {
+            "name": "/com.swatian.oceannex.free/en-US/phoneScreenshots/03.png",
+            "sha256": "86f147080c8785c42e27327dea30543bb507e12c84ad36ab3b757a94ec07bbc1",
+            "size": 174902
+          },
+          {
+            "name": "/com.swatian.oceannex.free/en-US/phoneScreenshots/04.png",
+            "sha256": "307cf87aa56c39a58b4034eceac7ad558553bd57c696a976084d41547ba24475",
+            "size": 191302
+          },
+          {
+            "name": "/com.swatian.oceannex.free/en-US/phoneScreenshots/05.png",
+            "sha256": "311c51036e7e19aaf2bb9732c53125afb7f87d1942276c9ee60f440302953164",
+            "size": 174208
+          },
+          {
+            "name": "/com.swatian.oceannex.free/en-US/phoneScreenshots/06.png",
+            "sha256": "47d2710214323a5934718c5bc1762bc0af8ae3c9c833a3670a3abe0db4c199da",
+            "size": 195456
+          },
+          {
+            "name": "/com.swatian.oceannex.free/en-US/phoneScreenshots/07.png",
+            "sha256": "8b4f6b4a57a4997d0678be59146bfbfa0ff319aa27707365d1732272e1104c1f",
+            "size": 152939
+          },
+          {
+            "name": "/com.swatian.oceannex.free/en-US/phoneScreenshots/08.png",
+            "sha256": "20f5df71fe43ecda4e2985d2fd2ac0865fa725ca82668393e347be4d8752383a",
+            "size": 161828
+          },
+          {
+            "name": "/com.swatian.oceannex.free/en-US/phoneScreenshots/09.png",
+            "sha256": "3d8beb5e9cd368327582da44e9e328fe9f096b2a83f0f9479203e8bce520e4d4",
+            "size": 188871
+          },
+          {
+            "name": "/com.swatian.oceannex.free/en-US/phoneScreenshots/10.png",
+            "sha256": "e566e2a1c7d0fa487f988339d2cc1b89e5418c8fc2e467da65dce2aa53cfaed6",
+            "size": 144271
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://codeberg.org/swatian/OceanNex",
+    "summary": {
+      "en-US": "Manage Your DigitalOcean Infrastructure with OceanNex"
+    },
+    "translation": "https://crowdin.com/project/oceannex",
+    "webSite": "https://oceannex.swatian.com"
+  },
+  "version": {
+    "added": 1774386746254,
+    "antiFeatures": {
+      "NonFreeNet": {
+        "en-US": "Depends on api.digitalocean.com servers"
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeidgdupcrmpl77huesmkggal7xfkhzkoqvg374wjdaehyvcqdlxm3e",
+      "name": "/com.swatian.oceannex.free_100.apk",
+      "sha256": "52d908498b5dd8555dbf0f82661f1e2348740766be72813dc6fca9ce9f4d4b18",
+      "size": 16738240
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "c86313df9bed3595fdeae427ada1858ddda374e60ebc01a65a2ace36b73db42b"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.USE_BIOMETRIC"
+        },
+        {
+          "name": "android.permission.USE_FINGERPRINT"
+        },
+        {
+          "name": "com.swatian.oceannex.free.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 28,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 100,
+      "versionName": "1.0.0"
+    },
+    "src": {
+      "name": "/com.swatian.oceannex.free_100_src.tar.gz",
+      "sha256": "0834eca0071f527505186c23c7bae8d880516e69000957eec2a9a56a7fa698f0",
+      "size": 1916913
+    },
+    "whatsNew": {
+      "en-US": "1.0.0\n\nFirst stable release of OceanNex.\n\nCheck out the release and feature wiki page for complete list of features.\n\nRepository: https://codeberg.org/swatian/OceanNex\nReleases: https://codeberg.org/swatian/OceanNex/releases\nFeatures: https://codeberg.org/swatian/OceanNex/wiki/Features\n"
+    }
+  }
+}

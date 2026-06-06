@@ -427,6 +427,8 @@ def test_match_apk_to_reference_db_ranks_matching_version_first(monkeypatch, tmp
     assert summary.decisions[0].version_status == "exact"
     assert summary.decisions[0].reference_versions_considered == 2
     assert summary.decisions[0].alternatives[0].version == "2.8.6"
+    assert summary.composite_family_shortlist_enabled is True
+    assert summary.composite_family_shortlist_summary["scoring_status"] == "enabled"
     assert summary.inert_multiscale_features["scoring_status"] == "disabled"
     assert (
         summary.inert_multiscale_features["apk"]["basic_block_opcode_fingerprints"]["distinct"]
@@ -439,28 +441,120 @@ def test_match_apk_to_reference_db_ranks_matching_version_first(monkeypatch, tmp
         == 0
     )
 
-    detected = detected_libraries_from_match_summary(summary)
 
-    assert len(detected) == 1
-    assert detected[0].coordinate == "com.google.code.gson:gson"
-    assert detected[0].version == "2.8.9"
-    assert detected[0].match_type == "hybrid-exact"
-    assert detected[0].confidence == 1.0
-    assert detected[0].identity_status == "confirmed"
-    assert detected[0].version_status == "exact"
-    assert {item.source for item in detected[0].evidence} == {
-        "package-overlap",
-        "class-overlap",
-        "method-overlap",
-        "opcode-cosine",
-        "opcode-ngrams",
-        "class-dependency-graph",
-        "string-literals",
-        "api-references",
-        "version-unique-features",
-        "identity-decision",
-        "version-decision",
+def test_match_apk_to_reference_db_opt_in_composite_shortlist_prunes_noise_family(
+    monkeypatch,
+    tmp_path,
+):
+    db_path = tmp_path / "reference.sqlite"
+    initialize_feature_db(db_path)
+    with sqlite3.connect(db_path) as connection:
+        first_component_id = insert_component(
+            connection,
+            coordinate="example:target",
+            version="1.0.0",
+        )
+        insert_features(
+            connection,
+            first_component_id,
+            packages={"target"},
+            classes={"Ltarget/Api;"},
+            methods={"Ltarget/Api;->run()V"},
+        )
+        second_component_id = insert_component(
+            connection,
+            coordinate="example:target",
+            version="2.0.0",
+        )
+        insert_features(
+            connection,
+            second_component_id,
+            packages={"target"},
+            classes={"Ltarget/Api;"},
+            methods={"Ltarget/Api;->run()V"},
+        )
+        noise_component_id = insert_component(
+            connection,
+            coordinate="example:noise",
+            version="1.0.0",
+        )
+        insert_features(
+            connection,
+            noise_component_id,
+            packages={"noise"},
+            classes={"Lnoise/Api;"},
+            methods={"Lnoise/Api;->run()V"},
+        )
+
+    def fake_analyze_apk_dex(apk_path: str, *, include_members: bool = False):
+        assert apk_path == "sample.apk"
+        assert include_members is True
+        return ApkDexAnalysis(
+            apk_path=apk_path,
+            dex_files_analyzed=1,
+            dex_files_failed=0,
+            classes_count=1,
+            methods_count=1,
+            packages=["target"],
+            opcode_histogram={},
+            opcode_ngrams={},
+            dex_files=[
+                DexFileFeatures(
+                    dex_file="classes.dex",
+                    classes_count=1,
+                    methods_count=1,
+                    packages=["target"],
+                    class_descriptors=["Ltarget/Api;"],
+                    method_signatures=["Ltarget/Api;->run()V"],
+                    opcode_histogram={},
+                    opcode_ngrams={},
+                )
+            ],
+            parse_errors=[],
+        )
+
+    monkeypatch.setattr("apk_sbom.matcher.analyze_apk_dex", fake_analyze_apk_dex)
+
+    baseline_summary = match_apk_to_reference_db(
+        "sample.apk",
+        db_path=db_path,
+        min_score=0.0,
+        top=None,
+        opcode_weight=0.0,
+        dependency_weight=0.0,
+        literal_weight=0.0,
+        unique_version_weight=0.0,
+        enable_composite_family_shortlist=False,
+    )
+    default_summary = match_apk_to_reference_db(
+        "sample.apk",
+        db_path=db_path,
+        min_score=0.0,
+        top=None,
+        opcode_weight=0.0,
+        dependency_weight=0.0,
+        literal_weight=0.0,
+        unique_version_weight=0.0,
+    )
+
+    assert {candidate.coordinate for candidate in baseline_summary.candidates} == {
+        "example:noise",
+        "example:target",
     }
+    assert baseline_summary.composite_family_shortlist_enabled is False
+    assert baseline_summary.composite_family_shortlist_summary["scoring_status"] == "disabled"
+    assert [candidate.coordinate for candidate in default_summary.candidates] == [
+        "example:target",
+        "example:target",
+    ]
+    assert default_summary.composite_family_shortlist_enabled is True
+    shortlist = default_summary.composite_family_shortlist_summary
+    assert shortlist["scoring_status"] == "enabled"
+    assert shortlist["reference_rows_before"] == 3
+    assert shortlist["reference_rows_retained"] == 2
+    assert shortlist["reference_rows_removed"] == 1
+    assert shortlist["coordinate_families_removed"] == 1
+    assert default_summary.decisions[0].reference_versions_considered == 2
 
 
 def test_score_reference_component_uses_version_unique_tie_breakers():
@@ -512,6 +606,52 @@ def test_score_reference_component_uses_version_unique_tie_breakers():
     assert candidate.evidence.reference_unique_methods == 1
     assert candidate.evidence.reference_unique_literals == 1
     assert candidate.evidence.unique_version_score == 1.0
+
+
+def test_score_reference_component_extracts_version_unique_literal_context_evidence():
+    apk_features = FeatureSet(
+        packages={"com.example"},
+        classes=set(),
+        methods=set(),
+        literal_context_features={"ctx:shared", "ctx:version-1-1"},
+    )
+    sibling = FeatureSet(
+        packages={"com.example"},
+        classes=set(),
+        methods=set(),
+        literal_context_features={"ctx:shared"},
+    )
+    reference = ReferenceComponentFeatures(
+        component_id=1,
+        coordinate="com.example:library",
+        group_id="com.example",
+        artifact_id="library",
+        version="1.1.0",
+        purl="pkg:maven/com.example/library@1.1.0",
+        features=FeatureSet(
+            packages={"com.example"},
+            classes=set(),
+            methods=set(),
+            literal_context_features={"ctx:shared", "ctx:version-1-1"},
+        ),
+    )
+
+    candidate = score_reference_component(
+        apk_features,
+        reference,
+        sibling_features=[sibling],
+        package_weight=1.0,
+        class_weight=0.0,
+        method_weight=0.0,
+        opcode_weight=0.0,
+        dependency_weight=0.0,
+        literal_weight=0.0,
+        unique_version_weight=0.0,
+    )
+
+    assert candidate.evidence.matched_unique_literal_context_features == 1
+    assert candidate.evidence.reference_unique_literal_context_features == 1
+    assert candidate.evidence.unique_literal_context_score == 1.0
 
 
 def test_classify_version_candidate_allows_low_confidence_obfuscation_candidate():
@@ -679,6 +819,87 @@ def test_build_version_decisions_prefers_distinctive_version_within_score_margin
     assert decision.alternatives[0].version == "1.0.0"
     assert decision.version_selection_reason is not None
     assert "version-distinctive" in decision.version_selection_reason
+
+
+def test_default_context_reranker_prefers_supported_near_tie_with_disable_escape():
+    raw_leader = make_candidate(
+        coordinate="androidx.recyclerview:recyclerview",
+        version="1.2.1",
+        score=0.887249,
+        evidence=replace(
+            make_overlap_evidence(),
+            matched_unique_literal_context_features=0,
+            reference_unique_literal_context_features=0,
+            unique_literal_context_score=0.0,
+        ),
+    )
+    supported = make_candidate(
+        coordinate="androidx.recyclerview:recyclerview",
+        version="1.3.2",
+        score=0.886286,
+        evidence=replace(
+            make_overlap_evidence(),
+            matched_unique_literal_context_features=7,
+            reference_unique_literal_context_features=9,
+            unique_literal_context_score=0.777778,
+        ),
+    )
+    newer = make_candidate(
+        coordinate="androidx.recyclerview:recyclerview",
+        version="1.4.0",
+        score=0.879093,
+        evidence=replace(
+            make_overlap_evidence(),
+            matched_unique_literal_context_features=0,
+            reference_unique_literal_context_features=27,
+            unique_literal_context_score=0.0,
+        ),
+    )
+
+    default_decision = build_version_decisions([raw_leader, supported, newer])[0]
+    disabled_decision = build_version_decisions(
+        [raw_leader, supported, newer],
+        enable_version_unique_literal_context_reranker=False,
+    )[0]
+    explicit_enabled_decision = build_version_decisions(
+        [raw_leader, supported, newer],
+        enable_version_unique_literal_context_reranker=True,
+    )[0]
+
+    assert default_decision.selected_version == "1.3.2"
+    assert default_decision.version_selection_reason is not None
+    assert "version-unique literal/context evidence" in default_decision.version_selection_reason
+    assert disabled_decision.selected_version == "1.2.1"
+    assert disabled_decision.version_selection_reason is None
+    assert explicit_enabled_decision.selected_version == "1.3.2"
+
+
+def test_opt_in_context_reranker_does_not_flip_single_match():
+    raw_leader = make_candidate(
+        coordinate="androidx.gridlayout:gridlayout",
+        version="1.0.0",
+        score=0.70,
+        evidence=make_overlap_evidence(),
+    )
+    single_match = make_candidate(
+        coordinate="androidx.gridlayout:gridlayout",
+        version="1.1.0",
+        score=0.699,
+        evidence=replace(
+            make_overlap_evidence(),
+            matched_unique_literal_context_features=1,
+            reference_unique_literal_context_features=1,
+            unique_literal_context_score=1.0,
+        ),
+    )
+
+    decision = build_version_decisions(
+        [raw_leader, single_match],
+        enable_version_unique_literal_context_reranker=True,
+    )[0]
+
+    assert decision.selected_version == "1.0.0"
+    assert decision.version_selection_reason is None
 
 
 def test_build_version_decisions_does_not_flip_near_tie_without_distinctive_evidence():

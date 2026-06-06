@@ -17,6 +17,7 @@ from apk_sbom.maven_downloader import (
 from apk_sbom.matcher import (
     DEFAULT_API_REFERENCE_WEIGHT,
     DEFAULT_CLASS_WEIGHT,
+    COMPOSITE_FAMILY_SHORTLIST_MARGIN,
     DEFAULT_DEPENDENCY_WEIGHT,
     DEFAULT_LITERAL_WEIGHT,
     DEFAULT_METHOD_WEIGHT,
@@ -62,12 +63,28 @@ from apk_sbom.lifecycle_family_diagnostics import (
     build_payload as build_lifecycle_family_payload,
     write_outputs as write_lifecycle_family_outputs,
 )
+from apk_sbom.literal_context_diagnostics import (
+    DEFAULT_INPUT_JSON as DEFAULT_LITERAL_CONTEXT_INPUT_JSON,
+    DEFAULT_OUTPUT_DOC as DEFAULT_LITERAL_CONTEXT_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_LITERAL_CONTEXT_OUTPUT_JSON,
+    build_payload as build_literal_context_payload,
+    write_outputs as write_literal_context_outputs,
+)
+from apk_sbom.version_unique_literal_context_diagnostics import (
+    DEFAULT_OUTPUT_DOC as DEFAULT_VERSION_UNIQUE_LITERAL_CONTEXT_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_VERSION_UNIQUE_LITERAL_CONTEXT_OUTPUT_JSON,
+    DEFAULT_PHASE4_JSON as DEFAULT_VERSION_UNIQUE_LITERAL_CONTEXT_PHASE4_JSON,
+    DEFAULT_REFERENCE_DB as DEFAULT_VERSION_UNIQUE_LITERAL_CONTEXT_REFERENCE_DB,
+    build_payload as build_version_unique_literal_context_payload,
+    write_outputs as write_version_unique_literal_context_outputs,
+)
 from apk_sbom.reference_expander import (
     DEFAULT_EXPANDED_CONFIG,
     DEFAULT_REFERENCE_CATALOG,
     expand_reference_catalog,
 )
 from apk_sbom.report import (
+    DEFAULT_R8_MINIFIED_CONFIDENCE_POLICY_JSON,
     DEFAULT_R8_PHASE5_EXPERIMENT_JSON,
     DEFAULT_LIFECYCLE_FAMILY_EXPERIMENT_JSON,
     DEFAULT_REPORT_DIR,
@@ -85,6 +102,68 @@ from apk_sbom.vulnerability import (
     load_detected_libraries_from_cyclonedx,
     query_osv_for_libraries,
 )
+
+
+DEFAULT_VERSION_UNIQUE_LITERAL_CONTEXT_RERANKER_ENABLED = True
+DEFAULT_COMPOSITE_FAMILY_SHORTLIST_ENABLED = True
+
+
+def add_version_unique_literal_context_reranker_args(
+    parser: argparse.ArgumentParser,
+) -> None:
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument(
+        "--enable-version-unique-literal-context-reranker",
+        dest="enable_version_unique_literal_context_reranker",
+        action="store_true",
+        default=DEFAULT_VERSION_UNIQUE_LITERAL_CONTEXT_RERANKER_ENABLED,
+        help=(
+            "Enable the guarded version-unique literal/context near-tie reranker. "
+            "This is now the default; the flag is kept for command compatibility."
+        ),
+    )
+    group.add_argument(
+        "--disable-version-unique-literal-context-reranker",
+        dest="enable_version_unique_literal_context_reranker",
+        action="store_false",
+        help=(
+            "Disable the guarded version-unique literal/context near-tie reranker "
+            "to reproduce the pre-promotion baseline."
+        ),
+    )
+
+
+def add_composite_family_shortlist_experiment_args(
+    parser: argparse.ArgumentParser,
+) -> None:
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument(
+        "--enable-composite-family-shortlist",
+        "--enable-composite-family-shortlist-experiment",
+        dest="enable_composite_family_shortlist",
+        action="store_true",
+        default=DEFAULT_COMPOSITE_FAMILY_SHORTLIST_ENABLED,
+        help=(
+            "Enable the guarded balanced composite family shortlist before full "
+            "reference scoring. This is now the default; the experiment flag is "
+            "kept as a compatibility alias."
+        ),
+    )
+    group.add_argument(
+        "--disable-composite-family-shortlist",
+        dest="enable_composite_family_shortlist",
+        action="store_false",
+        help=(
+            "Disable the guarded balanced composite family shortlist to reproduce "
+            "the pre-promotion baseline."
+        ),
+    )
+    parser.add_argument(
+        "--composite-family-shortlist-margin",
+        type=float,
+        default=COMPOSITE_FAMILY_SHORTLIST_MARGIN,
+        help="Family shortlist score margin used by the guarded shortlist.",
+    )
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -153,6 +232,8 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Include uncertain version decisions as SBOM components.",
     )
+    add_version_unique_literal_context_reranker_args(sbom_parser)
+    add_composite_family_shortlist_experiment_args(sbom_parser)
 
     download_parser = subparsers.add_parser(
         "download-maven",
@@ -463,6 +544,8 @@ def build_parser() -> argparse.ArgumentParser:
         default=DEFAULT_OPCODE_NGRAM_WEIGHT,
         help="Weight for opcode tri-gram cosine similarity.",
     )
+    add_version_unique_literal_context_reranker_args(match_parser)
+    add_composite_family_shortlist_experiment_args(match_parser)
 
     osv_parser = subparsers.add_parser(
         "scan-sbom-osv",
@@ -539,6 +622,8 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Include uncertain version decisions as SBOM/report components.",
     )
+    add_version_unique_literal_context_reranker_args(report_parser)
+    add_composite_family_shortlist_experiment_args(report_parser)
     report_parser.add_argument(
         "--skip-osv",
         action="store_true",
@@ -599,6 +684,24 @@ def build_parser() -> argparse.ArgumentParser:
         "--lifecycle-family-experiment-json",
         default=str(DEFAULT_LIFECYCLE_FAMILY_EXPERIMENT_JSON),
         help="Lifecycle family experiment JSON to attach when --include-version-band-experiments is used.",
+    )
+    report_parser.add_argument(
+        "--include-r8-minified-confidence-policy",
+        action="store_true",
+        help=(
+            "Attach opt-in, report-only minified/R8 confidence and ambiguity policy "
+            "evidence. This changes report wording only and does not change matcher "
+            "scoring, selected versions, SBOM output, vulnerability labels, or "
+            "source-validation metrics."
+        ),
+    )
+    report_parser.add_argument(
+        "--r8-minified-confidence-policy-json",
+        default=str(DEFAULT_R8_MINIFIED_CONFIDENCE_POLICY_JSON),
+        help=(
+            "R8 minified confidence policy JSON to attach when "
+            "--include-r8-minified-confidence-policy is used."
+        ),
     )
 
     r8_phase5_parser = subparsers.add_parser(
@@ -673,6 +776,57 @@ def build_parser() -> argparse.ArgumentParser:
         "--output-doc",
         default=str(DEFAULT_LIFECYCLE_FAMILY_OUTPUT_DOC),
         help="Output path for the Lifecycle family experiment Markdown report.",
+    )
+
+    literal_context_parser = subparsers.add_parser(
+        "literal-context-experiment",
+        help=(
+            "Evaluate raw literal/context version-tie evidence without changing "
+            "matcher scoring, selected versions, SBOM output, or the shared DB."
+        ),
+    )
+    literal_context_parser.add_argument(
+        "--input-json",
+        default=str(DEFAULT_LITERAL_CONTEXT_INPUT_JSON),
+        help="Phase 4 multi-scale diagnostic JSON used as the experiment input.",
+    )
+    literal_context_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_LITERAL_CONTEXT_OUTPUT_JSON),
+        help="Output path for the literal/context diagnostic JSON.",
+    )
+    literal_context_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_LITERAL_CONTEXT_OUTPUT_DOC),
+        help="Output path for the literal/context diagnostic Markdown report.",
+    )
+
+    version_unique_literal_context_parser = subparsers.add_parser(
+        "version-unique-literal-context-experiment",
+        help=(
+            "Evaluate version-unique literal/context evidence without changing "
+            "matcher scoring, selected versions, SBOM output, or the shared DB."
+        ),
+    )
+    version_unique_literal_context_parser.add_argument(
+        "--phase4-json",
+        default=str(DEFAULT_VERSION_UNIQUE_LITERAL_CONTEXT_PHASE4_JSON),
+        help="Phase 4 diagnostic JSON used for APK/source-validation row metadata.",
+    )
+    version_unique_literal_context_parser.add_argument(
+        "--reference-db",
+        default=str(DEFAULT_VERSION_UNIQUE_LITERAL_CONTEXT_REFERENCE_DB),
+        help="Reference feature DB used to compute version-unique literal/context features.",
+    )
+    version_unique_literal_context_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_VERSION_UNIQUE_LITERAL_CONTEXT_OUTPUT_JSON),
+        help="Output path for the version-unique literal/context diagnostic JSON.",
+    )
+    version_unique_literal_context_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_VERSION_UNIQUE_LITERAL_CONTEXT_OUTPUT_DOC),
+        help="Output path for the version-unique literal/context diagnostic Markdown report.",
     )
 
     source_validation_parser = subparsers.add_parser(
@@ -755,6 +909,11 @@ def main(argv: list[str] | None = None) -> int:
                 coordinate=args.coordinate,
                 top=args.top,
                 min_score=args.min_score,
+                enable_version_unique_literal_context_reranker=(
+                    args.enable_version_unique_literal_context_reranker
+                ),
+                enable_composite_family_shortlist=args.enable_composite_family_shortlist,
+                composite_family_shortlist_margin=args.composite_family_shortlist_margin,
             )
             components = detected_libraries_from_match_summary(
                 match_summary,
@@ -918,6 +1077,11 @@ def main(argv: list[str] | None = None) -> int:
                 unique_version_weight=args.unique_version_weight,
                 api_reference_weight=args.api_reference_weight,
                 opcode_ngram_weight=args.opcode_ngram_weight,
+                enable_version_unique_literal_context_reranker=(
+                    args.enable_version_unique_literal_context_reranker
+                ),
+                enable_composite_family_shortlist=args.enable_composite_family_shortlist,
+                composite_family_shortlist_margin=args.composite_family_shortlist_margin,
             )
         except Exception as exc:
             print(f"error: {exc}", file=sys.stderr)
@@ -959,6 +1123,11 @@ def main(argv: list[str] | None = None) -> int:
                 min_score=args.min_score,
                 api_reference_weight=args.api_reference_weight,
                 opcode_ngram_weight=args.opcode_ngram_weight,
+                enable_version_unique_literal_context_reranker=(
+                    args.enable_version_unique_literal_context_reranker
+                ),
+                enable_composite_family_shortlist=args.enable_composite_family_shortlist,
+                composite_family_shortlist_margin=args.composite_family_shortlist_margin,
                 include_uncertain=args.include_uncertain,
                 query_osv=not args.skip_osv,
                 osv_api_url=args.osv_api_url,
@@ -978,6 +1147,11 @@ def main(argv: list[str] | None = None) -> int:
                 lifecycle_family_experiment_json=(
                     args.lifecycle_family_experiment_json
                     if args.include_version_band_experiments
+                    else None
+                ),
+                r8_minified_confidence_policy_json=(
+                    args.r8_minified_confidence_policy_json
+                    if args.include_r8_minified_confidence_policy
                     else None
                 ),
             )
@@ -1022,6 +1196,39 @@ def main(argv: list[str] | None = None) -> int:
         try:
             payload = build_lifecycle_family_payload(Path(args.input_json))
             result = write_lifecycle_family_outputs(
+                payload,
+                output_json=Path(args.output_json),
+                output_doc=Path(args.output_doc),
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "literal-context-experiment":
+        try:
+            payload = build_literal_context_payload(Path(args.input_json))
+            result = write_literal_context_outputs(
+                payload,
+                output_json=Path(args.output_json),
+                output_doc=Path(args.output_doc),
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "version-unique-literal-context-experiment":
+        try:
+            payload = build_version_unique_literal_context_payload(
+                phase4_json=Path(args.phase4_json),
+                reference_db=Path(args.reference_db),
+            )
+            result = write_version_unique_literal_context_outputs(
                 payload,
                 output_json=Path(args.output_json),
                 output_doc=Path(args.output_doc),

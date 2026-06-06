@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "added": 1659398400000,
+    "authorEmail": "zhaobozhen2025@gmail.com",
+    "authorName": "Absinthe",
+    "authorWebSite": "https://absinthe.life",
+    "categories": [
+      "System"
+    ],
+    "changelog": "https://github.com/LibChecker/LibChecker/releases",
+    "description": {
+      "en-US": "<p>This is an application to view and analyze the third-party libraries used by apps on your device.</p><p><i>LibChecker</i> provides some basic functions, including App ABI architecture viewing and statistics (32-bit/64-bit), viewing native libraries, and viewing four major components (services, activities, broadcast receivers, content providers).</p><p><i>LibChecker</i> also provides some unique features:</p><ul><li>Well-known library tags: For some well-known third-party library components marked by <a href=\"https://github.com/LibChecker/LibChecker-Rules\">The Rule Repository</a>, LibChecker will display tags, and you can view the detailed introduction.</li><li>Library reference statistics: count the frequency of use of each library</li><li>Package features: Analyze the apk package to determine whether the app is Split APK / whether it is written in Kotlin</li><li>Snapshot: Compare component differences before and after app upgrade</li></ul>",
+      "ru-RU": "\u042d\u0442\u043e \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f \u0434\u043b\u044f \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0430 \u0441\u0442\u043e\u0440\u043e\u043d\u043d\u0438\u0445 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a, \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u043c\u044b\u0445 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u043c\u0438 \u043d\u0430 \u0432\u0430\u0448\u0435\u043c \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0435. \u041e\u043d\u043e \u043c\u043e\u0436\u0435\u0442 \u043f\u0440\u043e\u0441\u043c\u0430\u0442\u0440\u0438\u0432\u0430\u0442\u044c \u0430\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u0443 ABI \u043d\u0430\u0442\u0438\u0432\u043d\u043e\u0439 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0438 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f (\u0432 \u043e\u0431\u0449\u0435\u043c \u0441\u043b\u0443\u0447\u0430\u0435, \u044f\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u043b\u0438 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 64-\u0431\u0438\u0442\u043d\u044b\u043c \u0438\u043b\u0438 32-\u0431\u0438\u0442\u043d\u044b\u043c). \u041e\u043d\u043e \u0442\u0430\u043a\u0436\u0435 \u043c\u043e\u0436\u0435\u0442 \u043f\u0440\u043e\u0441\u043c\u0430\u0442\u0440\u0438\u0432\u0430\u0442\u044c \u0438\u0437\u0432\u0435\u0441\u0442\u043d\u044b\u0435 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0438, \u043e\u0442\u043c\u0435\u0447\u0435\u043d\u043d\u044b\u0435 \u0432 <a href=\"https://github.com/LibChecker/LibChecker-Rules\">\u0420\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0438 \u043f\u0440\u0430\u0432\u0438\u043b</a>, \u0438 \u043c\u043e\u0436\u0435\u0442 \u0434\u0430\u0436\u0435 \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0438 \u043f\u0440\u043e\u0441\u043c\u0430\u0442\u0440\u0438\u0432\u0430\u0442\u044c \u0438\u0445 \u043f\u043e \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u0443 \u0441\u0441\u044b\u043b\u043e\u043a \u043d\u0430 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0438.\n",
+      "zh-CN": "\u6b64\u5e94\u7528\u53ef\u4ee5\u67e5\u770b\u4f60\u7684\u8bbe\u5907\u4e0a\u5e94\u7528\u4f7f\u7528\u7684\u7b2c\u4e09\u65b9\u5e93\u3002\u5b83\u4e5f\u53ef\u4ee5\u67e5\u770b\u5e94\u7528\u672c\u673a\u5e93\u7684 ABI \u67b6\u6784\uff08\u901a\u5e38\u7528\u6765\u67e5\u770b\u5e94\u7528\u662f 64 \u4f4d\u8fd8\u662f 32 \u4f4d\uff09\u3002\u5b83\u8fd8\u53ef\u4ee5\u67e5\u770b<a href=\"https://github.com/LibChecker/LibChecker-Rules\">\u5728\u7ebf\u89c4\u5219\u5e93</a>\u4e2d\u6807\u8bb0\u7684\u5e38\u89c1\u5e93\uff0c\u751a\u81f3\u53ef\u4ee5\u6839\u636e\u5e93\u5f15\u7528\u6570\u6392\u5e8f\u5e76\u67e5\u770b\u4ed6\u4eec\u3002\n"
+    },
+    "featureGraphic": {
+      "en-US": {
+        "name": "/com.absinthe.libchecker/en-US/featureGraphic_zOs5FYkytbEBfOPV9Ge3NxwOTsZsGUBQHrQZSk5Q1nY=.png",
+        "sha256": "cceb39158932b5b1017ce3d5f467b7371c0e4ec66c1940501eb4194a4e50d676",
+        "size": 35523
+      },
+      "zh-CN": {
+        "name": "/com.absinthe.libchecker/zh-CN/featureGraphic_jOLtqDAxghHtJ9S3velguV9ijDgxc5MSHJsFri4eVAE=.png",
+        "sha256": "8ce2eda830318211ed27d4b7bde960b95f628c38317393121c9b05ae2e1e5401",
+        "size": 1094392
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/com.absinthe.libchecker/en-US/icon_1XBWwrUgYnF6QQtZEqtXUZqSr0mGhzC9ZvlCVb_Xv8A=.png",
+        "sha256": "d57056c2b52062717a410b5912ab57519a92af49868730bd66f94255bfd7bfc0",
+        "size": 19766
+      },
+      "zh-CN": {
+        "name": "/com.absinthe.libchecker/zh-CN/icon_1XBWwrUgYnF6QQtZEqtXUZqSr0mGhzC9ZvlCVb_Xv8A=.png",
+        "sha256": "d57056c2b52062717a410b5912ab57519a92af49868730bd66f94255bfd7bfc0",
+        "size": 19766
+      }
+    },
+    "issueTracker": "https://github.com/LibChecker/LibChecker/issues",
+    "lastUpdated": 1764113445000,
+    "license": "Apache-2.0",
+    "name": {
+      "en-US": "LibChecker",
+      "ru-RU": "LibChecker",
+      "zh-CN": "LibChecker"
+    },
+    "preferredSigner": "47274114ab10ade16e41088a991be3ea4a621855f2487f1edc62187367f4a5c0",
+    "sourceCode": "https://github.com/LibChecker/LibChecker",
+    "summary": {
+      "en-US": "View the third-party libraries used by applications",
+      "ru-RU": "\u041f\u0440\u043e\u0441\u043c\u043e\u0442\u0440 \u0441\u0442\u043e\u0440\u043e\u043d\u043d\u0438\u0445 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a, \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u043c\u044b\u0445 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u043c\u0438",
+      "zh-CN": "\u67e5\u770b\u5e94\u7528\u4f7f\u7528\u7684\u7b2c\u4e09\u65b9\u5e93"
+    }
+  },
+  "version": {
+    "added": 1764113445000,
+    "antiFeatures": {
+      "TetheredNet": {
+        "en-US": "Uses Github/Gitlab for dependency rules DB and Google API to get Android versions for 1 chart"
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeihnbxkl6waij6lhkek3rpykozh3lypwruwhu5bitnqxwfvoonrwlm",
+      "name": "/com.absinthe.libchecker_2515.apk",
+      "sha256": "ac1ff15c10bfab0dae1d75056eea0ebcf8e4b5008bdd8dd6733095266779dbdb",
+      "size": 5031952
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "47274114ab10ade16e41088a991be3ea4a621855f2487f1edc62187367f4a5c0"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.QUERY_ALL_PACKAGES"
+        },
+        {
+          "name": "com.android.permission.GET_INSTALLED_APPS"
+        },
+        {
+          "name": "moe.shizuku.manager.permission.API_V23"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 24,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 2515,
+      "versionName": "2.5.3"
+    },
+    "src": {
+      "name": "/com.absinthe.libchecker_2515_src.tar.gz",
+      "sha256": "cbeefcf3743311ee1307588a6b2d7ba6e008e5e503b184bd6281aacf3f2a110a",
+      "size": 6368611
+    },
+    "whatsNew": {
+      "en-US": "- Now supports sharing APK download links to LibChecker, displaying most basic information by downloading a small amount of metadata, especially suitable for oversized apps or games\n- Supported comparing APKS files\n- Supported displaying the permission provider on the permission details page\n- Supported detecting app themed and alternative launch icons\n- Supported detecting \"Live Update Notifications\"\n\nFull changelog: https://github.com/LibChecker/LibChecker/blob/master/changelog/CHANGELOG.md\n",
+      "zh-CN": "- \u73b0\u5728\u652f\u6301\u5c06 APK \u7684\u4e0b\u8f7d\u94fe\u63a5\u5206\u4eab\u81f3 LibChecker\uff0c\u901a\u8fc7\u4e0b\u8f7d\u5c11\u91cf\u7684\u5143\u6570\u636e\u6765\u5c55\u793a\u5927\u90e8\u5206\u57fa\u7840\u4fe1\u606f\uff0c\u5c24\u5176\u9002\u7528\u4e8e\u8d85\u5927\u578b\u5e94\u7528\u6216\u6e38\u620f\n- \u652f\u6301\u4e86\u5bf9\u6bd4 APKS \u6587\u4ef6\n- \u652f\u6301\u4e86\u5728\u6743\u9650\u8be6\u60c5\u9875\u9762\u5c55\u793a\u6743\u9650\u63d0\u4f9b\u8005\n- \u652f\u6301\u4e86\u68c0\u6d4b\u5e94\u7528\u7684\u4e3b\u9898\u548c\u5907\u9009\u7684\u542f\u52a8\u56fe\u6807\n- \u652f\u6301\u4e86\u68c0\u6d4b\u300c\u5b9e\u65f6\u66f4\u65b0\u901a\u77e5\u300d\n- \u652f\u6301\u4e86\u5206\u4eab\u5e94\u7528\u81f3\u5176\u4ed6\u5e94\u7528\u6216\u300c\u6587\u4ef6\u300d\u5e94\u7528\n- \u652f\u6301\u4e86\u63d0\u53d6\u6307\u5b9a\u539f\u751f\u5e93\u81f3\u4e0b\u8f7d\u76ee\u5f55\n- \u5728\u5e94\u7528\u8be6\u60c5\u9875\u7684\u300c\u8fdb\u4e00\u6b65\u64cd\u4f5c\u300d\u4e2d\u652f\u6301\u4e86\u66f4\u591a\u7684\u6587\u4ef6\u7ba1\u7406\u5668\u76f4\u63a5\u8df3\u8f6c\n- \u73b0\u5728\u5feb\u7167\u9879\u53f3\u4fa7\u7684\u72b6\u6001\u6307\u793a\u5668\u989c\u8272\u6309\u7167\u5177\u4f53\u6bd4\u4f8b\u5c55\u793a\n- \u4e3a\u5feb\u7167\u5217\u8868\u548c\u5feb\u7167\u8be6\u60c5\u9875\u7684\u539f\u751f\u5e93\u7c7b\u578b\u589e\u52a0\u4e86\u4f53\u79ef\u53d8\u5316\u6bd4\u4f8b\n- \u73b0\u5728\u4f1a\u6839\u636e\u8bed\u8a00\u533a\u57df\u4e3a\u90e8\u5206\u5e94\u7528\u5185\u94fe\u63a5\u9009\u62e9\u955c\u50cf\u66ff\u4ee3\u8bbf\u95ee\n- \u73b0\u5728\u5e93\u5f15\u7528\u4e2d\u7684 Action \u7c7b\u578b\u4e0d\u518d\u8fc7\u6ee4 android \u547d\u540d\u7a7a\u95f4\n- \u73b0\u5728\u4e0d\u518d\u5c06\u975e\u6807\u51c6 ELF \u6587\u4ef6\u7eb3\u5165 16 KB \u68c0\u6d4b\n- \u73b0\u5728\u5e93\u5f15\u7528\u7edf\u8ba1\u7684\u8fc7\u6ee4\u5668\u9ed8\u8ba4\u542f\u7528 Action \u7c7b\u578b\u7edf\u8ba1\n- \u4fee\u590d\u4e86\u90e8\u5206\u5e94\u7528\u7684\u5feb\u7167\u65e0\u6cd5\u88ab\u4fdd\u5b58\u7684\u95ee\u9898\n\n\u5b8c\u6574\u66f4\u65b0\u65e5\u5fd7\uff1ahttps://github.com/LibChecker/LibChecker/blob/master/changelog/CHANGELOG_CN.md\n"
+    }
+  }
+}

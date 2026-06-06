@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "eb0b44580a43f004cdc05fb7cf3c390006f2dcea6ef9dfe0fe9fa64b62e2678d",
+    "index_size": 4945909,
+    "path": "data/test_apks/real/quasseldroid/quasseldroid.apk",
+    "sha256": "eb0b44580a43f004cdc05fb7cf3c390006f2dcea6ef9dfe0fe9fa64b62e2678d",
+    "size": 4945909,
+    "url": "https://f-droid.org/repo/com.iskrembilen.quasseldroid_1398.apk"
+  },
+  "app": "Quasseldroid",
+  "categories": [
+    "Internet",
+    "Messaging"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "internet",
+    "messaging",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.iskrembilen.quasseldroid/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.iskrembilen.quasseldroid",
+  "proof_status": "report-generated",
+  "reason": "No-native internet/messaging app with target SDK 36 and a larger source tarball; selected as a real networking client likely to produce a meaningful runtime dependency tree.",
+  "report": {
+    "detected_component_count": 17,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v13/report-real-quasseldroid",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v13/report-real-quasseldroid/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v13/report-real-quasseldroid/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v13/report-real-quasseldroid/sbom.cdx.json",
+    "sbom_component_count": 17,
+    "status": "ok"
+  },
+  "slug": "quasseldroid",
+  "source_repo": "https://git.kuschku.de/justJanne/QuasselDroid-ng",
+  "source_tarball": {
+    "sha256": "6dfb26c09c03a497dd8b8dca7bcb054305f302bfc483abebd9562608578942ae",
+    "size": 11314255,
+    "url": "https://f-droid.org/repo/com.iskrembilen.quasseldroid_1398_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 1398,
+  "version_name": "1.8.0"
+}

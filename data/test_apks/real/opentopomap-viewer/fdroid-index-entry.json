@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "added": 1542585600000,
+    "authorEmail": "serge.helfrich@gmail.com",
+    "authorName": "Serge Helfrich",
+    "authorWebSite": "https://pygmalion.nitri.org/",
+    "categories": [
+      "Navigation"
+    ],
+    "description": {
+      "en-US": "An online OpenTopoMap client with caching.\n\n* Follow location\n* Import and display GPX"
+    },
+    "donate": [
+      "https://ko-fi.com/U7U372JJ"
+    ],
+    "featureGraphic": {
+      "en-US": {
+        "name": "/org.nitri.opentopo/en-US/featureGraphic_sDq-IX2gAFhdbEZW_CjivX6zVNma2Own0Vn2princTo=.png",
+        "sha256": "b03abe217da000585d6c4656fc28e2bd7eb354d99ad8ec27d159f6a6b8a7713a",
+        "size": 790411
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/org.nitri.opentopo/en-US/icon_dS97YMa6ybea-zBC9xt-tvfinvcPUAncx2HUmXvdk-Q=.png",
+        "sha256": "752f7b60c6bac9b79afb3042f71b7eb6f7e29ef70f5009dcc761d4997bdd93e4",
+        "size": 10436
+      }
+    },
+    "issueTracker": "https://github.com/Pygmalion69/OpenTopoMapViewer/issues",
+    "lastUpdated": 1780172537598,
+    "license": "Apache-2.0",
+    "name": {
+      "en-US": "OpenTopoMap Viewer"
+    },
+    "preferredSigner": "0973936af17d47d3c8ee3b793b8250c8df3815c97b924ea35c510a2175ce0a92",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/org.nitri.opentopo/en-US/phoneScreenshots/screenhot6.png",
+            "sha256": "a435e73e65299b7d0e447b14f78b4ec1c064a9da25befd26cb260fdbae76263f",
+            "size": 266586
+          },
+          {
+            "name": "/org.nitri.opentopo/en-US/phoneScreenshots/screenshot1.png",
+            "sha256": "e930e98fbb202aef4da6fad345b1672dcbc023f4898fca3d69c0d3a99d282eb4",
+            "size": 310233
+          },
+          {
+            "name": "/org.nitri.opentopo/en-US/phoneScreenshots/screenshot2.png",
+            "sha256": "71b0c2fb1eea4988a06816da4af6b22296aa467577cd0d4c31b314553f9f52be",
+            "size": 280056
+          },
+          {
+            "name": "/org.nitri.opentopo/en-US/phoneScreenshots/screenshot5.png",
+            "sha256": "5f2e27b25f82a6ba055b309c1b222b23713bf414104710d374027f049128c83e",
+            "size": 284201
+          },
+          {
+            "name": "/org.nitri.opentopo/en-US/phoneScreenshots/screenshot7.png",
+            "sha256": "931255acc2083104772219cb196888632e30a4de9b4155362ae38138fc8d80bc",
+            "size": 43804
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/Pygmalion69/OpenTopoMapViewer",
+    "summary": {
+      "ar": "\u0639\u0645\u064a\u0644 \u0639\u0628\u0631 \u0627\u0644\u0625\u0646\u062a\u0631\u0646\u062a \u0644\u0644\u062e\u0631\u0627\u0626\u0637 \u0645\u0646 \u0645\u0634\u0631\u0648\u0639 OTM \u060c \u0648\u0627\u0633\u062a\u064a\u0631\u0627\u062f GPX \u0648\u0625\u0638\u0647\u0627\u0631 \u0627\u0644\u0645\u0648\u0642\u0639 \u0627\u0644\u062e\u0627\u0635",
+      "ba": "OTM \u043f\u0440\u043e\u0435\u043a\u0442\u044b \u043a\u0430\u0440\u0442\u0430\u043b\u0430\u0440\u044b \u04e9\u0441\u04e9\u043d \u043e\u043d\u043b\u0430\u0439\u043d \u043a\u043b\u0438\u0435\u043d\u0442, GPX \u0438\u043c\u043f\u043e\u0440\u0442\u043b\u0430\u0443 \u04bb\u04d9\u043c \u04af\u0499 \u0443\u0440\u044b\u043d\u044b\u04a3\u0434\u044b \u043a\u04af\u0440\u04bb\u04d9\u0442\u0435\u04af",
+      "ca": "Client pels mapes del projecte OTM, importa fitxers GPX i mostra la ubicaci\u00f3",
+      "cs": "Online klient pro mapy z projektu OTM, import GPX a zobrazen\u00ed vlastn\u00ed polohy",
+      "de": "OpenTopoMap-Viewer mit GPX-Importm\u00f6glichkeit",
+      "en-US": "Online client for maps from OTM project, import GPX and show own location",
+      "eo": "Foliumi mapojn OpenTopoMap: montri pozicion k enporti GPX-spurojn",
+      "es": "Visualizador de mapas para OpenTopoMap con importaci\u00f3n GPX y localizaci\u00f3n propia",
+      "eu": "OTM proiektuaren mapen online bezeroa, inportatu GPX eta erakutsi zure kokapena",
+      "fr": "Client en ligne pour cartes du projet OTM, importe GPX et affiche sa position",
+      "ga": "Cliant ar l\u00edne le l\u00e9arsc\u00e1ileanna OTM, GPX a allmhairi\u00fa agus su\u00edomh a thaisp",
+      "he": "\u05dc\u05e7\u05d5\u05d7 \u05de\u05e7\u05d5\u05d5\u05df \u05dc\u05de\u05e4\u05d5\u05ea \u05de\u05de\u05d9\u05d6\u05dd OTM, \u05d9\u05d9\u05d1\u05d5\u05d0 GPX \u05d5\u05d4\u05e6\u05d2\u05ea \u05d4\u05de\u05d9\u05e7\u05d5\u05dd \u05e9\u05dc\u05da",
+      "id": "Klien online untuk peta dari proyek OTM, impor berkas GPX dan tampilkan lokasimu",
+      "it": "Visualizzatore OpenTopoMap con importazione GPX",
+      "ja": "OTM\u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u306e\u5730\u56f3\u7528\u30aa\u30f3\u30e9\u30a4\u30f3\u30af\u30e9\u30a4\u30a2\u30f3\u30c8\u3001GPX\u3092\u30a4\u30f3\u30dd\u30fc\u30c8\u3057\u3066\u81ea\u5206\u306e\u4f4d\u7f6e\u3092\u8868\u793a\u3067\u304d\u307e\u3059",
+      "nb": "OpenTopoMap-viser med GPX-import",
+      "pl": "Przegl\u0105darka OpenTopoMap z importem GPX",
+      "pt": "Visualizador OpenTopoMap com importa\u00e7\u00e3o GPX",
+      "pt-BR": "Visualizador de OpenTopoMap com importa\u00e7\u00e3o de GPX",
+      "pt-PT": "Visualizador OpenTopoMap com importa\u00e7\u00e3o GPX",
+      "ro": "Client online ptr. h\u0103r\u021bi din proiectul OTM, importa GPX \u0219i arata loca\u021bia proprie",
+      "ru": "\u041e\u043d\u043b\u0430\u0439\u043d-\u043a\u043b\u0438\u0435\u043d\u0442 \u0434\u043b\u044f \u043a\u0430\u0440\u0442 \u0438\u0437 \u043f\u0440\u043e\u0435\u043a\u0442\u0430 OTM, \u0438\u043c\u043f\u043e\u0440\u0442\u0430 GPX \u0438 \u043e\u0442\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u044f \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044f",
+      "sr": "\u041e\u043d\u043b\u0430\u0458\u043d \u043a\u043b\u0438\u0458\u0435\u043d\u0442 \u0437\u0430 \u043c\u0430\u043f\u0435 \u0438\u0437 OTM \u043f\u0440\u043e\u0458\u0435\u043a\u0442\u0430, \u0443\u0432\u043e\u0437\u0438 GPX \u0438 \u043f\u0440\u0438\u043a\u0430\u0437\u0443\u0458\u0435 \u0441\u043e\u043f\u0441\u0442\u0432\u0435\u043d\u0443 \u043b\u043e\u043a\u0430\u0446\u0438\u0458\u0443",
+      "sv": "Onlineklient f\u00f6r kartor fr\u00e5n OTM-projekt, import av GPX och visar ens plats",
+      "sw": "Cliant ar l\u00edne le haghaidh l\u00e9arsc\u00e1ileanna \u00f3 thionscadal OTM, allmhairi\u00fa GPX agus",
+      "ta": "OTM \u0ba4\u0bbf\u0b9f\u0bcd\u0b9f \u0bb5\u0bb0\u0bc8\u0baa\u0b9f \u0bb5\u0bbe\u0b99\u0bcd\u0b95\u0bbf, \u0b9a\u0bbf\u0baa\u0bbf\u0b8e\u0b95\u0bcd\u0b9a\u0bc8 \u0b87\u0bb1\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0ba4\u0bbf \u0b9a\u0bc6\u0baf\u0bcd\u0ba4\u0bc1 \u0b87\u0bb0\u0bc1\u0baa\u0bcd\u0baa\u0bbf\u0b9f\u0b99\u0bcd\u0b95\u0bbe\u0b9f\u0bcd\u0b9f\u0bc1\u0bae\u0bcd",
+      "tr": "OTM projesinden haritalar i\u00e7in \u00e7evrimi\u00e7i istemci, GPX ile konumunuzu g\u00f6sterin",
+      "uk": "\u041e\u043d\u043b\u0430\u0439\u043d-\u043a\u043b\u0456\u0454\u043d\u0442 \u0434\u043b\u044f \u043c\u0430\u043f \u0437 \u043f\u0440\u043e\u0454\u043a\u0442\u0443 OTM, \u0456\u043c\u043f\u043e\u0440\u0442\u0443 GPX \u0456 \u043f\u043e\u043a\u0430\u0437\u0443 \u043c\u0456\u0441\u0446\u044f \u0440\u043e\u0437\u0442\u0430\u0448\u0443\u0432\u0430\u043d\u043d\u044f",
+      "zh-CN": "\u5e26 GPX \u5bfc\u5165\u529f\u80fd\u7684 OpenTopoMap \u67e5\u770b\u5668",
+      "zh-TW": "\u5e36 GPX \u532f\u5165\u529f\u80fd\u7684 OpenTopoMap \u67e5\u770b\u5668"
+    },
+    "video": {
+      "en-US": "https://youtu.be/T-vn2scux9A"
+    }
+  },
+  "version": {
+    "added": 1780172537598,
+    "file": {
+      "ipfsCIDv1": "bafybeigu53qcjxno4ya7jm4uk7tu2qfbbq6msb2ybp2ibq7dpepmfm3a5a",
+      "name": "/org.nitri.opentopo_66.apk",
+      "sha256": "3b22a25deaccb4173f9583b077307236285736e6b616d27c08c85be3ec281ef9",
+      "size": 9447907
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "0973936af17d47d3c8ee3b793b8250c8df3815c97b924ea35c510a2175ce0a92"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.ACCESS_WIFI_STATE"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "name": "org.nitri.opentopo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "name": "android.permission.REORDER_TASKS"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 24,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 66,
+      "versionName": "1.29"
+    },
+    "src": {
+      "name": "/org.nitri.opentopo_66_src.tar.gz",
+      "sha256": "232057dd489fe2b5002f5f97e9d1e54db45afd58c74b032dadd8b1eadb43cffa",
+      "size": 5521760
+    }
+  }
+}

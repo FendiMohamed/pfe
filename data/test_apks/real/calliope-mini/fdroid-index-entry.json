@@ -1,0 +1,268 @@
+{
+  "metadata": {
+    "added": 1560470400000,
+    "authorEmail": "help@calliope.cc",
+    "authorName": "Calliope gGmbH",
+    "categories": [
+      "Connectivity"
+    ],
+    "changelog": "https://github.com/calliope-edu/Calliope-Android-App/releases",
+    "description": {
+      "de-DE": "Mit dem Calliope mini liegen unz\u00e4hlige kreative M\u00f6glichkeiten in deiner Hand. Egal ob du einen Roboter bauen oder Nachrichten \u00fcbertragen m\u00f6chtest: Mit wenigen Klicks erstellst du im Nu deine eigenen Programme  und bringst Dinge in Bewegung.\nNeben 25 roten sowie drei RGB-LEDs und zwei programmierbaren Buttons enth\u00e4lt das Board einen kombinierten Lagesensor mit Bewegungssensor und Kompass sowie ein Bluetooth-Modul, mit dem Calliope mini mit anderen Ger\u00e4ten kommunizieren kann.",
+      "en-US": "With the Calliope mini, countless creative possibilities are at your fingertips. Whether you want to build a robot or transmit messages: With just a few clicks, you can create your own programs in no time and get things moving.\nIn addition to 25 red and three RGB LEDs and two programmable buttons, the board contains a combined position sensor with motion sensor and compass as well as a Bluetooth module that Calliope mini can use to communicate with other devices."
+    },
+    "featureGraphic": {
+      "de-DE": {
+        "name": "/cc.calliope.mini/de-DE/featureGraphic_YvJ31e3JmoE-evgPefQYonoAm8ewLg8swIEMy5JG5bk=.png",
+        "sha256": "62f277d5edc99a813e7af80f79f418a27a009bc7b02e0f2cc0810ccb9246e5b9",
+        "size": 27075
+      },
+      "en-US": {
+        "name": "/cc.calliope.mini/en-US/featureGraphic_YvJ31e3JmoE-evgPefQYonoAm8ewLg8swIEMy5JG5bk=.png",
+        "sha256": "62f277d5edc99a813e7af80f79f418a27a009bc7b02e0f2cc0810ccb9246e5b9",
+        "size": 27075
+      }
+    },
+    "icon": {
+      "de-DE": {
+        "name": "/cc.calliope.mini/de-DE/icon_uENlIf1pxjpQ1Mkl1uWxpKF3fEZzbNCZPNraCxnFerc=.png",
+        "sha256": "b8436521fd69c63a50d4c925d6e5b1a4a1777c46736cd0993cdada0b19c57ab7",
+        "size": 37392
+      },
+      "en-US": {
+        "name": "/cc.calliope.mini/en-US/icon_uENlIf1pxjpQ1Mkl1uWxpKF3fEZzbNCZPNraCxnFerc=.png",
+        "sha256": "b8436521fd69c63a50d4c925d6e5b1a4a1777c46736cd0993cdada0b19c57ab7",
+        "size": 37392
+      }
+    },
+    "issueTracker": "https://github.com/calliope-edu/Calliope-Android-App/issues",
+    "lastUpdated": 1777474577326,
+    "license": "MIT",
+    "name": {
+      "de-DE": "Calliope mini",
+      "en-US": "Calliope mini"
+    },
+    "preferredSigner": "7a8f0b506a6138d341a956e7f3af3043ce9e82e6dbe7c949c8a72091a25bf9e3",
+    "screenshots": {
+      "phone": {
+        "de-DE": [
+          {
+            "name": "/cc.calliope.mini/de-DE/phoneScreenshots/1.jpg",
+            "sha256": "0e0e77eb6aa5f0a305c8f0bb1083e92f0458a7e6e70a04af18d30b352568db4c",
+            "size": 80790
+          },
+          {
+            "name": "/cc.calliope.mini/de-DE/phoneScreenshots/2.jpg",
+            "sha256": "3770e9eaf917acb9760f38cced0953ce245da819426a00ded7e0a562f6740ff5",
+            "size": 118637
+          },
+          {
+            "name": "/cc.calliope.mini/de-DE/phoneScreenshots/3.jpg",
+            "sha256": "e7d18947d701612d2a4b285b63886197bac688d88c18edf2a6648226dff36ec5",
+            "size": 121355
+          },
+          {
+            "name": "/cc.calliope.mini/de-DE/phoneScreenshots/4.jpg",
+            "sha256": "bd08a843a1f902e4f6c8c22f3bdc7c15c5df7921713249af725d3901bba011b0",
+            "size": 146205
+          },
+          {
+            "name": "/cc.calliope.mini/de-DE/phoneScreenshots/5.jpg",
+            "sha256": "9fd6502dce3ae7ef7e2991094fa83793a8e5f861a529e8e596861deeeafaf4ac",
+            "size": 84895
+          },
+          {
+            "name": "/cc.calliope.mini/de-DE/phoneScreenshots/6.jpg",
+            "sha256": "c64c4cbb9c0c67d139e308a396ff60b7124009021da280673b8257176a14d64c",
+            "size": 97922
+          },
+          {
+            "name": "/cc.calliope.mini/de-DE/phoneScreenshots/7.jpg",
+            "sha256": "2c2e74b56c8c5f3bc276229cf0d5b648a4de2a3c7c15b67add9fa166340073e0",
+            "size": 103758
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/cc.calliope.mini/en-US/phoneScreenshots/1.jpg",
+            "sha256": "0e0e77eb6aa5f0a305c8f0bb1083e92f0458a7e6e70a04af18d30b352568db4c",
+            "size": 80790
+          },
+          {
+            "name": "/cc.calliope.mini/en-US/phoneScreenshots/5.jpg",
+            "sha256": "9fd6502dce3ae7ef7e2991094fa83793a8e5f861a529e8e596861deeeafaf4ac",
+            "size": 84895
+          }
+        ]
+      },
+      "sevenInch": {
+        "de-DE": [
+          {
+            "name": "/cc.calliope.mini/de-DE/sevenInchScreenshots/1.png",
+            "sha256": "90d378b6837d8f8716e52f00b85eff1a313ae63d2e370bd4c08feadb0eb28616",
+            "size": 77520
+          },
+          {
+            "name": "/cc.calliope.mini/de-DE/sevenInchScreenshots/2.png",
+            "sha256": "466811bfeb04dc31242f3f4ab95cd9ff2b7e56e249830c2e1f2db5bdab6acac2",
+            "size": 93850
+          },
+          {
+            "name": "/cc.calliope.mini/de-DE/sevenInchScreenshots/3.png",
+            "sha256": "00187208a80ab4d967a53586c9805507aac1429da1ebe758fe2b29ab54f33f94",
+            "size": 84910
+          },
+          {
+            "name": "/cc.calliope.mini/de-DE/sevenInchScreenshots/4.png",
+            "sha256": "5f985a3c368e1a875178b29635a4539f4e213fa185b0fd1267c14e5dabcdacf1",
+            "size": 675096
+          },
+          {
+            "name": "/cc.calliope.mini/de-DE/sevenInchScreenshots/5.png",
+            "sha256": "cd5ad4a78ad99f448073419c091042272d307d388dff1375ab9467766910cba7",
+            "size": 121100
+          },
+          {
+            "name": "/cc.calliope.mini/de-DE/sevenInchScreenshots/6.png",
+            "sha256": "11abe086db88482ac6f9897db714c14674d5437818d32988c2e5935627c9fbed",
+            "size": 112068
+          },
+          {
+            "name": "/cc.calliope.mini/de-DE/sevenInchScreenshots/7.png",
+            "sha256": "d1bd36915241fc2732b47dafc3081d0e6d05f4ecb010ac9a4085ee3fd42587a8",
+            "size": 106642
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/cc.calliope.mini/en-US/sevenInchScreenshots/1.png",
+            "sha256": "5f8b40ff55eeceb771155c977dde278103599fba116f76b2b363025a7e3682ba",
+            "size": 77500
+          },
+          {
+            "name": "/cc.calliope.mini/en-US/sevenInchScreenshots/2.png",
+            "sha256": "835ba2d353e34119916d0966cd2901a2c256f24f75f4641c49e5a9db688f6822",
+            "size": 74823
+          },
+          {
+            "name": "/cc.calliope.mini/en-US/sevenInchScreenshots/3.png",
+            "sha256": "56d37df208a1f79a2168430d79c2a4ddc9cd04d87e57518691934c6a5c5f5c2d",
+            "size": 85081
+          },
+          {
+            "name": "/cc.calliope.mini/en-US/sevenInchScreenshots/4.png",
+            "sha256": "63e9d478057920338fe2a9f7e93175621ce7f0d7c8eef2021f65c899f0113ec2",
+            "size": 107525
+          },
+          {
+            "name": "/cc.calliope.mini/en-US/sevenInchScreenshots/5.png",
+            "sha256": "7eecf512f05e0a5dba3d104f300388c24bf3f282fca3e7563c95f3f666d4324d",
+            "size": 117675
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/calliope-edu/Calliope-Android-App",
+    "summary": {
+      "de-DE": "Hacken, Basteln, Coden - erstelle deine Programme von unterwegs aus!",
+      "en-US": "Hacking, tinkering, coding - create your programs on the go!"
+    },
+    "webSite": "https://calliope.cc/"
+  },
+  "version": {
+    "added": 1777474577326,
+    "antiFeatures": {
+      "NonFreeNet": {
+        "en-US": "Connects to calliope.cc servers"
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeifsrpg67cedjmwshppta4adr6wqxnjwcixhixvmeooqtakn4qmczq",
+      "name": "/cc.calliope.mini_27.apk",
+      "sha256": "39da0393f5fbfc72ebf51452f4c5408f990af05a8c9b483ef2c7bee056fb309a",
+      "size": 12129760
+    },
+    "manifest": {
+      "features": [
+        {
+          "name": "android.hardware.bluetooth_le"
+        }
+      ],
+      "signer": {
+        "sha256": [
+          "7a8f0b506a6138d341a956e7f3af3043ce9e82e6dbe7c949c8a72091a25bf9e3"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_WIFI_STATE"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "maxSdkVersion": 30,
+          "name": "android.permission.BLUETOOTH"
+        },
+        {
+          "maxSdkVersion": 30,
+          "name": "android.permission.BLUETOOTH_ADMIN"
+        },
+        {
+          "name": "android.permission.BLUETOOTH_SCAN"
+        },
+        {
+          "name": "android.permission.BLUETOOTH_CONNECT"
+        },
+        {
+          "maxSdkVersion": 30,
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "maxSdkVersion": 30,
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.CAMERA"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "maxSdkVersion": 28,
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "cc.calliope.mini.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 23,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 27,
+      "versionName": "2.0.9"
+    },
+    "src": {
+      "name": "/cc.calliope.mini_27_src.tar.gz",
+      "sha256": "bb7da2263b841347b142b0d8838b6c39fa5af9d2592eec9363480be7ac246799",
+      "size": 11835169
+    }
+  }
+}

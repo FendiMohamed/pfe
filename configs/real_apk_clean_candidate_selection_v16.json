@@ -1,0 +1,202 @@
+{
+  "selections": [
+    {
+      "app": "OceanNex for DigitalOcean",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "cloud-admin",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.swatian.oceannex.free",
+      "reason": "No-native DigitalOcean administration client with target SDK 36, a 16 MB APK, and a compact source tarball; selected to add a cloud/admin internet row outside the earlier file-transfer and weather batches.",
+      "slug": "oceannex",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Praktika Vortaro",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "reading",
+        "dictionary",
+        "education",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.esperantajvortaroj.app",
+      "reason": "No-native dictionary/reading app with target SDK 34, a large APK, and a small source tarball; selected as a language/reference row distinct from Poet Assistant.",
+      "slug": "praktika-vortaro",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "MsgGo",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "phone-sms",
+        "messaging",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "top.yztz.msggo",
+      "reason": "No-native SMS/messaging app with target SDK 35, a medium APK, and source tarball metadata; selected to broaden messaging evidence without native framework boundaries.",
+      "slug": "msggo",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "AF Weather Widget",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "weather",
+        "widget",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "net.gitsaibot.af",
+      "reason": "No-native weather/widget app with target SDK 36 and a compact source tarball; selected as a second weather-family row after Forecastie and RadarWeather showed useful partial evidence.",
+      "slug": "af-weather-widget",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Study Tracker",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "education",
+        "study-tracking",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.edward.studytracker",
+      "reason": "No-native education/study tracker with target SDK 34, a medium APK, and a compact source tarball; selected to add a student/productivity row with likely AndroidX/Compose evidence.",
+      "slug": "study-tracker",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Calliope mini",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "connectivity",
+        "education",
+        "hardware-companion",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "cc.calliope.mini",
+      "reason": "No-native hardware/connectivity companion app with target SDK 36 and a manageable source tarball; selected to add a device-connectivity row without native `.so` evidence.",
+      "slug": "calliope-mini",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "ProseReader",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "ebook-reader",
+        "reading",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "timur.prose",
+      "reason": "No-native ebook/reading app with target SDK 36, a medium APK, and a moderate source tarball; selected to diversify the reading bucket beyond dictionary/reference apps.",
+      "slug": "prosereader",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Flying Carpet",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "connectivity",
+        "file-transfer",
+        "system",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "dev.spiegl.flyingcarpet",
+      "reason": "No-native local file-transfer app with target SDK 35 and a compact Android source tarball; selected to add another connectivity/file-transfer row outside FTPClient.",
+      "slug": "flying-carpet",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "FitoTrack",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "sports-health",
+        "workout",
+        "tracker",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "de.tadris.fitness",
+      "reason": "No-native workout tracker with target SDK 34, a medium APK, and source tarball metadata; selected as a sports-health row distinct from RunnerUp.",
+      "slug": "fitotrack",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "F-Droid Build Status",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "development",
+        "fdroid",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "de.storchp.fdroidbuildstatus",
+      "reason": "No-native F-Droid/development utility with target SDK 36 and a compact source tarball; selected to add a development-tool row different from Json List.",
+      "slug": "fdroid-build-status",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Password Master",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "security",
+        "password-manager",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.vecturagames.android.app.passwordmaster",
+      "reason": "No-native password/security utility with target SDK 36 and source tarball metadata; selected to add a compact security row outside KeePassDX and Password Generator.",
+      "slug": "password-master",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Todo List (PFA)",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "task",
+        "time",
+        "writing",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.secuso.privacyfriendlytodolist",
+      "reason": "No-native task/time utility with target SDK 36 and a small source tarball; selected as a compact productivity row after Todo Agenda and Working Time Account.",
+      "slug": "todo-list-pfa",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    }
+  ]
+}

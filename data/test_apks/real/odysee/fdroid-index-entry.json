@@ -1,0 +1,127 @@
+{
+  "metadata": {
+    "added": 1653004800000,
+    "categories": [
+      "Online Media Player"
+    ],
+    "description": {
+      "en-US": "Enjoy indie content creators across a variety of genres including pop culture, science, gaming, commentary, tech, and education.\n\nODYSEE FEATURES:\n\nDISCOVER CONTENT THAT'S ACTUALLY GOOD\n\n-Say goodbye to the boring corporate and celebrity creators that have flooded mainstream social media! Hello new person I find incredibly relatable!\n\n-Explore new content that's weird, crazy, intense, and surprisingly educational across a variety of categories like 'Cheese' & 'Universe'.\n\n-Follow and interact with new and interesting creators unheard of before.\n\nTHE COMMUNITY IS GREAT\n\n-Share your thoughts with everyone through comments, fire, and slime!\n\n-Follow and support the creators you enjoy.\n\n-Share the videos you love with the wider community.\n\nSTILL NEED CONVINCING THAT ODYSEE IS AWESOME?\n\nHear what some of the most inspirational voices of our time have to say:\n\n\"I love Odysee, that's why I came up with the idea for it shortly after I invented the internet.\" - Alle Gory\n\n\"What the hell is Odysee?\" - Ellen Musk\n\nOdysee is a fun, friendly, and safe video sharing platform that loves memes and spaghetti.\n\nCreators are encouraged to sign up through odysee.com in order to sync their existing channel's library. Currently the Odysee app does not support creator sign up.\n\nFor support, please visit the Odysee Help Hub: https://odysee.com/@OdyseeHelp"
+    },
+    "featureGraphic": {
+      "en-US": {
+        "name": "/com.odysee.floss/en-US/featureGraphic_sGbfFAAjyW-l6vewe_K15Hg899MGIQlAfTyn8RGLHq0=.png",
+        "sha256": "b066df140023c96fa5eaf7b07bf2b5e4783cf7d3062109407d3ca7f1118b1ead",
+        "size": 765558
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/com.odysee.floss/en-US/icon_NBIXp1Rt-KrSIcHpLBqaaQP1vWam8MvZGRBd86skLAI=.png",
+        "sha256": "341217a7546df8aad221c1e92c1a9a6903f5bd66a6f0cbd919105df3ab242c02",
+        "size": 40945
+      }
+    },
+    "issueTracker": "https://github.com/OdyseeTeam/odysee-android-floss/issues",
+    "lastUpdated": 1779007734975,
+    "license": "MIT",
+    "name": {
+      "en-US": "Odysee"
+    },
+    "preferredSigner": "b74d10667c6725fb7cfadec0ab2bd89138ffa4be7eaa7d7adc354d910964f12d",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.odysee.floss/en-US/phoneScreenshots/1.png",
+            "sha256": "a79d535f13b98b8b3778d6e8bb027ee47dc8638f5e0ac3c709d80857448afc22",
+            "size": 1084486
+          },
+          {
+            "name": "/com.odysee.floss/en-US/phoneScreenshots/2.png",
+            "sha256": "4958474234562f810f33beec79a3f34f79f26147956ad1e4983d633cad98c516",
+            "size": 843965
+          },
+          {
+            "name": "/com.odysee.floss/en-US/phoneScreenshots/3.png",
+            "sha256": "ee97387ce01a6e9ce0eccec46b9816317a6b82b13e810dd83515b068f1ee5c8f",
+            "size": 1736278
+          },
+          {
+            "name": "/com.odysee.floss/en-US/phoneScreenshots/4.png",
+            "sha256": "9b39c564c4ea7371925d4faa0dbb7e4608f08981512f2581d3d2f29ab7f72394",
+            "size": 1368984
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/OdyseeTeam/odysee-android-floss",
+    "summary": {
+      "en-US": "Explore a whole universe of videos on Odysee from regular people just like you!"
+    },
+    "webSite": "https://odysee.com/"
+  },
+  "version": {
+    "added": 1779007734975,
+    "antiFeatures": {
+      "NonFreeNet": {
+        "en-US": "Odysee website itself is not libre."
+      },
+      "Tracking": {
+        "en-US": "Odysee website collects user data, partly used for for marketing, advertising etc."
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeidgyxvgzuqbzp6bgr7jd2mg4i4ufdy3mwtia5wriu46n5c3u7z634",
+      "name": "/com.odysee.floss_124.apk",
+      "sha256": "0218d3cb9e349dcdeeca8145ab263485db5c6e0ff8a4c342e3a27b322c61c710",
+      "size": 16236900
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "b74d10667c6725fb7cfadec0ab2bd89138ffa4be7eaa7d7adc354d910964f12d"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.BLUETOOTH"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "com.odysee.floss.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 24,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 124,
+      "versionName": "0.0.124"
+    },
+    "src": {
+      "name": "/com.odysee.floss_124_src.tar.gz",
+      "sha256": "23cb73cd5dea1b9e80e482122e8873fc49354794d250d94559c3d0436397152b",
+      "size": 18170916
+    },
+    "whatsNew": {
+      "en-US": "Added\\\n- Fix back button\n\nFLOSS restrictions\n- No Chromecast support\n- No push notifications\n"
+    }
+  }
+}

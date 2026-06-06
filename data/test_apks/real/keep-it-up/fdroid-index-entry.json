@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "added": 1634256000000,
+    "authorEmail": "alwin@ibba.de",
+    "authorName": "Alwin Ibba",
+    "categories": [
+      "Connectivity",
+      "Internet",
+      "Network Analyzer"
+    ],
+    "changelog": "https://github.com/ibbaa/keepitup/releases",
+    "description": {
+      "de": "Keep it up \u00fcberpr\u00fcft den Status von Netzwerkdiensten oder Webseiten indem regelm\u00e4\u00dfig pings gesendet werden, Verbindungsversuche unternommen werden oder Seiten heruntergeladen werden. Auf diese Weise k\u00f6nnen auch Verbindungen aufrechterhalten werden, die ansonsten nach einer bestimmten Zeit der Inaktivit\u00e4t geschlossen werden.\n\n<b>Features</b>\n\n- Erstellung mehrerer unabh\u00e4ngiger Network Tasks\n- Ein Network Task \u00fcberwacht einen Netzwerkdienst in einem bestimmten Intervall\n- Ein Task sendet eine bestimmte Anzahl an Pings, unternimmt eine bestimmte Anzahl von Verbindungsversuchen oder l\u00e4dt eine Datei oder eine Seite herunter\n- Erfolgreiche und nicht erfolgreiche Versuche werden geloggt\n- Heruntergeladene Dateien k\u00f6nnen automatisch gel\u00f6scht oder vorgehalten werden\n- Bei nicht erfolgreichen Versuchen oder wenn ein Dienst offline oder online geht kann eine Benachrichtigung versendet werden\n- Ein Network Task kann auf WLAN Netzwerke beschr\u00e4nkt werden um in Mobilnetzwerken mit ev. begrenztem Datenvolumen keinen Netzwerkverkehr zu verursachen\n- Die Konfiguration kann als JSON Datei exportiert oder importiert werden\n- Es k\u00f6nnen Intervalle definiert werden in denen die Ausf\u00fchrung von Network Tasks eingestellt wird um den Batterieverbrauch zu reduzieren\n\n<b>Berechtigungen</b>\n- <i>RECEIVE_BOOT_COMPLETED</i> um laufende Tasks bei Reboots neu zu starten\n- <i>ACCESS_NETWORK_STATE</i> um die Erreichbarkeit des Netzwerks zu pr\u00fcfen\n- <i>INTERNET</i> f\u00fcr den Internet-Zugriff\n- <i>WAKE_LOCK</i> um das Ger\u00e4t w\u00e4hrend der Ausf\u00fchrung eines Tasks aktiv zu halten\n- <i>FOREGROUND_SERVICE</i> um den Dienst zur Ausf\u00fchrung von Tasks zu starten\n- <i>FOREGROUND_SERVICE_DATA_SYNC</i> um dem Dienst zur Ausf\u00fchrung von Tasks Daten\u00fcbertragung zu erlauben\n- <i>USE_EXACT_ALARM</i> um die Tasks nach Ablauf des Intervalls zu starten (ab Android 13)\n- <i>SCHEDULE_EXACT_ALARM</i> um die Tasks nach Ablauf des Intervalls zu starten (Android 11 und 12)\n- <i>POST_NOTIFICATIONS</i> um Benachrichtigungen zu senden\n\n<b>Hinweis</b>\nDie App nutzt Alarme um Tasks auszul\u00f6sen. Der Stromverbrauch im Wartezustand ist vergleichbar mit einer Kalender-App, die bei Bedarf Erinnerungen sendet. W\u00e4hrend der Ausf\u00fchrung ist der Stromverbrauch nat\u00fcrlich h\u00f6her, und kurze Ausf\u00fchrungsintervalle f\u00fchren zu einem h\u00f6heren Gesamtverbrauch.\n\nDie App funktioniert am Besten bei abgeschalteter Akkuoptimierung. Wenn die Akkuoptimierung eingeschaltet ist kann die Ausf\u00fchrung der einzelnen Tasks speziell bei kurzen Intervallen unzuverl\u00e4ssig sein, d.h. die Intervalle k\u00f6nnen sich verl\u00e4ngern und sie werden nicht exakt zu den definierten Zeitpunkten ausgef\u00fchrt. In der App befindet sich ein Link zu den Android-Systemeinstellungen. Dort kann die Akkuoptimierung abgeschaltet werden. Nat\u00fcrlich ist bei abgeschalteter Akkuoptimierung der Verbrauch ev. h\u00f6her.\n\nAb Android 15 ist es nicht mehr m\u00f6glich (und auch nicht mehr notwendig), die Akkuoptimierung zu deaktivieren. Android 15 und h\u00f6her bietet eine Einstellung, um Hintergrundaktivit\u00e4ten f\u00fcr Apps zuzulassen, die standardm\u00e4\u00dfig aktiviert ist. Es wird empfohlen, diese Funktion aktiviert zu lassen. Die App sollte zwar auch ohne sie funktionieren, dies kann jedoch zu unzuverl\u00e4ssigem Verhalten f\u00fchren.",
+      "en-US": "Keep it up checks network services periodically by sending a ping, connecting to a specific port or downloading a site. It can also be used to ensure a connection with a timeout will be kept alive.\n\n<b>Features</b>\n\n- Create multiple separate network tasks\n- One task monitors one network service at a specified interval\n- A task sends a specified number of pings, performs a specified number of connections attempts or downloads a file or a site\n- Successful and unsuccessful attempts are logged\n- Downloaded files can automatically be deleted after a successful download or be kept\n- Notifications can be sent on failure or when a network service goes down or up\n- A network task can be restricted to WiFi connections, i.e. it does not perform any action on mobile networks with potentially limited download data\n- The configuration can be exported and imported as a JSON data file\n- Intervals can be defined during which all background work is suspended for battery saving\n\n<b>Permissions</b>\n- <i>RECEIVE_BOOT_COMPLETED</i> for restarting running networks tasks on device boot\n- <i>ACCESS_NETWORK_STATE</i> for checking network accessibility\n- <i>INTERNET</i> for accessing the internet\n- <i>WAKE_LOCK</i> to keep the device awake while executing a task\n- <i>FOREGROUND_SERVICE</i> to start the foreground service for running tasks\n- <i>FOREGROUND_SERVICE_DATA_SYNC</i> to use the foreground service with data transmission\n- <i>USE_EXACT_ALARM</i> to start networks tasks after expiry of intervals (Android 13+)\n- <i>SCHEDULE_EXACT_ALARM</i> to start networks tasks after expiry of intervals (Android 11 and 12)\n- <i>POST_NOTIFICATIONS</i> for sending notifications\n\n<b>Note</b>\nThe app uses exact alarms to trigger network task execution. Power consumption during waiting is as high as for a calendar app waiting for reminders to trigger. During execution the power consumption is higher, of course, and short execution intervals cause more overall battery drain.\n\nThe app works best if you disable battery optimization. If battery optimization is active, network tasks execution may be unreliable especially for short intervals, i.e. they may trigger less often and the trigger time may not be exact. There is a link in the app leading to the Android battery settings for the app. Of course, with disabled battery optimization power consumption may be higher.\n\nFor Android 15+, it is no longer possible (and no longer necessary) to directly disable battery optimization. Android 15+ provides a setting to allow background activity for an app, which is enabled by default. It is strongly recommended to leave it enabled. The app should work without it, but it can lead to unreliable behaviour.\n\n"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/net.ibbaa.keepitup/en-US/icon_GNqHXLJRV7i1DLHBE-FFFbEpervoBYhTXNnkvjjoCQM=.png",
+        "sha256": "18da875cb25157b8b50cb1c113e14515b1297abbe80588535cd9e4be38e80903",
+        "size": 583629
+      }
+    },
+    "issueTracker": "https://github.com/ibbaa/keepitup/issues",
+    "lastUpdated": 1776578058109,
+    "license": "Apache-2.0",
+    "name": {
+      "de": "Keep it up",
+      "en-US": "Keep it up"
+    },
+    "preferredSigner": "00a6a77294c50d88fba26c7931f27ba8ef2e271b472486f3ce8bf9ce3603a348",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/net.ibbaa.keepitup/en-US/phoneScreenshots/1.png",
+            "sha256": "683862a02b7fff0363dc5e26b6d482cce9e26942892c730dca0433fcded5d552",
+            "size": 286894
+          },
+          {
+            "name": "/net.ibbaa.keepitup/en-US/phoneScreenshots/2.png",
+            "sha256": "d63b3cf5936e35a378bb48b5272af3eb11af61a7e9c20b7abc727ca8b95ff050",
+            "size": 205405
+          },
+          {
+            "name": "/net.ibbaa.keepitup/en-US/phoneScreenshots/3.png",
+            "sha256": "e01efa04276e35cec2ec96fba914f39f1b851c331a4d194fc88f68627b1300d4",
+            "size": 137906
+          },
+          {
+            "name": "/net.ibbaa.keepitup/en-US/phoneScreenshots/4.png",
+            "sha256": "c5f92553b390a647e1aed04966a77889fc867df729f60125f86fb1b63fef97eb",
+            "size": 214748
+          },
+          {
+            "name": "/net.ibbaa.keepitup/en-US/phoneScreenshots/5.png",
+            "sha256": "568d856ec9b919dc958ddcc495000b2f4ddb82e282ceb75d9147ad7f0f814053",
+            "size": 154139
+          },
+          {
+            "name": "/net.ibbaa.keepitup/en-US/phoneScreenshots/6.png",
+            "sha256": "140c56a339b0162f3bfd45516045e49106a6bc365139b60e266982fb99d96557",
+            "size": 963504
+          },
+          {
+            "name": "/net.ibbaa.keepitup/en-US/phoneScreenshots/7.png",
+            "sha256": "8388e963bfa97cb7df3c5331cb130534a2dea47baa2fb66a2d4f98dd78a426da",
+            "size": 924593
+          },
+          {
+            "name": "/net.ibbaa.keepitup/en-US/phoneScreenshots/8.png",
+            "sha256": "90cf7d105c3e4407adfa2956f9bf9bc94e60a1ecca4be9c0514cfaa993e3e5fc",
+            "size": 341097
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/ibbaa/keepitup",
+    "summary": {
+      "de": "Netzwerk\u00fcberwachung und Monitoring",
+      "en-US": "Simple network monitoring"
+    }
+  },
+  "version": {
+    "added": 1776578058109,
+    "file": {
+      "ipfsCIDv1": "bafybeifok4nf2ovf7cck2csnpcmm6rnnamruzlignnfynjb2wi42xvg4dy",
+      "name": "/net.ibbaa.keepitup_20.apk",
+      "sha256": "a01f3b2bf71b7976b83c988dcd0bfdb94e94e7dc9732a112e7ff94ccf667ef3e",
+      "size": 4119641
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "00a6a77294c50d88fba26c7931f27ba8ef2e271b472486f3ce8bf9ce3603a348"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+        },
+        {
+          "name": "android.permission.USE_EXACT_ALARM"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.SCHEDULE_EXACT_ALARM"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "net.ibbaa.keepitup.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 23,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 20,
+      "versionName": "1.11.1"
+    },
+    "src": {
+      "name": "/net.ibbaa.keepitup_20_src.tar.gz",
+      "sha256": "a27938fc43651a81880db04e044a5a8fe11b219ff3c8aafa71496c875c4bab54",
+      "size": 18176983
+    },
+    "whatsNew": {
+      "en-US": "* Fixed bug wrong port value is set on import\n* Prepare SAF enablement"
+    }
+  }
+}

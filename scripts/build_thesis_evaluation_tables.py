@@ -152,7 +152,7 @@ def build_claim_table(summary: dict[str, Any]) -> list[dict[str, str]]:
                 f"{summary['clean_versions']['checked']} emitted Maven versions confirmed across "
                 f"{summary['clean_versions']['cases']} clean real APKs."
             ),
-            "scope": "F-Droid, OpenTracks, Tusky, and Daily Dozen; Tusky and Daily Dozen are clean but sparse.",
+            "scope": "F-Droid, OpenTracks, Tusky, Daily Dozen, and QuickDic; Tusky, Daily Dozen, and QuickDic are clean but sparse.",
             "limitation": "Clean cases should not be used alone as the global real-world score.",
         },
         {
@@ -171,7 +171,7 @@ def build_claim_table(summary: dict[str, Any]) -> list[dict[str, str]]:
                 f"{summary['blocked_source_linked_cases']} source-linked blocked APKs and "
                 f"{summary['limitation_cases']} limitation/boundary cases are excluded from accuracy metrics."
             ),
-            "scope": "K-9 and Jitsi Meet remain blocked; Organic Maps, Termux, the hidden-DEX fixture, and the Simplify obfuscated sample define native/hidden-code/obfuscation boundaries.",
+            "scope": "K-9 is now source-validated partial; Organic Maps, Termux, Jitsi Meet's native files, the hidden-DEX fixture, and the Simplify obfuscated sample define native/hidden-code/obfuscation boundaries.",
             "limitation": "Native package/version identification is outside the MVP; native files are hash-only SBOM file components.",
         },
     ]
@@ -278,7 +278,7 @@ def build_writing_guidance() -> list[str]:
         "Always show clean and partial real APK rows separately before giving the overall source-validated number.",
         "Mention that native .so files are included as hash-only CycloneDX file components, not Maven package versions.",
         "Describe unresolved AndroidX version-band cases as limitations supported by evidence, not as hidden failures.",
-        "Keep K-9 report-only until its Gradle dependency tree is generated.",
+        "Describe K-9 as source-validated partial via a validation-only included-build rescue, not as clean evidence.",
     ]
 
 

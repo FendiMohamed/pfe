@@ -211,14 +211,14 @@ This split is essential. A single global score can hide why the tool succeeds or
 |---|---:|
 | Controlled APKs | 84/84 expected versions |
 | Clean source-validated real APKs | 47/47 emitted versions |
-| Partial source-validated real APKs | 355/608 emitted versions |
-| All source-validated real APKs | 402/655 emitted versions |
+| Partial source-validated real APKs | 864/1755 emitted versions |
+| All source-validated real APKs | 911/1802 emitted versions |
 
 **Required phrase:** emitted Maven version confirmation rate.
 
 **Speaker notes:**
 
-The controlled set validates the mechanics. Clean real APKs show that source-confirmed emitted versions are possible. Partial real APKs show realistic behavior on harder APK families. The overall 402/655 number is useful, but it must be reported together with the clean/partial split.
+The controlled set validates the mechanics. Clean real APKs show that source-confirmed emitted versions are possible. Partial real APKs show realistic behavior on harder APK families. The overall 911/1802 number is useful, but it must be reported together with the clean/partial split.
 
 **Do not say:** full dependency recall.
 
@@ -233,7 +233,7 @@ The controlled set validates the mechanics. Clean real APKs show that source-con
 | F-Droid, OpenTracks, Tusky | Clean source-validated evidence |
 | NewPipe, AntennaPod, KDE, Wikipedia, Conversations, Aegis, FairEmail, Nextcloud | Useful partial evidence with AndroidX/Kotlin/version-band ambiguity |
 | Markor | Older-dependency drift; app-specific calibration can regress others |
-| K-9 | Source-linked blocked, not counted |
+| K-9 / Thunderbird Android | Source-validated partial after a plugin-lite included-build rescue |
 | Organic Maps, Termux, hidden DEX fixture | Boundary and limitation evidence |
 
 **Speaker notes:**
@@ -271,7 +271,7 @@ Limitations:
 - adjacent AndroidX/Kotlin versions can be indistinguishable;
 - native `.so` files are hash-only;
 - hidden DEX/dynamic loading is risk-labeled, not solved;
-- K-9 remains source-linked blocked;
+- K-9 is source-validated partial after a validation-only plugin-lite rescue;
 - external scanner validation now runs with Trivy and Grype; scanner output is comparison evidence, not the final source-validated vulnerability authority.
 
 Next work:

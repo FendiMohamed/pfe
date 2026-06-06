@@ -1,0 +1,103 @@
+{
+  "selections": [
+    {
+      "app": "Password Generator",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "security",
+        "password",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.vecturagames.android.app.passwordgenerator",
+      "reason": "No-native security/password utility with target SDK 36, medium APK size, and a substantial source tarball; selected as a modern non-sparse clean candidate likely to exercise AndroidX/Kotlin dependencies without native boundaries.",
+      "slug": "password-generator",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Todo Agenda",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "calendar",
+        "time",
+        "task",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.andstatus.todoagenda",
+      "reason": "No-native calendar/task widget with target SDK 35 and a medium dependency-looking source tree; selected as a practical utility candidate with enough surface to avoid another sparse 1-2 component row.",
+      "slug": "todo-agenda",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Keep it up",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "connectivity",
+        "internet",
+        "network-monitor",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "net.ibbaa.keepitup",
+      "reason": "No-native network-monitoring app with target SDK 36, internet/connectivity behavior, and manageable source size; selected for a likely non-sparse dependency tree without native code.",
+      "slug": "keep-it-up",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "SkillApp",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "time",
+        "time-tracker",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.theskillapp.skillapp",
+      "reason": "No-native time-tracking app with target SDK 36, moderate APK/source sizes, and a maintained source tarball; selected as a modern Kotlin/AndroidX-style candidate outside the already saturated note/browser families.",
+      "slug": "skillapp",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "c3nav",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "navigation",
+        "maps",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "de.c3nav.droid",
+      "reason": "No-native navigation app with target SDK 35, medium APK size, and a large enough source tarball to suggest meaningful Android dependencies without native map libraries.",
+      "slug": "c3nav",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Nextcloud News",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "news",
+        "sync-client",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "de.luhmer.owncloudnewsreader",
+      "reason": "No-native news/sync client with target SDK 35, internet behavior, and a non-trivial source tree; selected as a dependency-rich clean candidate while avoiding native-heavy Nextcloud app boundaries.",
+      "slug": "nextcloud-news",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    }
+  ]
+}

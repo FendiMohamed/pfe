@@ -1,0 +1,85 @@
+{
+  "selections": [
+    {
+      "app": "DoliDroid",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "erp-crm",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.nltechno.dolidroidpro",
+      "reason": "No-native ERP/CRM front-end with target SDK 36, a medium APK, and a large source tarball; useful for another dependency-rich internet/business clean-candidate probe.",
+      "slug": "dolidroid",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "ownCloud",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "cloud-storage",
+        "internet",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.owncloud.android",
+      "reason": "No-native cloud-storage client with target SDK 35 and a non-trivial APK/source profile; adds a maintained sync-client family to the clean non-sparse search.",
+      "slug": "owncloud",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Your local weather",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "weather",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.thosp.yourlocalweather",
+      "reason": "No-native weather app with target SDK 36, medium APK/source sizes, and internet/weather coverage distinct from earlier weather candidates.",
+      "slug": "your-local-weather",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "OpenKeychain: Easy PGP",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "security",
+        "crypto",
+        "older-profile",
+        "source-linked"
+      ],
+      "package_name": "org.sufficientlysecure.keychain",
+      "reason": "No-native security/PGP app with target SDK 34 and a sizeable source tree; useful as a security-family clean-candidate attempt and an older-profile comparison row.",
+      "slug": "openkeychain",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "HomeFeed - RSS Widget",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "news",
+        "rss-widget",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.byterdevs.rsswidget",
+      "reason": "No-native RSS/news widget with target SDK 36 and a moderate source tree; adds a compact modern internet/news candidate to the clean non-sparse probe.",
+      "slug": "homefeed-rss-widget",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    }
+  ]
+}

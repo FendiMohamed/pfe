@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "added": 1533859200000,
+    "authorEmail": "altomanigianluca@gmail.com",
+    "authorName": "Gianluca Altomani",
+    "authorWebSite": "https://gianlu.xyz/",
+    "categories": [
+      "DNS & Hosts",
+      "Internet"
+    ],
+    "changelog": "https://github.com/devgianlu/DNSHero/blob/HEAD/CHANGELOG.md",
+    "description": {
+      "cs-CZ": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "da-DK": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "de-DE": "DNS Hero l\u00e4sst dich ganz einfach DNS-Zonen inspizieren. Diese App gibt dir Infos \u00fcber den Haupt-Nameserver, den Nameserver, der zu der Domain geh\u00f6rt und verschiedenen anderen DNS-Records (A, AAAA, MX, CNAME, TXT, SOA). Du kannst dir auch die Gesundheit der Domain angucken wenn du eine Diagnose durchf\u00fchrst.\n\nDieses Projekt ist Open-Source: https://github.com/devgianlu/DNSHero.\nProgrammiert mit der http://zone.vision API von DNSimple.",
+      "el-GR": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "en-GB": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "en-US": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "es-ES": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "fi-FI": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "fr-FR": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "he-IL": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "hu-HU": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "it-IT": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "ja-JP": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "ko-KR": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "nl-NL": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "no-NO": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "pl-PL": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "pt-BR": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "pt-PT": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "ru-RU": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "sr-SP": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "sv-SE": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "tr-TR": "DNS Hero let you inspect DNS zones easily. Bu uygulama size k\u00f6k ad sunucusu, alan ad\u0131yla ili\u015fkili ad sunucular\u0131 ve \u00e7e\u015fitli di\u011fer DNS kay\u0131tlar\u0131 (A, AAAA, MX, CNAME, TXT, SOA) hakk\u0131nda bilgi verebilir. Ayr\u0131ca, bir tan\u0131lama \u00e7al\u0131\u015ft\u0131r\u0131l\u0131rken etki alan\u0131 sa\u011fl\u0131\u011f\u0131n\u0131 da g\u00f6r\u00fcnt\u00fcleyebilirsiniz.\n\nBu proje a\u00e7\u0131k kaynakl\u0131d\u0131r. Repo https://github.com/devgianlu/DNSHero\nDNSimple taraf\u0131ndan http://zone.vision API kullan\u0131larak olu\u015fturulmu\u015ftur.",
+      "zh-CN": "DNS Hero let you inspect DNS zones easily. This app will give you information about the root nameserver, nameservers associated with the domain and various other DNS records (A, AAAA, MX, CNAME, TXT, SOA). You can also view the domain health as a diagnostic is run.\n\nThis project is opensource at https://github.com/devgianlu/DNSHero.\nBuilt using the http://zone.vision API by DNSimple.",
+      "zh-TW": "DNS Hero \u53ef\u8b93\u60a8\u8f15\u9b06\u6aa2\u67e5 DNS \u5340\u57df\u3002 \u9019\u500b\u61c9\u7528\u7a0b\u5f0f\u53ef\u4ee5\u70ba\u60a8\u63d0\u4f9b\u6709\u95dc\u6839\u540d\u7a31\u4f3a\u670d\u5668\u3001\u8207\u7db2\u57df\u95dc\u806f\u7684\u540d\u7a31\u4f3a\u670d\u5668\u548c\u5176\u4ed6\u5404\u7a2e DNS \u8a18\u9304 (A\u3001AAAA\u3001MX\u3001CNAME\u3001TXT\u3001SOA)\u3002 \u60a8\u4e5f\u53ef\u4ee5\u5728\u57f7\u884c\u8a3a\u65b7\u6642\u6aa2\u8996\u7db2\u57df\u5065\u5eb7\u7a0b\u5ea6\u3002\n\n\u6b64\u5c08\u6848\u5728\u9019\u88e1\u958b\u653e\u539f\u59cb\u78bc\uff1ahttps://github.com/devgianlu/DNSHero\u3002\n\u4f7f\u7528 DNSimple \u7684 http://zone.vision API \u5efa\u7f6e"
+    },
+    "donate": [
+      "http://gianlu.xyz/donate/"
+    ],
+    "featureGraphic": {
+      "en-GB": {
+        "name": "/com.gianlu.dnshero/en-GB/featureGraphic_O8LdGlKdj5H2QLM1yGyMAYSaI3fcv4O2X1nwG6kSnGk=.png",
+        "sha256": "3bc2dd1a529d8f91f640b335c86c8c01849a2377dcbf83b65f59f01ba9129c69",
+        "size": 27598
+      },
+      "en-US": {
+        "name": "/com.gianlu.dnshero/en-US/featureGraphic_O8LdGlKdj5H2QLM1yGyMAYSaI3fcv4O2X1nwG6kSnGk=.png",
+        "sha256": "3bc2dd1a529d8f91f640b335c86c8c01849a2377dcbf83b65f59f01ba9129c69",
+        "size": 27598
+      }
+    },
+    "icon": {
+      "en-GB": {
+        "name": "/com.gianlu.dnshero/en-GB/icon_lLbb-XIn59W_GSRwv2T6WUfnKRJ6Sh2VwX1ULxL26Pk=.png",
+        "sha256": "94b6dbf97227e7d5bf192470bf64fa5947e729127a4a1d95c17d542f12f6e8f9",
+        "size": 9623
+      }
+    },
+    "issueTracker": "https://github.com/devgianlu/DNSHero/issues",
+    "lastUpdated": 1753369517000,
+    "liberapay": "devgianlu",
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-GB": "DNS Hero (open source)",
+      "en-US": "DNS Hero"
+    },
+    "preferredSigner": "6927501748e2e8cc7474473a4bc2b65ade3a2ac6d45f0e9813757f7465e035b5",
+    "screenshots": {
+      "phone": {
+        "en-GB": [
+          {
+            "name": "/com.gianlu.dnshero/en-GB/phoneScreenshots/1.png",
+            "sha256": "6eb3dd4cf636db2189e33f1d0f5297f9bb58b5701a97352c6567ced136554126",
+            "size": 616667
+          },
+          {
+            "name": "/com.gianlu.dnshero/en-GB/phoneScreenshots/2.png",
+            "sha256": "94199ba83d081ecd26d0274f7df86d782827d888f76f3fc184544cae02465ec3",
+            "size": 998231
+          },
+          {
+            "name": "/com.gianlu.dnshero/en-GB/phoneScreenshots/3.png",
+            "sha256": "74e22604cd1a5d063c7af3b32ed3f1fb5d5d9ad92806727a6f9e279782c7b4fd",
+            "size": 812320
+          },
+          {
+            "name": "/com.gianlu.dnshero/en-GB/phoneScreenshots/4.png",
+            "sha256": "d7f2366b96ca1330f4b83dcbe412d2406f897e99d2eb73030d9b3d9e522de043",
+            "size": 844443
+          },
+          {
+            "name": "/com.gianlu.dnshero/en-GB/phoneScreenshots/5.png",
+            "sha256": "f66a976b665a85b8b30ed55d925511e5fae75bc1625bc03f17fc5d5212efcd02",
+            "size": 601382
+          },
+          {
+            "name": "/com.gianlu.dnshero/en-GB/phoneScreenshots/6.png",
+            "sha256": "d930b2bb60371a9a02e0d0a7c2e4e66a0ed60099870e01452d14d7712593cb3a",
+            "size": 790464
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/devgianlu/DNSHero",
+    "summary": {
+      "cs-CZ": "Inspect DNS zones like a superhero",
+      "da-DK": "Inspect DNS zones like a superhero",
+      "de-DE": "Inspiziere DNS-Zonen wie ein Superheld",
+      "el-GR": "Inspect DNS zones like a superhero",
+      "en-GB": "Inspect DNS zones like a superhero",
+      "en-US": "Inspect DNS zones like a superhero",
+      "es-ES": "Inspect DNS zones like a superhero",
+      "fi-FI": "Inspect DNS zones like a superhero",
+      "fr-FR": "Inspect DNS zones like a superhero",
+      "he-IL": "Inspect DNS zones like a superhero",
+      "hu-HU": "Inspect DNS zones like a superhero",
+      "it-IT": "Inspect DNS zones like a superhero",
+      "ja-JP": "Inspect DNS zones like a superhero",
+      "ko-KR": "Inspect DNS zones like a superhero",
+      "nl-NL": "Inspect DNS zones like a superhero",
+      "no-NO": "Inspect DNS zones like a superhero",
+      "pl-PL": "Inspect DNS zones like a superhero",
+      "pt-BR": "Inspect DNS zones like a superhero",
+      "pt-PT": "Inspect DNS zones like a superhero",
+      "ru-RU": "Inspect DNS zones like a superhero",
+      "sr-SP": "Inspect DNS zones like a superhero",
+      "sv-SE": "Inspect DNS zones like a superhero",
+      "tr-TR": "DNS alanlar\u0131n\u0131 bir s\u00fcper kahraman gibi inceleyin",
+      "zh-CN": "Inspect DNS zones like a superhero",
+      "zh-TW": "\u50cf\u4e00\u500b\u8d85\u7d1a\u82f1\u96c4\u4e00\u822c\u6aa2\u67e5 DNS \u5340\u57df"
+    },
+    "translation": "https://crowdin.com/project/dnshero"
+  },
+  "version": {
+    "added": 1753369517000,
+    "antiFeatures": {
+      "NonFreeNet": {
+        "en-US": "Depends on zone.vision API by DNSimple."
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeiezx25tt7df6nib64e4i3ffi5utqyw3nhtdyz7ylq4kmlr2mhrvfi",
+      "name": "/com.gianlu.dnshero_42.apk",
+      "sha256": "407fa1cc3491c4e1e0f97ee844756ebfc2e84347ea6fbdf648d137ba38106bd9",
+      "size": 3575083
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "6927501748e2e8cc7474473a4bc2b65ade3a2ac6d45f0e9813757f7465e035b5"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "com.android.vending.BILLING"
+        },
+        {
+          "name": "com.gianlu.dnshero.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 42,
+      "versionName": "1.7.0"
+    },
+    "src": {
+      "name": "/com.gianlu.dnshero_42_src.tar.gz",
+      "sha256": "8e13778bc58ba986c3424dd6ae02c1175ca425520be43b149a57a5452689264c",
+      "size": 24469687
+    }
+  }
+}

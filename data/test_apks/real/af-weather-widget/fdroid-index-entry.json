@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "added": 1618704000000,
+    "authorName": "Gitsaibot",
+    "categories": [
+      "Internet",
+      "Weather"
+    ],
+    "changelog": "https://github.com/Gitsaibot/AF-Weather-Widget/releases",
+    "description": {
+      "en-US": "This app is a fork of aix weather widget which is no longer actively developed. It is a compact graphical weather graph as a single row Android widget. It was written as a personal project in order to provide a compact graphical weather graph as a single row Android widget. The app met its original design goal at an early version, and most subsequent versions have been bug fixes.\n\nThe source code is dated and not shiny, and there are several hacks used in order to make a graphical widget work on Android. The source code is made public domain as it may provide utility for others.\n\n<b>Weather Sources:</b>\n\n* <a href='https://api.met.no/#english'>Norwegian Meteorological Institute</a>\n* <a href='https://graphical.weather.gov/xml/rest.php'>National Weather Service</a>\n* time zones and geonames from the <a href='https://www.geonames.org/export/web-services.html#timezone'>GeoNames database</a>"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/net.gitsaibot.af/en-US/icon_ghplyZpwg4iu0K7JhlFxGFi4TP3BTm2d8-g_pCDnROc=.png",
+        "sha256": "821a65c99a708388aed0aec98651711858b84cfdc14e6d9df3e83fa420e744e7",
+        "size": 3794
+      }
+    },
+    "issueTracker": "https://github.com/Gitsaibot/AF-Weather-Widget/issues",
+    "lastUpdated": 1768680643000,
+    "license": "CC0-1.0",
+    "name": {
+      "en-US": "AF Weather Widget"
+    },
+    "preferredSigner": "1f084c7a174f347b205fc2f8901119843e10cbd41e30dd824f9207d2400f01bb",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/net.gitsaibot.af/en-US/phoneScreenshots/af_weather_cold.png",
+            "sha256": "f24e4e2ddc09bef4bb7c733528f732648c696f630439ec21c52a4482136acaed",
+            "size": 295035
+          },
+          {
+            "name": "/net.gitsaibot.af/en-US/phoneScreenshots/af_weather_color_black.png",
+            "sha256": "ba6b549274e89bc8db35391e7e51ce27f8890db648f9514b1857c0ab80cbc077",
+            "size": 133289
+          },
+          {
+            "name": "/net.gitsaibot.af/en-US/phoneScreenshots/af_weather_round_corners.png",
+            "sha256": "ea8ffe044caf1261933f7903efa2014ab9b36e29cb2a2b2cbb7523eb0033a1a1",
+            "size": 134481
+          },
+          {
+            "name": "/net.gitsaibot.af/en-US/phoneScreenshots/af_weather_settings.png",
+            "sha256": "bd52492070ef5f2f41ca7caa66721cdcde669c4014929ef5067f260a32cfa73c",
+            "size": 108283
+          },
+          {
+            "name": "/net.gitsaibot.af/en-US/phoneScreenshots/af_weather_warm.png",
+            "sha256": "2c2138ada75e473edb87a4506d237e4577f13296b3851700a9d890418fa80dec",
+            "size": 286781
+          },
+          {
+            "name": "/net.gitsaibot.af/en-US/phoneScreenshots/aix_weather_cold.png",
+            "sha256": "f24e4e2ddc09bef4bb7c733528f732648c696f630439ec21c52a4482136acaed",
+            "size": 295035
+          },
+          {
+            "name": "/net.gitsaibot.af/en-US/phoneScreenshots/aix_weather_warm.png",
+            "sha256": "2c2138ada75e473edb87a4506d237e4577f13296b3851700a9d890418fa80dec",
+            "size": 286781
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/Gitsaibot/AF-Weather-Widget",
+    "summary": {
+      "en-US": "Graph weather widget for Android"
+    }
+  },
+  "version": {
+    "added": 1768680643000,
+    "antiFeatures": {
+      "NonFreeNet": {
+        "en-US": "Depends on geonames.org and api.met.no or weather.gov"
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeigzqrskmog4qqdhtuphdj7zq2rnjarp3gosuq5pakatvwpr3g4qwu",
+      "name": "/net.gitsaibot.af_23.apk",
+      "sha256": "05385259feed866428602979056f7da81cc620d4d65d7bc96e67254e218fa23f",
+      "size": 14641961
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "1f084c7a174f347b205fc2f8901119843e10cbd41e30dd824f9207d2400f01bb"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "net.gitsaibot.af.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 29,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 23,
+      "versionName": "3.2"
+    },
+    "src": {
+      "name": "/net.gitsaibot.af_23_src.tar.gz",
+      "sha256": "55f99537b4d62a496e9a7fdaa7c85bab95f7ae3c717a69d0a65a77fe461ed7d4",
+      "size": 1529896
+    },
+    "whatsNew": {
+      "en-US": "- Fix widget text size"
+    }
+  }
+}

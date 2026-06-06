@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "added": 1594080000000,
+    "authorEmail": "hi@simplelogin.io",
+    "authorName": "SimpleLogin",
+    "authorWebSite": "https://simplelogin.io/",
+    "categories": [
+      "Email",
+      "Internet"
+    ],
+    "description": {
+      "en-US": "<b>Application features:</b>\n<ul>\n<li>Manage aliases: create/edit/delete & enable/disable an alias.</li>\n<li>Manage contacts: create contacts to send email from your aliases.</li>\n<li>Manage mailboxes: create/delete/make default a mailbox.</li>\n<li>Share extension: create alias without leaving your browser.</li>\n<li>Secure login with Two Factor Authentication (2FA).</li>\n<li>Support self-hosted: you can use this application with your own SimpleLogin instance.</li>\n</ul>\n\nAnd many more features in active development.\n\n********************************************************************************************\n\n<p><b>SimpleLogin</b> is an open source solution to protect your email inbox. It allows you to create quickly a random email address (aka alias). All emails sent to an alias are forwarded to your personal email address. You can use the alias when subscribing to a newsletter, signing up for a new account, giving your email to someone you don't trust. Not only an alias can receive emails, it can also send emails. An alias is a full-fledged email address. Later you can simply block or delete an alias if it's too spammy.</p>\n\n<b>Why SimpleLogin?</b>\nWhen you give away your personal email online, there is a good chance that your email address would end up with a spammer or a hacker. SimpleLogin acts as a firewall to protect your personal email inbox.\n\n<b>What distinguishes SimpleLogin:</b>\n\n<ul>\n<li>Open-source and easy to self-host. The self-hosting is based on Docker and could be run on almost any Linux server. The hosting instruction is on our repository at <a href=\"https://github.com/simple-login/app\">https://github.com/simple-login/app</a></li>\n<li>Powerful features if you have a domain (only available at premium plan).</li>\n<li>Generous free plan: there's no cap on bandwidth or number of replies/sends. The Free Plan is enough for protecting your personal email. Premium Plan targets at more \"advanced\" users with features like custom domain, unlimited alias or catch-all alias.</li>\n<li>Open Roadmap with exciting upcoming features: email directory, extension for Safari, mobile applications, etc. Feel free to check it out on <a href=\"https://trello.com/b/4d6A69I4/open-roadmap\">https://trello.com/b/4d6A69I4/open-roadmap</a></li>\n<li>Export your data: allows you to change the service provider if someday you decide to leave SimpleLogin.</li>\n</ul>\n\nTerms and conditions: <a href=\"https://simplelogin.io/terms/\">https://simplelogin.io/terms/</a>\nPrivacy policy: <a href=\"https://simplelogin.io/privacy/\">https://simplelogin.io/privacy/</a>"
+    },
+    "featureGraphic": {
+      "en-US": {
+        "name": "/io.simplelogin.android.fdroid/en-US/featureGraphic_tkQiXh1i_9bVZpQBIFltZvgEVHvN7MSQtKkL1FACcEY=.png",
+        "sha256": "b644225e1d62ffd6d566940120596d66f804547bcdecc490b4a90bd450027046",
+        "size": 160878
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/io.simplelogin.android.fdroid/en-US/icon_pMNDc4VhA_ss2rQw9OOJy5pLw0YKcGq1Yv5BSivEhxI=.png",
+        "sha256": "a4c34373856103fb2cdab430f4e389cb9a4bc3460a706ab562fe414a2bc48712",
+        "size": 50704
+      }
+    },
+    "issueTracker": "https://github.com/simple-login/Simple-Login-Android/issues",
+    "lastUpdated": 1720015135000,
+    "license": "Apache-2.0",
+    "name": {
+      "en-US": "SimpleLogin | Anti-spam"
+    },
+    "preferredSigner": "c9fbe0958303d6b96c3fc8a1fa0a78211c71851897bc07863393e76bd84c3bf7",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/io.simplelogin.android.fdroid/en-US/phoneScreenshots/1.png",
+            "sha256": "e9ccd90373138aff051471c3033580d6d72ffe223e97f54b6c6fceeb45af7bcb",
+            "size": 369247
+          },
+          {
+            "name": "/io.simplelogin.android.fdroid/en-US/phoneScreenshots/2.png",
+            "sha256": "655465f2924110a0436b6971748f0be60f2e704b818af6b35fe70fc76ee240ea",
+            "size": 322480
+          },
+          {
+            "name": "/io.simplelogin.android.fdroid/en-US/phoneScreenshots/3.png",
+            "sha256": "77eab92a430a113e29bf4af8343203050b7ecefa3abe22eeda0bed6d25ba9aec",
+            "size": 483479
+          },
+          {
+            "name": "/io.simplelogin.android.fdroid/en-US/phoneScreenshots/4.png",
+            "sha256": "3aae8720f3168a52c8f3e35038bdb02d3c141ae7bcd4fa36fa37371a6856920e",
+            "size": 297456
+          },
+          {
+            "name": "/io.simplelogin.android.fdroid/en-US/phoneScreenshots/5.png",
+            "sha256": "37ad85695e7866403a01e4d733145e2e63ca4e51e8ec4fe9e5071222ad26102a",
+            "size": 103313
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/simple-login/Simple-Login-Android",
+    "summary": {
+      "en-US": "Protect your email inbox with a secure and open source solution by SimpleLogin"
+    },
+    "webSite": "https://simplelogin.io/"
+  },
+  "version": {
+    "added": 1720015135000,
+    "file": {
+      "ipfsCIDv1": "bafybeidtcvpve5juwnvhscajtbqsh6ni2t5rd7b7dfqx7do6po3m2fblqq",
+      "name": "/io.simplelogin.android.fdroid_12200.apk",
+      "sha256": "2910e300a29f655377a3c2b06b8fa2e49b2b18a2470968dec8e5b0c5c71daa7e",
+      "size": 7022894
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "c9fbe0958303d6b96c3fc8a1fa0a78211c71851897bc07863393e76bd84c3bf7"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.READ_CONTACTS"
+        },
+        {
+          "name": "android.permission.USE_BIOMETRIC"
+        },
+        {
+          "name": "android.permission.USE_FINGERPRINT"
+        },
+        {
+          "name": "io.simplelogin.android.fdroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 34
+      },
+      "versionCode": 12200,
+      "versionName": "1.22.0"
+    },
+    "src": {
+      "name": "/io.simplelogin.android.fdroid_12200_src.tar.gz",
+      "sha256": "85d37e3e0033bb974cd2f87fd39ce4ac16d415e2af84c391f11ee3e5f9a17a49",
+      "size": 1836869
+    },
+    "whatsNew": {
+      "en-US": "Add pinning feature to Android app.\nRemove unnecessary storage permission.\n"
+    }
+  }
+}

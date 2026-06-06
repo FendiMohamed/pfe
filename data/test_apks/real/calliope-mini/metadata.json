@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "39da0393f5fbfc72ebf51452f4c5408f990af05a8c9b483ef2c7bee056fb309a",
+    "index_size": 12129760,
+    "path": "data/test_apks/real/calliope-mini/calliope-mini.apk",
+    "sha256": "39da0393f5fbfc72ebf51452f4c5408f990af05a8c9b483ef2c7bee056fb309a",
+    "size": 12129760,
+    "url": "https://f-droid.org/repo/cc.calliope.mini_27.apk"
+  },
+  "app": "Calliope mini",
+  "categories": [
+    "Connectivity"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "connectivity",
+    "education",
+    "hardware-companion",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/cc.calliope.mini/",
+  "license": "MIT",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "cc.calliope.mini",
+  "proof_status": "report-generated",
+  "reason": "No-native hardware/connectivity companion app with target SDK 36 and a manageable source tarball; selected to add a device-connectivity row without native `.so` evidence.",
+  "report": {
+    "detected_component_count": 18,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-calliope-mini",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-calliope-mini/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-calliope-mini/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-calliope-mini/sbom.cdx.json",
+    "sbom_component_count": 18,
+    "status": "ok"
+  },
+  "slug": "calliope-mini",
+  "source_repo": "https://github.com/calliope-edu/Calliope-Android-App",
+  "source_tarball": {
+    "sha256": "bb7da2263b841347b142b0d8838b6c39fa5af9d2592eec9363480be7ac246799",
+    "size": 11835169,
+    "url": "https://f-droid.org/repo/cc.calliope.mini_27_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 27,
+  "version_name": "2.0.9"
+}

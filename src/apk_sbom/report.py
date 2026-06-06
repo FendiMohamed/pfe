@@ -8,6 +8,7 @@ from pathlib import Path
 from apk_sbom.apk_extractor import ApkInspection, inspect_apk
 from apk_sbom.dex_analyzer import ApkDexAnalysis, analyze_apk_dex
 from apk_sbom.matcher import (
+    COMPOSITE_FAMILY_SHORTLIST_MARGIN,
     DEFAULT_API_REFERENCE_WEIGHT,
     DEFAULT_OPCODE_NGRAM_WEIGHT,
     MatchSummary,
@@ -35,6 +36,9 @@ DEFAULT_VERSION_BAND_EXPERIMENT_JSON = Path(
 )
 DEFAULT_LIFECYCLE_FAMILY_EXPERIMENT_JSON = Path(
     "data/results/experiments/lifecycle-family-separation-diagnostics.json"
+)
+DEFAULT_R8_MINIFIED_CONFIDENCE_POLICY_JSON = Path(
+    "data/results/experiments/r8-minified-confidence-policy-diagnostics.json"
 )
 
 
@@ -78,9 +82,13 @@ def generate_final_report(
     source_validation_json: str | Path | None = None,
     api_reference_weight: float = DEFAULT_API_REFERENCE_WEIGHT,
     opcode_ngram_weight: float = DEFAULT_OPCODE_NGRAM_WEIGHT,
+    enable_version_unique_literal_context_reranker: bool = True,
+    enable_composite_family_shortlist: bool = True,
+    composite_family_shortlist_margin: float = COMPOSITE_FAMILY_SHORTLIST_MARGIN,
     r8_phase5_experiment_json: str | Path | None = None,
     version_band_experiment_json: str | Path | None = None,
     lifecycle_family_experiment_json: str | Path | None = None,
+    r8_minified_confidence_policy_json: str | Path | None = None,
 ) -> ReportArtifacts:
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
@@ -94,6 +102,11 @@ def generate_final_report(
         min_score=min_score,
         api_reference_weight=api_reference_weight,
         opcode_ngram_weight=opcode_ngram_weight,
+        enable_version_unique_literal_context_reranker=(
+            enable_version_unique_literal_context_reranker
+        ),
+        enable_composite_family_shortlist=enable_composite_family_shortlist,
+        composite_family_shortlist_margin=composite_family_shortlist_margin,
     )
     components = detected_libraries_from_match_summary(
         match_summary,
@@ -113,6 +126,10 @@ def generate_final_report(
     version_band_experiments = load_version_band_experiment_evidence(
         version_band_experiment_json,
         lifecycle_family_experiment_json,
+        apk_path=apk.apk_path,
+    )
+    r8_minified_confidence_policy = load_r8_minified_confidence_policy_evidence(
+        r8_minified_confidence_policy_json,
         apk_path=apk.apk_path,
     )
 
@@ -162,6 +179,7 @@ def generate_final_report(
         obfuscation_diagnostics=obfuscation_diagnostics,
         r8_phase5_experiment=r8_phase5_experiment,
         version_band_experiments=version_band_experiments,
+        r8_minified_confidence_policy=r8_minified_confidence_policy,
     )
     report_json_path.write_text(
         json.dumps(report_payload, indent=2, sort_keys=True) + "\n",
@@ -179,6 +197,7 @@ def generate_final_report(
             obfuscation_diagnostics=obfuscation_diagnostics,
             r8_phase5_experiment=r8_phase5_experiment,
             version_band_experiments=version_band_experiments,
+            r8_minified_confidence_policy=r8_minified_confidence_policy,
         ),
         encoding="utf-8",
     )
@@ -194,6 +213,7 @@ def generate_final_report(
             obfuscation_diagnostics=obfuscation_diagnostics,
             r8_phase5_experiment=r8_phase5_experiment,
             version_band_experiments=version_band_experiments,
+            r8_minified_confidence_policy=r8_minified_confidence_policy,
         ),
         encoding="utf-8",
     )
@@ -304,6 +324,63 @@ def load_version_band_experiment_evidence(
     }
 
 
+def load_r8_minified_confidence_policy_evidence(
+    path: str | Path | None,
+    *,
+    apk_path: str | Path,
+) -> dict | None:
+    if path is None:
+        return None
+    source_path = Path(path)
+    payload = json.loads(source_path.read_text(encoding="utf-8"))
+    rows = payload.get("rows", [])
+    matching_rows = [
+        row for row in rows if _minified_policy_row_matches_report(row, apk_path)
+    ]
+    matching_suggestions = [
+        row
+        for row in matching_rows
+        if row.get("policy_action") == "surface-report-only-suggestion"
+    ]
+    matching_blocked = [
+        row
+        for row in matching_rows
+        if row.get("policy_action") == "do-not-change-selected-version"
+    ]
+    summary = payload.get("summary", {})
+    return {
+        "report_only": True,
+        "source": str(source_path),
+        "verdict": payload.get("verdict"),
+        "policy": [
+            "This section is opt-in report-only minified/R8 confidence policy evidence.",
+            "It adds wording for confidence and ambiguity only; it does not change detected components, selected versions, SBOM output, vulnerability labels, or source-validation metrics.",
+            "Report-only suggestions are source-backed diagnostic alternatives and blocked rows explain why broader optimization-aware promotion remains unsafe.",
+        ],
+        "summary": {
+            "rows_classified": summary.get("rows_classified", 0),
+            "regression_rows_blocked": summary.get("regression_rows_blocked", 0),
+            "phase5_report_only_suggestions": summary.get("phase5_report_only_suggestions", 0),
+            "report_default_selection_changes": summary.get("report_default_selection_changes", 0),
+            "matching_rows": len(matching_rows),
+            "matching_report_only_suggestions": len(matching_suggestions),
+            "matching_blocked_regression_risks": len(matching_blocked),
+        },
+        "matching_rows": matching_rows,
+        "matching_report_only_suggestions": matching_suggestions,
+        "matching_blocked_regression_risks": matching_blocked,
+    }
+
+
+def _minified_policy_row_matches_report(row: dict, apk_path: str | Path) -> bool:
+    apk_text = _normalized_path(apk_path)
+    row_apk = _normalized_path(row.get("apk_path"))
+    if row_apk and (row_apk == apk_text or Path(row_apk).name == Path(apk_text).name):
+        return True
+    case = str(row.get("case") or "")
+    return bool(case and case.lower().replace(" ", "-") in Path(apk_text).stem.lower())
+
+
 def _load_single_version_band_evidence(
     path: str | Path | None,
     *,
@@ -383,15 +460,21 @@ def build_json_report(
     obfuscation_diagnostics: R8ObfuscationDiagnostics | None = None,
     r8_phase5_experiment: dict | None = None,
     version_band_experiments: dict | None = None,
+    r8_minified_confidence_policy: dict | None = None,
 ) -> dict:
     diagnostics = obfuscation_diagnostics or build_obfuscation_diagnostics(
         apk,
         match_summary=match_summary,
         components=components,
     )
+    version_uncertainty_summary = build_version_uncertainty_summary(
+        match_summary,
+        components,
+    )
     payload = {
         "apk": apk.to_dict(),
         "match_summary": match_summary.to_dict(),
+        "version_uncertainty_summary": version_uncertainty_summary,
         "obfuscation_risk": asdict(assess_obfuscation_risk(apk, match_summary, components)),
         "obfuscation_diagnostics": diagnostics.to_dict(),
         "detected_components": [asdict(component) for component in components],
@@ -402,6 +485,8 @@ def build_json_report(
         payload["r8_phase5_experiment"] = r8_phase5_experiment
     if version_band_experiments is not None:
         payload["version_band_experiments"] = version_band_experiments
+    if r8_minified_confidence_policy is not None:
+        payload["r8_minified_confidence_policy"] = r8_minified_confidence_policy
     return payload
 
 
@@ -414,6 +499,7 @@ def build_markdown_report(
     obfuscation_diagnostics: R8ObfuscationDiagnostics | None = None,
     r8_phase5_experiment: dict | None = None,
     version_band_experiments: dict | None = None,
+    r8_minified_confidence_policy: dict | None = None,
 ) -> str:
     vulnerability_labels = _vulnerability_labels(osv_summary)
     obfuscation_risk = assess_obfuscation_risk(apk, match_summary, components)
@@ -491,8 +577,10 @@ def build_markdown_report(
         lines.append(f"- Reason: {reason}")
 
     lines.extend(_markdown_obfuscation_diagnostics(diagnostics))
+    lines.extend(_markdown_version_uncertainty_summary(match_summary, components))
     lines.extend(_markdown_r8_phase5_experiment(r8_phase5_experiment))
     lines.extend(_markdown_version_band_experiments(version_band_experiments))
+    lines.extend(_markdown_r8_minified_confidence_policy(r8_minified_confidence_policy))
 
     lines.extend(
         [
@@ -667,6 +755,7 @@ def build_html_report(
     obfuscation_diagnostics: R8ObfuscationDiagnostics | None = None,
     r8_phase5_experiment: dict | None = None,
     version_band_experiments: dict | None = None,
+    r8_minified_confidence_policy: dict | None = None,
 ) -> str:
     vulnerability_labels = _vulnerability_labels(osv_summary)
     vulnerability_rows = _vulnerability_rows(osv_summary)
@@ -680,6 +769,7 @@ def build_html_report(
     forensic_rows = _html_forensic_rows(apk, obfuscation_risk)
     native_rows = _html_native_rows(apk)
     decision_rows = _html_decision_rows(match_summary)
+    uncertainty_summary = build_version_uncertainty_summary(match_summary, components)
     vulnerability_table_rows = _html_vulnerability_rows(vulnerability_rows)
 
     lookup_state = "Not run"
@@ -873,6 +963,11 @@ def build_html_report(
   </section>
 
   <section>
+    <h2>Version Uncertainty Summary</h2>
+    {_html_version_uncertainty_summary(uncertainty_summary)}
+  </section>
+
+  <section>
     <h2>Inert Multi-Scale Feature Availability</h2>
     {_html_inert_multiscale_features(match_summary)}
   </section>
@@ -885,6 +980,11 @@ def build_html_report(
   <section>
     <h2>Experimental Version-Band Evidence</h2>
     {_html_version_band_experiments(version_band_experiments)}
+  </section>
+
+  <section>
+    <h2>Experimental R8 Minified Confidence Policy</h2>
+    {_html_r8_minified_confidence_policy(r8_minified_confidence_policy)}
   </section>
 
   <section>
@@ -1415,6 +1515,356 @@ def _version_band_annotation(row: dict) -> str:
             + ", ".join(trigger.get("reason_codes") or [])
         )
     return "version-band annotation"
+
+
+def build_version_uncertainty_summary(
+    match_summary: MatchSummary,
+    components: list[DetectedLibrary],
+) -> dict:
+    emitted = {(component.coordinate, component.version) for component in components}
+    category_counts: dict[str, int] = {}
+    rows = []
+    for decision in match_summary.decisions:
+        categories = _version_uncertainty_categories(decision)
+        for category in categories:
+            category_counts[category] = category_counts.get(category, 0) + 1
+        if not categories:
+            continue
+        rows.append(
+            {
+                "coordinate": decision.coordinate,
+                "selected_version": decision.selected_version,
+                "version_status": decision.version_status,
+                "version_confidence_label": decision.version_confidence_label,
+                "version_confidence": round(float(decision.version_confidence or 0.0), 6),
+                "gap_to_next": round(float(decision.gap_to_next or 0.0), 6),
+                "reference_versions_considered": decision.reference_versions_considered,
+                "ambiguous_versions": [
+                    {
+                        "version": alternative.version,
+                        "score": round(float(alternative.score), 6),
+                    }
+                    for alternative in decision.ambiguous_versions
+                ],
+                "categories": categories,
+                "emitted_component": (
+                    decision.coordinate,
+                    decision.selected_version,
+                )
+                in emitted,
+                "note": _version_uncertainty_note(decision, categories),
+            }
+        )
+    return {
+        "report_only": True,
+        "policy": [
+            "This summary explains existing version uncertainty only.",
+            "It does not change matcher scoring, selected versions, emitted SBOM components, vulnerability labels, or source-validation metrics.",
+            "Use source validation or dependency-tree evidence before treating low-confidence, near-tie, or single-reference rows as exact version proof.",
+        ],
+        "summary": {
+            "version_decisions": len(match_summary.decisions),
+            "emitted_components": len(components),
+            "uncertainty_rows": len(rows),
+            "category_counts": dict(sorted(category_counts.items())),
+        },
+        "rows": rows,
+    }
+
+
+def _version_uncertainty_categories(decision: object) -> list[str]:
+    categories: list[str] = []
+    ambiguity_reason = str(getattr(decision, "version_ambiguity_reason", "") or "")
+    selection_reason = str(getattr(decision, "version_selection_reason", "") or "")
+    version_status = str(getattr(decision, "version_status", "") or "").lower()
+    version_label = str(getattr(decision, "version_confidence_label", "") or "").lower()
+    gap_to_next = float(getattr(decision, "gap_to_next", 0.0) or 0.0)
+    alternatives = list(getattr(decision, "alternatives", []) or [])
+    ambiguous_versions = list(getattr(decision, "ambiguous_versions", []) or [])
+    reference_versions = int(getattr(decision, "reference_versions_considered", 0) or 0)
+
+    if ambiguity_reason or ambiguous_versions:
+        categories.append("explicit-version-ambiguity")
+    if "near-tie" in ambiguity_reason.lower() or (
+        alternatives and 0.0 <= gap_to_next < 0.006
+    ):
+        categories.append("near-tie")
+    if version_status == "uncertain":
+        categories.append("uncertain-version")
+    if version_status == "candidate" or version_label in {"low", "uncertain"}:
+        categories.append("low-confidence-version")
+    if reference_versions <= 1:
+        categories.append("single-reference-boundary")
+    if selection_reason:
+        categories.append("policy-selected-version")
+    return sorted(dict.fromkeys(categories))
+
+
+def _version_uncertainty_note(decision: object, categories: list[str]) -> str:
+    ambiguity_reason = str(getattr(decision, "version_ambiguity_reason", "") or "")
+    selection_reason = str(getattr(decision, "version_selection_reason", "") or "")
+    if ambiguity_reason:
+        return ambiguity_reason
+    if "single-reference-boundary" in categories:
+        return (
+            "Only one reference version was available for this coordinate, so the "
+            "report can identify the component but cannot compare sibling versions."
+        )
+    if "near-tie" in categories:
+        return (
+            "Multiple versions have very similar evidence; treat the selected "
+            "version as a candidate unless source/dependency evidence breaks the tie."
+        )
+    if "policy-selected-version" in categories:
+        return selection_reason
+    if "low-confidence-version" in categories:
+        return (
+            "The version claim is low confidence; use source validation before "
+            "using it as exact CVE evidence."
+        )
+    if "uncertain-version" in categories:
+        return "The matcher could not make a confident version-level claim."
+    return ""
+
+
+def _markdown_version_uncertainty_summary(
+    match_summary: MatchSummary,
+    components: list[DetectedLibrary],
+) -> list[str]:
+    evidence = build_version_uncertainty_summary(match_summary, components)
+    summary = evidence["summary"]
+    rows = evidence["rows"]
+    lines = [
+        "",
+        "## Version Uncertainty Summary",
+        "",
+        "- Report-only: true",
+        (
+            "- Note: this section explains existing version uncertainty only. It "
+            "does not change matcher scoring, selected versions, SBOM components, "
+            "vulnerability labels, or source-validation metrics."
+        ),
+        f"- Version decisions: `{summary['version_decisions']}`",
+        f"- Emitted components: `{summary['emitted_components']}`",
+        f"- Uncertainty rows: `{summary['uncertainty_rows']}`",
+        f"- Category counts: `{json.dumps(summary['category_counts'], sort_keys=True)}`",
+        "",
+    ]
+    if rows:
+        lines.extend(
+            [
+                "| Component | Selected | Version confidence | Categories | Note |",
+                "|---|---:|---|---|---|",
+            ]
+        )
+        for row in rows[:20]:
+            lines.append(
+                "| "
+                f"`{_markdown_cell(row.get('coordinate'))}` | "
+                f"{_markdown_cell(row.get('selected_version'))} | "
+                f"{_markdown_cell(row.get('version_confidence_label'))} "
+                f"({float(row.get('version_confidence') or 0.0):.3f}) | "
+                f"{_markdown_cell(', '.join(row.get('categories') or []))} | "
+                f"{_markdown_cell(row.get('note'))} |"
+            )
+        if len(rows) > 20:
+            lines.append(
+                f"| ... |  |  |  | {len(rows) - 20} additional uncertainty rows omitted from Markdown summary. |"
+            )
+    else:
+        lines.append("No version uncertainty rows were identified.")
+    return lines
+
+
+def _html_version_uncertainty_summary(evidence: dict) -> str:
+    summary = evidence.get("summary", {})
+    rows = evidence.get("rows", [])
+    category_counts = json.dumps(summary.get("category_counts", {}), sort_keys=True)
+    row_html = "".join(
+        "<tr>"
+        f"<td><code>{_html(row.get('coordinate'))}</code></td>"
+        f"<td>{_html(row.get('selected_version'))}</td>"
+        f"<td>{_status_pill(str(row.get('version_confidence_label')))} "
+        f"{float(row.get('version_confidence') or 0.0):.3f}</td>"
+        f"<td>{_html(', '.join(row.get('categories') or []))}</td>"
+        f"<td>{_html(row.get('note'))}</td>"
+        "</tr>"
+        for row in rows[:20]
+    )
+    if len(rows) > 20:
+        row_html += (
+            f"<tr><td colspan=\"5\">{len(rows) - 20} additional uncertainty rows "
+            "omitted from HTML summary.</td></tr>"
+        )
+    if not row_html:
+        row_html = "<tr><td colspan=\"5\">No version uncertainty rows were identified.</td></tr>"
+    return f"""
+    <p>Report-only: <strong>true</strong></p>
+    <p class="subtle">This section explains existing version uncertainty only; it does not change matcher scoring, selected versions, SBOM components, vulnerability labels, or source-validation metrics.</p>
+    <table>
+      <tbody>
+        <tr><th>Version decisions</th><td>{_html(summary.get("version_decisions", 0))}</td></tr>
+        <tr><th>Emitted components</th><td>{_html(summary.get("emitted_components", 0))}</td></tr>
+        <tr><th>Uncertainty rows</th><td>{_html(summary.get("uncertainty_rows", 0))}</td></tr>
+        <tr><th>Category counts</th><td><code>{_html(category_counts)}</code></td></tr>
+      </tbody>
+    </table>
+    <table>
+      <thead><tr><th>Component</th><th>Selected</th><th>Version confidence</th><th>Categories</th><th>Note</th></tr></thead>
+      <tbody>{row_html}</tbody>
+    </table>
+    """
+
+
+def _markdown_r8_minified_confidence_policy(evidence: dict | None) -> list[str]:
+    if evidence is None:
+        return []
+    summary = evidence.get("summary", {})
+    lines = [
+        "",
+        "## Experimental R8 Minified Confidence Policy",
+        "",
+        "- Report-only: true",
+        (
+            "- Note: this opt-in section adds confidence and ambiguity wording only. "
+            "It does not change detected components, selected versions, SBOM output, "
+            "vulnerability labels, or source-validation metrics."
+        ),
+        f"- Source: `{evidence.get('source')}`",
+        f"- Verdict: `{evidence.get('verdict')}`",
+        f"- Rows classified: `{summary.get('rows_classified', 0)}`",
+        f"- Regression-risk rows blocked: `{summary.get('regression_rows_blocked', 0)}`",
+        f"- Dataset report-only suggestions: `{summary.get('phase5_report_only_suggestions', 0)}`",
+        f"- Default selection changes: `{summary.get('report_default_selection_changes', 0)}`",
+        f"- Rows matching this report: `{summary.get('matching_rows', 0)}`",
+        f"- Report-only suggestions matching this report: `{summary.get('matching_report_only_suggestions', 0)}`",
+        f"- Blocked regression-risk rows matching this report: `{summary.get('matching_blocked_regression_risks', 0)}`",
+        "",
+    ]
+    suggestions = evidence.get("matching_report_only_suggestions") or []
+    if suggestions:
+        lines.extend(
+            [
+                "### Report-Only Suggestions",
+                "",
+                "| Case | Coordinate | Current | Suggested | Confidence label | Signals |",
+                "|---|---|---:|---:|---|---|",
+            ]
+        )
+        for row in suggestions:
+            lines.append(
+                "| "
+                f"{_markdown_cell(row.get('case'))} | "
+                f"`{row.get('coordinate')}` | "
+                f"{_markdown_cell(row.get('baseline_selected_version'))} | "
+                f"{_markdown_cell(row.get('diagnostic_selected_version'))} | "
+                f"`{_markdown_cell(row.get('confidence_label'))}` | "
+                f"{_markdown_cell(_short_signal_list(row.get('signals')))} |"
+            )
+        lines.append("")
+    else:
+        lines.append("No report-only suggestion matched this report.")
+        lines.append("")
+
+    blocked = evidence.get("matching_blocked_regression_risks") or []
+    if blocked:
+        lines.extend(
+            [
+                "### Blocked Regression-Risk Rows",
+                "",
+                "| Case | Coordinate | Current | Diagnostic | Policy | Signals |",
+                "|---|---|---:|---:|---|---|",
+            ]
+        )
+        for row in blocked[:8]:
+            lines.append(
+                "| "
+                f"{_markdown_cell(row.get('case'))} | "
+                f"`{row.get('coordinate')}` | "
+                f"{_markdown_cell(row.get('baseline_selected_version'))} | "
+                f"{_markdown_cell(row.get('diagnostic_selected_version'))} | "
+                f"`{_markdown_cell(row.get('policy_action'))}` | "
+                f"{_markdown_cell(_short_signal_list(row.get('signals')))} |"
+            )
+        lines.append("")
+    return lines
+
+
+def _html_r8_minified_confidence_policy(evidence: dict | None) -> str:
+    if evidence is None:
+        return (
+            "<p class=\"subtle\">Not enabled. Run <code>generate-report "
+            "--include-r8-minified-confidence-policy</code> to attach report-only "
+            "minified/R8 confidence evidence.</p>"
+        )
+    summary = evidence.get("summary", {})
+    suggestions = evidence.get("matching_report_only_suggestions") or []
+    suggestion_rows = "".join(
+        "<tr>"
+        f"<td>{_html(row.get('case'))}</td>"
+        f"<td><code>{_html(row.get('coordinate'))}</code></td>"
+        f"<td>{_html(row.get('baseline_selected_version'))}</td>"
+        f"<td>{_html(row.get('diagnostic_selected_version'))}</td>"
+        f"<td>{_status_pill(str(row.get('confidence_label')))}</td>"
+        f"<td>{_html(_short_signal_list(row.get('signals')))}</td>"
+        "</tr>"
+        for row in suggestions
+    )
+    if not suggestion_rows:
+        suggestion_rows = (
+            "<tr><td colspan=\"6\">No report-only suggestion matched this report.</td></tr>"
+        )
+    blocked = evidence.get("matching_blocked_regression_risks") or []
+    blocked_rows = "".join(
+        "<tr>"
+        f"<td>{_html(row.get('case'))}</td>"
+        f"<td><code>{_html(row.get('coordinate'))}</code></td>"
+        f"<td>{_html(row.get('baseline_selected_version'))}</td>"
+        f"<td>{_html(row.get('diagnostic_selected_version'))}</td>"
+        f"<td><code>{_html(row.get('policy_action'))}</code></td>"
+        f"<td>{_html(_short_signal_list(row.get('signals')))}</td>"
+        "</tr>"
+        for row in blocked[:8]
+    )
+    if not blocked_rows:
+        blocked_rows = (
+            "<tr><td colspan=\"6\">No blocked regression-risk row matched this report.</td></tr>"
+        )
+    return f"""
+    <p>Report-only: <strong>true</strong></p>
+    <p class="subtle">This opt-in section adds confidence and ambiguity wording only; it does not change detected components, selected versions, SBOM output, vulnerability labels, or source-validation metrics.</p>
+    <table>
+      <tbody>
+        <tr><th>Source</th><td><code>{_html(evidence.get("source"))}</code></td></tr>
+        <tr><th>Verdict</th><td><code>{_html(evidence.get("verdict"))}</code></td></tr>
+        <tr><th>Rows classified</th><td>{_html(summary.get("rows_classified", 0))}</td></tr>
+        <tr><th>Regression-risk rows blocked</th><td>{_html(summary.get("regression_rows_blocked", 0))}</td></tr>
+        <tr><th>Dataset report-only suggestions</th><td>{_html(summary.get("phase5_report_only_suggestions", 0))}</td></tr>
+        <tr><th>Default selection changes</th><td>{_html(summary.get("report_default_selection_changes", 0))}</td></tr>
+        <tr><th>Rows matching this report</th><td>{_html(summary.get("matching_rows", 0))}</td></tr>
+        <tr><th>Report-only suggestions matching this report</th><td>{_html(summary.get("matching_report_only_suggestions", 0))}</td></tr>
+        <tr><th>Blocked regression-risk rows matching this report</th><td>{_html(summary.get("matching_blocked_regression_risks", 0))}</td></tr>
+      </tbody>
+    </table>
+    <h3>Report-Only Suggestions</h3>
+    <table>
+      <thead><tr><th>Case</th><th>Coordinate</th><th>Current</th><th>Suggested</th><th>Confidence</th><th>Signals</th></tr></thead>
+      <tbody>{suggestion_rows}</tbody>
+    </table>
+    <h3>Blocked Regression-Risk Rows</h3>
+    <table>
+      <thead><tr><th>Case</th><th>Coordinate</th><th>Current</th><th>Diagnostic</th><th>Policy</th><th>Signals</th></tr></thead>
+      <tbody>{blocked_rows}</tbody>
+    </table>
+    """
+
+
+def _short_signal_list(signals: object) -> str:
+    if not isinstance(signals, list):
+        return ""
+    kept = [str(signal) for signal in signals[:6]]
+    suffix = "" if len(signals) <= len(kept) else f", +{len(signals) - len(kept)} more"
+    return ", ".join(kept) + suffix
 
 
 def _multiscale_feature_labels() -> list[tuple[str, str]]:

@@ -1,0 +1,64 @@
+{
+  "apk": {
+    "expected_sha256": "27a94fa3ed9a4d916ab24747852a5310e892eb93f55ec5e7c112cc49ae8f067b",
+    "index_size": 22086164,
+    "path": "data/test_apks/real/praktika-vortaro/praktika-vortaro.apk",
+    "sha256": "27a94fa3ed9a4d916ab24747852a5310e892eb93f55ec5e7c112cc49ae8f067b",
+    "size": 22086164,
+    "url": "https://f-droid.org/repo/com.esperantajvortaroj.app_26.apk"
+  },
+  "app": "Praktika Vortaro",
+  "categories": [
+    "Reading",
+    "Science & Education",
+    "Translation & Dictionary"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "reading",
+    "dictionary",
+    "education",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.esperantajvortaroj.app/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.esperantajvortaroj.app",
+  "proof_status": "report-generated",
+  "reason": "No-native dictionary/reading app with target SDK 34, a large APK, and a small source tarball; selected as a language/reference row distinct from Poet Assistant.",
+  "report": {
+    "detected_component_count": 1,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-praktika-vortaro",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-praktika-vortaro/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-praktika-vortaro/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-praktika-vortaro/sbom.cdx.json",
+    "sbom_component_count": 1,
+    "status": "ok"
+  },
+  "slug": "praktika-vortaro",
+  "source_repo": "https://github.com/djuretic/praktika-vortaro",
+  "source_tarball": {
+    "sha256": "528f90a506d6235b825c85e94bb7e9549574070420c42497fe36ff05916f917e",
+    "size": 950875,
+    "url": "https://f-droid.org/repo/com.esperantajvortaroj.app_26_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 26,
+  "version_name": "0.26"
+}

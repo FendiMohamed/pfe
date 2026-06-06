@@ -13,10 +13,10 @@ This diagnostic checks whether native `.so` handling is properly scoped as hash-
 
 ## Summary
 
-- Native APK cases: 18
-- Source-validated native APK cases: 13
-- Boundary or blocked native APK cases: 5
-- Native `.so` files represented as hash-only file components: 130
+- Native APK cases: 21
+- Source-validated native APK cases: 18
+- Boundary or blocked native APK cases: 3
+- Native `.so` files represented as hash-only file components: 170
 - Verdict: `native-boundary-complete`
 - Conclusion: Complete for the current MVP: native handling is correctly documented as hash-only file-component reporting. The evidence spans source-validated native APKs and explicit native-heavy boundary cases, so no native package/version recovery claim should be added.
 
@@ -36,8 +36,11 @@ This diagnostic checks whether native `.so` handling is properly scoped as hash-
 | VLC Android 3.7.1 | `source-validated-partial` | 26 | 4 | arm64-v8a | libc++_shared.so, libmla.so, libvlc.so, libvlcjni.so | 6/26 confirmed, 20 mismatches, 0 missing/nuance entries. Note: Dependency tree was generated from an in-container source extraction with F-Droid prebuild edits and a validation-only fixed Git revision string. |
 | OsmAnd~ 5.3.10 | `source-validated-partial` | 25 | 6 | arm64-v8a | libOsmAndCoreWithJNI.so, libQt5Core.so, libQt5Network.so, libQt5Sql.so, libc++_shared.so, libosmand.so | 16/25 confirmed, 9 mismatches, 0 missing/nuance entries. Note: Dependency tree was generated with validation-only F-Droid configuration edits and cached Gradle 8.10.2 because Gradle 9.5.0 breaks the source build script's XmlParser usage. |
 | Material Files 1.7.4 | `source-validated-partial` | 2 | 16 | arm64-v8a, armeabi-v7a, x86, x86_64 | libarchive-jni.so, libhiddenapi.so, libselinux-jni.so, libsyscall.so | 0/2 confirmed, 2 mismatches, 0 missing/nuance entries. Note: Dependency tree was generated from a validation-only no-native source copy after applying F-Droid nonfree-source removal; Maven runtime dependency resolution is preserved, but native build output is not claimed. |
-| K-9 / Thunderbird Android 18.0 | `source-linked-blocked` | 11 | 8 | arm64-v8a, armeabi-v7a, x86, x86_64 | libandroidx.graphics.path.so, libdatastore_shared_counter.so | Not source-validated; not counted in precision/recall/version-accuracy metrics. |
-| Jitsi Meet 26.0.0 | `source-linked-blocked` | 7 | 13 | x86_64 | libc++_shared.so, libfbjni.so, libhermes.so, libhermestooling.so, libimagepipeline.so, libjingle_peerconnection_so.so ... | Not source-validated; not counted in precision/recall/version-accuracy metrics. |
+| DAVx5 4.5.12-ose | `source-validated-partial` | 5 | 8 | arm64-v8a, armeabi-v7a, x86, x86_64 | libandroidx.graphics.path.so, libconscrypt_jni.so | 3/5 confirmed, 2 mismatches, 0 missing/nuance entries. Note: The proof runner captured `:app-ose` `oseReleaseRuntimeClasspath`; source validation confirms 3/5 emitted Maven versions, with 2 mismatches and 0 missing. |
+| OpenVPN for Android 0.7.64 | `source-validated-partial` | 20 | 24 | arm64-v8a, armeabi-v7a, x86, x86_64 | libopenvpn.so, libosslspeedtest.so, libosslutil.so, libovpn3.so, libovpnexec.so, libovpnutil.so | 13/20 confirmed, 7 mismatches, 0 missing/nuance entries. Note: Dependency tree was generated from a validation copy with native CMake/NDK configuration disabled because the Docker image has no matching Android NDK; source validation confirms 13/20 emitted Maven versions, with 7 mismatches and 0 missing. |
+| Gadgetbridge 0.91.1 | `source-validated-partial` | 21 | 8 | arm64-v8a, armeabi-v7a, x86, x86_64 | libimage_processing_util_jni.so, libsurface_util_jni.so | 17/21 confirmed, 4 mismatches, 0 missing/nuance entries. Note: The proof runner derived the matching F-Droid source tarball URL, captured `:app` `mainlineReleaseRuntimeClasspath`, and confirms 17/21 emitted Maven versions, with 4 mismatches and 0 missing. |
+| K-9 / Thunderbird Android 18.0 | `source-validated-partial` | 11 | 8 | arm64-v8a, armeabi-v7a, x86, x86_64 | libandroidx.graphics.path.so, libdatastore_shared_counter.so | 5/11 confirmed, 6 mismatches, 0 missing/nuance entries. Note: Docker Gradle 9.5 captured `:app-k9mail` `fossReleaseRuntimeClasspath` from a validation-only plugin-lite/runtime-graph copy; validation confirms 5/11 emitted Maven versions, with 6 mismatches and 0 missing coordinates. |
+| Jitsi Meet 26.0.0 | `source-validated-partial` | 7 | 13 | x86_64 | libc++_shared.so, libfbjni.so, libhermes.so, libhermestooling.so, libimagepipeline.so, libjingle_peerconnection_so.so ... | 5/7 confirmed, 2 mismatches, 0 missing/nuance entries. Note: Docker Gradle 8.13 captured `:app` `releaseRuntimeClasspath` after Node/npm became available; SDK manager installed NDKs 27.1.12297006 and 26.1.10909125 during configuration; validation confirms 5/7 emitted Maven versions, with 2 mismatches and 0 missing coordinates. |
 | FairEmail 1.2315 | `source-validated-partial` | 13 | 4 | arm64-v8a, armeabi-v7a, x86, x86_64 | libfairemail.so | 7/13 confirmed, 6 mismatches, 0 missing/nuance entries. Note: Dependency tree was generated from a validation-only source copy with native build disabled; Maven runtime dependency resolution is preserved, but native build output is not claimed. |
 | Organic Maps 2026.05.08-4 | `limitation-native-heavy` | 13 | 4 | arm64-v8a, armeabi-v7a, x86, x86_64 | liborganicmaps.so | Not source-validated; not counted in precision/recall/version-accuracy metrics. |
 | Termux 0.119.0-beta.3 | `limitation-native-heavy` | 5 | 12 | arm64-v8a, armeabi-v7a, x86, x86_64 | liblocal-socket.so, libtermux-bootstrap.so, libtermux.so | Not source-validated; not counted in precision/recall/version-accuracy metrics. |

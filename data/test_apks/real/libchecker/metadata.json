@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "ac1ff15c10bfab0dae1d75056eea0ebcf8e4b5008bdd8dd6733095266779dbdb",
+    "index_size": 5031952,
+    "path": "data/test_apks/real/libchecker/libchecker.apk",
+    "sha256": "ac1ff15c10bfab0dae1d75056eea0ebcf8e4b5008bdd8dd6733095266779dbdb",
+    "size": 5031952,
+    "url": "https://f-droid.org/repo/com.absinthe.libchecker_2515.apk"
+  },
+  "app": "LibChecker",
+  "categories": [
+    "System"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "system",
+    "library-inspection",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.absinthe.libchecker/",
+  "license": "Apache-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.absinthe.libchecker",
+  "proof_status": "report-generated",
+  "reason": "No-native system/library-inspection app with target SDK 36, a moderate APK, and a nontrivial source tarball; selected as a modern AndroidX/Kotlin-style candidate likely to exercise useful dependency evidence without native boundaries.",
+  "report": {
+    "detected_component_count": 2,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v13/report-real-libchecker",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v13/report-real-libchecker/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v13/report-real-libchecker/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "medium",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates.",
+        "Structural evidence is stronger than package-name evidence."
+      ],
+      "score": 0.4
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v13/report-real-libchecker/sbom.cdx.json",
+    "sbom_component_count": 2,
+    "status": "ok"
+  },
+  "slug": "libchecker",
+  "source_repo": "https://github.com/LibChecker/LibChecker",
+  "source_tarball": {
+    "sha256": "cbeefcf3743311ee1307588a6b2d7ba6e008e5e503b184bd6281aacf3f2a110a",
+    "size": 6368611,
+    "url": "https://f-droid.org/repo/com.absinthe.libchecker_2515_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 2515,
+  "version_name": "2.5.3"
+}

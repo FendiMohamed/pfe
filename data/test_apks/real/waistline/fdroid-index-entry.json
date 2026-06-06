@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "added": 1526860800000,
+    "categories": [
+      "Diet",
+      "Health Manager",
+      "Sports & Health"
+    ],
+    "changelog": "https://github.com/davidhealey/waistline/releases",
+    "description": {
+      "en-US": "Waistline is a libre calorie counter and weight tracker that allows the user to keep a diary of the food they eat and variations in their weight. All data is kept on the user's device and can be exported or imported easily when needed. The app includes a barcode scanner that connects to the Open Food Facts database to pull in product information."
+    },
+    "donate": [
+      "https://www.paypal.me/healeyd"
+    ],
+    "icon": {
+      "en-US": {
+        "name": "/com.waist.line/en-US/icon_7IGFb1ZMZYq6poDuqSy84q34pu-l3_CTO_WJaB7PmTM=.png",
+        "sha256": "ec81856f564c658abaa680eea92cbce2adf8a6efa5dff0933bf589681ecf9933",
+        "size": 10226
+      }
+    },
+    "issueTracker": "https://github.com/davidhealey/waistline/issues",
+    "lastUpdated": 1773048775000,
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-US": "Waistline"
+    },
+    "preferredSigner": "b8013a1f3f02e1bb5d003f254d2d2748e82a52ea11e766f4396dfcb8e5a0c60d",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.waist.line/en-US/phoneScreenshots/1.png",
+            "sha256": "768751faec3456a0b13180ce9b60a19c8c662f6a6a0baddb71d11fa20881bac1",
+            "size": 122629
+          },
+          {
+            "name": "/com.waist.line/en-US/phoneScreenshots/2.png",
+            "sha256": "a3490e6b8d05ce9babe7096d0d71bba9b5934e89aa4998c35a5510c0e12382a5",
+            "size": 102722
+          },
+          {
+            "name": "/com.waist.line/en-US/phoneScreenshots/3.png",
+            "sha256": "8e23edb60eff4da78ae99bc91a692c2ee5c863d6c02b317f675b90932189deb3",
+            "size": 39038
+          },
+          {
+            "name": "/com.waist.line/en-US/phoneScreenshots/4.png",
+            "sha256": "4a4e315a09afc9ac21277c99ffbce0418ceb5c1234e76fd5dad1660dc909e767",
+            "size": 39497
+          },
+          {
+            "name": "/com.waist.line/en-US/phoneScreenshots/5.png",
+            "sha256": "b133a63bdb0808603448833b01b855172ecd4314d9bcadb23352b062a4ee8311",
+            "size": 72096
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/davidhealey/waistline",
+    "summary": {
+      "de": "Kostenloser Kalorienrechner und Gewichts\u00fcberwacher",
+      "en-US": "Libre calorie counter and weight tracker",
+      "es": "Contador de calor\u00edas y registro de peso gratuitos",
+      "fr": "Compteur de calories et suivi du poids gratuits",
+      "he": "\u05e1\u05d5\u05e4\u05e8 \u05e7\u05dc\u05d5\u05e8\u05d9\u05d5\u05ea \u05d5\u05e2\u05d5\u05e7\u05d1 \u05d0\u05d7\u05e8 \u05de\u05e9\u05e7\u05dc \u05d1\u05d7\u05d9\u05e0\u05dd",
+      "pl": "Darmowy licznik kalorii i monitor wagi",
+      "pt": "Contador de calorias e rasteador de peso livre",
+      "pt-BR": "Um contador de calorias que acompanha o seu peso",
+      "pt-PT": "Contador de calorias e rasteador de peso livre",
+      "ro": "Contor gratuit de calorii \u0219i monitor de greutate",
+      "ru": "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0441\u0447\u0435\u0442\u0447\u0438\u043a \u043a\u0430\u043b\u043e\u0440\u0438\u0439 \u0438 \u0442\u0440\u0435\u043a\u0435\u0440 \u0432\u0435\u0441\u0430",
+      "tr": "\u00d6zg\u00fcr bir kalori sayac\u0131 ve a\u011f\u0131rl\u0131k izleyici",
+      "uk": "\u0411\u0435\u0437\u043f\u043b\u0430\u0442\u043d\u0438\u0439 \u043b\u0456\u0447\u0438\u043b\u044c\u043d\u0438\u043a \u043a\u0430\u043b\u043e\u0440\u0456\u0439 \u0442\u0430 \u0432\u0456\u0434\u0441\u0442\u0435\u0436\u0443\u0432\u0430\u0447 \u0432\u0430\u0433\u0438",
+      "zh-CN": "\u514d\u8d39\u5361\u8def\u91cc\u8ba1\u6570\u5668\u548c\u4f53\u91cd\u8ddf\u8e2a\u5668"
+    },
+    "translation": "https://crowdin.com/project/waistline"
+  },
+  "version": {
+    "added": 1773048775000,
+    "file": {
+      "ipfsCIDv1": "bafybeibglxvi7xaobiptutayczbsdeitcj4mrk4tue2hbgcktplpwsmvdi",
+      "name": "/com.waist.line_31001.apk",
+      "sha256": "4a0bbe4e215ec135851de5b66fe9351007742e2aaed3ec758a69c65d72ca2abb",
+      "size": 13486740
+    },
+    "manifest": {
+      "features": [
+        {
+          "name": "android.hardware.camera"
+        }
+      ],
+      "signer": {
+        "sha256": [
+          "b8013a1f3f02e1bb5d003f254d2d2748e82a52ea11e766f4396dfcb8e5a0c60d"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_IMAGES"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_VIDEO"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.CAMERA"
+        },
+        {
+          "name": "android.permission.FLASHLIGHT"
+        },
+        {
+          "name": "com.waist.line.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 31001,
+      "versionName": "3.10.1"
+    },
+    "src": {
+      "name": "/com.waist.line_31001_src.tar.gz",
+      "sha256": "86b7d39f12b94d8b342dd21fa7625c3f937c9ca5470c09d17732ed2d85f61675",
+      "size": 40492087
+    }
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "metadata": {
+    "added": 1608336000000,
+    "authorName": "woheller69",
+    "categories": [
+      "Internet",
+      "Weather"
+    ],
+    "changelog": "https://github.com/woheller69/weather/blob/HEAD/CHANGELOG.md",
+    "description": {
+      "de-DE": "Mit RadarWeather kann das Wetter von Orten eingesehen werden.\n\nDie Wetterdaten werden \u00fcber die freie API von OpenWeatherMap bereitgestellt. Da die neue One Call API nur 1000 Abrufe pro Tag erlaubt, muss jeder Nutzer seinen eigenen kostenlosen Key von OpenWeatherMap (https://home.openweathermap.org/users/sign_up) in der App hinterlegen. \nDie Daten f\u00fcr das Regenradar werden \u00fcber die freie API von RainViewer bezogen.\n\nFeatures:\n- Aktuelles Wetter\n- St\u00fcndliches Wetter f\u00fcr 48h / 3h Vorhersagen f\u00fcr 5 Tage\n- 8 Tage Vorhersage\n- Niederschlag in den n\u00e4chsten 60min\n- Regenradar\n- Umkreissuche\n- Widget mit optionaler automatischer GPS-Positionsaktualisierung\n- Keine Werbung\n\nMinimale Berechtigungen:\nRadarWeather ben\u00f6tigt nur ein Minimum an Berechtigungen, n\u00e4mlich nur die INTERNET-Berechtigung. Diese ist n\u00f6tig, um HTTP-Anfragen an entfernte Server zu stellen, um Wetterdaten zu erhalten.\nOptional: Berechtigung f\u00fcr GPS.\n\n\n",
+      "en-US": "RadarWeather lets you watch the weather for cities and locations you are interested in.\n\nWeather data is provided via the free API from OpenWeatherMap. As the new One Call API allows only 1000 calls per day, every user must enter his own free OpenWeatherMap key (https://home.openweathermap.org/users/sign_up). \nData for the rain radar is retrieved via the free RainViewer API.\n\nFeatures:\n- Current weather\n- Hourly forecasts for 48h / 3h forecasts for 5 days\n- 8 day forecast\n- Precipitation in next 60min\n- Rain radar\n- Radius search\n- Widget with optional GPS auto position update\n- No advertisement\n\nMinimum permissions:\nRadarWeather only requires the minimum amount of permission, namely only the INTERNET permission. This permission is necessary to make HTTP requests to remote servers for retrieving weather data.\nOptional: authorization for GPS.\n",
+      "es-ES": "RadarWeather le permite ver el clima de las ciudades y lugares que le interesan.\n\nLos datos meteorol\u00f3gicos se proporcionan a trav\u00e9s de la API gratuita de OpenWeatherMap. Como la nueva API One Call solo permite 1000 llamadas por d\u00eda, cada usuario debe ingresar su propia clave OpenWeatherMap gratuita (https://home.openweathermap.org/users/sign_up).\nLos datos del radar de lluvia se recuperan a trav\u00e9s de la API RainViewer gratuita.\n\nCaracter\u00edsticas:\n- Clima actual\n- Pron\u00f3sticos horarios para pron\u00f3sticos 48h / 3h durante 5 d\u00edas\n- Previsi\u00f3n de 8 d\u00edas\n- Precipitaci\u00f3n en los pr\u00f3ximos 60min\n- Radar de lluvia\n- B\u00fasqueda de radio\n- Widget con actualizaci\u00f3n autom\u00e1tica de posici\u00f3n GPS opcional\n- Sin publicidad\n\nPermisos m\u00ednimos:\nRadarWeather solo requiere la cantidad m\u00ednima de permiso, es decir, solo el permiso de INTERNET. Este permiso es necesario para realizar solicitudes HTTP a servidores remotos para recuperar datos meteorol\u00f3gicos.\nOpcional: autorizaci\u00f3n para GPS.",
+      "fr-FR": "RadarWeather vous permet de regarder le temps pour les villes et les lieux que vous \u00eates int\u00e9ress\u00e9.\n\nLes donn\u00e9es m\u00e9t\u00e9orologiques sont fournies via l'API libre de OpenWeatherMap. Comme la nouvelle API One Call permet seulement 1000 appels par jour, chaque utilisateur doit entrer sa propre cl\u00e9 OpenWeatherMap gratuite (https://home.openweathermap.org/users/sign_up).\nLes donn\u00e9es pour le radar de pluie sont r\u00e9cup\u00e9r\u00e9es via l'API RainViewer gratuite.\n\nCaract\u00e9ristiques:\n- M\u00e9t\u00e9o actuelle\n- Pr\u00e9visions horaires pour les pr\u00e9visions de 48h / 3h pour 5 jours\n- Pr\u00e9visions de 8 jours\n- Pr\u00e9cipitations \u00e0 60min\n- Radar de pluie\n- Recherche radius\n- Widget avec mise \u00e0 jour automatique de la position GPS en option\n- Pas de publicit\u00e9\n\nAutorisations minimales:\nRadarWeather n'exige que le minimum de permission, \u00e0 savoir seulement la permission INTERNET. Cette autorisation est n\u00e9cessaire pour faire des requ\u00eates HTTP \u00e0 des serveurs distants pour r\u00e9cup\u00e9rer des donn\u00e9es m\u00e9t\u00e9orologiques.\nEn option: autorisation pour GPS.",
+      "it-IT": "RadarWeather ti consente di guardare il tempo per le citt\u00e0 e le localit\u00e0 che ti interessano.\n\nI dati meteorologici vengono forniti tramite l'API gratuita di OpenWeatherMap. Poich\u00e9 la nuova API One Call consente solo 1000 chiamate al giorno, ogni utente deve inserire la propria chiave OpenWeatherMap gratuita (https://home.openweathermap.org/users/sign_up).\nI dati per il radar della pioggia vengono recuperati tramite l'API gratuita RainViewer.\n\nFunzionalit\u00e0:\n- Meteo corrente\n- Previsioni orarie per 48h / 3h previsioni per 5 giorni\n- Previsioni di 8 giorni\n- Precipitazioni nei prossimi 60min\n- Radar pioggia\n- Ricerca in un dato raggio\n- Widget con aggiornamento automatico della posizione GPS opzionale\n- Nessuna pubblicit\u00e0\n\nAutorizzazioni minime:\nRadarWeather richiede solo la quantit\u00e0 minima di autorizzazioni, vale a dire solo l'autorizzazione INTERNET. Questa autorizzazione \u00e8 necessaria per effettuare richieste HTTP a server remoti per il recupero dei dati meteorologici.\nOpzionale: autorizzazione per GPS.",
+      "pl-PL": "RadarWeather pozwala \u015bledzi\u0107 pogod\u0119 dla miast i lokalizacji, kt\u00f3re Ci\u0119 interesuj\u0105.\n\nDane pogodowe s\u0105 dostarczane za po\u015brednictwem bezp\u0142atnego interfejsu API OpenWeatherMap. Poniewa\u017c nowy One Call API pozwala na tylko 1000 po\u0142\u0105cze\u0144 dziennie, ka\u017cdy u\u017cytkownik musi wprowadzi\u0107 sw\u00f3j w\u0142asny bezp\u0142atny klucz OpenWeatherMap (https://home.openweathermap.org/users/sign_up).\nDane dla radaru deszczowego s\u0105 pobierane za po\u015brednictwem bezp\u0142atnego interfejsu API RainViewer.\n\nCechy:\n- Obecna pogoda\n- Prognozy godzinowe dla prognoz 48h / 3h na 5 dni\n- Prognoza na 8 dni\n- Opady w ci\u0105gu najbli\u017cszych 60min\n- Radar deszczowy\n- Wyszukiwanie w promieniu\n- Wid\u017cet z opcjonaln\u0105 automatyczn\u0105 aktualizacj\u0105 pozycji GPS\n- Brak reklam\n\nMinimalne uprawnienia:\nRadarWeather wymaga tylko minimalnej ilo\u015bci uprawnie\u0144, a mianowicie tylko uprawnie\u0144 INTERNETOWYCH. To uprawnienie jest niezb\u0119dne do wysy\u0142ania \u017c\u0105da\u0144 HTTP do zdalnych serwer\u00f3w w celu pobrania danych pogodowych.\nOpcjonalnie: autoryzacja dla GPS.\n",
+      "pt-BR": "O RadarWeather permite que voc\u00ea verifique as condi\u00e7\u00f5es do tempo nas cidades e locais interessados.\n\nOs dados do tempo s\u00e3o disponibilizados atrav\u00e9s da API gratuita do OpenWeatherMap. Como a nova API New One Call somente permite 1000 chamadas por dia, todos os usu\u00e1rios devem digitar sua pr\u00f3pria chave gratuita do OpenWeatherMap (https://home.openweathermap.org/users/sign_up).\nOs dados do radar de chuva s\u00e3o recuperados atrav\u00e9s da API gratuita RainViewer.\n\nCaracter\u00edsticas:\n- Tempo atual\n- Previs\u00f5es de hora em hora para 48h / previs\u00f5es de 3h para 5 dias\n- Previs\u00f5es para 8 dias\n- Precipita\u00e7\u00e3o nos pr\u00f3ximos 60 minutos\n- Radar de chuva\n- Pesquisa Radius\n- Widget com atualiza\u00e7\u00e3o de local autom\u00e1tica por GPS\n- Sem an\u00fancios\n\nPermiss\u00f5es m\u00ednimas:\nO RadarWeather somente requer uma quantidade m\u00ednima de permiss\u00f5es, ou seja, apenas a permiss\u00e3o de INTERNET. Esta permiss\u00e3o \u00e9 necess\u00e1ria para para que as requisi\u00e7\u00f5es HTTP recuperem as informa\u00e7\u00f5es com dados do tempo junto aos servidores remotos.\nOpcional: autoriza\u00e7\u00e3o para uso do GPS.\n",
+      "ru-RU": "RadarWeather \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0441\u043b\u0435\u0434\u0438\u0442\u044c \u0437\u0430 \u043f\u043e\u0433\u043e\u0434\u043e\u0439 \u0432 \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u0443\u044e\u0449\u0438\u0445 \u0432\u0430\u0441 \u0433\u043e\u0440\u043e\u0434\u0430\u0445 \u0438 \u043c\u0435\u0441\u0442\u0430\u0445.\n\n\u0414\u0430\u043d\u043d\u044b\u0435 \u043e \u043f\u043e\u0433\u043e\u0434\u0435 \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u0447\u0435\u0440\u0435\u0437 \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 API \u043e\u0442 OpenWeatherMap. \u041f\u043e\u0441\u043a\u043e\u043b\u044c\u043a\u0443 \u043d\u043e\u0432\u044b\u0439 \u043e\u0434\u043d\u043e\u0432\u044b\u0437\u043e\u0432\u043d\u044b\u0439 API \u0434\u043e\u043f\u0443\u0441\u043a\u0430\u0435\u0442 \u0442\u043e\u043b\u044c\u043a\u043e 1000 \u0432\u044b\u0437\u043e\u0432\u043e\u0432 \u0432 \u0434\u0435\u043d\u044c, \u043a\u0430\u0436\u0434\u044b\u0439 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c \u0434\u043e\u043b\u0436\u0435\u043d \u0432\u0432\u0435\u0441\u0442\u0438 \u0441\u0432\u043e\u0439 \u0441\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439 \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u043a\u043b\u044e\u0447 OpenWeatherMap (https://home.openweathermap.org/users/sign_up).\n\u0414\u0430\u043d\u043d\u044b\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b \u043e\u0441\u0430\u0434\u043a\u043e\u0432 \u043f\u043e\u043b\u0443\u0447\u0430\u044e\u0442\u0441\u044f \u0447\u0435\u0440\u0435\u0437 \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 RainViewer API.\n\n\u041e\u0441\u043e\u0431\u0435\u043d\u043d\u043e\u0441\u0442\u0438:\n- \u0422\u0435\u043a\u0443\u0449\u0430\u044f \u043f\u043e\u0433\u043e\u0434\u0430\n- \u041f\u043e\u0447\u0430\u0441\u043e\u0432\u044b\u0435 \u043f\u0440\u043e\u0433\u043d\u043e\u0437\u044b \u043d\u0430 48 \u0447\u0430\u0441\u043e\u0432 / 3 \u0447\u0430\u0441\u0430 \u043d\u0430 5 \u0434\u043d\u0435\u0439\n- 8-\u0434\u043d\u0435\u0432\u043d\u044b\u0439 \u043f\u0440\u043e\u0433\u043d\u043e\u0437\n- \u041e\u0441\u0430\u0434\u043a\u0438 \u043a\u0430\u0436\u0434\u044b\u0439 \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u0439 \u0447\u0430\u0441\n- \u041a\u0430\u0440\u0442\u0430 \u043e\u0441\u0430\u0434\u043a\u043e\u0432\n- \u041f\u043e\u0438\u0441\u043a \u043f\u043e \u0440\u0430\u0434\u0438\u0443\u0441\u0443\n- \u0412\u0438\u0434\u0436\u0435\u0442 \u0441 \u0434\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u043c \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u043c \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435\u043c \u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044f GPS\n- \u0411\u0435\u0437 \u0440\u0435\u043a\u043b\u0430\u043c\u044b\n\n\u041c\u0438\u043d\u0438\u043c\u0430\u043b\u044c\u043d\u044b\u0435 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u044f:\nRadarWeather \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u0442\u043e\u043b\u044c\u043a\u043e \u043c\u0438\u043d\u0438\u043c\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u0439, \u0430 \u0438\u043c\u0435\u043d\u043d\u043e \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u044f \u0418\u041d\u0422\u0415\u0420\u041d\u0415\u0422. \u042d\u0442\u043e \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u0435 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e \u0434\u043b\u044f \u0432\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u044f HTTP-\u0437\u0430\u043f\u0440\u043e\u0441\u043e\u0432 \u043a \u0443\u0434\u0430\u043b\u0451\u043d\u043d\u044b\u043c \u0441\u0435\u0440\u0432\u0435\u0440\u0430\u043c \u0434\u043b\u044f \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u044f \u0434\u0430\u043d\u043d\u044b\u0445 \u043e \u043f\u043e\u0433\u043e\u0434\u0435.\n\u041f\u043e \u043f\u0440\u043e\u0441\u044c\u0431\u0435: \u0430\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u044f \u0434\u043b\u044f GPS.",
+      "tr-TR": "RadarWeather, ilgilendi\u011finiz \u015fehirler ve konumlar i\u00e7in hava durumunu izlemenizi sa\u011flar.\n\nHava durumu verileri OpenWeatherMap'in \u00fccretsiz API'si arac\u0131l\u0131\u011f\u0131yla sa\u011flan\u0131r. Yeni Tek \u00c7a\u011fr\u0131 API'si g\u00fcnde sadece 1000 \u00e7a\u011fr\u0131ya izin verdi\u011finden, her kullan\u0131c\u0131 kendi \u00fccretsiz OpenWeatherMap anahtar\u0131n\u0131 girmelidir (https://home.openweathermap.org/users/sign_up). \nYa\u011fmur radar\u0131 i\u00e7in veriler \u00fccretsiz RainViewer API arac\u0131l\u0131\u011f\u0131yla al\u0131n\u0131r.\n\n\u00d6zellikler\n- G\u00fcncel hava durumu\n- 48 saat i\u00e7in saatlik tahminler / 5 g\u00fcn i\u00e7in 3 saatlik tahminler\n- 8 g\u00fcnl\u00fck tahmin\n- \u00d6n\u00fcm\u00fczdeki 60 dakika i\u00e7inde ya\u011f\u0131\u015f\n- Ya\u011fmur radar\u0131\n- Yar\u0131\u00e7ap arama\n- \u0130ste\u011fe ba\u011fl\u0131 GPS otomatik konum g\u00fcncellemeli Widget\n- Reklam yok\n\nMinimum izinler:\nRadarWeather yaln\u0131zca minimum miktarda izin, yani yaln\u0131zca \u0130NTERNET izni gerektirir. Bu izin, hava durumu verilerini almak i\u00e7in uzak sunuculara HTTP istekleri yapmak i\u00e7in gereklidir.\n\u0130ste\u011fe ba\u011fl\u0131: GPS i\u00e7in yetkilendirme.\n"
+    },
+    "icon": {
+      "de-DE": {
+        "name": "/org.woheller69.weather/de-DE/icon_0HGIX6c4w38A-r1z-Fnix1SPqQ7b4hN0j614YKJga7s=.png",
+        "sha256": "d071885fa738c37f00fabd73f859e2c7548fa90edbe213748fad7860a2606bbb",
+        "size": 37426
+      },
+      "en-US": {
+        "name": "/org.woheller69.weather/en-US/icon_0HGIX6c4w38A-r1z-Fnix1SPqQ7b4hN0j614YKJga7s=.png",
+        "sha256": "d071885fa738c37f00fabd73f859e2c7548fa90edbe213748fad7860a2606bbb",
+        "size": 37426
+      },
+      "ru-RU": {
+        "name": "/org.woheller69.weather/ru-RU/icon_0HGIX6c4w38A-r1z-Fnix1SPqQ7b4hN0j614YKJga7s=.png",
+        "sha256": "d071885fa738c37f00fabd73f859e2c7548fa90edbe213748fad7860a2606bbb",
+        "size": 37426
+      }
+    },
+    "issueTracker": "https://github.com/woheller69/weather/issues",
+    "lastUpdated": 1751795636000,
+    "license": "GPL-3.0-only",
+    "name": {
+      "de-DE": "RadarWeather",
+      "en-US": "RadarWeather",
+      "es-ES": "RadarWeather",
+      "fr-FR": "RadarWeather",
+      "it-IT": "RadarWeather",
+      "pt-BR": "RadarWeather",
+      "ru-RU": "RadarWeather",
+      "tr-TR": "RadarWeather"
+    },
+    "preferredSigner": "a09fe8df5ed32aa6e0473148741a4d733381905c03f1a14f955e35cd5898a4d8",
+    "screenshots": {
+      "phone": {
+        "de-DE": [
+          {
+            "name": "/org.woheller69.weather/de-DE/phoneScreenshots/1.png",
+            "sha256": "d7a9b9b7f318c7832f8529fce9009e5f5b2c9a5b65b40ef11f476b6090670f10",
+            "size": 74899
+          },
+          {
+            "name": "/org.woheller69.weather/de-DE/phoneScreenshots/10.png",
+            "sha256": "f31394c8068e4a74797c5b6f476263a9690db7f122c9e855ed203097961f6c8c",
+            "size": 42479
+          },
+          {
+            "name": "/org.woheller69.weather/de-DE/phoneScreenshots/11.png",
+            "sha256": "c1e7896f7c4d463e0cdc45c8bcc60cb352710fd6ada08727021cd949eed859f1",
+            "size": 19907
+          },
+          {
+            "name": "/org.woheller69.weather/de-DE/phoneScreenshots/12.png",
+            "sha256": "260e2b70e1974384106495a399d9436bb7cc1c9f936ba12d6d77824354d278b1",
+            "size": 61540
+          },
+          {
+            "name": "/org.woheller69.weather/de-DE/phoneScreenshots/2.png",
+            "sha256": "022229b7a40cb76f3371e85cb1ebf25bf387c06347c28966ff8fb1abd08a3377",
+            "size": 86550
+          },
+          {
+            "name": "/org.woheller69.weather/de-DE/phoneScreenshots/3.png",
+            "sha256": "79810a3d1b26b25c9e7efff105f3015df8f5c82fbc06dac2ff69d4ea7d93fafe",
+            "size": 69133
+          },
+          {
+            "name": "/org.woheller69.weather/de-DE/phoneScreenshots/4.png",
+            "sha256": "9bf6824109b489312ceeadfb070f595ff665917de4633b7bc392a6298dba7d10",
+            "size": 92937
+          },
+          {
+            "name": "/org.woheller69.weather/de-DE/phoneScreenshots/5.png",
+            "sha256": "a81c80b59da1c6d702e74fa7e28d16168b9e41aa45d24aefa53508b682b628e8",
+            "size": 96939
+          },
+          {
+            "name": "/org.woheller69.weather/de-DE/phoneScreenshots/6.png",
+            "sha256": "c687ca7f88ec2499097361398c4052be7e74408eed8b64d5eee6312081809443",
+            "size": 514935
+          },
+          {
+            "name": "/org.woheller69.weather/de-DE/phoneScreenshots/7.png",
+            "sha256": "9794bf352f14403f40da525e886848a3be0e8ec99227a7b523ed1ecf451d9c38",
+            "size": 56692
+          },
+          {
+            "name": "/org.woheller69.weather/de-DE/phoneScreenshots/8.png",
+            "sha256": "168a3e980c55db743cb80ebd49dc84b6f395ce14719125c992dcda2913a72b55",
+            "size": 49887
+          },
+          {
+            "name": "/org.woheller69.weather/de-DE/phoneScreenshots/9.png",
+            "sha256": "4bbd08d26fe570bdaa30075e5d7dda93bf81c35c7f6c02fd1f8ef9b6d047692b",
+            "size": 757796
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/org.woheller69.weather/en-US/phoneScreenshots/1.png",
+            "sha256": "d7a9b9b7f318c7832f8529fce9009e5f5b2c9a5b65b40ef11f476b6090670f10",
+            "size": 74899
+          },
+          {
+            "name": "/org.woheller69.weather/en-US/phoneScreenshots/10.png",
+            "sha256": "f31394c8068e4a74797c5b6f476263a9690db7f122c9e855ed203097961f6c8c",
+            "size": 42479
+          },
+          {
+            "name": "/org.woheller69.weather/en-US/phoneScreenshots/11.png",
+            "sha256": "c1e7896f7c4d463e0cdc45c8bcc60cb352710fd6ada08727021cd949eed859f1",
+            "size": 19907
+          },
+          {
+            "name": "/org.woheller69.weather/en-US/phoneScreenshots/12.png",
+            "sha256": "260e2b70e1974384106495a399d9436bb7cc1c9f936ba12d6d77824354d278b1",
+            "size": 61540
+          },
+          {
+            "name": "/org.woheller69.weather/en-US/phoneScreenshots/2.png",
+            "sha256": "022229b7a40cb76f3371e85cb1ebf25bf387c06347c28966ff8fb1abd08a3377",
+            "size": 86550
+          },
+          {
+            "name": "/org.woheller69.weather/en-US/phoneScreenshots/3.png",
+            "sha256": "79810a3d1b26b25c9e7efff105f3015df8f5c82fbc06dac2ff69d4ea7d93fafe",
+            "size": 69133
+          },
+          {
+            "name": "/org.woheller69.weather/en-US/phoneScreenshots/4.png",
+            "sha256": "9bf6824109b489312ceeadfb070f595ff665917de4633b7bc392a6298dba7d10",
+            "size": 92937
+          },
+          {
+            "name": "/org.woheller69.weather/en-US/phoneScreenshots/5.png",
+            "sha256": "a81c80b59da1c6d702e74fa7e28d16168b9e41aa45d24aefa53508b682b628e8",
+            "size": 96939
+          },
+          {
+            "name": "/org.woheller69.weather/en-US/phoneScreenshots/6.png",
+            "sha256": "c687ca7f88ec2499097361398c4052be7e74408eed8b64d5eee6312081809443",
+            "size": 514935
+          },
+          {
+            "name": "/org.woheller69.weather/en-US/phoneScreenshots/7.png",
+            "sha256": "9794bf352f14403f40da525e886848a3be0e8ec99227a7b523ed1ecf451d9c38",
+            "size": 56692
+          },
+          {
+            "name": "/org.woheller69.weather/en-US/phoneScreenshots/8.png",
+            "sha256": "168a3e980c55db743cb80ebd49dc84b6f395ce14719125c992dcda2913a72b55",
+            "size": 49887
+          },
+          {
+            "name": "/org.woheller69.weather/en-US/phoneScreenshots/9.png",
+            "sha256": "4bbd08d26fe570bdaa30075e5d7dda93bf81c35c7f6c02fd1f8ef9b6d047692b",
+            "size": 757796
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/woheller69/weather",
+    "summary": {
+      "de-DE": "Mit RadarWeather kann das Wetter von Orten eingesehen werden. ",
+      "en-US": "Lets you watch the weather for cities and locations you are interested in.",
+      "es-ES": "Le permite ver el clima de las ciudades y lugares que le interesan.",
+      "fr-FR": "Laissez-vous regarder le temps pour les villes et les lieux qui vous int\u00e9ressent",
+      "it-IT": "Ti consente di guardare il tempo per le citt\u00e0 e le localit\u00e0 che ti interessano. ",
+      "pl-PL": "Umo\u017cliwia obserwowanie pogody dla interesuj\u0105cych Ci\u0119 miast i lokalizacji.",
+      "pt-BR": "Permite que voc\u00ea acompanhe o tempo de cidades e locais que lhe interessam.",
+      "ru-RU": "\u041f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u043f\u043e\u0433\u043e\u0434\u0443 \u0432 \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u0443\u044e\u0449\u0438\u0445 \u0432\u0430\u0441 \u0433\u043e\u0440\u043e\u0434\u0430\u0445 \u0438 \u043c\u0435\u0441\u0442\u0430\u0445.",
+      "tr-TR": "\u0130lgilendi\u011finiz \u015fehirler ve konumlar i\u00e7in hava durumunu izlemenizi sa\u011flar."
+    }
+  },
+  "version": {
+    "added": 1751795636000,
+    "antiFeatures": {
+      "NonFreeNet": {
+        "en-US": "Rely on OpenWeatherMap"
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeihs5wtgt43zrdcjmktsr2vjg5koaz5vptqu3intliv6vej2o535q4",
+      "name": "/org.woheller69.weather_67.apk",
+      "sha256": "eacda111edc0f79f1f2794b8ec6d05d4bb3bf106e02a0359105ce5dccd19c59d",
+      "size": 13158335
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "a09fe8df5ed32aa6e0473148741a4d733381905c03f1a14f955e35cd5898a4d8"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_BACKGROUND_LOCATION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 34
+      },
+      "versionCode": 67,
+      "versionName": "6.7"
+    },
+    "src": {
+      "name": "/org.woheller69.weather_67_src.tar.gz",
+      "sha256": "28df11e9e8a8b96635ff7ca92d8925d88b740c966c1c3f27d0cefb0a153adb61",
+      "size": 12537284
+    },
+    "whatsNew": {
+      "en-US": "Final release:\n- Fix widget\n\nOpenWeatherMap requires credit card data.\nTherefore this app will no longer be maintained.\nPlease use Cirrus instead."
+    }
+  }
+}

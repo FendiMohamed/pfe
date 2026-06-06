@@ -1,0 +1,273 @@
+{
+  "metadata": {
+    "added": 1487030400000,
+    "authorEmail": "support@omninotes.app",
+    "authorName": "Federico Iosue",
+    "authorWebSite": "https://federico.iosue.it",
+    "categories": [
+      "Note",
+      "Task",
+      "Writing"
+    ],
+    "changelog": "https://github.com/federicoiosue/Omni-Notes/releases",
+    "description": {
+      "en-US": "The project was inspired by the absence of such applications compatible with old phones and old versions of Android. It aims to provide an attractive look and follow the most recent design guidelines of the Google operating system.\n\nFollow the developments and post your comments and advice on Google+ Beta Community at http://goo.gl/eF6qqF\n\nHelp to keep translations updated is always welcome, if you want give a hand checkout the translation project at Crowdin.\n\nFeatures:\n\u2605 Material Design interface Basic add, modify, archive, trash and delete notes actions\n\u2605 Share, merge and search notes\n\u2605 Image, audio and generic file attachments\n\u2605 Manage your notes using tags and categories\n\u2605 To-do list\n\u2605 Sketch-note mode\n\u2605 Notes shortcut on home screen\n\u2605 Export/import notes to backup\n\u2605 Google Now integration: just tell \"write a note\" followed by the content\n\u2605 Multiple widgets, DashClock extension, Android 4.2 lockscreen compatibility\n\u2605 Multilanguage: 30+ languages supported: https://crowdin.com/project/omni-notes\n\nFurther developments will include:\n\u2606 Notes sychronization\n\u2606 Web interface to manage notes\n\u2606 You can find a complete changelog inside the application settings menu!\n\nIf you need some help on how to use the application you'll find everything you need in the Help Online section\n\nAnti Features:\n* Tracking - 'Error reporting' is opt-out, enabled by default in Settings - Privacy.\n"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/it.feio.android.omninotes.foss/en-US/icon_8RGYERANsTi8txLbcCuV23MipPxticg9eotr1bH4yUw=.png",
+        "sha256": "f1119811100db138bcb712db702b95db7322a4fc6d89c83d7a8b6bd5b1f8c94c",
+        "size": 9444
+      }
+    },
+    "issueTracker": "https://github.com/federicoiosue/Omni-Notes/issues",
+    "lastUpdated": 1702926650000,
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-US": "Omni Notes"
+    },
+    "preferredSigner": "1eee2ba979fb762329c998193df3705c325115c351aeb4caa5631bad7a6702a3",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/02.png",
+            "sha256": "59acac91575c4b632d94def64a4c72bf64abd05725b1ca20f05bb659e57274c0",
+            "size": 239871
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/03.png",
+            "sha256": "b952d9baa63d49b57a7e6d3632d980c39370f144a2797933f85fde210e1295e9",
+            "size": 184741
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/04.png",
+            "sha256": "1de5ba8e23eb85bc9edd146c566936407cc78e429ad5a00748ca7d57625b922f",
+            "size": 207235
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/05.png",
+            "sha256": "3c8316423ccb089621bf53f17e7fdeee1cab5eae87f1ef5116acc444f5598760",
+            "size": 187496
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/06.png",
+            "sha256": "155ca7de3eafd91e6a79d36532a589ffefe00b8eaf25d761237869728980a98a",
+            "size": 175613
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/07.png",
+            "sha256": "632a5ca304a909ee5789fe031709fed2d08c73a723527430eb7fc2f5880c8d5a",
+            "size": 204028
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/08.png",
+            "sha256": "225a2d30b46a6b6f1d4cd42a9fb56f234eb451114b5e1b81c7e38f048a0153df",
+            "size": 323149
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/09.png",
+            "sha256": "1e682a49aa4ea02ee3cde6b9fbde4751b586377ade9300393e3dfc937dcb43f8",
+            "size": 164644
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/1.png",
+            "sha256": "4fd8d0a0be53fbf43c3555402f37e1b19b0cc5a910d9fd95cd24fb631355881a",
+            "size": 949335
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/10.png",
+            "sha256": "3fdda54852c3d5221eb85382d48f4c051ee6c78dca7f6aae1288b75caf90d98c",
+            "size": 146559
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/11.png",
+            "sha256": "905035f37068501045bbf38effb7cab9c7e0021271e26561c4d2068bc3daf758",
+            "size": 189109
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/2.png",
+            "sha256": "b3d5a6b522faa410b2fb74f8012fca6c66bb9b9ed8f67b65d6a4a57be9852af0",
+            "size": 414086
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/3.png",
+            "sha256": "a479406358bfb1ac9a5e1f20fb8879bdd47c896a972b044933cecbe45de90519",
+            "size": 2496421
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/4.png",
+            "sha256": "db50054df50d6b7c76eb7cc47d56ad3db74cfe6ce721f81fc4241ef877807c6f",
+            "size": 707188
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/on - attachments.png",
+            "sha256": "74e25cfc35f5fe69fdd0751534d715c588da62556d3091fe5ae41e0c6feb1fae",
+            "size": 404809
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/on - full.png",
+            "sha256": "4fd8d0a0be53fbf43c3555402f37e1b19b0cc5a910d9fd95cd24fb631355881a",
+            "size": 949335
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/on - gallery.png",
+            "sha256": "8e1d1290c50e29e7a0f9a19157be091cccbfd3102c44d35952365939bf05fd6f",
+            "size": 3892445
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/on - navigation.png",
+            "sha256": "b3d5a6b522faa410b2fb74f8012fca6c66bb9b9ed8f67b65d6a4a57be9852af0",
+            "size": 414086
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/on - notifications.png",
+            "sha256": "9e28347e03cdd98b3dab0ad36fd679268063c31f835ba73f419dcbdf6314d40e",
+            "size": 311125
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/on - options.png",
+            "sha256": "a479406358bfb1ac9a5e1f20fb8879bdd47c896a972b044933cecbe45de90519",
+            "size": 2496421
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/on - preferences.png",
+            "sha256": "d2f4c91441da677b40722042354f800a015c0d7ebd39c19f50d8cba7e24aba9a",
+            "size": 98189
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/on - search.png",
+            "sha256": "1d603de2c0ba01282caf200c327b785eb1ab5135e62e983fc7159f6102e51804",
+            "size": 481310
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/on - statistics.png",
+            "sha256": "83b74fbd4e89f2d4f7052e41b3536b89eb590857f66f5d7731772fb8fe764113",
+            "size": 186323
+          },
+          {
+            "name": "/it.feio.android.omninotes.foss/en-US/phoneScreenshots/on - widgets.jpg",
+            "sha256": "59fd891f9202741e55c4daebb8f484554c0a58082d7abbe8f404afad87ae2418",
+            "size": 133761
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/federicoiosue/Omni-Notes",
+    "summary": {
+      "en-US": "Note taking open-source app simple to use and with killer features!"
+    },
+    "translation": "https://translate.omninotes.app",
+    "video": {
+      "en-US": "https://youtu.be/0Z_-SgT3qYs"
+    },
+    "webSite": "https://federicoiosue.github.io/Omni-Notes"
+  },
+  "version": {
+    "added": 1702926650000,
+    "antiFeatures": {
+      "Tracking": {
+        "en-US": "Error reporting and Share anonymous data enabled by default"
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeibs457rbvsfknmhysmllppk24532s4yr6kjpoxvvkhj4z6ahia5qm",
+      "name": "/it.feio.android.omninotes.foss_331.apk",
+      "sha256": "b39ce6942f208194ad47e40830c6d3f4ef8fea8f3f57a16f3cd72d98a9f0d5fd",
+      "size": 7635718
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "1eee2ba979fb762329c998193df3705c325115c351aeb4caa5631bad7a6702a3"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "maxSdkVersion": 29,
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.RECORD_AUDIO"
+        },
+        {
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_IMAGES"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_VIDEO"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_AUDIO"
+        },
+        {
+          "name": "com.android.alarm.permission.SET_ALARM"
+        },
+        {
+          "name": "com.android.launcher.permission.INSTALL_SHORTCUT"
+        },
+        {
+          "name": "com.android.launcher.permission.UNINSTALL_SHORTCUT"
+        },
+        {
+          "name": "com.pushbullet.android.permission.READ_MESSAGING_EXTENSION_DATA"
+        },
+        {
+          "name": "com.pushbullet.android.permission.SEND_MESSAGES"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.SCHEDULE_EXACT_ALARM"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "com.google.android.providers.gsf.permission.READ_GSERVICES"
+        },
+        {
+          "name": "com.google.android.gms.permission.ACTIVITY_RECOGNITION"
+        },
+        {
+          "name": "it.feio.android.omninotes.foss.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 33
+      },
+      "versionCode": 331,
+      "versionName": "6.3.1"
+    },
+    "src": {
+      "name": "/it.feio.android.omninotes.foss_331_src.tar.gz",
+      "sha256": "4e8132efd6ee425981dbd8e6ea045e41f6e11fe68f55ca8361b85bf6f8e26502",
+      "size": 8559064
+    },
+    "whatsNew": {
+      "en-US": "6.3.0\n\u2605 Targeting Android 13 API with improved performances and security updates\n\u2605 Telegram channel https://t.me/omninotes\n\u2605 Adaptive and monochrome icons\n\u2605 Context menu to share easily with ON\n\u2606 Password required when restoring protected notes\n\u2713 Tons of bug fixes"
+    }
+  }
+}
