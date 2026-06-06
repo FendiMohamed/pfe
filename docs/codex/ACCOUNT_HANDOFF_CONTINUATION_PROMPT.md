@@ -313,7 +313,7 @@ What changed in MVP architecture/tool behavior recently:
 
 Next recommended task:
 
-Continue from docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md, docs/evaluation/NEXT_REAL_APK_GROWTH_QUEUE.md, and docs/evaluation/REAL_APK_100_SOURCE_VALIDATION_PLAN.md. The target of 100 source-validated real APKs is exceeded at 102/100, and no current source-linked blocked rows remain. The next useful move is the no-Maven-signal audit, followed by limitation/boundary tightening and wrong-version/missing-source optimization; do not add rows just to inflate the count.
+Continue from docs/evaluation/NO_MAVEN_SIGNAL_AUDIT_PREP.md, docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md, docs/evaluation/NEXT_REAL_APK_GROWTH_QUEUE.md, and docs/evaluation/REAL_APK_100_SOURCE_VALIDATION_PLAN.md. The target of 100 source-validated real APKs is exceeded at 102/100, and no current source-linked blocked rows remain. The next useful move is the no-Maven-signal audit, followed by limitation/boundary tightening and wrong-version/missing-source optimization; do not add rows just to inflate the count.
 
 Suggested first actions:
 

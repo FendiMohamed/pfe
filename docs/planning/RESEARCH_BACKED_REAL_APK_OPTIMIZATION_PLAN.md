@@ -93,6 +93,8 @@ blocked -> still blocked if build fixes would alter runtime dependency truth
 
 Scope:
 
+Prep artifact: `docs/evaluation/NO_MAVEN_SIGNAL_AUDIT_PREP.md`.
+
 | APK | Role |
 |---|---|
 | Privacy Browser 3.20.1 | Source-validated no-Maven-signal control. |
