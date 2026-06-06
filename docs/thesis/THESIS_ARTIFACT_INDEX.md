@@ -31,6 +31,8 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | APK family grouping | `docs/evaluation/APK_TYPE_EVALUATION.md` | Explain why clean, partial, blocked, and limitation cases are separate. |
 | Real APK source-validation dashboard seed | `docs/evaluation/REAL_APK_SOURCE_VALIDATION_DASHBOARD_REPORT.md` | Use as the dashboard-ready per-APK classification, wrong-version, missing-package, and DB-growth-candidate source. |
 | Post-100 real APK optimization plan | `docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md` | Use as the research-backed execution roadmap for blocked rows, no-Maven-signal controls, boundary cases, wrong-version rows, missing-source rows, guarded reference DB growth, and dashboard improvement. |
+| No-Maven-signal audit | `docs/evaluation/NO_MAVEN_SIGNAL_AUDIT.md` | Use to explain why the four no-Maven rows stay outside accuracy metrics and how AndroidX identity misses differ from Mastodon's fork-family boundary. |
+| No-Maven AndroidX report-only experiment | `docs/evaluation/NO_MAVEN_ANDROIDX_REPORT_ONLY_EXPERIMENT.md` | Use as dashboard seed evidence for six source-backed AndroidX report-only candidates with zero SBOM or source-validation metric changes. |
 | Dataset coverage matrix | `docs/evaluation/DATASET_COVERAGE_MATRIX.md` | Justify APK selection by classification instead of convenience. |
 | Next real APK growth queue | `docs/evaluation/NEXT_REAL_APK_GROWTH_QUEUE.md` | Justify why the next real APK batch must be selected by class balance before Phase 6 or ML experiments. |
 | Real APK growth batch V2 | `docs/evaluation/REAL_APK_GROWTH_BATCH_V2.md` | Show the 8-app category-balanced smoke/report batch while keeping it separate from source-validated accuracy claims. |

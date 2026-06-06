@@ -181,6 +181,16 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the research-backed execution roadmap for blocked rows, no-Maven-signal controls, boundary cases, wrong-version rows, missing-source rows, guarded reference DB growth, and dashboard improvement.",
         },
         {
+            "table": "No-Maven-signal audit",
+            "source": "docs/evaluation/NO_MAVEN_SIGNAL_AUDIT.md",
+            "use": "Use to explain why the four no-Maven rows stay outside accuracy metrics and how AndroidX identity misses differ from Mastodon's fork-family boundary.",
+        },
+        {
+            "table": "No-Maven AndroidX report-only experiment",
+            "source": "docs/evaluation/NO_MAVEN_ANDROIDX_REPORT_ONLY_EXPERIMENT.md",
+            "use": "Use as dashboard seed evidence for six source-backed AndroidX report-only candidates with zero SBOM or source-validation metric changes.",
+        },
+        {
             "table": "Dataset coverage matrix",
             "source": "docs/evaluation/DATASET_COVERAGE_MATRIX.md",
             "use": "Justify APK selection by classification instead of convenience.",

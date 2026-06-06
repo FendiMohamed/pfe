@@ -63,6 +63,13 @@ from apk_sbom.lifecycle_family_diagnostics import (
     build_payload as build_lifecycle_family_payload,
     write_outputs as write_lifecycle_family_outputs,
 )
+from apk_sbom.no_maven_androidx_experiment import (
+    DEFAULT_INPUT_JSON as DEFAULT_NO_MAVEN_ANDROIDX_INPUT_JSON,
+    DEFAULT_OUTPUT_DOC as DEFAULT_NO_MAVEN_ANDROIDX_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_NO_MAVEN_ANDROIDX_OUTPUT_JSON,
+    build_payload as build_no_maven_androidx_payload,
+    write_outputs as write_no_maven_androidx_outputs,
+)
 from apk_sbom.literal_context_diagnostics import (
     DEFAULT_INPUT_JSON as DEFAULT_LITERAL_CONTEXT_INPUT_JSON,
     DEFAULT_OUTPUT_DOC as DEFAULT_LITERAL_CONTEXT_OUTPUT_DOC,
@@ -778,6 +785,29 @@ def build_parser() -> argparse.ArgumentParser:
         help="Output path for the Lifecycle family experiment Markdown report.",
     )
 
+    no_maven_androidx_parser = subparsers.add_parser(
+        "no-maven-androidx-experiment",
+        help=(
+            "Run the opt-in no-Maven AndroidX report-only diagnostic without changing "
+            "matcher scoring, selected versions, SBOM output, or the shared DB."
+        ),
+    )
+    no_maven_androidx_parser.add_argument(
+        "--input-json",
+        default=str(DEFAULT_NO_MAVEN_ANDROIDX_INPUT_JSON),
+        help="No-Maven signal diagnostic JSON used as the experiment input.",
+    )
+    no_maven_androidx_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_NO_MAVEN_ANDROIDX_OUTPUT_JSON),
+        help="Output path for the no-Maven AndroidX experiment JSON.",
+    )
+    no_maven_androidx_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_NO_MAVEN_ANDROIDX_OUTPUT_DOC),
+        help="Output path for the no-Maven AndroidX experiment Markdown report.",
+    )
+
     literal_context_parser = subparsers.add_parser(
         "literal-context-experiment",
         help=(
@@ -1196,6 +1226,21 @@ def main(argv: list[str] | None = None) -> int:
         try:
             payload = build_lifecycle_family_payload(Path(args.input_json))
             result = write_lifecycle_family_outputs(
+                payload,
+                output_json=Path(args.output_json),
+                output_doc=Path(args.output_doc),
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "no-maven-androidx-experiment":
+        try:
+            payload = build_no_maven_androidx_payload(Path(args.input_json))
+            result = write_no_maven_androidx_outputs(
                 payload,
                 output_json=Path(args.output_json),
                 output_doc=Path(args.output_doc),

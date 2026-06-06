@@ -101,3 +101,35 @@ It writes:
 | `data/results/evaluation/no-maven-signal-diagnostics.json` | Machine-readable dashboard input. |
 | `data/results/evaluation/no-maven-signal-diagnostics.csv` | Spreadsheet/dashboard seed table. |
 | `docs/evaluation/NO_MAVEN_SIGNAL_DIAGNOSTICS.md` | Human-readable generated summary. |
+
+The scoped AndroidX report-only experiment is now
+`scripts/build_no_maven_androidx_report_only_experiment.py` and the CLI command
+`apk-sbom no-maven-androidx-experiment`. It writes:
+
+| Artifact | Use |
+|---|---|
+| `data/results/experiments/no-maven-androidx-report-only-experiment.json` | Machine-readable report-only experiment output. |
+| `docs/evaluation/NO_MAVEN_ANDROIDX_REPORT_ONLY_EXPERIMENT.md` | Human-readable experiment summary. |
+
+Current experiment verdict:
+
+```text
+verdict -> no-maven-androidx-report-only-promising-not-promoted
+AndroidX identity cases -> 3
+candidate overlap rows evaluated -> 14
+exact source-version candidate rows -> 10
+report-only suggestions -> 6
+kept suppressed rows -> 8
+default/SBOM/source-validation metric changes -> 0
+```
+
+The six source-backed report-only candidates are:
+
+| APK | Candidate |
+|---|---|
+| Privacy Browser 3.20.1 | `androidx.recyclerview:recyclerview:1.2.1`, `androidx.startup:startup-runtime:1.1.1`, `androidx.swiperefreshlayout:swiperefreshlayout:1.2.0` |
+| monocles browser 1.9.3 | `androidx.recyclerview:recyclerview:1.2.1`, `androidx.startup:startup-runtime:1.1.1` |
+| Blue Square Speedometer 1.1.0 | `androidx.startup:startup-runtime:1.1.1` |
+
+These remain diagnostics only. They do not change emitted SBOM components or
+source-validation metrics.

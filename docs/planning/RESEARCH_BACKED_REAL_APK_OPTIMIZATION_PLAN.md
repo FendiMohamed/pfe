@@ -142,10 +142,15 @@ forked-library/reference-family boundary -> 1/4
 
 The automated diagnostic exporter is now
 `scripts/build_no_maven_signal_diagnostics.py`; it writes JSON, CSV, and
-Markdown artifacts for dashboard seeding. Next implementation step: run a scoped
-report-only AndroidX candidate-promotion experiment on Privacy Browser, monocles
-browser, and Blue Square Speedometer. Keep Mastodon in a separate
-`me.grishka.litex:*` fork-family/reference audit.
+Markdown artifacts for dashboard seeding. The scoped AndroidX report-only
+experiment is also complete in
+`docs/evaluation/NO_MAVEN_ANDROIDX_REPORT_ONLY_EXPERIMENT.md`: it surfaces 6
+source-backed report-only candidates across Privacy Browser, monocles browser,
+and Blue Square Speedometer, keeps 8 weak rows suppressed, and records 0 default
+selection, SBOM component, or source-validation metric changes. Next
+implementation step: keep Mastodon in a separate `me.grishka.litex:*`
+fork-family/reference audit, then use the no-Maven artifacts to seed the
+dashboard fields without counting diagnostics as accuracy evidence.
 
 ### 3. Limitation And Boundary Cases
 
