@@ -133,3 +133,35 @@ The six source-backed report-only candidates are:
 
 These remain diagnostics only. They do not change emitted SBOM components or
 source-validation metrics.
+
+The Mastodon fork-family audit is now
+`scripts/build_mastodon_fork_family_report_only_audit.py` and the CLI command
+`apk-sbom no-maven-fork-family-experiment`. It writes:
+
+| Artifact | Use |
+|---|---|
+| `data/results/experiments/mastodon-fork-family-report-only-audit.json` | Machine-readable fork-family audit output. |
+| `docs/evaluation/MASTODON_FORK_FAMILY_REPORT_ONLY_AUDIT.md` | Human-readable Mastodon audit summary. |
+
+Current Mastodon audit verdict:
+
+```text
+verdict -> mastodon-fork-family-report-only-promising-not-promoted
+fork-family cases -> 1
+Litex alias rows evaluated -> 9
+Litex report-only suggestions -> 2
+Litex rows kept suppressed -> 7
+direct report-only suggestions -> 1
+default/SBOM/source-validation metric changes -> 0
+```
+
+The source-backed report-only Mastodon suggestions are:
+
+| Evidence type | Candidate |
+|---|---|
+| Fork-family | `me.grishka.litex:recyclerview:1.2.1.1` maps to weak upstream-family evidence for `androidx.recyclerview:recyclerview:1.2.1`. |
+| Fork-family | `me.grishka.litex:viewpager2:1.0.0` maps to weak upstream-family evidence for `androidx.viewpager2:viewpager2:1.0.0`. |
+| Direct source coordinate | `com.google.code.gson:gson:2.8.9` has weak direct report evidence. |
+
+These are fork/reference design inputs only. They do not justify emitting
+upstream AndroidX components for Mastodon.

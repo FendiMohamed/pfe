@@ -191,6 +191,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as dashboard seed evidence for six source-backed AndroidX report-only candidates with zero SBOM or source-validation metric changes.",
         },
         {
+            "table": "Mastodon fork-family report-only audit",
+            "source": "docs/evaluation/MASTODON_FORK_FAMILY_REPORT_ONLY_AUDIT.md",
+            "use": "Use as dashboard seed evidence for `me.grishka.litex:*` fork-family candidates and weak direct Gson evidence without converting them into SBOM claims.",
+        },
+        {
             "table": "Dataset coverage matrix",
             "source": "docs/evaluation/DATASET_COVERAGE_MATRIX.md",
             "use": "Justify APK selection by classification instead of convenience.",

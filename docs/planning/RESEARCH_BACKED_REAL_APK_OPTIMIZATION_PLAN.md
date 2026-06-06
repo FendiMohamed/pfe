@@ -147,10 +147,14 @@ experiment is also complete in
 `docs/evaluation/NO_MAVEN_ANDROIDX_REPORT_ONLY_EXPERIMENT.md`: it surfaces 6
 source-backed report-only candidates across Privacy Browser, monocles browser,
 and Blue Square Speedometer, keeps 8 weak rows suppressed, and records 0 default
-selection, SBOM component, or source-validation metric changes. Next
-implementation step: keep Mastodon in a separate `me.grishka.litex:*`
-fork-family/reference audit, then use the no-Maven artifacts to seed the
-dashboard fields without counting diagnostics as accuracy evidence.
+selection, SBOM component, or source-validation metric changes. Mastodon's
+separate fork-family audit is complete in
+`docs/evaluation/MASTODON_FORK_FAMILY_REPORT_ONLY_AUDIT.md`: it surfaces 2
+`me.grishka.litex:*` fork-family report-only suggestions and 1 weak direct Gson
+suggestion, keeps 7 fork rows suppressed, and records 0 default/SBOM/metric
+changes. Next implementation step: move to limitation/boundary tightening, then
+use the no-Maven artifacts to seed dashboard fields without counting diagnostics
+as accuracy evidence.
 
 ### 3. Limitation And Boundary Cases
 
