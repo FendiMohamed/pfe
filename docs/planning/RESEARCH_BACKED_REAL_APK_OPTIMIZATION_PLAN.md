@@ -94,13 +94,14 @@ blocked -> still blocked if build fixes would alter runtime dependency truth
 Scope:
 
 Prep artifact: `docs/evaluation/NO_MAVEN_SIGNAL_AUDIT_PREP.md`.
+Audit artifact: `docs/evaluation/NO_MAVEN_SIGNAL_AUDIT.md`.
 
 | APK | Role |
 |---|---|
-| Privacy Browser 3.20.1 | Source-validated no-Maven-signal control. |
-| Mastodon 2.12.3 | Source-validated no-Maven-signal control. |
-| monocles browser 1.9.3 | Source-validated no-Maven-signal control. |
-| Blue Square Speedometer 1.1.0 | Source-validated no-Maven-signal control. |
+| Privacy Browser 3.20.1 | AndroidX identity-coverage miss control. |
+| Mastodon 2.12.3 | Forked-library/reference-family boundary plus weak direct Gson candidate. |
+| monocles browser 1.9.3 | AndroidX identity-coverage miss control. |
+| Blue Square Speedometer 1.1.0 | Small-app AndroidX identity-coverage miss control. |
 
 `ProseReader` is also listed in the growth queue as a report-only/no-Maven
 candidate, but it is not part of the counted source-validated metric.
@@ -130,6 +131,21 @@ Acceptance gate:
 true no-signal -> keep as no-Maven control
 source deps present -> create identity-coverage diagnostic before changing DB or scoring
 ```
+
+Current audit outcome:
+
+```text
+true no-signal controls -> 0/4
+AndroidX identity-coverage miss controls -> 3/4
+forked-library/reference-family boundary -> 1/4
+```
+
+The automated diagnostic exporter is now
+`scripts/build_no_maven_signal_diagnostics.py`; it writes JSON, CSV, and
+Markdown artifacts for dashboard seeding. Next implementation step: run a scoped
+report-only AndroidX candidate-promotion experiment on Privacy Browser, monocles
+browser, and Blue Square Speedometer. Keep Mastodon in a separate
+`me.grishka.litex:*` fork-family/reference audit.
 
 ### 3. Limitation And Boundary Cases
 

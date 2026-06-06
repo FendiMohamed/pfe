@@ -313,7 +313,7 @@ What changed in MVP architecture/tool behavior recently:
 
 Next recommended task:
 
-Continue from docs/evaluation/NO_MAVEN_SIGNAL_AUDIT_PREP.md, docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md, docs/evaluation/NEXT_REAL_APK_GROWTH_QUEUE.md, and docs/evaluation/REAL_APK_100_SOURCE_VALIDATION_PLAN.md. The target of 100 source-validated real APKs is exceeded at 102/100, and no current source-linked blocked rows remain. The next useful move is the no-Maven-signal audit, followed by limitation/boundary tightening and wrong-version/missing-source optimization; do not add rows just to inflate the count.
+Continue from docs/evaluation/NO_MAVEN_SIGNAL_AUDIT.md, docs/evaluation/NO_MAVEN_SIGNAL_DIAGNOSTICS.md, docs/evaluation/NO_MAVEN_SIGNAL_AUDIT_PREP.md, docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md, docs/evaluation/NEXT_REAL_APK_GROWTH_QUEUE.md, and docs/evaluation/REAL_APK_100_SOURCE_VALIDATION_PLAN.md. The target of 100 source-validated real APKs is exceeded at 102/100, and no current source-linked blocked rows remain. The no-Maven-signal audit is complete: 0/4 are true runtime dependency-free controls, Privacy Browser/monocles browser/Blue Square Speedometer are AndroidX identity-coverage miss controls, and Mastodon is a `me.grishka.litex:*` fork-family/reference boundary with weak direct Gson evidence. `scripts/build_no_maven_signal_diagnostics.py` now generates JSON/CSV/Markdown dashboard seed artifacts. The next useful move is a scoped report-only AndroidX experiment, followed by limitation/boundary tightening and wrong-version/missing-source optimization; do not add rows just to inflate the count.
 
 Suggested first actions:
 

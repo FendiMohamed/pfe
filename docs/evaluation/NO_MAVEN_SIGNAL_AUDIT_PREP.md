@@ -2,6 +2,12 @@
 
 Generated on 2026-06-06 after the v16 blocker rescue.
 
+Audit result: `docs/evaluation/NO_MAVEN_SIGNAL_AUDIT.md` now classifies the four
+source-validated no-Maven-signal rows. None are true runtime dependency-free
+controls. Privacy Browser, monocles browser, and Blue Square Speedometer are
+AndroidX identity-coverage miss controls; Mastodon is a forked-library/reference
+family boundary with a weak direct Gson candidate.
+
 This is the next work lane from
 `docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md`. The blocked APK
 lane is complete: Flying Carpet and FitoTrack are now source-validated partial
