@@ -275,6 +275,7 @@ def build_limitation_table(
 def build_writing_guidance() -> list[str]:
     return [
         "Use 'emitted Maven version confirmation rate' for source-validated real APKs; do not call it full dependency recall.",
+        "Use `docs/evaluation/REFERENCE_DB_COVERAGE_FIRST_DASHBOARD.md` for full source dependency recall and reference DB coverage claims.",
         "Always show clean and partial real APK rows separately before giving the overall source-validated number.",
         "Mention that native .so files are included as hash-only CycloneDX file components, not Maven package versions.",
         "Describe unresolved AndroidX version-band cases as limitations supported by evidence, not as hidden failures.",

@@ -12,6 +12,7 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Clean source-validated real APKs | 47/47 emitted Maven versions across 5 APKs |
 | Partial source-validated real APKs | 880/1790 emitted Maven versions across 97 APKs |
 | All source-validated real APKs | 927/1837 emitted Maven versions across 102 APKs |
+| Full source dependency denominator | 927/12123 source dependency coordinate+version rows emitted exactly (7.6%); shared DB exact-version coverage is 1231/12123 (10.2%) |
 
 ## Claim Evidence
 
@@ -30,7 +31,8 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Per-APK role and rate table | `docs/evaluation/THESIS_EVALUATION_TABLES.md` | Use as appendix evidence or shortened in the main evaluation chapter. |
 | APK family grouping | `docs/evaluation/APK_TYPE_EVALUATION.md` | Explain why clean, partial, blocked, and limitation cases are separate. |
 | Real APK source-validation dashboard seed | `docs/evaluation/REAL_APK_SOURCE_VALIDATION_DASHBOARD_REPORT.md` | Use as the dashboard-ready per-APK classification, wrong-version, missing-package, and DB-growth-candidate source. |
-| Post-100 real APK optimization plan | `docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md` | Use as the research-backed execution roadmap for blocked rows, no-Maven-signal controls, boundary cases, wrong-version rows, missing-source rows, guarded reference DB growth, and dashboard improvement. |
+| Reference DB coverage-first dashboard | `docs/evaluation/REFERENCE_DB_COVERAGE_FIRST_DASHBOARD.md` | Use to separate emitted-component confirmation from full source dependency recall, reference DB coordinate coverage, and exact-version coverage. |
+| Post-100 real APK optimization plan | `docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md` | Use as the research-backed execution roadmap for coverage-first reference DB growth, wrong-version rows, missing-source rows, guarded promotion, and dashboard improvement. |
 | No-Maven-signal audit | `docs/evaluation/NO_MAVEN_SIGNAL_AUDIT.md` | Use to explain why the four no-Maven rows stay outside accuracy metrics and how AndroidX identity misses differ from Mastodon's fork-family boundary. |
 | No-Maven AndroidX report-only experiment | `docs/evaluation/NO_MAVEN_ANDROIDX_REPORT_ONLY_EXPERIMENT.md` | Use as dashboard seed evidence for six source-backed AndroidX report-only candidates with zero SBOM or source-validation metric changes. |
 | Mastodon fork-family report-only audit | `docs/evaluation/MASTODON_FORK_FAMILY_REPORT_ONLY_AUDIT.md` | Use as dashboard seed evidence for `me.grishka.litex:*` fork-family candidates and weak direct Gson evidence without converting them into SBOM claims. |
@@ -223,6 +225,7 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 ## Writing Guardrails
 
 - Use 'emitted Maven version confirmation rate' for source-validated real APKs; do not call it full dependency recall.
+- Use `docs/evaluation/REFERENCE_DB_COVERAGE_FIRST_DASHBOARD.md` for full source dependency recall and reference DB coverage claims.
 - Always show clean and partial real APK rows separately before giving the overall source-validated number.
 - Mention that native .so files are included as hash-only CycloneDX file components, not Maven package versions.
 - Describe unresolved AndroidX version-band cases as limitations supported by evidence, not as hidden failures.

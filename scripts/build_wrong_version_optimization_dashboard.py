@@ -17,6 +17,7 @@ COMPLETED_EXPERIMENT_SUMMARIES = (
 )
 
 RESEARCH_BACKED_POLICY = [
+    "Run coverage-first reference DB evaluation before treating this queue as the main optimization lane.",
     "Treat wrong-version rows as evidence problems, not as proof that a global newer-version rule is safe.",
     "Promote source-used reference versions only through isolated experiments plus current-control comparison.",
     "Use stronger per-family signals for near ties: literals/class summaries, call/dependency context, opcode/basic-block diagnostics, and R8-aware call-chain evidence.",
@@ -86,6 +87,7 @@ def build_payload(rows: list[dict[str, str]], *, misses_path: Path) -> dict[str,
         "sources": {
             "misses_csv": normalize_path(misses_path),
             "source_validation_dashboard": "docs/evaluation/REAL_APK_SOURCE_VALIDATION_DASHBOARD_REPORT.md",
+            "reference_db_coverage_first_dashboard": "docs/evaluation/REFERENCE_DB_COVERAGE_FIRST_DASHBOARD.md",
             "optimization_plan": "docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md",
             "guarded_promotion_workflow": "docs/evaluation/GUARDED_REFERENCE_DB_PROMOTION_WORKFLOW.md",
             "version_tie_diagnostics": "docs/evaluation/VERSION_TIE_RERANKER_DIAGNOSTICS.md",
@@ -106,8 +108,10 @@ def build_payload(rows: list[dict[str, str]], *, misses_path: Path) -> dict[str,
         "conclusion": (
             "The wrong-version backlog is concentrated enough to attack with guarded family lanes: "
             "Kotlin/coroutines and AndroidX version-band families first, then CVE-sensitive "
-            "networking and JSON libraries. No shared reference DB, matcher scoring, SBOM output, "
-            "or vulnerability labels should change until an isolated lane passes current controls."
+            "networking and JSON libraries. After the coverage-first decision, this is no longer "
+            "the next main lane: broad source-observed reference DB coverage should be evaluated "
+            "first. No shared reference DB, matcher scoring, SBOM output, or vulnerability labels "
+            "should change until an isolated lane passes current controls."
         ),
     }
 

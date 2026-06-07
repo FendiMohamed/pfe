@@ -8,6 +8,9 @@ from typing import Any
 
 DEFAULT_APK_TYPE_JSON = Path("data/results/evaluation/apk-type-evaluation.json")
 DEFAULT_THESIS_TABLES_JSON = Path("data/results/evaluation/thesis-evaluation-tables.json")
+DEFAULT_REFERENCE_COVERAGE_JSON = Path(
+    "data/results/evaluation/reference-db-coverage-first-dashboard.json"
+)
 DEFAULT_OUTPUT_JSON = Path("data/results/evaluation/thesis-artifact-index.json")
 DEFAULT_OUTPUT_DOC = Path("docs/thesis/THESIS_ARTIFACT_INDEX.md")
 
@@ -18,6 +21,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--apk-type-json", default=str(DEFAULT_APK_TYPE_JSON))
     parser.add_argument("--thesis-tables-json", default=str(DEFAULT_THESIS_TABLES_JSON))
+    parser.add_argument("--reference-coverage-json", default=str(DEFAULT_REFERENCE_COVERAGE_JSON))
     parser.add_argument("--output-json", default=str(DEFAULT_OUTPUT_JSON))
     parser.add_argument("--output-doc", default=str(DEFAULT_OUTPUT_DOC))
     return parser
@@ -27,11 +31,14 @@ def main() -> int:
     args = build_parser().parse_args()
     apk_type_path = Path(args.apk_type_json)
     thesis_tables_path = Path(args.thesis_tables_json)
+    reference_coverage_path = Path(args.reference_coverage_json)
     payload = build_index(
         read_json(apk_type_path),
         read_json(thesis_tables_path),
+        read_json_if_exists(reference_coverage_path),
         apk_type_path=apk_type_path,
         thesis_tables_path=thesis_tables_path,
+        reference_coverage_path=reference_coverage_path,
     )
 
     output_json = Path(args.output_json)
@@ -60,16 +67,22 @@ def main() -> int:
 def build_index(
     apk_type: dict[str, Any],
     thesis_tables: dict[str, Any],
+    reference_coverage: dict[str, Any] | None,
     *,
     apk_type_path: Path,
     thesis_tables_path: Path,
+    reference_coverage_path: Path,
 ) -> dict[str, Any]:
     summary = thesis_tables["summary"]
+    coverage_summary = (reference_coverage or {}).get("summary", {})
     return {
         "schema_version": 1,
         "sources": {
             "apk_type": normalize_path(apk_type_path),
             "thesis_tables": normalize_path(thesis_tables_path),
+            "reference_coverage": normalize_path(reference_coverage_path)
+            if reference_coverage
+            else "",
         },
         "summary": {
             "controlled": (
@@ -92,6 +105,7 @@ def build_index(
                 f"{summary['source_validated_versions']['checked']} emitted Maven versions across "
                 f"{summary['source_validated_versions']['cases']} APKs"
             ),
+            "source_denominator_recall": format_reference_coverage_summary(coverage_summary),
         },
         "claim_evidence": build_claim_evidence(thesis_tables),
         "table_sources": build_table_sources(),
@@ -176,9 +190,14 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the dashboard-ready per-APK classification, wrong-version, missing-package, and DB-growth-candidate source.",
         },
         {
+            "table": "Reference DB coverage-first dashboard",
+            "source": "docs/evaluation/REFERENCE_DB_COVERAGE_FIRST_DASHBOARD.md",
+            "use": "Use to separate emitted-component confirmation from full source dependency recall, reference DB coordinate coverage, and exact-version coverage.",
+        },
+        {
             "table": "Post-100 real APK optimization plan",
             "source": "docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md",
-            "use": "Use as the research-backed execution roadmap for blocked rows, no-Maven-signal controls, boundary cases, wrong-version rows, missing-source rows, guarded reference DB growth, and dashboard improvement.",
+            "use": "Use as the research-backed execution roadmap for coverage-first reference DB growth, wrong-version rows, missing-source rows, guarded promotion, and dashboard improvement.",
         },
         {
             "table": "No-Maven-signal audit",
@@ -597,6 +616,7 @@ def build_markdown(payload: dict[str, Any]) -> str:
         f"| Clean source-validated real APKs | {payload['summary']['clean_real']} |",
         f"| Partial source-validated real APKs | {payload['summary']['partial_real']} |",
         f"| All source-validated real APKs | {payload['summary']['overall_real']} |",
+        f"| Full source dependency denominator | {payload['summary']['source_denominator_recall']} |",
         "",
         "## Claim Evidence",
         "",
@@ -728,9 +748,29 @@ def md(value: Any) -> str:
     return str(value).replace("|", "\\|").replace("\n", " ")
 
 
+def format_reference_coverage_summary(summary: dict[str, Any]) -> str:
+    if not summary:
+        return "n/a"
+    return (
+        f"{summary['source_dependencies_emitted_exact']}/"
+        f"{summary['source_dependency_pairs']} source dependency coordinate+version rows "
+        f"emitted exactly ({summary['end_to_end_exact_source_recall_percent']}%); "
+        f"shared DB exact-version coverage is "
+        f"{summary['reference_exact_version_covered_source_pairs']}/"
+        f"{summary['source_dependency_pairs']} "
+        f"({summary['reference_exact_version_coverage_percent']}%)"
+    )
+
+
 def read_json(path: Path) -> dict[str, Any]:
     with path.open("r", encoding="utf-8") as handle:
         return json.load(handle)
+
+
+def read_json_if_exists(path: Path) -> dict[str, Any] | None:
+    if not path.exists():
+        return None
+    return read_json(path)
 
 
 if __name__ == "__main__":

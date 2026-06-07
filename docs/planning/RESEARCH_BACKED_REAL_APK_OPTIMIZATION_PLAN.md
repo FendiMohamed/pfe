@@ -10,8 +10,10 @@ one-off suggestions. The core rule is:
 ```text
 fix ground-truth blockers first;
 separate no-signal and boundary cases from accuracy claims;
+measure reference DB coverage against the full source dependency denominator;
+build a broad evaluation-only DB for source-observed TPLs and versions;
 then improve wrong-version and missing-source rows through gated, paper-backed
-signals and guarded reference-DB promotion.
+signals and guarded promotion.
 ```
 
 ## Current Truth To Preserve
@@ -28,11 +30,22 @@ signals and guarded reference-DB promotion.
 | Emitted wrong-version rows | 636 |
 | Emitted missing-from-source rows | 274 |
 | Dashboard miss rows | 911 |
+| Source-tree cases in coverage-first dashboard | 106 |
+| Source dependency coordinate+version rows | 12,123 |
+| Source rows with coordinate in shared DB | 2,220 / 12,123 (18.3%) |
+| Source rows with exact version in shared DB | 1,231 / 12,123 (10.2%) |
+| End-to-end exact source recall | 927 / 12,123 (7.6%) |
 
 The dashboard miss-row total is one row higher than `636 + 274` because the
 dashboard also keeps a candidate-only wrong-version row for analysis. Do not
 mix that dashboard diagnostic count with the official emitted-version numerator
 and denominator.
+
+The coverage-first dashboard at
+`docs/evaluation/REFERENCE_DB_COVERAGE_FIRST_DASHBOARD.md` is now the required
+denominator before further version optimization. The `927/1837` emitted-row
+confirmation result is still useful, but it must be described as emitted Maven
+version confirmation, not full dependency recall.
 
 The counted real APK metric is `5 clean + 97 partial`. Flying Carpet and
 FitoTrack are now source-validated partial rows because runtime dependency trees
@@ -43,7 +56,7 @@ source-validated, 0 source-linked blocked`.
 
 | Source/tool family | Lesson used here | Plan impact |
 |---|---|---|
-| LibScout | Reference profiles are the backbone for exact Maven version detection, but coverage gaps and obfuscation hurt. | Keep the reference DB, but expand it only through guarded source-version experiments. |
+| LibScout | Reference profiles are the backbone for exact Maven version detection, but coverage gaps and obfuscation hurt. | Grow an evaluation-only reference DB for source-observed TPLs/versions first; keep shared calibrated promotion separate. |
 | ATVHUNTER | CDG module decoupling plus coarse-to-fine CFG/opcode evidence helps vulnerable-version detection. | Use opcode/basic-block evidence as scoped diagnostics for hard version bands, not as a global weight. |
 | LibScan/LibHunter | Opcode and call-chain matching, especially inlining/call-site awareness, improves R8-era robustness. | Apply inlining/call-chain signals to R8/minified and high-obfuscation cases behind control gates. |
 | SAD | CDG summaries, stateful/stateless handling, field-operation sequences, and literals are strong adjacent-version signals. | Prioritize literal and class-summary tie-breakers for repeated AndroidX/Kotlin wrong-version bands. |
@@ -212,11 +225,66 @@ limitation native files hash-only -> 17
 hybrid native files hash-only -> 13
 ```
 
-Next implementation step: use the wrong-version dashboard to run the first
-guarded P1 Kotlin/coroutines or AndroidX source-version experiment, while
-keeping these boundary rows separate from emitted Maven version accuracy.
+Next implementation step: use the reference DB coverage-first dashboard to grow
+an evaluation-only source-observed reference catalog before continuing
+wrong-version optimization, while keeping these boundary rows separate from
+emitted Maven version accuracy.
 
-### 4. Wrong-Version Rows
+### 4. Reference DB Coverage Denominator
+
+Scope:
+
+Coverage artifact:
+`docs/evaluation/REFERENCE_DB_COVERAGE_FIRST_DASHBOARD.md`.
+
+Current result:
+
+```text
+source-tree cases inspected -> 106
+source dependency coordinate+version rows -> 12,123
+unique source coordinates -> 1,395
+unique source coordinate+version pairs -> 3,430
+current shared reference DB components -> 101
+current shared reference DB coordinates -> 44
+source rows with coordinate in shared DB -> 2,220 / 12,123 (18.3%)
+source rows with exact version in shared DB -> 1,231 / 12,123 (10.2%)
+source rows emitted with exact source version -> 927 / 12,123 (7.6%)
+```
+
+Optimal lane:
+
+1. Treat saved Gradle runtime dependency trees as the source dependency
+   denominator.
+2. Build a source-observed catalog from every coordinate that appears in those
+   trees.
+3. Fetch Maven Central / Google Maven metadata for those coordinates and record
+   every published version, including prereleases when source trees use them.
+4. Build every bytecode-bearing JAR/AAR version into a broad evaluation-only DB;
+   record metadata-only/no-bytecode artifacts as skips, not as silent failures.
+5. Evaluate with three separate metrics:
+   emitted-component confirmation,
+   reference DB coordinate/exact-version coverage,
+   and end-to-end exact source dependency recall.
+6. Only after this denominator is visible should the wrong-version queue become
+   the main optimization lane again.
+
+Why this is optimal:
+
+The user's concern is correct: high accuracy on emitted components can look good
+while most source dependencies are outside the reference DB. The honest fix is
+not to lower the accuracy claim or hide missing TPLs. The honest fix is to make
+coverage a first-class metric, expand the search space in an evaluation-only
+DB, and then optimize version selection with the real denominator visible.
+
+Acceptance gate:
+
+```text
+coverage DB -> evaluation-only until source dependency recall and control drift are measured
+shared calibrated DB -> only for source-supported versions with documented promotion evidence
+accuracy wording -> emitted confirmation, DB coverage, and end-to-end recall stay separate
+```
+
+### 5. Wrong-Version Rows
 
 Scope:
 
@@ -256,9 +324,11 @@ Optimal lane:
 
 Why this is optimal:
 
-The tool already uses a hybrid approach. The next gain is not "add every version"
-or "newer wins"; prior experiments showed that those regress controls. The
-research-backed path is better evidence plus guarded promotion.
+The tool already uses a hybrid approach. The next gain should not be reported
+as full accuracy until the coverage denominator is visible. Adding every
+source-observed version belongs first in an evaluation-only DB; then the
+wrong-version lane can decide which exact versions are distinguishable, which
+must stay ambiguous, and which are unsafe to promote.
 
 Acceptance gate:
 
@@ -289,12 +359,12 @@ source-version/reference-DB experiment is now recorded at
 It tests `org.jetbrains.kotlinx:kotlinx-coroutines-android@1.6.4`: all 20
 target rows are fixed, but shared DB promotion is rejected because F-Droid
 regresses from source-confirmed `1.7.3` to `1.6.4` and Organic Maps/Termux
-limitation-boundary report-only component sets change. The next implementation
-step should either make Kotlin/coroutines disambiguation stricter and scoped, or
-move to a P1 AndroidX source-version/reference-DB experiment with the same
-current-control comparison before any shared DB or scoring change.
+limitation-boundary report-only component sets change. That result remains
+valuable as proof that "add one source version and promote it globally" is not
+enough. The next wrong-version experiment should wait behind the coverage-first
+evaluation-only DB lane unless it is explicitly scoped as a diagnostic.
 
-### 5. Missing-From-Source Rows
+### 6. Missing-From-Source Rows
 
 Scope:
 
@@ -333,26 +403,36 @@ reduce emitted missing-source rows without losing confirmed source-present rows
 candidate diagnostics may grow; emitted SBOM false positives should not
 ```
 
-### 6. Reference DB Growth
+### 7. Reference DB Growth
 
 Scope:
 
-Reference DB growth should target source-present wrong-version rows first. It
-should not be used to explain blocked, boundary, true no-signal, or
-missing-from-source rows.
+Reference DB growth now has two distinct modes:
+
+- Broad evaluation-only coverage DB: every published bytecode-bearing version
+  for every source-observed coordinate.
+- Shared calibrated DB: only source-supported versions that pass documented
+  promotion evidence.
+
+Reference DB growth should not be used to explain blocked, boundary, true
+no-signal, or missing-from-source rows.
 
 Optimal lane:
 
-1. Build a DB growth queue from dashboard wrong-version rows:
+1. Build a DB growth queue from the coverage-first dashboard:
+   source-observed coordinate, all source versions, all metadata-published
+   versions, packaging, bytecode/no-bytecode status, and cases affected.
+2. Build a broad evaluation-only DB before changing the shared calibrated DB.
+3. Separately build a DB growth queue from dashboard wrong-version rows:
    coordinate, source version, selected version, APK count, APK family, and
    existing ambiguity evidence.
-2. Run isolated experiment DBs for top repeated source versions.
-3. Compare experiments against controlled fixtures, clean real APKs, high-value
+4. Run isolated experiment DBs for top repeated source versions.
+5. Compare experiments against controlled fixtures, clean real APKs, high-value
    partial rows, R8/minified rows, and historical regression guards.
-4. Promote in the smallest safe unit:
+6. Promote in the smallest safe unit:
    singleton version first, then coordinate-family bundle only if singleton
    promotion is insufficient and controls remain clean.
-5. Record rejected versions as useful evidence, not as failed work.
+7. Record rejected versions as useful evidence, not as failed work.
 
 Why this is optimal:
 
@@ -363,11 +443,12 @@ overfit and regress. Guarded promotion is the correct middle path.
 Acceptance gate:
 
 ```text
-source-version addition -> isolated improvement + zero harmful current-control drift
+coverage addition -> broad evaluation-only DB first
+source-version promotion -> isolated improvement + documented current-control drift status
 unsafe addition -> keep in experiment DB and dashboard queue, not shared calibrated DB
 ```
 
-### 7. Dashboard Optimization
+### 8. Dashboard Optimization
 
 Scope:
 
@@ -385,6 +466,7 @@ Required views:
 | No-Maven board | True no-signal controls vs rows needing identity-coverage diagnostics. |
 | Boundary board | Native/framework/hidden-code cases excluded from Maven accuracy. |
 | Wrong-version heatmap | Coordinate/version bands, source versions seen, selected versions seen, APK families affected. |
+| Reference coverage board | Source dependency denominator, coordinate coverage, exact-version coverage, and end-to-end source recall. |
 | Missing-source table | Emitted coordinate, confidence, family nuance, APK family, downgrade/suppression candidate. |
 | Reference DB queue | Candidate source versions, expected benefit, control status, promote/reject decision. |
 | Regression gate history | Before/after metrics for any DB/scorer experiment. |
@@ -412,10 +494,13 @@ what is wrong-version, what is missing-source, and what can safely grow the DB
 | 1 | Rescue Flying Carpet and FitoTrack dependency trees. | `REAL_APK_BLOCKED_APK_TRIAGE.md`, proof-status docs, source-validation outputs. | Blocked count drops from 2 if validation gates pass. |
 | 2 | Audit the four no-Maven-signal rows. | Dashboard case CSV/report plus per-row diagnostics. | Each row labeled true no-signal or identity-coverage miss. |
 | 3 | Tighten boundary/framework labeling. | APK type evaluation and dashboard classifications. | Boundary rows stay excluded, but dashboard explains why. |
-| 4 | Build wrong-version coordinate queue from dashboard CSV. | Source-version candidate queue and guarded DB workflow. | Top repeated coordinates have experiment-ready source-version bundles. |
-| 5 | Run isolated DB experiments for the top source-version bands. | Experiment summaries and comparison reports. | Confirmed count improves without control regressions. |
-| 6 | Run missing-source suppression/downgrade diagnostics. | Candidate-pruning and family/artifact diagnostics. | Missing-source emitted rows decrease without losing confirmed rows. |
-| 7 | Add dashboard run history and promotion status fields. | Dashboard JSON/CSV and report. | Dashboard can drive future dataset and DB-growth sessions directly. |
+| 4 | Build the reference DB coverage-first dashboard. | `REFERENCE_DB_COVERAGE_FIRST_DASHBOARD.md`. | Source denominator, coordinate coverage, exact-version coverage, and end-to-end recall are visible. |
+| 5 | Build broad source-observed reference catalog and evaluation-only DB. | New source-observed catalog/config plus DB build logs. | Every source-observed TPL coordinate has metadata status and bytecode/no-bytecode result. |
+| 6 | Evaluate broad DB against source dependency recall and emitted-component precision. | Coverage dashboard plus source-validation comparison reports. | Recall improves or failure modes are explicit without changing shared DB claims. |
+| 7 | Continue wrong-version coordinate queue from dashboard CSV. | Source-version candidate queue and guarded DB workflow. | Top repeated coordinates have experiment-ready source-version bundles. |
+| 8 | Run isolated DB experiments for the top source-version bands. | Experiment summaries and comparison reports. | Confirmed count improves with documented control impact. |
+| 9 | Run missing-source suppression/downgrade diagnostics. | Candidate-pruning and family/artifact diagnostics. | Missing-source emitted rows decrease without losing confirmed rows. |
+| 10 | Add dashboard run history and promotion status fields. | Dashboard JSON/CSV and report. | Dashboard can drive future dataset and DB-growth sessions directly. |
 
 ## Stop Conditions
 
