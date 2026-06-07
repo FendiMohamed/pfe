@@ -15,16 +15,16 @@ Do not optimize wrong-version rows as the next main lane until the reference DB 
 | Metric | Value |
 |---|---:|
 | Source-tree cases inspected | 106 |
-| Source dependency coordinate+version rows | 12123 |
-| Unique source coordinates | 1395 |
-| Unique source coordinate+version pairs | 3430 |
+| Source dependency coordinate+version rows | 12082 |
+| Unique source coordinates | 1370 |
+| Unique source coordinate+version pairs | 3391 |
 | Current shared reference DB components | 101 |
 | Current shared reference DB coordinates | 44 |
-| Source rows with coordinate in DB | 2220 (18.3%) |
+| Source rows with coordinate in DB | 2220 (18.4%) |
 | Source rows with exact version in DB | 1231 (10.2%) |
-| Source rows emitted with exact version | 927 (7.6%) |
+| Source rows emitted with exact version | 927 (7.7%) |
 | Source rows emitted with wrong version | 636 |
-| Source rows not emitted | 10560 |
+| Source rows not emitted | 10519 |
 
 ## Why This Changes The Method
 
@@ -46,7 +46,7 @@ That row must be described as emitted Maven version confirmation, not full depen
 
 | Gap class | Rows | Meaning |
 |---|---:|---|
-| `coordinate-absent-from-reference-db` | 9903 | The source TPL coordinate is not in the shared DB at all. |
+| `coordinate-absent-from-reference-db` | 9862 | The source TPL coordinate is not in the shared DB at all. |
 | `source-present-not-emitted-despite-exact-reference` | 259 | The exact source version exists in the DB, but the tool did not emit that coordinate. |
 | `source-present-wrong-version-despite-exact-reference` | 45 | The exact source version exists in the DB, but the tool selected another version. |
 | `version-absent-from-reference-db` | 989 | The coordinate exists, but the source-resolved version is absent. |
@@ -65,7 +65,7 @@ The feasible interpretation of "add every version" is not all of Maven Central. 
 
 | Coordinate | Rows | Cases | Source versions | Sample cases |
 |---|---:|---:|---|---|
-| `androidx.annotation:annotation` | 107 | 106 | 1.9.1 (51), 1.8.1 (24), 1.3.0 (9), 1.6.0 (8), 1.1.0 (3), 1.9.0 (2), 1.7.0 (2), 1.10.0 (2) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |
+| `androidx.annotation:annotation` | 106 | 106 | 1.9.1 (51), 1.8.1 (24), 1.3.0 (9), 1.6.0 (8), 1.1.0 (3), 1.9.0 (2), 1.7.0 (2), 1.10.0 (2) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |
 | `androidx.arch.core:core-common` | 105 | 105 | 2.2.0 (93), 2.1.0 (12) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |
 | `androidx.arch.core:core-runtime` | 105 | 105 | 2.2.0 (93), 2.1.0 (11), 2.0.0 (1) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |
 | `androidx.collection:collection` | 105 | 105 | 1.4.2 (52), 1.1.0 (26), 1.5.0 (16), 1.4.0 (5), 1.2.0 (2), 1.4.4 (1), 1.4.3 (1), 1.6.0 (1) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |

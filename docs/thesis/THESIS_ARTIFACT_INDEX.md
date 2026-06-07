@@ -12,7 +12,8 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Clean source-validated real APKs | 47/47 emitted Maven versions across 5 APKs |
 | Partial source-validated real APKs | 880/1790 emitted Maven versions across 97 APKs |
 | All source-validated real APKs | 927/1837 emitted Maven versions across 102 APKs |
-| Full source dependency denominator | 927/12123 source dependency coordinate+version rows emitted exactly (7.6%); shared DB exact-version coverage is 1231/12123 (10.2%) |
+| Full source dependency denominator | 927/12082 source dependency coordinate+version rows emitted exactly (7.7%); shared DB exact-version coverage is 1231/12082 (10.2%) |
+| Source-observed reference growth inputs | 1370 coordinates / 3391 source-version slots; 1361 buildable coordinates / 3347 buildable source-version slots; 9 metadata-only skips |
 
 ## Claim Evidence
 
@@ -32,6 +33,8 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | APK family grouping | `docs/evaluation/APK_TYPE_EVALUATION.md` | Explain why clean, partial, blocked, and limitation cases are separate. |
 | Real APK source-validation dashboard seed | `docs/evaluation/REAL_APK_SOURCE_VALIDATION_DASHBOARD_REPORT.md` | Use as the dashboard-ready per-APK classification, wrong-version, missing-package, and DB-growth-candidate source. |
 | Reference DB coverage-first dashboard | `docs/evaluation/REFERENCE_DB_COVERAGE_FIRST_DASHBOARD.md` | Use to separate emitted-component confirmation from full source dependency recall, reference DB coordinate coverage, and exact-version coverage. |
+| Source-observed reference catalog | `docs/evaluation/SOURCE_OBSERVED_REFERENCE_CATALOG.md` | Use to explain the missing-TPL/missing-version growth inputs, buildable bytecode coordinates, source-version slots, and metadata-only skips before any shared DB promotion. |
+| Source-observed reference DB batch log | `docs/evaluation/SOURCE_OBSERVED_REFERENCE_DB_BATCH_LOG.md` | Use to show that the evaluation-only DB build has started with recorded download, DEX conversion, and feature-extraction counts while shared DB claims remain unchanged. |
 | Post-100 real APK optimization plan | `docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md` | Use as the research-backed execution roadmap for coverage-first reference DB growth, wrong-version rows, missing-source rows, guarded promotion, and dashboard improvement. |
 | No-Maven-signal audit | `docs/evaluation/NO_MAVEN_SIGNAL_AUDIT.md` | Use to explain why the four no-Maven rows stay outside accuracy metrics and how AndroidX identity misses differ from Mastodon's fork-family boundary. |
 | No-Maven AndroidX report-only experiment | `docs/evaluation/NO_MAVEN_ANDROIDX_REPORT_ONLY_EXPERIMENT.md` | Use as dashboard seed evidence for six source-backed AndroidX report-only candidates with zero SBOM or source-validation metric changes. |

@@ -11,6 +11,9 @@ DEFAULT_THESIS_TABLES_JSON = Path("data/results/evaluation/thesis-evaluation-tab
 DEFAULT_REFERENCE_COVERAGE_JSON = Path(
     "data/results/evaluation/reference-db-coverage-first-dashboard.json"
 )
+DEFAULT_SOURCE_OBSERVED_CATALOG_JSON = Path(
+    "data/results/evaluation/source-observed-reference-catalog.json"
+)
 DEFAULT_OUTPUT_JSON = Path("data/results/evaluation/thesis-artifact-index.json")
 DEFAULT_OUTPUT_DOC = Path("docs/thesis/THESIS_ARTIFACT_INDEX.md")
 
@@ -22,6 +25,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--apk-type-json", default=str(DEFAULT_APK_TYPE_JSON))
     parser.add_argument("--thesis-tables-json", default=str(DEFAULT_THESIS_TABLES_JSON))
     parser.add_argument("--reference-coverage-json", default=str(DEFAULT_REFERENCE_COVERAGE_JSON))
+    parser.add_argument(
+        "--source-observed-catalog-json",
+        default=str(DEFAULT_SOURCE_OBSERVED_CATALOG_JSON),
+    )
     parser.add_argument("--output-json", default=str(DEFAULT_OUTPUT_JSON))
     parser.add_argument("--output-doc", default=str(DEFAULT_OUTPUT_DOC))
     return parser
@@ -32,13 +39,16 @@ def main() -> int:
     apk_type_path = Path(args.apk_type_json)
     thesis_tables_path = Path(args.thesis_tables_json)
     reference_coverage_path = Path(args.reference_coverage_json)
+    source_observed_catalog_path = Path(args.source_observed_catalog_json)
     payload = build_index(
         read_json(apk_type_path),
         read_json(thesis_tables_path),
         read_json_if_exists(reference_coverage_path),
+        read_json_if_exists(source_observed_catalog_path),
         apk_type_path=apk_type_path,
         thesis_tables_path=thesis_tables_path,
         reference_coverage_path=reference_coverage_path,
+        source_observed_catalog_path=source_observed_catalog_path,
     )
 
     output_json = Path(args.output_json)
@@ -68,13 +78,16 @@ def build_index(
     apk_type: dict[str, Any],
     thesis_tables: dict[str, Any],
     reference_coverage: dict[str, Any] | None,
+    source_observed_catalog: dict[str, Any] | None,
     *,
     apk_type_path: Path,
     thesis_tables_path: Path,
     reference_coverage_path: Path,
+    source_observed_catalog_path: Path,
 ) -> dict[str, Any]:
     summary = thesis_tables["summary"]
     coverage_summary = (reference_coverage or {}).get("summary", {})
+    source_observed_summary = (source_observed_catalog or {}).get("summary", {})
     return {
         "schema_version": 1,
         "sources": {
@@ -82,6 +95,9 @@ def build_index(
             "thesis_tables": normalize_path(thesis_tables_path),
             "reference_coverage": normalize_path(reference_coverage_path)
             if reference_coverage
+            else "",
+            "source_observed_catalog": normalize_path(source_observed_catalog_path)
+            if source_observed_catalog
             else "",
         },
         "summary": {
@@ -106,6 +122,9 @@ def build_index(
                 f"{summary['source_validated_versions']['cases']} APKs"
             ),
             "source_denominator_recall": format_reference_coverage_summary(coverage_summary),
+            "source_observed_reference_inputs": format_source_observed_catalog_summary(
+                source_observed_summary,
+            ),
         },
         "claim_evidence": build_claim_evidence(thesis_tables),
         "table_sources": build_table_sources(),
@@ -193,6 +212,16 @@ def build_table_sources() -> list[dict[str, str]]:
             "table": "Reference DB coverage-first dashboard",
             "source": "docs/evaluation/REFERENCE_DB_COVERAGE_FIRST_DASHBOARD.md",
             "use": "Use to separate emitted-component confirmation from full source dependency recall, reference DB coordinate coverage, and exact-version coverage.",
+        },
+        {
+            "table": "Source-observed reference catalog",
+            "source": "docs/evaluation/SOURCE_OBSERVED_REFERENCE_CATALOG.md",
+            "use": "Use to explain the missing-TPL/missing-version growth inputs, buildable bytecode coordinates, source-version slots, and metadata-only skips before any shared DB promotion.",
+        },
+        {
+            "table": "Source-observed reference DB batch log",
+            "source": "docs/evaluation/SOURCE_OBSERVED_REFERENCE_DB_BATCH_LOG.md",
+            "use": "Use to show that the evaluation-only DB build has started with recorded download, DEX conversion, and feature-extraction counts while shared DB claims remain unchanged.",
         },
         {
             "table": "Post-100 real APK optimization plan",
@@ -617,6 +646,7 @@ def build_markdown(payload: dict[str, Any]) -> str:
         f"| Partial source-validated real APKs | {payload['summary']['partial_real']} |",
         f"| All source-validated real APKs | {payload['summary']['overall_real']} |",
         f"| Full source dependency denominator | {payload['summary']['source_denominator_recall']} |",
+        f"| Source-observed reference growth inputs | {payload['summary']['source_observed_reference_inputs']} |",
         "",
         "## Claim Evidence",
         "",
@@ -759,6 +789,18 @@ def format_reference_coverage_summary(summary: dict[str, Any]) -> str:
         f"{summary['reference_exact_version_covered_source_pairs']}/"
         f"{summary['source_dependency_pairs']} "
         f"({summary['reference_exact_version_coverage_percent']}%)"
+    )
+
+
+def format_source_observed_catalog_summary(summary: dict[str, Any]) -> str:
+    if not summary:
+        return "n/a"
+    return (
+        f"{summary['source_observed_coordinates']} coordinates / "
+        f"{summary['source_version_slots']} source-version slots; "
+        f"{summary['buildable_coordinates']} buildable coordinates / "
+        f"{summary['buildable_source_version_slots']} buildable source-version slots; "
+        f"{summary['skipped_non_bytecode_coordinates']} metadata-only skips"
     )
 
 

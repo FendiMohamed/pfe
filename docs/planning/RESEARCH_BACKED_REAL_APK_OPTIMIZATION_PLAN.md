@@ -31,10 +31,10 @@ signals and guarded promotion.
 | Emitted missing-from-source rows | 274 |
 | Dashboard miss rows | 911 |
 | Source-tree cases in coverage-first dashboard | 106 |
-| Source dependency coordinate+version rows | 12,123 |
-| Source rows with coordinate in shared DB | 2,220 / 12,123 (18.3%) |
-| Source rows with exact version in shared DB | 1,231 / 12,123 (10.2%) |
-| End-to-end exact source recall | 927 / 12,123 (7.6%) |
+| Source dependency coordinate+version rows | 12,082 |
+| Source rows with coordinate in shared DB | 2,220 / 12,082 (18.4%) |
+| Source rows with exact version in shared DB | 1,231 / 12,082 (10.2%) |
+| End-to-end exact source recall | 927 / 12,082 (7.7%) |
 
 The dashboard miss-row total is one row higher than `636 + 274` because the
 dashboard also keeps a candidate-only wrong-version row for analysis. Do not
@@ -241,14 +241,37 @@ Current result:
 
 ```text
 source-tree cases inspected -> 106
-source dependency coordinate+version rows -> 12,123
-unique source coordinates -> 1,395
-unique source coordinate+version pairs -> 3,430
+source dependency coordinate+version rows -> 12,082
+unique source coordinates -> 1,370
+unique source coordinate+version pairs -> 3,391
 current shared reference DB components -> 101
 current shared reference DB coordinates -> 44
-source rows with coordinate in shared DB -> 2,220 / 12,123 (18.3%)
-source rows with exact version in shared DB -> 1,231 / 12,123 (10.2%)
-source rows emitted with exact source version -> 927 / 12,123 (7.6%)
+source rows with coordinate in shared DB -> 2,220 / 12,082 (18.4%)
+source rows with exact version in shared DB -> 1,231 / 12,082 (10.2%)
+source rows emitted with exact source version -> 927 / 12,082 (7.7%)
+```
+
+Source-observed catalog result:
+
+```text
+source-observed coordinates -> 1,370
+source-observed coordinate+version slots -> 3,391
+bytecode-buildable coordinates -> 1,361
+bytecode-buildable source-version slots -> 3,347
+metadata-only BOM skips -> 9
+coordinates absent from shared DB -> 1,326
+known coordinates with missing source versions -> 41
+```
+
+Evaluation-only DB batch status:
+
+```text
+batch log -> docs/evaluation/SOURCE_OBSERVED_REFERENCE_DB_BATCH_LOG.md
+batch 000 source-version artifacts -> 25/25 downloaded
+batch 000 DEX conversions -> 25/25 converted
+batch 000 feature extraction -> 25/25 stored
+evaluation DB path -> data/reference_db/reference_features_source_observed_versions.sqlite
+next batch offset -> 25
 ```
 
 Optimal lane:
@@ -256,7 +279,10 @@ Optimal lane:
 1. Treat saved Gradle runtime dependency trees as the source dependency
    denominator.
 2. Build a source-observed catalog from every coordinate that appears in those
-   trees.
+   trees. This is now generated at
+   `docs/evaluation/SOURCE_OBSERVED_REFERENCE_CATALOG.md`, with build inputs at
+   `configs/source_observed_reference_catalog.json` and
+   `configs/libraries.source_observed_versions.json`.
 3. Fetch Maven Central / Google Maven metadata for those coordinates and record
    every published version, including prereleases when source trees use them.
 4. Build every bytecode-bearing JAR/AAR version into a broad evaluation-only DB;
@@ -495,7 +521,7 @@ what is wrong-version, what is missing-source, and what can safely grow the DB
 | 2 | Audit the four no-Maven-signal rows. | Dashboard case CSV/report plus per-row diagnostics. | Each row labeled true no-signal or identity-coverage miss. |
 | 3 | Tighten boundary/framework labeling. | APK type evaluation and dashboard classifications. | Boundary rows stay excluded, but dashboard explains why. |
 | 4 | Build the reference DB coverage-first dashboard. | `REFERENCE_DB_COVERAGE_FIRST_DASHBOARD.md`. | Source denominator, coordinate coverage, exact-version coverage, and end-to-end recall are visible. |
-| 5 | Build broad source-observed reference catalog and evaluation-only DB. | New source-observed catalog/config plus DB build logs. | Every source-observed TPL coordinate has metadata status and bytecode/no-bytecode result. |
+| 5 | Continue source-observed evaluation-only DB batches. | `SOURCE_OBSERVED_REFERENCE_CATALOG.md`, `SOURCE_OBSERVED_REFERENCE_DB_BATCH_LOG.md`, source-version config, all-version config, and DB build logs. | Every source-observed TPL coordinate has metadata status and bytecode/no-bytecode result. |
 | 6 | Evaluate broad DB against source dependency recall and emitted-component precision. | Coverage dashboard plus source-validation comparison reports. | Recall improves or failure modes are explicit without changing shared DB claims. |
 | 7 | Continue wrong-version coordinate queue from dashboard CSV. | Source-version candidate queue and guarded DB workflow. | Top repeated coordinates have experiment-ready source-version bundles. |
 | 8 | Run isolated DB experiments for the top source-version bands. | Experiment summaries and comparison reports. | Confirmed count improves with documented control impact. |

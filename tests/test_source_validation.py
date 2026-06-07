@@ -60,6 +60,8 @@ fullReleaseRuntimeClasspath - Runtime classpath.
 |    +--- com.squareup.okio:okio:3.6.0 -> 3.7.0
 |    |    \\--- com.squareup.okio:okio-jvm:3.7.0
 +--- project :libs:download
+Declaring dependencies using multi-string notation has been deprecated: "com.android.tools.build:aapt2:8.13.2-14304508:linux".
+|    \\--- org.bouncycastle:bcutil-jdk18on:[1.80,1.81) -> 1.80.2
 \\--- org.jetbrains.kotlin:kotlin-stdlib:2.0.20 -> 2.0.21 (c)
 """
 
@@ -69,6 +71,8 @@ fullReleaseRuntimeClasspath - Runtime classpath.
     assert dependencies["com.squareup.okio:okio"].requested_versions == ["3.6.0"]
     assert dependencies["com.squareup.okio:okio"].resolved_versions == ["3.7.0"]
     assert dependencies["com.squareup.okio:okio-jvm"].resolved_versions == ["3.7.0"]
+    assert dependencies["org.bouncycastle:bcutil-jdk18on"].resolved_versions == ["1.80.2"]
+    assert "com.android.tools.build:aapt2" not in dependencies
     assert "project :libs:download" not in dependencies
 
 

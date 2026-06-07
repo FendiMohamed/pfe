@@ -337,6 +337,11 @@ def build_parser() -> argparse.ArgumentParser:
         help="Number of latest stable versions to select per catalog coordinate.",
     )
     expand_parser.add_argument(
+        "--all-versions",
+        action="store_true",
+        help="Select every metadata-published version instead of only the latest stable versions.",
+    )
+    expand_parser.add_argument(
         "--include-prerelease",
         action="store_true",
         help="Allow alpha, beta, RC, milestone, preview, EAP, and snapshot versions.",
@@ -1040,6 +1045,7 @@ def main(argv: list[str] | None = None) -> int:
                 output_path=args.output,
                 repository_url=args.repository_url,
                 latest_count=args.latest_count,
+                all_versions=args.all_versions,
                 include_prerelease=args.include_prerelease,
                 coordinate=args.coordinate,
                 limit=args.limit,

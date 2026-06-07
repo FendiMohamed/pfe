@@ -60,6 +60,7 @@ class ReferenceExpansionSummary:
     output_path: str | None
     repository_url: str
     latest_count: int
+    all_versions: bool
     include_prerelease: bool
     total_entries: int
     selected_libraries: int
@@ -72,6 +73,7 @@ class ReferenceExpansionSummary:
             "output_path": self.output_path,
             "repository_url": self.repository_url,
             "latest_count": self.latest_count,
+            "all_versions": self.all_versions,
             "include_prerelease": self.include_prerelease,
             "total_entries": self.total_entries,
             "selected_libraries": self.selected_libraries,
@@ -149,6 +151,7 @@ def expand_reference_catalog(
     output_path: str | Path | None = DEFAULT_EXPANDED_CONFIG,
     repository_url: str = DEFAULT_MAVEN_REPOSITORY_URL,
     latest_count: int = 1,
+    all_versions: bool = False,
     include_prerelease: bool = False,
     coordinate: str | None = None,
     limit: int | None = None,
@@ -156,7 +159,7 @@ def expand_reference_catalog(
     dry_run: bool = False,
     fetcher: MetadataFetcher | None = None,
 ) -> ReferenceExpansionSummary:
-    if latest_count < 1:
+    if latest_count < 1 and not all_versions:
         raise ValueError("latest_count must be at least 1")
 
     entries = _select_entries(
@@ -170,6 +173,7 @@ def expand_reference_catalog(
             entry,
             repository_url=repository_url,
             latest_count=latest_count,
+            all_versions=all_versions,
             include_prerelease=include_prerelease,
             timeout=timeout,
             fetcher=fetch,
@@ -197,6 +201,7 @@ def expand_reference_catalog(
         output_path=str(output) if output else None,
         repository_url=repository_url,
         latest_count=latest_count,
+        all_versions=all_versions,
         include_prerelease=include_prerelease,
         total_entries=len(entries),
         selected_libraries=len(libraries),
@@ -210,6 +215,7 @@ def expand_catalog_entry(
     *,
     repository_url: str = DEFAULT_MAVEN_REPOSITORY_URL,
     latest_count: int = 1,
+    all_versions: bool = False,
     include_prerelease: bool = False,
     timeout: int = 30,
     fetcher: MetadataFetcher | None = None,
@@ -235,6 +241,7 @@ def expand_catalog_entry(
         selected = select_versions(
             versions,
             latest_count=latest_count,
+            all_versions=all_versions,
             include_prerelease=include_prerelease,
         )
     except (OSError, ValueError, ET.ParseError, urllib.error.URLError) as exc:
@@ -293,6 +300,7 @@ def select_versions(
     versions: list[str] | tuple[str, ...],
     *,
     latest_count: int = 1,
+    all_versions: bool = False,
     include_prerelease: bool = False,
 ) -> list[str]:
     candidates = [
@@ -301,6 +309,8 @@ def select_versions(
         if include_prerelease or is_stable_version(version)
     ]
     candidates = sorted(set(candidates), key=version_sort_key)
+    if all_versions:
+        return candidates
     return candidates[-latest_count:]
 
 

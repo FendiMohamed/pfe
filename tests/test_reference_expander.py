@@ -54,7 +54,15 @@ def test_parse_and_select_latest_stable_versions():
 
     assert versions == ["1.0.0", "1.1.0-alpha01", "1.1.0", "2.0.0-rc01", "2.0.0"]
     assert select_versions(versions, latest_count=2) == ["1.1.0", "2.0.0"]
+    assert select_versions(versions, all_versions=True) == ["1.0.0", "1.1.0", "2.0.0"]
     assert select_versions(versions, latest_count=2, include_prerelease=True) == [
+        "2.0.0-rc01",
+        "2.0.0",
+    ]
+    assert select_versions(versions, all_versions=True, include_prerelease=True) == [
+        "1.0.0",
+        "1.1.0-alpha01",
+        "1.1.0",
         "2.0.0-rc01",
         "2.0.0",
     ]
@@ -151,3 +159,35 @@ def test_expand_reference_catalog_dry_run_does_not_write_config(tmp_path):
 
     assert summary.selected_libraries == 1
     assert not output_path.exists()
+
+
+def test_expand_reference_catalog_can_select_all_metadata_versions(tmp_path):
+    catalog_path = tmp_path / "catalog.json"
+    output_path = tmp_path / "libraries.expanded.json"
+    catalog_path.write_text(
+        json.dumps(
+            {
+                "libraries": [
+                    {
+                        "group": "com.example",
+                        "artifact": "demo",
+                        "packaging": "jar",
+                        "category": "test",
+                    }
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    summary = expand_reference_catalog(
+        catalog_path,
+        output_path=output_path,
+        all_versions=True,
+        fetcher=lambda url, timeout: MAVEN_METADATA,
+    )
+
+    payload = json.loads(output_path.read_text(encoding="utf-8"))
+
+    assert summary.all_versions is True
+    assert payload["libraries"][0]["versions"] == ["1.0.0", "1.1.0", "2.0.0"]

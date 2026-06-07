@@ -16,6 +16,7 @@ GRADLE_MODULE_RE = re.compile(
     r"(?P<requested>[^\s()]+)"
     r"(?:\s+->\s+(?P<resolved>[^\s()]+))?"
 )
+GRADLE_RESOLVED_RE = re.compile(r"\s+->\s+(?P<resolved>[^\s()]+)")
 
 
 @dataclass(frozen=True)
@@ -107,13 +108,20 @@ class SourceValidationArtifacts:
 def parse_gradle_dependency_tree(text: str) -> dict[str, SourceDependencyEntry]:
     occurrences_by_coordinate: dict[str, list[GradleDependencyOccurrence]] = {}
     for raw_line in text.splitlines():
+        if not _is_gradle_dependency_tree_row(raw_line):
+            continue
         match = GRADLE_MODULE_RE.search(raw_line)
         if not match:
             continue
 
         coordinate = f"{match.group('group')}:{match.group('artifact')}"
         requested_version = match.group("requested").strip()
-        resolved_version = (match.group("resolved") or requested_version).strip()
+        resolved_match = GRADLE_RESOLVED_RE.search(raw_line)
+        resolved_version = (
+            resolved_match.group("resolved")
+            if resolved_match
+            else match.group("resolved") or requested_version
+        ).strip()
         occurrence = GradleDependencyOccurrence(
             coordinate=coordinate,
             requested_version=requested_version,
@@ -137,6 +145,11 @@ def parse_gradle_dependency_tree(text: str) -> dict[str, SourceDependencyEntry]:
         )
         for coordinate, occurrences in sorted(occurrences_by_coordinate.items())
     }
+
+
+def _is_gradle_dependency_tree_row(raw_line: str) -> bool:
+    stripped = raw_line.strip()
+    return stripped.startswith("+---") or stripped.startswith("\\---") or stripped.startswith("|")
 
 
 def validate_cyclonedx_against_gradle_tree(

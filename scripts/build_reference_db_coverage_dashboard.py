@@ -25,6 +25,7 @@ GRADLE_MODULE_RE = re.compile(
     r"(?P<requested>[^\s()]+)"
     r"(?:\s+->\s+(?P<resolved>[^\s()]+))?"
 )
+GRADLE_RESOLVED_RE = re.compile(r"\s+->\s+(?P<resolved>[^\s()]+)")
 RICH_GRADLE_MODULE_RE = re.compile(
     r"(?P<group>[A-Za-z0-9_.-]+):"
     r"(?P<artifact>[A-Za-z0-9_.-]+):"
@@ -353,6 +354,9 @@ def build_summary(
 def parse_gradle_dependency_tree(text: str) -> dict[str, dict[str, Any]]:
     occurrences_by_coordinate: dict[str, list[dict[str, str]]] = defaultdict(list)
     for raw_line in text.splitlines():
+        if not is_gradle_dependency_tree_row(raw_line):
+            continue
+
         rich_match = RICH_GRADLE_MODULE_RE.search(raw_line)
         if rich_match:
             coordinate = f"{rich_match.group('group')}:{rich_match.group('artifact')}"
@@ -372,7 +376,12 @@ def parse_gradle_dependency_tree(text: str) -> dict[str, dict[str, Any]]:
             continue
         coordinate = f"{match.group('group')}:{match.group('artifact')}"
         requested_version = match.group("requested").strip()
-        resolved_version = (match.group("resolved") or requested_version).strip()
+        resolved_match = GRADLE_RESOLVED_RE.search(raw_line)
+        resolved_version = (
+            resolved_match.group("resolved")
+            if resolved_match
+            else match.group("resolved") or requested_version
+        ).strip()
         occurrences_by_coordinate[coordinate].append(
             {
                 "requested_version": requested_version,
@@ -389,6 +398,11 @@ def parse_gradle_dependency_tree(text: str) -> dict[str, dict[str, Any]]:
         }
         for coordinate, occurrences in occurrences_by_coordinate.items()
     }
+
+
+def is_gradle_dependency_tree_row(raw_line: str) -> bool:
+    stripped = raw_line.strip()
+    return stripped.startswith("+---") or stripped.startswith("\\---") or stripped.startswith("|")
 
 
 def load_reference_index(path: Path) -> dict[str, Any]:
