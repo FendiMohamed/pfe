@@ -12,6 +12,9 @@ from typing import Any
 DEFAULT_MISSES_CSV = Path("data/results/evaluation/real-apk-source-validation-dashboard-misses.csv")
 DEFAULT_OUTPUT_JSON = Path("data/results/evaluation/wrong-version-optimization-dashboard.json")
 DEFAULT_OUTPUT_DOC = Path("docs/evaluation/WRONG_VERSION_OPTIMIZATION_DASHBOARD.md")
+COMPLETED_EXPERIMENT_SUMMARIES = (
+    Path("data/results/experiments/wrong-version-p1-coroutines-android-1-6-4/summary.json"),
+)
 
 RESEARCH_BACKED_POLICY = [
     "Treat wrong-version rows as evidence problems, not as proof that a global newer-version rule is safe.",
@@ -98,6 +101,7 @@ def build_payload(rows: list[dict[str, str]], *, misses_path: Path) -> dict[str,
         "top_selected_to_source_pairs": build_top_selected_source_pairs(enriched, limit=25),
         "case_queue": build_case_queue(enriched),
         "priority_lanes": build_priority_lanes(enriched),
+        "completed_experiments": load_completed_experiments(COMPLETED_EXPERIMENT_SUMMARIES),
         "verdict": verdict(summary),
         "conclusion": (
             "The wrong-version backlog is concentrated enough to attack with guarded family lanes: "
@@ -106,6 +110,35 @@ def build_payload(rows: list[dict[str, str]], *, misses_path: Path) -> dict[str,
             "or vulnerability labels should change until an isolated lane passes current controls."
         ),
     }
+
+
+def load_completed_experiments(paths: tuple[Path, ...]) -> list[dict[str, Any]]:
+    experiments = []
+    for path in paths:
+        if not path.exists():
+            continue
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        summary = payload.get("summary", {})
+        candidate = payload.get("candidate", {})
+        experiments.append(
+            {
+                "experiment": payload.get("experiment", path.parent.name),
+                "candidate": candidate.get("candidate_version", ""),
+                "verdict": payload.get("verdict", ""),
+                "decision": payload.get("decision", ""),
+                "target_cases": summary.get("target_cases", 0),
+                "target_fixed_cases": summary.get("target_fixed_cases", 0),
+                "target_improved_cases": summary.get("target_improved_cases", 0),
+                "control_regressed_cases": summary.get("control_regressed_cases", 0),
+                "controlled_control_regressed_cases": summary.get("controlled_control_regressed_cases", 0),
+                "clean_control_regressed_cases": summary.get("clean_control_regressed_cases", 0),
+                "no_maven_control_regressed_cases": summary.get("no_maven_control_regressed_cases", 0),
+                "boundary_control_regressed_cases": summary.get("boundary_control_regressed_cases", 0),
+                "doc": "docs/evaluation/WRONG_VERSION_P1_COROUTINES_ANDROID_1_6_4_EXPERIMENT.md",
+                "summary_json": normalize_path(path),
+            }
+        )
+    return experiments
 
 
 def enrich_row(row: dict[str, str]) -> dict[str, Any]:
@@ -542,6 +575,28 @@ def build_markdown(payload: dict[str, Any]) -> str:
     )
     for relation, count in summary["relation_counts"].items():
         lines.append(f"| `{md(relation)}` | {count} |")
+
+    if payload.get("completed_experiments"):
+        lines.extend(
+            [
+                "",
+                "## Completed Guarded Experiments",
+                "",
+                "| Experiment | Candidate | Target result | Control regressions | Verdict | Decision |",
+                "|---|---|---|---:|---|---|",
+            ]
+        )
+        for experiment in payload["completed_experiments"]:
+            lines.append(
+                "| "
+                f"`{md(experiment['experiment'])}` | "
+                f"`{md(experiment['candidate'])}` | "
+                f"{experiment['target_fixed_cases']}/{experiment['target_cases']} target fixed; "
+                f"{experiment['target_improved_cases']} improved | "
+                f"{experiment['control_regressed_cases']} | "
+                f"`{md(experiment['verdict'])}` | "
+                f"{md(experiment['decision'])} |"
+            )
 
     lines.extend(
         [

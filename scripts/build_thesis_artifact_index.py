@@ -206,6 +206,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the ranked, research-backed queue for the 636 emitted wrong-version rows, grouped by APK, coordinate family, source version, and guarded next action.",
         },
         {
+            "table": "Wrong-version P1 coroutines experiment",
+            "source": "docs/evaluation/WRONG_VERSION_P1_COROUTINES_ANDROID_1_6_4_EXPERIMENT.md",
+            "use": "Use as the guarded-source-version example where 20 target rows improve but shared DB promotion is rejected because current controls regress.",
+        },
+        {
             "table": "Dataset coverage matrix",
             "source": "docs/evaluation/DATASET_COVERAGE_MATRIX.md",
             "use": "Justify APK selection by classification instead of convenience.",

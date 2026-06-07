@@ -263,7 +263,7 @@ research-backed path is better evidence plus guarded promotion.
 Acceptance gate:
 
 ```text
-promote only if target rows improve and controlled/clean/partial controls do not regress
+promote only if target rows improve and controlled/clean/partial/no-Maven/boundary controls do not regress
 reject if the change creates new missing-source emissions or false version flips
 ```
 
@@ -283,10 +283,16 @@ P2 ViewPager2/support AndroidX lane -> 157 rows across 13 coordinates and 80 APK
 P2 CVE-sensitive networking/JSON lane -> 38 rows across 6 coordinates and 27 APK cases
 ```
 
-The dashboard keeps all rows diagnostic/reporting-only. The next implementation
-step is an isolated source-version/reference-DB experiment for a high-volume P1
-family, then a current-control comparison before any shared DB or scoring
-change.
+The dashboard keeps all rows diagnostic/reporting-only. The first isolated
+source-version/reference-DB experiment is now recorded at
+`docs/evaluation/WRONG_VERSION_P1_COROUTINES_ANDROID_1_6_4_EXPERIMENT.md`.
+It tests `org.jetbrains.kotlinx:kotlinx-coroutines-android@1.6.4`: all 20
+target rows are fixed, but shared DB promotion is rejected because F-Droid
+regresses from source-confirmed `1.7.3` to `1.6.4` and Organic Maps/Termux
+limitation-boundary report-only component sets change. The next implementation
+step should either make Kotlin/coroutines disambiguation stricter and scoped, or
+move to a P1 AndroidX source-version/reference-DB experiment with the same
+current-control comparison before any shared DB or scoring change.
 
 ### 5. Missing-From-Source Rows
 

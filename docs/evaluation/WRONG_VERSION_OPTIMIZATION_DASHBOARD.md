@@ -31,6 +31,12 @@ The wrong-version backlog is concentrated enough to attack with guarded family l
 | `selected-newer-than-source` | 31 |
 | `selected-older-than-source` | 6 |
 
+## Completed Guarded Experiments
+
+| Experiment | Candidate | Target result | Control regressions | Verdict | Decision |
+|---|---|---|---:|---|---|
+| `wrong-version-p1-coroutines-android-1.6.4` | `org.jetbrains.kotlinx:kotlinx-coroutines-android@1.6.4` | 20/20 target fixed; 20 improved | 3 | `wrong-version-p1-experiment-rejected-regressions` | Keep experiment-only; control regressions block shared DB promotion. |
+
 ## Priority Lanes
 
 | Lane | Rows | Coordinates | Cases | Rationale | Gate |
