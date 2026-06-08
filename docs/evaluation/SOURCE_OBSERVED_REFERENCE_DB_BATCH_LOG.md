@@ -193,37 +193,47 @@ Download failures were real `404 Not Found` results for `androidx.paging:paging-
 
 No-bytecode skips were AndroidX SavedState, SQLite, SQLite Framework, and Tracing wrapper artifacts without JVM bytecode or without produced `classes*.dex`, including `androidx.savedstate:savedstate`, `savedstate-compose`, `savedstate-ktx`, `androidx.sqlite:sqlite`, `androidx.sqlite:sqlite-framework`, and `androidx.tracing:tracing` versions from the source-observed slice.
 
+## Batch 016
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 1300` into `data/reference_db/artifacts_source_observed_versions` | 65 downloaded, 35 failed |
+| Convert | downloaded records after artifact offset `1229` into `data/reference_db/dex_source_observed_versions` | 54 converted, 11 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `866` | 54 stored, 0 failed |
+
+Download failures were real `404 Not Found` results across AndroidX Window, SparkButton Compose, CustomActivityOnCrash, ACRA, Material Dialogs, Lottie, Pin/Pattern lock widgets, Billing, and legacy Android support-library alias rows. Some source-observed rows were not valid Maven versions, such as support aliases like `androidx.appcompat:appcompat:1.7.0` recorded under `com.android.support:appcompat-v7`. No-bytecode skips were `androidx.work:work-runtime-ktx` and Touchlab Stately wrapper artifacts where D8 produced no `classes*.dex`.
+
 ## Current Evaluation-Only DB Totals
 
 | Metric | Value |
 |---|---:|
-| Source-version slots attempted | 1300 |
-| Downloaded artifact metadata records | 1229 |
-| Download failures recorded | 71 |
-| Bytecode-bearing conversion records | 866 |
-| No-bytecode conversion skips | 363 |
-| Stored DB components | 866 |
+| Source-version slots attempted | 1400 |
+| Downloaded artifact metadata records | 1294 |
+| Download failures recorded | 106 |
+| Bytecode-bearing conversion records | 920 |
+| No-bytecode conversion skips | 374 |
+| Stored DB components | 920 |
 
 Current feature extraction counts:
 
 | Feature table / metric | Rows |
 |---|---:|
-| Components | 866 |
-| DEX files | 866 |
-| Packages | 4301 |
-| Classes | 176854 |
-| Methods | 1057169 |
-| Opcodes | 64292 |
-| API references | 1304147 |
-| String literals | 196332 |
-| Dependency shapes | 8818 |
-| Class dependencies | 275755 |
-| Opcode n-grams | 2062316 |
-| Call-chain opcode fingerprints | 177395 |
-| Basic-block opcode fingerprints | 863351 |
-| Class-neighbor summaries | 35888 |
-| Field-operation sequences | 122466 |
-| Literal/context features | 318791 |
+| Components | 920 |
+| DEX files | 920 |
+| Packages | 4730 |
+| Classes | 186589 |
+| Methods | 1107983 |
+| Opcodes | 68457 |
+| API references | 1366838 |
+| String literals | 214703 |
+| Dependency shapes | 9412 |
+| Class dependencies | 294674 |
+| Opcode n-grams | 2171101 |
+| Call-chain opcode fingerprints | 188074 |
+| Basic-block opcode fingerprints | 905241 |
+| Class-neighbor summaries | 38860 |
+| Field-operation sequences | 128343 |
+| Literal/context features | 353668 |
 
 ## Commands
 
@@ -239,4 +249,4 @@ The download step was executed through the Python downloader after sandboxed net
 
 ## Next Batch
 
-Continue source-version downloads with `--limit 100 --offset 1300`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`.
+Continue source-version downloads with `--limit 100 --offset 1400`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`.
