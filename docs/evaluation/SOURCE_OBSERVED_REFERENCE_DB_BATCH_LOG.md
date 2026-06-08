@@ -183,37 +183,47 @@ The download command timed out after writing all `100` metadata records. The fir
 
 Download failures were real `404 Not Found` results for `androidx.paging:paging-common-ktx` versions `3.1.1`, `3.2.1`, `3.3.6`, and `3.5.0`; `androidx.resourceinspection:resourceinspection-annotation@1.0.1`; and `androidx.room:room-common-jvm` versions `2.7.0`, `2.7.1`, `2.7.2`, `2.8.0`, and `2.8.4`. No-bytecode skips were AndroidX NavigationEvent, Paging, Room, and SavedState wrapper artifacts without JVM bytecode or without produced `classes*.dex`.
 
+## Batch 015
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 1200` into `data/reference_db/artifacts_source_observed_versions` | 100 downloaded, 0 failed |
+| Convert | downloaded records after artifact offset `1129` into `data/reference_db/dex_source_observed_versions` | 81 converted, 19 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `785` | 81 stored, 0 failed |
+
+No-bytecode skips were AndroidX SavedState, SQLite, SQLite Framework, and Tracing wrapper artifacts without JVM bytecode or without produced `classes*.dex`, including `androidx.savedstate:savedstate`, `savedstate-compose`, `savedstate-ktx`, `androidx.sqlite:sqlite`, `androidx.sqlite:sqlite-framework`, and `androidx.tracing:tracing` versions from the source-observed slice.
+
 ## Current Evaluation-Only DB Totals
 
 | Metric | Value |
 |---|---:|
-| Source-version slots attempted | 1200 |
-| Downloaded artifact metadata records | 1129 |
+| Source-version slots attempted | 1300 |
+| Downloaded artifact metadata records | 1229 |
 | Download failures recorded | 71 |
-| Bytecode-bearing conversion records | 785 |
-| No-bytecode conversion skips | 344 |
-| Stored DB components | 785 |
+| Bytecode-bearing conversion records | 866 |
+| No-bytecode conversion skips | 363 |
+| Stored DB components | 866 |
 
 Current feature extraction counts:
 
 | Feature table / metric | Rows |
 |---|---:|
-| Components | 785 |
-| DEX files | 785 |
-| Packages | 4027 |
-| Classes | 173709 |
-| Methods | 1038464 |
-| Opcodes | 59636 |
-| API references | 1275936 |
-| String literals | 190943 |
-| Dependency shapes | 8093 |
-| Class dependencies | 272099 |
-| Opcode n-grams | 1999428 |
-| Call-chain opcode fingerprints | 172701 |
-| Basic-block opcode fingerprints | 844448 |
-| Class-neighbor summaries | 34691 |
-| Field-operation sequences | 119239 |
-| Literal/context features | 309986 |
+| Components | 866 |
+| DEX files | 866 |
+| Packages | 4301 |
+| Classes | 176854 |
+| Methods | 1057169 |
+| Opcodes | 64292 |
+| API references | 1304147 |
+| String literals | 196332 |
+| Dependency shapes | 8818 |
+| Class dependencies | 275755 |
+| Opcode n-grams | 2062316 |
+| Call-chain opcode fingerprints | 177395 |
+| Basic-block opcode fingerprints | 863351 |
+| Class-neighbor summaries | 35888 |
+| Field-operation sequences | 122466 |
+| Literal/context features | 318791 |
 
 ## Commands
 
@@ -229,4 +239,4 @@ The download step was executed through the Python downloader after sandboxed net
 
 ## Next Batch
 
-Continue source-version downloads with `--limit 100 --offset 1200`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`.
+Continue source-version downloads with `--limit 100 --offset 1300`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`.
