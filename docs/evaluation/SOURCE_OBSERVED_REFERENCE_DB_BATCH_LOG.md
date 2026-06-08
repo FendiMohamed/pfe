@@ -203,37 +203,47 @@ No-bytecode skips were AndroidX SavedState, SQLite, SQLite Framework, and Tracin
 
 Download failures were real `404 Not Found` results across AndroidX Window, SparkButton Compose, CustomActivityOnCrash, ACRA, Material Dialogs, Lottie, Pin/Pattern lock widgets, Billing, and legacy Android support-library alias rows. Some source-observed rows were not valid Maven versions, such as support aliases like `androidx.appcompat:appcompat:1.7.0` recorded under `com.android.support:appcompat-v7`. No-bytecode skips were `androidx.work:work-runtime-ktx` and Touchlab Stately wrapper artifacts where D8 produced no `classes*.dex`.
 
+## Batch 017
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 1400` into `data/reference_db/artifacts_source_observed_versions` | 35 downloaded, 65 failed |
+| Convert | downloaded records after artifact offset `1294` into `data/reference_db/dex_source_observed_versions` | 34 converted, 1 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `920` | 34 stored, 0 failed |
+
+Download failures were real `404 Not Found` results across legacy `com.android.support:*` alias rows, Volley, AndroidPlot, several old UI/widget libraries, certificate transparency, Facebook/Fresco/React Native coordinates, and other third-party artifacts absent from the queried repositories. Several source-observed rows again contained alias-style version strings rather than Maven-published versions, such as AndroidX coordinates stored under legacy support-library artifacts and `com.facebook.react:react-android:0.77.2` stored as the version for `com.facebook.react:react-native`. The only no-bytecode skip was `com.eygraber:uri-kmp@0.0.21`, where D8 produced no `classes*.dex`.
+
 ## Current Evaluation-Only DB Totals
 
 | Metric | Value |
 |---|---:|
-| Source-version slots attempted | 1400 |
-| Downloaded artifact metadata records | 1294 |
-| Download failures recorded | 106 |
-| Bytecode-bearing conversion records | 920 |
-| No-bytecode conversion skips | 374 |
-| Stored DB components | 920 |
+| Source-version slots attempted | 1500 |
+| Downloaded artifact metadata records | 1329 |
+| Download failures recorded | 171 |
+| Bytecode-bearing conversion records | 954 |
+| No-bytecode conversion skips | 375 |
+| Stored DB components | 954 |
 
 Current feature extraction counts:
 
 | Feature table / metric | Rows |
 |---|---:|
-| Components | 920 |
-| DEX files | 920 |
-| Packages | 4730 |
-| Classes | 186589 |
-| Methods | 1107983 |
-| Opcodes | 68457 |
-| API references | 1366838 |
-| String literals | 214703 |
-| Dependency shapes | 9412 |
-| Class dependencies | 294674 |
-| Opcode n-grams | 2171101 |
-| Call-chain opcode fingerprints | 188074 |
-| Basic-block opcode fingerprints | 905241 |
-| Class-neighbor summaries | 38860 |
-| Field-operation sequences | 128343 |
-| Literal/context features | 353668 |
+| Components | 954 |
+| DEX files | 954 |
+| Packages | 4976 |
+| Classes | 194782 |
+| Methods | 1169474 |
+| Opcodes | 70883 |
+| API references | 1434604 |
+| String literals | 232037 |
+| Dependency shapes | 9789 |
+| Class dependencies | 312688 |
+| Opcode n-grams | 2241883 |
+| Call-chain opcode fingerprints | 193744 |
+| Basic-block opcode fingerprints | 931740 |
+| Class-neighbor summaries | 40377 |
+| Field-operation sequences | 133611 |
+| Literal/context features | 394919 |
 
 ## Commands
 
@@ -249,4 +259,4 @@ The download step was executed through the Python downloader after sandboxed net
 
 ## Next Batch
 
-Continue source-version downloads with `--limit 100 --offset 1400`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`.
+Continue source-version downloads with `--limit 100 --offset 1500`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`.
