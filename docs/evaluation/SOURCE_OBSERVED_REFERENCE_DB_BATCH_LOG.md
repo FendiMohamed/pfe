@@ -243,38 +243,49 @@ Download failures were real `404 Not Found` results concentrated in GitHub/JitPa
 
 Download failures were real `404 Not Found` results across GitHub/JitPack-style coordinates and several Google/accompanist rows, including Skydoves, Mapsforge, libsu, emojify, DashClock, and other source-observed artifacts absent from the queried repositories. Conversion timed out after writing some DEX outputs, then the resume recorded `48` converted rows, `19` existing bytecode rows, and `3` no-bytecode skips. No-bytecode skips were `com.github.skydoves:compose-stability-runtime@0.7.1`, `com.github.skydoves:landscapist@2.9.5`, and `com.github.skydoves:landscapist-coil3@2.9.5`, where D8 produced no `classes*.dex`.
 
+## Batch 021
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 1800` into `data/reference_db/artifacts_source_observed_versions` | 86 downloaded, 14 failed |
+| Convert | downloaded records after artifact offset `1478`, resumed at offsets `1539` and `1563` after timeouts | 85 bytecode-bearing records, 1 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `1097` | 85 stored, 0 failed |
+
+Download failures were real `404 Not Found` results for Dagger Android support/lint AAR versions, Firebase encoder artifacts, and older Android UI/helper libraries such as materialshadowninepatch, advrecyclerview, and figlib. Conversion timed out twice after writing DEX outputs, then narrow resumes recorded the remaining outputs as `existing`. The only no-bytecode skip was one source-observed artifact where no usable DEX was produced. The source-version config has `3347` buildable slots, so after this batch `1900` source-version slots have been attempted and `1447` remain.
+
 ## Current Evaluation-Only DB Totals
 
 | Metric | Value |
 |---|---:|
-| Source-version slots attempted | 1800 |
-| Downloaded artifact metadata records | 1478 |
-| Download failures recorded | 322 |
-| Bytecode-bearing conversion records | 1097 |
-| No-bytecode conversion skips | 381 |
+| Source-version slots attempted | 1900 |
+| Source-version slots remaining | 1447 |
+| Downloaded artifact metadata records | 1564 |
+| Download failures recorded | 336 |
+| Bytecode-bearing conversion records | 1182 |
+| No-bytecode conversion skips | 382 |
 | Extraction-blocked bytecode records | 1 |
-| Stored DB components | 1096 |
+| Stored DB components | 1181 |
 
 Current feature extraction counts:
 
 | Feature table / metric | Rows |
 |---|---:|
-| Components | 1096 |
-| DEX files | 1096 |
-| Packages | 7092 |
-| Classes | 239802 |
-| Methods | 1552340 |
-| Opcodes | 85114 |
-| API references | 1911582 |
-| String literals | 280285 |
-| Dependency shapes | 11434 |
-| Class dependencies | 431032 |
-| Opcode n-grams | 2888032 |
-| Call-chain opcode fingerprints | 250364 |
-| Basic-block opcode fingerprints | 1214255 |
-| Class-neighbor summaries | 54213 |
-| Field-operation sequences | 180047 |
-| Literal/context features | 464207 |
+| Components | 1181 |
+| DEX files | 1181 |
+| Packages | 8021 |
+| Classes | 280984 |
+| Methods | 1902812 |
+| Opcodes | 92128 |
+| API references | 2190877 |
+| String literals | 313906 |
+| Dependency shapes | 12341 |
+| Class dependencies | 538892 |
+| Opcode n-grams | 3237378 |
+| Call-chain opcode fingerprints | 283313 |
+| Basic-block opcode fingerprints | 1372222 |
+| Class-neighbor summaries | 63710 |
+| Field-operation sequences | 196536 |
+| Literal/context features | 514769 |
 
 ## Commands
 
@@ -290,4 +301,4 @@ The download step was executed through the Python downloader after sandboxed net
 
 ## Next Batch
 
-Continue source-version downloads with `--limit 100 --offset 1800`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`. Keep `com.github.houbb:heaven@0.13.0` documented as extraction-blocked unless the feature extractor later gains surrogate-safe string handling.
+Continue source-version downloads with `--limit 100 --offset 1900`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`. Keep `com.github.houbb:heaven@0.13.0` documented as extraction-blocked unless the feature extractor later gains surrogate-safe string handling.
