@@ -133,37 +133,57 @@ Download failures were real `404 Not Found` results for `androidx.constraintlayo
 
 Download failures were real `404 Not Found` results for DataStore/protobuf, Glance/protobuf, Health Connect/protobuf, and Hilt common coordinates: `androidx.datastore:datastore-core@1.0.0`, `androidx.datastore:datastore-core-okio@1.2.0`, `androidx.datastore:datastore-core-okio-jvm@1.2.0`, `androidx.datastore:datastore-preferences-external-protobuf@1.2.0`, `androidx.datastore:datastore-preferences-proto@1.2.0`, `androidx.glance:glance-appwidget-external-protobuf@1.1.1`, `androidx.glance:glance-appwidget-proto@1.1.1`, `androidx.health.connect:connect-client-external-protobuf@1.1.0`, `androidx.health.connect:connect-client-proto@1.1.0`, and `androidx.hilt:hilt-common` versions `1.0.0`, `1.2.0`, and `1.3.0`. No-bytecode skips were `androidx.datastore` wrapper artifacts and `androidx.graphics:graphics-shapes@1.0.1`.
 
+## Batch 010
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 700` into `data/reference_db/artifacts_source_observed_versions` | 91 downloaded, 9 failed |
+| Convert | downloaded records after artifact offset `648` into `data/reference_db/dex_source_observed_versions` | 54 converted, 37 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `458` | 54 stored, 0 failed |
+
+Download failures were real `404 Not Found` results for `androidx.lifecycle:lifecycle-common-jvm` versions `2.10.0`, `2.8.2`, `2.8.4`, `2.8.6`, `2.8.7`, `2.9.0`, `2.9.1`, `2.9.3`, and `2.9.4`. No-bytecode skips were AndroidX legacy and Lifecycle wrapper artifacts, including `androidx.legacy:legacy-preference-v14@1.0.0`, `androidx.legacy:legacy-support-v4@1.0.0`, `androidx.lifecycle:lifecycle-common`, `androidx.lifecycle:lifecycle-common-java8`, `androidx.lifecycle:lifecycle-livedata-core-ktx`, and `androidx.lifecycle:lifecycle-livedata-ktx`.
+
+## Batch 011
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 800` into `data/reference_db/artifacts_source_observed_versions` | 100 downloaded, 0 failed |
+| Convert | downloaded records after artifact offset `739` into `data/reference_db/dex_source_observed_versions` | 60 converted, 40 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `512` | 60 stored, 0 failed |
+
+No-bytecode skips were mostly AndroidX Lifecycle wrapper artifacts where the public artifact has no JVM bytecode or D8 produced no `classes*.dex`, including `lifecycle-reactivestreams-ktx`, `lifecycle-runtime`, `lifecycle-runtime-compose`, `lifecycle-runtime-ktx`, `lifecycle-runtime-ktx-android`, and `lifecycle-viewmodel` versions from the `2.8.x`, `2.9.x`, and `2.10.0` bands.
+
 ## Current Evaluation-Only DB Totals
 
 | Metric | Value |
 |---|---:|
-| Source-version slots attempted | 700 |
-| Downloaded artifact metadata records | 648 |
-| Download failures recorded | 52 |
-| Converted bytecode artifacts | 458 |
-| No-bytecode conversion skips | 190 |
-| Stored DB components | 458 |
+| Source-version slots attempted | 900 |
+| Downloaded artifact metadata records | 839 |
+| Download failures recorded | 61 |
+| Converted bytecode artifacts | 572 |
+| No-bytecode conversion skips | 267 |
+| Stored DB components | 572 |
 
 Current feature extraction counts:
 
 | Feature table / metric | Rows |
 |---|---:|
-| Components | 458 |
-| DEX files | 458 |
-| Packages | 3002 |
-| Classes | 138859 |
-| Methods | 812975 |
-| Opcodes | 38818 |
-| API references | 954038 |
-| String literals | 142195 |
-| Dependency shapes | 4682 |
-| Class dependencies | 198372 |
-| Opcode n-grams | 1382192 |
-| Call-chain opcode fingerprints | 126337 |
-| Basic-block opcode fingerprints | 611621 |
-| Class-neighbor summaries | 23826 |
-| Field-operation sequences | 80709 |
-| Literal/context features | 225317 |
+| Components | 572 |
+| DEX files | 572 |
+| Packages | 3174 |
+| Classes | 141751 |
+| Methods | 827384 |
+| Opcodes | 43215 |
+| API references | 976835 |
+| String literals | 144412 |
+| Dependency shapes | 5728 |
+| Class dependencies | 203279 |
+| Opcode n-grams | 1424955 |
+| Call-chain opcode fingerprints | 130057 |
+| Basic-block opcode fingerprints | 625916 |
+| Class-neighbor summaries | 25022 |
+| Field-operation sequences | 83713 |
+| Literal/context features | 229580 |
 
 ## Commands
 
@@ -179,4 +199,4 @@ The download step was executed through the Python downloader after sandboxed net
 
 ## Next Batch
 
-Continue source-version downloads with `--limit 100 --offset 700`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`.
+Continue source-version downloads with `--limit 100 --offset 900`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`.
