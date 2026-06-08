@@ -93,37 +93,57 @@ No-bytecode skips in this batch were AndroidX wrapper/platform artifacts. The sk
 
 Download failures were real `404 Not Found` results for `androidx.compose.material:material-icons-extended@1.6.8` and `androidx.compose.runtime:runtime-annotation` versions `1.10.3`, `1.10.4`, `1.10.6`, and `1.11.1`. No-bytecode skips were mostly public Compose wrapper artifacts without `classes.jar`, including `foundation`, `foundation-layout`, `material`, `material-icons-core`, `material-icons-extended`, `material-ripple`, `material3`, adaptive Material3 artifacts, and `runtime`.
 
+## Batch 006
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 300` into `data/reference_db/artifacts_source_observed_versions` | 96 downloaded, 4 failed |
+| Convert | downloaded records after artifact offset `285` into `data/reference_db/dex_source_observed_versions` | 52 converted, 44 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `183` | 52 stored, 0 failed |
+
+Download failures were real `404 Not Found` results for `androidx.compose.runtime:runtime-annotation` versions `1.9.0`, `1.9.2`, `1.9.4`, and `1.9.5`. No-bytecode skips were public Compose runtime/UI wrapper artifacts without `classes.jar`, including `runtime-retain`, `runtime-saveable`, `ui`, `ui-geometry`, and `ui-graphics`.
+
+## Batch 007
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 400` into `data/reference_db/artifacts_source_observed_versions` | 91 downloaded, 9 failed |
+| Convert | downloaded records after artifact offset `381` into `data/reference_db/dex_source_observed_versions` | 52 converted, 39 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `235` | 52 stored, 0 failed |
+
+Download failures were real `404 Not Found` results for `androidx.concurrent:concurrent-futures-ktx` versions `1.1.0`, `1.2.0`, and `1.3.0`; `androidx.constraintlayout:constraintlayout-core` versions `1.0.0`, `1.0.2`, `1.0.4`, `1.1.0`, and `1.1.1`; and `androidx.constraintlayout:constraintlayout-solver@1.1.3`. No-bytecode skips were public Compose UI wrapper artifacts without `classes.jar`, plus `androidx.constraintlayout:constraintlayout-compose@1.1.1`.
+
 ## Current Evaluation-Only DB Totals
 
 | Metric | Value |
 |---|---:|
-| Source-version slots attempted | 300 |
-| Downloaded artifact metadata records | 285 |
-| Download failures recorded | 15 |
-| Converted bytecode artifacts | 183 |
-| No-bytecode conversion skips | 102 |
-| Stored DB components | 183 |
+| Source-version slots attempted | 500 |
+| Downloaded artifact metadata records | 472 |
+| Download failures recorded | 28 |
+| Converted bytecode artifacts | 287 |
+| No-bytecode conversion skips | 185 |
+| Stored DB components | 287 |
 
 Current feature extraction counts:
 
 | Feature table / metric | Rows |
 |---|---:|
-| Components | 183 |
-| DEX files | 183 |
-| Packages | 1229 |
-| Classes | 88993 |
-| Methods | 452319 |
-| Opcodes | 17154 |
-| API references | 528838 |
-| String literals | 83226 |
-| Dependency shapes | 2228 |
-| Class dependencies | 121597 |
-| Opcode n-grams | 701262 |
-| Call-chain opcode fingerprints | 72932 |
-| Basic-block opcode fingerprints | 333054 |
-| Class-neighbor summaries | 12579 |
-| Field-operation sequences | 45185 |
-| Literal/context features | 132222 |
+| Components | 287 |
+| DEX files | 287 |
+| Packages | 2000 |
+| Classes | 117017 |
+| Methods | 669903 |
+| Opcodes | 27210 |
+| API references | 765414 |
+| String literals | 108894 |
+| Dependency shapes | 3276 |
+| Class dependencies | 172864 |
+| Opcode n-grams | 1074611 |
+| Call-chain opcode fingerprints | 102419 |
+| Basic-block opcode fingerprints | 493188 |
+| Class-neighbor summaries | 19147 |
+| Field-operation sequences | 64006 |
+| Literal/context features | 171121 |
 
 ## Commands
 
@@ -139,4 +159,4 @@ The download step was executed through the Python downloader after sandboxed net
 
 ## Next Batch
 
-Continue source-version downloads with `--limit 100 --offset 300`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`.
+Continue source-version downloads with `--limit 100 --offset 500`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`.
