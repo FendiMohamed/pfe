@@ -267,13 +267,13 @@ Evaluation-only DB batch status:
 
 ```text
 batch log -> docs/evaluation/SOURCE_OBSERVED_REFERENCE_DB_BATCH_LOG.md
-batches 000-007 source-version slots attempted -> 500
-downloaded artifact metadata records -> 472
-download failures recorded -> 28
-converted/stored bytecode components -> 287
-no-bytecode conversion skips -> 185
+batches 000-009 source-version slots attempted -> 700
+downloaded artifact metadata records -> 648
+download failures recorded -> 52
+converted/stored bytecode components -> 458
+no-bytecode conversion skips -> 190
 evaluation DB path -> data/reference_db/reference_features_source_observed_versions.sqlite
-next source-version download offset -> 500
+next source-version download offset -> 700
 ```
 
 Optimal lane:
