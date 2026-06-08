@@ -163,37 +163,47 @@ No-bytecode skips were mostly AndroidX Lifecycle wrapper artifacts where the pub
 
 The first two conversion attempts timed out after making progress, so the resumed conversion recorded `58` newly `converted` rows and `25` `existing` rows for bytecode outputs that were already present on disk. Extraction accepts both statuses and stored all `83` bytecode-bearing records. No-bytecode skips were Lifecycle wrapper artifacts, including `androidx.lifecycle:lifecycle-viewmodel-compose`, `androidx.lifecycle:lifecycle-viewmodel-ktx`, and `androidx.lifecycle:lifecycle-viewmodel-savedstate` versions from the `2.8.x`, `2.9.x`, and `2.10.0` bands.
 
+## Batch 013
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 1000` into `data/reference_db/artifacts_source_observed_versions` | 100 downloaded, 0 failed |
+| Convert | downloaded records after artifact offset `939` into `data/reference_db/dex_source_observed_versions` plus a six-record backfill at sorted artifact offset `889` | 68 bytecode-bearing records, 32 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `655`, plus targeted `--coordinate androidx.media:media` extraction | 68 stored, 0 failed |
+
+The download command timed out after writing all `100` metadata records. The first conversion attempt also timed out after progress, and the resumed conversion recorded `43` newly `converted` rows, `25` `existing` rows, and `32` no-bytecode skips across Navigation/NavigationEvent wrapper artifacts. A post-conversion consistency check found six missing conversion records for `androidx.media:media` versions `1.0.0`, `1.4.1`, `1.6.0`, `1.7.0`, `1.7.1`, and `1.8.0`; those were backfilled with `convert-reference-dex --limit 6 --offset 889` and then extracted with `extract-reference-features --coordinate androidx.media:media`. The final DB count matches the bytecode-bearing conversion count.
+
 ## Current Evaluation-Only DB Totals
 
 | Metric | Value |
 |---|---:|
-| Source-version slots attempted | 1000 |
-| Downloaded artifact metadata records | 939 |
+| Source-version slots attempted | 1100 |
+| Downloaded artifact metadata records | 1039 |
 | Download failures recorded | 61 |
-| Bytecode-bearing conversion records | 655 |
-| No-bytecode conversion skips | 284 |
-| Stored DB components | 655 |
+| Bytecode-bearing conversion records | 723 |
+| No-bytecode conversion skips | 316 |
+| Stored DB components | 723 |
 
 Current feature extraction counts:
 
 | Feature table / metric | Rows |
 |---|---:|
-| Components | 655 |
-| DEX files | 655 |
-| Packages | 3548 |
-| Classes | 155753 |
-| Methods | 923875 |
-| Opcodes | 49708 |
-| API references | 1110677 |
-| String literals | 164536 |
-| Dependency shapes | 6595 |
-| Class dependencies | 235674 |
-| Opcode n-grams | 1679545 |
-| Call-chain opcode fingerprints | 147791 |
-| Basic-block opcode fingerprints | 723188 |
-| Class-neighbor summaries | 29212 |
-| Field-operation sequences | 100951 |
-| Literal/context features | 257873 |
+| Components | 723 |
+| DEX files | 723 |
+| Packages | 3867 |
+| Classes | 166633 |
+| Methods | 994278 |
+| Opcodes | 55283 |
+| API references | 1213591 |
+| String literals | 182401 |
+| Dependency shapes | 7416 |
+| Class dependencies | 259600 |
+| Opcode n-grams | 1873290 |
+| Call-chain opcode fingerprints | 163016 |
+| Basic-block opcode fingerprints | 796472 |
+| Class-neighbor summaries | 32363 |
+| Field-operation sequences | 111401 |
+| Literal/context features | 292295 |
 
 ## Commands
 
@@ -209,4 +219,4 @@ The download step was executed through the Python downloader after sandboxed net
 
 ## Next Batch
 
-Continue source-version downloads with `--limit 100 --offset 1000`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`.
+Continue source-version downloads with `--limit 100 --offset 1100`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`.
