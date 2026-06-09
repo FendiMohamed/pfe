@@ -283,15 +283,25 @@ Download failures were real `404 Not Found` results across older Android UI/help
 
 Download failures were real `404 Not Found` results across `com.squareup.sqldelight:android-driver@1.5.4`, Takisoft preference/datetime/color picker rows, `com.tbruyelle.rxpermissions:rxpermissions@0.4.2`, `com.tbuonomo:dotsindicator@4.2`, and several Vanniktech Android-image-cropper/emoji/ui rows. Conversion needed multiple resumes because the first pass timed out partway through the slice, and the final missing artifact was `com.squareup:otto@1.3.8`. No-bytecode skips included `com.vladsch.flexmark:flexmark-util@0.64.8`, where D8 produced no `classes*.dex`. The extractor stored the final two bytecode-bearing rows for this batch, but the stored component table still trails the bytecode-bearing conversion ledger by two rows, so the batch remains explicitly transparent about the current gap: `com.github.houbb:heaven@0.13.0` and `com.squareup:otto@1.3.8` are still not reflected in `components`. After this batch, `2200` of `3347` buildable source-version slots have been attempted and `1147` remain.
 
+## Batch 025
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 2200` into `data/reference_db/artifacts_source_observed_versions` | 49 downloaded, 51 failed |
+| Convert | downloaded records after artifact offset `1758`, resumed in multiple passes, then finished the final missing artifacts at artifact offsets `1805` and `1806` | 23 converted, 26 existing, 0 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `1347` | 0 new stored components, 0 failed |
+
+Download failures were real `404 Not Found` results across Commons Logging, `core:*` rows from the source-observed catalog, `de.c1710` filemoji rows, `de.cketti` changelog and safe-content-resolver rows, `de.hdodenhof:circleimageview`, `dev.chrisbanes` insetter rows, `dev.rikka` shizuku/preference rows, and `eu.chainfire:libsuperuser@1.1.0`. Conversion had to be resumed multiple times because the first run timed out before the tail was complete; the final two artifact rows were `dnsjava:dnsjava@3.6.4` and `eu.agno3.jcifs:jcifs-ng@2.1.10`. No new stored components were added in this batch because the remaining bytecode-bearing rows were already represented in the components table, and the two previously documented open-gap rows remain open for later resolution. After this batch, `2300` of `3347` buildable source-version slots have been attempted and `1047` remain.
+
 ## Current Evaluation-Only DB Totals
 
 | Metric | Value |
 |---|---:|
-| Source-version slots attempted | 2200 |
-| Source-version slots remaining | 1147 |
-| Downloaded artifact metadata records | 1758 |
-| Download failures recorded | 442 |
-| Bytecode-bearing conversion records | 1349 |
+| Source-version slots attempted | 2300 |
+| Source-version slots remaining | 1047 |
+| Downloaded artifact metadata records | 1807 |
+| Download failures recorded | 493 |
+| Bytecode-bearing conversion records | 1398 |
 | No-bytecode conversion skips | 409 |
 | Extraction-blocked bytecode records | 1 |
 | Stored DB components | 1347 |
@@ -331,4 +341,4 @@ The download step was executed through the Python downloader after sandboxed net
 
 ## Next Batch
 
-Continue source-version downloads with `--limit 100 --offset 2200`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`. Keep `com.github.houbb:heaven@0.13.0` documented as extraction-blocked unless the feature extractor later gains surrogate-safe string handling, and keep `com.squareup:otto@1.3.8` in the open-gap note until the stored component table catches up.
+Continue source-version downloads with `--limit 100 --offset 2300`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`. Keep `com.github.houbb:heaven@0.13.0` documented as extraction-blocked unless the feature extractor later gains surrogate-safe string handling, and keep `com.squareup:otto@1.3.8` in the open-gap note until the stored component table catches up.
