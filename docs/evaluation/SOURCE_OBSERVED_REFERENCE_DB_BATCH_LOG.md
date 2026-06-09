@@ -301,41 +301,41 @@ Download failures were real `404 Not Found` results across Commons Logging, `cor
 | Convert | downloaded records after artifact offset `1807`, resumed once for the tail | 10 converted, 16 skipped, 0 failed |
 | Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `1347` | 59 stored, 0 failed |
 
-Download failures were real `404 Not Found` results across `eu.chainfire:libsuperuser@1.1.1`, `eu.davidea:flexible-adapter` rows, and many `feature:*` module coordinates from the source-observed catalog, plus `id.zelory:compressor@2.1.1`, `im.conversations.webrtc:webrtc-android@129.0.0`, and multiple `io.coil-kt.coil3:*` Android-target rows. No-bytecode skips were the `io.coil-kt.coil3` wrapper artifacts where D8 produced no `classes*.dex`. The extractor produced `59` new stored components from the `10` bytecode-bearing rows, but the stored table still trails the conversion ledger by two rows, so `com.github.houbb:heaven@0.13.0` and `com.squareup:otto@1.3.8` remain the open gaps. After this batch, `2400` of `3347` buildable source-version slots have been attempted and `947` remain.
+Download failures were real `404 Not Found` results across `eu.chainfire:libsuperuser@1.1.1`, `eu.davidea:flexible-adapter` rows, and many `feature:*` module coordinates from the source-observed catalog, plus `id.zelory:compressor@2.1.1`, `im.conversations.webrtc:webrtc-android@129.0.0`, and multiple `io.coil-kt.coil3:*` Android-target rows. No-bytecode skips were the `io.coil-kt.coil3` wrapper artifacts where D8 produced no `classes*.dex`. The extractor produced `59` new stored components from the `10` bytecode-bearing rows, but the stored table still trails the conversion ledger by two rows, so `com.github.houbb:heaven@0.13.0` and `com.squareup:otto@1.3.8` remain the open gaps. After this batch, `2400` of `3347` buildable source-version slots had been attempted and `947` remained; later batches exhausted the catalog.
 
 ## Current Evaluation-Only DB Totals
 
 | Metric | Value |
 |---|---:|
-| Source-version slots attempted | 2400 |
-| Source-version slots remaining | 947 |
-| Downloaded artifact metadata records | 1833 |
-| Download failures recorded | 567 |
-| Bytecode-bearing conversion records | 1408 |
-| No-bytecode conversion skips | 425 |
+| Source-version slots attempted | 3347 |
+| Source-version slots remaining | 0 |
+| Downloaded artifact metadata records | 2649 |
+| Download failures recorded | 698 |
+| Bytecode-bearing conversion records | 1427 |
+| No-bytecode conversion skips | 699 |
 | Extraction-blocked bytecode records | 1 |
-| Stored DB components | 1406 |
+| Stored DB components | 1449 |
 
 Current feature extraction counts:
 
 | Feature table / metric | Rows |
 |---|---:|
-| Components | 1406 |
-| DEX files | 1406 |
-| Packages | 9683 |
-| Classes | 313333 |
-| Methods | 2160199 |
-| Opcodes | 111459 |
-| API references | 2488401 |
-| String literals | 417752 |
-| Dependency shapes | 14812 |
-| Class dependencies | 619427 |
-| Opcode n-grams | 3960108 |
-| Call-chain opcode fingerprints | 335722 |
-| Basic-block opcode fingerprints | 1651011 |
-| Class-neighbor summaries | 75448 |
-| Field-operation sequences | 230567 |
-| Literal/context features | 689021 |
+| Components | 1449 |
+| DEX files | 1449 |
+| Packages | 10031 |
+| Classes | 320440 |
+| Methods | 2196638 |
+| Opcodes | 114424 |
+| API references | 2532522 |
+| String literals | 425846 |
+| Dependency shapes | 15276 |
+| Class dependencies | 627642 |
+| Opcode n-grams | 4030990 |
+| Call-chain opcode fingerprints | 342662 |
+| Basic-block opcode fingerprints | 1679519 |
+| Class-neighbor summaries | 76752 |
+| Field-operation sequences | 233669 |
+| Literal/context features | 723326 |
 
 ## Commands
 
@@ -352,3 +352,61 @@ The download step was executed through the Python downloader after sandboxed net
 ## Next Batch
 
 Continue source-version downloads with `--limit 100 --offset 2400`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`. Keep `com.github.houbb:heaven@0.13.0` documented as extraction-blocked unless the feature extractor later gains surrogate-safe string handling, and keep `com.squareup:otto@1.3.8` in the open-gap note until the stored component table catches up.
+
+## Batch 027
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 3200` into `data/reference_db/artifacts_source_observed_versions` | 91 downloaded, 9 failed |
+| Convert | downloaded records after artifact offset `2521` into `data/reference_db/dex_source_observed_versions` | 83 converted, 8 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `2520` | 0 new stored components, 0 failed |
+
+Download failures were real `404 Not Found` results across `org.jitsi:webrtc@124.0.0`, `org.kde.invent.sredman:android-smsmms@kdeconnect-1-21-0`, several `org.maplibre.gl:*` rows, `org.microg:safe-parcel@1.5.0`, and `org.osmdroid:osmdroid-android` versions `6.1.1`, `6.1.18`, and `6.1.20`. No-bytecode skips were `org.jetbrains.kotlinx:kotlinx-serialization-json` versions `1.5.1`, `1.6.2`, `1.6.3`, `1.7.3`, `1.8.1`, `1.9.0`, `org.jetbrains.kotlinx:kotlinx-serialization-json-io@1.11.0`, and `org.kobjects.ktxml:core@1.0.0`, where D8 produced no `classes*.dex`. The extract step added no new stored components because the newly converted rows were already reflected in the shared evaluation DB. After this batch, `2649` downloaded artifact metadata records and `2641` bytecode/no-bytecode conversion records are live in the evaluation-only pipeline, with `8` conversion gaps still open.
+
+## Batch 028
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 3300` into `data/reference_db/artifacts_source_observed_versions` | 37 downloaded, 10 failed |
+| Convert | downloaded records after artifact offset `2612` into `data/reference_db/dex_source_observed_versions` | 37 converted, 0 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `2604` | 0 new stored components, 0 failed |
+
+Download failures were real `404 Not Found` results across `org.sufficientlysecure:html-textview@3.1`, `org.unifiedpush.android:connector@3.0.10` and `3.3.2`, `org.unifiedpush.android:connector-ui@1.1.0`, `org.unifiedpush.android:embedded-fcm-distributor@3.0.0`, `org.videolan.android:libvlc-all@3.7.0`, `org.videolan.android:medialibrary-all@0.13.17`, `org.videolan.android:remote-access@0.17.0`, `pl.droidsonroids.gif:android-gif-drawable@1.2.31`, and `plugins:openpgp-api-lib@openpgp-api`. All 37 downloaded rows were bytecode-bearing and converted cleanly. The evaluation-only DB now reflects the full source-observed catalog attempt set; a final `--offset 3400` download returned zero rows, confirming the catalog is exhausted.
+
+## Current Evaluation-Only DB Totals
+
+| Metric | Value |
+|---|---:|
+| Source-version slots attempted | 3347 |
+| Source-version slots remaining | 0 |
+| Downloaded artifact metadata records | 2649 |
+| Download failures recorded | 698 |
+| Bytecode-bearing conversion records | 1427 |
+| No-bytecode conversion skips | 699 |
+| Extraction-blocked bytecode records | 1 |
+| Stored DB components | 1449 |
+
+Current feature extraction counts:
+
+| Feature table / metric | Rows |
+|---|---:|
+| Components | 1449 |
+| DEX files | 1449 |
+| Packages | 10031 |
+| Classes | 320440 |
+| Methods | 2196638 |
+| Opcodes | 114424 |
+| API references | 2532522 |
+| String literals | 425846 |
+| Dependency shapes | 15276 |
+| Class dependencies | 627642 |
+| Opcode n-grams | 4030990 |
+| Call-chain opcode fingerprints | 342662 |
+| Basic-block opcode fingerprints | 1679519 |
+| Class-neighbor summaries | 76752 |
+| Field-operation sequences | 233669 |
+| Literal/context features | 723326 |
+
+## Next Batch
+
+The source-observed catalog is exhausted, so the next useful work is documentation reconciliation and the follow-on all-versions expansion lane. Keep `com.github.houbb:heaven@0.13.0` documented as extraction-blocked unless surrogate-safe string handling is added, and keep the open-gap note for the eight current conversion misses until a separate reconciliation pass resolves them or explicitly records why they cannot be converted.
