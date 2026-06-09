@@ -1,0 +1,1648 @@
+{
+  "libraries": [
+    {
+      "artifact": "annotation-experimental",
+      "group": "androidx.annotation",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0",
+        "1.1.0",
+        "1.3.0",
+        "1.4.0",
+        "1.4.1",
+        "1.5.0",
+        "1.5.1"
+      ]
+    },
+    {
+      "artifact": "core-runtime",
+      "group": "androidx.arch.core",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.0.0",
+        "2.1.0",
+        "2.2.0"
+      ]
+    },
+    {
+      "artifact": "material-icons-extended",
+      "group": "androidx.compose.material",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.6.8"
+      ]
+    },
+    {
+      "artifact": "runtime-annotation",
+      "group": "androidx.compose.runtime",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.9.0",
+        "1.9.2",
+        "1.9.4",
+        "1.9.5",
+        "1.10.3",
+        "1.10.4",
+        "1.10.6",
+        "1.11.1"
+      ]
+    },
+    {
+      "artifact": "concurrent-futures-ktx",
+      "group": "androidx.concurrent",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.1.0",
+        "1.2.0",
+        "1.3.0"
+      ]
+    },
+    {
+      "artifact": "constraintlayout-core",
+      "group": "androidx.constraintlayout",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0",
+        "1.0.2",
+        "1.0.4",
+        "1.1.0",
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "constraintlayout-solver",
+      "group": "androidx.constraintlayout",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.1.3",
+        "2.0.1"
+      ]
+    },
+    {
+      "artifact": "core-location-altitude-external-protobuf",
+      "group": "androidx.core",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0-beta01",
+        "1.0.0-rc01"
+      ]
+    },
+    {
+      "artifact": "core-location-altitude-proto",
+      "group": "androidx.core",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0-beta01",
+        "1.0.0-rc01"
+      ]
+    },
+    {
+      "artifact": "databinding-common",
+      "group": "androidx.databinding",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "8.1.4",
+        "8.2.2",
+        "8.7.3",
+        "8.13.1",
+        "8.13.2",
+        "9.0.1",
+        "9.1.0"
+      ]
+    },
+    {
+      "artifact": "datastore-core",
+      "group": "androidx.datastore",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "datastore-core-okio",
+      "group": "androidx.datastore",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.0"
+      ]
+    },
+    {
+      "artifact": "datastore-core-okio-jvm",
+      "group": "androidx.datastore",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.0"
+      ]
+    },
+    {
+      "artifact": "datastore-preferences-external-protobuf",
+      "group": "androidx.datastore",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.0"
+      ]
+    },
+    {
+      "artifact": "datastore-preferences-proto",
+      "group": "androidx.datastore",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.0"
+      ]
+    },
+    {
+      "artifact": "glance-appwidget-external-protobuf",
+      "group": "androidx.glance",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "glance-appwidget-proto",
+      "group": "androidx.glance",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "connect-client-external-protobuf",
+      "group": "androidx.health.connect",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "connect-client-proto",
+      "group": "androidx.health.connect",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "hilt-common",
+      "group": "androidx.hilt",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0",
+        "1.2.0",
+        "1.3.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-common-jvm",
+      "group": "androidx.lifecycle",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.8.2",
+        "2.8.4",
+        "2.8.6",
+        "2.8.7",
+        "2.9.0",
+        "2.9.1",
+        "2.9.3",
+        "2.9.4",
+        "2.10.0"
+      ]
+    },
+    {
+      "artifact": "paging-common-ktx",
+      "group": "androidx.paging",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "3.1.1",
+        "3.2.1",
+        "3.3.6",
+        "3.5.0"
+      ]
+    },
+    {
+      "artifact": "resourceinspection-annotation",
+      "group": "androidx.resourceinspection",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.1"
+      ]
+    },
+    {
+      "artifact": "room-common-jvm",
+      "group": "androidx.room",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.7.0",
+        "2.7.1",
+        "2.7.2",
+        "2.8.0",
+        "2.8.4"
+      ]
+    },
+    {
+      "artifact": "window-core",
+      "group": "androidx.window",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.4.0",
+        "1.5.0"
+      ]
+    },
+    {
+      "artifact": "billing",
+      "group": "com.android.billingclient",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "8.3.0"
+      ]
+    },
+    {
+      "artifact": "volley",
+      "group": "com.android.volley",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "GlideToVectorYou",
+      "group": "com.github.2coffees1team",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v2.0.0"
+      ]
+    },
+    {
+      "artifact": "jaudiotagger",
+      "group": "com.github.Adonai",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.3.15"
+      ]
+    },
+    {
+      "artifact": "AndroidChart",
+      "group": "com.github.AppDevNext",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.1.0.31"
+      ]
+    },
+    {
+      "artifact": "AppIntro",
+      "group": "com.github.AppIntro",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "6.2.0",
+        "6.3.1"
+      ]
+    },
+    {
+      "artifact": "PhotoView",
+      "group": "com.github.Baseflow",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.3.0"
+      ]
+    },
+    {
+      "artifact": "SearchPreference",
+      "group": "com.github.ByteHamster",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.7.3",
+        "v2.3.0"
+      ]
+    },
+    {
+      "artifact": "Android-XML-to-PDF-Generator",
+      "group": "com.github.Gkemon",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.6.8"
+      ]
+    },
+    {
+      "artifact": "TextFieldBoxes",
+      "group": "com.github.HITGIF",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.4.5"
+      ]
+    },
+    {
+      "artifact": "osmbonuspack",
+      "group": "com.github.MKergall",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "6.9.0"
+      ]
+    },
+    {
+      "artifact": "TouchImageView",
+      "group": "com.github.MikeOrtiz",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.7.1"
+      ]
+    },
+    {
+      "artifact": "MPAndroidChart",
+      "group": "com.github.PhilJay",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.1.0",
+        "v2.2.5",
+        "v3.0.3",
+        "v3.1.0"
+      ]
+    },
+    {
+      "artifact": "gene-rate",
+      "group": "com.github.Pixplicity",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v1.1.8"
+      ]
+    },
+    {
+      "artifact": "ors-android-client",
+      "group": "com.github.Pygmalion69",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.3.1"
+      ]
+    },
+    {
+      "artifact": "dbflow",
+      "group": "com.github.Raizlabs.DBFlow",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "4.2.4"
+      ]
+    },
+    {
+      "artifact": "dbflow-core",
+      "group": "com.github.Raizlabs.DBFlow",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "4.2.4"
+      ]
+    },
+    {
+      "artifact": "html-textview",
+      "group": "com.github.SufficientlySecure",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v3.6"
+      ]
+    },
+    {
+      "artifact": "NewPipeExtractor",
+      "group": "com.github.TeamNewPipe",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v0.26.1"
+      ]
+    },
+    {
+      "artifact": "NoNonsense-FilePicker",
+      "group": "com.github.TeamNewPipe",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "5.0.0"
+      ]
+    },
+    {
+      "artifact": "nanojson",
+      "group": "com.github.TeamNewPipe",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "e9d656ddb49a412a5a0a5d5ef20ca7ef09549996"
+      ]
+    },
+    {
+      "artifact": "GlyphConverter",
+      "group": "com.github.ThothDroid",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.7.0"
+      ]
+    },
+    {
+      "artifact": "MAAT",
+      "group": "com.github.ThothDroid",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.5.1"
+      ]
+    },
+    {
+      "artifact": "SignProvider",
+      "group": "com.github.ThothDroid",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.2"
+      ]
+    },
+    {
+      "artifact": "THOTH",
+      "group": "com.github.ThothDroid",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.0.4.1"
+      ]
+    },
+    {
+      "artifact": "commons",
+      "group": "com.github.afollestad.material-dialogs",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.9.6.0"
+      ]
+    },
+    {
+      "artifact": "core",
+      "group": "com.github.afollestad.material-dialogs",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.9.6.0"
+      ]
+    },
+    {
+      "artifact": "fzf4j",
+      "group": "com.github.aivanovski",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.2.1"
+      ]
+    },
+    {
+      "artifact": "keepass-tree-builder",
+      "group": "com.github.aivanovski",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.4.0"
+      ]
+    },
+    {
+      "artifact": "keepass-tree-diff",
+      "group": "com.github.aivanovski",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.4.0"
+      ]
+    },
+    {
+      "artifact": "appintro",
+      "group": "com.github.apl-devs",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v4.2.3"
+      ]
+    },
+    {
+      "artifact": "patternlockview",
+      "group": "com.github.aritraroy.PatternLockView",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "a90b0d4bf0"
+      ]
+    },
+    {
+      "artifact": "krop",
+      "group": "com.github.avito-tech",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.52"
+      ]
+    },
+    {
+      "artifact": "immersivelock",
+      "group": "com.github.babydots",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.2"
+      ]
+    },
+    {
+      "artifact": "Treessence",
+      "group": "com.github.bastienpaulfr",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.5"
+      ]
+    },
+    {
+      "artifact": "synctools",
+      "group": "com.github.bitfireAT",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "06f2de81e1"
+      ]
+    },
+    {
+      "artifact": "cert4android",
+      "group": "com.github.bitfireat",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "b8e2d33f09"
+      ]
+    },
+    {
+      "artifact": "dav4jvm",
+      "group": "com.github.bitfireat",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1f2f5a7793"
+      ]
+    },
+    {
+      "artifact": "fadingedgelayout",
+      "group": "com.github.bosphere.android-fadingedgelayout",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "filelogger",
+      "group": "com.github.bosphere.android-filelogger",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.7"
+      ]
+    },
+    {
+      "artifact": "disklrucache",
+      "group": "com.github.bumptech.glide",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "5.0.5"
+      ]
+    },
+    {
+      "artifact": "gifdecoder",
+      "group": "com.github.bumptech.glide",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "4.8.0",
+        "4.9.0",
+        "5.0.5"
+      ]
+    },
+    {
+      "artifact": "okhttp3-integration",
+      "group": "com.github.bumptech.glide",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "5.0.5"
+      ]
+    },
+    {
+      "artifact": "ExpandableLayout",
+      "group": "com.github.cachapa",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.9.2"
+      ]
+    },
+    {
+      "artifact": "PhotoView",
+      "group": "com.github.chrisbanes",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.3.0"
+      ]
+    },
+    {
+      "artifact": "fab",
+      "group": "com.github.clans",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.6.4"
+      ]
+    },
+    {
+      "artifact": "subsampling-scale-image-view",
+      "group": "com.github.cryptomator",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.10.1-dev.0002"
+      ]
+    },
+    {
+      "artifact": "QuickPermissions-Kotlin",
+      "group": "com.github.cyb3rko",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.1.6"
+      ]
+    },
+    {
+      "artifact": "material-about-library",
+      "group": "com.github.daniel-stoneuk",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.2.4",
+        "3.1.2"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "com.github.devgianlu.MaterialPreferences",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "cbb81daaed"
+      ]
+    },
+    {
+      "artifact": "android-simple-tooltip",
+      "group": "com.github.douglasjunior",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.2.2",
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "TableView",
+      "group": "com.github.evrencoskun",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v0.8.9.4"
+      ]
+    },
+    {
+      "artifact": "Omni-Notes-Commons",
+      "group": "com.github.federicoiosue",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.4.0"
+      ]
+    },
+    {
+      "artifact": "Springpad-Importer",
+      "group": "com.github.federicoiosue",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.1"
+      ]
+    },
+    {
+      "artifact": "checklistview",
+      "group": "com.github.federicoiosue",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "4.1.0"
+      ]
+    },
+    {
+      "artifact": "pixlui",
+      "group": "com.github.federicoiosue",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.1"
+      ]
+    },
+    {
+      "artifact": "simplegallery",
+      "group": "com.github.federicoiosue",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.1"
+      ]
+    },
+    {
+      "artifact": "smart-location-lib",
+      "group": "com.github.federicoiosue",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.2.6"
+      ]
+    },
+    {
+      "artifact": "android-preferences",
+      "group": "com.github.firebirdberlin",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "36.0.5"
+      ]
+    },
+    {
+      "artifact": "tab-digit",
+      "group": "com.github.firebirdberlin",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v36.0.3"
+      ]
+    },
+    {
+      "artifact": "expansionpanel",
+      "group": "com.github.florent37",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "changelog",
+      "group": "com.github.gabrielemariotti.changeloglib",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.1.0"
+      ]
+    },
+    {
+      "artifact": "sdk",
+      "group": "com.github.hCaptcha.hcaptcha-android-sdk",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "4.4.0"
+      ]
+    },
+    {
+      "artifact": "MagicIndicator",
+      "group": "com.github.hackware1993",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.7.0"
+      ]
+    },
+    {
+      "artifact": "android-file-chooser",
+      "group": "com.github.hedzr",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v1.2.0-final"
+      ]
+    },
+    {
+      "artifact": "android-snowfall",
+      "group": "com.github.jetradarmobile",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "NewPipeExtractor",
+      "group": "com.github.libre-tube",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0c7e95b"
+      ]
+    },
+    {
+      "artifact": "groupie",
+      "group": "com.github.lisawray.groupie",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.10.1"
+      ]
+    },
+    {
+      "artifact": "groupie-viewbinding",
+      "group": "com.github.lisawray.groupie",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.10.1"
+      ]
+    },
+    {
+      "artifact": "bridge",
+      "group": "com.github.livefront",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v2.0.2"
+      ]
+    },
+    {
+      "artifact": "pikolo",
+      "group": "com.github.madrapps",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.0.2"
+      ]
+    },
+    {
+      "artifact": "mapsforge-core",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map-android",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map-reader",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-themes",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "hsv-alpha-color-picker-android",
+      "group": "com.github.martin-stone",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.1",
+        "3.1.0"
+      ]
+    },
+    {
+      "artifact": "android-about-page",
+      "group": "com.github.medyo",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.3"
+      ]
+    },
+    {
+      "artifact": "fyydlin",
+      "group": "com.github.mfietz",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "e1d25f347641fe5e26c4c2b9756d4e9001a398dd"
+      ]
+    },
+    {
+      "artifact": "android-library",
+      "group": "com.github.nextcloud",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "cd6ef9c073cd7c23bd36f9712d1f8c1030cc6804"
+      ]
+    },
+    {
+      "artifact": "qrcodescanner",
+      "group": "com.github.nextcloud-deps",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.1.2.4"
+      ]
+    },
+    {
+      "artifact": "sectioned-recyclerview",
+      "group": "com.github.nextcloud-deps",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.6.1"
+      ]
+    },
+    {
+      "artifact": "core",
+      "group": "com.github.nextcloud.android-common",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.33.2"
+      ]
+    },
+    {
+      "artifact": "material-color-utilities",
+      "group": "com.github.nextcloud.android-common",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.33.2"
+      ]
+    },
+    {
+      "artifact": "ui",
+      "group": "com.github.nextcloud.android-common",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.33.2"
+      ]
+    },
+    {
+      "artifact": "richeditor-android",
+      "group": "com.github.niendo1",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.4"
+      ]
+    },
+    {
+      "artifact": "openpgp-api",
+      "group": "com.github.open-keychain.open-keychain",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v5.7.1"
+      ]
+    },
+    {
+      "artifact": "android-dav",
+      "group": "com.github.opencloud-eu",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "oc_support_2.1.5"
+      ]
+    },
+    {
+      "artifact": "dav4android",
+      "group": "com.github.owncloud",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "oc_support_2.1.5"
+      ]
+    },
+    {
+      "artifact": "appintro",
+      "group": "com.github.paolorotolo",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.3.0"
+      ]
+    },
+    {
+      "artifact": "apng",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "avif",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "awebp",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "frameanimation",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "gif",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "glide-plugin",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "material-calendarview",
+      "group": "com.github.prolificinteractive",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.6.1",
+        "2.0.1"
+      ]
+    },
+    {
+      "artifact": "reactivenetwork-rx2",
+      "group": "com.github.pwittchen",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.8"
+      ]
+    },
+    {
+      "artifact": "totp-kt",
+      "group": "com.github.robinohs",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v1.0.0"
+      ]
+    },
+    {
+      "artifact": "Material-ViewPagerIndicator",
+      "group": "com.github.ronaldsmartin",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.4"
+      ]
+    },
+    {
+      "artifact": "bottomsheetbuilder",
+      "group": "com.github.rubensousa",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.6.1"
+      ]
+    },
+    {
+      "artifact": "file-dialogs",
+      "group": "com.github.rustamg",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0"
+      ]
+    },
+    {
+      "artifact": "indeterminate-checkbox",
+      "group": "com.github.sevar83",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.5"
+      ]
+    },
+    {
+      "artifact": "SJ-Dialog",
+      "group": "com.github.sj14apps",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.7.0.1"
+      ]
+    },
+    {
+      "artifact": "balloon",
+      "group": "com.github.skydoves",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.5.3",
+        "1.7.6"
+      ]
+    },
+    {
+      "artifact": "colorpickerview",
+      "group": "com.github.skydoves",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.4.0"
+      ]
+    },
+    {
+      "artifact": "compose-stability-runtime-android",
+      "group": "com.github.skydoves",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.7.1"
+      ]
+    },
+    {
+      "artifact": "landscapist-android",
+      "group": "com.github.skydoves",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.9.5"
+      ]
+    },
+    {
+      "artifact": "landscapist-coil3-android",
+      "group": "com.github.skydoves",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.9.5"
+      ]
+    },
+    {
+      "artifact": "disk-lru-cache",
+      "group": "com.github.solkin",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.2"
+      ]
+    },
+    {
+      "artifact": "sardine-android",
+      "group": "com.github.thegrizzlylabs",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.8"
+      ]
+    },
+    {
+      "artifact": "MPAndroidChart",
+      "group": "com.github.thuryn",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v4.0.4"
+      ]
+    },
+    {
+      "artifact": "android-gpx-parser",
+      "group": "com.github.ticofab",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.3.1"
+      ]
+    },
+    {
+      "artifact": "logback-android",
+      "group": "com.github.tony19",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "core",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "5.2.2",
+        "6.0.0"
+      ]
+    },
+    {
+      "artifact": "io",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "6.0.0"
+      ]
+    },
+    {
+      "artifact": "nio",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "6.0.0"
+      ]
+    },
+    {
+      "artifact": "service",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "5.2.2",
+        "6.0.0"
+      ]
+    },
+    {
+      "artifact": "android-lockpattern",
+      "group": "com.github.ukanth",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "8.0.4"
+      ]
+    },
+    {
+      "artifact": "contract",
+      "group": "com.github.wax911.android-emojify",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.9.7"
+      ]
+    },
+    {
+      "artifact": "emojify",
+      "group": "com.github.wax911.android-emojify",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.9.7"
+      ]
+    },
+    {
+      "artifact": "gson",
+      "group": "com.github.wax911.android-emojify",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.9.7"
+      ]
+    },
+    {
+      "artifact": "FreeDroidWarn",
+      "group": "com.github.woheller69",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "V1.11",
+        "V1.13"
+      ]
+    },
+    {
+      "artifact": "SimplyPDF",
+      "group": "com.github.wwdablu",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.1.1"
+      ]
+    },
+    {
+      "artifact": "RecyclerViewSwipeDecorator",
+      "group": "com.github.xabaras",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.3"
+      ]
+    },
+    {
+      "artifact": "ambilwarna",
+      "group": "com.github.yukuku",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.0.1"
+      ]
+    },
+    {
+      "artifact": "material-popup-menu",
+      "group": "com.github.zawadz88.materialpopupmenu",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "dav4jvm",
+      "group": "com.github.zhanghai",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "c317607"
+      ]
+    },
+    {
+      "artifact": "accompanist-drawablepainter",
+      "group": "com.google.accompanist",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "0.36.0",
+        "0.37.3"
+      ]
+    },
+    {
+      "artifact": "accompanist-permissions",
+      "group": "com.google.accompanist",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "0.37.3"
+      ]
+    },
+    {
+      "artifact": "dashclock-api",
+      "group": "com.google.android.apps.dashclock",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.0.0"
+      ]
+    },
+    {
+      "artifact": "firebase-encoders",
+      "group": "com.google.firebase",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "17.0.0"
+      ]
+    },
+    {
+      "artifact": "firebase-encoders-proto",
+      "group": "com.google.firebase",
+      "notes": "Retry config generated from source-observed failed downloads; uses alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "16.0.0"
+      ]
+    }
+  ]
+}

@@ -410,3 +410,35 @@ Current feature extraction counts:
 ## Next Batch
 
 The source-observed catalog is exhausted, so the next useful work is documentation reconciliation and the follow-on all-versions expansion lane. Keep `com.github.houbb:heaven@0.13.0` documented as extraction-blocked unless surrogate-safe string handling is added, and keep the open-gap note for the eight current conversion misses until a separate reconciliation pass resolves them or explicitly records why they cannot be converted.
+
+## Failed Download Retry 001
+
+| Step | Command scope | Result |
+|---|---|---|
+| Classify | `python scripts\build_source_observed_failed_download_retry_plan.py` | 698 reconstructed failed downloads; 222 automatic retry candidates |
+| Download | `configs/libraries.source_observed_failed_retry_alt_packaging.json` into `data/reference_db/artifacts_source_observed_failed_retry_alt_packaging` | 164 downloaded, 58 still failed |
+| Convert | retry artifacts into `data/reference_db/dex_source_observed_failed_retry_alt_packaging` | 148 converted, 16 skipped, 0 failed |
+| Extract | append retry DEX into `data/reference_db/reference_features_source_observed_versions.sqlite` | 148 stored, 0 failed |
+
+This retry pass attacks the earlier failed-download pool instead of moving directly to all-versions expansion. The generated plan reconstructs the `698` failed source-version rows by subtracting downloaded artifact metadata from `configs/libraries.source_observed_versions.json`, then classifies them into retry classes: `81` Google alternate-packaging rows, `141` JitPack candidates, `84` source-module aliases, `25` bad source-version strings, `10` Kotlin/toolchain boundary rows, `5` legacy support aliases, `3` special repository candidates, and `349` manual repository or unavailable rows. The automatic retry config recovered `164` artifacts; `148` of those produced bytecode and were stored in the evaluation-only DB. The DB now has `1597` stored components.
+
+Current retry feature extraction counts:
+
+| Feature table / metric | Rows |
+|---|---:|
+| Components | 1597 |
+| DEX files | 1597 |
+| Packages | 10613 |
+| Classes | 330796 |
+| Methods | 2303034 |
+| Opcodes | 124387 |
+| API references | 2646899 |
+| String literals | 441439 |
+| Dependency shapes | 16858 |
+| Class dependencies | 654373 |
+| Opcode n-grams | 4261256 |
+| Call-chain opcode fingerprints | 356825 |
+| Basic-block opcode fingerprints | 1758289 |
+| Class-neighbor summaries | 81047 |
+| Field-operation sequences | 246630 |
+| Literal/context features | 750342 |
