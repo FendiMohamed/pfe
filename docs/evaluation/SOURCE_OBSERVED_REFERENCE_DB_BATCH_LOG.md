@@ -442,3 +442,38 @@ Current retry feature extraction counts:
 | Class-neighbor summaries | 81047 |
 | Field-operation sequences | 246630 |
 | Literal/context features | 750342 |
+
+## Failed Download Retry 002
+
+| Step | Command scope | Result |
+|---|---|---|
+| Generate | rerun `scripts\build_source_observed_failed_download_retry_plan.py` | added Maven Central AAR and normalized-alias retry configs |
+| Download AAR retry | `configs/libraries.source_observed_failed_retry_default_aar.json` into `data/reference_db/artifacts_source_observed_failed_retry_default_aar` | 336 downloaded, 157 still failed |
+| Download alias retry | `configs/libraries.source_observed_failed_retry_alias_normalized.json` into `data/reference_db/artifacts_source_observed_failed_retry_alias_normalized` | 16 downloaded, 8 still failed |
+| Convert AAR retry | AAR retry artifacts into `data/reference_db/dex_source_observed_failed_retry_default_aar` | 326 converted, 10 skipped, 0 failed |
+| Convert alias retry | alias retry artifacts into `data/reference_db/dex_source_observed_failed_retry_alias_normalized` | 15 converted, 1 skipped, 0 failed |
+| Extract AAR retry | append AAR retry DEX into `data/reference_db/reference_features_source_observed_versions.sqlite` | 326 stored, 0 failed |
+| Extract alias retry | append alias retry DEX into `data/reference_db/reference_features_source_observed_versions.sqlite` | 15 processed/stored statuses, 1 net new component, 0 failed |
+
+This second retry pass addresses the user's concern that `1427` bytecode-bearing rows was too low by reattempting fixable failed downloads before all-versions expansion. The broader Maven Central AAR retry recovered `336` artifacts and `326` bytecode-bearing conversion records. The normalized-alias retry recovered `16` artifacts and `15` bytecode-bearing conversion records, but most alias-normalized rows were already represented in the DB, so the net component table increased by `1` during that final alias extraction. Across retry passes 001 and 002, the failed-download recovery lane recovered `516` artifacts, converted `489` bytecode-bearing records, and raised the evaluation-only DB from `1449` to `1924` stored components.
+
+Current post-retry feature extraction counts:
+
+| Feature table / metric | Rows |
+|---|---:|
+| Components | 1924 |
+| DEX files | 1924 |
+| Packages | 12227 |
+| Classes | 351066 |
+| Methods | 2440517 |
+| Opcodes | 146694 |
+| API references | 2852551 |
+| String literals | 495800 |
+| Dependency shapes | 20153 |
+| Class dependencies | 693724 |
+| Opcode n-grams | 4671173 |
+| Call-chain opcode fingerprints | 386334 |
+| Basic-block opcode fingerprints | 1890389 |
+| Class-neighbor summaries | 89051 |
+| Field-operation sequences | 268318 |
+| Literal/context features | 833814 |

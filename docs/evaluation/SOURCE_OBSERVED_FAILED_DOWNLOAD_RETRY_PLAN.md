@@ -12,6 +12,8 @@ This plan reconstructs failed source-observed downloads from the source-version 
 | Downloaded artifact metadata records | 2649 |
 | Reconstructed failed downloads | 698 |
 | Alt-packaging/repository retry versions | 222 |
+| Maven Central AAR retry versions | 493 |
+| Normalized alias retry versions | 24 |
 
 ## Retry Classes
 
@@ -54,6 +56,8 @@ This plan reconstructs failed source-observed downloads from the source-version 
 ## Retry Configs
 
 - Alt packaging/repository retry config: `configs/libraries.source_observed_failed_retry_alt_packaging.json`
+- Maven Central AAR retry config: `configs/libraries.source_observed_failed_retry_default_aar.json`
+- Normalized alias retry config: `configs/libraries.source_observed_failed_retry_alias_normalized.json`
 
 ## Next Step
 

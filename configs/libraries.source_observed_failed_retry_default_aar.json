@@ -1,0 +1,3761 @@
+{
+  "libraries": [
+    {
+      "artifact": "sparkbutton-compose",
+      "group": "at.connyduck.sparkbutton",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0-beta1"
+      ]
+    },
+    {
+      "artifact": "customactivityoncrash",
+      "group": "cat.ereza",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.4.0"
+      ]
+    },
+    {
+      "artifact": "acra",
+      "group": "ch.acra",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.11.1"
+      ]
+    },
+    {
+      "artifact": "acra-core",
+      "group": "ch.acra",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.8.3",
+        "5.11.2",
+        "5.12.0",
+        "5.13.1"
+      ]
+    },
+    {
+      "artifact": "acra-dialog",
+      "group": "ch.acra",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.8.3",
+        "5.12.0"
+      ]
+    },
+    {
+      "artifact": "acra-http",
+      "group": "ch.acra",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.11.2",
+        "5.13.1"
+      ]
+    },
+    {
+      "artifact": "acra-mail",
+      "group": "ch.acra",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.8.3",
+        "5.12.0"
+      ]
+    },
+    {
+      "artifact": "acra-notification",
+      "group": "ch.acra",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.13.1"
+      ]
+    },
+    {
+      "artifact": "acra-toast",
+      "group": "ch.acra",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.11.2"
+      ]
+    },
+    {
+      "artifact": "material-cab",
+      "group": "com.afollestad",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.1"
+      ]
+    },
+    {
+      "artifact": "viewpagerdots",
+      "group": "com.afollestad",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "color",
+      "group": "com.afollestad.material-dialogs",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "commons",
+      "group": "com.afollestad.material-dialogs",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.9.6.0"
+      ]
+    },
+    {
+      "artifact": "core",
+      "group": "com.afollestad.material-dialogs",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.9.6.0",
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "input",
+      "group": "com.afollestad.material-dialogs",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "lottie",
+      "group": "com.airbnb.android",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.0.3",
+        "6.6.0"
+      ]
+    },
+    {
+      "artifact": "pinentryedittext",
+      "group": "com.alimuzaffar.lib",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.6"
+      ]
+    },
+    {
+      "artifact": "patternlockview",
+      "group": "com.andrognito.patternlockview",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "pinlockview",
+      "group": "com.andrognito.pinlockview",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.0"
+      ]
+    },
+    {
+      "artifact": "androidplot-core",
+      "group": "com.androidplot",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.11"
+      ]
+    },
+    {
+      "artifact": "sublimepickerlibrary",
+      "group": "com.appeaser.sublimepickerlibrary",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.2"
+      ]
+    },
+    {
+      "artifact": "certificatetransparency-android",
+      "group": "com.appmattus.certificatetransparency",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.7.0"
+      ]
+    },
+    {
+      "artifact": "proguard-rules",
+      "group": "com.artemzin.rxjava",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.3.3.0"
+      ]
+    },
+    {
+      "artifact": "jwtdecode",
+      "group": "com.auth0.android",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.2"
+      ]
+    },
+    {
+      "artifact": "ChipsLayoutManager",
+      "group": "com.beloo.widget",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.3.7"
+      ]
+    },
+    {
+      "artifact": "androidsvg-aar",
+      "group": "com.caverock",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.3",
+        "1.4"
+      ]
+    },
+    {
+      "artifact": "bottomsheet",
+      "group": "com.cocosw",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.0"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "com.code-troopers.betterpickers",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.1.0"
+      ]
+    },
+    {
+      "artifact": "subsampling-scale-image-view-androidx",
+      "group": "com.davemorrissey.labs",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.10.0"
+      ]
+    },
+    {
+      "artifact": "williamchart",
+      "group": "com.diogobernardino",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.2"
+      ]
+    },
+    {
+      "artifact": "drawer",
+      "group": "com.drakeet.drawer",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.3"
+      ]
+    },
+    {
+      "artifact": "multitype",
+      "group": "com.drakeet.multitype",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.3.0"
+      ]
+    },
+    {
+      "artifact": "rangebar",
+      "group": "com.edmodo",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "recyclerview-stickyheaders",
+      "group": "com.eowise",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.5.2"
+      ]
+    },
+    {
+      "artifact": "android-state",
+      "group": "com.evernote",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.4.1"
+      ]
+    },
+    {
+      "artifact": "uri-kmp-android",
+      "group": "com.eygraber",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.0.21"
+      ]
+    },
+    {
+      "artifact": "fbjni",
+      "group": "com.facebook.fbjni",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.7.0"
+      ]
+    },
+    {
+      "artifact": "drawee",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "fbcore",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "fresco",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "imagepipeline",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "imagepipeline-base",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "imagepipeline-native",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "imagepipeline-okhttp3",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "memory-type-ashmem",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "memory-type-java",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "memory-type-native",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "middleware",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "nativeimagefilters",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "nativeimagetranscoder",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "soloader",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "ui-common",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "ui-core",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "urimod",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "vito-source",
+      "group": "com.facebook.fresco",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "hermes-android",
+      "group": "com.facebook.react",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.77.2"
+      ]
+    },
+    {
+      "artifact": "react-android",
+      "group": "com.facebook.react",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.77.2"
+      ]
+    },
+    {
+      "artifact": "shimmer",
+      "group": "com.facebook.shimmer",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.5.0"
+      ]
+    },
+    {
+      "artifact": "soloader",
+      "group": "com.facebook.soloader",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.12.1"
+      ]
+    },
+    {
+      "artifact": "nordpol-android",
+      "group": "com.fidesmo",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.1.22"
+      ]
+    },
+    {
+      "artifact": "parallaxeverywhere",
+      "group": "com.fmsirvent",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.4"
+      ]
+    },
+    {
+      "artifact": "floatingactionbutton",
+      "group": "com.getbase",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.10.1"
+      ]
+    },
+    {
+      "artifact": "relinker",
+      "group": "com.getkeepsafe.relinker",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.4.5"
+      ]
+    },
+    {
+      "artifact": "taptargetview",
+      "group": "com.getkeepsafe.taptargetview",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.13.2"
+      ]
+    },
+    {
+      "artifact": "GlideToVectorYou",
+      "group": "com.github.2coffees1team",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "v2.0.0"
+      ]
+    },
+    {
+      "artifact": "jaudiotagger",
+      "group": "com.github.Adonai",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.3.15"
+      ]
+    },
+    {
+      "artifact": "AndroidChart",
+      "group": "com.github.AppDevNext",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.1.0.31"
+      ]
+    },
+    {
+      "artifact": "AppIntro",
+      "group": "com.github.AppIntro",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "6.2.0",
+        "6.3.1"
+      ]
+    },
+    {
+      "artifact": "PhotoView",
+      "group": "com.github.Baseflow",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.3.0"
+      ]
+    },
+    {
+      "artifact": "SearchPreference",
+      "group": "com.github.ByteHamster",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.7.3",
+        "v2.3.0"
+      ]
+    },
+    {
+      "artifact": "Android-XML-to-PDF-Generator",
+      "group": "com.github.Gkemon",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.6.8"
+      ]
+    },
+    {
+      "artifact": "TextFieldBoxes",
+      "group": "com.github.HITGIF",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.4.5"
+      ]
+    },
+    {
+      "artifact": "osmbonuspack",
+      "group": "com.github.MKergall",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "6.9.0"
+      ]
+    },
+    {
+      "artifact": "TouchImageView",
+      "group": "com.github.MikeOrtiz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.7.1"
+      ]
+    },
+    {
+      "artifact": "MPAndroidChart",
+      "group": "com.github.PhilJay",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.1.0",
+        "v2.2.5",
+        "v3.0.3",
+        "v3.1.0"
+      ]
+    },
+    {
+      "artifact": "gene-rate",
+      "group": "com.github.Pixplicity",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "v1.1.8"
+      ]
+    },
+    {
+      "artifact": "ors-android-client",
+      "group": "com.github.Pygmalion69",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.3.1"
+      ]
+    },
+    {
+      "artifact": "dbflow",
+      "group": "com.github.Raizlabs.DBFlow",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.2.4"
+      ]
+    },
+    {
+      "artifact": "dbflow-core",
+      "group": "com.github.Raizlabs.DBFlow",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.2.4"
+      ]
+    },
+    {
+      "artifact": "html-textview",
+      "group": "com.github.SufficientlySecure",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "v3.6"
+      ]
+    },
+    {
+      "artifact": "NewPipeExtractor",
+      "group": "com.github.TeamNewPipe",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "v0.26.1"
+      ]
+    },
+    {
+      "artifact": "NoNonsense-FilePicker",
+      "group": "com.github.TeamNewPipe",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.0.0"
+      ]
+    },
+    {
+      "artifact": "nanojson",
+      "group": "com.github.TeamNewPipe",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "e9d656ddb49a412a5a0a5d5ef20ca7ef09549996"
+      ]
+    },
+    {
+      "artifact": "GlyphConverter",
+      "group": "com.github.ThothDroid",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.7.0"
+      ]
+    },
+    {
+      "artifact": "MAAT",
+      "group": "com.github.ThothDroid",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.1"
+      ]
+    },
+    {
+      "artifact": "SignProvider",
+      "group": "com.github.ThothDroid",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.2"
+      ]
+    },
+    {
+      "artifact": "THOTH",
+      "group": "com.github.ThothDroid",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.4.1"
+      ]
+    },
+    {
+      "artifact": "commons",
+      "group": "com.github.afollestad.material-dialogs",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.9.6.0"
+      ]
+    },
+    {
+      "artifact": "core",
+      "group": "com.github.afollestad.material-dialogs",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.9.6.0"
+      ]
+    },
+    {
+      "artifact": "fzf4j",
+      "group": "com.github.aivanovski",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.2.1"
+      ]
+    },
+    {
+      "artifact": "keepass-tree-builder",
+      "group": "com.github.aivanovski",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.4.0"
+      ]
+    },
+    {
+      "artifact": "keepass-tree-diff",
+      "group": "com.github.aivanovski",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.4.0"
+      ]
+    },
+    {
+      "artifact": "appintro",
+      "group": "com.github.apl-devs",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "v4.2.3"
+      ]
+    },
+    {
+      "artifact": "patternlockview",
+      "group": "com.github.aritraroy.PatternLockView",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "a90b0d4bf0"
+      ]
+    },
+    {
+      "artifact": "krop",
+      "group": "com.github.avito-tech",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.52"
+      ]
+    },
+    {
+      "artifact": "immersivelock",
+      "group": "com.github.babydots",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.2"
+      ]
+    },
+    {
+      "artifact": "Treessence",
+      "group": "com.github.bastienpaulfr",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.5"
+      ]
+    },
+    {
+      "artifact": "synctools",
+      "group": "com.github.bitfireAT",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "06f2de81e1"
+      ]
+    },
+    {
+      "artifact": "cert4android",
+      "group": "com.github.bitfireat",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "b8e2d33f09"
+      ]
+    },
+    {
+      "artifact": "dav4jvm",
+      "group": "com.github.bitfireat",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1f2f5a7793"
+      ]
+    },
+    {
+      "artifact": "fadingedgelayout",
+      "group": "com.github.bosphere.android-fadingedgelayout",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "filelogger",
+      "group": "com.github.bosphere.android-filelogger",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.7"
+      ]
+    },
+    {
+      "artifact": "disklrucache",
+      "group": "com.github.bumptech.glide",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.0.5"
+      ]
+    },
+    {
+      "artifact": "gifdecoder",
+      "group": "com.github.bumptech.glide",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.8.0",
+        "4.9.0",
+        "5.0.5"
+      ]
+    },
+    {
+      "artifact": "okhttp3-integration",
+      "group": "com.github.bumptech.glide",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.0.5"
+      ]
+    },
+    {
+      "artifact": "ExpandableLayout",
+      "group": "com.github.cachapa",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.9.2"
+      ]
+    },
+    {
+      "artifact": "PhotoView",
+      "group": "com.github.chrisbanes",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.3.0"
+      ]
+    },
+    {
+      "artifact": "fab",
+      "group": "com.github.clans",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.6.4"
+      ]
+    },
+    {
+      "artifact": "subsampling-scale-image-view",
+      "group": "com.github.cryptomator",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.10.1-dev.0002"
+      ]
+    },
+    {
+      "artifact": "QuickPermissions-Kotlin",
+      "group": "com.github.cyb3rko",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.6"
+      ]
+    },
+    {
+      "artifact": "material-about-library",
+      "group": "com.github.daniel-stoneuk",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.4",
+        "3.1.2"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "com.github.devgianlu.MaterialPreferences",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "cbb81daaed"
+      ]
+    },
+    {
+      "artifact": "android-simple-tooltip",
+      "group": "com.github.douglasjunior",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.2.2",
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "TableView",
+      "group": "com.github.evrencoskun",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "v0.8.9.4"
+      ]
+    },
+    {
+      "artifact": "Omni-Notes-Commons",
+      "group": "com.github.federicoiosue",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.4.0"
+      ]
+    },
+    {
+      "artifact": "Springpad-Importer",
+      "group": "com.github.federicoiosue",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.1"
+      ]
+    },
+    {
+      "artifact": "checklistview",
+      "group": "com.github.federicoiosue",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.1.0"
+      ]
+    },
+    {
+      "artifact": "pixlui",
+      "group": "com.github.federicoiosue",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.1"
+      ]
+    },
+    {
+      "artifact": "simplegallery",
+      "group": "com.github.federicoiosue",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.1"
+      ]
+    },
+    {
+      "artifact": "smart-location-lib",
+      "group": "com.github.federicoiosue",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.2.6"
+      ]
+    },
+    {
+      "artifact": "android-preferences",
+      "group": "com.github.firebirdberlin",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "36.0.5"
+      ]
+    },
+    {
+      "artifact": "tab-digit",
+      "group": "com.github.firebirdberlin",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "v36.0.3"
+      ]
+    },
+    {
+      "artifact": "expansionpanel",
+      "group": "com.github.florent37",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "changelog",
+      "group": "com.github.gabrielemariotti.changeloglib",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.0"
+      ]
+    },
+    {
+      "artifact": "sdk",
+      "group": "com.github.hCaptcha.hcaptcha-android-sdk",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.4.0"
+      ]
+    },
+    {
+      "artifact": "MagicIndicator",
+      "group": "com.github.hackware1993",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.7.0"
+      ]
+    },
+    {
+      "artifact": "android-file-chooser",
+      "group": "com.github.hedzr",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "v1.2.0-final"
+      ]
+    },
+    {
+      "artifact": "android-snowfall",
+      "group": "com.github.jetradarmobile",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "NewPipeExtractor",
+      "group": "com.github.libre-tube",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0c7e95b"
+      ]
+    },
+    {
+      "artifact": "groupie",
+      "group": "com.github.lisawray.groupie",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.10.1"
+      ]
+    },
+    {
+      "artifact": "groupie-viewbinding",
+      "group": "com.github.lisawray.groupie",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.10.1"
+      ]
+    },
+    {
+      "artifact": "bridge",
+      "group": "com.github.livefront",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "v2.0.2"
+      ]
+    },
+    {
+      "artifact": "pikolo",
+      "group": "com.github.madrapps",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.2"
+      ]
+    },
+    {
+      "artifact": "mapsforge-core",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map-android",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map-reader",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-themes",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "hsv-alpha-color-picker-android",
+      "group": "com.github.martin-stone",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.1",
+        "3.1.0"
+      ]
+    },
+    {
+      "artifact": "android-about-page",
+      "group": "com.github.medyo",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.3"
+      ]
+    },
+    {
+      "artifact": "fyydlin",
+      "group": "com.github.mfietz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "e1d25f347641fe5e26c4c2b9756d4e9001a398dd"
+      ]
+    },
+    {
+      "artifact": "android-library",
+      "group": "com.github.nextcloud",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "cd6ef9c073cd7c23bd36f9712d1f8c1030cc6804"
+      ]
+    },
+    {
+      "artifact": "qrcodescanner",
+      "group": "com.github.nextcloud-deps",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.1.2.4"
+      ]
+    },
+    {
+      "artifact": "sectioned-recyclerview",
+      "group": "com.github.nextcloud-deps",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.6.1"
+      ]
+    },
+    {
+      "artifact": "core",
+      "group": "com.github.nextcloud.android-common",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.33.2"
+      ]
+    },
+    {
+      "artifact": "material-color-utilities",
+      "group": "com.github.nextcloud.android-common",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.33.2"
+      ]
+    },
+    {
+      "artifact": "ui",
+      "group": "com.github.nextcloud.android-common",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.33.2"
+      ]
+    },
+    {
+      "artifact": "richeditor-android",
+      "group": "com.github.niendo1",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.4"
+      ]
+    },
+    {
+      "artifact": "openpgp-api",
+      "group": "com.github.open-keychain.open-keychain",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "v5.7.1"
+      ]
+    },
+    {
+      "artifact": "android-dav",
+      "group": "com.github.opencloud-eu",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "oc_support_2.1.5"
+      ]
+    },
+    {
+      "artifact": "dav4android",
+      "group": "com.github.owncloud",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "oc_support_2.1.5"
+      ]
+    },
+    {
+      "artifact": "appintro",
+      "group": "com.github.paolorotolo",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.3.0"
+      ]
+    },
+    {
+      "artifact": "apng",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "avif",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "awebp",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "frameanimation",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "gif",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "glide-plugin",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "material-calendarview",
+      "group": "com.github.prolificinteractive",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.6.1",
+        "2.0.1"
+      ]
+    },
+    {
+      "artifact": "reactivenetwork-rx2",
+      "group": "com.github.pwittchen",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.8"
+      ]
+    },
+    {
+      "artifact": "totp-kt",
+      "group": "com.github.robinohs",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "v1.0.0"
+      ]
+    },
+    {
+      "artifact": "Material-ViewPagerIndicator",
+      "group": "com.github.ronaldsmartin",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.4"
+      ]
+    },
+    {
+      "artifact": "bottomsheetbuilder",
+      "group": "com.github.rubensousa",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.6.1"
+      ]
+    },
+    {
+      "artifact": "file-dialogs",
+      "group": "com.github.rustamg",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0"
+      ]
+    },
+    {
+      "artifact": "indeterminate-checkbox",
+      "group": "com.github.sevar83",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.5"
+      ]
+    },
+    {
+      "artifact": "SJ-Dialog",
+      "group": "com.github.sj14apps",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.7.0.1"
+      ]
+    },
+    {
+      "artifact": "balloon",
+      "group": "com.github.skydoves",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.3",
+        "1.7.6"
+      ]
+    },
+    {
+      "artifact": "colorpickerview",
+      "group": "com.github.skydoves",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.4.0"
+      ]
+    },
+    {
+      "artifact": "compose-stability-runtime-android",
+      "group": "com.github.skydoves",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.7.1"
+      ]
+    },
+    {
+      "artifact": "landscapist-android",
+      "group": "com.github.skydoves",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.9.5"
+      ]
+    },
+    {
+      "artifact": "landscapist-coil3-android",
+      "group": "com.github.skydoves",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.9.5"
+      ]
+    },
+    {
+      "artifact": "disk-lru-cache",
+      "group": "com.github.solkin",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.2"
+      ]
+    },
+    {
+      "artifact": "sardine-android",
+      "group": "com.github.thegrizzlylabs",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.8"
+      ]
+    },
+    {
+      "artifact": "MPAndroidChart",
+      "group": "com.github.thuryn",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "v4.0.4"
+      ]
+    },
+    {
+      "artifact": "android-gpx-parser",
+      "group": "com.github.ticofab",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.3.1"
+      ]
+    },
+    {
+      "artifact": "logback-android",
+      "group": "com.github.tony19",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "core",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.2.2",
+        "6.0.0"
+      ]
+    },
+    {
+      "artifact": "io",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "6.0.0"
+      ]
+    },
+    {
+      "artifact": "nio",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "6.0.0"
+      ]
+    },
+    {
+      "artifact": "service",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.2.2",
+        "6.0.0"
+      ]
+    },
+    {
+      "artifact": "android-lockpattern",
+      "group": "com.github.ukanth",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "8.0.4"
+      ]
+    },
+    {
+      "artifact": "contract",
+      "group": "com.github.wax911.android-emojify",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.7"
+      ]
+    },
+    {
+      "artifact": "emojify",
+      "group": "com.github.wax911.android-emojify",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.7"
+      ]
+    },
+    {
+      "artifact": "gson",
+      "group": "com.github.wax911.android-emojify",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.7"
+      ]
+    },
+    {
+      "artifact": "FreeDroidWarn",
+      "group": "com.github.woheller69",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "V1.11",
+        "V1.13"
+      ]
+    },
+    {
+      "artifact": "SimplyPDF",
+      "group": "com.github.wwdablu",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.1"
+      ]
+    },
+    {
+      "artifact": "RecyclerViewSwipeDecorator",
+      "group": "com.github.xabaras",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.3"
+      ]
+    },
+    {
+      "artifact": "ambilwarna",
+      "group": "com.github.yukuku",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.1"
+      ]
+    },
+    {
+      "artifact": "material-popup-menu",
+      "group": "com.github.zawadz88.materialpopupmenu",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "dav4jvm",
+      "group": "com.github.zhanghai",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "c317607"
+      ]
+    },
+    {
+      "artifact": "betterpickers",
+      "group": "com.gitlab.askanimus",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.2.7"
+      ]
+    },
+    {
+      "artifact": "dagger-android-support",
+      "group": "com.google.dagger",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.45",
+        "2.59.2"
+      ]
+    },
+    {
+      "artifact": "dagger-lint-aar",
+      "group": "com.google.dagger",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.45",
+        "2.52",
+        "2.56.2",
+        "2.57.1",
+        "2.57.2",
+        "2.59",
+        "2.59.2"
+      ]
+    },
+    {
+      "artifact": "materialshadowninepatch",
+      "group": "com.h6ah4i.android.materialshadowninepatch",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "advrecyclerview",
+      "group": "com.h6ah4i.android.widget.advrecyclerview",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "figlib",
+      "group": "com.halfhp.fig",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.11"
+      ]
+    },
+    {
+      "artifact": "adapterdelegates4",
+      "group": "com.hannesdorfmann",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.3.2"
+      ]
+    },
+    {
+      "artifact": "material-intro",
+      "group": "com.heinrichreimersoftware",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.0"
+      ]
+    },
+    {
+      "artifact": "process-phoenix",
+      "group": "com.jakewharton",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "rxbinding",
+      "group": "com.jakewharton.rxbinding2",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.0"
+      ]
+    },
+    {
+      "artifact": "rxbinding",
+      "group": "com.jakewharton.rxbinding4",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.0.0"
+      ]
+    },
+    {
+      "artifact": "colorpicker",
+      "group": "com.jaredrummler",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "material-spinner",
+      "group": "com.jaredrummler",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.5"
+      ]
+    },
+    {
+      "artifact": "graphview",
+      "group": "com.jjoe64",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.2.2"
+      ]
+    },
+    {
+      "artifact": "android-iconify",
+      "group": "com.joanzapata.iconify",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.2"
+      ]
+    },
+    {
+      "artifact": "android-iconify-fontawesome",
+      "group": "com.joanzapata.iconify",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.2"
+      ]
+    },
+    {
+      "artifact": "zxing-android-embedded",
+      "group": "com.journeyapps",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0",
+        "3.6.0",
+        "4.3.0"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "com.jpardogo.materialtabstrip",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "dexter",
+      "group": "com.karumi",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "6.2.2"
+      ]
+    },
+    {
+      "artifact": "view",
+      "group": "com.kizitonwose.calendar",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.10.1"
+      ]
+    },
+    {
+      "artifact": "HoloColorPicker",
+      "group": "com.larswerkman",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.5"
+      ]
+    },
+    {
+      "artifact": "dfc",
+      "group": "com.lazygeniouz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.8"
+      ]
+    },
+    {
+      "artifact": "speed-dial",
+      "group": "com.leinardi.android",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "icondialog",
+      "group": "com.maltaisn",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "aboutlibraries",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "8.9.4",
+        "10.10.0",
+        "11.2.1",
+        "11.2.3",
+        "11.3.0-rc02"
+      ]
+    },
+    {
+      "artifact": "aboutlibraries-compose-core-android",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "14.2.0"
+      ]
+    },
+    {
+      "artifact": "aboutlibraries-compose-m3-android",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "14.2.0"
+      ]
+    },
+    {
+      "artifact": "aboutlibraries-core",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "8.9.4"
+      ]
+    },
+    {
+      "artifact": "aboutlibraries-core-android",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "10.10.0",
+        "11.2.1",
+        "11.2.3",
+        "11.3.0-rc02",
+        "14.2.0"
+      ]
+    },
+    {
+      "artifact": "community-material-typeface",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.54.2",
+        "3.7.95.4-kotlin"
+      ]
+    },
+    {
+      "artifact": "fastadapter",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.2.6",
+        "3.3.0",
+        "5.4.1",
+        "5.7.0"
+      ]
+    },
+    {
+      "artifact": "fastadapter-commons",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "fastadapter-extensions-drag",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.7.0"
+      ]
+    },
+    {
+      "artifact": "fastadapter-extensions-expandable",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.2.6",
+        "3.3.0",
+        "5.7.0"
+      ]
+    },
+    {
+      "artifact": "fastadapter-extensions-swipe",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.7.0"
+      ]
+    },
+    {
+      "artifact": "fastadapter-extensions-utils",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.7.0"
+      ]
+    },
+    {
+      "artifact": "fontawesome-typeface",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.3.1.1"
+      ]
+    },
+    {
+      "artifact": "google-material-typeface",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.0.3.original",
+        "3.0.1.4.original-kotlin"
+      ]
+    },
+    {
+      "artifact": "iconics-core",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.4",
+        "3.1.0",
+        "4.0.2",
+        "5.4.0"
+      ]
+    },
+    {
+      "artifact": "iconics-typeface-api",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.4.0"
+      ]
+    },
+    {
+      "artifact": "iconics-views",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.0.2"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.2.6"
+      ]
+    },
+    {
+      "artifact": "library-core",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.2.6"
+      ]
+    },
+    {
+      "artifact": "materialdrawer",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "6.0.8",
+        "6.1.2",
+        "9.0.2"
+      ]
+    },
+    {
+      "artifact": "materialdrawer-iconics",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "9.0.2"
+      ]
+    },
+    {
+      "artifact": "materialize",
+      "group": "com.mikepenz",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.2",
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "fingerprint-auth",
+      "group": "com.multidots",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.1"
+      ]
+    },
+    {
+      "artifact": "materialfilepicker",
+      "group": "com.nbsp",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.1"
+      ]
+    },
+    {
+      "artifact": "snackbar",
+      "group": "com.nispok",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.11.0"
+      ]
+    },
+    {
+      "artifact": "zoomlayout",
+      "group": "com.otaliastudios",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.0"
+      ]
+    },
+    {
+      "artifact": "egloo",
+      "group": "com.otaliastudios.opengl",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.6.1"
+      ]
+    },
+    {
+      "artifact": "bottomsheetpickers",
+      "group": "com.philliphsu",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.4.1"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "com.pixplicity.easyprefs",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.0"
+      ]
+    },
+    {
+      "artifact": "materialish-progress",
+      "group": "com.pnikosis",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.5",
+        "1.7"
+      ]
+    },
+    {
+      "artifact": "dynamic-toasts",
+      "group": "com.pranavpandey.android",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.3.0"
+      ]
+    },
+    {
+      "artifact": "dynamic-utils",
+      "group": "com.pranavpandey.android",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.1"
+      ]
+    },
+    {
+      "artifact": "android-extensions",
+      "group": "com.pushbullet",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.4"
+      ]
+    },
+    {
+      "artifact": "slidableactivity",
+      "group": "com.r0adkll",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.0"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "com.rengwuxian.materialedittext",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.4"
+      ]
+    },
+    {
+      "artifact": "recyclerview-fastscroll",
+      "group": "com.simplecityapps",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.1"
+      ]
+    },
+    {
+      "artifact": "android-crop",
+      "group": "com.soundcloud.android",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "curtains",
+      "group": "com.squareup.curtains",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.4"
+      ]
+    },
+    {
+      "artifact": "leakcanary-android",
+      "group": "com.squareup.leakcanary",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "leakcanary-android-core",
+      "group": "com.squareup.leakcanary",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "leakcanary-android-utils",
+      "group": "com.squareup.leakcanary",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "leakcanary-object-watcher-android",
+      "group": "com.squareup.leakcanary",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "leakcanary-object-watcher-android-androidx",
+      "group": "com.squareup.leakcanary",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "leakcanary-object-watcher-android-core",
+      "group": "com.squareup.leakcanary",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "leakcanary-object-watcher-android-support-fragments",
+      "group": "com.squareup.leakcanary",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "plumber-android",
+      "group": "com.squareup.leakcanary",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "plumber-android-core",
+      "group": "com.squareup.leakcanary",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "okhttp-android",
+      "group": "com.squareup.okhttp3",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.0.0-alpha.16",
+        "5.1.0",
+        "5.3.2"
+      ]
+    },
+    {
+      "artifact": "android-driver",
+      "group": "com.squareup.sqldelight",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.4"
+      ]
+    },
+    {
+      "artifact": "colorpicker",
+      "group": "com.takisoft.colorpicker",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "datetimepicker",
+      "group": "com.takisoft.datetimepicker",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.2"
+      ]
+    },
+    {
+      "artifact": "preferencex",
+      "group": "com.takisoft.preferencex",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "preferencex-colorpicker",
+      "group": "com.takisoft.preferencex",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "preferencex-datetimepicker",
+      "group": "com.takisoft.preferencex",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "preferencex-ringtone",
+      "group": "com.takisoft.preferencex",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "rxpermissions",
+      "group": "com.tbruyelle.rxpermissions",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.4.2"
+      ]
+    },
+    {
+      "artifact": "dotsindicator",
+      "group": "com.tbuonomo",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.2"
+      ]
+    },
+    {
+      "artifact": "android-image-cropper",
+      "group": "com.vanniktech",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.0",
+        "4.7.0"
+      ]
+    },
+    {
+      "artifact": "emoji-android",
+      "group": "com.vanniktech",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.23.0"
+      ]
+    },
+    {
+      "artifact": "emoji-google-android",
+      "group": "com.vanniktech",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.23.0"
+      ]
+    },
+    {
+      "artifact": "ui-android",
+      "group": "com.vanniktech",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.10.0"
+      ]
+    },
+    {
+      "artifact": "filemojicompat",
+      "group": "de.c1710",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.1"
+      ]
+    },
+    {
+      "artifact": "filemojicompat-defaults",
+      "group": "de.c1710",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.1"
+      ]
+    },
+    {
+      "artifact": "filemojicompat-ui",
+      "group": "de.c1710",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.1"
+      ]
+    },
+    {
+      "artifact": "ckchangelog",
+      "group": "de.cketti.library.changelog",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.2"
+      ]
+    },
+    {
+      "artifact": "ckchangelog-core",
+      "group": "de.cketti.library.changelog",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.0-beta02"
+      ]
+    },
+    {
+      "artifact": "safe-content-resolver-v21",
+      "group": "de.cketti.safecontentresolver",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "circleimageview",
+      "group": "de.hdodenhof",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.1.0"
+      ]
+    },
+    {
+      "artifact": "licensesdialog",
+      "group": "de.psdev.licensesdialog",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.0"
+      ]
+    },
+    {
+      "artifact": "graphview",
+      "group": "dev.bandb.graphview",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.8.1"
+      ]
+    },
+    {
+      "artifact": "insetter",
+      "group": "dev.chrisbanes",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.3.1"
+      ]
+    },
+    {
+      "artifact": "insetter-ktx",
+      "group": "dev.chrisbanes",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.3.1"
+      ]
+    },
+    {
+      "artifact": "insetter",
+      "group": "dev.chrisbanes.insetter",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.6.1"
+      ]
+    },
+    {
+      "artifact": "simplemenu-preference",
+      "group": "dev.rikka.rikkax.preference",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.3"
+      ]
+    },
+    {
+      "artifact": "aidl",
+      "group": "dev.rikka.shizuku",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "13.1.5"
+      ]
+    },
+    {
+      "artifact": "api",
+      "group": "dev.rikka.shizuku",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "13.1.5"
+      ]
+    },
+    {
+      "artifact": "shared",
+      "group": "dev.rikka.shizuku",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "13.1.5"
+      ]
+    },
+    {
+      "artifact": "libsuperuser",
+      "group": "eu.chainfire",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0",
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "flexible-adapter",
+      "group": "eu.davidea",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "5.1.0"
+      ]
+    },
+    {
+      "artifact": "flexible-adapter-livedata",
+      "group": "eu.davidea",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0-b2"
+      ]
+    },
+    {
+      "artifact": "flexible-adapter-ui",
+      "group": "eu.davidea",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0-b5"
+      ]
+    },
+    {
+      "artifact": "compressor",
+      "group": "id.zelory",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.1"
+      ]
+    },
+    {
+      "artifact": "webrtc-android",
+      "group": "im.conversations.webrtc",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "129.0.0"
+      ]
+    },
+    {
+      "artifact": "coil-gif",
+      "group": "io.coil-kt",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.6.0"
+      ]
+    },
+    {
+      "artifact": "coil-svg",
+      "group": "io.coil-kt",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.6.0",
+        "2.7.0"
+      ]
+    },
+    {
+      "artifact": "coil-video",
+      "group": "io.coil-kt",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.6.0"
+      ]
+    },
+    {
+      "artifact": "coil-android",
+      "group": "io.coil-kt.coil3",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0",
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "coil-compose-android",
+      "group": "io.coil-kt.coil3",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0",
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "coil-compose-core-android",
+      "group": "io.coil-kt.coil3",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0",
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "coil-core-android",
+      "group": "io.coil-kt.coil3",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.1.0",
+        "3.3.0",
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "coil-gif",
+      "group": "io.coil-kt.coil3",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0",
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "coil-network-core-android",
+      "group": "io.coil-kt.coil3",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.1.0",
+        "3.3.0",
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "coil-network-okhttp-android",
+      "group": "io.coil-kt.coil3",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "coil-svg-android",
+      "group": "io.coil-kt.coil3",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "coil-video",
+      "group": "io.coil-kt.coil3",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "transcoder-android",
+      "group": "io.deepmedia.community",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.11.2"
+      ]
+    },
+    {
+      "artifact": "photoview",
+      "group": "io.getstream",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.3"
+      ]
+    },
+    {
+      "artifact": "editor",
+      "group": "io.github.Rosemoe.sora-editor",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.23.4"
+      ]
+    },
+    {
+      "artifact": "language-textmate",
+      "group": "io.github.Rosemoe.sora-editor",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.23.4"
+      ]
+    },
+    {
+      "artifact": "simpledialogfragments",
+      "group": "io.github.eltos",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.10"
+      ]
+    },
+    {
+      "artifact": "loaderviewlibrary",
+      "group": "io.github.elye",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "overscroll-decor-android",
+      "group": "io.github.everythingme",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "whatsnew",
+      "group": "io.github.tonnyl",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.1.7"
+      ]
+    },
+    {
+      "artifact": "koin-androidx-compose",
+      "group": "io.insert-koin",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.1.1"
+      ]
+    },
+    {
+      "artifact": "koin-androidx-workmanager",
+      "group": "io.insert-koin",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.3"
+      ]
+    },
+    {
+      "artifact": "koin-compose-android",
+      "group": "io.insert-koin",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.1.1"
+      ]
+    },
+    {
+      "artifact": "koin-compose-viewmodel-android",
+      "group": "io.insert-koin",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.1.1"
+      ]
+    },
+    {
+      "artifact": "koin-core-viewmodel-android",
+      "group": "io.insert-koin",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.1.1"
+      ]
+    },
+    {
+      "artifact": "ionfilesystem-android",
+      "group": "io.ionic.libs",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "core",
+      "group": "io.noties.markwon",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "editor",
+      "group": "io.noties.markwon",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "ext-strikethrough",
+      "group": "io.noties.markwon",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "ext-tables",
+      "group": "io.noties.markwon",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "ext-tasklist",
+      "group": "io.noties.markwon",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "html",
+      "group": "io.noties.markwon",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "image",
+      "group": "io.noties.markwon",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "image-coil",
+      "group": "io.noties.markwon",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "linkify",
+      "group": "io.noties.markwon",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "syntax-highlight",
+      "group": "io.noties.markwon",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "rxandroid",
+      "group": "io.reactivex",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "glide-transformations",
+      "group": "jp.wasabeef",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "4.3.0"
+      ]
+    },
+    {
+      "artifact": "picasso-transformations",
+      "group": "jp.wasabeef",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.3.1"
+      ]
+    },
+    {
+      "artifact": "recyclerview-animators",
+      "group": "jp.wasabeef",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "ui",
+      "group": "legacy",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "base",
+        "folder"
+      ]
+    },
+    {
+      "artifact": "protocols",
+      "group": "mail",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "imap",
+        "pop3",
+        "smtp"
+      ]
+    },
+    {
+      "artifact": "core",
+      "group": "me.dm7.barcodescanner",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.8"
+      ]
+    },
+    {
+      "artifact": "zxing",
+      "group": "me.dm7.barcodescanner",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.8"
+      ]
+    },
+    {
+      "artifact": "appkit",
+      "group": "me.grishka.appkit",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.3"
+      ]
+    },
+    {
+      "artifact": "browser",
+      "group": "me.grishka.litex",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.4.0"
+      ]
+    },
+    {
+      "artifact": "collection",
+      "group": "me.grishka.litex",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "concurrent",
+      "group": "me.grishka.litex",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "dynamicanimation",
+      "group": "me.grishka.litex",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0-alpha03"
+      ]
+    },
+    {
+      "artifact": "palette",
+      "group": "me.grishka.litex",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "recyclerview",
+      "group": "me.grishka.litex",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.1.1"
+      ]
+    },
+    {
+      "artifact": "swiperefreshlayout",
+      "group": "me.grishka.litex",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.0-beta01"
+      ]
+    },
+    {
+      "artifact": "viewpager",
+      "group": "me.grishka.litex",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "viewpager2",
+      "group": "me.grishka.litex",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "ShortcutBadger",
+      "group": "me.leolin",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.22"
+      ]
+    },
+    {
+      "artifact": "circularSeekBar",
+      "group": "me.tankery.lib",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.4.2"
+      ]
+    },
+    {
+      "artifact": "free_reflection",
+      "group": "me.weishu",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.0"
+      ]
+    },
+    {
+      "artifact": "appiconloader",
+      "group": "me.zhanghai.android.appiconloader",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.0"
+      ]
+    },
+    {
+      "artifact": "appiconloader-iconloaderlib",
+      "group": "me.zhanghai.android.appiconloader",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.0"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "me.zhanghai.android.fastscroll",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.0",
+        "1.3.0"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "me.zhanghai.android.foregroundcompat",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.2"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "me.zhanghai.android.libarchive",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "me.zhanghai.android.libselinux",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.0"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "me.zhanghai.android.materialprogressbar",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.4.2",
+        "1.6.1"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "me.zhanghai.android.retrofile",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "me.zhanghai.android.systemuihelper",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "time-duration-picker",
+      "group": "mobi.upod",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.3"
+      ]
+    },
+    {
+      "artifact": "download",
+      "group": "net",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "service",
+        "service-interface"
+      ]
+    },
+    {
+      "artifact": "sync",
+      "group": "net",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "gpoddernet",
+        "service",
+        "service-interface"
+      ]
+    },
+    {
+      "artifact": "android.joda",
+      "group": "net.danlew",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.12.5",
+        "2.14.2"
+      ]
+    },
+    {
+      "artifact": "i2p",
+      "group": "net.i2p",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.11.0-1"
+      ]
+    },
+    {
+      "artifact": "router",
+      "group": "net.i2p",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.11.0-1"
+      ]
+    },
+    {
+      "artifact": "floatingactionbutton",
+      "group": "net.i2p.android.ext",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.10.1"
+      ]
+    },
+    {
+      "artifact": "mstreaming",
+      "group": "net.i2p.client",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.11.0-1"
+      ]
+    },
+    {
+      "artifact": "streaming",
+      "group": "net.i2p.client",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.11.0-1"
+      ]
+    },
+    {
+      "artifact": "appauth",
+      "group": "net.openid",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.9.1",
+        "0.11.1"
+      ]
+    },
+    {
+      "artifact": "keyboardvisibilityevent",
+      "group": "net.yslibrary.keyboardvisibilityevent",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.0-RC3"
+      ]
+    },
+    {
+      "artifact": "konfetti-core",
+      "group": "nl.dionsegijn",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.2",
+        "2.0.4"
+      ]
+    },
+    {
+      "artifact": "konfetti-xml",
+      "group": "nl.dionsegijn",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.2",
+        "2.0.4"
+      ]
+    },
+    {
+      "artifact": "ble",
+      "group": "no.nordicsemi.android",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.4"
+      ]
+    },
+    {
+      "artifact": "ble-common",
+      "group": "no.nordicsemi.android",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.4"
+      ]
+    },
+    {
+      "artifact": "dfu",
+      "group": "no.nordicsemi.android",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.11.0"
+      ]
+    },
+    {
+      "artifact": "client-api",
+      "group": "no.nordicsemi.android.kotlin.ble",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.3.1"
+      ]
+    },
+    {
+      "artifact": "core",
+      "group": "no.nordicsemi.android.kotlin.ble",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.3.1"
+      ]
+    },
+    {
+      "artifact": "mock",
+      "group": "no.nordicsemi.android.kotlin.ble",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.3.1"
+      ]
+    },
+    {
+      "artifact": "scanner",
+      "group": "no.nordicsemi.android.kotlin.ble",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.3.1"
+      ]
+    },
+    {
+      "artifact": "server-api",
+      "group": "no.nordicsemi.android.kotlin.ble",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.3.1"
+      ]
+    },
+    {
+      "artifact": "android-beacon-library",
+      "group": "org.altbeacon",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.21.2"
+      ]
+    },
+    {
+      "artifact": "avif",
+      "group": "org.aomedia.avif.android",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.1.14d8e3c4"
+      ]
+    },
+    {
+      "artifact": "commons-numbers-parent",
+      "group": "org.apache.commons",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.0"
+      ]
+    },
+    {
+      "artifact": "framework",
+      "group": "org.apache.cordova",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "10.1.1",
+        "14.0.1"
+      ]
+    },
+    {
+      "artifact": "conscrypt-android",
+      "group": "org.conscrypt",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "2.5.3"
+      ]
+    },
+    {
+      "artifact": "platform.sdk",
+      "group": "org.cyanogenmod",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "6.0"
+      ]
+    },
+    {
+      "artifact": "components-resources-android",
+      "group": "org.jetbrains.compose.components",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.10.2"
+      ]
+    },
+    {
+      "artifact": "ui-backhandler-android",
+      "group": "org.jetbrains.compose.ui",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.0-beta03",
+        "1.9.1"
+      ]
+    },
+    {
+      "artifact": "webrtc",
+      "group": "org.jitsi",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "124.0.0"
+      ]
+    },
+    {
+      "artifact": "android-smsmms",
+      "group": "org.kde.invent.sredman",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "kdeconnect-1-21-0"
+      ]
+    },
+    {
+      "artifact": "android-plugin-annotation-v9",
+      "group": "org.maplibre.gl",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.2"
+      ]
+    },
+    {
+      "artifact": "android-sdk",
+      "group": "org.maplibre.gl",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "13.0.2"
+      ]
+    },
+    {
+      "artifact": "maplibre-android-gestures",
+      "group": "org.maplibre.gl",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.0.4"
+      ]
+    },
+    {
+      "artifact": "safe-parcel",
+      "group": "org.microg",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.0"
+      ]
+    },
+    {
+      "artifact": "osmdroid-android",
+      "group": "org.osmdroid",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "6.1.1",
+        "6.1.18",
+        "6.1.20"
+      ]
+    },
+    {
+      "artifact": "html-textview",
+      "group": "org.sufficientlysecure",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.1"
+      ]
+    },
+    {
+      "artifact": "connector",
+      "group": "org.unifiedpush.android",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.10",
+        "3.3.2"
+      ]
+    },
+    {
+      "artifact": "connector-ui",
+      "group": "org.unifiedpush.android",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "embedded-fcm-distributor",
+      "group": "org.unifiedpush.android",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "libvlc-all",
+      "group": "org.videolan.android",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "3.7.0"
+      ]
+    },
+    {
+      "artifact": "medialibrary-all",
+      "group": "org.videolan.android",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.13.17"
+      ]
+    },
+    {
+      "artifact": "remote-access",
+      "group": "org.videolan.android",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "0.17.0"
+      ]
+    },
+    {
+      "artifact": "android-gif-drawable",
+      "group": "pl.droidsonroids.gif",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.31"
+      ]
+    },
+    {
+      "artifact": "openpgp-api-lib",
+      "group": "plugins",
+      "notes": "Retry config generated from failed source-observed Maven Central JAR downloads; tries AAR packaging.",
+      "packaging": "aar",
+      "versions": [
+        "openpgp-api"
+      ]
+    }
+  ]
+}
