@@ -477,3 +477,16 @@ Current post-retry feature extraction counts:
 | Class-neighbor summaries | 89051 |
 | Field-operation sequences | 268318 |
 | Literal/context features | 833814 |
+
+## Failed Download Retry 003
+
+| Step | Command scope | Result |
+|---|---|---|
+| Generate | rerun `scripts\build_source_observed_failed_download_retry_plan.py` | added normalized-alias alternate-packaging retry config |
+| Download | `configs/libraries.source_observed_failed_retry_alias_normalized_alt_packaging.json` into `data/reference_db/artifacts_source_observed_failed_retry_alias_normalized_alt_packaging` | 7 downloaded, 17 still failed |
+| Convert | alias alternate-packaging artifacts into `data/reference_db/dex_source_observed_failed_retry_alias_normalized_alt_packaging` | 3 converted, 4 skipped, 0 failed |
+| Extract | append alias alternate-packaging DEX into `data/reference_db/reference_features_source_observed_versions.sqlite` | 3 processed/stored statuses, 0 net new components, 0 failed |
+
+This cleanup pass recovered the remaining `androidx.annotation:annotation` alias rows as JARs, but four were no-bytecode annotation artifacts and the three bytecode-bearing rows were already represented in the evaluation DB. The component count therefore remains `1924`.
+
+After retry passes 001-003, `500` of the original `698` failed source-observed keys were recovered as artifacts in at least one retry root. `198` original failed keys remain unrecovered: `84` source-module aliases, `43` manual repository or unavailable rows, `27` still-failing JitPack candidates, `25` bad source-version-string rows, `10` Kotlin/toolchain-boundary rows, `5` legacy support aliases, and `4` Google alternate-packaging rows. These remaining rows should stay explicit as unavailable or normalization-required evidence unless a source-specific repository or coordinate rewrite is proven.

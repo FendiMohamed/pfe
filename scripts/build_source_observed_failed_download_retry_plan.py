@@ -14,6 +14,9 @@ DEFAULT_OUTPUT_MD = Path("docs/evaluation/SOURCE_OBSERVED_FAILED_DOWNLOAD_RETRY_
 DEFAULT_ALT_PACKAGING_CONFIG = Path("configs/libraries.source_observed_failed_retry_alt_packaging.json")
 DEFAULT_DEFAULT_AAR_CONFIG = Path("configs/libraries.source_observed_failed_retry_default_aar.json")
 DEFAULT_ALIAS_NORMALIZED_CONFIG = Path("configs/libraries.source_observed_failed_retry_alias_normalized.json")
+DEFAULT_ALIAS_NORMALIZED_ALT_CONFIG = Path(
+    "configs/libraries.source_observed_failed_retry_alias_normalized_alt_packaging.json"
+)
 GOOGLE_MAVEN = "https://dl.google.com/dl/android/maven2"
 JITPACK = "https://jitpack.io"
 
@@ -29,6 +32,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--alt-packaging-config", default=str(DEFAULT_ALT_PACKAGING_CONFIG))
     parser.add_argument("--default-aar-config", default=str(DEFAULT_DEFAULT_AAR_CONFIG))
     parser.add_argument("--alias-normalized-config", default=str(DEFAULT_ALIAS_NORMALIZED_CONFIG))
+    parser.add_argument("--alias-normalized-alt-config", default=str(DEFAULT_ALIAS_NORMALIZED_ALT_CONFIG))
     return parser
 
 
@@ -40,12 +44,14 @@ def main() -> int:
         alt_packaging_config_path=Path(args.alt_packaging_config),
         default_aar_config_path=Path(args.default_aar_config),
         alias_normalized_config_path=Path(args.alias_normalized_config),
+        alias_normalized_alt_config_path=Path(args.alias_normalized_alt_config),
     )
     write_json(Path(args.output_json), payload)
     write_markdown(Path(args.output_md), payload)
     write_json(Path(args.alt_packaging_config), payload["retry_configs"]["alt_packaging"])
     write_json(Path(args.default_aar_config), payload["retry_configs"]["default_aar"])
     write_json(Path(args.alias_normalized_config), payload["retry_configs"]["alias_normalized"])
+    write_json(Path(args.alias_normalized_alt_config), payload["retry_configs"]["alias_normalized_alt_packaging"])
     print(json.dumps(payload["summary"], indent=2, sort_keys=True))
     return 0
 
@@ -57,6 +63,7 @@ def build_retry_plan(
     alt_packaging_config_path: Path,
     default_aar_config_path: Path,
     alias_normalized_config_path: Path,
+    alias_normalized_alt_config_path: Path,
 ) -> dict[str, Any]:
     config = read_json(config_path)
     downloaded = downloaded_keys(artifact_root)
@@ -65,6 +72,7 @@ def build_retry_plan(
     alt_packaging_libraries = build_alt_packaging_config(classified)
     default_aar_libraries = build_default_aar_config(classified)
     alias_normalized_libraries = build_alias_normalized_config(classified)
+    alias_normalized_alt_libraries = build_alias_normalized_config(classified, alternate_packaging=True)
     category_counts = Counter(row["retry_class"] for row in classified)
     repository_counts = Counter(row["repository_url"] or "default" for row in classified)
     packaging_counts = Counter(row["packaging"] for row in classified)
@@ -84,6 +92,10 @@ def build_retry_plan(
         "default_aar_retry_config": normalize_path(default_aar_config_path),
         "alias_normalized_retry_versions": sum(len(lib["versions"]) for lib in alias_normalized_libraries),
         "alias_normalized_retry_config": normalize_path(alias_normalized_config_path),
+        "alias_normalized_alt_retry_versions": sum(
+            len(lib["versions"]) for lib in alias_normalized_alt_libraries
+        ),
+        "alias_normalized_alt_retry_config": normalize_path(alias_normalized_alt_config_path),
         "top_failed_groups": group_counts.most_common(25),
     }
     return {
@@ -98,6 +110,9 @@ def build_retry_plan(
             },
             "alias_normalized": {
                 "libraries": alias_normalized_libraries,
+            },
+            "alias_normalized_alt_packaging": {
+                "libraries": alias_normalized_alt_libraries,
             },
         },
     }
@@ -254,7 +269,11 @@ def build_default_aar_config(rows: list[dict[str, Any]]) -> list[dict[str, Any]]
     return libraries
 
 
-def build_alias_normalized_config(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def build_alias_normalized_config(
+    rows: list[dict[str, Any]],
+    *,
+    alternate_packaging: bool = False,
+) -> list[dict[str, Any]]:
     grouped: dict[tuple[str, str, str, str | None], list[str]] = defaultdict(list)
     for row in rows:
         if row["retry_class"] != "bad-source-version-string":
@@ -267,13 +286,21 @@ def build_alias_normalized_config(rows: list[dict[str, Any]]) -> list[dict[str, 
         grouped[(group, artifact, repository_url or "", row.get("category"))].append(version)
     libraries = []
     for (group, artifact, repository_url, category), versions in sorted(grouped.items()):
-        packaging = "aar" if group.startswith("androidx.") or group == "com.facebook.react" else "jar"
+        base_packaging = "aar" if group.startswith("androidx.") or group == "com.facebook.react" else "jar"
+        packaging = "jar" if base_packaging == "aar" and alternate_packaging else "aar"
+        if base_packaging == "jar" and alternate_packaging:
+            packaging = "aar"
         library: dict[str, Any] = {
             "group": group,
             "artifact": artifact,
             "versions": sorted(set(versions), key=version_key),
             "packaging": packaging,
-            "notes": "Retry config generated by normalizing source rows whose version field contained another Maven coordinate.",
+            "notes": (
+                "Retry config generated by normalizing source rows whose version field contained another Maven "
+                "coordinate; alternate packaging pass."
+                if alternate_packaging
+                else "Retry config generated by normalizing source rows whose version field contained another Maven coordinate."
+            ),
         }
         if repository_url:
             library["repository_url"] = repository_url
@@ -319,6 +346,7 @@ def write_markdown(path: Path, payload: dict[str, Any]) -> None:
         f"| Alt-packaging/repository retry versions | {summary['alt_packaging_retry_versions']} |",
         f"| Maven Central AAR retry versions | {summary['default_aar_retry_versions']} |",
         f"| Normalized alias retry versions | {summary['alias_normalized_retry_versions']} |",
+        f"| Normalized alias alternate-packaging retry versions | {summary['alias_normalized_alt_retry_versions']} |",
         "",
         "## Retry Classes",
         "",
@@ -346,6 +374,7 @@ def write_markdown(path: Path, payload: dict[str, Any]) -> None:
             f"- Alt packaging/repository retry config: `{summary['alt_packaging_retry_config']}`",
             f"- Maven Central AAR retry config: `{summary['default_aar_retry_config']}`",
             f"- Normalized alias retry config: `{summary['alias_normalized_retry_config']}`",
+            f"- Normalized alias alternate-packaging retry config: `{summary['alias_normalized_alt_retry_config']}`",
             "",
             "## Next Step",
             "",
