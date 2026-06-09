@@ -58,3 +58,38 @@ Current feature extraction counts:
 ## Next Batch
 
 Continue all-versions downloads with `--limit 100 --offset 100`, then convert from artifact offset `100` and append extraction without `--reset`.
+
+## Macro-Batch 001
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | target `--limit 6000 --offset 100`, resumed in smaller chunks after tool timeouts | 3019 artifact metadata records present so far |
+| Convert | backfilled missing conversion ranges after download ordering changed | 923 conversion records present so far |
+| Extract | append scan into `data/reference_db/reference_features_source_observed_all_versions.sqlite` | 870 stored components, 0 failed |
+
+The initial `6000`-slot download command timed out but wrote progress. Follow-up `1000` and `500`-slot chunks continued the same macro-batch; the artifact ledger now has `3019` downloaded metadata records. Conversion also hit the tool timeout, so the batch was resumed by computing the first missing converter offset from `sorted(root.rglob("metadata.json"))` rather than using a naive normalized-path sort. This matters because later downloads inserted alphabetically earlier AndroidX rows. As of this checkpoint, conversion is complete through offset `922`; the next missing converter offset is `923`.
+
+Current feature extraction counts:
+
+| Feature table / metric | Rows |
+|---|---:|
+| Components | 870 |
+| DEX files | 870 |
+| Packages | 5071 |
+| Classes | 168963 |
+| Methods | 990952 |
+| Opcodes | 67634 |
+| API references | 1334761 |
+| String literals | 224481 |
+| Dependency shapes | 9977 |
+| Class dependencies | 337040 |
+| Opcode n-grams | 1876745 |
+| Call-chain opcode fingerprints | 182703 |
+| Basic-block opcode fingerprints | 773649 |
+| Class-neighbor summaries | 51276 |
+| Field-operation sequences | 130600 |
+| Literal/context features | 329269 |
+
+## Resume Point
+
+Continue Macro-Batch 001 by converting from artifact offset `923` in `250`-record chunks, then append extraction. Once conversion catches up to the current `3019` downloaded metadata records, continue downloads toward the macro-batch target at config offset `6100`.
