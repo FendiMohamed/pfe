@@ -293,39 +293,49 @@ Download failures were real `404 Not Found` results across `com.squareup.sqldeli
 
 Download failures were real `404 Not Found` results across Commons Logging, `core:*` rows from the source-observed catalog, `de.c1710` filemoji rows, `de.cketti` changelog and safe-content-resolver rows, `de.hdodenhof:circleimageview`, `dev.chrisbanes` insetter rows, `dev.rikka` shizuku/preference rows, and `eu.chainfire:libsuperuser@1.1.0`. Conversion had to be resumed multiple times because the first run timed out before the tail was complete; the final two artifact rows were `dnsjava:dnsjava@3.6.4` and `eu.agno3.jcifs:jcifs-ng@2.1.10`. No new stored components were added in this batch because the remaining bytecode-bearing rows were already represented in the components table, and the two previously documented open-gap rows remain open for later resolution. After this batch, `2300` of `3347` buildable source-version slots have been attempted and `1047` remain.
 
+## Batch 026
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 2300` into `data/reference_db/artifacts_source_observed_versions` | 26 downloaded, 74 failed |
+| Convert | downloaded records after artifact offset `1807`, resumed once for the tail | 10 converted, 16 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `1347` | 59 stored, 0 failed |
+
+Download failures were real `404 Not Found` results across `eu.chainfire:libsuperuser@1.1.1`, `eu.davidea:flexible-adapter` rows, and many `feature:*` module coordinates from the source-observed catalog, plus `id.zelory:compressor@2.1.1`, `im.conversations.webrtc:webrtc-android@129.0.0`, and multiple `io.coil-kt.coil3:*` Android-target rows. No-bytecode skips were the `io.coil-kt.coil3` wrapper artifacts where D8 produced no `classes*.dex`. The extractor produced `59` new stored components from the `10` bytecode-bearing rows, but the stored table still trails the conversion ledger by two rows, so `com.github.houbb:heaven@0.13.0` and `com.squareup:otto@1.3.8` remain the open gaps. After this batch, `2400` of `3347` buildable source-version slots have been attempted and `947` remain.
+
 ## Current Evaluation-Only DB Totals
 
 | Metric | Value |
 |---|---:|
-| Source-version slots attempted | 2300 |
-| Source-version slots remaining | 1047 |
-| Downloaded artifact metadata records | 1807 |
-| Download failures recorded | 493 |
-| Bytecode-bearing conversion records | 1398 |
-| No-bytecode conversion skips | 409 |
+| Source-version slots attempted | 2400 |
+| Source-version slots remaining | 947 |
+| Downloaded artifact metadata records | 1833 |
+| Download failures recorded | 567 |
+| Bytecode-bearing conversion records | 1408 |
+| No-bytecode conversion skips | 425 |
 | Extraction-blocked bytecode records | 1 |
-| Stored DB components | 1347 |
+| Stored DB components | 1406 |
 
 Current feature extraction counts:
 
 | Feature table / metric | Rows |
 |---|---:|
-| Components | 1347 |
-| DEX files | 1347 |
-| Packages | 9213 |
-| Classes | 304022 |
-| Methods | 2086939 |
-| Opcodes | 106019 |
-| API references | 2414051 |
-| String literals | 396470 |
-| Dependency shapes | 14117 |
-| Class dependencies | 600791 |
-| Opcode n-grams | 3797692 |
-| Call-chain opcode fingerprints | 323184 |
-| Basic-block opcode fingerprints | 1589654 |
-| Class-neighbor summaries | 72480 |
-| Field-operation sequences | 222843 |
-| Literal/context features | 657717 |
+| Components | 1406 |
+| DEX files | 1406 |
+| Packages | 9683 |
+| Classes | 313333 |
+| Methods | 2160199 |
+| Opcodes | 111459 |
+| API references | 2488401 |
+| String literals | 417752 |
+| Dependency shapes | 14812 |
+| Class dependencies | 619427 |
+| Opcode n-grams | 3960108 |
+| Call-chain opcode fingerprints | 335722 |
+| Basic-block opcode fingerprints | 1651011 |
+| Class-neighbor summaries | 75448 |
+| Field-operation sequences | 230567 |
+| Literal/context features | 689021 |
 
 ## Commands
 
@@ -341,4 +351,4 @@ The download step was executed through the Python downloader after sandboxed net
 
 ## Next Batch
 
-Continue source-version downloads with `--limit 100 --offset 2300`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`. Keep `com.github.houbb:heaven@0.13.0` documented as extraction-blocked unless the feature extractor later gains surrogate-safe string handling, and keep `com.squareup:otto@1.3.8` in the open-gap note until the stored component table catches up.
+Continue source-version downloads with `--limit 100 --offset 2400`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`. Keep `com.github.houbb:heaven@0.13.0` documented as extraction-blocked unless the feature extractor later gains surrogate-safe string handling, and keep `com.squareup:otto@1.3.8` in the open-gap note until the stored component table catches up.
