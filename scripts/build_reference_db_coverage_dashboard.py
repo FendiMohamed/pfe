@@ -598,6 +598,12 @@ def write_gaps_csv(path: Path, rows: list[dict[str, Any]]) -> None:
 
 def build_markdown(payload: dict[str, Any]) -> str:
     summary = payload["summary"]
+    reference_db = str((payload.get("sources") or {}).get("reference_db") or "")
+    reference_label = (
+        "Current shared reference DB"
+        if reference_db.endswith("reference_features_calibrated_combined.sqlite")
+        else "Current evaluation reference DB"
+    )
     lines = [
         "# Reference DB Coverage-First Dashboard",
         "",
@@ -619,8 +625,8 @@ def build_markdown(payload: dict[str, Any]) -> str:
         f"| Source dependency coordinate+version rows | {summary['source_dependency_pairs']} |",
         f"| Unique source coordinates | {summary['unique_source_coordinates']} |",
         f"| Unique source coordinate+version pairs | {summary['unique_source_coordinate_version_pairs']} |",
-        f"| Current shared reference DB components | {summary['reference_db_components']} |",
-        f"| Current shared reference DB coordinates | {summary['reference_db_coordinates']} |",
+        f"| {reference_label} components | {summary['reference_db_components']} |",
+        f"| {reference_label} coordinates | {summary['reference_db_coordinates']} |",
         f"| Source rows with coordinate in DB | {summary['reference_coordinate_covered_source_pairs']} ({format_percent(summary['reference_coordinate_coverage_percent'])}) |",
         f"| Source rows with exact version in DB | {summary['reference_exact_version_covered_source_pairs']} ({format_percent(summary['reference_exact_version_coverage_percent'])}) |",
         f"| Source rows emitted with exact version | {summary['source_dependencies_emitted_exact']} ({format_percent(summary['end_to_end_exact_source_recall_percent'])}) |",
