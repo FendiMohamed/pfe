@@ -17,6 +17,10 @@ from apk_sbom.reference_converter import (
 DEFAULT_FEATURE_DB_PATH = Path("data/reference_db/reference_features.sqlite")
 
 
+def _sqlite_text(value: str) -> str:
+    return value.encode("utf-8", errors="replace").decode("utf-8")
+
+
 @dataclass(frozen=True)
 class FeatureExtractionResult:
     coordinate: str
@@ -387,13 +391,19 @@ def _store_conversion_features(
             ),
         )
 
-    packages = sorted({package for item in dex_features for package in item.packages})
-    classes = sorted({class_name for item in dex_features for class_name in item.class_descriptors})
-    methods = sorted({method for item in dex_features for method in item.method_signatures})
-    string_literals = sorted({literal for item in dex_features for literal in item.string_literals})
-    api_references = sorted({reference for item in dex_features for reference in item.api_references})
+    packages = sorted({_sqlite_text(package) for item in dex_features for package in item.packages})
+    classes = sorted(
+        {_sqlite_text(class_name) for item in dex_features for class_name in item.class_descriptors}
+    )
+    methods = sorted({_sqlite_text(method) for item in dex_features for method in item.method_signatures})
+    string_literals = sorted(
+        {_sqlite_text(literal) for item in dex_features for literal in item.string_literals}
+    )
+    api_references = sorted(
+        {_sqlite_text(reference) for item in dex_features for reference in item.api_references}
+    )
     literal_context_features = sorted(
-        {feature for item in dex_features for feature in item.literal_context_features}
+        {_sqlite_text(feature) for item in dex_features for feature in item.literal_context_features}
     )
     opcodes: dict[str, int] = {}
     opcode_ngrams: dict[str, int] = {}
@@ -403,7 +413,7 @@ def _store_conversion_features(
     field_operation_sequences: dict[str, int] = {}
     dependency_edges = sorted(
         {
-            (edge.source, edge.target, edge.kind)
+            (_sqlite_text(edge.source), _sqlite_text(edge.target), _sqlite_text(edge.kind))
             for item in dex_features
             for edge in item.class_dependencies
         }
@@ -413,18 +423,24 @@ def _store_conversion_features(
         for opcode, count in item.opcode_histogram.items():
             opcodes[opcode] = opcodes.get(opcode, 0) + count
         for ngram, count in item.opcode_ngrams.items():
+            ngram = _sqlite_text(ngram)
             opcode_ngrams[ngram] = opcode_ngrams.get(ngram, 0) + count
         for feature, count in item.dependency_shape.items():
+            feature = _sqlite_text(feature)
             dependency_shapes[feature] = dependency_shapes.get(feature, 0) + count
         for fingerprint, count in item.basic_block_opcode_fingerprints.items():
+            fingerprint = _sqlite_text(fingerprint)
             basic_block_fingerprints[fingerprint] = (
                 basic_block_fingerprints.get(fingerprint, 0) + count
             )
         for fingerprint, count in item.call_chain_opcode_fingerprints.items():
+            fingerprint = _sqlite_text(fingerprint)
             call_chain_fingerprints[fingerprint] = call_chain_fingerprints.get(fingerprint, 0) + count
         for summary, count in item.class_neighbor_summaries.items():
+            summary = _sqlite_text(summary)
             class_neighbor_summaries[summary] = class_neighbor_summaries.get(summary, 0) + count
         for fingerprint, count in item.field_operation_sequences.items():
+            fingerprint = _sqlite_text(fingerprint)
             field_operation_sequences[fingerprint] = (
                 field_operation_sequences.get(fingerprint, 0) + count
             )

@@ -373,7 +373,8 @@ def build_class_neighbor_summaries(
 def literal_context_feature(class_name: str, method_signature: str, literal: str) -> str:
     package_name = class_descriptor_to_package(class_name) or "<default>"
     payload = f"{package_name}|{method_signature}|{literal}"
-    return f"literal-context:{sha256(payload.encode('utf-8')).hexdigest()[:16]}"
+    digest = sha256(payload.encode("utf-8", errors="replace")).hexdigest()[:16]
+    return f"literal-context:{digest}"
 
 
 def _class_dependency_edges(

@@ -30,10 +30,11 @@ Current local build state:
 - Conversion statuses: `1892` converted, `20` existing, `698` skipped
 - Remaining downloaded artifacts awaiting conversion: `0`
 - Next conversion offset: complete
-- Feature DB extraction: advanced through converted/existing offset `799`
-- Stored priority DB components: `800`
+- Feature DB extraction: advanced through converted/existing offset `1407`
+- Stored priority DB components: `1408`
 - Extraction failures so far: `0`
-- Next extraction offset: `800`
+- Next extraction offset: `1408`
+- Robustness note: extraction hit malformed surrogate string literals in `com.github.houbb:heaven:0.13.0`; `dex_analyzer` and `reference_features` now replace invalid UTF-8 text before hashing/storing features, and the row stores successfully.
 
 The high 404 count is expected because the Gradle dependency trees include source/module aliases, JitPack-style coordinates, plugin/internal artifacts, relocated AndroidX/common variants, and repository-specific rows that are valid source evidence but not directly downloadable from the default Maven/Google repositories used by this evaluation-only builder.
 
@@ -78,5 +79,5 @@ The high 404 count is expected because the Gradle dependency trees include sourc
 python scripts\build_real_apk_priority_reference_catalog.py
 docker compose run --rm apk-sbom python -m apk_sbom.cli download-maven --config configs/libraries.real_apk_priority_versions.json --output-root data/reference_db/artifacts_real_apk_priority_versions --limit 500 --offset 0 --quiet
 docker compose run --rm apk-sbom python -m apk_sbom.cli convert-reference-dex --artifact-root data/reference_db/artifacts_real_apk_priority_versions --output-root data/reference_db/dex_real_apk_priority_versions --limit 100 --offset 0 --quiet
-docker compose run --rm apk-sbom python -m apk_sbom.cli extract-reference-features --dex-root data/reference_db/dex_real_apk_priority_versions --db-path data/reference_db/reference_features_real_apk_priority_versions.sqlite --limit 100 --offset 800 --quiet
+docker compose run --rm apk-sbom python -m apk_sbom.cli extract-reference-features --dex-root data/reference_db/dex_real_apk_priority_versions --db-path data/reference_db/reference_features_real_apk_priority_versions.sqlite --limit 100 --offset 1408 --quiet
 ```
