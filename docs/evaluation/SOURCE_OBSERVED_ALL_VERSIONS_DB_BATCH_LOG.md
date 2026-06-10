@@ -65,32 +65,32 @@ Continue all-versions downloads with `--limit 100 --offset 100`, then convert fr
 |---|---|---|
 | Download | target `--limit 6000 --offset 100`, resumed in smaller chunks after tool timeouts | downloads covered through config offset `6100`; `5589` artifact metadata records present so far |
 | Convert | backfilled missing conversion ranges after download ordering changed | `5589` conversion records present; downloaded ledger fully converted/skipped (`3285` converted, `755` existing, `1549` skipped) |
-| Extract | append/targeted extraction into `data/reference_db/reference_features_source_observed_all_versions.sqlite` | targeted missing-offset extraction advanced through heavy offset `2318`; `2519` stored components, 0 failed in recent chunks |
+| Extract | append/targeted extraction into `data/reference_db/reference_features_source_observed_all_versions.sqlite` | targeted missing-offset extraction advanced through heavy offset `2321`; `2522` stored components, 0 failed in recent chunks |
 
 The initial `6000`-slot download command timed out but wrote progress. Follow-up `1000`, `500`, and tail chunks continued the same macro-batch through config offset `6100`; the artifact ledger now has `5589` downloaded metadata records. Conversion also hit the tool timeout, so the batch was resumed by computing the first missing converter offset from `sorted(root.rglob("metadata.json"))` rather than using a naive normalized-path sort. This matters because later downloads inserted alphabetically earlier AndroidX rows. The heavy `androidx.compose.material:material-icons-extended`, `material3-android`, `runtime-android`, and `ui-android` regions required smaller chunks; no conversion failures are recorded in the current checkpoint. As of this checkpoint, the downloaded ledger is fully converted/skipped. Targeted extraction uses offsets over converted/existing records, not all conversion metadata records, and offsets are not the same as unique component counts because later chunks can upsert already-stored coordinate-version rows. A live reconciliation found the first missing row at offset `1104`; follow-up chunks at offsets `1104`, `1129`, and `1154` raised the DB to `2510` components. Heavy one-row chunks at offsets `2309`, `2311`, and `2312` stored `androidx.compose.material:material-icons-extended` versions and raised the DB to `2513` components. The next missing row is offset `2313`, `androidx.compose.material:material-icons-extended:1.2.0-alpha07`, so keep using one-row chunks.
 
-Latest heavy-region update: one-row chunks at offsets `2313`, `2314`, `2315`, `2316`, `2317`, and `2318` also completed cleanly. The current resume point is offset `2319`, `androidx.compose.material:material-icons-extended:1.2.0-rc02`, with `2519` stored components and `1521` still-missing extractable rows in the already-downloaded macro-batch.
+Latest heavy-region update: one-row chunks at offsets `2313`, `2314`, `2315`, `2316`, `2317`, `2318`, `2319`, `2320`, and `2321` also completed cleanly. The current resume point is offset `2322`, `androidx.compose.material:material-icons-extended:1.3.0`, with `2522` stored components and `1518` still-missing extractable rows in the already-downloaded macro-batch.
 
 Current feature extraction counts:
 
 | Feature table / metric | Rows |
 |---|---:|
-| Components | 2519 |
-| DEX files | 2510 |
-| Packages | 13246 |
-| Classes | 1241350 |
-| Methods | 4908483 |
-| Opcodes | 231340 |
-| API references | 5903148 |
-| String literals | 1264885 |
-| Dependency shapes | 30249 |
+| Components | 2522 |
+| DEX files | 2513 |
+| Packages | 13261 |
+| Classes | 1272010 |
+| Methods | 4969803 |
+| Opcodes | 231421 |
+| API references | 5933910 |
+| String literals | 1295548 |
+| Dependency shapes | 30255 |
 | Class dependencies | 1186331 |
-| Opcode n-grams | 8003221 |
-| Call-chain opcode fingerprints | 943835 |
-| Basic-block opcode fingerprints | 3545991 |
-| Class-neighbor summaries | 138059 |
-| Field-operation sequences | 512957 |
-| Literal/context features | 2380845 |
+| Opcode n-grams | 8005072 |
+| Call-chain opcode fingerprints | 961805 |
+| Basic-block opcode fingerprints | 3568407 |
+| Class-neighbor summaries | 138062 |
+| Field-operation sequences | 513023 |
+| Literal/context features | 2442165 |
 
 ## Deadline Pivot
 
@@ -109,4 +109,4 @@ This is not a replacement for the full `60979`-slot transparency lane. It is the
 
 ## Resume Point
 
-For the full all-versions lane, continue Macro-Batch 001 targeted extraction from converted/existing offset `2319` after rechecking the live DB. Current durable ledger: `5589` artifacts and `5589` conversion records (`3285` converted, `755` existing, `1549` skipped), `4040` extractable converted/existing rows, `2519` stored components, and `1521` still-missing extractable rows in the already-downloaded macro-batch. Use `--limit 1` or another very small chunk in the `androidx.compose.material:material-icons-extended` region.
+For the full all-versions lane, continue Macro-Batch 001 targeted extraction from converted/existing offset `2322` after rechecking the live DB. Current durable ledger: `5589` artifacts and `5589` conversion records (`3285` converted, `755` existing, `1549` skipped), `4040` extractable converted/existing rows, `2522` stored components, and `1518` still-missing extractable rows in the already-downloaded macro-batch. Use `--limit 1` or another very small chunk in the `androidx.compose.material:material-icons-extended` region.
