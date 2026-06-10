@@ -65,31 +65,31 @@ Continue all-versions downloads with `--limit 100 --offset 100`, then convert fr
 |---|---|---|
 | Download | target `--limit 6000 --offset 100`, resumed in smaller chunks after tool timeouts | downloads covered through config offset `6100`; `5589` artifact metadata records present so far |
 | Convert | backfilled missing conversion ranges after download ordering changed | `5589` conversion records present; downloaded ledger fully converted/skipped (`3285` converted, `755` existing, `1549` skipped) |
-| Extract | append/targeted extraction into `data/reference_db/reference_features_source_observed_all_versions.sqlite` | advanced through converted/existing offset `2129`; `2061` stored components, 0 failed in recent chunks |
+| Extract | append/targeted extraction into `data/reference_db/reference_features_source_observed_all_versions.sqlite` | advanced through converted/existing offset `2305`; `2237` stored components, 0 failed in recent chunks |
 
-The initial `6000`-slot download command timed out but wrote progress. Follow-up `1000`, `500`, and tail chunks continued the same macro-batch through config offset `6100`; the artifact ledger now has `5589` downloaded metadata records. Conversion also hit the tool timeout, so the batch was resumed by computing the first missing converter offset from `sorted(root.rglob("metadata.json"))` rather than using a naive normalized-path sort. This matters because later downloads inserted alphabetically earlier AndroidX rows. The heavy `androidx.compose.material:material-icons-extended`, `material3-android`, `runtime-android`, and `ui-android` regions required smaller chunks; no conversion failures are recorded in the current checkpoint. As of this checkpoint, the downloaded ledger is fully converted/skipped. Targeted extraction uses offsets over converted/existing records, not all conversion metadata records; extraction has advanced through offset `2129`.
+The initial `6000`-slot download command timed out but wrote progress. Follow-up `1000`, `500`, and tail chunks continued the same macro-batch through config offset `6100`; the artifact ledger now has `5589` downloaded metadata records. Conversion also hit the tool timeout, so the batch was resumed by computing the first missing converter offset from `sorted(root.rglob("metadata.json"))` rather than using a naive normalized-path sort. This matters because later downloads inserted alphabetically earlier AndroidX rows. The heavy `androidx.compose.material:material-icons-extended`, `material3-android`, `runtime-android`, and `ui-android` regions required smaller chunks; no conversion failures are recorded in the current checkpoint. As of this checkpoint, the downloaded ledger is fully converted/skipped. Targeted extraction uses offsets over converted/existing records, not all conversion metadata records; extraction has advanced through offset `2305`. The current extraction region is very heavy, so `--limit 5` chunks are safer than `--limit 25` or `--limit 50`.
 
 Current feature extraction counts:
 
 | Feature table / metric | Rows |
 |---|---:|
-| Components | 2061 |
-| DEX files | 2061 |
-| Packages | 10648 |
-| Classes | 704913 |
-| Methods | 3709833 |
-| Opcodes | 202652 |
-| API references | 5161373 |
-| String literals | 765789 |
-| Dependency shapes | 25723 |
-| Class dependencies | 1088801 |
-| Opcode n-grams | 7572052 |
-| Call-chain opcode fingerprints | 621932 |
-| Basic-block opcode fingerprints | 3071017 |
-| Class-neighbor summaries | 128343 |
-| Field-operation sequences | 487405 |
-| Literal/context features | 1352901 |
+| Components | 2237 |
+| DEX files | 2237 |
+| Packages | 11868 |
+| Classes | 1114549 |
+| Methods | 4554266 |
+| Opcodes | 207769 |
+| API references | 5606474 |
+| String literals | 1126432 |
+| Dependency shapes | 26767 |
+| Class dependencies | 1122465 |
+| Opcode n-grams | 7648770 |
+| Call-chain opcode fingerprints | 852633 |
+| Basic-block opcode fingerprints | 3363730 |
+| Class-neighbor summaries | 129081 |
+| Field-operation sequences | 489350 |
+| Literal/context features | 2118689 |
 
 ## Resume Point
 
-Continue Macro-Batch 001 targeted extraction from converted/existing offset `2130` with `--limit 50` or `--limit 100` depending on runtime. Current ledger: `5589` artifacts, `5589` conversion records (`3285` converted, `755` existing, `1549` skipped), and `2061` stored DB components. After extraction catches up, start the next all-versions macro-batch from config offset `6100`.
+Continue Macro-Batch 001 targeted extraction from converted/existing offset `2306` with `--limit 5` while the heavy extraction region continues. Current ledger: `5589` artifacts, `5589` conversion records (`3285` converted, `755` existing, `1549` skipped), and `2237` stored DB components. After extraction catches up, start the next all-versions macro-batch from config offset `6100`.
