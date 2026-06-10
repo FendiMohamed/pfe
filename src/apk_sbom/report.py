@@ -85,6 +85,7 @@ def generate_final_report(
     enable_version_unique_literal_context_reranker: bool = True,
     enable_composite_family_shortlist: bool = True,
     composite_family_shortlist_margin: float = COMPOSITE_FAMILY_SHORTLIST_MARGIN,
+    enable_reference_package_prefilter: bool = False,
     r8_phase5_experiment_json: str | Path | None = None,
     version_band_experiment_json: str | Path | None = None,
     lifecycle_family_experiment_json: str | Path | None = None,
@@ -107,6 +108,7 @@ def generate_final_report(
         ),
         enable_composite_family_shortlist=enable_composite_family_shortlist,
         composite_family_shortlist_margin=composite_family_shortlist_margin,
+        enable_reference_package_prefilter=enable_reference_package_prefilter,
     )
     components = detected_libraries_from_match_summary(
         match_summary,

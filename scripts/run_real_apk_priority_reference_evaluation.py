@@ -118,6 +118,7 @@ def run_case(
             apk_path,
             output_dir=report_dir,
             db_path=reference_db,
+            enable_reference_package_prefilter=True,
             query_osv=False,
             enrich_vulnerabilities=False,
         )

@@ -462,6 +462,7 @@ def match_apk_to_reference_db(
     enable_version_unique_literal_context_reranker: bool = True,
     enable_composite_family_shortlist: bool = True,
     composite_family_shortlist_margin: float = COMPOSITE_FAMILY_SHORTLIST_MARGIN,
+    enable_reference_package_prefilter: bool = False,
 ) -> MatchSummary:
     db = Path(db_path)
     if not db.exists():
@@ -471,7 +472,18 @@ def match_apk_to_reference_db(
     apk_features = feature_set_from_apk_analysis(analysis)
 
     with sqlite3.connect(db) as connection:
-        references = load_reference_components(connection, coordinate=coordinate)
+        component_ids = None
+        if enable_reference_package_prefilter:
+            component_ids = prefilter_component_ids_by_package_overlap(
+                connection,
+                apk_features.packages,
+                coordinate=coordinate,
+            )
+        references = load_reference_components(
+            connection,
+            coordinate=coordinate,
+            component_ids=component_ids,
+        )
     shortlist_summary = build_disabled_composite_family_shortlist_summary(references)
     if enable_composite_family_shortlist:
         references, shortlist_summary = shortlist_reference_families(
@@ -872,16 +884,32 @@ def load_reference_components(
     connection: sqlite3.Connection,
     *,
     coordinate: str | None = None,
+    component_ids: set[int] | None = None,
 ) -> list[ReferenceComponentFeatures]:
-    rows = connection.execute(
-        """
-        SELECT id, coordinate, group_id, artifact_id, version, purl
-        FROM components
-        WHERE (? IS NULL OR coordinate = ?)
-        ORDER BY coordinate, version
-        """,
-        (coordinate, coordinate),
-    ).fetchall()
+    if component_ids is not None and not component_ids:
+        rows = []
+    elif component_ids is None:
+        rows = connection.execute(
+            """
+            SELECT id, coordinate, group_id, artifact_id, version, purl
+            FROM components
+            WHERE (? IS NULL OR coordinate = ?)
+            ORDER BY coordinate, version
+            """,
+            (coordinate, coordinate),
+        ).fetchall()
+    else:
+        placeholders = ",".join("?" for _ in component_ids)
+        rows = connection.execute(
+            f"""
+            SELECT id, coordinate, group_id, artifact_id, version, purl
+            FROM components
+            WHERE id IN ({placeholders})
+              AND (? IS NULL OR coordinate = ?)
+            ORDER BY coordinate, version
+            """,
+            (*sorted(component_ids), coordinate, coordinate),
+        ).fetchall()
 
     return [
         ReferenceComponentFeatures(
@@ -1498,6 +1526,31 @@ def _choose_version_unique_literal_context_candidate(
         and identity_confidence_score(candidate)
         >= best_identity - VERSION_DISAMBIGUATION_IDENTITY_TOLERANCE
     ]
+
+
+def prefilter_component_ids_by_package_overlap(
+    connection: sqlite3.Connection,
+    apk_packages: set[str],
+    *,
+    coordinate: str | None = None,
+) -> set[int]:
+    if not apk_packages:
+        return set()
+
+    component_ids: set[int] = set()
+    rows = connection.execute(
+        """
+        SELECT p.component_id, p.package
+        FROM packages p
+        JOIN components c ON c.id = p.component_id
+        WHERE (? IS NULL OR c.coordinate = ?)
+        """,
+        (coordinate, coordinate),
+    )
+    for component_id, package in rows:
+        if package in apk_packages:
+            component_ids.add(int(component_id))
+    return component_ids
     if not eligible:
         return None
 

@@ -644,6 +644,14 @@ def build_parser() -> argparse.ArgumentParser:
     add_version_unique_literal_context_reranker_args(report_parser)
     add_composite_family_shortlist_experiment_args(report_parser)
     report_parser.add_argument(
+        "--enable-reference-package-prefilter",
+        action="store_true",
+        help=(
+            "Experiment-only speedup: score only reference components sharing at "
+            "least one package with the APK. Default behavior is unchanged."
+        ),
+    )
+    report_parser.add_argument(
         "--skip-osv",
         action="store_true",
         help="Do not query OSV while generating the report.",
@@ -1194,6 +1202,7 @@ def main(argv: list[str] | None = None) -> int:
                 ),
                 enable_composite_family_shortlist=args.enable_composite_family_shortlist,
                 composite_family_shortlist_margin=args.composite_family_shortlist_margin,
+                enable_reference_package_prefilter=args.enable_reference_package_prefilter,
                 include_uncertain=args.include_uncertain,
                 query_osv=not args.skip_osv,
                 osv_api_url=args.osv_api_url,
