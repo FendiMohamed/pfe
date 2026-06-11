@@ -65,32 +65,32 @@ Continue all-versions downloads with `--limit 100 --offset 100`, then convert fr
 |---|---|---|
 | Download | target `--limit 6000 --offset 100`, resumed in smaller chunks after tool timeouts | downloads covered through config offset `6100`; `5589` artifact metadata records present so far |
 | Convert | backfilled missing conversion ranges after download ordering changed | `5589` conversion records present; downloaded ledger fully converted/skipped (`3285` converted, `755` existing, `1549` skipped) |
-| Extract | append/targeted extraction into `data/reference_db/reference_features_source_observed_all_versions.sqlite` | targeted missing-offset extraction advanced through heavy offset `2324`; `2525` stored components, 0 failed in recent chunks |
+| Extract | append/targeted extraction into `data/reference_db/reference_features_source_observed_all_versions.sqlite` | heavy icon extraction paused after offset `2327`; repeated/light coordinate-filtered extraction raised DB to `2618` stored components, 0 failed in recent chunks |
 
 The initial `6000`-slot download command timed out but wrote progress. Follow-up `1000`, `500`, and tail chunks continued the same macro-batch through config offset `6100`; the artifact ledger now has `5589` downloaded metadata records. Conversion also hit the tool timeout, so the batch was resumed by computing the first missing converter offset from `sorted(root.rglob("metadata.json"))` rather than using a naive normalized-path sort. This matters because later downloads inserted alphabetically earlier AndroidX rows. The heavy `androidx.compose.material:material-icons-extended`, `material3-android`, `runtime-android`, and `ui-android` regions required smaller chunks; no conversion failures are recorded in the current checkpoint. As of this checkpoint, the downloaded ledger is fully converted/skipped. Targeted extraction uses offsets over converted/existing records, not all conversion metadata records, and offsets are not the same as unique component counts because later chunks can upsert already-stored coordinate-version rows. A live reconciliation found the first missing row at offset `1104`; follow-up chunks at offsets `1104`, `1129`, and `1154` raised the DB to `2510` components. Heavy one-row chunks at offsets `2309`, `2311`, and `2312` stored `androidx.compose.material:material-icons-extended` versions and raised the DB to `2513` components. The next missing row is offset `2313`, `androidx.compose.material:material-icons-extended:1.2.0-alpha07`, so keep using one-row chunks.
 
-Latest heavy-region update: one-row chunks at offsets `2313`, `2314`, `2315`, `2316`, `2317`, `2318`, `2319`, `2320`, `2321`, `2322`, `2323`, and `2324` also completed cleanly. The current resume point is offset `2325`, `androidx.compose.material:material-icons-extended:1.3.0-alpha03`, with `2525` stored components and `1515` still-missing extractable rows in the already-downloaded macro-batch.
+Latest heavy-region update: one-row chunks through offset `2327` completed cleanly, but `androidx.compose.material:material-icons-extended` and `material-icons-extended-android` are now deferred as a heavy icon-pack backlog because each row costs several minutes. The value-first extraction policy is to process real-APK repeated and lightweight rows before returning to icon packs. Coordinate-filtered extraction then stored `44` versions for `androidx.compose.runtime:runtime-annotation-android` and `53` versions for `androidx.compose.material3.adaptive:adaptive-android`, raising the DB to `2618` components. Current repeated/non-icon missing queue has `11` rows; next light candidates include `androidx.compose.runtime:runtime-saveable-android`, `androidx.compose.ui:ui-geometry-android`, and `androidx.compose.runtime:runtime-retain-android`.
 
 Current feature extraction counts:
 
 | Feature table / metric | Rows |
 |---|---:|
-| Components | 2525 |
-| DEX files | 2516 |
-| Packages | 13276 |
-| Classes | 1302865 |
-| Methods | 5031513 |
-| Opcodes | 231502 |
-| API references | 5964867 |
-| String literals | 1326406 |
-| Dependency shapes | 30261 |
-| Class dependencies | 1186331 |
-| Opcode n-grams | 8006925 |
-| Call-chain opcode fingerprints | 979899 |
-| Basic-block opcode fingerprints | 3590955 |
-| Class-neighbor summaries | 138065 |
-| Field-operation sequences | 513091 |
-| Literal/context features | 2503875 |
+| Components | 2618 |
+| DEX files | 2609 |
+| Packages | 13425 |
+| Classes | 1334991 |
+| Methods | 5096623 |
+| Opcodes | 233917 |
+| API references | 6001679 |
+| String literals | 1358897 |
+| Dependency shapes | 30747 |
+| Class dependencies | 1186675 |
+| Opcode n-grams | 8025989 |
+| Call-chain opcode fingerprints | 999331 |
+| Basic-block opcode fingerprints | 3617433 |
+| Class-neighbor summaries | 138388 |
+| Field-operation sequences | 514060 |
+| Literal/context features | 2567760 |
 
 ## Deadline Pivot
 
@@ -109,4 +109,4 @@ This is not a replacement for the full `60979`-slot transparency lane. It is the
 
 ## Resume Point
 
-For the full all-versions lane, continue Macro-Batch 001 targeted extraction from converted/existing offset `2325` after rechecking the live DB. Current durable ledger: `5589` artifacts and `5589` conversion records (`3285` converted, `755` existing, `1549` skipped), `4040` extractable converted/existing rows, `2525` stored components, and `1515` still-missing extractable rows in the already-downloaded macro-batch. Use `--limit 1` or another very small chunk in the `androidx.compose.material:material-icons-extended` region.
+For the full all-versions lane, continue Macro-Batch 001 with value-first extraction: prioritize repeated real-APK versions and lightweight coordinates, then return to heavy icon packs later. Current durable ledger: `5589` artifacts and `5589` conversion records (`3285` converted, `755` existing, `1549` skipped), `4040` extractable converted/existing rows, `2618` stored components, and `1422` still-missing extractable rows in the already-downloaded macro-batch. The heavy icon backlog starts at converted/existing offset `2328`; do not resume it until repeated/light rows are exhausted or explicitly needed.
