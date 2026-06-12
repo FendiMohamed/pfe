@@ -65,32 +65,32 @@ Continue all-versions downloads with `--limit 100 --offset 100`, then convert fr
 |---|---|---|
 | Download | target `--limit 6000 --offset 100`, resumed in smaller chunks after tool timeouts | downloads covered through config offset `6100`; `5589` artifact metadata records present so far |
 | Convert | backfilled missing conversion ranges after download ordering changed | `5589` conversion records present; downloaded ledger fully converted/skipped (`3285` converted, `755` existing, `1549` skipped) |
-| Extract | append/targeted extraction into `data/reference_db/reference_features_source_observed_all_versions.sqlite` | heavy icon extraction paused after offset `2327`; value-first coordinate-filtered extraction raised DB to `3853` stored components, 0 failed in recent chunks |
+| Extract | append/targeted extraction into `data/reference_db/reference_features_source_observed_all_versions.sqlite` | all non-icon extractable rows in the downloaded macro-batch are stored; DB raised to `3966` stored components, 0 failed in recent chunks |
 
 The initial `6000`-slot download command timed out but wrote progress. Follow-up `1000`, `500`, and tail chunks continued the same macro-batch through config offset `6100`; the artifact ledger now has `5589` downloaded metadata records. Conversion also hit the tool timeout, so the batch was resumed by computing the first missing converter offset from `sorted(root.rglob("metadata.json"))` rather than using a naive normalized-path sort. This matters because later downloads inserted alphabetically earlier AndroidX rows. The heavy `androidx.compose.material:material-icons-extended`, `material3-android`, `runtime-android`, and `ui-android` regions required smaller chunks; no conversion failures are recorded in the current checkpoint. As of this checkpoint, the downloaded ledger is fully converted/skipped. Targeted extraction uses offsets over converted/existing records, not all conversion metadata records, and offsets are not the same as unique component counts because later chunks can upsert already-stored coordinate-version rows. A live reconciliation found the first missing row at offset `1104`; follow-up chunks at offsets `1104`, `1129`, and `1154` raised the DB to `2510` components. Heavy one-row chunks at offsets `2309`, `2311`, and `2312` stored `androidx.compose.material:material-icons-extended` versions and raised the DB to `2513` components. The next missing row is offset `2313`, `androidx.compose.material:material-icons-extended:1.2.0-alpha07`, so keep using one-row chunks.
 
-Latest heavy-region update: one-row chunks through offset `2327` completed cleanly, but `androidx.compose.material:material-icons-extended` and `material-icons-extended-android` are now deferred as a heavy icon-pack backlog because each row costs several minutes. The value-first extraction policy is to process real-APK repeated and lightweight rows before returning to icon packs. Coordinate-filtered extraction has now covered the repeated/non-icon rows plus all currently downloaded source-observed non-icon misses, including the Compose runtime/material3/ui tails (`runtime-livedata`, `adaptive-navigation-android`, `adaptive-layout-android`, `runtime-saveable-android`, `ui-geometry-android`, `runtime-android`, `ui-android`, `material3-android`, and `material3:1.1.2`). Follow-up non-icon cleanup added `75` `androidx.compose.runtime:runtime-saveable` rows, `89` `androidx.compose.ui:ui-geometry` rows, `89` `androidx.compose.ui:ui-graphics` rows, `1` `androidx.compose.ui:ui-graphics-android` row, all `androidx.compose.material3:material3` rows, and `89` `androidx.compose.runtime:runtime` rows. This raised the DB to `3853` components. The source-observed non-icon missing queue is exhausted: `0` rows remain. Only `2` source-observed rows are still deferred, both in `androidx.compose.material:material-icons-extended-android` (`1.7.8`, `1.6.8`) at roughly `29.5 MB` DEX each.
+Latest heavy-region update: one-row chunks through offset `2327` completed cleanly, but `androidx.compose.material:material-icons-extended` and `material-icons-extended-android` were deferred as a heavy icon-pack backlog because each row costs several minutes. The value-first extraction policy processed real-APK repeated rows first, then source-observed non-icon rows, then lightweight and medium non-icon all-version rows. Coordinate-filtered extraction now covers every non-icon extractable row in the downloaded macro-batch, including the Compose runtime/material3/ui tails (`runtime-livedata`, `adaptive-navigation-android`, `adaptive-layout-android`, `runtime-saveable-android`, `ui-geometry-android`, `runtime-android`, `ui-android`, `material3-android`, `material3:1.1.2`, `runtime-saveable`, `ui-geometry`, `ui-graphics`, `ui-graphics-android`, `material3`, and `runtime`). This raised the DB to `3966` components. Remaining extractable rows are heavy icon-pack only: `55` `androidx.compose.material:material-icons-extended-android` rows and `19` `androidx.compose.material:material-icons-extended` rows. The only source-observed rows still missing are `2` deferred `material-icons-extended-android` versions (`1.7.8`, `1.6.8`) at roughly `29.5 MB` DEX each.
 
 Current feature extraction counts:
 
 | Feature table / metric | Rows |
 |---|---:|
-| Components | 3853 |
-| DEX files | 3844 |
-| Packages | 22524 |
-| Classes | 1812834 |
-| Methods | 8531821 |
-| Opcodes | 350297 |
-| API references | 10022604 |
-| String literals | 1887822 |
-| Dependency shapes | 43886 |
-| Class dependencies | 2067696 |
-| Opcode n-grams | 13420846 |
-| Call-chain opcode fingerprints | 1484932 |
-| Basic-block opcode fingerprints | 6222852 |
-| Class-neighbor summaries | 230839 |
-| Field-operation sequences | 840896 |
-| Literal/context features | 3490201 |
+| Components | 3966 |
+| DEX files | 3957 |
+| Packages | 25109 |
+| Classes | 1975652 |
+| Methods | 9602026 |
+| Opcodes | 366894 |
+| API references | 11402599 |
+| String literals | 2096354 |
+| Dependency shapes | 45468 |
+| Class dependencies | 2332113 |
+| Opcode n-grams | 14642158 |
+| Call-chain opcode fingerprints | 1617566 |
+| Basic-block opcode fingerprints | 6884798 |
+| Class-neighbor summaries | 253347 |
+| Field-operation sequences | 930850 |
+| Literal/context features | 3903932 |
 
 ## Deadline Pivot
 
@@ -109,4 +109,4 @@ This is not a replacement for the full `60979`-slot transparency lane. It is the
 
 ## Resume Point
 
-For the full all-versions lane, continue Macro-Batch 001 with value-first extraction: the source-observed non-icon queue is exhausted, so the remaining already-downloaded work is either the two largest non-icon Compose groups or the deferred heavy icon backlog. Current durable ledger: `5589` artifacts and `5589` conversion records (`3285` converted, `755` existing, `1549` skipped), `4040` extractable converted/existing rows, `3853` stored components, and `187` still-missing extractable rows in the already-downloaded macro-batch. The only source-observed missing rows are `2` deferred `androidx.compose.material:material-icons-extended-android` versions (`1.7.8`, `1.6.8`). The next non-icon candidates are `androidx.compose.ui:ui` and `androidx.compose.material3:material3-android`; the heavy icon backlog starts at converted/existing offset `2328`.
+For the full all-versions lane, Macro-Batch 001 has completed every non-icon extractable row in the already-downloaded ledger. Current durable ledger: `5589` artifacts and `5589` conversion records (`3285` converted, `755` existing, `1549` skipped), `4040` extractable converted/existing rows, `3966` stored components, and `74` still-missing extractable rows in the already-downloaded macro-batch. The remaining rows are only the deferred heavy icon backlog: `55` `androidx.compose.material:material-icons-extended-android` rows and `19` `androidx.compose.material:material-icons-extended` rows. The only source-observed missing rows are `2` deferred `material-icons-extended-android` versions (`1.7.8`, `1.6.8`). Continue here only if the deadline can absorb very slow icon-pack extraction, otherwise move to the next 6000-slot download macro-batch or priority DB evaluation reruns.
