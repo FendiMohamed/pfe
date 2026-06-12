@@ -110,3 +110,12 @@ This is not a replacement for the full `60979`-slot transparency lane. It is the
 ## Resume Point
 
 For the full all-versions lane, Macro-Batch 001 has completed every non-icon extractable row in the already-downloaded ledger. Current durable ledger: `5589` artifacts and `5589` conversion records (`3285` converted, `755` existing, `1549` skipped), `4040` extractable converted/existing rows, `3966` stored components, and `74` still-missing extractable rows in the already-downloaded macro-batch. The remaining rows are only the deferred heavy icon backlog: `55` `androidx.compose.material:material-icons-extended-android` rows and `19` `androidx.compose.material:material-icons-extended` rows. The only source-observed missing rows are `2` deferred `material-icons-extended-android` versions (`1.7.8`, `1.6.8`). Continue here only if the deadline can absorb very slow icon-pack extraction, otherwise move to the next 6000-slot download macro-batch or priority DB evaluation reruns.
+
+## Macro-Batch 002
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | target `--limit 6000 --offset 6100` into `data/reference_db/artifacts_source_observed_all_versions` | tool timed out after writing progress, but latest metadata maps to flattened config offset `12099`; artifact ledger now has `10657` metadata records |
+| Convert | first two `1000`-row chunks from sorted artifact offsets `5588` and `6588` | conversion ledger now has `7588` records (`4874` converted, `756` existing, `1958` skipped), 0 conversion failures in the recent chunks |
+
+Macro-Batch 002 download covered the next `6000` config slots (`6100` through `12099`), so the next download resume point is flattened config offset `12100`. Conversion is partial: `3069` downloaded artifact metadata records still have no conversion record yet. The next conversion resume point, computed from sorted artifact metadata, is artifact offset `7588` (`androidx.databinding:databinding-adapters:7.1.0-beta02`).
