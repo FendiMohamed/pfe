@@ -116,6 +116,6 @@ For the full all-versions lane, Macro-Batch 001 has completed every non-icon ext
 | Step | Command scope | Result |
 |---|---|---|
 | Download | target `--limit 6000 --offset 6100` into `data/reference_db/artifacts_source_observed_all_versions` | tool timed out after writing progress, but latest metadata maps to flattened config offset `12099`; artifact ledger now has `10657` metadata records |
-| Convert | first two `1000`-row chunks from sorted artifact offsets `5588` and `6588` | conversion ledger now has `7588` records (`4874` converted, `756` existing, `1958` skipped), 0 conversion failures in the recent chunks |
+| Convert | chunks from sorted artifact offsets `5588`, `6588`, `7588`, `8588`, and `9588` | downloaded ledger fully converted/skipped; `10657` conversion records (`7756` converted, `756` existing, `2145` skipped), 0 conversion failures in the recent chunks |
 
-Macro-Batch 002 download covered the next `6000` config slots (`6100` through `12099`), so the next download resume point is flattened config offset `12100`. Conversion is partial: `3069` downloaded artifact metadata records still have no conversion record yet. The next conversion resume point, computed from sorted artifact metadata, is artifact offset `7588` (`androidx.databinding:databinding-adapters:7.1.0-beta02`).
+Macro-Batch 002 download covered the next `6000` config slots (`6100` through `12099`), so the next download resume point is flattened config offset `12100`. Conversion is complete for all currently downloaded artifacts: `0` metadata records are missing conversion output. Next step is feature extraction for the newly converted bytecode-bearing rows, still keeping heavy extraction bounded and transparent.
