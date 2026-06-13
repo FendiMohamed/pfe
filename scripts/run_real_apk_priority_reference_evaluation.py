@@ -43,6 +43,17 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Fetch enriched vulnerability details when --query-osv is enabled.",
     )
+    parser.add_argument(
+        "--reference-package-prefilter-min-overlap",
+        type=int,
+        default=1,
+        help="Minimum shared APK/reference packages for the report package prefilter.",
+    )
+    parser.add_argument(
+        "--reference-package-prefilter-limit",
+        type=int,
+        help="Maximum package-overlap prefilter components to score for each APK.",
+    )
     return parser
 
 
@@ -69,6 +80,8 @@ def main() -> int:
                 force=args.force,
                 query_osv=args.query_osv,
                 enrich_vulnerabilities=args.enrich_vulnerabilities,
+                reference_package_prefilter_min_overlap=args.reference_package_prefilter_min_overlap,
+                reference_package_prefilter_limit=args.reference_package_prefilter_limit,
             )
         )
 
@@ -117,6 +130,8 @@ def run_case(
     force: bool,
     query_osv: bool,
     enrich_vulnerabilities: bool,
+    reference_package_prefilter_min_overlap: int,
+    reference_package_prefilter_limit: int | None,
 ) -> dict[str, Any]:
     case_id = str(case["case_id"])
     old_report = read_json((case.get("paths") or {})["report"])
@@ -133,6 +148,8 @@ def run_case(
             output_dir=report_dir,
             db_path=reference_db,
             enable_reference_package_prefilter=True,
+            reference_package_prefilter_min_overlap=reference_package_prefilter_min_overlap,
+            reference_package_prefilter_limit=reference_package_prefilter_limit,
             query_osv=query_osv,
             enrich_vulnerabilities=enrich_vulnerabilities,
         )

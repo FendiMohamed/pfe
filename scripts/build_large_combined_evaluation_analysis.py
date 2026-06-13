@@ -133,8 +133,12 @@ def build_payload(
             "status": "blocked-by-runtime",
             "evidence": (
                 "A one-case direct report/source-validation rerun against "
-                "reference_features_large_combined.sqlite timed out after 30 minutes, "
-                "so the detailed analysis below uses the current source-validation baseline "
+                "reference_features_large_combined.sqlite timed out after 30 minutes. "
+                "A 1000-component package-overlap cap also timed out after 30 minutes. "
+                "A 100-component cap finished in about 5 minutes but regressed F-Droid to "
+                "6 confirmed / 1 wrong / 6 missing, and a 300-component cap finished in about "
+                "14 minutes but still regressed F-Droid to 6 confirmed / 6 wrong / 6 missing. "
+                "Therefore the detailed analysis below uses the current source-validation baseline "
                 "plus large-combined reference coverage until a stricter large-DB matcher shortlist is added."
             ),
         },

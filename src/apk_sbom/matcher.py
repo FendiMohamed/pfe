@@ -463,6 +463,8 @@ def match_apk_to_reference_db(
     enable_composite_family_shortlist: bool = True,
     composite_family_shortlist_margin: float = COMPOSITE_FAMILY_SHORTLIST_MARGIN,
     enable_reference_package_prefilter: bool = False,
+    reference_package_prefilter_min_overlap: int = 1,
+    reference_package_prefilter_limit: int | None = None,
 ) -> MatchSummary:
     db = Path(db_path)
     if not db.exists():
@@ -478,6 +480,8 @@ def match_apk_to_reference_db(
                 connection,
                 apk_features.packages,
                 coordinate=coordinate,
+                min_overlap=reference_package_prefilter_min_overlap,
+                limit=reference_package_prefilter_limit,
             )
         references = load_reference_components(
             connection,
@@ -1533,24 +1537,40 @@ def prefilter_component_ids_by_package_overlap(
     apk_packages: set[str],
     *,
     coordinate: str | None = None,
+    min_overlap: int = 1,
+    limit: int | None = None,
 ) -> set[int]:
     if not apk_packages:
         return set()
 
-    component_ids: set[int] = set()
+    placeholders = ", ".join("?" for _ in apk_packages)
+    params: list[object] = list(apk_packages)
+    coordinate_clause = ""
+    if coordinate:
+        coordinate_clause = "AND c.coordinate = ?"
+        params.append(coordinate)
+    having_clause = "HAVING shared_packages >= ?"
+    params.append(max(1, min_overlap))
+    limit_clause = ""
+    if limit is not None:
+        limit_clause = "LIMIT ?"
+        params.append(max(0, limit))
+
     rows = connection.execute(
-        """
-        SELECT p.component_id, p.package
+        f"""
+        SELECT p.component_id, COUNT(DISTINCT p.package) AS shared_packages
         FROM packages p
         JOIN components c ON c.id = p.component_id
-        WHERE (? IS NULL OR c.coordinate = ?)
+        WHERE p.package IN ({placeholders})
+        {coordinate_clause}
+        GROUP BY p.component_id
+        {having_clause}
+        ORDER BY shared_packages DESC, c.coordinate ASC, c.version DESC
+        {limit_clause}
         """,
-        (coordinate, coordinate),
+        params,
     )
-    for component_id, package in rows:
-        if package in apk_packages:
-            component_ids.add(int(component_id))
-    return component_ids
+    return {int(component_id) for component_id, _shared_packages in rows}
     if not eligible:
         return None
 
