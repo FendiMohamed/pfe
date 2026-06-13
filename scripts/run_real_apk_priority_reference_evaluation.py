@@ -33,6 +33,16 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--offset", type=int, default=0)
     parser.add_argument("--limit", type=int)
     parser.add_argument("--force", action="store_true")
+    parser.add_argument(
+        "--query-osv",
+        action="store_true",
+        help="Query OSV while generating reports. Default is off for fast reference-DB comparison runs.",
+    )
+    parser.add_argument(
+        "--enrich-vulnerabilities",
+        action="store_true",
+        help="Fetch enriched vulnerability details when --query-osv is enabled.",
+    )
     return parser
 
 
@@ -57,6 +67,8 @@ def main() -> int:
                 output_root=output_root,
                 reference_db=reference_db,
                 force=args.force,
+                query_osv=args.query_osv,
+                enrich_vulnerabilities=args.enrich_vulnerabilities,
             )
         )
 
@@ -103,6 +115,8 @@ def run_case(
     output_root: Path,
     reference_db: Path,
     force: bool,
+    query_osv: bool,
+    enrich_vulnerabilities: bool,
 ) -> dict[str, Any]:
     case_id = str(case["case_id"])
     old_report = read_json((case.get("paths") or {})["report"])
@@ -119,8 +133,8 @@ def run_case(
             output_dir=report_dir,
             db_path=reference_db,
             enable_reference_package_prefilter=True,
-            query_osv=False,
-            enrich_vulnerabilities=False,
+            query_osv=query_osv,
+            enrich_vulnerabilities=enrich_vulnerabilities,
         )
     else:
         report_artifacts = None

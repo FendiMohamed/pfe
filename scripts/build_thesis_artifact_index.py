@@ -239,6 +239,16 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use to separate DB coverage growth from emitted-version accuracy: exact source-version coverage improves while matcher output remains a separate rerun step.",
         },
         {
+            "table": "Large combined reference DB coverage dashboard",
+            "source": "docs/evaluation/REFERENCE_DB_COVERAGE_LARGE_COMBINED_DASHBOARD.md",
+            "use": "Use to show the combined evaluation-only DB component count, coordinate coverage, exact-version coverage, and remaining reference gaps.",
+        },
+        {
+            "table": "Large combined real APK analysis",
+            "source": "docs/evaluation/LARGE_COMBINED_REAL_APK_ANALYSIS.md",
+            "use": "Use as the detailed analysis entry point for per-APK rows, wrong-version rows with correct source versions, source false negatives, false-positive extra emissions, vulnerabilities, and the current large-DB runtime blocker.",
+        },
+        {
             "table": "Post-100 real APK optimization plan",
             "source": "docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md",
             "use": "Use as the research-backed execution roadmap for coverage-first reference DB growth, wrong-version rows, missing-source rows, guarded promotion, and dashboard improvement.",

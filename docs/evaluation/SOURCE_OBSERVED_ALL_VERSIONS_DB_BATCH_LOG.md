@@ -119,4 +119,29 @@ For the full all-versions lane, Macro-Batch 001 has completed every non-icon ext
 | Convert | chunks from sorted artifact offsets `5588`, `6588`, `7588`, `8588`, and `9588` | downloaded ledger fully converted/skipped; `10657` conversion records (`7756` converted, `756` existing, `2145` skipped), 0 conversion failures in the recent chunks |
 | Extract | coordinate-filtered append into `data/reference_db/reference_features_source_observed_all_versions.sqlite` | light/high-return extraction slices stored `495` `androidx.databinding:viewbinding`, `2` `androidx.hilt:hilt-common`, `10` `androidx.lifecycle:lifecycle-common-java8`, `4` `androidx.core:core-viewtree`, `21` `androidx.fragment:fragment-compose`, `10` `androidx.hilt:hilt-lifecycle-viewmodel`, `8` `androidx.glance:glance-preview`, `6` `androidx.legacy:legacy-support-core-utils`, `6` `androidx.interpolator:interpolator`, `129` `androidx.fragment:fragment-ktx`, `37` `androidx.emoji2:emoji2-bundled`, `13` `androidx.glance:glance-material3`, `21` `androidx.hilt:hilt-work`, `401` `androidx.databinding:databinding-ktx`, `89` `androidx.compose.ui:ui-util`, `39` `androidx.emoji2:emoji2-views`, `22` `androidx.hilt:hilt-navigation-compose`, `8` `androidx.customview:customview-poolingcontainer`, `7` `androidx.hilt:hilt-lifecycle-viewmodel-compose`, `117` `androidx.compose.ui:ui-util-android`, `65` `androidx.compose.ui:ui-tooling-preview`, `117` `androidx.compose.ui:ui-tooling-preview-android`, `6` `androidx.legacy:legacy-support-core-ui`, `6` `androidx.cursoradapter:cursoradapter`, `11` `androidx.documentfile:documentfile`, `15` `androidx.datastore:datastore-preferences`, and `32` `androidx.datastore:datastore-preferences-android` rows; DB now has `5663` stored components |
 
-Macro-Batch 002 download covered the next `6000` config slots (`6100` through `12099`), so the next download resume point is flattened config offset `12100`. Conversion is complete for all currently downloaded artifacts: `0` metadata records are missing conversion output. Feature extraction has started with high-count/lightweight coordinates. Across all downloaded batches, there are now `8512` extractable converted/existing rows, `5663` stored DB components, and `2849` extractable rows still missing.
+Macro-Batch 002 download covered the next `6000` config slots (`6100` through `12099`), so the next download resume point is flattened config offset `12100`. Conversion is complete for all currently downloaded artifacts: `0` metadata records are missing conversion output. Feature extraction started with high-count/lightweight coordinates. Across all downloaded batches, there were `8512` extractable converted/existing rows, `5663` stored DB components, and `2849` extractable rows still missing before the targeted missing-row extractor.
+
+## Targeted Missing-Row Extraction
+
+`scripts/extract_missing_source_observed_all_versions.py` consumes `data/results/evaluation/source-observed-all-versions-missing-extraction-rows.json`, skips rows already present in the DB, and processes the remaining conversion records by DEX-size tier.
+
+| Step | Command scope | Result |
+|---|---|---|
+| Build missing-row queue | compare all conversion records with `reference_features_source_observed_all_versions.sqlite` | `8512` extractable conversion rows, `5663` initially stored rows, `2849` missing rows across `47` coordinates |
+| Smoke non-icon extraction | `androidx.graphics:graphics-shapes` | `3` stored, 0 failed |
+| Small DEX tier | sorted rows up to `100000` DEX bytes | `1709` stored, 0 failed |
+| Medium DEX tier | sorted rows up to `250000` DEX bytes | `365` stored, 0 failed |
+| Larger DEX tier | sorted rows up to `500000` DEX bytes | `204` stored, 0 failed |
+| Large non-icon tier | sorted rows up to `1000000` DEX bytes | `428` stored, 0 failed |
+| Final non-icon tier | sorted rows up to `2000000` DEX bytes | `66` stored, 0 failed |
+| Heavy icon-pack probe | one `androidx.compose.material:material-icons-extended` row | `1` stored in about 14 minutes, 0 failed |
+
+Current all-versions DB state:
+
+- Stored components: `8439`
+- Unique coordinates: `128`
+- Extractable rows still not stored: `73`
+- Remaining coordinates: `androidx.compose.material:material-icons-extended` (`18` rows) and `androidx.compose.material:material-icons-extended-android` (`55` rows)
+- Remaining DEX volume: about `2.02` GiB
+
+The remaining rows are the heavy Material Icons Extended tail. They are valid extractable bytecode rows, but one row took about 14 minutes, so finishing the last `73` rows is a many-hour extraction tail and should not block the large combined DB/reporting experiment.
