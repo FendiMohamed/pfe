@@ -15,7 +15,7 @@ This report separates three things: current emitted-SBOM source validation, larg
 | Current emitted wrong versions | 636 |
 | Current false-positive extra emissions | 274 |
 | Current emitted confirmation rate | 50.5% |
-| Large combined DB components | 10428 |
+| Large combined DB components | 10430 |
 | Large combined DB coordinates | 1134 |
 | Large combined exact source-version coverage | 79.5% |
 | Large combined coordinate coverage | 90.6% |
