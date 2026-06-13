@@ -21,7 +21,7 @@ This is the deadline-friendly reference expansion lane. It keeps the full all-ve
 
 ## Build Checkpoint
 
-Current local build state:
+Initial local build state before failed-slot retry:
 
 - Download config slots: `3241`
 - Downloaded artifact metadata records: `2610`
@@ -31,13 +31,29 @@ Current local build state:
 - Remaining downloaded artifacts awaiting conversion: `0`
 - Next conversion offset: complete
 - Feature DB extraction: complete through converted/existing offset `1911`
-- Stored priority DB components: `1912`
+- Initial stored priority DB components before failed-slot retry: `1912`
 - Extraction failures so far: `0`
 - Next extraction offset: complete
 - Final feature rows: `1913` dex files, `18401` packages, `537812` classes, `3742752` methods, `3972179` API references, `799153` string literals, `1595270` literal-context features
 - Robustness note: extraction hit malformed surrogate string literals in `com.github.houbb:heaven:0.13.0`; `dex_analyzer` and `reference_features` now replace invalid UTF-8 text before hashing/storing features, and the row stores successfully.
 
 The high 404 count is expected because the Gradle dependency trees include source/module aliases, JitPack-style coordinates, plugin/internal artifacts, relocated AndroidX/common variants, and repository-specific rows that are valid source evidence but not directly downloadable from the default Maven/Google repositories used by this evaluation-only builder.
+
+## Failed-Slot Retry Update
+
+`scripts/build_real_apk_priority_failed_download_retry_plan.py` reconstructs the `631` unrecovered priority slots, ranks them by real-APK support/occurrence count, and writes retry configs for alternate packaging/repositories and Maven Central AAR fallbacks.
+
+Current state after the retry pass:
+
+- Additional recovered priority artifact metadata records: `539`
+- Additional bytecode-bearing rows converted and extracted: `512`
+- Priority DB stored components after retry extraction: `2424`
+- Recovered priority artifact metadata across base and retry roots: `3149/3241`
+- Remaining unrecovered priority slots: `92`
+- Remaining repeated unrecovered slots: `17`
+- Remaining single-observed unrecovered slots: `75`
+
+The remaining unrecovered set stays explicit rather than silently counted as covered. It is dominated by legacy support aliases, Kotlin/toolchain boundary rows, repository-specific rows, and source/module aliases that need proven coordinate normalization or source-specific repositories before they can be added honestly.
 
 ## Top Repeated Versions
 
@@ -81,4 +97,11 @@ python scripts\build_real_apk_priority_reference_catalog.py
 docker compose run --rm apk-sbom python -m apk_sbom.cli download-maven --config configs/libraries.real_apk_priority_versions.json --output-root data/reference_db/artifacts_real_apk_priority_versions --limit 500 --offset 0 --quiet
 docker compose run --rm apk-sbom python -m apk_sbom.cli convert-reference-dex --artifact-root data/reference_db/artifacts_real_apk_priority_versions --output-root data/reference_db/dex_real_apk_priority_versions --limit 100 --offset 0 --quiet
 docker compose run --rm apk-sbom python -m apk_sbom.cli extract-reference-features --dex-root data/reference_db/dex_real_apk_priority_versions --db-path data/reference_db/reference_features_real_apk_priority_versions.sqlite --limit 100 --offset 1912 --quiet
+python scripts\build_real_apk_priority_failed_download_retry_plan.py
+docker compose run --rm apk-sbom python -m apk_sbom.cli download-maven --config configs/libraries.real_apk_priority_failed_retry_alt_packaging.json --output-root data/reference_db/artifacts_real_apk_priority_failed_retry_alt_packaging --quiet
+docker compose run --rm apk-sbom python -m apk_sbom.cli convert-reference-dex --artifact-root data/reference_db/artifacts_real_apk_priority_failed_retry_alt_packaging --output-root data/reference_db/dex_real_apk_priority_failed_retry_alt_packaging --quiet
+docker compose run --rm apk-sbom python -m apk_sbom.cli extract-reference-features --dex-root data/reference_db/dex_real_apk_priority_failed_retry_alt_packaging --db-path data/reference_db/reference_features_real_apk_priority_versions.sqlite --quiet
+docker compose run --rm apk-sbom python -m apk_sbom.cli download-maven --config configs/libraries.real_apk_priority_failed_retry_default_aar.json --output-root data/reference_db/artifacts_real_apk_priority_failed_retry_default_aar --quiet
+docker compose run --rm apk-sbom python -m apk_sbom.cli convert-reference-dex --artifact-root data/reference_db/artifacts_real_apk_priority_failed_retry_default_aar --output-root data/reference_db/dex_real_apk_priority_failed_retry_default_aar --quiet
+docker compose run --rm apk-sbom python -m apk_sbom.cli extract-reference-features --dex-root data/reference_db/dex_real_apk_priority_failed_retry_default_aar --db-path data/reference_db/reference_features_real_apk_priority_versions.sqlite --quiet
 ```

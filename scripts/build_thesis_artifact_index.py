@@ -224,6 +224,21 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use to show that the evaluation-only DB build has started with recorded download, DEX conversion, and feature-extraction counts while shared DB claims remain unchanged.",
         },
         {
+            "table": "Real-APK priority reference catalog",
+            "source": "docs/evaluation/REAL_APK_PRIORITY_REFERENCE_CATALOG.md",
+            "use": "Use to explain the deadline-focused exact-version DB built only from versions observed in the 102 real APK source-validation dependency trees.",
+        },
+        {
+            "table": "Real-APK priority failed-slot retry plan",
+            "source": "docs/evaluation/REAL_APK_PRIORITY_FAILED_DOWNLOAD_RETRY_PLAN.md",
+            "use": "Use to show the transparent retry of failed priority slots, the recovered artifact/feature counts, and the remaining unrecovered boundary.",
+        },
+        {
+            "table": "Priority reference DB coverage dashboard",
+            "source": "docs/evaluation/REFERENCE_DB_COVERAGE_PRIORITY_DASHBOARD.md",
+            "use": "Use to separate DB coverage growth from emitted-version accuracy: exact source-version coverage improves while matcher output remains a separate rerun step.",
+        },
+        {
             "table": "Post-100 real APK optimization plan",
             "source": "docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md",
             "use": "Use as the research-backed execution roadmap for coverage-first reference DB growth, wrong-version rows, missing-source rows, guarded promotion, and dashboard improvement.",

@@ -18,10 +18,10 @@ Do not optimize wrong-version rows as the next main lane until the reference DB 
 | Source dependency coordinate+version rows | 12082 |
 | Unique source coordinates | 1370 |
 | Unique source coordinate+version pairs | 3391 |
-| Current evaluation reference DB components | 1912 |
-| Current evaluation reference DB coordinates | 737 |
-| Source rows with coordinate in DB | 9444 (78.2%) |
-| Source rows with exact version in DB | 8338 (69.0%) |
+| Current evaluation reference DB components | 2424 |
+| Current evaluation reference DB coordinates | 1114 |
+| Source rows with coordinate in DB | 10701 (88.6%) |
+| Source rows with exact version in DB | 9603 (79.5%) |
 | Source rows emitted with exact version | 927 (7.7%) |
 | Source rows emitted with wrong version | 636 |
 | Source rows not emitted | 10519 |
@@ -46,10 +46,10 @@ That row must be described as emitted Maven version confirmation, not full depen
 
 | Gap class | Rows | Meaning |
 |---|---:|---|
-| `coordinate-absent-from-reference-db` | 2638 | The source TPL coordinate is not in the shared DB at all. |
-| `source-present-not-emitted-despite-exact-reference` | 6896 | The exact source version exists in the DB, but the tool did not emit that coordinate. |
-| `source-present-wrong-version-despite-exact-reference` | 602 | The exact source version exists in the DB, but the tool selected another version. |
-| `version-absent-from-reference-db` | 1106 | The coordinate exists, but the source-resolved version is absent. |
+| `coordinate-absent-from-reference-db` | 1381 | The source TPL coordinate is not in the shared DB at all. |
+| `source-present-not-emitted-despite-exact-reference` | 8059 | The exact source version exists in the DB, but the tool did not emit that coordinate. |
+| `source-present-wrong-version-despite-exact-reference` | 617 | The exact source version exists in the DB, but the tool selected another version. |
+| `version-absent-from-reference-db` | 1098 | The coordinate exists, but the source-resolved version is absent. |
 
 ## Coverage-First Method
 
@@ -65,31 +65,31 @@ The feasible interpretation of "add every version" is not all of Maven Central. 
 
 | Coordinate | Rows | Cases | Source versions | Sample cases |
 |---|---:|---:|---|---|
-| `androidx.arch.core:core-runtime` | 105 | 105 | 2.2.0 (93), 2.1.0 (11), 2.0.0 (1) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |
-| `androidx.annotation:annotation-experimental` | 103 | 103 | 1.4.1 (57), 1.3.0 (14), 1.4.0 (14), 1.5.0 (12), 1.0.0 (2), 1.1.0 (2), 1.5.1 (2) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
-| `androidx.concurrent:concurrent-futures` | 101 | 101 | 1.1.0 (85), 1.0.0 (10), 1.2.0 (4), 1.3.0 (2) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
 | `org.jetbrains.kotlinx:kotlinx-coroutines-bom` | 101 | 101 | 1.6.4 (26), 1.9.0 (24), 1.10.2 (15), 1.7.3 (10), 1.8.1 (10), 1.6.1 (7), 1.7.1 (5), 1.10.1 (3) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
 | `org.jetbrains.kotlinx:kotlinx-coroutines-core` | 101 | 101 | 1.6.4 (26), 1.9.0 (24), 1.10.2 (15), 1.7.3 (10), 1.8.1 (10), 1.6.1 (7), 1.7.1 (5), 1.10.1 (3) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
-| `androidx.resourceinspection:resourceinspection-annotation` | 98 | 98 | 1.0.1 (98) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
 | `org.jetbrains.kotlin:kotlin-bom` | 76 | 76 | 1.8.22 (72), 1.9.25 (1), 2.3.20 (1), 1.9.24 (1), 2.3.10 (1) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
-| `androidx.constraintlayout:constraintlayout-core` | 74 | 74 | 1.1.1 (44), 1.0.4 (16), 1.0.0 (11), 1.1.0 (2), 1.0.2 (1) | aegis, af-weather-widget, baby-books, bettercounter, bimba, broccoli, calliope-mini, clock |
 | `org.jetbrains.kotlin:kotlin-stdlib-common` | 67 | 67 | 1.8.22 (12), 2.0.21 (5), 2.2.10 (5), 1.7.10 (5), 2.3.10 (5), 2.2.21 (4), 1.9.24 (4), 1.9.22 (4) | afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba, bubble, c3nav |
 | `androidx.graphics:graphics-shapes` | 49 | 49 | 1.0.1 (49) | af-weather-widget, bettercounter, bimba, calliope-mini, clock, coffee, conversations, daily-dozen |
-| `androidx.lifecycle:lifecycle-common-jvm` | 42 | 42 | 2.10.0 (20), 2.9.0 (7), 2.9.4 (5), 2.8.7 (3), 2.9.1 (2), 2.8.4 (2), 2.8.2 (1), 2.9.3 (1) | aegis, af-weather-widget, baby-books, bimba, broccoli, calliope-mini, davx5, etar |
 | `org.jetbrains.kotlinx:kotlinx-serialization-core` | 41 | 41 | 1.7.3 (26), 1.10.0 (5), 1.11.0 (3), 1.6.3 (2), 1.4.1 (1), 1.9.0 (1), 1.5.1 (1), 1.6.2 (1) | aegis, af-weather-widget, bimba, broccoli, calliope-mini, coffee, davx5, doodle |
 | `androidx.lifecycle:lifecycle-runtime-ktx-android` | 40 | 40 | 2.10.0 (19), 2.9.0 (7), 2.9.4 (5), 2.8.7 (2), 2.9.1 (2), 2.8.4 (2), 2.8.2 (1), 2.9.3 (1) | aegis, af-weather-widget, baby-books, bimba, broccoli, calliope-mini, davx5, etar |
 | `org.jetbrains.kotlinx:kotlinx-serialization-bom` | 40 | 40 | 1.7.3 (26), 1.10.0 (5), 1.11.0 (3), 1.6.3 (2), 1.9.0 (1), 1.5.1 (1), 1.6.2 (1), 1.8.1 (1) | aegis, af-weather-widget, bimba, broccoli, calliope-mini, coffee, davx5, doodle |
-| `androidx.room:room-common-jvm` | 28 | 28 | 2.8.4 (11), 2.7.0 (7), 2.7.1 (5), 2.7.2 (4), 2.8.0 (1) | aegis, af-weather-widget, bettercounter, broccoli, conversations, davx5, etar, fdroid-build-status |
-| `androidx.concurrent:concurrent-futures-ktx` | 26 | 26 | 1.1.0 (20), 1.2.0 (4), 1.3.0 (2) | aegis, af-weather-widget, antennapod, bimba, cirrus, conversations, davx5, etar |
 | `androidx.legacy:legacy-support-v4` | 22 | 22 | 1.0.0 (22) | afwall-plus, baby-books, bimba, broccoli, c3nav, cirrus, gadgetbridge, loop-habit-tracker |
-| `com.squareup.okhttp3:okhttp-android` | 21 | 21 | 5.3.2 (18), 5.1.0 (2), 5.0.0-alpha.16 (1) | bimba, conversations, cryptomator-lite, davx5, dns-hero, fdroid-build-status, gadgetbridge, k9 |
 | `androidx.lifecycle:lifecycle-common-java8` | 20 | 20 | 2.10.0 (7), 2.8.7 (2), 2.5.1 (2), 2.6.1 (2), 2.7.0 (2), 2.9.4 (1), 2.9.1 (1), 2.6.2 (1) | antennapod, davx5, fairemail, fdroid, k9, kde-connect, keepassvault, material-files |
 | `androidx.compose.runtime:runtime-annotation` | 18 | 18 | 1.9.0 (10), 1.11.1 (2), 1.9.5 (1), 1.9.2 (1), 1.9.4 (1), 1.10.3 (1), 1.10.6 (1), 1.10.4 (1) | af-weather-widget, blue-square-speedometer, davx5, egyptian-writer, fdroid-build-status, gadgetbridge, k9, kde-connect |
-| `androidx.constraintlayout:constraintlayout-solver` | 17 | 17 | 2.0.1 (16), 1.1.3 (1) | afwall-plus, andstatus, antennapod, cirrus, cryptomator-lite, dns-hero, doodle, easy-xkcd |
 | `org.jetbrains.kotlinx:kotlinx-serialization-json` | 17 | 17 | 1.10.0 (5), 1.7.3 (3), 1.11.0 (3), 1.4.1 (1), 1.9.0 (1), 1.5.1 (1), 1.6.3 (1), 1.6.2 (1) | aegis, bimba, broccoli, coffee, davx5, fairemail, fdroid, k9 |
 | `androidx.navigationevent:navigationevent` | 16 | 16 | 1.0.0 (8), 1.0.1 (6), 1.0.2 (2) | af-weather-widget, blue-square-speedometer, davx5, egyptian-writer, fdroid-build-status, gadgetbridge, k9, kde-connect |
 | `feature:account` | 16 | 1 | api (1), avatar:api (1), avatar:impl (1), common (1), core (1), edit (1), oauth (1), profile:api (1) | k9 |
-| `com.jakewharton.timber:timber` | 15 | 15 | 5.0.1 (12), 4.7.1 (3) | cryptomator-lite, daily-dozen, easy-xkcd, fulguris-web-browser, jitsi-meet, k9, keepassvault, omni-notes |
+| `core:ui` | 15 | 1 | account (1), compose:common (1), compose:designsystem (1), compose:theme2:common (1), compose:theme2:k9mail (1), contract (1), legacy:designsystem (1), legacy:theme2:common (1) | k9 |
+| `androidx.compose.animation:animation` | 12 | 12 | 1.6.8 (2), 1.11.1 (2), 1.7.8 (1), 1.9.5 (1), 1.7.6 (1), 1.6.0 (1), 1.9.4 (1), 1.8.1 (1) | baby-books, davx5, fdroid, k9, kde-connect, keepassvault, newpipe, nextcloud |
+| `androidx.compose.animation:animation-core` | 12 | 12 | 1.6.8 (2), 1.11.1 (2), 1.7.8 (1), 1.9.5 (1), 1.7.6 (1), 1.6.0 (1), 1.9.4 (1), 1.8.1 (1) | baby-books, davx5, fdroid, k9, kde-connect, keepassvault, newpipe, nextcloud |
+| `androidx.compose.foundation:foundation` | 12 | 12 | 1.6.8 (2), 1.11.1 (2), 1.7.8 (1), 1.9.5 (1), 1.7.6 (1), 1.6.0 (1), 1.9.4 (1), 1.8.1 (1) | baby-books, davx5, fdroid, k9, kde-connect, keepassvault, newpipe, nextcloud |
+| `androidx.compose.foundation:foundation-layout` | 12 | 12 | 1.6.8 (2), 1.11.1 (2), 1.7.8 (1), 1.9.5 (1), 1.7.6 (1), 1.6.0 (1), 1.9.4 (1), 1.8.1 (1) | baby-books, davx5, fdroid, k9, kde-connect, keepassvault, newpipe, nextcloud |
+| `androidx.compose.runtime:runtime` | 12 | 12 | 1.6.8 (2), 1.11.1 (2), 1.7.8 (1), 1.9.5 (1), 1.9.2 (1), 1.6.0 (1), 1.9.4 (1), 1.10.3 (1) | baby-books, davx5, fdroid, k9, kde-connect, keepassvault, newpipe, nextcloud |
+| `androidx.compose.runtime:runtime-saveable` | 12 | 12 | 1.6.8 (2), 1.11.1 (2), 1.7.8 (1), 1.9.5 (1), 1.9.2 (1), 1.6.0 (1), 1.9.4 (1), 1.10.3 (1) | baby-books, davx5, fdroid, k9, kde-connect, keepassvault, newpipe, nextcloud |
+| `androidx.compose.ui:ui` | 12 | 12 | 1.6.8 (2), 1.11.1 (2), 1.7.8 (1), 1.9.5 (1), 1.9.2 (1), 1.6.0 (1), 1.9.4 (1), 1.10.3 (1) | baby-books, davx5, fdroid, k9, kde-connect, keepassvault, newpipe, nextcloud |
+| `androidx.compose.ui:ui-geometry` | 12 | 12 | 1.6.8 (2), 1.11.1 (2), 1.7.8 (1), 1.9.5 (1), 1.9.2 (1), 1.6.0 (1), 1.9.4 (1), 1.10.3 (1) | baby-books, davx5, fdroid, k9, kde-connect, keepassvault, newpipe, nextcloud |
+| `androidx.compose.ui:ui-graphics` | 12 | 12 | 1.6.8 (2), 1.11.1 (2), 1.7.8 (1), 1.9.5 (1), 1.9.2 (1), 1.6.0 (1), 1.9.4 (1), 1.10.3 (1) | baby-books, davx5, fdroid, k9, kde-connect, keepassvault, newpipe, nextcloud |
+| `androidx.compose.ui:ui-text` | 12 | 12 | 1.6.8 (2), 1.11.1 (2), 1.7.8 (1), 1.9.5 (1), 1.9.2 (1), 1.6.0 (1), 1.9.4 (1), 1.10.3 (1) | baby-books, davx5, fdroid, k9, kde-connect, keepassvault, newpipe, nextcloud |
 
 ## Top Source Versions Missing From Existing Coordinates
 
@@ -126,6 +126,7 @@ The feasible interpretation of "add every version" is not all of Maven Central. 
 | Coordinate | Rows | Cases | Source versions | Sample cases |
 |---|---:|---:|---|---|
 | `androidx.arch.core:core-common` | 105 | 105 | 2.2.0 (93), 2.1.0 (12) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |
+| `androidx.arch.core:core-runtime` | 105 | 105 | 2.2.0 (93), 2.1.0 (11), 2.0.0 (1) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |
 | `androidx.versionedparcelable:versionedparcelable` | 105 | 105 | 1.1.1 (102), 1.1.0 (3) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |
 | `androidx.customview:customview` | 104 | 104 | 1.1.0 (87), 1.0.0 (12), 1.2.0 (5) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |
 | `androidx.interpolator:interpolator` | 104 | 104 | 1.0.0 (104) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |
@@ -133,6 +134,7 @@ The feasible interpretation of "add every version" is not all of Maven Central. 
 | `androidx.loader:loader` | 104 | 104 | 1.0.0 (104) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |
 | `androidx.vectordrawable:vectordrawable` | 104 | 104 | 1.1.0 (97), 1.2.0 (6), 1.0.0 (1) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |
 | `androidx.viewpager:viewpager` | 104 | 104 | 1.0.0 (100), 1.1.0 (4) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |
+| `androidx.annotation:annotation-experimental` | 103 | 103 | 1.4.1 (57), 1.3.0 (14), 1.4.0 (14), 1.5.0 (12), 1.0.0 (2), 1.1.0 (2), 1.5.1 (2) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
 | `androidx.cursoradapter:cursoradapter` | 103 | 103 | 1.0.0 (103) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |
 | `androidx.drawerlayout:drawerlayout` | 103 | 103 | 1.1.1 (78), 1.0.0 (18), 1.2.0 (7) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |
 | `androidx.vectordrawable:vectordrawable-animated` | 103 | 103 | 1.1.0 (98), 1.2.0 (4), 1.0.0 (1) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, audio-source, baby-books, bettercounter |
@@ -143,13 +145,11 @@ The feasible interpretation of "add every version" is not all of Maven Central. 
 | `androidx.coordinatorlayout:coordinatorlayout` | 98 | 98 | 1.1.0 (79), 1.0.0 (9), 1.3.0 (7), 1.2.0 (3) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
 | `androidx.emoji2:emoji2` | 98 | 98 | 1.3.0 (71), 1.2.0 (16), 1.4.0 (7), 1.5.0 (2), 1.6.0 (2) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
 | `androidx.emoji2:emoji2-views-helper` | 98 | 98 | 1.3.0 (70), 1.2.0 (17), 1.4.0 (7), 1.5.0 (2), 1.6.0 (2) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
+| `androidx.resourceinspection:resourceinspection-annotation` | 98 | 98 | 1.0.1 (98) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
 | `androidx.transition:transition` | 95 | 95 | 1.5.0 (66), 1.4.1 (20), 1.6.0 (5), 1.0.0 (2), 1.2.0 (2) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
 | `androidx.annotation:annotation-jvm` | 92 | 92 | 1.9.1 (51), 1.8.1 (24), 1.6.0 (8), 1.9.0 (2), 1.7.0 (2), 1.10.0 (2), 1.7.1 (1), 1.8.2 (1) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
 | `androidx.constraintlayout:constraintlayout` | 91 | 91 | 2.2.1 (43), 2.0.1 (16), 2.1.4 (16), 2.1.0 (12), 2.2.0 (2), 1.1.3 (1), 2.1.2 (1) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
 | `androidx.core:core-ktx` | 91 | 91 | 1.13.0 (18), 1.16.0 (16), 1.17.0 (15), 1.13.1 (9), 1.18.0 (8), 1.15.0 (7), 1.9.0 (7), 1.12.0 (4) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
-| `androidx.profileinstaller:profileinstaller` | 91 | 91 | 1.4.0 (50), 1.3.1 (25), 1.3.0 (9), 1.4.1 (7) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
-| `org.jetbrains.kotlin:kotlin-stdlib` | 91 | 91 | 1.8.22 (12), 2.2.21 (9), 2.0.21 (7), 1.7.10 (5), 2.1.20 (5), 2.3.0 (5), 2.1.10 (4), 2.3.21 (4) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
-| `androidx.cardview:cardview` | 89 | 89 | 1.0.0 (89) | aegis, af-weather-widget, afwall-plus, andstatus, antennapod, baby-books, bettercounter, bimba |
 
 ## Dashboard Files
 

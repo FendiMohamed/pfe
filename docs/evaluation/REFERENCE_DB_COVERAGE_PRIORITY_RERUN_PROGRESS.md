@@ -18,13 +18,13 @@ Do not optimize wrong-version rows as the next main lane until the reference DB 
 | Source dependency coordinate+version rows | 12082 |
 | Unique source coordinates | 1370 |
 | Unique source coordinate+version pairs | 3391 |
-| Current evaluation reference DB components | 1912 |
-| Current evaluation reference DB coordinates | 737 |
-| Source rows with coordinate in DB | 9444 (78.2%) |
-| Source rows with exact version in DB | 8338 (69.0%) |
-| Source rows emitted with exact version | 928 (7.7%) |
-| Source rows emitted with wrong version | 637 |
-| Source rows not emitted | 10517 |
+| Current evaluation reference DB components | 2424 |
+| Current evaluation reference DB coordinates | 1114 |
+| Source rows with coordinate in DB | 10701 (88.6%) |
+| Source rows with exact version in DB | 9603 (79.5%) |
+| Source rows emitted with exact version | 927 (7.7%) |
+| Source rows emitted with wrong version | 636 |
+| Source rows not emitted | 10519 |
 
 ## Why This Changes The Method
 
@@ -46,10 +46,10 @@ That row must be described as emitted Maven version confirmation, not full depen
 
 | Gap class | Rows | Meaning |
 |---|---:|---|
-| `coordinate-absent-from-reference-db` | 2638 | The source TPL coordinate is not in the shared DB at all. |
-| `source-present-not-emitted-despite-exact-reference` | 6894 | The exact source version exists in the DB, but the tool did not emit that coordinate. |
-| `source-present-wrong-version-despite-exact-reference` | 603 | The exact source version exists in the DB, but the tool selected another version. |
-| `version-absent-from-reference-db` | 1106 | The coordinate exists, but the source-resolved version is absent. |
+| `coordinate-absent-from-reference-db` | 1381 | The source TPL coordinate is not in the shared DB at all. |
+| `source-present-not-emitted-despite-exact-reference` | 8059 | The exact source version exists in the DB, but the tool did not emit that coordinate. |
+| `source-present-wrong-version-despite-exact-reference` | 617 | The exact source version exists in the DB, but the tool selected another version. |
+| `version-absent-from-reference-db` | 1098 | The coordinate exists, but the source-resolved version is absent. |
 
 ## Coverage-First Method
 

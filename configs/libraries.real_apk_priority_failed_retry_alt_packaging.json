@@ -1,0 +1,2046 @@
+{
+  "libraries": [
+    {
+      "artifact": "resourceinspection-annotation",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.resourceinspection",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.1"
+      ]
+    },
+    {
+      "artifact": "core-runtime",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.arch.core",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.1.0",
+        "2.2.0"
+      ]
+    },
+    {
+      "artifact": "concurrent-futures",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.concurrent",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0",
+        "1.1.0",
+        "1.2.0",
+        "1.3.0"
+      ]
+    },
+    {
+      "artifact": "annotation-experimental",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.annotation",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0",
+        "1.1.0",
+        "1.3.0",
+        "1.4.0",
+        "1.4.1",
+        "1.5.0",
+        "1.5.1"
+      ]
+    },
+    {
+      "artifact": "constraintlayout-core",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.constraintlayout",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0",
+        "1.0.4",
+        "1.1.0",
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "concurrent-futures-ktx",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.concurrent",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.1.0",
+        "1.2.0",
+        "1.3.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-common-jvm",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.lifecycle",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.8.4",
+        "2.8.7",
+        "2.9.0",
+        "2.9.1",
+        "2.9.4",
+        "2.10.0"
+      ]
+    },
+    {
+      "artifact": "constraintlayout-solver",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.constraintlayout",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.1.3",
+        "2.0.1"
+      ]
+    },
+    {
+      "artifact": "room-common-jvm",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.room",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.7.0",
+        "2.7.1",
+        "2.7.2",
+        "2.8.4"
+      ]
+    },
+    {
+      "artifact": "runtime-annotation",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.compose.runtime",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.9.0",
+        "1.11.1"
+      ]
+    },
+    {
+      "artifact": "window-core",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.window",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.5.0"
+      ]
+    },
+    {
+      "artifact": "PhotoView",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.chrisbanes",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.3.0"
+      ]
+    },
+    {
+      "artifact": "MPAndroidChart",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.PhilJay",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v3.0.3",
+        "v3.1.0"
+      ]
+    },
+    {
+      "artifact": "volley",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.android.volley",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "glance-appwidget-external-protobuf",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.glance",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "glance-appwidget-proto",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.glance",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "paging-common-ktx",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.paging",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "3.3.6",
+        "3.5.0"
+      ]
+    },
+    {
+      "artifact": "glide",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.bumptech.glide",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "4.8.0",
+        "5.0.5"
+      ]
+    },
+    {
+      "artifact": "SearchPreference",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.ByteHamster",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.7.3"
+      ]
+    },
+    {
+      "artifact": "gifdecoder",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.bumptech.glide",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "4.8.0",
+        "5.0.5"
+      ]
+    },
+    {
+      "artifact": "disklrucache",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.bumptech.glide",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "5.0.5"
+      ]
+    },
+    {
+      "artifact": "hsv-alpha-color-picker-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.martin-stone",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.1.0"
+      ]
+    },
+    {
+      "artifact": "logback-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.tony19",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "accompanist-drawablepainter",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.google.accompanist",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "0.37.3"
+      ]
+    },
+    {
+      "artifact": "databinding-common",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.databinding",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "8.1.4",
+        "8.7.3",
+        "8.13.2",
+        "9.1.0"
+      ]
+    },
+    {
+      "artifact": "datastore-core",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.datastore",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "datastore-preferences-core",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.datastore",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "core",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "6.0.0"
+      ]
+    },
+    {
+      "artifact": "nanojson",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.TeamNewPipe",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "e9d656ddb49a412a5a0a5d5ef20ca7ef09549996"
+      ]
+    },
+    {
+      "artifact": "hilt-common",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "androidx.hilt",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.3.0"
+      ]
+    },
+    {
+      "artifact": "GlideToVectorYou",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.2coffees1team",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v2.0.0"
+      ]
+    },
+    {
+      "artifact": "AppIntro",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.AppIntro",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "6.3.1"
+      ]
+    },
+    {
+      "artifact": "patternlockview",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.aritraroy.PatternLockView",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "a90b0d4bf0"
+      ]
+    },
+    {
+      "artifact": "nio",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "6.0.0"
+      ]
+    },
+    {
+      "artifact": "FreeDroidWarn",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.woheller69",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "V1.13"
+      ]
+    },
+    {
+      "artifact": "ambilwarna",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.yukuku",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.0.1"
+      ]
+    },
+    {
+      "artifact": "runtime-annotation",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.compose.runtime",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.9.2",
+        "1.9.4",
+        "1.9.5",
+        "1.10.3",
+        "1.10.4",
+        "1.10.6"
+      ]
+    },
+    {
+      "artifact": "datastore-preferences-core",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.datastore",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.0"
+      ]
+    },
+    {
+      "artifact": "datastore-core-okio",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.datastore",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.0"
+      ]
+    },
+    {
+      "artifact": "datastore-preferences-external-protobuf",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.datastore",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.0"
+      ]
+    },
+    {
+      "artifact": "datastore-preferences-proto",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.datastore",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.0"
+      ]
+    },
+    {
+      "artifact": "databinding-common",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.databinding",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "8.2.2",
+        "8.13.1",
+        "9.0.1"
+      ]
+    },
+    {
+      "artifact": "paging-common-ktx",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.paging",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "3.1.1",
+        "3.2.1"
+      ]
+    },
+    {
+      "artifact": "material-icons-extended",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.compose.material",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.6.8"
+      ]
+    },
+    {
+      "artifact": "frameanimation",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "landscapist-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.skydoves",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.9.5"
+      ]
+    },
+    {
+      "artifact": "landscapist-coil3-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.skydoves",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.9.5"
+      ]
+    },
+    {
+      "artifact": "firebase-encoders",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.google.firebase",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "17.0.0"
+      ]
+    },
+    {
+      "artifact": "datastore-core-okio-jvm",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.datastore",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.0"
+      ]
+    },
+    {
+      "artifact": "connect-client-external-protobuf",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.health.connect",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "connect-client-proto",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.health.connect",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-common-jvm",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.lifecycle",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.8.2",
+        "2.8.6",
+        "2.9.3"
+      ]
+    },
+    {
+      "artifact": "window-core",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.window",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.4.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "core-runtime",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.arch.core",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.0.0"
+      ]
+    },
+    {
+      "artifact": "core-location-altitude-external-protobuf",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.core",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0-beta01",
+        "1.0.0-rc01"
+      ]
+    },
+    {
+      "artifact": "core-location-altitude-proto",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.core",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0-beta01",
+        "1.0.0-rc01"
+      ]
+    },
+    {
+      "artifact": "hilt-common",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.hilt",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0",
+        "1.2.0"
+      ]
+    },
+    {
+      "artifact": "MPAndroidChart",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.PhilJay",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.1.0",
+        "v2.2.5"
+      ]
+    },
+    {
+      "artifact": "dbflow-core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.Raizlabs.DBFlow",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "4.2.4"
+      ]
+    },
+    {
+      "artifact": "GlyphConverter",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.ThothDroid",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.7.0"
+      ]
+    },
+    {
+      "artifact": "SignProvider",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.ThothDroid",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.2"
+      ]
+    },
+    {
+      "artifact": "core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.afollestad.material-dialogs",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.9.6.0"
+      ]
+    },
+    {
+      "artifact": "cert4android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bitfireat",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "b8e2d33f09"
+      ]
+    },
+    {
+      "artifact": "material-about-library",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.daniel-stoneuk",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.2.4",
+        "3.1.2"
+      ]
+    },
+    {
+      "artifact": "android-simple-tooltip",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.douglasjunior",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.2.2",
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "groupie",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.lisawray.groupie",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.10.1"
+      ]
+    },
+    {
+      "artifact": "mapsforge-core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map-reader",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.nextcloud.android-common",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.33.2"
+      ]
+    },
+    {
+      "artifact": "material-calendarview",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.prolificinteractive",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.6.1",
+        "2.0.1"
+      ]
+    },
+    {
+      "artifact": "balloon",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.skydoves",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.5.3",
+        "1.7.6"
+      ]
+    },
+    {
+      "artifact": "disk-lru-cache",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.solkin",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.2"
+      ]
+    },
+    {
+      "artifact": "service",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "5.2.2",
+        "6.0.0"
+      ]
+    },
+    {
+      "artifact": "constraintlayout-core",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.constraintlayout",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.2"
+      ]
+    },
+    {
+      "artifact": "room-common-jvm",
+      "category": "tier2-single-real-apk-version",
+      "group": "androidx.room",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.8.0"
+      ]
+    },
+    {
+      "artifact": "billing",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.android.billingclient",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "8.3.0"
+      ]
+    },
+    {
+      "artifact": "constraint-layout",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.android.support.constraint",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "androidx.constraintlayout"
+      ]
+    },
+    {
+      "artifact": "jaudiotagger",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.Adonai",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.3.15"
+      ]
+    },
+    {
+      "artifact": "AndroidChart",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.AppDevNext",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.1.0.31"
+      ]
+    },
+    {
+      "artifact": "AppIntro",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.AppIntro",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "6.2.0"
+      ]
+    },
+    {
+      "artifact": "PhotoView",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.Baseflow",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.3.0"
+      ]
+    },
+    {
+      "artifact": "SearchPreference",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.ByteHamster",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v2.3.0"
+      ]
+    },
+    {
+      "artifact": "Android-XML-to-PDF-Generator",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.Gkemon",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.6.8"
+      ]
+    },
+    {
+      "artifact": "TextFieldBoxes",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.HITGIF",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.4.5"
+      ]
+    },
+    {
+      "artifact": "osmbonuspack",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.MKergall",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "6.9.0"
+      ]
+    },
+    {
+      "artifact": "TouchImageView",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.MikeOrtiz",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.7.1"
+      ]
+    },
+    {
+      "artifact": "gene-rate",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.Pixplicity",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v1.1.8"
+      ]
+    },
+    {
+      "artifact": "ors-android-client",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.Pygmalion69",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.3.1"
+      ]
+    },
+    {
+      "artifact": "dbflow",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.Raizlabs.DBFlow",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "4.2.4"
+      ]
+    },
+    {
+      "artifact": "html-textview",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.SufficientlySecure",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v3.6"
+      ]
+    },
+    {
+      "artifact": "NewPipeExtractor",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.TeamNewPipe",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v0.26.1"
+      ]
+    },
+    {
+      "artifact": "NoNonsense-FilePicker",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.TeamNewPipe",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "5.0.0"
+      ]
+    },
+    {
+      "artifact": "MAAT",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.ThothDroid",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.5.1"
+      ]
+    },
+    {
+      "artifact": "THOTH",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.ThothDroid",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.0.4.1"
+      ]
+    },
+    {
+      "artifact": "commons",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.afollestad.material-dialogs",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.9.6.0"
+      ]
+    },
+    {
+      "artifact": "fzf4j",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.aivanovski",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.2.1"
+      ]
+    },
+    {
+      "artifact": "keepass-tree-builder",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.aivanovski",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.4.0"
+      ]
+    },
+    {
+      "artifact": "keepass-tree-diff",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.aivanovski",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.4.0"
+      ]
+    },
+    {
+      "artifact": "appintro",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.apl-devs",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v4.2.3"
+      ]
+    },
+    {
+      "artifact": "krop",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.avito-tech",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.52"
+      ]
+    },
+    {
+      "artifact": "immersivelock",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.babydots",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.2"
+      ]
+    },
+    {
+      "artifact": "Treessence",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bastienpaulfr",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.5"
+      ]
+    },
+    {
+      "artifact": "synctools",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bitfireAT",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "06f2de81e1"
+      ]
+    },
+    {
+      "artifact": "dav4jvm",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bitfireat",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1f2f5a7793"
+      ]
+    },
+    {
+      "artifact": "fadingedgelayout",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bosphere.android-fadingedgelayout",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "filelogger",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bosphere.android-filelogger",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.7"
+      ]
+    },
+    {
+      "artifact": "gifdecoder",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bumptech.glide",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "4.9.0"
+      ]
+    },
+    {
+      "artifact": "glide",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bumptech.glide",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "4.9.0"
+      ]
+    },
+    {
+      "artifact": "okhttp3-integration",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bumptech.glide",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "5.0.5"
+      ]
+    },
+    {
+      "artifact": "ExpandableLayout",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.cachapa",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.9.2"
+      ]
+    },
+    {
+      "artifact": "fab",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.clans",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.6.4"
+      ]
+    },
+    {
+      "artifact": "subsampling-scale-image-view",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.cryptomator",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.10.1-dev.0002"
+      ]
+    },
+    {
+      "artifact": "QuickPermissions-Kotlin",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.cyb3rko",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.1.6"
+      ]
+    },
+    {
+      "artifact": "library",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.devgianlu.MaterialPreferences",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "cbb81daaed"
+      ]
+    },
+    {
+      "artifact": "TableView",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.evrencoskun",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v0.8.9.4"
+      ]
+    },
+    {
+      "artifact": "Omni-Notes-Commons",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.federicoiosue",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.4.0"
+      ]
+    },
+    {
+      "artifact": "Springpad-Importer",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.federicoiosue",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.1"
+      ]
+    },
+    {
+      "artifact": "checklistview",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.federicoiosue",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "4.1.0"
+      ]
+    },
+    {
+      "artifact": "pixlui",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.federicoiosue",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.1"
+      ]
+    },
+    {
+      "artifact": "simplegallery",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.federicoiosue",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.1"
+      ]
+    },
+    {
+      "artifact": "smart-location-lib",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.federicoiosue",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.2.6"
+      ]
+    },
+    {
+      "artifact": "android-preferences",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.firebirdberlin",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "36.0.5"
+      ]
+    },
+    {
+      "artifact": "tab-digit",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.firebirdberlin",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v36.0.3"
+      ]
+    },
+    {
+      "artifact": "expansionpanel",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.florent37",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "changelog",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.gabrielemariotti.changeloglib",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.1.0"
+      ]
+    },
+    {
+      "artifact": "sdk",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.hCaptcha.hcaptcha-android-sdk",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "4.4.0"
+      ]
+    },
+    {
+      "artifact": "MagicIndicator",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.hackware1993",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.7.0"
+      ]
+    },
+    {
+      "artifact": "android-file-chooser",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.hedzr",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v1.2.0-final"
+      ]
+    },
+    {
+      "artifact": "android-snowfall",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.jetradarmobile",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "NewPipeExtractor",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.libre-tube",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0c7e95b"
+      ]
+    },
+    {
+      "artifact": "groupie-viewbinding",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.lisawray.groupie",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.10.1"
+      ]
+    },
+    {
+      "artifact": "bridge",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.livefront",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v2.0.2"
+      ]
+    },
+    {
+      "artifact": "pikolo",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.madrapps",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.0.2"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-themes",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "hsv-alpha-color-picker-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.martin-stone",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.1"
+      ]
+    },
+    {
+      "artifact": "android-about-page",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.medyo",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.3"
+      ]
+    },
+    {
+      "artifact": "fyydlin",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.mfietz",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "e1d25f347641fe5e26c4c2b9756d4e9001a398dd"
+      ]
+    },
+    {
+      "artifact": "android-library",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.nextcloud",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "cd6ef9c073cd7c23bd36f9712d1f8c1030cc6804"
+      ]
+    },
+    {
+      "artifact": "qrcodescanner",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.nextcloud-deps",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.1.2.4"
+      ]
+    },
+    {
+      "artifact": "sectioned-recyclerview",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.nextcloud-deps",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.6.1"
+      ]
+    },
+    {
+      "artifact": "material-color-utilities",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.nextcloud.android-common",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.33.2"
+      ]
+    },
+    {
+      "artifact": "ui",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.nextcloud.android-common",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.33.2"
+      ]
+    },
+    {
+      "artifact": "richeditor-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.niendo1",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.4"
+      ]
+    },
+    {
+      "artifact": "openpgp-api",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.open-keychain.open-keychain",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v5.7.1"
+      ]
+    },
+    {
+      "artifact": "android-dav",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.opencloud-eu",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "oc_support_2.1.5"
+      ]
+    },
+    {
+      "artifact": "dav4android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.owncloud",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "oc_support_2.1.5"
+      ]
+    },
+    {
+      "artifact": "appintro",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.paolorotolo",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.3.0"
+      ]
+    },
+    {
+      "artifact": "apng",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "avif",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "awebp",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "gif",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "glide-plugin",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "reactivenetwork-rx2",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.pwittchen",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.0.8"
+      ]
+    },
+    {
+      "artifact": "totp-kt",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.robinohs",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v1.0.0"
+      ]
+    },
+    {
+      "artifact": "Material-ViewPagerIndicator",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.ronaldsmartin",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.4"
+      ]
+    },
+    {
+      "artifact": "bottomsheetbuilder",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.rubensousa",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.6.1"
+      ]
+    },
+    {
+      "artifact": "file-dialogs",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.rustamg",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0"
+      ]
+    },
+    {
+      "artifact": "indeterminate-checkbox",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.sevar83",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.5"
+      ]
+    },
+    {
+      "artifact": "SJ-Dialog",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.sj14apps",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.7.0.1"
+      ]
+    },
+    {
+      "artifact": "colorpickerview",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.skydoves",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.4.0"
+      ]
+    },
+    {
+      "artifact": "compose-stability-runtime-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.skydoves",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.7.1"
+      ]
+    },
+    {
+      "artifact": "sardine-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.thegrizzlylabs",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.8"
+      ]
+    },
+    {
+      "artifact": "MPAndroidChart",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.thuryn",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v4.0.4"
+      ]
+    },
+    {
+      "artifact": "android-gpx-parser",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.ticofab",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.3.1"
+      ]
+    },
+    {
+      "artifact": "core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "5.2.2"
+      ]
+    },
+    {
+      "artifact": "io",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "6.0.0"
+      ]
+    },
+    {
+      "artifact": "android-lockpattern",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.ukanth",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "8.0.4"
+      ]
+    },
+    {
+      "artifact": "contract",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.wax911.android-emojify",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.9.7"
+      ]
+    },
+    {
+      "artifact": "emojify",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.wax911.android-emojify",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.9.7"
+      ]
+    },
+    {
+      "artifact": "gson",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.wax911.android-emojify",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.9.7"
+      ]
+    },
+    {
+      "artifact": "FreeDroidWarn",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.woheller69",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "V1.11"
+      ]
+    },
+    {
+      "artifact": "SimplyPDF",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.wwdablu",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.1.1"
+      ]
+    },
+    {
+      "artifact": "RecyclerViewSwipeDecorator",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.xabaras",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.3"
+      ]
+    },
+    {
+      "artifact": "material-popup-menu",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.zawadz88.materialpopupmenu",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "dav4jvm",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.zhanghai",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "c317607"
+      ]
+    },
+    {
+      "artifact": "accompanist-drawablepainter",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.google.accompanist",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "0.36.0"
+      ]
+    },
+    {
+      "artifact": "accompanist-permissions",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.google.accompanist",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "0.37.3"
+      ]
+    },
+    {
+      "artifact": "dashclock-api",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.google.android.apps.dashclock",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.0.0"
+      ]
+    },
+    {
+      "artifact": "firebase-encoders-proto",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.google.firebase",
+      "notes": "Priority failed-download retry; alternate packaging or repository.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "16.0.0"
+      ]
+    }
+  ]
+}
