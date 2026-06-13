@@ -465,6 +465,7 @@ def match_apk_to_reference_db(
     enable_reference_package_prefilter: bool = False,
     reference_package_prefilter_min_overlap: int = 1,
     reference_package_prefilter_limit: int | None = None,
+    reference_package_prefilter_per_coordinate_limit: int | None = None,
 ) -> MatchSummary:
     db = Path(db_path)
     if not db.exists():
@@ -482,6 +483,7 @@ def match_apk_to_reference_db(
                 coordinate=coordinate,
                 min_overlap=reference_package_prefilter_min_overlap,
                 limit=reference_package_prefilter_limit,
+                per_coordinate_limit=reference_package_prefilter_per_coordinate_limit,
             )
         references = load_reference_components(
             connection,
@@ -1530,47 +1532,6 @@ def _choose_version_unique_literal_context_candidate(
         and identity_confidence_score(candidate)
         >= best_identity - VERSION_DISAMBIGUATION_IDENTITY_TOLERANCE
     ]
-
-
-def prefilter_component_ids_by_package_overlap(
-    connection: sqlite3.Connection,
-    apk_packages: set[str],
-    *,
-    coordinate: str | None = None,
-    min_overlap: int = 1,
-    limit: int | None = None,
-) -> set[int]:
-    if not apk_packages:
-        return set()
-
-    placeholders = ", ".join("?" for _ in apk_packages)
-    params: list[object] = list(apk_packages)
-    coordinate_clause = ""
-    if coordinate:
-        coordinate_clause = "AND c.coordinate = ?"
-        params.append(coordinate)
-    having_clause = "HAVING shared_packages >= ?"
-    params.append(max(1, min_overlap))
-    limit_clause = ""
-    if limit is not None:
-        limit_clause = "LIMIT ?"
-        params.append(max(0, limit))
-
-    rows = connection.execute(
-        f"""
-        SELECT p.component_id, COUNT(DISTINCT p.package) AS shared_packages
-        FROM packages p
-        JOIN components c ON c.id = p.component_id
-        WHERE p.package IN ({placeholders})
-        {coordinate_clause}
-        GROUP BY p.component_id
-        {having_clause}
-        ORDER BY shared_packages DESC, c.coordinate ASC, c.version DESC
-        {limit_clause}
-        """,
-        params,
-    )
-    return {int(component_id) for component_id, _shared_packages in rows}
     if not eligible:
         return None
 
@@ -1583,6 +1544,73 @@ def prefilter_component_ids_by_package_overlap(
             _version_rank(candidate.version),
         ),
     )
+
+
+def prefilter_component_ids_by_package_overlap(
+    connection: sqlite3.Connection,
+    apk_packages: set[str],
+    *,
+    coordinate: str | None = None,
+    min_overlap: int = 1,
+    limit: int | None = None,
+    per_coordinate_limit: int | None = None,
+) -> set[int]:
+    if not apk_packages:
+        return set()
+
+    placeholders = ", ".join("?" for _ in apk_packages)
+    params: list[object] = list(apk_packages)
+    coordinate_clause = ""
+    if coordinate:
+        coordinate_clause = "AND c.coordinate = ?"
+        params.append(coordinate)
+    having_clause = "HAVING shared_packages >= ?"
+    params.append(max(1, min_overlap))
+    per_coordinate_clause = ""
+    if per_coordinate_limit is not None:
+        per_coordinate_clause = "WHERE coordinate_rank <= ?"
+        params.append(max(0, per_coordinate_limit))
+    limit_clause = ""
+    if limit is not None:
+        limit_clause = "LIMIT ?"
+        params.append(max(0, limit))
+
+    rows = connection.execute(
+        f"""
+        WITH overlap AS (
+            SELECT
+                p.component_id,
+                c.coordinate,
+                c.version,
+                COUNT(DISTINCT p.package) AS shared_packages
+            FROM packages p
+            JOIN components c ON c.id = p.component_id
+            WHERE p.package IN ({placeholders})
+            {coordinate_clause}
+            GROUP BY p.component_id
+            {having_clause}
+        ),
+        ranked AS (
+            SELECT
+                component_id,
+                shared_packages,
+                coordinate,
+                version,
+                ROW_NUMBER() OVER (
+                    PARTITION BY coordinate
+                    ORDER BY shared_packages DESC, version DESC, component_id DESC
+                ) AS coordinate_rank
+            FROM overlap
+        )
+        SELECT component_id, shared_packages
+        FROM ranked
+        {per_coordinate_clause}
+        ORDER BY shared_packages DESC, coordinate ASC, version DESC, component_id DESC
+        {limit_clause}
+        """,
+        params,
+    )
+    return {int(component_id) for component_id, _shared_packages in rows}
 
 
 def _has_supported_version_unique_literal_context(candidate: MatchCandidate) -> bool:

@@ -34,6 +34,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--limit", type=int)
     parser.add_argument("--force", action="store_true")
     parser.add_argument(
+        "--min-score",
+        type=float,
+        default=0.05,
+        help="Minimum match score passed to report generation.",
+    )
+    parser.add_argument(
         "--query-osv",
         action="store_true",
         help="Query OSV while generating reports. Default is off for fast reference-DB comparison runs.",
@@ -53,6 +59,11 @@ def build_parser() -> argparse.ArgumentParser:
         "--reference-package-prefilter-limit",
         type=int,
         help="Maximum package-overlap prefilter components to score for each APK.",
+    )
+    parser.add_argument(
+        "--reference-package-prefilter-per-coordinate-limit",
+        type=int,
+        help="Maximum package-overlap prefilter components to keep per coordinate.",
     )
     return parser
 
@@ -78,10 +89,14 @@ def main() -> int:
                 output_root=output_root,
                 reference_db=reference_db,
                 force=args.force,
+                min_score=args.min_score,
                 query_osv=args.query_osv,
                 enrich_vulnerabilities=args.enrich_vulnerabilities,
                 reference_package_prefilter_min_overlap=args.reference_package_prefilter_min_overlap,
                 reference_package_prefilter_limit=args.reference_package_prefilter_limit,
+                reference_package_prefilter_per_coordinate_limit=(
+                    args.reference_package_prefilter_per_coordinate_limit
+                ),
             )
         )
 
@@ -128,10 +143,12 @@ def run_case(
     output_root: Path,
     reference_db: Path,
     force: bool,
+    min_score: float,
     query_osv: bool,
     enrich_vulnerabilities: bool,
     reference_package_prefilter_min_overlap: int,
     reference_package_prefilter_limit: int | None,
+    reference_package_prefilter_per_coordinate_limit: int | None,
 ) -> dict[str, Any]:
     case_id = str(case["case_id"])
     old_report = read_json((case.get("paths") or {})["report"])
@@ -147,9 +164,13 @@ def run_case(
             apk_path,
             output_dir=report_dir,
             db_path=reference_db,
+            min_score=min_score,
             enable_reference_package_prefilter=True,
             reference_package_prefilter_min_overlap=reference_package_prefilter_min_overlap,
             reference_package_prefilter_limit=reference_package_prefilter_limit,
+            reference_package_prefilter_per_coordinate_limit=(
+                reference_package_prefilter_per_coordinate_limit
+            ),
             query_osv=query_osv,
             enrich_vulnerabilities=enrich_vulnerabilities,
         )

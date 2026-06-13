@@ -88,6 +88,7 @@ def generate_final_report(
     enable_reference_package_prefilter: bool = False,
     reference_package_prefilter_min_overlap: int = 1,
     reference_package_prefilter_limit: int | None = None,
+    reference_package_prefilter_per_coordinate_limit: int | None = None,
     r8_phase5_experiment_json: str | Path | None = None,
     version_band_experiment_json: str | Path | None = None,
     lifecycle_family_experiment_json: str | Path | None = None,
@@ -113,6 +114,9 @@ def generate_final_report(
         enable_reference_package_prefilter=enable_reference_package_prefilter,
         reference_package_prefilter_min_overlap=reference_package_prefilter_min_overlap,
         reference_package_prefilter_limit=reference_package_prefilter_limit,
+        reference_package_prefilter_per_coordinate_limit=(
+            reference_package_prefilter_per_coordinate_limit
+        ),
     )
     components = detected_libraries_from_match_summary(
         match_summary,

@@ -663,6 +663,14 @@ def build_parser() -> argparse.ArgumentParser:
         help="Maximum number of package-overlap prefilter components to score.",
     )
     report_parser.add_argument(
+        "--reference-package-prefilter-per-coordinate-limit",
+        type=int,
+        help=(
+            "Maximum package-overlap prefilter components to keep per coordinate before "
+            "the optional global --reference-package-prefilter-limit is applied."
+        ),
+    )
+    report_parser.add_argument(
         "--skip-osv",
         action="store_true",
         help="Do not query OSV while generating the report.",
@@ -1216,6 +1224,9 @@ def main(argv: list[str] | None = None) -> int:
                 enable_reference_package_prefilter=args.enable_reference_package_prefilter,
                 reference_package_prefilter_min_overlap=args.reference_package_prefilter_min_overlap,
                 reference_package_prefilter_limit=args.reference_package_prefilter_limit,
+                reference_package_prefilter_per_coordinate_limit=(
+                    args.reference_package_prefilter_per_coordinate_limit
+                ),
                 include_uncertain=args.include_uncertain,
                 query_osv=not args.skip_osv,
                 osv_api_url=args.osv_api_url,
