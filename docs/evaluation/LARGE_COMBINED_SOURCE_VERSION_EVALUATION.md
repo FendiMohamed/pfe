@@ -8,16 +8,16 @@ This is an evaluation-only oracle/source-version constrained run. Each APK is ma
 
 | Metric | Value |
 |---|---:|
-| Completed cases | 71 / 106 |
-| Pending cases | 35 |
-| Checked emitted rows | 4655 |
-| Confirmed exact rows | 4655 |
+| Completed cases | 91 / 106 |
+| Pending cases | 15 |
+| Checked emitted rows | 6090 |
+| Confirmed exact rows | 6090 |
 | Version mismatches | 0 |
 | Missing emitted coordinates | 0 |
 | Confirmation rate | 100.0% |
-| Source gap rows | 2698 |
-| Source gaps with coordinate in large DB | 2140 |
-| Source gaps missing from large DB | 558 |
+| Source gap rows | 4307 |
+| Source gaps with coordinate in large DB | 3409 |
+| Source gaps missing from large DB | 898 |
 
 ## Outputs
 
@@ -100,26 +100,26 @@ This is an evaluation-only oracle/source-version constrained run. Each APK is ma
 | af-weather-widget | AF Weather Widget 3.2 | complete | 68 | 68 | 0 | 0 | 100.0% |
 | study-tracker | Study Tracker 1.0.7 | complete | 60 | 60 | 0 | 0 | 100.0% |
 | calliope-mini | Calliope mini 2.0.9 | complete | 79 | 79 | 0 | 0 | 100.0% |
-| fdroid-build-status | F-Droid Build Status 5.14.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| password-master | Password Master 1.5.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| todo-list-pfa | Todo List (PFA) 3.4.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| flying-carpet | Flying Carpet 9.0.8 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| fitotrack | FitoTrack 15.6 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| newpipe | NewPipe 0.28.5 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| antennapod | AntennaPod 3.11.4 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| kde-connect | KDE Connect 1.35.5 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| wikipedia | Wikipedia Android r/50586 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| conversations | Conversations 2.20.0+free | pending | 0 | 0 | 0 | 0 | 0.0% |
-| aegis | Aegis Authenticator 3.4.2 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| markor | Markor 2.16.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| nextcloud | Nextcloud Android 33.1.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| vlc-android | VLC Android 3.7.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| osmand | OsmAnd~ 5.3.10 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| material-files | Material Files 1.7.4 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| davx5 | DAVx5 4.5.12-ose | pending | 0 | 0 | 0 | 0 | 0.0% |
-| openvpn-for-android | OpenVPN for Android 0.7.64 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| gadgetbridge | Gadgetbridge 0.91.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| shelter | Shelter 1.9.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
+| fdroid-build-status | F-Droid Build Status 5.14.0 | complete | 93 | 93 | 0 | 0 | 100.0% |
+| password-master | Password Master 1.5.1 | complete | 82 | 82 | 0 | 0 | 100.0% |
+| todo-list-pfa | Todo List (PFA) 3.4.0 | complete | 74 | 74 | 0 | 0 | 100.0% |
+| flying-carpet | Flying Carpet 9.0.8 | complete | 57 | 57 | 0 | 0 | 100.0% |
+| fitotrack | FitoTrack 15.6 | complete | 105 | 105 | 0 | 0 | 100.0% |
+| newpipe | NewPipe 0.28.5 | complete | 51 | 51 | 0 | 0 | 100.0% |
+| antennapod | AntennaPod 3.11.4 | complete | 79 | 79 | 0 | 0 | 100.0% |
+| kde-connect | KDE Connect 1.35.5 | complete | 31 | 31 | 0 | 0 | 100.0% |
+| wikipedia | Wikipedia Android r/50586 | complete | 45 | 45 | 0 | 0 | 100.0% |
+| conversations | Conversations 2.20.0+free | complete | 35 | 35 | 0 | 0 | 100.0% |
+| aegis | Aegis Authenticator 3.4.2 | complete | 33 | 33 | 0 | 0 | 100.0% |
+| markor | Markor 2.16.1 | complete | 101 | 101 | 0 | 0 | 100.0% |
+| nextcloud | Nextcloud Android 33.1.0 | complete | 186 | 186 | 0 | 0 | 100.0% |
+| vlc-android | VLC Android 3.7.1 | complete | 160 | 160 | 0 | 0 | 100.0% |
+| osmand | OsmAnd~ 5.3.10 | complete | 113 | 113 | 0 | 0 | 100.0% |
+| material-files | Material Files 1.7.4 | complete | 11 | 11 | 0 | 0 | 100.0% |
+| davx5 | DAVx5 4.5.12-ose | complete | 26 | 26 | 0 | 0 | 100.0% |
+| openvpn-for-android | OpenVPN for Android 0.7.64 | complete | 69 | 69 | 0 | 0 | 100.0% |
+| gadgetbridge | Gadgetbridge 0.91.1 | complete | 79 | 79 | 0 | 0 | 100.0% |
+| shelter | Shelter 1.9.1 | complete | 5 | 5 | 0 | 0 | 100.0% |
 | stopwatch | Stopwatch 1.6 | pending | 0 | 0 | 0 | 0 | 0.0% |
 | bubble | Bubble 3.4 | pending | 0 | 0 | 0 | 0 | 0.0% |
 | audio-source | Audio Source 1.5 | pending | 0 | 0 | 0 | 0 | 0.0% |
