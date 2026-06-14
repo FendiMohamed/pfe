@@ -18,7 +18,7 @@ Do not optimize wrong-version rows as the next main lane until the reference DB 
 | Source dependency coordinate+version rows | 12082 |
 | Unique source coordinates | 1370 |
 | Unique source coordinate+version pairs | 3391 |
-| Current evaluation reference DB components | 10456 |
+| Current evaluation reference DB components | 10458 |
 | Current evaluation reference DB coordinates | 1134 |
 | Source rows with coordinate in DB | 10950 (90.6%) |
 | Source rows with exact version in DB | 9603 (79.5%) |
