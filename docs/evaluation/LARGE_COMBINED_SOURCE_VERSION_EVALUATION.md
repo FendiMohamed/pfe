@@ -8,16 +8,16 @@ This is an evaluation-only oracle/source-version constrained run. Each APK is ma
 
 | Metric | Value |
 |---|---:|
-| Completed cases | 91 / 106 |
-| Pending cases | 15 |
-| Checked emitted rows | 6090 |
-| Confirmed exact rows | 6090 |
+| Completed cases | 106 / 106 |
+| Pending cases | 0 |
+| Checked emitted rows | 6748 |
+| Confirmed exact rows | 6748 |
 | Version mismatches | 0 |
 | Missing emitted coordinates | 0 |
 | Confirmation rate | 100.0% |
-| Source gap rows | 4307 |
-| Source gaps with coordinate in large DB | 3409 |
-| Source gaps missing from large DB | 898 |
+| Source gap rows | 5262 |
+| Source gaps with coordinate in large DB | 4202 |
+| Source gaps missing from large DB | 1060 |
 
 ## Outputs
 
@@ -120,18 +120,18 @@ This is an evaluation-only oracle/source-version constrained run. Each APK is ma
 | openvpn-for-android | OpenVPN for Android 0.7.64 | complete | 69 | 69 | 0 | 0 | 100.0% |
 | gadgetbridge | Gadgetbridge 0.91.1 | complete | 79 | 79 | 0 | 0 | 100.0% |
 | shelter | Shelter 1.9.1 | complete | 5 | 5 | 0 | 0 | 100.0% |
-| stopwatch | Stopwatch 1.6 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| bubble | Bubble 3.4 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| audio-source | Audio Source 1.5 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| blue-square-speedometer | Blue Square Speedometer 1.1.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| gotify | Gotify 2.10.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| foxy-droid | Foxy Droid 1.3 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| bettercounter | BetterCounter 6.0.3 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| coffee | Coffee 2.26 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| medtimer | MedTimer 1.22.18 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| doodle | Doodle 6.0.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| simple-time-tracker | Simple Time Tracker 1.57 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| keepassvault | KeePassVault 1.16.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| k9 | K-9 / Thunderbird Android 18.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| jitsi-meet | Jitsi Meet 26.0.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| fairemail | FairEmail 1.2315 | pending | 0 | 0 | 0 | 0 | 0.0% |
+| stopwatch | Stopwatch 1.6 | complete | 15 | 15 | 0 | 0 | 100.0% |
+| bubble | Bubble 3.4 | complete | 28 | 28 | 0 | 0 | 100.0% |
+| audio-source | Audio Source 1.5 | complete | 24 | 24 | 0 | 0 | 100.0% |
+| blue-square-speedometer | Blue Square Speedometer 1.1.0 | complete | 0 | 0 | 0 | 0 | 0.0% |
+| gotify | Gotify 2.10.0 | complete | 96 | 96 | 0 | 0 | 100.0% |
+| foxy-droid | Foxy Droid 1.3 | complete | 22 | 22 | 0 | 0 | 100.0% |
+| bettercounter | BetterCounter 6.0.3 | complete | 18 | 18 | 0 | 0 | 100.0% |
+| coffee | Coffee 2.26 | complete | 35 | 35 | 0 | 0 | 100.0% |
+| medtimer | MedTimer 1.22.18 | complete | 98 | 98 | 0 | 0 | 100.0% |
+| doodle | Doodle 6.0.0 | complete | 14 | 14 | 0 | 0 | 100.0% |
+| simple-time-tracker | Simple Time Tracker 1.57 | complete | 46 | 46 | 0 | 0 | 100.0% |
+| keepassvault | KeePassVault 1.16.0 | complete | 124 | 124 | 0 | 0 | 100.0% |
+| k9 | K-9 / Thunderbird Android 18.0 | complete | 55 | 55 | 0 | 0 | 100.0% |
+| jitsi-meet | Jitsi Meet 26.0.0 | complete | 16 | 16 | 0 | 0 | 100.0% |
+| fairemail | FairEmail 1.2315 | complete | 67 | 67 | 0 | 0 | 100.0% |
