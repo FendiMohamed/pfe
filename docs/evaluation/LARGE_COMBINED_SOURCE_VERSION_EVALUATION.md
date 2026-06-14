@@ -8,16 +8,16 @@ This is an evaluation-only oracle/source-version constrained run. Each APK is ma
 
 | Metric | Value |
 |---|---:|
-| Completed cases | 51 / 106 |
-| Pending cases | 55 |
-| Checked emitted rows | 3387 |
-| Confirmed exact rows | 3387 |
+| Completed cases | 71 / 106 |
+| Pending cases | 35 |
+| Checked emitted rows | 4655 |
+| Confirmed exact rows | 4655 |
 | Version mismatches | 0 |
 | Missing emitted coordinates | 0 |
 | Confirmation rate | 100.0% |
-| Source gap rows | 2102 |
-| Source gaps with coordinate in large DB | 1664 |
-| Source gaps missing from large DB | 438 |
+| Source gap rows | 2698 |
+| Source gaps with coordinate in large DB | 2140 |
+| Source gaps missing from large DB | 558 |
 
 ## Outputs
 
@@ -80,26 +80,26 @@ This is an evaluation-only oracle/source-version constrained run. Each APK is ma
 | quasseldroid | Quasseldroid 1.8.0 | complete | 59 | 59 | 0 | 0 | 100.0% |
 | bimba | Bimba 3.99 | complete | 137 | 137 | 0 | 0 | 100.0% |
 | wx | wX 55990 | complete | 64 | 64 | 0 | 0 | 100.0% |
-| egyptian-writer | Egyptian Writer 14.05.2026@0.1.0.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| smouldering-durtles | Smouldering Durtles 1.2.3 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| dns-hero | DNS Hero 1.7.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| baby-books | Baby Books 0.9.2 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| odysee | Odysee 0.0.124 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| radarweather | RadarWeather 6.7 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| clock | Clock 2.29 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| poet-assistant | Poet Assistant 1.31.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| ftpclient | FTPClient 3.0.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| json-list | Json List 1.10 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| forecastie | Forecastie 1.23 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| ultrasonic | Ultrasonic 4.9.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| runnerup | RunnerUp 2.11.0.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| imapnotes3 | ImapNotes3 v1.4-07 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| oceannex | OceanNex for DigitalOcean 1.0.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| praktika-vortaro | Praktika Vortaro 0.26 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| msggo | MsgGo 3.9 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| af-weather-widget | AF Weather Widget 3.2 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| study-tracker | Study Tracker 1.0.7 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| calliope-mini | Calliope mini 2.0.9 | pending | 0 | 0 | 0 | 0 | 0.0% |
+| egyptian-writer | Egyptian Writer 14.05.2026@0.1.0.1 | complete | 68 | 68 | 0 | 0 | 100.0% |
+| smouldering-durtles | Smouldering Durtles 1.2.3 | complete | 93 | 93 | 0 | 0 | 100.0% |
+| dns-hero | DNS Hero 1.7.0 | complete | 37 | 37 | 0 | 0 | 100.0% |
+| baby-books | Baby Books 0.9.2 | complete | 130 | 130 | 0 | 0 | 100.0% |
+| odysee | Odysee 0.0.124 | complete | 57 | 57 | 0 | 0 | 100.0% |
+| radarweather | RadarWeather 6.7 | complete | 71 | 71 | 0 | 0 | 100.0% |
+| clock | Clock 2.29 | complete | 73 | 73 | 0 | 0 | 100.0% |
+| poet-assistant | Poet Assistant 1.31.1 | complete | 15 | 15 | 0 | 0 | 100.0% |
+| ftpclient | FTPClient 3.0.1 | complete | 75 | 75 | 0 | 0 | 100.0% |
+| json-list | Json List 1.10 | complete | 57 | 57 | 0 | 0 | 100.0% |
+| forecastie | Forecastie 1.23 | complete | 45 | 45 | 0 | 0 | 100.0% |
+| ultrasonic | Ultrasonic 4.9.0 | complete | 37 | 37 | 0 | 0 | 100.0% |
+| runnerup | RunnerUp 2.11.0.1 | complete | 81 | 81 | 0 | 0 | 100.0% |
+| imapnotes3 | ImapNotes3 v1.4-07 | complete | 68 | 68 | 0 | 0 | 100.0% |
+| oceannex | OceanNex for DigitalOcean 1.0.0 | complete | 75 | 75 | 0 | 0 | 100.0% |
+| praktika-vortaro | Praktika Vortaro 0.26 | complete | 6 | 6 | 0 | 0 | 100.0% |
+| msggo | MsgGo 3.9 | complete | 73 | 73 | 0 | 0 | 100.0% |
+| af-weather-widget | AF Weather Widget 3.2 | complete | 68 | 68 | 0 | 0 | 100.0% |
+| study-tracker | Study Tracker 1.0.7 | complete | 60 | 60 | 0 | 0 | 100.0% |
+| calliope-mini | Calliope mini 2.0.9 | complete | 79 | 79 | 0 | 0 | 100.0% |
 | fdroid-build-status | F-Droid Build Status 5.14.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
 | password-master | Password Master 1.5.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
 | todo-list-pfa | Todo List (PFA) 3.4.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
