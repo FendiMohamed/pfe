@@ -8,16 +8,16 @@ This is an evaluation-only oracle/source-version constrained run. Each APK is ma
 
 | Metric | Value |
 |---|---:|
-| Completed cases | 31 / 106 |
-| Pending cases | 75 |
-| Checked emitted rows | 1843 |
-| Confirmed exact rows | 1843 |
+| Completed cases | 51 / 106 |
+| Pending cases | 55 |
+| Checked emitted rows | 3387 |
+| Confirmed exact rows | 3387 |
 | Version mismatches | 0 |
 | Missing emitted coordinates | 0 |
 | Confirmation rate | 100.0% |
-| Source gap rows | 1449 |
-| Source gaps with coordinate in large DB | 1183 |
-| Source gaps missing from large DB | 266 |
+| Source gap rows | 2102 |
+| Source gaps with coordinate in large DB | 1664 |
+| Source gaps missing from large DB | 438 |
 
 ## Outputs
 
@@ -60,26 +60,26 @@ This is an evaluation-only oracle/source-version constrained run. Each APK is ma
 | etar | Etar - OpenSource Calendar 1.0.55 | complete | 71 | 71 | 0 | 0 | 100.0% |
 | dolidroid | DoliDroid 3.0.69 | complete | 50 | 50 | 0 | 0 | 100.0% |
 | owncloud | ownCloud 4.8.0 | complete | 129 | 129 | 0 | 0 | 100.0% |
-| openkeychain | OpenKeychain: Easy PGP 6.0.4 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| radiodroid | RadioDroid 0.86 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| simplelogin | SimpleLogin Anti-spam 1.22.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| omni-notes | Omni Notes 6.3.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| primitive-ftpd | Primitive FTPd 8.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| floccus | floccus bookmark sync 5.9.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| opencloud | OpenCloud 1.2.3 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| sambalite | SambaLite 2.5.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| nightdream | NightDream 2.11.26 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| waistline | Waistline 3.10.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| password-generator | Password Generator 1.9.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| todo-agenda | Todo Agenda 4.13.3 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| keep-it-up | Keep it up 1.11.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| c3nav | c3nav 4.7.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| opentopomap-viewer | OpenTopoMap Viewer 1.29 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| railway-station-photos | Railway station photos 16.4.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| linkdroid | LinkDroid for Linkwarden 2.1.9 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| quasseldroid | Quasseldroid 1.8.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| bimba | Bimba 3.99 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| wx | wX 55990 | pending | 0 | 0 | 0 | 0 | 0.0% |
+| openkeychain | OpenKeychain: Easy PGP 6.0.4 | complete | 64 | 64 | 0 | 0 | 100.0% |
+| radiodroid | RadioDroid 0.86 | complete | 109 | 109 | 0 | 0 | 100.0% |
+| simplelogin | SimpleLogin Anti-spam 1.22.0 | complete | 87 | 87 | 0 | 0 | 100.0% |
+| omni-notes | Omni Notes 6.3.1 | complete | 73 | 73 | 0 | 0 | 100.0% |
+| primitive-ftpd | Primitive FTPd 8.1 | complete | 77 | 77 | 0 | 0 | 100.0% |
+| floccus | floccus bookmark sync 5.9.1 | complete | 51 | 51 | 0 | 0 | 100.0% |
+| opencloud | OpenCloud 1.2.3 | complete | 126 | 126 | 0 | 0 | 100.0% |
+| sambalite | SambaLite 2.5.1 | complete | 77 | 77 | 0 | 0 | 100.0% |
+| nightdream | NightDream 2.11.26 | complete | 106 | 106 | 0 | 0 | 100.0% |
+| waistline | Waistline 3.10.1 | complete | 53 | 53 | 0 | 0 | 100.0% |
+| password-generator | Password Generator 1.9.0 | complete | 65 | 65 | 0 | 0 | 100.0% |
+| todo-agenda | Todo Agenda 4.13.3 | complete | 60 | 60 | 0 | 0 | 100.0% |
+| keep-it-up | Keep it up 1.11.1 | complete | 16 | 16 | 0 | 0 | 100.0% |
+| c3nav | c3nav 4.7.0 | complete | 52 | 52 | 0 | 0 | 100.0% |
+| opentopomap-viewer | OpenTopoMap Viewer 1.29 | complete | 102 | 102 | 0 | 0 | 100.0% |
+| railway-station-photos | Railway station photos 16.4.0 | complete | 99 | 99 | 0 | 0 | 100.0% |
+| linkdroid | LinkDroid for Linkwarden 2.1.9 | complete | 67 | 67 | 0 | 0 | 100.0% |
+| quasseldroid | Quasseldroid 1.8.0 | complete | 59 | 59 | 0 | 0 | 100.0% |
+| bimba | Bimba 3.99 | complete | 137 | 137 | 0 | 0 | 100.0% |
+| wx | wX 55990 | complete | 64 | 64 | 0 | 0 | 100.0% |
 | egyptian-writer | Egyptian Writer 14.05.2026@0.1.0.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
 | smouldering-durtles | Smouldering Durtles 1.2.3 | pending | 0 | 0 | 0 | 0 | 0.0% |
 | dns-hero | DNS Hero 1.7.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
