@@ -170,13 +170,14 @@ Macro-Batch 002 download covered the next `6000` config slots (`6100` through `1
 | Heavy Android icon-pack continuation 24 | next two `androidx.compose.material:material-icons-extended-android` rows | `2` stored in about 14 minutes, 0 failed |
 | Heavy Android icon-pack continuation 25 | next two `androidx.compose.material:material-icons-extended-android` rows | `2` stored in about 14 minutes, 0 failed |
 | Heavy Android icon-pack continuation 26 | next two `androidx.compose.material:material-icons-extended-android` rows | `2` stored in about 15 minutes, 0 failed |
+| Heavy Android icon-pack continuation 27 | next two `androidx.compose.material:material-icons-extended-android` rows | `2` stored in about 14 minutes, 0 failed |
 
 Current all-versions DB state:
 
-- Stored components: `8509`
+- Stored components: `8511`
 - Unique coordinates: `129`
-- Extractable rows still not stored: `3`
-- Remaining coordinates: only `androidx.compose.material:material-icons-extended-android` (`3` rows)
-- Remaining DEX volume: about `85.6` MiB
+- Extractable rows still not stored: `1`
+- Remaining coordinates: only `androidx.compose.material:material-icons-extended-android` (`1` row)
+- Remaining DEX volume: about `28.5` MiB
 
-The regular `androidx.compose.material:material-icons-extended` coordinate is complete. The remaining rows are the heavy Material Icons Extended Android tail. They are valid extractable bytecode rows, but Android chunks are taking about 8-15 minutes per two rows and the combined DB rebuild now needs a longer timeout, so finishing the last `3` rows is now the final two extraction passes and should not block the large combined DB/reporting experiment.
+The regular `androidx.compose.material:material-icons-extended` coordinate is complete. The remaining row is the heavy Material Icons Extended Android tail. It is a valid extractable bytecode row, and finishing the last `1` row is now the final extraction pass and should not block the large combined DB/reporting experiment.
