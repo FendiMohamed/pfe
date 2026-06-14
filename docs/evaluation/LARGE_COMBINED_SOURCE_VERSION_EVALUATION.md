@@ -8,16 +8,16 @@ This is an evaluation-only oracle/source-version constrained run. Each APK is ma
 
 | Metric | Value |
 |---|---:|
-| Completed cases | 11 / 106 |
-| Pending cases | 95 |
-| Checked emitted rows | 643 |
-| Confirmed exact rows | 643 |
+| Completed cases | 31 / 106 |
+| Pending cases | 75 |
+| Checked emitted rows | 1843 |
+| Confirmed exact rows | 1843 |
 | Version mismatches | 0 |
 | Missing emitted coordinates | 0 |
 | Confirmation rate | 100.0% |
-| Source gap rows | 681 |
-| Source gaps with coordinate in large DB | 559 |
-| Source gaps missing from large DB | 122 |
+| Source gap rows | 1449 |
+| Source gaps with coordinate in large DB | 1183 |
+| Source gaps missing from large DB | 266 |
 
 ## Outputs
 
@@ -40,26 +40,26 @@ This is an evaluation-only oracle/source-version constrained run. Each APK is ma
 | quickdic | QuickDic 5.8.2 | complete | 6 | 6 | 0 | 0 | 100.0% |
 | cirrus | Cirrus 4.7 | complete | 81 | 81 | 0 | 0 | 100.0% |
 | afwall-plus | AFWall+ 4.0.3 | complete | 80 | 80 | 0 | 0 | 100.0% |
-| loop-habit-tracker | Loop Habit Tracker 2.3.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| yetcalc | yetCalc 2.0.8 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| broccoli | Broccoli 1.4.4 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| libretube | LibreTube 31.4 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| retro-music | Retro Music 6.6.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| micromathematics-plus | microMathematics Plus 2.23.3 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| diaguard | Diaguard 3.15.1 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| fulguris-web-browser | Fulguris Web Browser 2.0.10 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| working-time-account | Working Time Account 2.11.012 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| andstatus | AndStatus 62.03 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| i2p | I2P 2.11.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| mastodon | Mastodon 2.12.3 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| drift-audio | Drift // Audio 0.1.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| jamuz | JaMuz 0.6.14 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| monocles-browser | monocles browser 1.9.3 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| your-local-weather | Your local weather 6.4.0-FOSS | pending | 0 | 0 | 0 | 0 | 0.0% |
-| homefeed-rss-widget | HomeFeed - RSS Widget 1.3.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| etar | Etar - OpenSource Calendar 1.0.55 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| dolidroid | DoliDroid 3.0.69 | pending | 0 | 0 | 0 | 0 | 0.0% |
-| owncloud | ownCloud 4.8.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
+| loop-habit-tracker | Loop Habit Tracker 2.3.1 | complete | 37 | 37 | 0 | 0 | 100.0% |
+| yetcalc | yetCalc 2.0.8 | complete | 74 | 74 | 0 | 0 | 100.0% |
+| broccoli | Broccoli 1.4.4 | complete | 108 | 108 | 0 | 0 | 100.0% |
+| libretube | LibreTube 31.4 | complete | 34 | 34 | 0 | 0 | 100.0% |
+| retro-music | Retro Music 6.6.0 | complete | 12 | 12 | 0 | 0 | 100.0% |
+| micromathematics-plus | microMathematics Plus 2.23.3 | complete | 67 | 67 | 0 | 0 | 100.0% |
+| diaguard | Diaguard 3.15.1 | complete | 23 | 23 | 0 | 0 | 100.0% |
+| fulguris-web-browser | Fulguris Web Browser 2.0.10 | complete | 104 | 104 | 0 | 0 | 100.0% |
+| working-time-account | Working Time Account 2.11.012 | complete | 60 | 60 | 0 | 0 | 100.0% |
+| andstatus | AndStatus 62.03 | complete | 83 | 83 | 0 | 0 | 100.0% |
+| i2p | I2P 2.11.0 | complete | 90 | 90 | 0 | 0 | 100.0% |
+| mastodon | Mastodon 2.12.3 | complete | 0 | 0 | 0 | 0 | 0.0% |
+| drift-audio | Drift // Audio 0.1.0 | complete | 45 | 45 | 0 | 0 | 100.0% |
+| jamuz | JaMuz 0.6.14 | complete | 73 | 73 | 0 | 0 | 100.0% |
+| monocles-browser | monocles browser 1.9.3 | complete | 3 | 3 | 0 | 0 | 100.0% |
+| your-local-weather | Your local weather 6.4.0-FOSS | complete | 70 | 70 | 0 | 0 | 100.0% |
+| homefeed-rss-widget | HomeFeed - RSS Widget 1.3.0 | complete | 67 | 67 | 0 | 0 | 100.0% |
+| etar | Etar - OpenSource Calendar 1.0.55 | complete | 71 | 71 | 0 | 0 | 100.0% |
+| dolidroid | DoliDroid 3.0.69 | complete | 50 | 50 | 0 | 0 | 100.0% |
+| owncloud | ownCloud 4.8.0 | complete | 129 | 129 | 0 | 0 | 100.0% |
 | openkeychain | OpenKeychain: Easy PGP 6.0.4 | pending | 0 | 0 | 0 | 0 | 0.0% |
 | radiodroid | RadioDroid 0.86 | pending | 0 | 0 | 0 | 0 | 0.0% |
 | simplelogin | SimpleLogin Anti-spam 1.22.0 | pending | 0 | 0 | 0 | 0 | 0.0% |
