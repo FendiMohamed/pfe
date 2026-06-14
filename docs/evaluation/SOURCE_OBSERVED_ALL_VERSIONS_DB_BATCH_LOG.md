@@ -166,13 +166,14 @@ Macro-Batch 002 download covered the next `6000` config slots (`6100` through `1
 | Heavy Android icon-pack continuation 20 | next two `androidx.compose.material:material-icons-extended-android` rows | `2` stored in about 8 minutes, 0 failed |
 | Heavy Android icon-pack continuation 21 | next two `androidx.compose.material:material-icons-extended-android` rows | `2` stored in about 10 minutes, 0 failed |
 | Heavy Android icon-pack continuation 22 | next two `androidx.compose.material:material-icons-extended-android` rows | `2` stored in about 15 minutes, 0 failed |
+| Heavy Android icon-pack continuation 23 | next two `androidx.compose.material:material-icons-extended-android` rows | `2` stored in about 14 minutes, 0 failed |
 
 Current all-versions DB state:
 
-- Stored components: `8501`
+- Stored components: `8503`
 - Unique coordinates: `129`
-- Extractable rows still not stored: `11`
-- Remaining coordinates: only `androidx.compose.material:material-icons-extended-android` (`11` rows)
-- Remaining DEX volume: about `0.30` GiB
+- Extractable rows still not stored: `9`
+- Remaining coordinates: only `androidx.compose.material:material-icons-extended-android` (`9` rows)
+- Remaining DEX volume: about `0.25` GiB
 
-The regular `androidx.compose.material:material-icons-extended` coordinate is complete. The remaining rows are the heavy Material Icons Extended Android tail. They are valid extractable bytecode rows, but Android chunks are taking about 8-15 minutes per two rows and the combined DB rebuild now needs a longer timeout, so finishing the last `11` rows remains a many-hour extraction tail and should not block the large combined DB/reporting experiment.
+The regular `androidx.compose.material:material-icons-extended` coordinate is complete. The remaining rows are the heavy Material Icons Extended Android tail. They are valid extractable bytecode rows, but Android chunks are taking about 8-15 minutes per two rows and the combined DB rebuild now needs a longer timeout, so finishing the last `9` rows is near the final stretch and should not block the large combined DB/reporting experiment.
