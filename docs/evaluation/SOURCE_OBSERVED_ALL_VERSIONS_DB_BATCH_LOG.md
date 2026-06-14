@@ -157,13 +157,14 @@ Macro-Batch 002 download covered the next `6000` config slots (`6100` through `1
 | Heavy Android icon-pack continuation 11 | next two `androidx.compose.material:material-icons-extended-android` rows | `2` stored in about 9 minutes, 0 failed |
 | Heavy Android icon-pack continuation 12 | next two `androidx.compose.material:material-icons-extended-android` rows | `2` stored in about 13 minutes, 0 failed |
 | Heavy Android icon-pack continuation 13 | next two `androidx.compose.material:material-icons-extended-android` rows | `2` stored in about 14 minutes, 0 failed |
+| Heavy Android icon-pack continuation 14 | next two `androidx.compose.material:material-icons-extended-android` rows | `2` stored in about 11 minutes, 0 failed |
 
 Current all-versions DB state:
 
-- Stored components: `8483`
+- Stored components: `8485`
 - Unique coordinates: `129`
-- Extractable rows still not stored: `29`
-- Remaining coordinates: only `androidx.compose.material:material-icons-extended-android` (`29` rows)
-- Remaining DEX volume: about `0.80` GiB
+- Extractable rows still not stored: `27`
+- Remaining coordinates: only `androidx.compose.material:material-icons-extended-android` (`27` rows)
+- Remaining DEX volume: about `0.74` GiB
 
-The regular `androidx.compose.material:material-icons-extended` coordinate is complete. The remaining rows are the heavy Material Icons Extended Android tail. They are valid extractable bytecode rows, but Android chunks are taking about 9-14 minutes per two rows and the combined DB rebuild now needs a longer timeout, so finishing the last `29` rows remains a many-hour extraction tail and should not block the large combined DB/reporting experiment.
+The regular `androidx.compose.material:material-icons-extended` coordinate is complete. The remaining rows are the heavy Material Icons Extended Android tail. They are valid extractable bytecode rows, but Android chunks are taking about 9-14 minutes per two rows and the combined DB rebuild now needs a longer timeout, so finishing the last `27` rows remains a many-hour extraction tail and should not block the large combined DB/reporting experiment.
