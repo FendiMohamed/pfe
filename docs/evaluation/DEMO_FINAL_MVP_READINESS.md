@@ -59,6 +59,25 @@ Primary artifacts:
 - `data/results/evaluation/demo-final-large-source-gap-triage.csv`
 - `configs/libraries.demo_final_large_remaining_missing_reference_candidates.json`
 
+## Matcher Recall Diagnostic
+
+The matcher-recall bucket was scored again against the final per-APK source-version slice DBs. This keeps the diagnostic bounded to source-known evaluation context and does not change SBOM output.
+
+| Matcher-recall status | Rows |
+|---|---:|
+| Report-only source-context suggestions | 1422 |
+| Suppressed uncertain rows | 833 |
+| Below-threshold rows | 10 |
+| No-bytecode-signal rows | 12 |
+
+Primary artifacts:
+
+- `docs/evaluation/DEMO_FINAL_MATCHER_RECALL_DIAGNOSTICS.md`
+- `data/results/evaluation/demo-final-matcher-recall-diagnostics.json`
+- `data/results/evaluation/demo-final-matcher-recall-diagnostics.csv`
+
+Interpretation: the best safe improvement is to surface the 1422 rows as source-context report-only suggestions in demo/thesis analysis. They should not be promoted into default SBOM components without a separate control run, because 1419 of them are still uncertain by the production matcher.
+
 ## Honest Boundary
 
 This is not APK-only version-selection accuracy.
