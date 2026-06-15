@@ -48,6 +48,8 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Demo-final v2 source-gap triage | `docs/evaluation/DEMO_FINAL_LARGE_V2_SOURCE_GAP_TRIAGE.md` | Use to separate v2 source gaps into metadata/source-only, alias/boundary, missing-reference, and matcher-recall buckets. |
 | Demo-final v2 matcher recall diagnostics | `docs/evaluation/DEMO_FINAL_V2_MATCHER_RECALL_DIAGNOSTICS.md` | Use to show which exact source-version gaps can be surfaced only as report-only source-context suggestions. |
 | Demo-final transparency export | `docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md` | Use as the row-level JSON/CSV export index for dataset roles, source coverage classes, emitted result classes, version mismatch reasons, and vulnerability claim strength. |
+| Final v2 thesis results section | `docs/thesis/FINAL_V2_RESULTS_SECTION.md` | Use as thesis-ready prose that separates the normal emitted-version metric from the v2 source-known upper-bound lane. |
+| Final v2 demo runbook | `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md` | Use for the final supervisor/defense demo flow, exact opening wording, artifact order, and hard-question answers. |
 | Post-100 real APK optimization plan | `docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md` | Use as the research-backed execution roadmap for coverage-first reference DB growth, wrong-version rows, missing-source rows, guarded promotion, and dashboard improvement. |
 | No-Maven-signal audit | `docs/evaluation/NO_MAVEN_SIGNAL_AUDIT.md` | Use to explain why the four no-Maven rows stay outside accuracy metrics and how AndroidX identity misses differ from Mastodon's fork-family boundary. |
 | No-Maven AndroidX report-only experiment | `docs/evaluation/NO_MAVEN_ANDROIDX_REPORT_ONLY_EXPERIMENT.md` | Use as dashboard seed evidence for six source-backed AndroidX report-only candidates with zero SBOM or source-validation metric changes. |
@@ -239,6 +241,8 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Evaluation tables | `docs/evaluation/THESIS_EVALUATION_TABLES.md` | Clean/partial/blocked/limitation split and emitted Maven version confirmation rate. |
 | Demo-final v2 package | `docs/evaluation/DEMO_FINAL_V2_PACKAGE.md` | Current v2 source-version constrained package: 106/106 cases, 6772/6772 exact emitted rows, 0 wrong-version emitted rows, and explicit gap/recall transparency. |
 | Demo-final transparency export | `data/results/evaluation/demo-final-transparency-export.json` | Row-level JSON for exporting dataset roles, source coverage classes, emitted result classes, and vulnerability claim strength. |
+| Final v2 results thesis section | `docs/thesis/FINAL_V2_RESULTS_SECTION.md` | Copy-ready thesis wording for the v2 upper-bound lane, with explicit warnings against calling it APK-only accuracy. |
+| Final v2 demo runbook | `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md` | Defense flow that shows APK-to-SBOM, CVE lookup, normal emitted-version metrics, v2 upper-bound results, and transparency gaps. |
 
 ## Writing Guardrails
 
@@ -256,6 +260,6 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Introduction | ready | Start from `docs/thesis/PFE_FINAL_REPORT_ASSEMBLED.md`, then adapt wording to the university template and add local motivation if required. |
 | State of the art | ready-source-material | Condense `papers/data/state_of_the_art.md`, `docs/research/EVIDENCE_MAP.md`, and `docs/thesis/PAPER_TO_IMPLEMENTATION_TRACEABILITY.md` into the final chapter. |
 | Architecture and implementation | ready | Use `docs/architecture/MVP_ARCHITECTURE.md`, the implementation map in `docs/thesis/PFE_REPORT_DRAFT.md`, and the traceability matrix. |
-| Evaluation | ready | Use `docs/evaluation/THESIS_EVALUATION_CHAPTER_DRAFT.md` and keep the clean/partial split. |
+| Evaluation | ready | Use `docs/evaluation/THESIS_EVALUATION_CHAPTER_DRAFT.md` for the normal clean/partial split, then add `docs/thesis/FINAL_V2_RESULTS_SECTION.md` as the final source-known upper-bound addendum. |
 | Limitations | ready | Use `docs/planning/MVP_CONS_IMPROVEMENT_PLAN.md` and keep native-heavy, hidden-DEX, scanner-tool, and K-9 validation-copy caveats visible. |
-| Presentation | editable-deck-ready | Use `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx`, then apply university template details, names, and screenshots if required. |
+| Presentation | editable-deck-ready | Use `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx`, then apply university template details, names, screenshots, and the v2 result wording from `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md`. |

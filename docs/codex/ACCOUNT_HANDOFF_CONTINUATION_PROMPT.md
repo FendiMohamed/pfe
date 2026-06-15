@@ -37,6 +37,8 @@ Latest completed checkpoint:
   - `docs/evaluation/DEMO_FINAL_LARGE_V2_SOURCE_GAP_TRIAGE.md` explains `2515` boundary/alias rows and leaves `2723` actionable rows (`2281` matcher-recall candidates, `442` missing-reference candidates).
   - `docs/evaluation/DEMO_FINAL_V2_MATCHER_RECALL_DIAGNOSTICS.md` finds `1425` source-context report-only suggestions across those matcher-recall rows.
   - `docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md`, `data/results/evaluation/demo-final-transparency-export.json`, and `docs/evaluation/DEMO_FINAL_V2_PACKAGE.md` are the current package/index artifacts for thesis/demo use.
+  - `docs/thesis/FINAL_V2_RESULTS_SECTION.md` is the copy-ready thesis addendum that separates the normal `927/1837` emitted Maven version confirmation metric from the v2 `6772/6772` source-known upper-bound lane.
+  - `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md` is the final supervisor/demo flow with opening wording, artifact order, CVE/SBOM pointers, transparency numbers, and hard-question answers.
   - This is still an evaluation-only exact-source-version upper bound; do not report it as APK-only production accuracy.
 - Post-v16 optimization checkpoint:
   - Source-linked blockers remain closed at 0.

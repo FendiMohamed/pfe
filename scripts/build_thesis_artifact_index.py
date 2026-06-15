@@ -289,6 +289,16 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the row-level JSON/CSV export index for dataset roles, source coverage classes, emitted result classes, version mismatch reasons, and vulnerability claim strength.",
         },
         {
+            "table": "Final v2 thesis results section",
+            "source": "docs/thesis/FINAL_V2_RESULTS_SECTION.md",
+            "use": "Use as thesis-ready prose that separates the normal emitted-version metric from the v2 source-known upper-bound lane.",
+        },
+        {
+            "table": "Final v2 demo runbook",
+            "source": "docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md",
+            "use": "Use for the final supervisor/defense demo flow, exact opening wording, artifact order, and hard-question answers.",
+        },
+        {
             "table": "Post-100 real APK optimization plan",
             "source": "docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md",
             "use": "Use as the research-backed execution roadmap for coverage-first reference DB growth, wrong-version rows, missing-source rows, guarded promotion, and dashboard improvement.",
@@ -666,6 +676,16 @@ def build_demo_package() -> list[dict[str, str]]:
             "path": "data/results/evaluation/demo-final-transparency-export.json",
             "talking_point": "Row-level JSON for exporting dataset roles, source coverage classes, emitted result classes, and vulnerability claim strength.",
         },
+        {
+            "item": "Final v2 results thesis section",
+            "path": "docs/thesis/FINAL_V2_RESULTS_SECTION.md",
+            "talking_point": "Copy-ready thesis wording for the v2 upper-bound lane, with explicit warnings against calling it APK-only accuracy.",
+        },
+        {
+            "item": "Final v2 demo runbook",
+            "path": "docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md",
+            "talking_point": "Defense flow that shows APK-to-SBOM, CVE lookup, normal emitted-version metrics, v2 upper-bound results, and transparency gaps.",
+        },
     ]
 
 
@@ -689,7 +709,7 @@ def build_final_report_checklist() -> list[dict[str, str]]:
         {
             "section": "Evaluation",
             "status": "ready",
-            "next_action": "Use `docs/evaluation/THESIS_EVALUATION_CHAPTER_DRAFT.md` and keep the clean/partial split.",
+            "next_action": "Use `docs/evaluation/THESIS_EVALUATION_CHAPTER_DRAFT.md` for the normal clean/partial split, then add `docs/thesis/FINAL_V2_RESULTS_SECTION.md` as the final source-known upper-bound addendum.",
         },
         {
             "section": "Limitations",
@@ -699,7 +719,7 @@ def build_final_report_checklist() -> list[dict[str, str]]:
         {
             "section": "Presentation",
             "status": "editable-deck-ready",
-            "next_action": "Use `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx`, then apply university template details, names, and screenshots if required.",
+            "next_action": "Use `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx`, then apply university template details, names, screenshots, and the v2 result wording from `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md`.",
         },
     ]
 

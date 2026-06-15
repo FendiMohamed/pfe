@@ -213,14 +213,17 @@ This split is essential. A single global score can hide why the tool succeeds or
 | Clean source-validated real APKs | 47/47 emitted versions |
 | Partial source-validated real APKs | 880/1790 emitted versions |
 | All source-validated real APKs | 927/1837 emitted versions |
+| Final v2 source-known lane | 6772/6772 emitted rows, 0 wrong versions |
 
 **Required phrase:** emitted Maven version confirmation rate.
 
 **Speaker notes:**
 
-The controlled set validates the mechanics. Clean real APKs show that source-confirmed emitted versions are possible. Partial real APKs show realistic behavior on harder APK families. The overall 927/1837 number is useful, but it must be reported together with the clean/partial split.
+The controlled set validates the mechanics. Clean real APKs show that source-confirmed emitted versions are possible. Partial real APKs show realistic behavior on harder APK families. The overall 927/1837 number is useful, but it must be reported together with the clean/partial split. The final v2 source-known lane is a separate upper-bound result: it reruns 106 source-tree APK cases against exact source coordinate+version slices and confirms all 6772 emitted rows with zero wrong-version emissions.
 
 **Do not say:** full dependency recall.
+
+**Do not say:** the v2 lane is APK-only production accuracy.
 
 ## Slide 10: What Mixed Results Mean
 
@@ -296,7 +299,8 @@ Recommended live or recorded demo:
 4. Open the source-validation output showing confirmed emitted versions.
 5. Open the vulnerable Jackson report and show the three HIGH OSV advisories.
 6. Open the thesis evaluation table and show clean/partial separation.
-7. Optional: open version-band evidence to show ambiguity reporting.
+7. Open the final v2 package and transparency export to show the source-known upper-bound lane and remaining gap taxonomy.
+8. Optional: open version-band evidence to show ambiguity reporting.
 
 ## Defense Questions And Short Answers
 

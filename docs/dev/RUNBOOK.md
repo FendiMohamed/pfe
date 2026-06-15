@@ -222,6 +222,8 @@ python -m compileall src scripts tests
 
 Use this section for a short, stable meeting demo. Do not rebuild the reference DB live; the calibrated DB is already built.
 
+For the final v2 defense flow, start with `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md`. It gives the exact opening wording, files to open, v2 source-version constrained result, transparency export numbers, and hard-question answers. Use this runbook section below for command-level reproduction only.
+
 For the full graduation-day rehearsal sequence, open `docs/evaluation/GRADUATION_DEMO_REHEARSAL.md` first. It lists the clean F-Droid proof, vulnerable Jackson proof, K-9/Jitsi partial-boundary proofs, Simplify obfuscation limitation, and surprise-APK fallback wording.
 
 Start from the workspace:

@@ -333,6 +333,18 @@ The partial cases are important. Hiding them would make the tool look cleaner, b
 
 The experiments also show why generic recency rules are unsafe. Several versions improved one app but regressed others. Therefore, the MVP preserves risky ties as ambiguity unless there is independent evidence such as version-unique features, dependency coherence, app-era support, or source validation.
 
+### 6.5 Final V2 Source-Version Constrained Package
+
+After the main APK-only/source-validated metric was established, the project built a separate final v2 demo package to answer a narrower upper-bound question: when the correct source coordinate+version rows are known and present in the reference database, can the MVP recognize and report them without version mismatches?
+
+This v2 lane uses `data/reference_db/reference_features_demo_final_large_v2.sqlite`, a grown evaluation database with `10517` stored components. The growth process was transparent: `87` plausibly fixable retry slots were attempted, `46` downloaded, `24` bytecode-bearing components were stored, `22` downloaded artifacts were proven no-bytecode/source-wrapper rows, and `41` slots remained unavailable or source-boundary rows.
+
+The v2 source-version constrained rerun completed all `106/106` source-tree APK cases. It checked `6772` emitted rows and confirmed all `6772` exactly, with `0` wrong-version emitted rows and `0` missing emitted rows. This is a strong recognition result under known source-version constraints, but it is not general APK-only version-selection accuracy.
+
+The remaining denominator is kept visible. The v2 run still has `5238` source-gap rows. The triage explains `2515` as boundary or alias rows and leaves `2723` actionable rows: `442` missing-reference candidates and `2281` matcher-recall candidates. The matcher-recall diagnostic finds `1425` source-context report-only suggestions, which are useful for analysis but should not be promoted into default SBOM components without a separate APK-only control run.
+
+The thesis should cite this package as a transparency and upper-bound evaluation layer, not as a replacement for the main emitted Maven version confirmation rate. The detailed wording and tables are maintained in `docs/thesis/FINAL_V2_RESULTS_SECTION.md`, and the demo flow is maintained in `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md`.
+
 ## 7. Limitations and Threats to Validity
 
 ### 7.1 Limitations
@@ -379,6 +391,9 @@ Future work should:
 | `docs/thesis/PAPER_BACKED_MVP_IMPROVEMENT_NOTES.md` | Current cons, improvement plan, and thesis framing. |
 | `docs/evaluation/THESIS_EVALUATION_TABLES.md` | Thesis-ready numbers and claim wording. |
 | `docs/evaluation/THESIS_EVALUATION_CHAPTER_DRAFT.md` | Expanded evaluation prose. |
+| `docs/thesis/FINAL_V2_RESULTS_SECTION.md` | Thesis-ready final v2 upper-bound results section and wording guardrails. |
+| `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md` | Final demo flow for the v2 package, transparency export, and CVE/SBOM artifacts. |
+| `docs/evaluation/DEMO_FINAL_V2_PACKAGE.md` | Current index for the v2 source-version constrained package. |
 | `docs/evaluation/APK_TYPE_EVALUATION.md` | APK family split and case interpretation. |
 | `docs/evaluation/VERSION_BAND_TIE_EVIDENCE.md` | Version ambiguity and unsafe-promotion evidence. |
 | `docs/dev/RUNBOOK.md` | Supervisor demo commands and expected outputs. |
