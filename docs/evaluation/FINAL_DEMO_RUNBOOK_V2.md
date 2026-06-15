@@ -28,13 +28,14 @@ Open these artifacts in this order:
 
 | Step | File | What to show |
 |---:|---|---|
-| 1 | `docs/evaluation/DEMO_FINAL_V2_PACKAGE.md` | The current package index and headline numbers. |
-| 2 | `docs/thesis/FINAL_V2_RESULTS_SECTION.md` | Thesis-ready wording that separates normal metrics from the v2 upper-bound lane. |
-| 3 | `docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md` | Dataset/source/emitted/vulnerability classifications. |
-| 4 | `docs/evaluation/DEMO_FINAL_LARGE_V2_SOURCE_VERSION_EVALUATION.md` | The 106-case v2 rerun result. |
-| 5 | `docs/evaluation/DEMO_FINAL_LARGE_V2_SOURCE_GAP_TRIAGE.md` | Why remaining source dependencies are not simply hidden false negatives. |
-| 6 | `docs/evaluation/DEMO_FINAL_V2_MATCHER_RECALL_DIAGNOSTICS.md` | The remaining matcher-recall work and report-only suggestions. |
-| 7 | `docs/evaluation/DEMO_FINAL_MVP_READINESS.md` | Final readiness summary and honest boundary language. |
+| 1 | `docs/evaluation/FINAL_DEMO_CHECKLIST.md` | Day-of-defense checklist, deck path, exact numbers, and safe/unsafe commands. |
+| 2 | `docs/evaluation/DEMO_FINAL_V2_PACKAGE.md` | The current package index and headline numbers. |
+| 3 | `docs/thesis/FINAL_V2_RESULTS_SECTION.md` | Thesis-ready wording that separates normal metrics from the v2 upper-bound lane. |
+| 4 | `docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md` | Dataset/source/emitted/vulnerability classifications. |
+| 5 | `docs/evaluation/DEMO_FINAL_LARGE_V2_SOURCE_VERSION_EVALUATION.md` | The 106-case v2 rerun result. |
+| 6 | `docs/evaluation/DEMO_FINAL_LARGE_V2_SOURCE_GAP_TRIAGE.md` | Why remaining source dependencies are not simply hidden false negatives. |
+| 7 | `docs/evaluation/DEMO_FINAL_V2_MATCHER_RECALL_DIAGNOSTICS.md` | The remaining matcher-recall work and report-only suggestions. |
+| 8 | `docs/evaluation/DEMO_FINAL_MVP_READINESS.md` | Final readiness summary and honest boundary language. |
 
 For the live SBOM/CVE portion, open:
 

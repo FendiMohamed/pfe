@@ -299,6 +299,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use for the final supervisor/defense demo flow, exact opening wording, artifact order, and hard-question answers.",
         },
         {
+            "table": "Final demo checklist",
+            "source": "docs/evaluation/FINAL_DEMO_CHECKLIST.md",
+            "use": "Use as the day-of-defense checklist for deck path, opening artifacts, exact numbers, and commands to avoid live.",
+        },
+        {
             "table": "Post-100 real APK optimization plan",
             "source": "docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md",
             "use": "Use as the research-backed execution roadmap for coverage-first reference DB growth, wrong-version rows, missing-source rows, guarded promotion, and dashboard improvement.",
@@ -685,6 +690,11 @@ def build_demo_package() -> list[dict[str, str]]:
             "item": "Final v2 demo runbook",
             "path": "docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md",
             "talking_point": "Defense flow that shows APK-to-SBOM, CVE lookup, normal emitted-version metrics, v2 upper-bound results, and transparency gaps.",
+        },
+        {
+            "item": "Final demo checklist",
+            "path": "docs/evaluation/FINAL_DEMO_CHECKLIST.md",
+            "talking_point": "Day-of-defense checklist with the deck path, exact numbers, safe commands, and commands to avoid live.",
         },
     ]
 

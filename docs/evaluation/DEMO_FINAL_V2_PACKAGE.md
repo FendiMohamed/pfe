@@ -24,6 +24,7 @@ This package is the current thesis/demo evidence set for the grown v2 reference 
 
 | Purpose | Artifact |
 |---|---|
+| Final demo checklist | `docs/evaluation/FINAL_DEMO_CHECKLIST.md` |
 | MVP readiness summary | `docs/evaluation/DEMO_FINAL_MVP_READINESS.md` |
 | V2 evaluation report | `docs/evaluation/DEMO_FINAL_LARGE_V2_SOURCE_VERSION_EVALUATION.md` |
 | V2 evaluation dashboard | `data/results/evaluation/real-apk-demo-final-large-v2-source-version-dashboard.json` |

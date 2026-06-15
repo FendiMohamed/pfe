@@ -40,6 +40,8 @@ Latest completed checkpoint:
   - `docs/thesis/FINAL_V2_RESULTS_SECTION.md` is the copy-ready thesis addendum that separates the normal `927/1837` emitted Maven version confirmation metric from the v2 `6772/6772` source-known upper-bound lane.
   - `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md` is the final supervisor/demo flow with opening wording, artifact order, CVE/SBOM pointers, transparency numbers, and hard-question answers.
   - The editable defense deck was regenerated at `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx` with 12 slides, 12 notes slides, current v2 metrics, refreshed previews/layouts/contact sheet, `source-notes.txt`, and QA scorecards. PPTX package validation passed; the artifact runtime still returns non-zero after writing, so keep the documented runtime caveat.
+  - `docs/evaluation/FINAL_DEMO_CHECKLIST.md` is the day-of-defense checklist. It links the deck, runbook, v2 package, thesis results section, transparency report, clean F-Droid SBOM/CVE demo files, vulnerable Jackson demo files, exact numbers to say, safe phrases, and commands not to run live.
+  - Final lightweight rehearsal checks passed: `scripts/build_demo_final_transparency_export.py`, `scripts/build_thesis_artifact_index.py`, and `scripts/build_graduation_demo_rehearsal.py` reran successfully; the v2 dashboard still reports `106` cases / `6772` checked / `0` mismatches / `0` missing; the transparency export still reports `110` cases / `12082` source rows / `6772` emitted rows / `232` vulnerability rows.
   - This is still an evaluation-only exact-source-version upper bound; do not report it as APK-only production accuracy.
 - Post-v16 optimization checkpoint:
   - Source-linked blockers remain closed at 0.

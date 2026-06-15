@@ -50,6 +50,7 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Demo-final transparency export | `docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md` | Use as the row-level JSON/CSV export index for dataset roles, source coverage classes, emitted result classes, version mismatch reasons, and vulnerability claim strength. |
 | Final v2 thesis results section | `docs/thesis/FINAL_V2_RESULTS_SECTION.md` | Use as thesis-ready prose that separates the normal emitted-version metric from the v2 source-known upper-bound lane. |
 | Final v2 demo runbook | `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md` | Use for the final supervisor/defense demo flow, exact opening wording, artifact order, and hard-question answers. |
+| Final demo checklist | `docs/evaluation/FINAL_DEMO_CHECKLIST.md` | Use as the day-of-defense checklist for deck path, opening artifacts, exact numbers, and commands to avoid live. |
 | Post-100 real APK optimization plan | `docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md` | Use as the research-backed execution roadmap for coverage-first reference DB growth, wrong-version rows, missing-source rows, guarded promotion, and dashboard improvement. |
 | No-Maven-signal audit | `docs/evaluation/NO_MAVEN_SIGNAL_AUDIT.md` | Use to explain why the four no-Maven rows stay outside accuracy metrics and how AndroidX identity misses differ from Mastodon's fork-family boundary. |
 | No-Maven AndroidX report-only experiment | `docs/evaluation/NO_MAVEN_ANDROIDX_REPORT_ONLY_EXPERIMENT.md` | Use as dashboard seed evidence for six source-backed AndroidX report-only candidates with zero SBOM or source-validation metric changes. |
@@ -243,6 +244,7 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Demo-final transparency export | `data/results/evaluation/demo-final-transparency-export.json` | Row-level JSON for exporting dataset roles, source coverage classes, emitted result classes, and vulnerability claim strength. |
 | Final v2 results thesis section | `docs/thesis/FINAL_V2_RESULTS_SECTION.md` | Copy-ready thesis wording for the v2 upper-bound lane, with explicit warnings against calling it APK-only accuracy. |
 | Final v2 demo runbook | `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md` | Defense flow that shows APK-to-SBOM, CVE lookup, normal emitted-version metrics, v2 upper-bound results, and transparency gaps. |
+| Final demo checklist | `docs/evaluation/FINAL_DEMO_CHECKLIST.md` | Day-of-defense checklist with the deck path, exact numbers, safe commands, and commands to avoid live. |
 
 ## Writing Guardrails
 
