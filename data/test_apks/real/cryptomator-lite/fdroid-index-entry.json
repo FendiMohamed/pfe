@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "added": 1682423614000,
+    "authorName": "Skymatic GmbH",
+    "categories": [
+      "Cloud Storage & File Sync",
+      "File Encryption & Vault",
+      "Internet",
+      "Security"
+    ],
+    "changelog": "https://github.com/cryptomator/android/releases",
+    "description": {
+      "de-DE": "Mit Cryptomator liegt der Schl\u00fcssel zu deinen Daten bei dir. Durch Cryptomator ver\u00adschl\u00fcsselst du deine Daten schnell und unkompliziert. Anschlie\u00dfend l\u00e4dst du sie gesch\u00fctzt in deinen Lieblingscloudservice hoch.\n\n<i>Cryptomator ben\u00f6tigt einen Lizenzschl\u00fcssel, den du von <a href=\"https://cryptomator.org/android/\">https://cryptomator.org/android/</a> beziehen kannst.</i>\n\n<b>EINFACH</b>\n\nCryptomator ist ein einfaches Tool zur digitalen Selbstverteidigung. Es erm\u00f6glicht dir, deine Cloud-Daten eigenst\u00e4ndig und unabh\u00e4ngig zu sch\u00fctzen.\n\n\u2022 Erstelle einen Tresor und vergib ein Passwort\n\u2022 Keine komplizierte Konfiguration und keine weiteren Accounts notwendig\n\u2022 Entsperr Tresore mit deinem Fingerabdruck\n\n<b>KOMPATIBEL</b>\n\nCryptomator ist kompatibel mit den meistgenutzten Cloudspeichern und verf\u00fcgbar f\u00fcr alle g\u00e4ngigen Betriebssysteme.\n\n\u2022 Kompatibel mit S3- und WebDAV-basierten Cloudspeicher-Diensten\n\u2022 Erstelle auch Tresore in Androids lokalem Speicher (funktioniert bspw. zusammen mit Sync-Apps von Drittanbietern)\n\u2022 Greife auf deine Tresore von allen deinen mobilen Endger\u00e4ten und Computern zu\n\n<b>SICHER</b>\n\nDu musst Cryptomator nicht blind vertrauen, denn <a href=\"https://github.com/cryptomator/android\">die App ist quelloffen</a>, was f\u00fcr dich als Nutzer bedeutet, dass jeder den Code einsehen kann.\n\n\u2022 Verschl\u00fcsselung der Dateiinhalte und Dateinamen mit AES und 256-Bit-Schl\u00fcssell\u00e4nge\n\u2022 Erh\u00f6hte Brute-Force-Resistenz des Tresor-Passworts durch Einsatz von scrypt\n\u2022 Tresore werden automatisch gesperrt, wenn die App in den Hintergrund geschickt wird\n\u2022 Verschl\u00fcsselungsimplementierung ist \u00f6ffentlich dokumentiert\n\n<b>PREISGEKR\u00d6NT</b>\n\nCryptomator wurde mit dem <b>CeBIT Innovation Award 2016 for Usable Security and Privacy</b> ausgezeichnet. Wir freuen uns, hunderttausenden Cryptomator-Nutzern Sicherheit und Privatsph\u00e4renschutz bieten zu k\u00f6nnen.\n\n<b>CRYPTOMATOR COMMUNITY</b>\n\nTritt der Cryptomator Community bei und tausche dich mit Cryptomator-Nutzern aus: <a href=\"https://community.cryptomator.org\">https://community.cryptomator.org</a>\n\n\u2022 Folge uns auf Mastodon <a href=\"https://mastodon.online/@cryptomator\">@cryptomator@mastodon.online</a>\n\u2022 Like uns auf Facebook <a href=\"https://facebook.com/Cryptomator\">/Cryptomator</a>\n",
+      "en-US": "With Cryptomator, the key to your data is in your hands. Cryptomator encrypts your data quickly and easily. Afterwards you upload them protected to your favorite cloud service.\n\n<i>Cryptomator requires a license key, which you can obtain from <a href=\"https://cryptomator.org/android/\">https://cryptomator.org/android/</a></i>\n\n<b>EASY-TO-USE</b>\n\nCryptomator is a simple tool for digital self-defense. It allows you to protect your cloud data by yourself and independently.\n\n\u2022 Simply create a vault and assign a password\n\u2022 No additional account or configuration needed\n\u2022 Unlock vaults with your fingerprint\n\n<b>COMPATIBLE</b>\n\nCryptomator is compatible with the most commonly used cloud storages and available for all major operating systems.\n\n\u2022 Compatible with S3- and WebDAV-based cloud storage services\n\u2022 Create vaults in Android\u2019s local storage (e.g., works with third-party sync apps)\n\u2022 Access your vaults on all your mobile devices and computers\n\n<b>SECURE</b>\n\nYou don't have to trust Cryptomator blindly, because <a href=\"https://github.com/cryptomator/android\">it is open source software</a>. For you as a user, this means that everyone can see the code.\n\n\u2022 File content and filename encryption with AES and 256 bit key length\n\u2022 Vault password is secured with scrypt for enhanced brute-force resistance\n\u2022 Vaults are automatically locked after sending app to background\n\u2022 Crypto implementation is publicly documented\n\n<b>AWARD-WINNING</b>\n\nCryptomator received the <b>CeBIT Innovation Award 2016 for Usable Security and Privacy</b>. We're proud to provide security and privacy for hundreds of thousands of Cryptomator users.\n\n<b>CRYPTOMATOR COMMUNITY</b>\n\nJoin the <a href=\"https://community.cryptomator.org\">Cryptomator Community</a> and participate in the conversations with other Cryptomator users.\n\n\u2022 Follow us on Mastodon <a href=\"https://mastodon.online/@cryptomator\">@cryptomator@mastodon.online</a>\n\u2022 Like us on Facebook <a href=\"https://facebook.com/Cryptomator\">/Cryptomator</a>\n",
+      "fr-FR": "Avec Cryptomator, la cl\u00e9 de vos donn\u00e9es est dans vos mains. Cryptomator chiffre vos donn\u00e9es rapidement et facilement. Vous les envoyez sur votre service cloud favori.\n\n<b>SIMPLE D'UTILISATION</b>\n\nCryptomator est un outil d'auto-d\u00e9fense num\u00e9rique. Il vous permet de prot\u00e9ger vos donn\u00e9es stock\u00e9es sur le cloud vous-m\u00eame et en ind\u00e9pendance.\n\n\u2022 Il suffit de cr\u00e9er un coffre-fort et d'y attribuer un mot de passe\n\u2022 Aucun compte ou configuration suppl\u00e9mentaire n'est n\u00e9cessaire\n\u2022 D\u00e9verrouillez les coffres-forts avec votre empreinte digitale\n\n<b>COMPATIBLE</b>\n\nCryptomator est compatible avec les syst\u00e8mes de stockage dans le cloud les plus couramment utilis\u00e9s et disponible pour tous les principaux syst\u00e8mes d'exploitation.\n\n\u2022 Compatible avec Dropbox, Google Drive, OneDrive et les services de stockage dans le cloud bas\u00e9s sur S3 et WebDAV\n\u2022 Cr\u00e9er des coffres-forts sur le stockage local d'Android (fonctionne donc avec des applications de synchronisation tierces)\n\u2022 Acc\u00e9dez \u00e0 vos coffres-forts sur tous vos appareils mobiles et ordinateurs\n\n<b>S\u00c9CURIS\u00c9</b>\n\nVous n'avez pas \u00e0 aveugl\u00e9ment accorder votre confiance \u00e0 Cryptomator, car <a href=\"https://github.com/cryptomator/android\">c'est un logiciel open-source</a>. Pour vous utilisateur, cela signifie que n'importe qui peut voir le code.\n\n\u2022 Chiffrement du contenu et des noms de fichiers via AES et une longueur de cl\u00e9 de 256 bits\n\u2022 Le mot de passe du coffre-fort est s\u00e9curis\u00e9 par cryptage pour une meilleure r\u00e9sistance aux attaques par force brute\n\u2022 Les coffre-forts sont automatiquement verrouill\u00e9s apr\u00e8s la mise en arri\u00e8re-plan de l'application\n\u2022 La mise en \u0153uvre de Crypto est document\u00e9e publiquement\n\n<b>LAUR\u00c9AT</b>\n\nCryptomator a re\u00e7u le prix de l'innovation CeBIT 2016 pour la s\u00e9curit\u00e9 pratique et la confidentialit\u00e9. Nous sommes fiers d'assurer la s\u00e9curit\u00e9 et la confidentialit\u00e9 des centaines de milliers d'utilisateurs de Cryptomator.\n\n<b>LA COMMUNAUT\u00c9 CRYPTOMATOR</b>\n\nRejoignez la communaut\u00e9 de Cryptomator et participez aux conversations avec les autres utilisateurs de Cryptomator: https://community.cryptomator.org\n\n- Suivez-nous sur Mastodon <a href=\"https://mastodon.online/@cryptomator\">@cryptomator@mastodon.online</a>\n- Likez-nous sur Facebook <a href=\"https://facebook.com/Cryptomator\">/Cryptomator</a>\n"
+    },
+    "donate": [
+      "https://cryptomator.org/donate/"
+    ],
+    "featureGraphic": {
+      "en-US": {
+        "name": "/org.cryptomator.lite/en-US/featureGraphic_wUfKGV83pbF9jEtv9gCymegUq0sLOYQNXiD-xDqtMJk=.png",
+        "sha256": "c147ca195f37a5b17d8c4b6ff600b299e814ab4b0b39840d5e20fec43aad3099",
+        "size": 271546
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/org.cryptomator.lite/en-US/icon_7xJFlQlRtgL84gUfd2p_havFrUXO36Gb7Y00E21HhaA=.png",
+        "sha256": "ef1245950951b602fce2051f776a7f85abc5ad45cedfa19bed8d34136d4785a0",
+        "size": 129017
+      }
+    },
+    "issueTracker": "https://github.com/cryptomator/android/issues",
+    "lastUpdated": 1773911418159,
+    "license": "GPL-3.0-only",
+    "name": {
+      "de-DE": "Cryptomator",
+      "en-US": "Cryptomator",
+      "fr-FR": "Cryptomator"
+    },
+    "preferredSigner": "f7c3ec3b0d588d3cb52983e9eb1a7421c93d4339a286398e71d7b651e8d8ecdd",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/org.cryptomator.lite/en-US/phoneScreenshots/1_en-US.png",
+            "sha256": "a390b80503d8333649a6388da82af5b60391d1d98ea01c1300a2751aaa70b51f",
+            "size": 74636
+          },
+          {
+            "name": "/org.cryptomator.lite/en-US/phoneScreenshots/2_en-US.png",
+            "sha256": "f79c100bb926e95048b98970e2c3acb0747975bc10fbd58d796b008337f87efd",
+            "size": 89640
+          },
+          {
+            "name": "/org.cryptomator.lite/en-US/phoneScreenshots/3_en-US.png",
+            "sha256": "7f9b13c749586a8c94e0ae250f90a1fa2bdfd7ad48fdb62bed96f931e21d486d",
+            "size": 120936
+          },
+          {
+            "name": "/org.cryptomator.lite/en-US/phoneScreenshots/4_en-US.png",
+            "sha256": "0d30c95b0e3cba831b79e238cc18c11770743a7983cbc9d7e8d8bbdda329a153",
+            "size": 102358
+          },
+          {
+            "name": "/org.cryptomator.lite/en-US/phoneScreenshots/5_en-US.png",
+            "sha256": "0f8b41982480a8006dfffed5eab5139e0dcbbfa6b48dc152752617d8e4b68419",
+            "size": 170397
+          },
+          {
+            "name": "/org.cryptomator.lite/en-US/phoneScreenshots/6_en-US.png",
+            "sha256": "a364de17fd659970796b88655aab34f04c16e8a7fdbde3073dda7babe961e3fd",
+            "size": 172996
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/cryptomator/android",
+    "summary": {
+      "de-DE": "Nimm die Sicherung deiner Cloud-Daten selbst in die Hand",
+      "en-US": "Put a lock on your cloud: Take the security of your data into your own hands",
+      "fr-FR": "Verrouillez votre cloud: Prenez en main la s\u00e9curit\u00e9 de vos donn\u00e9es"
+    },
+    "translation": "https://translate.cryptomator.org/",
+    "webSite": "https://cryptomator.org/"
+  },
+  "version": {
+    "added": 1773911418159,
+    "file": {
+      "ipfsCIDv1": "bafybeigbnm4jojsusrbolpqy3ajdcmp3sigsisau367ujd26xbkncjuxj4",
+      "name": "/org.cryptomator.lite_3030.apk",
+      "sha256": "d5cb6c0bb40b5a82fe4ea5689599aa871bb725c25f0d6d1bde44120b696073b9",
+      "size": 20585634
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "f7c3ec3b0d588d3cb52983e9eb1a7421c93d4339a286398e71d7b651e8d8ecdd"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.REQUEST_INSTALL_PACKAGES"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.ACCESS_WIFI_STATE"
+        },
+        {
+          "name": "android.permission.USE_BIOMETRIC"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_IMAGES"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_VIDEO"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.USE_FINGERPRINT"
+        },
+        {
+          "name": "org.cryptomator.lite.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "name": "android.permission.REORDER_TASKS"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 3030,
+      "versionName": "1.12.3"
+    },
+    "src": {
+      "name": "/org.cryptomator.lite_3030_src.tar.gz",
+      "sha256": "ff685a0bb6579314a364a1b7ab22d7d57a21493362b1f4e420ac6902e71ed2cf",
+      "size": 4357512
+    },
+    "whatsNew": {
+      "de-DE": "- M\u00f6gliche Man-in-the-Middle-Angriffe mit manipulierten Cryptomator Hub-Tresorkonfigurationen behoben (GHSA-876q-q3mm-fcvj)",
+      "en-US": "- Fixed possible man-in-the-middle attack with tampered Cryptomator Hub vault config (GHSA-876q-q3mm-fcvj)",
+      "fr-FR": "- Fixed possible man-in-the-middle attack with tampered Cryptomator Hub vault config (GHSA-876q-q3mm-fcvj)"
+    }
+  }
+}

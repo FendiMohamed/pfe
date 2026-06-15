@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "0bdafb823df0cf9a7d12401f2fd8723727c4047838a5e9a7890f62b4f23bc12a",
+    "index_size": 7777409,
+    "path": "data/test_apks/real/working-time-account/working-time-account.apk",
+    "sha256": "0bdafb823df0cf9a7d12401f2fd8723727c4047838a5e9a7890f62b4f23bc12a",
+    "size": 7777409,
+    "url": "https://f-droid.org/repo/askanimus.arbeitszeiterfassung2_211012.apk"
+  },
+  "app": "Working Time Account",
+  "categories": [
+    "Money",
+    "Time"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "money",
+    "time",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/askanimus.arbeitszeiterfassung2/",
+  "license": "GPL-3.0-or-later",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "askanimus.arbeitszeiterfassung2",
+  "proof_status": "report-generated",
+  "reason": "No-native work/time candidate with target SDK 36 and a medium APK/source size; adds a different app family to the clean non-sparse search.",
+  "report": {
+    "detected_component_count": 15,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-working-time-account",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-working-time-account/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-working-time-account/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-working-time-account/sbom.cdx.json",
+    "sbom_component_count": 15,
+    "status": "ok"
+  },
+  "slug": "working-time-account",
+  "source_repo": "https://gitlab.com/Askanimus/arbeitszeitkonto",
+  "source_tarball": {
+    "sha256": "b8490b5bae3960034cf9f0db9f33d5f7b4a2bd9860ff484a5c913e54ab188363",
+    "size": 9978365,
+    "url": "https://f-droid.org/repo/askanimus.arbeitszeiterfassung2_211012_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 211012,
+  "version_name": "2.11.012"
+}

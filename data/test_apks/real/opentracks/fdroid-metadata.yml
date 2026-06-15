@@ -1,0 +1,1250 @@
+Categories:
+  - Sports & Health
+License: Apache-2.0
+AuthorName: OpenTracks Team
+WebSite: https://OpenTracksApp.com
+SourceCode: https://codeberg.org/OpenTracksApp/OpenTracks
+IssueTracker: https://codeberg.org/OpenTracksApp/OpenTracks/issues
+Translation: https://translate.codeberg.org/engage/opentracks/
+Changelog: https://codeberg.org/OpenTracksApp/OpenTracks/releases
+Liberapay: OpenTracks
+
+Name: OpenTracks (Non-reproducible)
+AutoName: OpenTracks
+
+RepoType: git
+Repo: https://codeberg.org/OpenTracksApp/OpenTracks.git
+
+Builds:
+  - versionName: v3.0.1
+    versionCode: 2947
+    commit: v3.0.1
+    gradle:
+      - yes
+
+  - versionName: v3.1.0
+    versionCode: 2991
+    commit: v3.1.0
+    gradle:
+      - yes
+
+  - versionName: v3.2.0
+    versionCode: 3054
+    commit: v3.2.0
+    gradle:
+      - yes
+
+  - versionName: v3.2.1
+    versionCode: 3063
+    commit: v3.2.1
+    gradle:
+      - yes
+
+  - versionName: v3.2.2
+    versionCode: 3079
+    commit: v3.2.2
+    gradle:
+      - yes
+
+  - versionName: v3.2.3
+    versionCode: 3101
+    commit: v3.2.3
+    gradle:
+      - yes
+
+  - versionName: v3.2.5
+    versionCode: 3123
+    commit: v3.2.5
+    gradle:
+      - yes
+
+  - versionName: v3.2.6
+    versionCode: 3137
+    commit: v3.2.6
+    gradle:
+      - yes
+
+  - versionName: v3.2.7
+    versionCode: 3149
+    commit: v3.2.7
+    gradle:
+      - yes
+
+  - versionName: v3.2.8
+    versionCode: 3162
+    commit: v3.2.8
+    gradle:
+      - yes
+
+  - versionName: v3.2.9
+    versionCode: 3175
+    commit: v3.2.9
+    gradle:
+      - yes
+
+  - versionName: v3.2.11
+    versionCode: 3213
+    commit: v3.2.11
+    gradle:
+      - yes
+
+  - versionName: v3.3.1
+    versionCode: 3251
+    commit: v3.3.1
+    gradle:
+      - yes
+
+  - versionName: v3.3.2
+    versionCode: 3272
+    commit: v3.3.2
+    gradle:
+      - yes
+
+  - versionName: v3.4.0
+    versionCode: 3287
+    commit: v3.4.0
+    gradle:
+      - yes
+
+  - versionName: v3.5.0
+    versionCode: 3305
+    commit: v3.5.0
+    gradle:
+      - yes
+
+  - versionName: v3.6.2
+    versionCode: 3335
+    commit: v3.6.2
+    gradle:
+      - yes
+
+  - versionName: v3.7.1
+    versionCode: 3372
+    commit: v3.7.1
+    gradle:
+      - yes
+
+  - versionName: v3.7.2
+    versionCode: 3381
+    commit: v3.7.2
+    gradle:
+      - yes
+
+  - versionName: v3.7.3
+    versionCode: 3386
+    commit: v3.7.3
+    gradle:
+      - yes
+
+  - versionName: v3.7.4
+    versionCode: 3396
+    commit: v3.7.4
+    gradle:
+      - yes
+
+  - versionName: v3.7.5
+    versionCode: 3427
+    commit: v3.7.5
+    gradle:
+      - yes
+
+  - versionName: v3.7.6
+    versionCode: 3449
+    commit: v3.7.6
+    gradle:
+      - yes
+
+  - versionName: v3.8.0
+    versionCode: 3466
+    commit: v3.8.0
+    gradle:
+      - yes
+
+  - versionName: v3.8.1
+    versionCode: 3474
+    commit: v3.8.1
+    gradle:
+      - yes
+
+  - versionName: v3.9.0
+    versionCode: 3522
+    commit: v3.9.0
+    gradle:
+      - yes
+
+  - versionName: v3.9.1
+    versionCode: 3530
+    commit: v3.9.1
+    gradle:
+      - yes
+
+  - versionName: v3.9.2
+    versionCode: 3541
+    commit: v3.9.2
+    gradle:
+      - yes
+
+  - versionName: v3.9.3
+    versionCode: 3544
+    commit: v3.9.3
+    gradle:
+      - yes
+
+  - versionName: v3.9.4
+    versionCode: 3573
+    commit: v3.9.4
+    gradle:
+      - yes
+
+  - versionName: v3.9.5
+    versionCode: 3584
+    commit: v3.9.5
+    gradle:
+      - yes
+
+  - versionName: v3.10.0
+    versionCode: 3611
+    commit: v3.10.0
+    gradle:
+      - yes
+
+  - versionName: v3.11.0
+    versionCode: 3656
+    commit: v3.11.0
+    gradle:
+      - yes
+
+  - versionName: v3.11.1
+    versionCode: 3661
+    commit: v3.11.1
+    gradle:
+      - yes
+
+  - versionName: v3.12.0
+    versionCode: 3704
+    commit: v3.12.0
+    gradle:
+      - yes
+
+  - versionName: v3.13.0
+    versionCode: 3732
+    commit: v3.13.0
+    gradle:
+      - yes
+
+  - versionName: v3.13.1
+    versionCode: 3737
+    commit: v3.13.1
+    gradle:
+      - yes
+
+  - versionName: v3.13.2
+    versionCode: 3740
+    commit: v3.13.2
+    gradle:
+      - yes
+
+  - versionName: v3.14.0
+    versionCode: 3761
+    commit: v3.14.0
+    gradle:
+      - yes
+
+  - versionName: v3.14.1
+    versionCode: 3799
+    commit: v3.14.1
+    gradle:
+      - yes
+
+  - versionName: v3.14.3
+    versionCode: 3823
+    commit: v3.14.3
+    gradle:
+      - yes
+
+  - versionName: v3.15.0
+    versionCode: 3855
+    commit: v3.15.0
+    gradle:
+      - yes
+
+  - versionName: v3.15.1
+    versionCode: 3862
+    commit: v3.15.1
+    gradle:
+      - yes
+
+  - versionName: v3.15.2
+    versionCode: 3875
+    commit: v3.15.2
+    gradle:
+      - yes
+
+  - versionName: v3.15.3
+    versionCode: 3890
+    commit: v3.15.3
+    gradle:
+      - yes
+
+  - versionName: v3.15.4
+    versionCode: 3892
+    commit: v3.15.4
+    gradle:
+      - yes
+
+  - versionName: v3.16.0
+    versionCode: 3941
+    commit: v3.16.0
+    gradle:
+      - yes
+
+  - versionName: v3.17.0
+    versionCode: 3981
+    commit: v3.17.0
+    gradle:
+      - yes
+
+  - versionName: v3.17.1
+    versionCode: 3986
+    commit: v3.17.1
+    gradle:
+      - yes
+
+  - versionName: v3.17.2
+    versionCode: 3990
+    commit: v3.17.2
+    gradle:
+      - yes
+
+  - versionName: v3.17.3
+    versionCode: 4009
+    commit: v3.17.3
+    gradle:
+      - yes
+
+  - versionName: v3.18.0
+    versionCode: 4046
+    commit: v3.18.0
+    gradle:
+      - yes
+
+  - versionName: v3.18.1
+    versionCode: 4092
+    commit: v3.18.1
+    gradle:
+      - yes
+
+  - versionName: v3.18.2
+    versionCode: 4098
+    commit: v3.18.2
+    gradle:
+      - yes
+
+  - versionName: v3.18.3
+    versionCode: 4143
+    commit: v3.18.3
+    gradle:
+      - yes
+
+  - versionName: v3.18.4
+    versionCode: 4151
+    commit: v3.18.4
+    gradle:
+      - yes
+
+  - versionName: v3.18.5
+    versionCode: 4176
+    commit: 823dc1c12b38a4fb6995a9b108837fb848f0fb82
+    gradle:
+      - yes
+
+  - versionName: v3.18.6
+    versionCode: 4253
+    commit: bfbe868487a9925503bf150703a5e0b1e4d92a5b
+    gradle:
+      - yes
+
+  - versionName: v3.19.0
+    versionCode: 4358
+    commit: 05c3a896826c7efa92bd818362e17bc5145945df
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v3.19.1
+    versionCode: 4396
+    commit: 8433ed82febe349a095283318b1316f2de0488f5
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v3.20.0
+    versionCode: 4410
+    commit: 5594a125d038ab47f5c984483ef53e86d9589581
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v3.20.1
+    versionCode: 4441
+    commit: 82b460b57b1c852b17927ce42381deac5abab181
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v3.20.2
+    versionCode: 4448
+    commit: 2178ff97d3f76a06a053ada137feb549bf4c0eea
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v3.21.0
+    versionCode: 4496
+    commit: 9f858168f89e03150ea1a158b3d0195f2d0703c3
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v3.22.0
+    versionCode: 4519
+    commit: d6da5f0862bb1601f3eb953bdbd53e5727d1a123
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v3.23.0
+    versionCode: 4580
+    commit: 183b47a1eaeac9f4382fc3ff50c4044476cfa58f
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v3.24.0
+    versionCode: 4646
+    commit: 9dac5d3e72cf239abfed7f8c461c8334b1d5ba12
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v3.24.1
+    versionCode: 4692
+    commit: f578c6bc19289b29c2cea70036b0244ce50e9d49
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v3.25.0
+    versionCode: 4752
+    commit: 2692cc553c4851acd7129488df37618bbad0140b
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v3.25.1
+    versionCode: 4755
+    commit: 4df0e2a65ccf0ab794272329884b849a4b8ca9c2
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v3.26.0
+    versionCode: 4773
+    commit: ecfcc180b967f21b0852da2bb26ee3eba9af6a59
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v3.26.1
+    versionCode: 4775
+    commit: cb71c40350931881e3f94b0ea9cc5969ace3ef72
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v3.27.0
+    versionCode: 4816
+    commit: 0934e7f10cf99e7e0a2741a3e2f6da2ea51cc93e
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v4.0.0
+    versionCode: 4874
+    commit: f9b8e46b32c7cb9f0d365d4f84e3af54521a5718
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v4.0.1
+    versionCode: 4926
+    commit: d68008941e6a6b529d67a51c0bd6d8eb62dcca47
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v4.0.2
+    versionCode: 4938
+    commit: ae2a97576bfc09019c12da3fc6f6c18ea449d41f
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v4.0.3
+    versionCode: 4951
+    commit: 7664bd248dea8fafddbb4ddf4d2682088d85eff6
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v4.0.4
+    versionCode: 4981
+    commit: 4c44ea12a4eb72dffe68aedfe18617672af5166f
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v4.0.5
+    versionCode: 4986
+    commit: a7398d43e3e21d8d5a03f9ddddf86270ca12ab42
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v4.0.6
+    versionCode: 4993
+    commit: 1ccd2e3c0a631e54191bf245de2040fd81fd4330
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v4.0.7
+    versionCode: 5004
+    commit: 45874d3749a9085bc60d8780a5f1f9e1633c779f
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v4.0.8
+    versionCode: 5017
+    commit: e5d1e421a4e8788a3e09f8c23f8ada04c3bd0def
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v4.1.0
+    versionCode: 5042
+    commit: 3075f4010f946cbc1595e0c34686c5fc0b752176
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v4.1.1
+    versionCode: 5051
+    commit: 9db2aff631759214792133336114c4c656148dd4
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v4.1.2
+    versionCode: 5080
+    commit: 3eb89d78995843615b8ba6eb1400a12e4943acc3
+    gradle:
+      - yes
+
+  - versionName: v4.2.0
+    versionCode: 5119
+    commit: 220c7b1443eee5755047c1cdd361e09f5f3e89dd
+    gradle:
+      - yes
+
+  - versionName: v4.2.1
+    versionCode: 5132
+    commit: f0259d13dda4fee1397868ec1e4e6a0adde7ce93
+    gradle:
+      - yes
+
+  - versionName: v4.2.2
+    versionCode: 5141
+    commit: dae8eaa97a3ef31d870529b70fbb12b0c7d70d96
+    gradle:
+      - yes
+
+  - versionName: v4.3.0
+    versionCode: 5151
+    commit: c0b84c3d72824779d786b5c8d67f020343492457
+    gradle:
+      - yes
+
+  - versionName: v4.3.1
+    versionCode: 5168
+    commit: 0605dbb0ab105b0ce7fee09947d46740e74a2f71
+    gradle:
+      - yes
+
+  - versionName: v4.3.2
+    versionCode: 5189
+    commit: 241a52ee7c26c8b38d0d778df0651bd01b6649dc
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.3.3
+    versionCode: 5194
+    commit: 9225d90e458abe0dd81a53895798f4246334ec8d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.3.4
+    versionCode: 5196
+    commit: 4f040ac79f871caa858d48efb01095b25a7efbee
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.3.5
+    versionCode: 5211
+    commit: 6538f0d5875f6064b2f794555a592bfc654a511e
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.4.0
+    versionCode: 5222
+    commit: 24c2c5fc1b8a86001d8339933e99f8c3216c86b5
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.5.0
+    versionCode: 5262
+    commit: e0b84df8f60d3be45bb489df1ea8e777030e13af
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.6.0
+    versionCode: 5286
+    commit: 1749c776ab48788dd7692d57e9e9cb11c2cd8104
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.6.1
+    versionCode: 5289
+    commit: a4ec68def617eb4ef241079677ee5df5bd7d48b8
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.6.2
+    versionCode: 5305
+    commit: 3f891f7fb4ded559d74bdda5ef730e9440377a02
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.7.0
+    versionCode: 5313
+    commit: 52226c8ef4bb1749a43c3a350c55fe696f5fcf8b
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.7.1
+    versionCode: 5326
+    commit: c4235b1961b6adf21fa7cd3871c9d3c0bbc18512
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.8.0
+    versionCode: 5361
+    commit: 5501b0bb74fd8a0e7eaad397f37f05c766f1a402
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.8.1
+    versionCode: 5366
+    commit: 4f745a94bf5f392ba2cec340556ab3980ba894f7
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.8.2
+    versionCode: 5382
+    commit: f59ae51c6f926be6356095e15f945c48eca21bc5
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.8.3
+    versionCode: 5389
+    commit: 1b295e06da8026164d6c7191f5ce057dbd267730
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.8.4
+    versionCode: 5399
+    commit: a6f5635cb89dc4f15de3c27f9196fa21935763cb
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.0
+    versionCode: 5428
+    commit: 648ebadb36c35bdb383cdb05fc0a9ab0a69e5583
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.1
+    versionCode: 5447
+    commit: 07abf50fcad83368e8a4554c2d1284ffb2b2d0a1
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.3
+    versionCode: 5491
+    commit: f4f17440c97c78aa169e2087b5ffe64d5cc5f3fd
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.4
+    versionCode: 5506
+    commit: e9e9bb387420baffbdde93d0ddcc9a8da7bddec3
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.5
+    versionCode: 5527
+    commit: 9fb84cc47cf0e29d9f9283c939f9738eac295986
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.6
+    versionCode: 5554
+    commit: edba2294f3e6716c4bb6618da30faae64e45a845
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.7
+    versionCode: 5559
+    commit: 5c1cb97c024cf7cfb857fa0355ea843d48fb3a9e
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.8
+    versionCode: 5563
+    commit: 333f7956b5eba432b287724146a63887c952a48a
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.9
+    versionCode: 5573
+    commit: 8d7a8719bc6f6a4f3fe2fb8a70299938342b26ba
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.10.0
+    versionCode: 5602
+    commit: 9b2126550e1e33c6bd588fcdfb333aa81fdafd64
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.10.1
+    versionCode: 5611
+    commit: 90d81c4d84b0e9ddd0746602dbf771f129672530
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.11.0
+    versionCode: 5641
+    commit: ce613183fe972948ac462b091a1a563c50fd40bc
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.11.1
+    versionCode: 5679
+    commit: 8400d45e987da9b77bddc3a446df3cce233fb444
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.11.2
+    versionCode: 5683
+    commit: cb9b94718af9611d3b814bb169e17b8e53ca2096
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.11.3
+    versionCode: 5705
+    commit: 4c204b6bd1d63de90da657a60e55049645d66dbd
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.12.0
+    versionCode: 5725
+    commit: 913903a283ec7f3737e2e467b6f1840439ab9ef1
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.12.1
+    versionCode: 5730
+    commit: 1d0c6cdd92c1e060d75b41f67fb7743c7cc03023
+    gradle:
+      - yes
+
+  - versionName: v4.12.2.
+    versionCode: 5749
+    commit: be7a43823a3919f43b01e93cf9c175a6f36cbe5b
+    gradle:
+      - yes
+
+  - versionName: v4.12.3
+    versionCode: 5753
+    commit: 9e496f97c155f97815397d0585bc20a3da4e576c
+    gradle:
+      - yes
+
+  - versionName: v4.12.4
+    versionCode: 5788
+    commit: a90c7deb3295d960aa39f1ebc5aea41340ca91d2
+    gradle:
+      - yes
+
+  - versionName: v4.12.5
+    versionCode: 5814
+    commit: 382acadc6ac43cbe5e630873dac61da4c7c5e242
+    gradle:
+      - yes
+
+  - versionName: v4.13.0
+    versionCode: 5837
+    commit: 117281469d1a6f2b64e580a3890987f4258ac5de
+    gradle:
+      - yes
+
+  - versionName: v4.13.1
+    versionCode: 5870
+    commit: 3a812ef31357ecaee70318240eab136a6c278804
+    gradle:
+      - yes
+
+  - versionName: v4.14.0
+    versionCode: 5889
+    commit: 594a34980bc4a9dda54daa6f844a1499fc879506
+    gradle:
+      - yes
+
+  - versionName: v4.14.1
+    versionCode: 5909
+    commit: 5ff91a98f4b029f1efd7bd583fec25ac0943996d
+    gradle:
+      - yes
+
+  - versionName: v4.14.2
+    versionCode: 5917
+    commit: d9de56be336b62f52230d459f1e2db553e11e029
+    gradle:
+      - yes
+
+  - versionName: v4.16.0
+    versionCode: 5941
+    commit: 721b54b06f6e65ab41e43b05c1220461ee2d0cff
+    gradle:
+      - yes
+
+  - versionName: v4.16.1
+    versionCode: 5945
+    commit: e3cdc952a21232946486c98c4decc16999de03ff
+    gradle:
+      - yes
+
+  - versionName: v4.17.0
+    versionCode: 5975
+    commit: a5296c4cd92d9d4f069049e3ccd5d4c714049877
+    gradle:
+      - yes
+
+  - versionName: v4.17.5irreproducible
+    versionCode: 5989
+    commit: 5857c0032e7391884ee62848fded6c86b7bc9b7e
+    gradle:
+      - irreproducible
+
+  - versionName: v4.17.6irreproducible
+    versionCode: 6022
+    commit: 4bbdd55254d98447b5f509b35fa11c2b96dfa625
+    gradle:
+      - irreproducible
+
+  - versionName: v4.17.7irreproducible
+    versionCode: 6028
+    commit: ae237bdddc4a880bbaccf998d400ac11f19d7df9
+    gradle:
+      - irreproducible
+
+  - versionName: v4.17.8irreproducible
+    versionCode: 6030
+    commit: 3105afed4eae24b485cc85580d93385e5ae23047
+    gradle:
+      - irreproducible
+
+  - versionName: v4.18.0irreproducible
+    versionCode: 6095
+    commit: bc61e080721dfc94b4f25ecfb909fb34271369d8
+    gradle:
+      - irreproducible
+
+  - versionName: v4.19.0irreproducible
+    versionCode: 6102
+    commit: 92da9bd598346d17ea4f84e505fb3892801d0c92
+    gradle:
+      - irreproducible
+
+  - versionName: v4.19.1irreproducible
+    versionCode: 6120
+    commit: 71f10496424f2d5b3168688b0569464fbce674b1
+    gradle:
+      - irreproducible
+
+  - versionName: v4.19.2irreproducible
+    versionCode: 6124
+    commit: 648c106f7fc045585d96847541fe5c147b7fb0c0
+    gradle:
+      - irreproducible
+
+  - versionName: v4.19.3irreproducible
+    versionCode: 6130
+    commit: 6656c9ab927a844fdbc139edbb5c6885c892a552
+    gradle:
+      - irreproducible
+
+  - versionName: v4.19.4irreproducible
+    versionCode: 6170
+    commit: fc4e1583b038088e5faf3546fd64915c47951c91
+    gradle:
+      - irreproducible
+
+  - versionName: v4.19.5irreproducible
+    versionCode: 6180
+    commit: 9c1a44abb492ad7f913de49a37fea323008080e4
+    gradle:
+      - irreproducible
+
+  - versionName: v4.19.6irreproducible
+    versionCode: 6187
+    commit: d76131a34fbb93b4316a960ecb4d2a18cfeffc7a
+    gradle:
+      - irreproducible
+
+  - versionName: v4.20.0irreproducible
+    versionCode: 6217
+    commit: 0f051008075c7f65b850f1b7e9680180eeae46e1
+    gradle:
+      - irreproducible
+
+  - versionName: v4.21.0irreproducible
+    versionCode: 6233
+    commit: 3c52a5b38a3bad6ae8990b5170217165fc2dec03
+    gradle:
+      - irreproducible
+
+  - versionName: v4.21.1irreproducible
+    versionCode: 6237
+    commit: f1b3ce9db5fb0c1fb17e5b9f1994533878961a1b
+    gradle:
+      - irreproducible
+
+  - versionName: v4.22.0irreproducible
+    versionCode: 6284
+    commit: 3c23a9f5400c7b5b914a221469d76cc019a18296
+    gradle:
+      - irreproducible
+
+  - versionName: v4.22.1irreproducible
+    versionCode: 6291
+    commit: 46cdae399df2f85c2f243ed7f780ddb18d56d5d7
+    gradle:
+      - irreproducible
+
+  - versionName: v4.22.2irreproducible
+    versionCode: 6294
+    commit: 34c5a3ab9771d06ff5f5fc084973a43b04ee8585
+    gradle:
+      - irreproducible
+
+  - versionName: v4.23.0irreproducible
+    versionCode: 6338
+    commit: 57c0750980d2b5c90b0b4fc4d257cafe8e42f50e
+    gradle:
+      - irreproducible
+
+  - versionName: v4.23.1irreproducible
+    versionCode: 6353
+    commit: 5746a419050c64e9b8fba966e5f70e8c98f69984
+    gradle:
+      - irreproducible
+
+  - versionName: v4.23.2irreproducible
+    versionCode: 6407
+    commit: 3db0a5337701ca825fa8da94782cf90b983eabf9
+    gradle:
+      - irreproducible
+
+  - versionName: v4.24.0irreproducible
+    versionCode: 6508
+    commit: 1cbc93c303dcf022ce9280d4d984bc2bd549b641
+    gradle:
+      - irreproducible
+
+  - versionName: v4.24.1irreproducible
+    versionCode: 6513
+    commit: 693904529dc8930eb4bc399f06cdb8d29b58731a
+    gradle:
+      - irreproducible
+
+  - versionName: v4.24.2irreproducible
+    versionCode: 6516
+    commit: 42ae582cd81fa155fe4d2d2b24f7bb7d830e3a89
+    gradle:
+      - irreproducible
+
+  - versionName: v4.25.0irreproducible
+    versionCode: 6539
+    commit: 9affe28fadefdd169e453cc5513fd11585d74660
+    gradle:
+      - irreproducible
+
+  - versionName: v4.25.1irreproducible
+    versionCode: 6554
+    commit: a6b11c1c37f31427249ea23b7f9cee7ea3babf68
+    gradle:
+      - irreproducible
+
+  - versionName: v4.25.2irreproducible
+    versionCode: 6564
+    commit: 597e1b2c7f53a30049c6f953c0cd9578c45f8815
+    gradle:
+      - irreproducible
+
+  - versionName: v4.26.0irreproducible
+    versionCode: 6603
+    commit: 2ec82af8f125008c31f4976f420f056a3776ff79
+    gradle:
+      - irreproducible
+
+  - versionName: v4.26.1irreproducible
+    versionCode: 6609
+    commit: 65669049063556e936f1f902294b2a95a38f5ced
+    gradle:
+      - irreproducible
+
+  - versionName: v4.26.2irreproducible
+    versionCode: 6627
+    commit: d0438429015a6000bae4e12d7ab11e110d34d236
+    gradle:
+      - irreproducible
+
+  - versionName: v4.27.0irreproducible
+    versionCode: 6653
+    commit: f143aabfbf77d1b71864042fe4f0bbf2b4174f4f
+    gradle:
+      - irreproducible
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: v4.27.0irreproducible
+CurrentVersionCode: 6653

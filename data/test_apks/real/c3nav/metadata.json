@@ -1,0 +1,61 @@
+{
+  "apk": {
+    "expected_sha256": "482e5c9b9746f352d616597f3f689d47614ff600662e61b8e9f7f8e36bb0125d",
+    "index_size": 4858841,
+    "path": "data/test_apks/real/c3nav/c3nav.apk",
+    "sha256": "482e5c9b9746f352d616597f3f689d47614ff600662e61b8e9f7f8e36bb0125d",
+    "size": 4858841,
+    "url": "https://f-droid.org/repo/de.c3nav.droid_18040700.apk"
+  },
+  "app": "c3nav",
+  "categories": [
+    "Navigation"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "navigation",
+    "maps",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/de.c3nav.droid/",
+  "license": "Apache-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "de.c3nav.droid",
+  "proof_status": "report-generated",
+  "reason": "No-native navigation app with target SDK 35, medium APK size, and a large enough source tarball to suggest meaningful Android dependencies without native map libraries.",
+  "report": {
+    "detected_component_count": 14,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v12/report-real-c3nav",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v12/report-real-c3nav/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v12/report-real-c3nav/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v12/report-real-c3nav/sbom.cdx.json",
+    "sbom_component_count": 14,
+    "status": "ok"
+  },
+  "slug": "c3nav",
+  "source_repo": "https://github.com/c3nav/c3nav-android/",
+  "source_tarball": {
+    "sha256": "6c4bb41a5c3d53cc85f85ea9f8f9df34d487e1510f56e5f1e135d13d6ecad6e2",
+    "size": 25943256,
+    "url": "https://f-droid.org/repo/de.c3nav.droid_18040700_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 18040700,
+  "version_name": "4.7.0"
+}

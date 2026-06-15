@@ -1,0 +1,1787 @@
+Categories:
+  - Email
+  - Internet
+License: Apache-2.0
+WebSite: https://k9mail.app/
+SourceCode: https://github.com/thunderbird/thunderbird-android
+IssueTracker: https://github.com/thunderbird/thunderbird-android/issues
+Translation: https://hosted.weblate.org/projects/tb-android/
+Changelog: https://github.com/thunderbird/thunderbird-android/releases
+Donate: https://mzla.link/supportK9
+
+AutoName: K-9 Mail
+
+RepoType: git
+Repo: https://github.com/thunderbird/thunderbird-android.git
+
+Builds:
+  - versionName: '4.201'
+    versionCode: 16025
+    commit: 7834cdd8ca
+    srclibs:
+      - Jutf7@20
+    extlibs:
+      - jzlib/jzlib-1.0.7.tar.gz
+    prebuild:
+      - chmod +x tools/build-beta
+      - ./tools/build-beta
+      - rm -f libs/jzlib*.jar libs/htmlcleaner*.jar libs/jutf*.jar
+      - mkdir -p tests/res/
+      - unzip libs/htmlcleaner-2.2-all.zip
+      - cp -r $$Jutf7$$/src/main/java/com/ src/
+      - tar xzf libs/jzlib-1.0.7.tar.gz
+      - mv jzlib-1.0.7/com/jcraft src/com/
+      - rm -rf libs/jzlib* libs/htmlcleaner*.zip jzlib*
+    build:
+      - mvn package -f HtmlCleaner/pom.xml
+      - mv HtmlCleaner/target/htmlcleaner-2.2.jar libs/
+      - rm -rf HtmlCleaner
+
+  - versionName: '4.409'
+    versionCode: 17046
+    commit: '4.409'
+    srclibs:
+      - Jutf7@20
+    extlibs:
+      - jzlib/jzlib-1.0.7.tar.gz
+    prebuild:
+      - chmod +x tools/build-beta
+      - ./tools/build-beta
+      - rm -f libs/jzlib*.jar libs/htmlcleaner*.jar libs/jutf*.jar
+      - mkdir -p tests/res/
+      - unzip libs/htmlcleaner-2.2-all.zip
+      - cp -r $$Jutf7$$/src/main/java/com/ src/
+      - tar xzf libs/jzlib-1.0.7.tar.gz
+      - mv jzlib-1.0.7/com/jcraft src/com/
+      - rm -rf libs/jzlib* libs/htmlcleaner*.zip jzlib*
+    androidupdate:
+      - .
+      - plugins/HoloColorPicker
+      - plugins/Android-PullToRefresh/library
+      - plugins/ckChangeLog/library
+      - plugins/ActionBarSherlock/library
+    target: android-17
+    build:
+      - mvn package -f HtmlCleaner/pom.xml
+      - mv HtmlCleaner/target/htmlcleaner-2.2.jar libs/
+
+  - versionName: '4.802'
+    versionCode: 20003
+    commit: '4.802'
+    srclibs:
+      - Jutf7@20
+    rm:
+      - libs/jzlib-1.0.7.jar
+      - libs/htmlcleaner-2.2.jar
+      - libs/jutf7-1.0.1-SNAPSHOT.jar
+      - tests
+    extlibs:
+      - jzlib/jzlib-1.0.7.tar.gz
+    prebuild:
+      - unzip libs/htmlcleaner-2.2-all.zip
+      - tar xzf libs/jzlib-1.0.7.tar.gz
+      - echo 'source.dir=src;$$Jutf7$$/src;jzlib-1.0.7' >> ant.properties
+      - rm libs/jzlib-1.0.7.tar.gz libs/htmlcleaner-2.2-all.zip
+    build:
+      - mvn package -f HtmlCleaner/pom.xml
+      - mv HtmlCleaner/target/htmlcleaner-2.2.jar libs/
+
+  - versionName: '4.803'
+    versionCode: 20004
+    commit: '4.803'
+    srclibs:
+      - Jutf7@20
+    rm:
+      - libs/jzlib-1.0.7.jar
+      - libs/htmlcleaner-2.2.jar
+      - libs/jutf7-1.0.1-SNAPSHOT.jar
+      - tests
+    extlibs:
+      - jzlib/jzlib-1.0.7.tar.gz
+    prebuild:
+      - unzip libs/htmlcleaner-2.2-all.zip
+      - tar xzf libs/jzlib-1.0.7.tar.gz
+      - echo 'source.dir=src;$$Jutf7$$/src;jzlib-1.0.7' >> ant.properties
+      - rm libs/jzlib-1.0.7.tar.gz libs/htmlcleaner-2.2-all.zip
+    build:
+      - mvn package -f HtmlCleaner/pom.xml
+      - mv HtmlCleaner/target/htmlcleaner-2.2.jar libs/
+
+  - versionName: '4.804'
+    versionCode: 20005
+    commit: '4.804'
+    srclibs:
+      - Jutf7@20
+    rm:
+      - libs/jzlib-1.0.7.jar
+      - libs/htmlcleaner-2.2.jar
+      - libs/jutf7-1.0.1-SNAPSHOT.jar
+      - tests
+    extlibs:
+      - jzlib/jzlib-1.0.7.tar.gz
+    prebuild:
+      - unzip libs/htmlcleaner-2.2-all.zip
+      - tar xzf libs/jzlib-1.0.7.tar.gz
+      - echo 'source.dir=src;$$Jutf7$$/src;jzlib-1.0.7' >> ant.properties
+      - rm libs/jzlib-1.0.7.tar.gz libs/htmlcleaner-2.2-all.zip
+    build:
+      - mvn package -f HtmlCleaner/pom.xml
+      - mv HtmlCleaner/target/htmlcleaner-2.2.jar libs/
+
+  - versionName: '5.000'
+    versionCode: 22000
+    commit: '5.000'
+    gradle:
+      - yes
+    srclibs:
+      - Jutf7@20
+    rm:
+      - libs/*
+    prebuild:
+      - sed -i -e "/buildToolsVersion/adefaultConfig {\ntargetSdkVersion 17\n}\n\npackagingOptions
+        {\n exclude 'META-INF/LICENSE.txt'\n  exclude 'META-INF/NOTICE.txt'\n}" -e
+        "/com.android.application/arepositories {\n  mavenCentral()\n  mavenLocal()\n}"
+        -e "/fileTree/acompile 'net.sourceforge.htmlcleaner:htmlcleaner:2.2'" -e "/fileTree/acompile
+        'org.apache.james:apache-mime4j-core:0.7.2'" -e "/fileTree/acompile 'org.apache.james:apache-mime4j-dom:0.7.2'"
+        -e "/fileTree/acompile 'com.jcraft:jzlib:1.0.7'" -e "/fileTree/acompile 'com.beetstra.jutf7:jutf7:1.0.1-SNAPSHOT'"
+        -e "/fileTree/acompile 'commons-io:commons-io:2.0.1'" build.gradle
+      - pushd $$Jutf7$$
+      - mvn install
+      - popd
+
+  - versionName: '5.001'
+    versionCode: 22001
+    commit: '5.001'
+    gradle:
+      - yes
+    srclibs:
+      - Jutf7@20
+    rm:
+      - libs/*
+    prebuild:
+      - sed -i -e "/buildToolsVersion/adefaultConfig {\ntargetSdkVersion 17\n}\n\npackagingOptions
+        {\n exclude 'META-INF/LICENSE.txt'\n  exclude 'META-INF/NOTICE.txt'\n}" -e
+        "/com.android.application/arepositories {\n  mavenCentral()\n  mavenLocal()\n}"
+        -e "/fileTree/acompile 'net.sourceforge.htmlcleaner:htmlcleaner:2.2'" -e "/fileTree/acompile
+        'org.apache.james:apache-mime4j-core:0.7.2'" -e "/fileTree/acompile 'org.apache.james:apache-mime4j-dom:0.7.2'"
+        -e "/fileTree/acompile 'com.jcraft:jzlib:1.0.7'" -e "/fileTree/acompile 'com.beetstra.jutf7:jutf7:1.0.1-SNAPSHOT'"
+        -e "/fileTree/acompile 'commons-io:commons-io:2.0.1'" build.gradle
+      - pushd $$Jutf7$$
+      - mvn install
+      - popd
+
+  - versionName: '5.002'
+    versionCode: 22002
+    commit: '5.002'
+    gradle:
+      - yes
+    srclibs:
+      - Jutf7@20
+    rm:
+      - libs/*
+    prebuild:
+      - sed -i -e "/buildToolsVersion/adefaultConfig {\ntargetSdkVersion 17\n}\n\npackagingOptions
+        {\n exclude 'META-INF/LICENSE.txt'\n  exclude 'META-INF/NOTICE.txt'\n}" -e
+        "/com.android.application/arepositories {\n  mavenCentral()\n  mavenLocal()\n}"
+        -e "/fileTree/acompile 'net.sourceforge.htmlcleaner:htmlcleaner:2.2'" -e "/fileTree/acompile
+        'org.apache.james:apache-mime4j-core:0.7.2'" -e "/fileTree/acompile 'org.apache.james:apache-mime4j-dom:0.7.2'"
+        -e "/fileTree/acompile 'com.jcraft:jzlib:1.0.7'" -e "/fileTree/acompile 'com.beetstra.jutf7:jutf7:1.0.1-SNAPSHOT'"
+        -e "/fileTree/acompile 'commons-io:commons-io:2.0.1'" build.gradle
+      - pushd $$Jutf7$$
+      - mvn install
+      - popd
+
+  - versionName: '5.004'
+    versionCode: 22004
+    commit: '5.004'
+    gradle:
+      - yes
+    srclibs:
+      - Jutf7@20
+    rm:
+      - libs/*
+    prebuild:
+      - sed -i -e "/buildToolsVersion/adefaultConfig {\ntargetSdkVersion 17\n}\n\npackagingOptions
+        {\n exclude 'META-INF/LICENSE.txt'\n  exclude 'META-INF/NOTICE.txt'\n}" -e
+        "/com.android.application/arepositories {\n  mavenCentral()\n  mavenLocal()\n}"
+        -e "/fileTree/acompile 'net.sourceforge.htmlcleaner:htmlcleaner:2.2'" -e "/fileTree/acompile
+        'org.apache.james:apache-mime4j-core:0.7.2'" -e "/fileTree/acompile 'org.apache.james:apache-mime4j-dom:0.7.2'"
+        -e "/fileTree/acompile 'com.jcraft:jzlib:1.0.7'" -e "/fileTree/acompile 'com.beetstra.jutf7:jutf7:1.0.1-SNAPSHOT'"
+        -e "/fileTree/acompile 'commons-io:commons-io:2.0.1'" build.gradle
+      - pushd $$Jutf7$$
+      - mvn install
+      - popd
+
+  - versionName: '5.005'
+    versionCode: 22005
+    commit: '5.005'
+    gradle:
+      - yes
+    srclibs:
+      - Jutf7@20
+    rm:
+      - libs/*
+    prebuild:
+      - sed -i -e "/buildToolsVersion/adefaultConfig {\ntargetSdkVersion 17\n}\n\npackagingOptions
+        {\n exclude 'META-INF/LICENSE.txt'\n  exclude 'META-INF/NOTICE.txt'\n}" -e
+        "/com.android.application/arepositories {\n  mavenCentral()\n  mavenLocal()\n}"
+        -e "/fileTree/acompile 'net.sourceforge.htmlcleaner:htmlcleaner:2.2'" -e "/fileTree/acompile
+        'org.apache.james:apache-mime4j-core:0.7.2'" -e "/fileTree/acompile 'org.apache.james:apache-mime4j-dom:0.7.2'"
+        -e "/fileTree/acompile 'com.jcraft:jzlib:1.0.7'" -e "/fileTree/acompile 'com.beetstra.jutf7:jutf7:1.0.1-SNAPSHOT'"
+        -e "/fileTree/acompile 'commons-io:commons-io:2.0.1'" build.gradle
+      - pushd $$Jutf7$$
+      - mvn install
+      - popd
+
+  - versionName: '5.006'
+    versionCode: 22006
+    commit: '5.006'
+    gradle:
+      - yes
+    srclibs:
+      - Jutf7@20
+    rm:
+      - libs/*
+    prebuild:
+      - sed -i -e "/buildToolsVersion/adefaultConfig {\ntargetSdkVersion 17\n}\n\npackagingOptions
+        {\n exclude 'META-INF/LICENSE.txt'\n  exclude 'META-INF/NOTICE.txt'\n}" -e
+        "/com.android.application/arepositories {\n  mavenCentral()\n  mavenLocal()\n}"
+        -e "/fileTree/acompile 'net.sourceforge.htmlcleaner:htmlcleaner:2.2'" -e "/fileTree/acompile
+        'org.apache.james:apache-mime4j-core:0.7.2'" -e "/fileTree/acompile 'org.apache.james:apache-mime4j-dom:0.7.2'"
+        -e "/fileTree/acompile 'com.jcraft:jzlib:1.0.7'" -e "/fileTree/acompile 'com.beetstra.jutf7:jutf7:1.0.1-SNAPSHOT'"
+        -e "/fileTree/acompile 'commons-io:commons-io:2.0.1'" build.gradle
+      - pushd $$Jutf7$$
+      - mvn install
+      - popd
+
+  - versionName: '5.007'
+    versionCode: 22007
+    commit: '5.007'
+    gradle:
+      - yes
+    srclibs:
+      - Jutf7@20
+    rm:
+      - libs/*
+    prebuild:
+      - sed -i -e "/buildToolsVersion/adefaultConfig {\ntargetSdkVersion 17\n}\n\npackagingOptions
+        {\n exclude 'META-INF/LICENSE.txt'\n  exclude 'META-INF/NOTICE.txt'\n}" -e
+        "/com.android.application/arepositories {\n  mavenCentral()\n  mavenLocal()\n}"
+        -e "/fileTree/acompile 'net.sourceforge.htmlcleaner:htmlcleaner:2.2'" -e "/fileTree/acompile
+        'org.apache.james:apache-mime4j-core:0.7.2'" -e "/fileTree/acompile 'org.apache.james:apache-mime4j-dom:0.7.2'"
+        -e "/fileTree/acompile 'com.jcraft:jzlib:1.0.7'" -e "/fileTree/acompile 'com.beetstra.jutf7:jutf7:1.0.1-SNAPSHOT'"
+        -e "/fileTree/acompile 'commons-io:commons-io:2.0.1'" build.gradle
+      - pushd $$Jutf7$$
+      - mvn install
+      - popd
+
+  - versionName: '5.008'
+    versionCode: 22008
+    commit: '5.008'
+    gradle:
+      - yes
+    srclibs:
+      - Jutf7@20
+    rm:
+      - libs/*
+    prebuild:
+      - sed -i -e "/buildToolsVersion/adefaultConfig {\ntargetSdkVersion 17\n}\n\npackagingOptions
+        {\n exclude 'META-INF/LICENSE.txt'\n  exclude 'META-INF/NOTICE.txt'\n}" -e
+        "/com.android.application/arepositories {\n  mavenCentral()\n  mavenLocal()\n}"
+        -e "/fileTree/acompile 'net.sourceforge.htmlcleaner:htmlcleaner:2.2'" -e "/fileTree/acompile
+        'org.apache.james:apache-mime4j-core:0.7.2'" -e "/fileTree/acompile 'org.apache.james:apache-mime4j-dom:0.7.2'"
+        -e "/fileTree/acompile 'com.jcraft:jzlib:1.0.7'" -e "/fileTree/acompile 'com.beetstra.jutf7:jutf7:1.0.1-SNAPSHOT'"
+        -e "/fileTree/acompile 'commons-io:commons-io:2.0.1'" build.gradle
+      - pushd $$Jutf7$$
+      - mvn install
+      - popd
+
+  - versionName: '5.010'
+    versionCode: 22010
+    commit: '5.010'
+    gradle:
+      - yes
+    srclibs:
+      - Jutf7@20
+    rm:
+      - libs/*
+    prebuild:
+      - sed -i -e "/buildToolsVersion/adefaultConfig {\ntargetSdkVersion 17\n}\n\npackagingOptions
+        {\n exclude 'META-INF/LICENSE.txt'\n  exclude 'META-INF/NOTICE.txt'\n}" -e
+        "/com.android.application/arepositories {\n  mavenCentral()\n  mavenLocal()\n}"
+        -e "/fileTree/acompile 'net.sourceforge.htmlcleaner:htmlcleaner:2.2'" -e "/fileTree/acompile
+        'org.apache.james:apache-mime4j-core:0.7.2'" -e "/fileTree/acompile 'org.apache.james:apache-mime4j-dom:0.7.2'"
+        -e "/fileTree/acompile 'com.jcraft:jzlib:1.0.7'" -e "/fileTree/acompile 'com.beetstra.jutf7:jutf7:1.0.1-SNAPSHOT'"
+        -e "/fileTree/acompile 'commons-io:commons-io:2.0.1'" -e "/filetree/acompile
+        'de.cketti.safecontentresolver:safe-content-resolver-v14:0.0.1'" build.gradle
+      - pushd $$Jutf7$$
+      - mvn install
+      - popd
+    scandelete:
+      - plugins/SafeContentResolver/*
+
+  - versionName: '5.200'
+    versionCode: 23200
+    commit: '5.200'
+    subdir: k9mail
+    gradle:
+      - yes
+
+  - versionName: '5.201'
+    versionCode: 23210
+    commit: '5.201'
+    subdir: k9mail
+    gradle:
+      - yes
+
+  - versionName: '5.202'
+    versionCode: 23220
+    commit: '5.202'
+    subdir: k9mail
+    gradle:
+      - yes
+
+  - versionName: '5.203'
+    versionCode: 23230
+    commit: '5.203'
+    subdir: k9mail
+    gradle:
+      - yes
+
+  - versionName: '5.205'
+    versionCode: 23250
+    commit: '5.205'
+    subdir: k9mail
+    gradle:
+      - yes
+
+  - versionName: '5.206'
+    versionCode: 23260
+    commit: '5.206'
+    subdir: k9mail
+    gradle:
+      - yes
+
+  - versionName: '5.207'
+    versionCode: 23270
+    commit: '5.207'
+    subdir: k9mail
+    gradle:
+      - yes
+
+  - versionName: '5.208'
+    versionCode: 23271
+    commit: '5.208'
+    subdir: k9mail
+    gradle:
+      - yes
+
+  - versionName: '5.400'
+    versionCode: 23600
+    commit: '5.400'
+    subdir: k9mail
+    gradle:
+      - yes
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.401'
+    versionCode: 23610
+    commit: '5.401'
+    subdir: k9mail
+    gradle:
+      - yes
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.402'
+    versionCode: 23620
+    commit: '5.402'
+    subdir: k9mail
+    gradle:
+      - yes
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.403'
+    versionCode: 23630
+    commit: '5.403'
+    subdir: k9mail
+    gradle:
+      - yes
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.600'
+    versionCode: 26000
+    commit: '5.600'
+    subdir: k9mail
+    gradle:
+      - yes
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.706'
+    versionCode: 27006
+    commit: '5.706'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.707'
+    versionCode: 27007
+    commit: '5.707'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.708'
+    versionCode: 27008
+    commit: '5.708'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.709'
+    versionCode: 27009
+    commit: '5.709'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.710'
+    versionCode: 27010
+    commit: '5.710'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.712'
+    versionCode: 27012
+    commit: '5.712'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.713'
+    versionCode: 27013
+    commit: '5.713'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.714'
+    versionCode: 27014
+    commit: '5.714'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.715'
+    versionCode: 27015
+    commit: '5.715'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.716'
+    versionCode: 27016
+    commit: '5.716'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.717'
+    versionCode: 27017
+    commit: '5.717'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.718'
+    versionCode: 27018
+    commit: '5.718'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.721'
+    versionCode: 27021
+    commit: '5.721'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    rm:
+      - tools/android-studio/settings.jar
+
+  - versionName: '5.722'
+    versionCode: 27022
+    commit: '5.722'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.724'
+    versionCode: 27024
+    commit: '5.724'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.726'
+    versionCode: 27026
+    commit: '5.726'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.727'
+    versionCode: 27027
+    commit: '5.727'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.728'
+    versionCode: 27028
+    commit: '5.728'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.729'
+    versionCode: 27029
+    commit: '5.729'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.730'
+    versionCode: 27030
+    commit: '5.730'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.731'
+    versionCode: 27031
+    commit: '5.731'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.732'
+    versionCode: 27032
+    commit: '5.732'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.733'
+    versionCode: 27033
+    commit: '5.733'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.734'
+    versionCode: 27034
+    commit: '5.734'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.737'
+    versionCode: 27037
+    commit: '5.737'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.738'
+    versionCode: 27038
+    commit: '5.738'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.739'
+    versionCode: 27039
+    commit: '5.739'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.740'
+    versionCode: 27040
+    commit: '5.740'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.800'
+    versionCode: 28000
+    commit: '5.800'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.801'
+    versionCode: 28001
+    commit: '5.801'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.802'
+    versionCode: 28002
+    commit: '5.802'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.803'
+    versionCode: 28003
+    commit: acbeff5b986486b30ddf06986daa0739c1263c60
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.804'
+    versionCode: 28004
+    commit: 5055669da99846b37dba6729ce8c3cf421815720
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.805'
+    versionCode: 28005
+    commit: dd151ec61c9942a51e7e1da529d3551496164e6d
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.806'
+    versionCode: 28006
+    commit: f9a08fbc15a04e3ff9f9fa40b82fd90900abfd95
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.807'
+    versionCode: 28007
+    commit: c39c4c46a3f963d27e3fe0669af4caea73162e42
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.900'
+    versionCode: 29000
+    commit: '5.900'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.901'
+    versionCode: 29001
+    commit: '5.901'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.902'
+    versionCode: 29002
+    commit: '5.902'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.903'
+    versionCode: 29003
+    commit: '5.903'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.904'
+    versionCode: 29004
+    commit: '5.904'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.905'
+    versionCode: 29005
+    commit: 5.905-fdroid
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.906'
+    versionCode: 29006
+    commit: '5.906'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.907'
+    versionCode: 29007
+    commit: '5.907'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.908'
+    versionCode: 29008
+    commit: '5.908'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.909'
+    versionCode: 29009
+    commit: '5.909'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.910'
+    versionCode: 29010
+    commit: '5.910'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.911'
+    versionCode: 29011
+    commit: '5.911'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.912'
+    versionCode: 29012
+    commit: '5.912'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.913'
+    versionCode: 29013
+    commit: '5.913'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.914'
+    versionCode: 29014
+    commit: '5.914'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.915'
+    versionCode: 29015
+    commit: '5.915'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '5.916'
+    versionCode: 29016
+    commit: '5.916'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.000'
+    versionCode: 30000
+    commit: '6.000'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.100'
+    versionCode: 31000
+    commit: '6.100'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.101'
+    versionCode: 31001
+    commit: '6.101'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.200'
+    versionCode: 32000
+    commit: '6.200'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.201'
+    versionCode: 32001
+    commit: '6.201'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.202'
+    versionCode: 32002
+    commit: '6.202'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.301'
+    versionCode: 33001
+    commit: '6.301'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.302'
+    versionCode: 33002
+    commit: '6.302'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.303'
+    versionCode: 33003
+    commit: '6.303'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.305'
+    versionCode: 33005
+    commit: '6.305'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.306'
+    versionCode: 33006
+    commit: '6.306'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.307'
+    versionCode: 33007
+    commit: '6.307'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.308'
+    versionCode: 33008
+    commit: '6.308'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.309'
+    versionCode: 33009
+    commit: '6.309'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.310'
+    versionCode: 33010
+    commit: '6.310'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.311'
+    versionCode: 33011
+    commit: '6.311'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.312'
+    versionCode: 33012
+    commit: '6.312'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.400'
+    versionCode: 34000
+    commit: '6.400'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.501'
+    versionCode: 35001
+    commit: '6.501'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.502'
+    versionCode: 35002
+    commit: '6.502'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.503'
+    versionCode: 35003
+    commit: '6.503'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.504'
+    versionCode: 35004
+    commit: '6.504'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.506'
+    versionCode: 35006
+    commit: '6.506'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.507'
+    versionCode: 35007
+    commit: '6.507'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+
+  - versionName: '6.508'
+    versionCode: 35008
+    commit: '6.508'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    prebuild: sed -i '1s/^/rootProject.name = "k9mail"\n/' settings.gradle.kts
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.509'
+    versionCode: 35009
+    commit: '6.509'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.510'
+    versionCode: 35010
+    commit: '6.510'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.511'
+    versionCode: 35011
+    commit: '6.511'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.600'
+    versionCode: 36000
+    commit: '6.600'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.601'
+    versionCode: 36001
+    commit: '6.601'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.602'
+    versionCode: 36002
+    commit: '6.602'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.603'
+    versionCode: 36003
+    commit: '6.603'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.700'
+    versionCode: 37000
+    commit: '6.700'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.702'
+    versionCode: 37002
+    commit: '6.702'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.704'
+    versionCode: 37004
+    commit: '6.704'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.705'
+    versionCode: 37005
+    commit: '6.705'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.706'
+    versionCode: 37006
+    commit: '6.706'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.707'
+    versionCode: 37007
+    commit: '6.707'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.708'
+    versionCode: 37008
+    commit: '6.708'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.710'
+    versionCode: 37010
+    commit: '6.710'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.711'
+    versionCode: 37011
+    commit: 6.711-fdroid
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.712'
+    versionCode: 37012
+    commit: '6.712'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.713'
+    versionCode: 37013
+    commit: '6.713'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.714'
+    versionCode: 37014
+    commit: '6.714'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.715'
+    versionCode: 37015
+    commit: '6.715'
+    subdir: app-k9mail
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.716'
+    versionCode: 37016
+    commit: '6.716'
+    subdir: app-k9mail
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.717'
+    versionCode: 37017
+    commit: '6.717'
+    subdir: app-k9mail
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.800'
+    versionCode: 38000
+    commit: '6.800'
+    subdir: app-k9mail
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.801'
+    versionCode: 38001
+    commit: '6.801'
+    subdir: app-k9mail
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.802'
+    versionCode: 38002
+    commit: '6.802'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.803'
+    versionCode: 38003
+    commit: '6.803'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.804'
+    versionCode: 38004
+    commit: '6.804'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.901'
+    versionCode: 39001
+    commit: '6.901'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.903'
+    versionCode: 39003
+    commit: '6.903'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.904'
+    versionCode: 39004
+    commit: '6.904'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: 8.0b2
+    versionCode: 39006
+    commit: K9MAIL_8_0b2
+    subdir: app-k9mail
+    gradle:
+      - yes
+    rm:
+      - feature/funding/googleplay
+    prebuild: sed -i -e '/maven\.mozilla\.org\/maven2/d ; /glean/d ; /app-thunderbird/d
+      ; /googleplay/d' ../settings.gradle.kts
+    scandelete:
+      - build-plugin/build
+
+  - versionName: 8.0b3
+    versionCode: 39007
+    commit: K9MAIL_8_0b3
+    subdir: app-k9mail
+    gradle:
+      - yes
+    rm:
+      - feature/funding/googleplay
+    prebuild: sed -i -e '/maven\.mozilla\.org\/maven2/d ; /glean/d ; /app-thunderbird/d
+      ; /googleplay/d' ../settings.gradle.kts
+    scandelete:
+      - build-plugin/build
+
+  - versionName: 8.0b4
+    versionCode: 39008
+    commit: K9MAIL_8_0b4
+    subdir: app-k9mail
+    gradle:
+      - yes
+    rm:
+      - feature/funding/googleplay
+    prebuild: sed -i -e '/maven\.mozilla\.org\/maven2/d ; /glean/d ; /app-thunderbird/d
+      ; /googleplay/d' ../settings.gradle.kts
+    scandelete:
+      - build-plugin/build
+
+  - versionName: 8.0b5
+    versionCode: 39010
+    commit: K9MAIL_8_0b5
+    subdir: app-k9mail
+    gradle:
+      - yes
+    rm:
+      - feature/funding/googleplay
+    prebuild: sed -i -e '/maven\.mozilla\.org\/maven2/d ; /glean/d ; /app-thunderbird/d
+      ; /googleplay/d' ../settings.gradle.kts
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '8.0'
+    versionCode: 39011
+    commit: aced88289922418622371ad6e4d12ccf2549c6db
+    subdir: app-k9mail
+    gradle:
+      - yes
+    rm:
+      - feature/funding/googleplay
+    prebuild: sed -i -e '/maven\.mozilla\.org\/maven2/d ; /glean/d ; /app-thunderbird/d
+      ; /googleplay/d' ../settings.gradle.kts
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '8.1'
+    versionCode: 39012
+    commit: b5deccbe8e886048038061e03539ba4f6cbac360
+    subdir: app-k9mail
+    gradle:
+      - yes
+    rm:
+      - feature/funding/googleplay
+    prebuild: sed -i -e '/maven\.mozilla\.org\/maven2/d ; /glean/d ; /app-thunderbird/d
+      ; /googleplay/d' ../settings.gradle.kts
+    scandelete:
+      - build-plugin/build
+
+  - versionName: 9.0b2
+    versionCode: 39017
+    commit: a528da63d1ddea533131e3063514a6e77381aeb1
+    gradle:
+      - foss
+    output: app-k9mail/build/outputs/apk/foss/release/app-k9mail-foss-release-unsigned.apk
+    rm:
+      - feature/funding/googleplay
+    prebuild:
+      - sed -i -e '/maven.mozilla.org\/maven2/d' -e '/glean/d' -e '/app-thunderbird/d'
+        -e '/googleplay/d' settings.gradle.kts
+      - sed -i -e 's/feature.funding.googleplay/feature.funding.link/' app-k9mail/build.gradle.kts
+      - gradle clean
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '8.2'
+    versionCode: 39019
+    commit: 0f7e096b3b2069ce22a6b0a3deda5db0aa912386
+    gradle:
+      - foss
+    output: app-k9mail/build/outputs/apk/foss/release/app-k9mail-foss-release-unsigned.apk
+    rm:
+      - feature/funding/googleplay
+    prebuild:
+      - sed -i -e '/maven.mozilla.org\/maven2/d' -e '/glean/d' -e '/app-thunderbird/d'
+        -e '/googleplay/d' settings.gradle.kts
+      - sed -i -e 's/feature.funding.googleplay/feature.funding.link/' app-k9mail/build.gradle.kts
+      - gradle clean
+    scandelete:
+      - build-plugin/build
+
+  - versionName: 9.0b3
+    versionCode: 39020
+    commit: c3dbe56fdd2e151d746a54350c8c743f3308ca2e
+    gradle:
+      - foss
+    output: app-k9mail/build/outputs/apk/foss/release/app-k9mail-foss-release-unsigned.apk
+    rm:
+      - feature/funding/googleplay
+    prebuild:
+      - sed -i -e '/maven.mozilla.org\/maven2/d' -e '/glean/d' -e '/app-thunderbird/d'
+        -e '/googleplay/d' settings.gradle.kts
+      - sed -i -e 's/feature.funding.googleplay/feature.funding.link/' app-k9mail/build.gradle.kts
+      - gradle clean
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '9.0'
+    versionCode: 39022
+    commit: efcb74d99db9461ca640d59f2236caa9e6a3e82b
+    gradle:
+      - foss
+    output: app-k9mail/build/outputs/apk/foss/release/app-k9mail-foss-release-unsigned.apk
+    rm:
+      - feature/funding/googleplay
+    prebuild:
+      - sed -i -e '/maven.mozilla.org\/maven2/d' -e '/glean/d' -e '/app-thunderbird/d'
+        -e '/googleplay/d' settings.gradle.kts
+      - sed -i -e 's/feature.funding.googleplay/feature.funding.link/' app-k9mail/build.gradle.kts
+      - gradle clean
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '10.0'
+    versionCode: 39023
+    commit: e5e3c98927cbd6a503ee00a82818df73bc08eb23
+    gradle:
+      - foss
+    output: app-k9mail/build/outputs/apk/foss/release/app-k9mail-foss-release-unsigned.apk
+    rm:
+      - feature/funding/googleplay
+    prebuild:
+      - sed -i -e '/maven.mozilla.org\/maven2/d' -e '/glean/d' -e '/app-thunderbird/d'
+        -e '/googleplay/d' settings.gradle.kts
+      - sed -i -e 's/feature.funding.googleplay/feature.funding.link/' app-k9mail/build.gradle.kts
+      - gradle clean
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '10.1'
+    versionCode: 39024
+    commit: 8679faed3bc8fc39e225e6b1a5a3e4bb4799bf90
+    gradle:
+      - foss
+    output: app-k9mail/build/outputs/apk/foss/release/app-k9mail-foss-release-unsigned.apk
+    rm:
+      - feature/funding/googleplay
+    prebuild:
+      - sed -i -e '/maven.mozilla.org\/maven2/d' -e '/glean/d' -e '/app-thunderbird/d'
+        -e '/googleplay/d' settings.gradle.kts
+      - sed -i -e 's/feature.funding.googleplay/feature.funding.link/' app-k9mail/build.gradle.kts
+      - gradle clean
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '11.0'
+    versionCode: 39025
+    commit: 5bfe6774b22af5510d44c9c77af4a21221dc624a
+    subdir: app-k9mail
+    gradle:
+      - foss
+    rm:
+      - app-thunderbird
+      - feature/funding/googleplay
+    prebuild:
+      - sed -i -e 's|maven.mozilla.org/maven2|jitpack.io|' -e '/glean/d' -e '/googleplay/d'
+        ../settings.gradle.kts
+      - sed -i -e 's/feature.funding.googleplay/feature.funding.link/' build.gradle.kts
+    scandelete:
+      - build-plugin
+
+  - versionName: '11.1'
+    versionCode: 39026
+    commit: cefabc871ffc72eb56b7e8e8ce43aad37069597f
+    subdir: app-k9mail
+    gradle:
+      - foss
+    rm:
+      - app-thunderbird
+      - feature/funding/googleplay
+    prebuild:
+      - sed -i -e 's|maven.mozilla.org/maven2|jitpack.io|' -e '/glean/d' -e '/googleplay/d'
+        ../settings.gradle.kts
+      - sed -i -e 's/feature.funding.googleplay/feature.funding.link/' build.gradle.kts
+    scandelete:
+      - build-plugin
+
+  - versionName: '12.1'
+    versionCode: 39028
+    commit: 09a5a2e340ddddb804eda269f26d24383d4b08f0
+    subdir: app-k9mail
+    gradle:
+      - foss
+    rm:
+      - app-thunderbird
+      - feature/funding/googleplay
+    prebuild:
+      - sed -i -e 's|maven.mozilla.org/maven2|jitpack.io|' -e '/glean/d' -e '/googleplay/d'
+        -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e 's/feature.funding.googleplay/feature.funding.link/' build.gradle.kts
+    scandelete:
+      - build-plugin
+
+  - versionName: '13.0'
+    versionCode: 39029
+    commit: 7221737cf0554b33b35c2a60519700d49945e127
+    subdir: app-k9mail
+    gradle:
+      - foss
+    rm:
+      - app-thunderbird
+      - feature/funding/googleplay
+    prebuild:
+      - sed -i -e 's|maven.mozilla.org/maven2|jitpack.io|' -e '/glean/d' -e '/googleplay/d'
+        -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e 's/feature.funding.googleplay/feature.funding.link/' build.gradle.kts
+    scandelete:
+      - build-plugin
+
+  - versionName: '14.0'
+    versionCode: 39030
+    commit: 84df9f77d5f4097c4d4ef6eeb9469214fbf4e36f
+    subdir: app-k9mail
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    rm:
+      - app-thunderbird
+      - feature/funding/googleplay
+    prebuild:
+      - sed -i -e 's|maven.mozilla.org/maven2|jitpack.io|' -e '/glean/d' -e '/googleplay/d'
+        -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e 's/feature.funding.googleplay/feature.funding.link/' build.gradle.kts
+    scandelete:
+      - build-plugin
+
+  - versionName: '15.0'
+    versionCode: 39031
+    commit: 2a4eedc490722867667d7121bb19ad9bfa7fd26a
+    subdir: app-k9mail
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    rm:
+      - app-thunderbird
+      - feature/funding/googleplay
+    prebuild:
+      - sed -i -e 's|maven.mozilla.org/maven2|jitpack.io|' -e '/glean/d' -e '/googleplay/d'
+        -e '/:app-thunderbird/d' -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e 's/feature.funding.googleplay/feature.funding.link/' build.gradle.kts
+    scandelete:
+      - build-plugin
+
+  - versionName: '16.0'
+    versionCode: 39032
+    commit: 46ebabdfa6a805859f11e69326261899aad2c403
+    subdir: app-k9mail
+    gradle:
+      - foss
+    rm:
+      - app-thunderbird
+      - feature/funding/googleplay
+    prebuild:
+      - sed -i -e 's|maven.mozilla.org/maven2|jitpack.io|' -e '/glean/d' -e '/googleplay/d'
+        -e '/:app-thunderbird/d' -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e 's/feature.funding.googleplay/feature.funding.link/' build.gradle.kts
+    scandelete:
+      - build-plugin
+
+  - versionName: '16.1'
+    versionCode: 39033
+    commit: 5a4c083c4a8fc34a90d8add4ff3a75bfeb3f4f86
+    subdir: app-k9mail
+    gradle:
+      - foss
+    rm:
+      - app-thunderbird
+      - feature/funding/googleplay
+    prebuild:
+      - sed -i -e 's|maven.mozilla.org/maven2|jitpack.io|' -e '/glean/d' -e '/googleplay/d'
+        -e '/:app-thunderbird/d' -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e 's/feature.funding.googleplay/feature.funding.link/' build.gradle.kts
+    scandelete:
+      - build-plugin
+
+  - versionName: '17.0'
+    versionCode: 39034
+    commit: 377ddeaf4f44913e0180bf7fce85cf6686a09918
+    subdir: app-k9mail
+    gradle:
+      - foss
+    rm:
+      - app-thunderbird
+      - feature/funding/googleplay
+    prebuild:
+      - sed -i -e 's|maven.mozilla.org/maven2|jitpack.io|' -e '/glean/d' -e '/googleplay/d'
+        -e '/:app-thunderbird/d' -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e 's/feature.funding.googleplay/feature.funding.link/' build.gradle.kts
+    scandelete:
+      - build-plugin
+
+  - versionName: '18.0'
+    versionCode: 39035
+    commit: 23016c71d2f075700a0e258b9fe374bd06d8257b
+    subdir: app-k9mail
+    gradle:
+      - foss
+    rm:
+      - app-thunderbird
+      - feature/funding/googleplay
+    prebuild:
+      - sed -i -e 's|maven.mozilla.org/maven2|jitpack.io|' -e '/glean/d' -e '/googleplay/d'
+        -e '/:app-thunderbird/d' -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e 's/feature.funding.googleplay/feature.funding.link/' build.gradle.kts
+
+MaintainerNotes: |-
+  Use output instead of subdir to make gradlew-fdroid correctly determine the gradle version to be used.
+  It doesn't work when using subdir because we are two levels deep into the directory structure.
+  From version 6.715 on this is not true anymore and subdir should be used as the app was moved to app-k9mail folder.
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '18.0'
+CurrentVersionCode: 39035

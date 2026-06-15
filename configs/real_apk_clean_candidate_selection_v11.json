@@ -1,0 +1,86 @@
+{
+  "selections": [
+    {
+      "app": "floccus bookmark sync",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "bookmark",
+        "internet",
+        "reading",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.handmadeideas.floccus",
+      "reason": "No-native bookmark-sync app with target SDK 35, a medium APK, and a large source tarball; selected as a richer internet/reading clean non-sparse candidate.",
+      "slug": "floccus",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Waistline",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "health",
+        "diet",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.waist.line",
+      "reason": "No-native health/diet tracker with target SDK 35, non-trivial APK and source sizes, and a maintained GitHub source link; useful for a dependency-rich non-sparse clean probe outside internet apps.",
+      "slug": "waistline",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "OpenCloud",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "cloud-storage",
+        "internet",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "eu.opencloud.android",
+      "reason": "No-native cloud/file-sync client with target SDK 35 and source tarball metadata; adds another sync-client clean-candidate while avoiding previously blocked ownCloud.",
+      "slug": "opencloud",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "NightDream",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "clock",
+        "weather",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.firebirdberlin.nightdream.noGms",
+      "reason": "No-native clock/weather app with target SDK 36, medium APK size, and a sizeable source tarball; selected for a compact utility/media-adjacent clean non-sparse attempt.",
+      "slug": "nightdream",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "SambaLite",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "cloud-storage",
+        "connectivity",
+        "file-transfer",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "de.schliweb.sambalite",
+      "reason": "No-native SMB/CIFS client with target SDK 36, medium APK size, and source tarball metadata; broadens the clean sweep into connectivity/file-transfer without repeating Primitive FTPd.",
+      "slug": "sambalite",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    }
+  ]
+}

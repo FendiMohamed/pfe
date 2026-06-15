@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "e3f1acdc96bc13ab77002be5d7cb978dc0cf9e62944fee993f315cd2a287654f",
+    "index_size": 30467722,
+    "path": "data/test_apks/real/wx/wx.apk",
+    "sha256": "e3f1acdc96bc13ab77002be5d7cb978dc0cf9e62944fee993f315cd2a287654f",
+    "size": 30467722,
+    "url": "https://f-droid.org/repo/joshuatee.wx_55990.apk"
+  },
+  "app": "wX",
+  "categories": [
+    "Science & Education",
+    "Weather"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "weather",
+    "science",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/joshuatee.wx/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "joshuatee.wx",
+  "proof_status": "report-generated",
+  "reason": "No-native weather/science app with target SDK 36 and substantial APK signal; selected to add a dependency-rich weather row outside the already validated map/note/security families.",
+  "report": {
+    "detected_component_count": 19,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v14/report-real-wx",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v14/report-real-wx/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v14/report-real-wx/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v14/report-real-wx/sbom.cdx.json",
+    "sbom_component_count": 19,
+    "status": "ok"
+  },
+  "slug": "wx",
+  "source_repo": "https://gitlab.com/joshua.tee/wx",
+  "source_tarball": {
+    "sha256": "b98c6b99a085c00c759d38bbf843ef277cddc9c05f60f31323e80eeaacf5805e",
+    "size": 17080327,
+    "url": "https://f-droid.org/repo/joshuatee.wx_55990_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 55990,
+  "version_name": "55990"
+}

@@ -1,0 +1,1286 @@
+{
+  "libraries": [
+    {
+      "artifact": "activity",
+      "group": "androidx.activity",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.10.1",
+        "1.13.0"
+      ]
+    },
+    {
+      "artifact": "activity-ktx",
+      "group": "androidx.activity",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.13.0"
+      ]
+    },
+    {
+      "artifact": "annotation",
+      "group": "androidx.annotation",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.10.0"
+      ]
+    },
+    {
+      "artifact": "appcompat",
+      "group": "androidx.appcompat",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.7.0",
+        "1.7.1"
+      ]
+    },
+    {
+      "artifact": "biometric",
+      "group": "androidx.biometric",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "browser",
+      "group": "androidx.browser",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.10.0"
+      ]
+    },
+    {
+      "artifact": "camera-camera2",
+      "group": "androidx.camera",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.6.1"
+      ]
+    },
+    {
+      "artifact": "camera-core",
+      "group": "androidx.camera",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.6.1"
+      ]
+    },
+    {
+      "artifact": "camera-lifecycle",
+      "group": "androidx.camera",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.6.1"
+      ]
+    },
+    {
+      "artifact": "camera-view",
+      "group": "androidx.camera",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.6.1"
+      ]
+    },
+    {
+      "artifact": "cardview",
+      "group": "androidx.cardview",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "collection",
+      "group": "androidx.collection",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.6.0"
+      ]
+    },
+    {
+      "artifact": "collection-ktx",
+      "group": "androidx.collection",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.6.0"
+      ]
+    },
+    {
+      "artifact": "foundation",
+      "group": "androidx.compose.foundation",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.11.2"
+      ]
+    },
+    {
+      "artifact": "foundation-android",
+      "group": "androidx.compose.foundation",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.7.8",
+        "1.11.2"
+      ]
+    },
+    {
+      "artifact": "material3",
+      "group": "androidx.compose.material3",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.4.0"
+      ]
+    },
+    {
+      "artifact": "material3-android",
+      "group": "androidx.compose.material3",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.4.0"
+      ]
+    },
+    {
+      "artifact": "material",
+      "group": "androidx.compose.material",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.11.2"
+      ]
+    },
+    {
+      "artifact": "material-android",
+      "group": "androidx.compose.material",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.11.2"
+      ]
+    },
+    {
+      "artifact": "runtime",
+      "group": "androidx.compose.runtime",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.11.2"
+      ]
+    },
+    {
+      "artifact": "runtime-android",
+      "group": "androidx.compose.runtime",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.11.2"
+      ]
+    },
+    {
+      "artifact": "ui",
+      "group": "androidx.compose.ui",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.11.2"
+      ]
+    },
+    {
+      "artifact": "ui-android",
+      "group": "androidx.compose.ui",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.7.8",
+        "1.11.2"
+      ]
+    },
+    {
+      "artifact": "ui-tooling-preview",
+      "group": "androidx.compose.ui",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.11.2"
+      ]
+    },
+    {
+      "artifact": "ui-tooling-preview-android",
+      "group": "androidx.compose.ui",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.11.2"
+      ]
+    },
+    {
+      "artifact": "concurrent-futures",
+      "group": "androidx.concurrent",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.1.0",
+        "1.3.0"
+      ]
+    },
+    {
+      "artifact": "constraintlayout",
+      "group": "androidx.constraintlayout",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.2.1"
+      ]
+    },
+    {
+      "artifact": "core",
+      "group": "androidx.core",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.15.0",
+        "1.18.0"
+      ]
+    },
+    {
+      "artifact": "core-ktx",
+      "group": "androidx.core",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.18.0"
+      ]
+    },
+    {
+      "artifact": "datastore-core",
+      "group": "androidx.datastore",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "datastore-core-android",
+      "group": "androidx.datastore",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "datastore-preferences",
+      "group": "androidx.datastore",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "datastore-preferences-android",
+      "group": "androidx.datastore",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "datastore-preferences-core",
+      "group": "androidx.datastore",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "exifinterface",
+      "group": "androidx.exifinterface",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.3.6",
+        "1.4.2"
+      ]
+    },
+    {
+      "artifact": "fragment",
+      "group": "androidx.fragment",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.6.1",
+        "1.8.9"
+      ]
+    },
+    {
+      "artifact": "fragment-ktx",
+      "group": "androidx.fragment",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.8.9"
+      ]
+    },
+    {
+      "artifact": "gridlayout",
+      "group": "androidx.gridlayout",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0",
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "legacy-support-v4",
+      "group": "androidx.legacy",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-common-java8",
+      "group": "androidx.lifecycle",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.10.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-livedata",
+      "group": "androidx.lifecycle",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.8.7",
+        "2.10.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-livedata-ktx",
+      "group": "androidx.lifecycle",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.10.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-runtime",
+      "group": "androidx.lifecycle",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.10.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-runtime-android",
+      "group": "androidx.lifecycle",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.8.7",
+        "2.10.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-runtime-ktx",
+      "group": "androidx.lifecycle",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.10.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-viewmodel",
+      "group": "androidx.lifecycle",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.10.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-viewmodel-android",
+      "group": "androidx.lifecycle",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.8.7",
+        "2.10.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-viewmodel-ktx",
+      "group": "androidx.lifecycle",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.10.0"
+      ]
+    },
+    {
+      "artifact": "localbroadcastmanager",
+      "group": "androidx.localbroadcastmanager",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0",
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "multidex",
+      "group": "androidx.multidex",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.0.1"
+      ]
+    },
+    {
+      "artifact": "navigation-common",
+      "group": "androidx.navigation",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.9.8"
+      ]
+    },
+    {
+      "artifact": "navigation-fragment",
+      "group": "androidx.navigation",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.9.8"
+      ]
+    },
+    {
+      "artifact": "navigation-fragment-ktx",
+      "group": "androidx.navigation",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.9.8"
+      ]
+    },
+    {
+      "artifact": "navigation-runtime",
+      "group": "androidx.navigation",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.9.8"
+      ]
+    },
+    {
+      "artifact": "navigation-ui",
+      "group": "androidx.navigation",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.9.8"
+      ]
+    },
+    {
+      "artifact": "navigation-ui-ktx",
+      "group": "androidx.navigation",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.9.8"
+      ]
+    },
+    {
+      "artifact": "paging-common",
+      "group": "androidx.paging",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "3.5.0"
+      ]
+    },
+    {
+      "artifact": "paging-runtime",
+      "group": "androidx.paging",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "3.5.0"
+      ]
+    },
+    {
+      "artifact": "paging-runtime-ktx",
+      "group": "androidx.paging",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "3.5.0"
+      ]
+    },
+    {
+      "artifact": "preference",
+      "group": "androidx.preference",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "preference-ktx",
+      "group": "androidx.preference",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "recyclerview",
+      "group": "androidx.recyclerview",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.4.0"
+      ]
+    },
+    {
+      "artifact": "room-common",
+      "group": "androidx.room",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.8.4"
+      ]
+    },
+    {
+      "artifact": "room-ktx",
+      "group": "androidx.room",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.8.4"
+      ]
+    },
+    {
+      "artifact": "room-runtime",
+      "group": "androidx.room",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.8.4"
+      ]
+    },
+    {
+      "artifact": "security-crypto",
+      "group": "androidx.security",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "startup-runtime",
+      "group": "androidx.startup",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.0"
+      ]
+    },
+    {
+      "artifact": "swiperefreshlayout",
+      "group": "androidx.swiperefreshlayout",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0",
+        "1.2.0"
+      ]
+    },
+    {
+      "artifact": "viewpager2",
+      "group": "androidx.viewpager2",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "work-runtime",
+      "group": "androidx.work",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.10.0",
+        "2.11.2"
+      ]
+    },
+    {
+      "artifact": "work-runtime-ktx",
+      "group": "androidx.work",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.11.2"
+      ]
+    },
+    {
+      "artifact": "jackson-annotations",
+      "group": "com.fasterxml.jackson.core",
+      "packaging": "jar",
+      "versions": [
+        "2.21"
+      ]
+    },
+    {
+      "artifact": "jackson-core",
+      "group": "com.fasterxml.jackson.core",
+      "packaging": "jar",
+      "versions": [
+        "2.21.3"
+      ]
+    },
+    {
+      "artifact": "jackson-databind",
+      "group": "com.fasterxml.jackson.core",
+      "packaging": "jar",
+      "versions": [
+        "2.21.3"
+      ]
+    },
+    {
+      "artifact": "glide",
+      "group": "com.github.bumptech.glide",
+      "packaging": "aar",
+      "versions": [
+        "5.0.7"
+      ]
+    },
+    {
+      "artifact": "play-services-ads-identifier",
+      "group": "com.google.android.gms",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "18.3.0"
+      ]
+    },
+    {
+      "artifact": "play-services-auth",
+      "group": "com.google.android.gms",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "21.5.1"
+      ]
+    },
+    {
+      "artifact": "play-services-base",
+      "group": "com.google.android.gms",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "18.10.0"
+      ]
+    },
+    {
+      "artifact": "play-services-basement",
+      "group": "com.google.android.gms",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "18.10.0"
+      ]
+    },
+    {
+      "artifact": "play-services-location",
+      "group": "com.google.android.gms",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "21.3.0"
+      ]
+    },
+    {
+      "artifact": "play-services-maps",
+      "group": "com.google.android.gms",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "20.0.0"
+      ]
+    },
+    {
+      "artifact": "play-services-tasks",
+      "group": "com.google.android.gms",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "18.4.1"
+      ]
+    },
+    {
+      "artifact": "material",
+      "group": "com.google.android.material",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.14.0"
+      ]
+    },
+    {
+      "artifact": "gson",
+      "group": "com.google.code.gson",
+      "packaging": "jar",
+      "versions": [
+        "2.14.0"
+      ]
+    },
+    {
+      "artifact": "tink-android",
+      "group": "com.google.crypto.tink",
+      "packaging": "jar",
+      "versions": [
+        "1.21.0"
+      ]
+    },
+    {
+      "artifact": "dagger",
+      "group": "com.google.dagger",
+      "packaging": "jar",
+      "versions": [
+        "2.59.2"
+      ]
+    },
+    {
+      "artifact": "dagger-android",
+      "group": "com.google.dagger",
+      "packaging": "aar",
+      "versions": [
+        "2.59.2"
+      ]
+    },
+    {
+      "artifact": "hilt-android",
+      "group": "com.google.dagger",
+      "packaging": "aar",
+      "versions": [
+        "2.59.2"
+      ]
+    },
+    {
+      "artifact": "firebase-analytics",
+      "group": "com.google.firebase",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "23.2.0"
+      ]
+    },
+    {
+      "artifact": "firebase-auth",
+      "group": "com.google.firebase",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "24.1.0"
+      ]
+    },
+    {
+      "artifact": "firebase-common",
+      "group": "com.google.firebase",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "22.0.1"
+      ]
+    },
+    {
+      "artifact": "firebase-components",
+      "group": "com.google.firebase",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "19.0.1"
+      ]
+    },
+    {
+      "artifact": "firebase-config",
+      "group": "com.google.firebase",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "23.1.0"
+      ]
+    },
+    {
+      "artifact": "firebase-crashlytics",
+      "group": "com.google.firebase",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "20.0.6"
+      ]
+    },
+    {
+      "artifact": "firebase-database",
+      "group": "com.google.firebase",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "22.0.1"
+      ]
+    },
+    {
+      "artifact": "firebase-firestore",
+      "group": "com.google.firebase",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "26.3.0"
+      ]
+    },
+    {
+      "artifact": "firebase-installations",
+      "group": "com.google.firebase",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "19.1.0"
+      ]
+    },
+    {
+      "artifact": "firebase-messaging",
+      "group": "com.google.firebase",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "25.0.2"
+      ]
+    },
+    {
+      "artifact": "firebase-storage",
+      "group": "com.google.firebase",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "22.0.1"
+      ]
+    },
+    {
+      "artifact": "guava",
+      "group": "com.google.guava",
+      "packaging": "jar",
+      "versions": [
+        "23.0"
+      ]
+    },
+    {
+      "artifact": "protobuf-javalite",
+      "group": "com.google.protobuf",
+      "packaging": "jar",
+      "versions": [
+        "4.35.0"
+      ]
+    },
+    {
+      "artifact": "threetenabp",
+      "group": "com.jakewharton.threetenabp",
+      "packaging": "aar",
+      "versions": [
+        "1.4.9"
+      ]
+    },
+    {
+      "artifact": "timber",
+      "group": "com.jakewharton.timber",
+      "packaging": "aar",
+      "versions": [
+        "5.0.1"
+      ]
+    },
+    {
+      "artifact": "moshi",
+      "group": "com.squareup.moshi",
+      "packaging": "jar",
+      "versions": [
+        "1.15.2"
+      ]
+    },
+    {
+      "artifact": "moshi-adapters",
+      "group": "com.squareup.moshi",
+      "packaging": "jar",
+      "versions": [
+        "1.15.2"
+      ]
+    },
+    {
+      "artifact": "moshi-kotlin",
+      "group": "com.squareup.moshi",
+      "packaging": "jar",
+      "versions": [
+        "1.15.2"
+      ]
+    },
+    {
+      "artifact": "logging-interceptor",
+      "group": "com.squareup.okhttp3",
+      "packaging": "jar",
+      "versions": [
+        "5.3.2"
+      ]
+    },
+    {
+      "artifact": "mockwebserver",
+      "group": "com.squareup.okhttp3",
+      "packaging": "jar",
+      "versions": [
+        "5.3.2"
+      ]
+    },
+    {
+      "artifact": "okhttp",
+      "group": "com.squareup.okhttp3",
+      "packaging": "jar",
+      "versions": [
+        "5.3.2"
+      ]
+    },
+    {
+      "artifact": "okio",
+      "group": "com.squareup.okio",
+      "packaging": "jar",
+      "versions": [
+        "2.8.0",
+        "2.9.0"
+      ]
+    },
+    {
+      "artifact": "okio-jvm",
+      "group": "com.squareup.okio",
+      "packaging": "jar",
+      "versions": [
+        "3.17.0"
+      ]
+    },
+    {
+      "artifact": "picasso",
+      "group": "com.squareup.picasso",
+      "packaging": "aar",
+      "versions": [
+        "2.71828"
+      ]
+    },
+    {
+      "artifact": "adapter-rxjava2",
+      "group": "com.squareup.retrofit2",
+      "packaging": "jar",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "adapter-rxjava3",
+      "group": "com.squareup.retrofit2",
+      "packaging": "jar",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "converter-gson",
+      "group": "com.squareup.retrofit2",
+      "packaging": "jar",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "converter-jackson",
+      "group": "com.squareup.retrofit2",
+      "packaging": "jar",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "converter-moshi",
+      "group": "com.squareup.retrofit2",
+      "packaging": "jar",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "retrofit",
+      "group": "com.squareup.retrofit2",
+      "packaging": "jar",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "commons-codec",
+      "group": "commons-codec",
+      "packaging": "jar",
+      "versions": [
+        "1.22.0"
+      ]
+    },
+    {
+      "artifact": "commons-io",
+      "group": "commons-io",
+      "packaging": "jar",
+      "versions": [
+        "2.22.0"
+      ]
+    },
+    {
+      "artifact": "coil",
+      "group": "io.coil-kt",
+      "packaging": "aar",
+      "versions": [
+        "2.7.0"
+      ]
+    },
+    {
+      "artifact": "coil-base",
+      "group": "io.coil-kt",
+      "packaging": "aar",
+      "versions": [
+        "2.7.0"
+      ]
+    },
+    {
+      "artifact": "koin-android",
+      "group": "io.insert-koin",
+      "packaging": "aar",
+      "versions": [
+        "4.2.1"
+      ]
+    },
+    {
+      "artifact": "koin-core",
+      "group": "io.insert-koin",
+      "packaging": "jar",
+      "versions": [
+        "4.2.1"
+      ]
+    },
+    {
+      "artifact": "ktor-client-content-negotiation-jvm",
+      "group": "io.ktor",
+      "packaging": "jar",
+      "versions": [
+        "3.5.0"
+      ]
+    },
+    {
+      "artifact": "ktor-client-core-jvm",
+      "group": "io.ktor",
+      "packaging": "jar",
+      "versions": [
+        "3.5.0"
+      ]
+    },
+    {
+      "artifact": "ktor-client-okhttp-jvm",
+      "group": "io.ktor",
+      "packaging": "jar",
+      "versions": [
+        "3.5.0"
+      ]
+    },
+    {
+      "artifact": "ktor-http-jvm",
+      "group": "io.ktor",
+      "packaging": "jar",
+      "versions": [
+        "3.5.0"
+      ]
+    },
+    {
+      "artifact": "ktor-io-jvm",
+      "group": "io.ktor",
+      "packaging": "jar",
+      "versions": [
+        "3.5.0"
+      ]
+    },
+    {
+      "artifact": "ktor-serialization-kotlinx-json-jvm",
+      "group": "io.ktor",
+      "packaging": "jar",
+      "versions": [
+        "3.5.0"
+      ]
+    },
+    {
+      "artifact": "ktor-utils-jvm",
+      "group": "io.ktor",
+      "packaging": "jar",
+      "versions": [
+        "3.5.0"
+      ]
+    },
+    {
+      "artifact": "rxandroid",
+      "group": "io.reactivex.rxjava2",
+      "packaging": "aar",
+      "versions": [
+        "2.1.1"
+      ]
+    },
+    {
+      "artifact": "rxjava",
+      "group": "io.reactivex.rxjava2",
+      "packaging": "jar",
+      "versions": [
+        "2.2.21"
+      ]
+    },
+    {
+      "artifact": "rxandroid",
+      "group": "io.reactivex.rxjava3",
+      "packaging": "aar",
+      "versions": [
+        "3.0.2"
+      ]
+    },
+    {
+      "artifact": "rxjava",
+      "group": "io.reactivex.rxjava3",
+      "packaging": "jar",
+      "versions": [
+        "3.1.12"
+      ]
+    },
+    {
+      "artifact": "android-database-sqlcipher",
+      "group": "net.zetetic",
+      "packaging": "aar",
+      "versions": [
+        "4.5.4"
+      ]
+    },
+    {
+      "artifact": "commons-collections4",
+      "group": "org.apache.commons",
+      "packaging": "jar",
+      "versions": [
+        "4.5.0"
+      ]
+    },
+    {
+      "artifact": "commons-compress",
+      "group": "org.apache.commons",
+      "packaging": "jar",
+      "versions": [
+        "1.28.0"
+      ]
+    },
+    {
+      "artifact": "commons-lang3",
+      "group": "org.apache.commons",
+      "packaging": "jar",
+      "versions": [
+        "3.20.0"
+      ]
+    },
+    {
+      "artifact": "bcprov-jdk18on",
+      "group": "org.bouncycastle",
+      "packaging": "jar",
+      "versions": [
+        "1.84"
+      ]
+    },
+    {
+      "artifact": "eventbus",
+      "group": "org.greenrobot",
+      "packaging": "aar",
+      "versions": [
+        "3.3.1"
+      ]
+    },
+    {
+      "artifact": "kotlin-reflect",
+      "group": "org.jetbrains.kotlin",
+      "packaging": "jar",
+      "versions": [
+        "2.3.21"
+      ]
+    },
+    {
+      "artifact": "kotlin-stdlib",
+      "group": "org.jetbrains.kotlin",
+      "packaging": "jar",
+      "versions": [
+        "2.3.21"
+      ]
+    },
+    {
+      "artifact": "kotlinx-coroutines-android",
+      "group": "org.jetbrains.kotlinx",
+      "packaging": "jar",
+      "versions": [
+        "1.11.0"
+      ]
+    },
+    {
+      "artifact": "kotlinx-coroutines-core-jvm",
+      "group": "org.jetbrains.kotlinx",
+      "packaging": "jar",
+      "versions": [
+        "1.11.0"
+      ]
+    },
+    {
+      "artifact": "kotlinx-serialization-json-jvm",
+      "group": "org.jetbrains.kotlinx",
+      "packaging": "jar",
+      "versions": [
+        "1.11.0"
+      ]
+    },
+    {
+      "artifact": "slf4j-api",
+      "group": "org.slf4j",
+      "packaging": "jar",
+      "versions": [
+        "2.0.18"
+      ]
+    }
+  ]
+}

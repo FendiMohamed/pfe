@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "added": 1680366993000,
+    "authorEmail": "monkeycodeapp@gmail.com",
+    "authorName": "Hemanth Savarala",
+    "authorWebSite": "https://hemanths.dev/",
+    "categories": [
+      "Local Media Player",
+      "Multimedia"
+    ],
+    "changelog": "https://github.com/RetroMusicPlayer/RetroMusicPlayer/releases",
+    "description": {
+      "en-US": "Retro Music Player \ud83c\udfb5\n\n<b>\ud83d\udce6 Included Features</b>\n<ul>\n    <li>Base 3 themes (Clearly White, Kinda Dark and Just Black)</li>\n    <li>Material You support on Android 12+</li>\n    <li>Gapless playback</li>\n    <li>Crossfade playback</li>\n    <li>Choose from 10+ now playing themes</li>\n    <li>Android auto support</li>\n    <li>Wallpaper accent picker on Android 8.1+</li>\n    <li>Home screen widgets</li>\n    <li>Lock screen playback controls</li>\n    <li>Sleep timer</li>\n    <li>Easy drag to sort playlist & play queue</li>\n    <li>Tag editor</li>\n    <li>Create, edit and import playlists</li>\n    <li>Browse and play your music by songs, albums, artists, playlists and genre</li>\n    <li>Smart Auto Playlists - Recently played, most played and history</li>\n</ul>"
+    },
+    "featureGraphic": {
+      "en-US": {
+        "name": "/code.name.monkey.retromusic/en-US/featureGraphic_cMVVYxXanxlnzcHW9si7x5XwLg87Dqkb8ANGjVWyrTo=.png",
+        "sha256": "70c5556315da9f1967cdc1d6f6c8bbc795f02e0f3b0ea91bf003468d55b2ad3a",
+        "size": 142032
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/code.name.monkey.retromusic/en-US/icon_wa25PyixqmnIl8tZe4cR7Hh8LQZerk2Sm8Z06tejTYA=.png",
+        "sha256": "c1adb93f28b1aa69c897cb597b8711ec787c2d065eae4d929bc674ead7a34d80",
+        "size": 17271
+      }
+    },
+    "issueTracker": "https://github.com/RetroMusicPlayer/RetroMusicPlayer/issues",
+    "lastUpdated": 1762022695000,
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-US": "Retro Music"
+    },
+    "preferredSigner": "a4bd9da9516b3c9f49b52419c6e3d21da3754d67f488269c3b05bf75df731ccf",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/code.name.monkey.retromusic/en-US/phoneScreenshots/1.jpg",
+            "sha256": "e567924b821316f73b233b6a9fc08b0d677648d62bcd08d51e2fff9615cc6995",
+            "size": 126643
+          },
+          {
+            "name": "/code.name.monkey.retromusic/en-US/phoneScreenshots/2.jpg",
+            "sha256": "30a2a0e5620d76eac7df7ce1ae800d31083ddc23f04e9b153bcd36927dcd5386",
+            "size": 194259
+          },
+          {
+            "name": "/code.name.monkey.retromusic/en-US/phoneScreenshots/3.jpg",
+            "sha256": "594749509da96d594943f6ae0526e99e9b80b90635e9a98805a11323779dbe08",
+            "size": 192315
+          },
+          {
+            "name": "/code.name.monkey.retromusic/en-US/phoneScreenshots/4.jpg",
+            "sha256": "887f758905252750d3790368dcc9b7650cc647bdcde7544937b03f376ebb4e54",
+            "size": 198148
+          },
+          {
+            "name": "/code.name.monkey.retromusic/en-US/phoneScreenshots/5.jpg",
+            "sha256": "6d43983253929a03e3b422f05f55fd716400de254f2a152974d726e06bac6a84",
+            "size": 124958
+          },
+          {
+            "name": "/code.name.monkey.retromusic/en-US/phoneScreenshots/6.jpg",
+            "sha256": "8632e23f2ba61114a20f4c5b352f7eda87f83eef7a83a3f6e7d61be871d94c0e",
+            "size": 235508
+          },
+          {
+            "name": "/code.name.monkey.retromusic/en-US/phoneScreenshots/7.jpg",
+            "sha256": "928cf48ec480b4cfbc1ca9cca30aa0f75ef603b105904feffa97b1c2513c5f77",
+            "size": 249507
+          },
+          {
+            "name": "/code.name.monkey.retromusic/en-US/phoneScreenshots/8.jpg",
+            "sha256": "9b7a30ba1ce00b95ef75af9dce1b1e82d30e4ee25950f04770b9e9e953116901",
+            "size": 125905
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/RetroMusicPlayer/RetroMusicPlayer",
+    "summary": {
+      "en-US": "Material You Design Music player for Android"
+    },
+    "translation": "https://crowdin.com/project/retromusicplayer",
+    "webSite": "https://retromusic.app/"
+  },
+  "version": {
+    "added": 1762022695000,
+    "antiFeatures": {
+      "NonFreeNet": {
+        "en-US": "App connects to LastFM, which is not libre."
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeihtw4oz3qlp2bkkrdokp2ygu664t7wz3pbwadj45yt32avwjkwsxm",
+      "name": "/code.name.monkey.retromusic_10660.apk",
+      "sha256": "c1898e1fcef73ceb4b60e018561674ad37c71f61d051020ed05c3fe209743f89",
+      "size": 9159048
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "a4bd9da9516b3c9f49b52419c6e3d21da3754d67f488269c3b05bf75df731ccf"
+        ]
+      },
+      "usesPermission": [
+        {
+          "maxSdkVersion": 30,
+          "name": "android.permission.BLUETOOTH"
+        },
+        {
+          "name": "android.permission.DISABLE_KEYGUARD"
+        },
+        {
+          "name": "android.permission.SCHEDULE_EXACT_ALARM"
+        },
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_AUDIO"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "maxSdkVersion": 29,
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.BROADCAST_STICKY"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+        },
+        {
+          "name": "android.permission.WRITE_SETTINGS"
+        },
+        {
+          "name": "android.permission.USE_FULL_SCREEN_INTENT"
+        },
+        {
+          "name": "android.permission.BLUETOOTH_CONNECT"
+        },
+        {
+          "name": "code.name.monkey.retromusic.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 24,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 10660,
+      "versionName": "6.6.0"
+    },
+    "src": {
+      "name": "/code.name.monkey.retromusic_10660_src.tar.gz",
+      "sha256": "a0da009210fbfe808149d5f63c4de4cbcf1800576f6c2177ab6da7bc6bfeea4c",
+      "size": 15957771
+    }
+  }
+}

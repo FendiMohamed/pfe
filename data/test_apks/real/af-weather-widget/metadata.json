@@ -1,0 +1,63 @@
+{
+  "apk": {
+    "expected_sha256": "05385259feed866428602979056f7da81cc620d4d65d7bc96e67254e218fa23f",
+    "index_size": 14641961,
+    "path": "data/test_apks/real/af-weather-widget/af-weather-widget.apk",
+    "sha256": "05385259feed866428602979056f7da81cc620d4d65d7bc96e67254e218fa23f",
+    "size": 14641961,
+    "url": "https://f-droid.org/repo/net.gitsaibot.af_23.apk"
+  },
+  "app": "AF Weather Widget",
+  "categories": [
+    "Internet",
+    "Weather"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "internet",
+    "weather",
+    "widget",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/net.gitsaibot.af/",
+  "license": "CC0-1.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "net.gitsaibot.af",
+  "proof_status": "report-generated",
+  "reason": "No-native weather/widget app with target SDK 36 and a compact source tarball; selected as a second weather-family row after Forecastie and RadarWeather showed useful partial evidence.",
+  "report": {
+    "detected_component_count": 18,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-af-weather-widget",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-af-weather-widget/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-af-weather-widget/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-af-weather-widget/sbom.cdx.json",
+    "sbom_component_count": 18,
+    "status": "ok"
+  },
+  "slug": "af-weather-widget",
+  "source_repo": "https://github.com/Gitsaibot/AF-Weather-Widget",
+  "source_tarball": {
+    "sha256": "55f99537b4d62a496e9a7fdaa7c85bab95f7ae3c717a69d0a65a77fe461ed7d4",
+    "size": 1529896,
+    "url": "https://f-droid.org/repo/net.gitsaibot.af_23_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 23,
+  "version_name": "3.2"
+}

@@ -1,0 +1,142 @@
+{
+  "metadata": {
+    "added": 1710004145000,
+    "authorEmail": "maheshdeluxe53@gmail.com",
+    "authorName": "Yet-Zio",
+    "categories": [
+      "Calculator",
+      "Science & Education",
+      "Unit Convertor"
+    ],
+    "description": {
+      "cs": "yetCalc je kalkula\u010dka se z\u00e1kladn\u00edmi a v\u011bdeck\u00fdmi funkcemi, p\u0159evodn\u00edkem jednotek a program\u00e1torsk\u00fdm re\u017eimem. Vzhled voln\u011b vych\u00e1z\u00ed z Kalkula\u010dky Google a pokou\u0161\u00ed se \u0159e\u0161it jej\u00ed probl\u00e9my.\n\nv2 aplikace yetCalc obsahuje n\u00e1sleduj\u00edc\u00ed funkce:\n- P\u0159epracovan\u00e1 kalkula\u010dka s v\u011bdeck\u00fdm re\u017eimem v re\u017eimu na v\u00fd\u0161ku i na \u0161\u00ed\u0159ku.\n- P\u0159izp\u016fsobiteln\u00fd p\u0159evodn\u00edk jednotek s voliteln\u00fdmi skupinami jednotek, p\u0159ipnut\u00edm jednotek, vyhled\u00e1v\u00e1n\u00edm a mnoha dal\u0161\u00edmi funkcemi...\n- Kompletn\u011b p\u0159epracovan\u00fd program\u00e1torsk\u00fd re\u017eim s nov\u00fdmi oper\u00e1tory a funkcemi.\n- Voliteln\u00fd re\u017eim spu\u0161t\u011bn\u00ed.\n- Zkratky pro domovskou obrazovku s podporou tematick\u00fdch ikon.\n- Nov\u00e9 a vylep\u0161en\u00e9 nastaven\u00ed poskytuj\u00edc\u00ed nekone\u010dn\u00e9 mo\u017enosti p\u0159izp\u016fsoben\u00ed.\n- Nov\u00fd re\u017eim Abyss (tmav\u00fd AMOLED) pro ty, kte\u0159\u00ed cht\u011bj\u00ed \u0161et\u0159it v\u00fddr\u017e baterie.\n- Podpora Material You neboli dynamick\u00fdch barev se 4 jedine\u010dn\u00fdmi styly, kter\u00e9 poslou\u017e\u00ed va\u0161im pot\u0159eb\u00e1m.\n\nFunkce:\n\u2022 Progresivn\u00ed v\u00fdpo\u010dty\n\u2022 V\u011bdeck\u00fd re\u017eim s trigonometrick\u00fdmi, hyperbolick\u00fdmi a inverzn\u00edmi funkcemi, kalkulem a itera\u010dn\u00edmi oper\u00e1tory a mnoho dal\u0161\u00edho.\n\u2022 P\u0159evodn\u00edk jednotek\n\u2022 Program\u00e1torsk\u00fd re\u017eim s \u010d\u00edseln\u00fdmi soustavami a logick\u00fdmi operacemi.\n\nPOZN\u00c1MKA: internetov\u00e9 p\u0159ipojen\u00ed je pou\u017eito pouze pro p\u0159evod m\u011bn.",
+      "en-US": "Calculator with basic and scientific calculation features, a unit converter and a programmer mode.\nIt's design is inspired by Google's Calculator and tries to address its flaws.\n\nv2 of yetCalc comes with the following features:\n\n- Redesigned Calculator with scientific mode in both Portrait and Landscape mode\n- Customizable Unit Converter with selectable unit groups, unit pins, search and much more...\n- Fully Redesigned Programmer mode with new operators and functions.\n- Selectable starting mode.\n- Shortcuts for home screen with themed icons support.\n- New and Improved Settings providing endless customizability.\n- New Abyss mode (AMOLED Dark) for those wanting to preserve battery life.\n- Material You Support or Dynamic Colors, with 4 unique styles to serve your needs.\n\n<b>Features:</b>\n\n- Progressive Calculations\n- Scientific Mode with trigonometric, hyperbolic and inverse functions, calculus and iterated operators, much more.\n- Unit Converter\n- Programmer Mode with number systems and logical operations.\n\nNOTE: Internet connection is used for currency conversions and nothing else.\n",
+      "ru": "yetCalc \u044d\u0442\u043e \u043a\u0430\u043b\u044c\u043a\u0443\u043b\u044f\u0442\u043e\u0440 \u0441 \u0444\u0443\u043d\u043a\u0446\u0438\u044f\u043c\u0438 \u0431\u0430\u0437\u043e\u0432\u044b\u0445 \u0438 \u043d\u0430\u0443\u0447\u043d\u044b\u0445 \u0440\u0430\u0441\u0447\u0435\u0442\u043e\u0432, \u043a\u043e\u043d\u0432\u0435\u0440\u0442\u0435\u0440\u043e\u043c \u0435\u0434\u0438\u043d\u0438\u0446 \u0438\u0437\u043c\u0435\u0440\u0435\u043d\u0438\u044f \u0438 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u043d\u044b\u043c \u0440\u0435\u0436\u0438\u043c\u043e\u043c. \u0414\u0438\u0437\u0430\u0439\u043d \u0432\u0434\u043e\u0445\u043d\u043e\u0432\u043b\u0451\u043d \u043a\u0430\u043b\u044c\u043a\u0443\u043b\u044f\u0442\u043e\u0440\u043e\u043c \u043e\u0442 Google \u0438 \u043f\u044b\u0442\u0430\u0435\u0442\u0441\u044f \u0440\u0435\u0448\u0438\u0442\u044c \u0435\u0433\u043e \u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043a\u0438.\n\n\n\n\n<b>\u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438:</b>\n<ul>\n<li>\u041f\u0440\u043e\u0433\u0440\u0435\u0441\u0441\u0438\u0432\u043d\u044b\u0435 \u0432\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u044f</li>\n<li>\u041d\u0430\u0443\u0447\u043d\u044b\u0439 \u0440\u0435\u0436\u0438\u043c \u0441 \u0442\u0440\u0438\u0433\u043e\u043d\u043e\u043c\u0435\u0442\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u043c\u0438, \u0433\u0438\u043f\u0435\u0440\u0431\u043e\u043b\u0438\u0447\u0435\u0441\u043a\u0438\u043c\u0438 \u0438 \u043e\u0431\u0440\u0430\u0442\u043d\u044b\u043c\u0438 \u0444\u0443\u043d\u043a\u0446\u0438\u044f\u043c\u0438, \u043c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u043c \u0430\u043d\u0430\u043b\u0438\u0437\u043e\u043c \u0438 \u0438\u0442\u0435\u0440\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u043c\u0438 \u043e\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0430\u043c\u0438 \u0438 \u043c\u043d\u043e\u0433\u0438\u043c \u0434\u0440\u0443\u0433\u0438\u043c.</li>\n<li>\u041a\u043e\u043d\u0432\u0435\u0440\u0442\u0435\u0440 \u0435\u0434\u0438\u043d\u0438\u0446 \u0438\u0437\u043c\u0435\u0440\u0435\u043d\u0438\u044f</li>\n<li>\u0420\u0435\u0436\u0438\u043c \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0438\u0441\u0442\u0430 \u0441\u043e \u0441\u0438\u0441\u0442\u0435\u043c\u0430\u043c\u0438 \u0441\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u044f \u0438 \u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u0438\u043c\u0438 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u044f\u043c\u0438.</li>\n<li>\u041d\u0430\u0443\u0447\u043d\u044b\u0439 \u0440\u0435\u0436\u0438\u043c \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u043a\u0430\u043a \u0432 \u043f\u043e\u0440\u0442\u0440\u0435\u0442\u043d\u043e\u043c, \u0442\u0430\u043a \u0438 \u0432 \u0440\u0435\u0436\u0438\u043c\u0435 \u043b\u0430\u043d\u0434\u0448\u0430\u0444\u0442\u0430. </li>\n<li>\u041d\u0430\u0447\u0430\u043b\u044c\u043d\u044b\u0439 \u0440\u0435\u0436\u0438\u043c \u043c\u043e\u0436\u043d\u043e \u0432\u044b\u0431\u0438\u0440\u0430\u0442\u044c </li>\n<li>\u041c\u043e\u0436\u043d\u043e \u0441\u0434\u0435\u043b\u0430\u0442\u044c \u044f\u0440\u043b\u044b\u043a\u0438 \u043d\u0430 \u0434\u043e\u043c\u0430\u0448\u043d\u0435\u043c \u044d\u043a\u0440\u0430\u043d\u0435 \u0434\u043b\u044f \u0437\u0430\u043f\u0443\u0441\u043a\u0430 \u0432 \u0432\u044b\u0431\u0440\u0430\u043d\u043d\u043e\u043c \u0440\u0435\u0436\u0438\u043c\u0435. </li>\n<li>\u041f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e \u0447\u0451\u0440\u043d\u0430\u044f \u0442\u0435\u043c\u0430 (\u0422\u0451\u043c\u043d\u044b\u0439 AMOLED ) \u0434\u043b\u044f \u0442\u0435\u0445 \u043a\u0442\u043e \u0445\u043e\u0447\u0435\u0442 \u0441\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c \u0441\u0440\u043e\u043a \u0441\u043b\u0443\u0436\u0431\u044b \u0431\u0430\u0442\u0430\u0440\u0435\u0438 </li>\n<li>\u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 Material You \u0438 \u0434\u0438\u043d\u0430\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0446\u0432\u0435\u0442\u0430, \u0441 4 \u0443\u043d\u0438\u043a\u0430\u043b\u044c\u043d\u044b\u043c\u0438 \u0441\u0442\u0438\u043b\u044f\u043c\u0438 \u043d\u0430 \u0432\u0430\u0448 \u0432\u043a\u0443\u0441.</li>\n<li>\u0411\u0435\u0441\u043a\u043e\u043d\u0435\u0447\u043d\u0430\u044f \u043d\u0430\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0435\u043c\u043e\u0441\u0442\u044c.</li>\n</ul>\n</ul>\n\n\u041f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u043a \u0418\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0443 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f \u0442\u043e\u043b\u044c\u043a\u043e \u0434\u043b\u044f \u043f\u0440\u0435\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0432\u0430\u043b\u044e\u0442\u044b \u0438 \u043d\u0438\u0447\u0435\u0433\u043e \u0431\u043e\u043b\u044c\u0448\u0435."
+    },
+    "donate": [
+      "https://www.buymeacoffee.com/yetzio"
+    ],
+    "featureGraphic": {
+      "en-US": {
+        "name": "/yetzio.yetcalc/en-US/featureGraphic_hcarMefFrJFS8A39xK1_90i7cGV7NZrSB7oEMSSbGWc=.png",
+        "sha256": "85c6ab31e7c5ac9152f00dfdc4ad7ff748bb70657b359ad207ba0431249b1967",
+        "size": 113563
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/yetzio.yetcalc/en-US/icon__doZ7FYIOL4rq3yd0O8h-2e4FuZ4ylI4_kybgRClj_4=.png",
+        "sha256": "fdda19ec560838be2bab7c9dd0ef21fb67b816e678ca5238fe4c9b8110a58ffe",
+        "size": 14350
+      }
+    },
+    "issueTracker": "https://github.com/Yet-Zio/yetCalc/issues",
+    "lastUpdated": 1762208029000,
+    "license": "BSD-3-Clause",
+    "name": {
+      "en-US": "yetCalc"
+    },
+    "preferredSigner": "d1870c695f5cbb6e2d1293544b2560ef2267cbf322632d50f53482649a6aa421",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/yetzio.yetcalc/en-US/phoneScreenshots/1.png",
+            "sha256": "d03cae968a8b22a635a2c05bdd394abb7dd32f8db11ea6f98cbffb0abeea50bb",
+            "size": 317481
+          },
+          {
+            "name": "/yetzio.yetcalc/en-US/phoneScreenshots/2.png",
+            "sha256": "f8aab943fa60f615e3dba68ee3c70b1ea4a27db31d67d12b97350717a206f94b",
+            "size": 409211
+          },
+          {
+            "name": "/yetzio.yetcalc/en-US/phoneScreenshots/3.png",
+            "sha256": "c000b933101b246eaa1a33b9284bf4cf104e7c06a7d8de779365e5aee1915b73",
+            "size": 382061
+          },
+          {
+            "name": "/yetzio.yetcalc/en-US/phoneScreenshots/4.png",
+            "sha256": "a739a209f8ac161c98171dc1925a372077ffa1cdbfc2f388a85ef0deafbabd05",
+            "size": 326550
+          },
+          {
+            "name": "/yetzio.yetcalc/en-US/phoneScreenshots/5.png",
+            "sha256": "874010c39ec9457bb072881550504255ee06c7321121c502997f57e1df0f7bfb",
+            "size": 468550
+          },
+          {
+            "name": "/yetzio.yetcalc/en-US/phoneScreenshots/6.png",
+            "sha256": "f97d068c6047b09c045afa9f19dc1c65c17c2f4a1914a551d2af3712b44b48c0",
+            "size": 887079
+          },
+          {
+            "name": "/yetzio.yetcalc/en-US/phoneScreenshots/7.png",
+            "sha256": "eb7ef05819b644c1b2852d480ac467fb8aac6e622095d216b79dfc448b4c528e",
+            "size": 487797
+          },
+          {
+            "name": "/yetzio.yetcalc/en-US/phoneScreenshots/8.png",
+            "sha256": "80f5fd5eed3888cd089ac67cbc524ebb44425e1308d8781fab5c1a27f08678cd",
+            "size": 247426
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/Yet-Zio/yetCalc",
+    "summary": {
+      "cs-CZ": "Progresivn\u00ed kalkula\u010dka, p\u0159evodn\u00edk a mnoho dal\u0161\u00edho.",
+      "en-US": "Progressive calculator, converter and much more.",
+      "ru-RU": "\u041f\u0440\u043e\u0433\u0440\u0435\u0441\u0441\u0438\u0432\u043d\u044b\u0439 \u043a\u0430\u043b\u044c\u043a\u0443\u043b\u044f\u0442\u043e\u0440, \u043f\u0440\u0435\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c \u0435\u0434\u0438\u043d\u0438\u0446 \u0438 \u043c\u043d\u043e\u0433\u043e\u0435 \u0434\u0440\u0443\u0433\u043e\u0435."
+    }
+  },
+  "version": {
+    "added": 1762208029000,
+    "antiFeatures": {
+      "NonFreeNet": {
+        "en-US": "Site to obtain currency exchange data is not libre."
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeiafstiz6fniqccw7w4aaadh4gpk7ydtdrqid6k72xgx37hfkipb6e",
+      "name": "/yetzio.yetcalc_24.apk",
+      "sha256": "6b32bf73dac5440558026e022e41e81a9fecdac52215b0966ed49c9c9e0274ce",
+      "size": 18540302
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "d1870c695f5cbb6e2d1293544b2560ef2267cbf322632d50f53482649a6aa421"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "yetzio.yetcalc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 28,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 24,
+      "versionName": "2.0.8"
+    },
+    "src": {
+      "name": "/yetzio.yetcalc_24_src.tar.gz",
+      "sha256": "1beca734acfb2e056e295439cc14eaceb4de8b705bb4bf9284380f5802e623a6",
+      "size": 6229782
+    },
+    "whatsNew": {
+      "en-US": "Minor Fixes:\n\n- Conversion issues for Pounds and Stones\n- Some translation issues\n\nSupport for Android 16"
+    }
+  }
+}

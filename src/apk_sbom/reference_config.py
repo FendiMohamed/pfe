@@ -10,6 +10,8 @@ class MavenLibrary:
     group: str
     artifact: str
     versions: tuple[str, ...]
+    packaging: str | None = None
+    repository_url: str | None = None
 
     @property
     def coordinate(self) -> str:
@@ -43,8 +45,21 @@ def load_libraries_config(path: str | Path) -> list[MavenLibrary]:
             raise ValueError(f"library entry #{index} has invalid artifact")
         if not isinstance(versions, list) or not versions or not all(isinstance(v, str) for v in versions):
             raise ValueError(f"library entry #{index} has invalid versions")
+        packaging = item.get("packaging")
+        if packaging is not None and (not isinstance(packaging, str) or packaging not in {"jar", "aar"}):
+            raise ValueError(f"library entry #{index} has invalid packaging")
+        repository_url = item.get("repository_url")
+        if repository_url is not None and (not isinstance(repository_url, str) or not repository_url):
+            raise ValueError(f"library entry #{index} has invalid repository_url")
 
-        parsed.append(MavenLibrary(group=group, artifact=artifact, versions=tuple(versions)))
+        parsed.append(
+            MavenLibrary(
+                group=group,
+                artifact=artifact,
+                versions=tuple(versions),
+                packaging=packaging,
+                repository_url=repository_url,
+            )
+        )
 
     return parsed
-

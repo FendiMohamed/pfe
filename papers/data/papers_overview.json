@@ -1,0 +1,353 @@
+{
+  "generation_1_hash_package_based": [
+    {
+      "id": "libscout",
+      "title": "Reliable Third-Party Library Detection in Android and its Security Applications",
+      "authors": ["Michael Backes", "Sven Bugiel", "Erik Derr"],
+      "year": 2016,
+      "venue": "CCS 2016",
+      "tool": "LibScout",
+      "method": "3-layer Merkle tree (Package→Class→Method). Fuzzy descriptors replace custom types with X. CHA for hierarchy analysis. Similarity score 0-1.",
+      "lib_level_f1": "~83% (97.4% precision)",
+      "version_level_f1": "64% Group-1; 12.7% on adjacent versions under R8",
+      "r8_resilience": "Partial — F1~1% on R8-obf-shr-opt",
+      "speed": "82s/app; 2.8s/lib profile gen",
+      "obfuscation_coverage": "RN only (100% resilient); fails PF (-75%), CFR, MI",
+      "module_decoupling": "Package + CHA (no CDG)",
+      "partial_lib": "Score 0-1 similarity",
+      "sbom_output": "Partial — version list, no standard format",
+      "open_source": "Yes — GitHub (active)",
+      "strengths": ["100% renaming resilient", "Lightweight profiling", "Version identification pioneer"],
+      "weaknesses": ["No CDG", "Fails on R8 optimizations", "No transitive deps", "Package structure dependent"],
+      "cve_mapping": "Manual — studied 2 CVEs (FB SDK, Dropbox SDK)"
+    },
+    {
+      "id": "libradar",
+      "title": "LibRadar: Fast and Accurate Detection of Third-Party Libraries in Android Apps",
+      "authors": ["Unknown"],
+      "year": 2016,
+      "venue": "ICSE 2016",
+      "tool": "LibRadar",
+      "method": "Android API frequency hashing + package clustering. Whitelist-based. No decompilation.",
+      "lib_level_f1": "~66% (computed: 2*0.979*0.5/(0.979+0.5))",
+      "version_level_f1": "None — clustering only, no version labels",
+      "r8_resilience": "Partial — -86% recall under DashO",
+      "speed": "~5.5s/app (fastest)",
+      "obfuscation_coverage": "RN, PF; fails CFR, DCR, SE, MI",
+      "module_decoupling": "Package name — each subtree = 1 candidate",
+      "partial_lib": "No — binary match only",
+      "sbom_output": "No — prints names to stdout",
+      "open_source": "Yes — GitHub (archived)",
+      "strengths": ["Fastest tool", "Easy to use", "Scalable"],
+      "weaknesses": ["No version detection", "Single-dex only", "Package-structure dependent", "Low recall (~50%)"]
+    },
+    {
+      "id": "libd",
+      "title": "LibD: Scalable and Precise Third-party Library Detection in Android Markets",
+      "authors": ["Menghao Li", "Wei Wang", "Pei Wang", "Shuai Wang", "Dinghao Wu", "Jian Liu", "Rui Xue", "Wei Huo"],
+      "year": 2017,
+      "venue": "ICSE 2017",
+      "tool": "LibD",
+      "method": "Homogeny graph (call/inherit/inclusion). CFG opcode hashing per basic block → method→class→instance fingerprint.",
+      "lib_level_f1": "High — 1,954 libs vs LibRadar's 670, FP 25% vs 60.6%",
+      "version_level_f1": "None — clustering only",
+      "r8_resilience": "Strong against RN, PF by design; CFR, MI untested",
+      "speed": "Medium — 1.4M apps tested, no per-app timing",
+      "obfuscation_coverage": "RN, PF, CFR; MI untested",
+      "module_decoupling": "Homogeny graph — best Gen-1",
+      "partial_lib": "No — instance hash only, no score",
+      "sbom_output": "No — library names only",
+      "open_source": "Partial — code available, reproducibility limited",
+      "cve_mapping": "No",
+      "strengths": ["Structural dependency approach", "Opcode hashing resilient", "Ghost call detection", "Large-scale (1.4M apps)"],
+      "weaknesses": ["No version detection", "No score for partial libs", "≥10 app threshold", "Code partially available"]
+    },
+    {
+      "id": "orlis",
+      "title": "ORLIS: Obfuscation-Resilient Library Detection for Android",
+      "authors": ["Yan Wang", "Haowei Wu", "Hailong Zhang", "Atanas Rountev"],
+      "year": 2018,
+      "venue": "MOBILESoft 2018",
+      "tool": "ORLIS",
+      "method": "Two-stage: sdhash app-filter → ssdeep CFG class matching + Jaccard similarity",
+      "lib_level_f1": "~62-67% (Prec 71%, Recall 63%)",
+      "version_level_f1": "Not reported as version metric (implicit CFG fine-grained)",
+      "r8_resilience": "Partial — best Gen-1 obfusc resilience; not tested on R8",
+      "speed": "~1,438s/app (slowest; crashes on 16GB+ apps)",
+      "obfuscation_coverage": "RN, PF, CFR; SE, MI untested",
+      "module_decoupling": "CFG roots — structure-based, no CDG",
+      "partial_lib": "Jaccard score for partial libs",
+      "sbom_output": "No — class-level mapping only",
+      "open_source": "Partial — published, hard to install (Soot env)",
+      "strengths": ["CFG survives structural changes", "Jaccard for partial libs", "Two-stage architecture"],
+      "weaknesses": ["Extremely slow", "Low F1", "Crashes on large apps", "Hard to install", "No version metrics"]
+    }
+  ],
+  "generation_2_cdg_based": [
+    {
+      "id": "atvhunter",
+      "title": "ATVHUNTER: Reliable Version Detection of Third-Party Libraries for Vulnerability Identification in Android Applications",
+      "authors": ["Xian Zhan", "Lingling Fan", "Sen Chen", "Feng Wu", "Tianming Liu", "Xiapu Luo", "Yang Liu"],
+      "year": 2021,
+      "venue": "ICSE 2021",
+      "tool": "ATVHUNTER",
+      "method": "CDG module decoupling → coarse CFG filter → fine opcode fuzzy rolling hash + feature weighting",
+      "lib_level_f1": "93.4% (Prec 98.6%, Recall 88.8%)",
+      "version_level_f1": "88.8% (Prec 90.6%, Recall 87.2%)",
+      "r8_resilience": "Partial — DashO tested; 99.3% under RN+PF; -24% DCR; MI not tested",
+      "speed": "66s/app (two-stage avoids full DB scan)",
+      "obfuscation_coverage": "RN, PF, CFR, DCR",
+      "module_decoupling": "CDG — Class Dependency Graph (best among Gen-2)",
+      "partial_lib": "Fuzzy rolling hash gives % similarity",
+      "sbom_output": "Partial — CVE-linked version list, no standard SBOM format",
+      "open_source": "Partial — online service, source partially released",
+      "cve_mapping": "Yes — 1,180 CVEs, 224 security bugs, 189K TPLs, 3M versions",
+      "transitive_deps": "Not explicitly handled",
+      "strengths": ["First CDG-based tool", "CVE mapping built-in", "Excellent F1 at both levels", "Large TPL DB (189K/3M)"],
+      "weaknesses": ["MI untested", "R8 not explicitly tested", "Partial source release", "No standard SBOM"]
+    }
+  ],
+  "generation_3_r8_aware": [
+    {
+      "id": "libmd",
+      "title": "Obfuscation-resilient Detection of Android Third-Party Libraries Using Multi-Scale Code Dependency Fusion",
+      "authors": ["Zhao Zhang", "Senlin Luo", "Yepang Lu", "Li Pan"],
+      "year": 2025,
+      "venue": "Information Fusion",
+      "tool": "LibMD",
+      "method": "Multi-scale fusion: CDG + function call + basic block dependency. LDG. Bayesian probability scoring. Explicit SBOM generation.",
+      "lib_level_f1": "High — exceeds single-scale baselines (exact score unverified)",
+      "version_level_f1": "Strong — Bayesian scoring targets adjacent-version disambiguation",
+      "r8_resilience": "Strong — dependency graph stable under R8 shrinking & inlining",
+      "speed": "N/A — full paper unverified",
+      "obfuscation_coverage": "RN, PF, CFR, MI — designed for R8 inlining",
+      "module_decoupling": "Multi-scale CDG — 3-level dependency fusion (most robust)",
+      "partial_lib": "Bayesian confidence score",
+      "sbom_output": "Explicit SBOM — primary goal: SBOM + CVE mapping",
+      "open_source": "No — not publicly released (2025)",
+      "cve_mapping": "Yes — integrated pipeline",
+      "transitive_deps": "LDG supports transitive dependency modeling",
+      "strengths": ["Only explicit SBOM tool", "Multi-scale fusion for R8", "Bayesian version scoring", "LDG for transitive deps"],
+      "weaknesses": ["Not open source", "Exact metrics unverified", "Speed unknown", "No community validation"]
+    },
+    {
+      "id": "libattention",
+      "title": "Android Third-Party Library Detection via Feature Language Model (LibAttention)",
+      "authors": ["Dahan Pan", "Yi Xu", "Runhan Feng", "Donghui Yu", "Jiawen Chen", "Ya Fang", "Yuanyuan Zhang"],
+      "year": 2025,
+      "venue": "SANER 2025",
+      "tool": "LibAttention",
+      "method": "Pre-train Transformer on 200M Smali tokens → fine-tune binary classifier. SDK structural vocabulary. Feature compression.",
+      "lib_level_f1": "~39% on non-obfuscated (below top tools)",
+      "version_level_f1": "None — binary presence/absence only",
+      "r8_resilience": "Best overall — +30% F1 over rule-based on R8-obf-shr-opt",
+      "speed": "~472s/app (AndroGuard preprocessing dominates)",
+      "obfuscation_coverage": "All R8 modes — RN, PF, CFR, DCR, SE, MI",
+      "module_decoupling": "Implicit — model learns boundaries",
+      "partial_lib": "No — binary output only",
+      "sbom_output": "No — no version → no CVE → no SBOM",
+      "open_source": "Partial — code described, full release unclear",
+      "cve_mapping": "No — presence only",
+      "strengths": ["Best R8 resilience", "Learns obfuscation from data", "No labeled data needed", "28 vulnerable libs in 10K apps"],
+      "weaknesses": ["No version detection", "Poor on non-obfuscated", "Slow preprocessing", "Binary output only"]
+    },
+    {
+      "id": "sad",
+      "title": "Version-level Third-Party Library Detection in Android Applications via Class Structural Similarity (SAD)",
+      "authors": ["Bolin Zhou", "Jingzheng Wu", "Xiang Ling", "Tianyue Luo", "Jingkun Zhang"],
+      "year": 2025,
+      "venue": "EASE 2025",
+      "tool": "SAD",
+      "method": "CDG + neighbor aggregation → stateful/stateless class split → Field Op Sequence vs opcode → literal tie-breaker",
+      "lib_level_f1": "97.64% (highest of all reviewed)",
+      "version_level_f1": "84.82% (+10.98% over LIBLOOM). Class-level: 94.12%",
+      "r8_resilience": "Strong for RN, PF, CFR, DCR; -10pp under heavy inlining (MI)",
+      "speed": "~130s/app (slower than LIBLOOM 5s, LibScan 46s)",
+      "obfuscation_coverage": "RN, PF, CFR, DCR; weaker on MI",
+      "module_decoupling": "CDG + stateful/stateless (most granular reviewed)",
+      "partial_lib": "Per-class confidence scores",
+      "sbom_output": "Partial — version labels, no CVE mapping",
+      "open_source": "Partial — EASE 2025; availability unclear at submission",
+      "cve_mapping": "No — needs NVD integration",
+      "strengths": ["Highest lib-level F1 (97.64%)", "Stateful/stateless novel approach", "Best version-level F1 (84.82%)", "Most granular module decoupling", "+10.98% over prior best"],
+      "weaknesses": ["-10pp under heavy inlining", "Not open source", "No SBOM format", "No CVE mapping"]
+    },
+    {
+      "id": "libscope",
+      "title": "Towards Global Matches for Third-Party Library Detection in Android",
+      "authors": ["Lige Zhan", "Jiang Ming", "Chenke Luo", "Guojun Peng", "Jianming Fu"],
+      "year": 2026,
+      "venue": "ICSE 2026 (9.1% acceptance rate)",
+      "tool": "LibScope",
+      "method": "Bloom filter feature abstraction + back-and-forth iterative global matching elevating pairwise to set-level similarity",
+      "key_results": "Outperforms SOTA on two public benchmarks. Addresses local-maxima problem. Open source on Zenodo.",
+      "module_decoupling": "Package-level with global set matching",
+      "partial_lib": "Set-level similarity handles partial inclusion implicitly",
+      "sbom_output": "No",
+      "open_source": "Yes — Zenodo (zenodo.org/records/15066884)",
+      "strengths": ["Novel global matching approach", "Bloom filter compact features", "Strong venue validation", "Open source"],
+      "weaknesses": ["Specific numeric results pending full publication", "Bloom filter false positives possible", "Iterative matching may limit scalability"]
+    },
+    {
+      "id": "libra",
+      "title": "Libra: Library Identification in Obfuscated Android Apps",
+      "authors": ["David A. Tomassi", "Kenechukwu Nwodo", "Mohamed Elsabagh"],
+      "year": 2023,
+      "venue": "ISC 2023 (LNCS 14411)",
+      "tool": "Libra",
+      "method": "Two-phase: method headers (coarse) → CTPH piecewise fuzzy hashing (fine). Compact instruction encoding.",
+      "key_results": "F1 88% non-obfuscated, 50-87% obfuscated. Outperforms prior work.",
+      "module_decoupling": "Package + class header analysis",
+      "partial_lib": "CTPH fuzzy matching handles partial code",
+      "sbom_output": "No",
+      "open_source": "No",
+      "strengths": ["CTPH piecewise fuzzy hashing robust to reordering", "Two-phase design", "Obfuscation-focused design"],
+      "weaknesses": ["Not open source", "50-87% wide range", "Lower venue visibility", "No version detection"]
+    },
+    {
+      "id": "libscan",
+      "title": "LibScan / LibHunter (Wu+ 2023)",
+      "authors": ["Wu et al."],
+      "year": 2023,
+      "venue": "TSE 2023",
+      "tool": "LibScan / LibHunter",
+      "method": "Opcode + call chain similarity. LibHunter extends with method inlining simulation and call-site optimization handling.",
+      "lib_level_f1": "Not independently verified",
+      "version_level_f1": "LibHunter: 76.48% recall (per TPL-Benchmark)",
+      "strengths": ["Handles R8 inlining simulation", "Good recall (76.48% version-level)"],
+      "weaknesses": ["Not included in many comparisons"]
+    },
+    {
+      "id": "libpecker",
+      "title": "LibPecker (Zhan+ 2020)",
+      "authors": ["Zhan et al."],
+      "year": 2020,
+      "venue": "ASE 2020 (as compared tool)",
+      "tool": "LibPecker",
+      "method": "Class dependency hashing + adaptive class similarity thresholds + weighted class similarity",
+      "lib_level_f1": "60.15% (per TPL-Benchmark 2025 — highest among 10 tools)",
+      "version_level_f1": "~49% (per TPL-Benchmark)",
+      "obfuscation_coverage": "Best Gen-1 against obfuscation (per Zhan ASE 2020)",
+      "strengths": ["Best precision-recall trade-off on real-world dataset", "Obfuscation-resilient"],
+      "weaknesses": ["Per TPL-Benchmark, peak F1 is 60.15% — much lower than originally claimed"]
+    }
+  ],
+  "surveys_and_benchmarks": [
+    {
+      "id": "systematic_assessment",
+      "title": "A Systematic Assessment on Android Third-party Library Detection Tools",
+      "authors": ["Xian Zhan", "Tianming Liu", "Yepang Liu", "Yang Liu", "Li Li", "Haoyu Wang", "Xiapu Luo"],
+      "year": 2021,
+      "venue": "IEEE TSE 2021 (extended from ASE 2020)",
+      "type": "Survey / Empirical study",
+      "tools_compared": ["LibRadar", "LibScout", "LibD", "ORLIS", "LibPecker", "LibID", "LibExtractor", "LibRoad", "OSSPoLICE"],
+      "metrics": ["C1: Module decoupling", "C2: Effectiveness", "C3: Efficiency", "C4: Version identification", "C5: Obfuscation resilience", "C6: Ease of use"],
+      "dataset": "59 unique TPLs, 2,115 versions, 221 apps",
+      "key_findings": [
+        "CDG-based decoupling > package-structure-based",
+        "Richer features (class deps) = better obfuscation resilience",
+        "Multidex is a critical blind spot (-50% recall)",
+        "Tools fail on partial import TPLs, obfuscated TPLs, TPL dependency",
+        "No tool handles all cases — hybrid approaches needed"
+      ],
+      "patches": ["Multidex loop fix", ".aar pre-processing", "EntryPoint root detection"]
+    },
+    {
+      "id": "tpl_benchmark",
+      "title": "Revisiting Third-Party Library Detection: A Ground Truth Dataset and Its Implications Across Security Tasks",
+      "authors": ["Jintao Gu", "Haolang Lu", "Guoshun Nan", "Yihan Lin", "Kun Wang", "Yuchun Guo", "Yigui Cao", "Yang Liu"],
+      "year": 2025,
+      "venue": "arXiv 2509.04091",
+      "type": "Benchmark / Ground truth dataset",
+      "tools_compared": ["LibRadar", "LibD", "Orlis", "LibScout", "LibLOOM", "LibPecker", "LibScan", "LibID-S", "LibID-A", "LibHunter"],
+      "dataset": "6,055 apps, 5,756 unique TPLs, 15,274 versions, 62,218 App-TPL mappings",
+      "key_findings": [
+        "Highest library-level F1 = 60.15% (LibPecker) — much lower than prior claims (83-97%)",
+        "Over half of apps use R8 compiler",
+        "728 libraries with ≥1 CVE, 3,309 TPL-CVE pairs, 8,115 App-CVE mappings",
+        "R8 shrinks >50% cause sharp recall drops"
+      ]
+    },
+    {
+      "id": "obfdetector_study",
+      "title": "An Empirical Study on the Robustness of Android TPL Detection Tools Against Advanced Obfuscation",
+      "authors": ["Dahan Pan", "Zhuohao Zhang", "Yunjia Min", "Runhan Feng", "Yuanyuan Zhang"],
+      "year": 2026,
+      "venue": "ICSE 2026 Research Track",
+      "type": "Empirical study / Obfuscation analysis",
+      "tool": "ObfDetector",
+      "dataset": "77,504 Google Play apps + 619 widely-used apps",
+      "key_findings": [
+        "F1 <50% library-level, <10% version-level under advanced obfuscation",
+        "Identifies package hierarchy obfuscation as critical blind spot",
+        "Systematic failure analysis of existing tools"
+      ]
+    },
+    {
+      "id": "ramirez_thesis",
+      "title": "Empirical Study of Third-Party Library Detection in iOS and Android Applications",
+      "authors": ["Pablo Marchand Ramirez", "Alessandra Gorla"],
+      "year": 2024,
+      "venue": "Master's Thesis, UPM",
+      "type": "Thesis / Comparative study",
+      "tools_compared_android": ["AdDetect", "LibRadar", "LibScout", "ORLIS", "LibID", "LIBLOOM", "LibScan"],
+      "tools_compared_ios": ["CRIOS", "iLibScope", "LibKit", "BliS", "Class-dump"],
+      "key_findings": [
+        "iOS detection is ~10 years behind Android",
+        "iOS has zero version identification capability",
+        "Symbol stripping drops iOS detection to 0%",
+        "ORLIS crashes on 16GB+ RAM apps",
+        "Hybrid pipeline recommended: LibRadar → LibScout/SAD"
+      ]
+    },
+    {
+      "id": "unibom",
+      "title": "UniBOM — A Unified SBOM Analysis and Visualisation Tool for IoT Systems and Beyond",
+      "authors": ["Vadim Safronov", "Ionut Bostan", "Nicholas Allott", "Andrew Martin"],
+      "year": 2025,
+      "venue": "IoT 2025 / arXiv 2511.22359",
+      "type": "Tool / SBOM pipeline",
+      "method": "Multi-modal SBOM: binary + filesystem + source code analysis. AI-based CVE classification. Historical CPE tracking.",
+      "sbom_format": "CycloneDX / SPDX",
+      "open_source": "Yes — GitHub",
+      "relevance": "Architectural template for SBOM pipeline. Not Android-specific but transferable design patterns."
+    }
+  ],
+  "research_gaps": [
+    {
+      "gap": "R8 method inlining resilience",
+      "severity": "Critical",
+      "detail": "Even SAD loses -10pp under heavy inlining. Most tools ignore it entirely. R8 inlining fundamentally changes code structure."
+    },
+    {
+      "gap": "Standard SBOM output",
+      "severity": "Critical",
+      "detail": "Only LibMD (unreleased) generates structured SBOM. All other tools output informal results (lib names, version lists, class mappings)."
+    },
+    {
+      "gap": "Version-level detection accuracy",
+      "severity": "High",
+      "detail": "Best is 84.82% (SAD) — but this drops below 10% under advanced obfuscation (ObfDetector study). Not reliable for production."
+    },
+    {
+      "gap": "Transitive dependency resolution",
+      "severity": "High",
+      "detail": "~47.3% of TPLs depend on others. Only LibMD's LDG concept addresses this. Most tools assume flat library structure."
+    },
+    {
+      "gap": "Real-world F1 vs claimed F1",
+      "severity": "High",
+      "detail": "TPL-Benchmark (2025) shows realistic F1 is ~60% at library level, not 83-97% as prior papers claimed. Evaluation on easy datasets inflates numbers."
+    },
+    {
+      "gap": "Partial library inclusion",
+      "severity": "Medium",
+      "detail": "Most tools produce binary yes/no. Few (ORLIS, ATVHUNTER, SAD) handle partial inclusion but with limited scoring."
+    },
+    {
+      "gap": "Package hierarchy obfuscation",
+      "severity": "Medium",
+      "detail": "ObfDetector (ICSE 2026) identifies this as a critical blind spot that most tools ignore."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "apk_sha256": "3f9f260dc3e32a1281cb8803eea6f926eef897579f68a5d35f922523974b84b9",
+  "apk_size": 12054040,
+  "dex_files": [
+    "classes.dex",
+    "classes2.dex"
+  ],
+  "extraction_indicators": [
+    "protector-name-hint: assets/prism/components/prism-shell-session.min.js"
+  ],
+  "extraction_risk": "medium",
+  "min_sdk": "18",
+  "native_abis": [],
+  "native_library_count": 0,
+  "package_name": "net.gsantner.markor",
+  "source": "F-Droid",
+  "target_sdk": "35",
+  "version_code": "163",
+  "version_name": "2.16.1"
+}

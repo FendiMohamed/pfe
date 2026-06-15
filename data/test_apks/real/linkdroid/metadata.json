@@ -1,0 +1,64 @@
+{
+  "apk": {
+    "expected_sha256": "c152f4cece2a81bc19f95bc5832b9e7f016d900647b557f0f53e1cbafd5434ed",
+    "index_size": 6642905,
+    "path": "data/test_apks/real/linkdroid/linkdroid.apk",
+    "sha256": "c152f4cece2a81bc19f95bc5832b9e7f016d900647b557f0f53e1cbafd5434ed",
+    "size": 6642905,
+    "url": "https://f-droid.org/repo/com.sbv.linkdroid_26.apk"
+  },
+  "app": "LinkDroid for Linkwarden",
+  "categories": [
+    "Bookmark",
+    "Internet",
+    "Reading"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "internet",
+    "bookmark",
+    "reading",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.sbv.linkdroid/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.sbv.linkdroid",
+  "proof_status": "report-generated",
+  "reason": "No-native internet/bookmark client with target SDK 36, manageable source size, and likely modern networking/UI dependencies; selected as a practical sync-client-style clean candidate.",
+  "report": {
+    "detected_component_count": 20,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v13/report-real-linkdroid",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v13/report-real-linkdroid/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v13/report-real-linkdroid/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v13/report-real-linkdroid/sbom.cdx.json",
+    "sbom_component_count": 20,
+    "status": "ok"
+  },
+  "slug": "linkdroid",
+  "source_repo": "https://github.com/Dacid99/LinkDroid-for-Linkwarden",
+  "source_tarball": {
+    "sha256": "4c8a0b038dd3b7e43f15ccf46d7914ece39c63b27522ae9877543fafdc4e5cbe",
+    "size": 2324882,
+    "url": "https://f-droid.org/repo/com.sbv.linkdroid_26_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 26,
+  "version_name": "2.1.9"
+}

@@ -1,0 +1,384 @@
+{
+  "metadata": {
+    "added": 1589155200000,
+    "authorEmail": "philipp.fahlteich@gmail.com",
+    "authorName": "Faltenreich",
+    "authorWebSite": "https://writingbits.de/",
+    "categories": [
+      "Diet",
+      "Health Manager",
+      "Sports & Health"
+    ],
+    "changelog": "https://github.com/Faltenreich/Diaguard/releases",
+    "description": {
+      "de-DE": "Diaguard ist eine kostenlose, werbefreie und quelloffene App f\u00fcr Menschen mit Diabetes mellitus.\n\nSie ersetzt das handschriftliche Tagebuch und hilft dem Anwender dabei, schnell und einfach seinen Blutzucker sowie andere wichtige Daten festzuhalten, auszuwerten und als PDF oder CSV zu exportieren. Dank der \u00fcbersichtlichen Oberfl\u00e4che hat der Nutzer jederzeit seinen Diabetes im \u00dcberblick. Zus\u00e4tzlich liefert die App Informationen zu mehreren tausend Lebensmitteln inklusive Kohlenhydrate und anderer N\u00e4hrstoffe.\n\n<b>Funktionen</b>\n\n\u2022 Schnelle und einfache Eingabe von Blutzucker, Insulin, Mahlzeiten, Aktivit\u00e4ten, HbA1c, Gewicht, Puls, Blutdruck und Sauerstoffs\u00e4ttigung\n\u2022 Anpassbare Einheiten\n\u2022 \u00dcbersichtliche Graphen zum Blutzuckerverlauf\n\u2022 Detaillierte Ausgabe der Nutzerdaten im Protokoll \n\u2022 Einstellungsm\u00f6glichkeit f\u00fcr Basalrate, Korrekturfaktor und Mahlzeit-Bolusfaktor\n\u2022 Lebensmitteldatenbank mit tausenden von Eintr\u00e4gen\n\u2022 PDF und CSV Export\n\u2022 Backupfunktion\n\u2022 Erinnerungsfunktion\n\u2022 Gesch\u00e4tzter HbA1c\n\u2022 Statistiken\n\u2022 Dark Mode",
+      "en-US": "Diaguard is a free of cost, ad-free and open source app for people with diabetes mellitus.\n\nIt replaces the handwritten diary and helps the user to quickly and easily record, evaluate and export his blood sugar and other important data as PDF or CSV. Thanks to the clearly arranged interface, the user always has an overview of his diabetes. The app also provides information on several thousand foods including carbohydrates and other nutrients.\n\n<b>Features</b>\n\n\u2022 Quickly and easily track your blood glucose, insulin, carbohydrates, A1c, activity, weight, pulse, blood pressure and oxygen saturation\n\u2022 Customizable units\n\u2022 Visualize your blood glucose level in a graph\n\u2022 Detailed logs of your data\n\u2022 Food database with thousands of entries\n\u2022 PDF and CSV export\n\u2022 Backup\n\u2022 Reminder functionality\n\u2022 Estimated HbA1c\n\u2022 Statistics\n\u2022 Dark Mode",
+      "es-ES": "Diaguard es una aplicaci\u00f3n gratuita, sin publicidad y de c\u00f3digo abierto para personas con diabetes mellitus.\n\nSustituye al diario manuscrito y ayuda al usuario a registrar, evaluar y exportar r\u00e1pida y f\u00e1cilmente su az\u00facar en sangre y otros datos importantes como PDF o CSV. Gracias a la clara interfaz, el usuario siempre tiene una visi\u00f3n general de su diabetes. La aplicaci\u00f3n tambi\u00e9n proporciona informaci\u00f3n sobre varios miles de alimentos, incluidos los carbohidratos y otros nutrientes.\n\n<b>Caracter\u00edsticas</b>\n\n- Rastree r\u00e1pida y f\u00e1cilmente su glucosa en sangre, insulina, carbohidratos, A1c, actividad, peso, pulso, presi\u00f3n sangu\u00ednea y saturaci\u00f3n de ox\u00edgeno.\n- Unidades personalizables\n- Visualice su nivel de glucosa en la sangre en un gr\u00e1fico\n- Registros detallados de sus datos\n- Base de datos de alimentos con miles de entradas\n- Exportaci\u00f3n de PDF y CSV\n- Copia de seguridad\n- Funcionalidad de recordatorio\n- Estimaci\u00f3n de HbA1c\n- Estad\u00edsticas\n- Modo oscuro",
+      "fr-FR": "Diaguard est une application gratuite, sans publicit\u00e9 et open source destin\u00e9e aux personnes atteintes de diab\u00e8te sucr\u00e9.\n\nElle remplace l'agenda \u00e9crit \u00e0 la main et aide l'utilisateur \u00e0 enregistrer, \u00e9valuer et exporter rapidement et facilement son taux de glyc\u00e9mie et d'autres donn\u00e9es importantes au format PDF ou CSV. Gr\u00e2ce \u00e0 l'interface clairement agenc\u00e9e, l'utilisateur a toujours une vue d'ensemble de son diab\u00e8te. L'application fournit \u00e9galement des informations sur plusieurs milliers d'aliments, y compris les glucides et autres nutriments.\n\n<b>Fonctionnalit\u00e9s</b>\n\n- Suivez rapidement et facilement votre glyc\u00e9mie, votre insuline, vos glucides, votre taux d'A1c, votre activit\u00e9, votre poids, votre pouls, votre pression art\u00e9rielle et votre saturation en oxyg\u00e8ne\n- Unit\u00e9s personnalisables\n- Visualisez votre taux de glyc\u00e9mie dans un graphique\n- Journaux d\u00e9taill\u00e9s de vos donn\u00e9es\n- Base de donn\u00e9es sur l'alimentation avec des milliers d'entr\u00e9es\n- Exportation en PDF et CSV\n- Sauvegarde\n- Fonction de rappel\n- Estimation de l'HbA1c\n- Statistiques\n- Mode sombre",
+      "it": "Diaguard \u00e8 un'applicazione gratuita, senza pubblicit\u00e0 e open source per le persone con diabete mellito.\n\nSostituisce il diario scritto a mano e aiuta l'utente a registrare, valutare ed esportare in modo semplice e veloce la glicemia e altri dati importanti come PDF o CSV. Grazie all'interfaccia chiaramente strutturata, l'utente ha sempre una visione d'insieme del suo diabete. L'app fornisce inoltre informazioni su diverse migliaia di alimenti, tra cui carboidrati e altre sostanze nutritive.\n\n<b>Caratteristiche</b\n\n- Monitorare rapidamente e facilmente la glicemia, l'insulina, i carboidrati, l'A1c, l'attivit\u00e0, il peso, il polso, il polso, la pressione sanguigna e la saturazione di ossigeno\n- Unit\u00e0 personalizzabili\n- Visualizzare il livello di glucosio nel sangue in un grafico\n- Registro dettagliato dei vostri dati\n- Banca dati alimentare con migliaia di voci\n- Esportazione PDF e CSV\n- Backup\n- Funzionalit\u00e0 di promemoria\n- Stima di HbA1c\n- Statistiche\n- Modo scuro",
+      "ru": "Diaguard - \u044d\u0442\u043e \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e\u0435, \u043d\u0435 \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0449\u0435\u0435 \u0440\u0435\u043a\u043b\u0430\u043c\u044b \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0441 \u043e\u0442\u043a\u0440\u044b\u0442\u044b\u043c \u0438\u0441\u0445\u043e\u0434\u043d\u044b\u043c \u043a\u043e\u0434\u043e\u043c \u0434\u043b\u044f \u043b\u044e\u0434\u0435\u0439 \u0441 \u0441\u0430\u0445\u0430\u0440\u043d\u044b\u043c \u0434\u0438\u0430\u0431\u0435\u0442\u043e\u043c.\n\n\u041e\u043d\u043e \u0437\u0430\u043c\u0435\u043d\u044f\u0435\u0442 \u0440\u0443\u043a\u043e\u043f\u0438\u0441\u043d\u044b\u0439 \u0434\u043d\u0435\u0432\u043d\u0438\u043a \u0438 \u043f\u043e\u043c\u043e\u0433\u0430\u0435\u0442 \u0437\u0430\u043f\u0438\u0441\u044b\u0432\u0430\u0442\u044c, \u0430\u043d\u0430\u043b\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0438 \u044d\u043a\u0441\u043f\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u0438 \u0433\u043b\u044e\u043a\u043e\u0437\u044b \u0432 \u043a\u0440\u043e\u0432\u0438 \u0438 \u0434\u0440\u0443\u0433\u0438\u0435 \u0432\u0430\u0436\u043d\u044b\u0435 \u0438\u0437\u043c\u0435\u0440\u0435\u043d\u0438\u044f. \u0411\u043b\u0430\u0433\u043e\u0434\u0430\u0440\u044f \u043f\u043e\u043d\u044f\u0442\u043d\u043e\u043c\u0443 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u0441\u043a\u043e\u043c\u0443 \u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441\u0443 \u0432\u044b \u0432\u0441\u0435\u0433\u0434\u0430 \u0441\u043c\u043e\u0436\u0435\u0442\u0435 \u0432\u0435\u0441\u0442\u0438 \u0443\u0447\u0435\u0442. \u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0442\u0430\u043a\u0436\u0435 \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u0435\u0442 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044e \u043e \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u0445 \u0442\u044b\u0441\u044f\u0447\u0430\u0445 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u0432 \u043f\u0438\u0442\u0430\u043d\u0438\u044f, \u0432\u043a\u043b\u044e\u0447\u0430\u044f \u0443\u0433\u043b\u0435\u0432\u043e\u0434\u044b \u0438 \u0434\u0440\u0443\u0433\u0438\u0435 \u043f\u0438\u0442\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0432\u0435\u0449\u0435\u0441\u0442\u0432\u0430.\n\n<b>\u0424\u0443\u043d\u043a\u0446\u0438\u0438</b>\n\n- \u0411\u044b\u0441\u0442\u0440\u044b\u0439 \u0438 \u043f\u0440\u043e\u0441\u0442\u043e\u0439 \u0432\u0432\u043e\u0434 \u0434\u0430\u043d\u043d\u044b\u0445 \u043e \u0433\u043b\u044e\u043a\u043e\u0437\u0435 \u0432 \u043a\u0440\u043e\u0432\u0438, \u0438\u043d\u0441\u0443\u043b\u0438\u043d\u0435, \u043f\u0440\u0438\u0435\u043c\u0430\u0445 \u043f\u0438\u0449\u0438, \u0430\u043a\u0442\u0438\u0432\u043d\u043e\u0441\u0442\u0438, HbA1c, \u0432\u0435\u0441\u0435, \u043f\u0443\u043b\u044c\u0441\u0435, \u0430\u0440\u0442\u0435\u0440\u0438\u0430\u043b\u044c\u043d\u043e\u043c \u0434\u0430\u0432\u043b\u0435\u043d\u0438\u0438 \u0438 \u043d\u0430\u0441\u044b\u0449\u0435\u043d\u0438\u0438 \u043a\u0440\u043e\u0432\u0438 \u043a\u0438\u0441\u043b\u043e\u0440\u043e\u0434\u043e\u043c\n- \u041d\u0430\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0435\u043c\u044b\u0435 \u0435\u0434\u0438\u043d\u0438\u0446\u044b \u0438\u0437\u043c\u0435\u0440\u0435\u043d\u0438\u044f\n- \u041d\u0430\u0433\u043b\u044f\u0434\u043d\u044b\u0435 \u0433\u0440\u0430\u0444\u0438\u043a\u0438 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u0443\u0440\u043e\u0432\u043d\u044f \u0433\u043b\u044e\u043a\u043e\u0437\u044b \u0432 \u043a\u0440\u043e\u0432\u0438\n- \u041f\u043e\u0434\u0440\u043e\u0431\u043d\u044b\u0439 \u0432\u044b\u0432\u043e\u0434 \u0434\u0430\u043d\u043d\u044b\u0445 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f \u0432 \u0436\u0443\u0440\u043d\u0430\u043b\n- \u041f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0431\u0430\u0437\u0430\u043b\u044c\u043d\u043e\u0439 \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u0438, \u043f\u043e\u043f\u0440\u0430\u0432\u043e\u0447\u043d\u043e\u0433\u043e \u043a\u043e\u044d\u0444\u0444\u0438\u0446\u0438\u0435\u043d\u0442\u0430 \u0438 \u043a\u043e\u044d\u0444\u0444\u0438\u0446\u0438\u0435\u043d\u0442\u0430 \u0431\u043e\u043b\u044e\u0441\u0430 \u043d\u0430 \u043f\u0440\u0438\u0435\u043c \u043f\u0438\u0449\u0438\n- \u0411\u0430\u0437\u0430 \u0434\u0430\u043d\u043d\u044b\u0445 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u0432 \u043f\u0438\u0442\u0430\u043d\u0438\u044f \u0441 \u0442\u044b\u0441\u044f\u0447\u0430\u043c\u0438 \u0437\u0430\u043f\u0438\u0441\u0435\u0439\n- \u042d\u043a\u0441\u043f\u043e\u0440\u0442 \u0432 \u0444\u043e\u0440\u043c\u0430\u0442\u044b PDF \u0438 CSV\n- \u0424\u0443\u043d\u043a\u0446\u0438\u044f \u0440\u0435\u0437\u0435\u0440\u0432\u043d\u043e\u0433\u043e \u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f\n- \u0424\u0443\u043d\u043a\u0446\u0438\u044f \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u044f\n- \u0420\u0430\u0441\u0447\u0435\u0442\u043d\u044b\u0439 \u0443\u0440\u043e\u0432\u0435\u043d\u044c HbA1c\n- \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430\n- \u0422\u0435\u043c\u043d\u044b\u0439 \u0440\u0435\u0436\u0438\u043c"
+    },
+    "donate": [
+      "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AM6HG633T4BWY&source=url"
+    ],
+    "featureGraphic": {
+      "de-DE": {
+        "name": "/com.faltenreich.diaguard/de-DE/featureGraphic_UjI3xytBUXNDKjdICyM5VxUpbtdFQI1tnam0VGNk8Bo=.png",
+        "sha256": "523237c72b415173432a37480b23395715296ed745408d6d9da9b4546364f01a",
+        "size": 210877
+      },
+      "en-US": {
+        "name": "/com.faltenreich.diaguard/en-US/featureGraphic_UjI3xytBUXNDKjdICyM5VxUpbtdFQI1tnam0VGNk8Bo=.png",
+        "sha256": "523237c72b415173432a37480b23395715296ed745408d6d9da9b4546364f01a",
+        "size": 210877
+      },
+      "es-ES": {
+        "name": "/com.faltenreich.diaguard/es-ES/featureGraphic_UjI3xytBUXNDKjdICyM5VxUpbtdFQI1tnam0VGNk8Bo=.png",
+        "sha256": "523237c72b415173432a37480b23395715296ed745408d6d9da9b4546364f01a",
+        "size": 210877
+      },
+      "fr-FR": {
+        "name": "/com.faltenreich.diaguard/fr-FR/featureGraphic_UjI3xytBUXNDKjdICyM5VxUpbtdFQI1tnam0VGNk8Bo=.png",
+        "sha256": "523237c72b415173432a37480b23395715296ed745408d6d9da9b4546364f01a",
+        "size": 210877
+      },
+      "it": {
+        "name": "/com.faltenreich.diaguard/it/featureGraphic_UjI3xytBUXNDKjdICyM5VxUpbtdFQI1tnam0VGNk8Bo=.png",
+        "sha256": "523237c72b415173432a37480b23395715296ed745408d6d9da9b4546364f01a",
+        "size": 210877
+      },
+      "ru": {
+        "name": "/com.faltenreich.diaguard/ru/featureGraphic_UjI3xytBUXNDKjdICyM5VxUpbtdFQI1tnam0VGNk8Bo=.png",
+        "sha256": "523237c72b415173432a37480b23395715296ed745408d6d9da9b4546364f01a",
+        "size": 210877
+      }
+    },
+    "icon": {
+      "de-DE": {
+        "name": "/com.faltenreich.diaguard/de-DE/icon_PGaNN1icT7zht0NiF5gH_sbHts9P6jK0Lv-mk2TzFL4=.png",
+        "sha256": "3c668d37589c4fbce1b74362179807fec6c7b6cf4fea32b42effa69364f314be",
+        "size": 34819
+      },
+      "en-US": {
+        "name": "/com.faltenreich.diaguard/en-US/icon_PGaNN1icT7zht0NiF5gH_sbHts9P6jK0Lv-mk2TzFL4=.png",
+        "sha256": "3c668d37589c4fbce1b74362179807fec6c7b6cf4fea32b42effa69364f314be",
+        "size": 34819
+      },
+      "es-ES": {
+        "name": "/com.faltenreich.diaguard/es-ES/icon_PGaNN1icT7zht0NiF5gH_sbHts9P6jK0Lv-mk2TzFL4=.png",
+        "sha256": "3c668d37589c4fbce1b74362179807fec6c7b6cf4fea32b42effa69364f314be",
+        "size": 34819
+      },
+      "fr-FR": {
+        "name": "/com.faltenreich.diaguard/fr-FR/icon_PGaNN1icT7zht0NiF5gH_sbHts9P6jK0Lv-mk2TzFL4=.png",
+        "sha256": "3c668d37589c4fbce1b74362179807fec6c7b6cf4fea32b42effa69364f314be",
+        "size": 34819
+      },
+      "it": {
+        "name": "/com.faltenreich.diaguard/it/icon_PGaNN1icT7zht0NiF5gH_sbHts9P6jK0Lv-mk2TzFL4=.png",
+        "sha256": "3c668d37589c4fbce1b74362179807fec6c7b6cf4fea32b42effa69364f314be",
+        "size": 34819
+      },
+      "ru": {
+        "name": "/com.faltenreich.diaguard/ru/icon_PGaNN1icT7zht0NiF5gH_sbHts9P6jK0Lv-mk2TzFL4=.png",
+        "sha256": "3c668d37589c4fbce1b74362179807fec6c7b6cf4fea32b42effa69364f314be",
+        "size": 34819
+      }
+    },
+    "issueTracker": "https://github.com/Faltenreich/Diaguard/issues",
+    "lastUpdated": 1758625387000,
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "de-DE": "Diaguard: Diabetes Tagebuch",
+      "en-US": "Diaguard: Diabetes Diary",
+      "es-ES": "Diaguard: Diario de la diabetes",
+      "fr-FR": "Diaguard: Journal du diab\u00e8te",
+      "it": "Diaguard: Diario del diabete",
+      "ru": "Diaguard: \u0414\u043d\u0435\u0432\u043d\u0438\u043a \u0434\u0438\u0430\u0431\u0435\u0442\u0438\u043a\u0430"
+    },
+    "preferredSigner": "6f67b555a0fa64c4f0f16c85fa5796e407e9f9977db35406e62e0f42346045cd",
+    "screenshots": {
+      "phone": {
+        "de-DE": [
+          {
+            "name": "/com.faltenreich.diaguard/de-DE/phoneScreenshots/1.png",
+            "sha256": "b64a431371be62fe235c304f0868d004aeeee793f368ade3d6aa2396455180c7",
+            "size": 105480
+          },
+          {
+            "name": "/com.faltenreich.diaguard/de-DE/phoneScreenshots/2.png",
+            "sha256": "2ed78f31fd751af927e9ef1600f991d06e2ebd91cd758d49feb83fda15b5217c",
+            "size": 191275
+          },
+          {
+            "name": "/com.faltenreich.diaguard/de-DE/phoneScreenshots/3.png",
+            "sha256": "845ae6d781cb9227e665ac9c5684bc908240e48b050fb976846e0352ddae6531",
+            "size": 88662
+          },
+          {
+            "name": "/com.faltenreich.diaguard/de-DE/phoneScreenshots/4.png",
+            "sha256": "bece84eb43a2a7db8f86196f16c92a8675ef919d566286ff56af139a872d90a0",
+            "size": 114985
+          },
+          {
+            "name": "/com.faltenreich.diaguard/de-DE/phoneScreenshots/5.png",
+            "sha256": "a6c4ff0a2d6eb4f6c713bebabfdc40bf879349b54e5126bb77410b06d127acff",
+            "size": 145433
+          },
+          {
+            "name": "/com.faltenreich.diaguard/de-DE/phoneScreenshots/6.png",
+            "sha256": "a5bbc4ac7f4919fcd732c11b5e25fa6df906e9f5fe098369a954c97bbbf3a4a6",
+            "size": 155459
+          },
+          {
+            "name": "/com.faltenreich.diaguard/de-DE/phoneScreenshots/7.png",
+            "sha256": "4f55910f5e5bda0f91aa8d5618d4b7103cfdae327752ad64a943c9bbd84e4b71",
+            "size": 106709
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/com.faltenreich.diaguard/en-US/phoneScreenshots/1.png",
+            "sha256": "709217426ff78d89d341192d600172f1684182faee9fe8e209959d445cd2dab9",
+            "size": 109931
+          },
+          {
+            "name": "/com.faltenreich.diaguard/en-US/phoneScreenshots/2.png",
+            "sha256": "685dba2bd25196bc16fa497f7e221b1a72e90d7e54aa4f35fcedc4161d8d9789",
+            "size": 191578
+          },
+          {
+            "name": "/com.faltenreich.diaguard/en-US/phoneScreenshots/3.png",
+            "sha256": "12d3687e90bf7d170d456d5b700550e60c69ed7282539317a0957813d05dd82f",
+            "size": 90873
+          },
+          {
+            "name": "/com.faltenreich.diaguard/en-US/phoneScreenshots/4.png",
+            "sha256": "626fb071d3bce38490d0b6f27934650d7cdc160f9b04fd2f4fa9f1934f8226b3",
+            "size": 115533
+          },
+          {
+            "name": "/com.faltenreich.diaguard/en-US/phoneScreenshots/5.png",
+            "sha256": "fa26c4670f818fa03b8a72797aeb8082608860764be92fc55c2565757955ea62",
+            "size": 141528
+          },
+          {
+            "name": "/com.faltenreich.diaguard/en-US/phoneScreenshots/6.png",
+            "sha256": "757240e5dbd7635fb5defc39cc164bb49d4d21f6c22bc3dd6ca0335a68f83a39",
+            "size": 139090
+          },
+          {
+            "name": "/com.faltenreich.diaguard/en-US/phoneScreenshots/7.png",
+            "sha256": "ee29206926b8e3676e5ad953b5b4f03e25f74503beb7771d1eed09dd34095226",
+            "size": 109123
+          }
+        ],
+        "es-ES": [
+          {
+            "name": "/com.faltenreich.diaguard/es-ES/phoneScreenshots/1.png",
+            "sha256": "820e27cc19c14c9c855c16a1be2ca29e1ce37e72eb410a23b8f08029327aadbe",
+            "size": 111085
+          },
+          {
+            "name": "/com.faltenreich.diaguard/es-ES/phoneScreenshots/2.png",
+            "sha256": "00f41defa1f7094f4f0b4ad921db47540578ce4fd7bbb01899632b16ccc811a8",
+            "size": 196729
+          },
+          {
+            "name": "/com.faltenreich.diaguard/es-ES/phoneScreenshots/3.png",
+            "sha256": "ac26603b898ab0a4527bc59af6c9b432cc022d9624c0fd5ac063ae66619ca05d",
+            "size": 89214
+          },
+          {
+            "name": "/com.faltenreich.diaguard/es-ES/phoneScreenshots/4.png",
+            "sha256": "08cce2f0056b3e45dd9a37a887ac16b7505625925486617af10e922963191b49",
+            "size": 113378
+          },
+          {
+            "name": "/com.faltenreich.diaguard/es-ES/phoneScreenshots/5.png",
+            "sha256": "7307b7af9f683e8528427b796732e03ac5abfc104d77f7d1a237feb03745b801",
+            "size": 156269
+          },
+          {
+            "name": "/com.faltenreich.diaguard/es-ES/phoneScreenshots/6.png",
+            "sha256": "45dfeff0b31cb867b7b27a63bd47666448cd15cc00cff7549063b35993c889f4",
+            "size": 142050
+          },
+          {
+            "name": "/com.faltenreich.diaguard/es-ES/phoneScreenshots/7.png",
+            "sha256": "3ef8ddc2c2b298a771ca60f4fdf10cc1d4aa25bc3dc0e288a035d50481dd4665",
+            "size": 108409
+          }
+        ],
+        "fr-FR": [
+          {
+            "name": "/com.faltenreich.diaguard/fr-FR/phoneScreenshots/1.png",
+            "sha256": "27bc9217ce34e3865cff802ed7ae33379e3666bbfd7f05b56099f06c1091e76a",
+            "size": 109000
+          },
+          {
+            "name": "/com.faltenreich.diaguard/fr-FR/phoneScreenshots/2.png",
+            "sha256": "ce4100d5309cd86b6d158b3cb72699ede12a6eb8440a078af3db92e533fa2fb1",
+            "size": 196237
+          },
+          {
+            "name": "/com.faltenreich.diaguard/fr-FR/phoneScreenshots/3.png",
+            "sha256": "ac26603b898ab0a4527bc59af6c9b432cc022d9624c0fd5ac063ae66619ca05d",
+            "size": 89214
+          },
+          {
+            "name": "/com.faltenreich.diaguard/fr-FR/phoneScreenshots/4.png",
+            "sha256": "04de0fd721a898cd4ab0540d67ca4251686025d7240d8024e6f509ec16bce44f",
+            "size": 113758
+          },
+          {
+            "name": "/com.faltenreich.diaguard/fr-FR/phoneScreenshots/5.png",
+            "sha256": "69ea2ea27dd83277eeac513895d5c193c3370ae9fef6451df6067eb827ecf221",
+            "size": 149034
+          },
+          {
+            "name": "/com.faltenreich.diaguard/fr-FR/phoneScreenshots/6.png",
+            "sha256": "41f4a2859945782640e8185bf52f1101ec33d810d2b43bcca03067bcd931c1d1",
+            "size": 154740
+          },
+          {
+            "name": "/com.faltenreich.diaguard/fr-FR/phoneScreenshots/7.png",
+            "sha256": "122f40a02354435f5c8f6b4ea2cce1adf1127eabfdb8a74879eeb7b2e58e871f",
+            "size": 109751
+          }
+        ],
+        "it": [
+          {
+            "name": "/com.faltenreich.diaguard/it/phoneScreenshots/1.png",
+            "sha256": "2d8467ca7da3d99a809e5d3b76d9e3140a217e0dd8a86d0fe4e17fff9092e456",
+            "size": 112150
+          },
+          {
+            "name": "/com.faltenreich.diaguard/it/phoneScreenshots/2.png",
+            "sha256": "2eda99a5048a54e248ca3195160be2b57f6d5aa41e092b21904af4a4e451c9b3",
+            "size": 197772
+          },
+          {
+            "name": "/com.faltenreich.diaguard/it/phoneScreenshots/3.png",
+            "sha256": "cd8205ba12a9cffb3e3240c3047612680f665c5b629470fd6d4dc06b87d4c107",
+            "size": 88085
+          },
+          {
+            "name": "/com.faltenreich.diaguard/it/phoneScreenshots/4.png",
+            "sha256": "e3a7d9322383430834bd7a3a6608009d359c3a899224f6ee24a6c98ea4a210b7",
+            "size": 112443
+          },
+          {
+            "name": "/com.faltenreich.diaguard/it/phoneScreenshots/5.png",
+            "sha256": "9640570a305a91e87d0ffb889bf80011b7451b1902b455277a6504029b867e10",
+            "size": 144613
+          },
+          {
+            "name": "/com.faltenreich.diaguard/it/phoneScreenshots/6.png",
+            "sha256": "05835da7556125a64063fd0fa24974cff2e4e36b1586c13f6905dda6b3b1beb4",
+            "size": 160404
+          },
+          {
+            "name": "/com.faltenreich.diaguard/it/phoneScreenshots/7.png",
+            "sha256": "899debffc179a76e524fa22f24cee648f468bd623ffd6a2c81615c364e708521",
+            "size": 118326
+          }
+        ],
+        "ru": [
+          {
+            "name": "/com.faltenreich.diaguard/ru/phoneScreenshots/1.png",
+            "sha256": "5d3ae7c52632adf2ebc293689a6f6dc4f33c42ba6249e7fafe4c4dcef82d1b53",
+            "size": 56546
+          },
+          {
+            "name": "/com.faltenreich.diaguard/ru/phoneScreenshots/2.png",
+            "sha256": "96d7a22ad1999ee3642a47830c57100e832377dbd1a281177498848ad6dd0a42",
+            "size": 82376
+          },
+          {
+            "name": "/com.faltenreich.diaguard/ru/phoneScreenshots/3.png",
+            "sha256": "dd0dfa80f67a5fc72081ce2bb9eb85d3660c2fabccf4b515444c3d29a34f00cf",
+            "size": 57304
+          },
+          {
+            "name": "/com.faltenreich.diaguard/ru/phoneScreenshots/4.png",
+            "sha256": "cf284ec086d910b1582cf25f1d3e3f232067f04ec4dc4320fbd4a2b9f97f1241",
+            "size": 59080
+          },
+          {
+            "name": "/com.faltenreich.diaguard/ru/phoneScreenshots/5.png",
+            "sha256": "43e3b25421db0f0153759fa45b8cc1a44798e60ef20b0f7aebbcc8106310b15d",
+            "size": 94768
+          },
+          {
+            "name": "/com.faltenreich.diaguard/ru/phoneScreenshots/6.png",
+            "sha256": "5cbc8113b5f3ebd08c162dd32eec7cecc9c6d03b821cdf1a162d06d141169ce8",
+            "size": 64288
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/Faltenreich/Diaguard",
+    "summary": {
+      "de-DE": "Diabetes Tagebuch und Lebensmitteldatenbank",
+      "en-US": "Diabetes diary and food database",
+      "es-ES": "Diario de diabetes y base de datos de alimentos",
+      "fr-FR": "Journal du diab\u00e8te et base de donn\u00e9es sur les aliments",
+      "it": "Diario del diabete e banca dati alimentare",
+      "ru": "\u0414\u043d\u0435\u0432\u043d\u0438\u043a \u0434\u0438\u0430\u0431\u0435\u0442\u0430 \u0438 \u0431\u0430\u0437\u0430 \u0434\u0430\u043d\u043d\u044b\u0445 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u0432 \u043f\u0438\u0442\u0430\u043d\u0438\u044f"
+    },
+    "webSite": "https://diaguard.wordpress.com/"
+  },
+  "version": {
+    "added": 1758625387000,
+    "file": {
+      "ipfsCIDv1": "bafybeic7r54fhipaxx2vdog5qi7jvr3zn5ubkfgebalgnek5todfhfvhsm",
+      "name": "/com.faltenreich.diaguard_68.apk",
+      "sha256": "1355f824abc85e7601b050008fbeb5330fa8c0034a4c012c2b8189d2de6c222e",
+      "size": 12214039
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "6f67b555a0fa64c4f0f16c85fa5796e407e9f9977db35406e62e0f42346045cd"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "maxSdkVersion": 28,
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "com.faltenreich.diaguard.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "maxSdkVersion": 28,
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 68,
+      "versionName": "3.15.1"
+    },
+    "src": {
+      "name": "/com.faltenreich.diaguard_68_src.tar.gz",
+      "sha256": "f4a29861cb6ed1cc99c142db17bf648fe910adb6b562974a91395a6453c629ce",
+      "size": 15574765
+    }
+  }
+}

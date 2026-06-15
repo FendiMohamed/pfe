@@ -1,0 +1,171 @@
+﻿{
+  "apk_path": "data/test_apks/real/material-files/material-files.apk",
+  "apk_sha256": "ebc5138b6f713f0f73b5467a1a8a4ac3ccfcb2e82135372665b6811a8947641f",
+  "apk_size": 9751305,
+  "dex_files": [
+    "classes.dex"
+  ],
+  "forensic_summary": {
+    "extraction_risk": "low",
+    "indicators": [
+      {
+        "code": "native-heavy",
+        "detail": "APK contains 16 native libraries.",
+        "severity": "info"
+      }
+    ],
+    "native_abis": [
+      "arm64-v8a",
+      "armeabi-v7a",
+      "x86",
+      "x86_64"
+    ],
+    "native_library_count": 16,
+    "nonstandard_dex_files": [],
+    "standard_dex_files": [
+      "classes.dex"
+    ],
+    "zip_entries": 1663
+  },
+  "has_multidex": false,
+  "manifest_metadata": {
+    "min_sdk": "21",
+    "package_name": "me.zhanghai.android.files",
+    "parse_error": null,
+    "parse_status": "parsed",
+    "permissions": [
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.ACCESS_WIFI_STATE",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+      "android.permission.INTERNET",
+      "android.permission.MANAGE_EXTERNAL_STORAGE",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.QUERY_ALL_PACKAGES",
+      "android.permission.REQUEST_INSTALL_PACKAGES",
+      "android.permission.WAKE_LOCK",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "com.android.launcher.permission.INSTALL_SHORTCUT",
+      "me.zhanghai.android.files.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "target_sdk": "34",
+    "version_code": "39",
+    "version_name": "1.7.4"
+  },
+  "manifest_present": true,
+  "native_libraries": [
+    {
+      "abi": "arm64-v8a",
+      "filename": "libarchive-jni.so",
+      "path": "lib/arm64-v8a/libarchive-jni.so",
+      "sha256": "ff32dc97a80f4b709a329e5927c83d29ae1c0e042090e74bc701048ff399c83f",
+      "size": 1612360
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libhiddenapi.so",
+      "path": "lib/arm64-v8a/libhiddenapi.so",
+      "sha256": "e05b8bcf743ca252ef607b1f24fd856128c0223bfd4c5553ad914a9ed4400bd6",
+      "size": 4688
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libselinux-jni.so",
+      "path": "lib/arm64-v8a/libselinux-jni.so",
+      "sha256": "e73033b812461c66bf45b099f4a958df484ad9ea69fbcd92221919c946b41275",
+      "size": 19752
+    },
+    {
+      "abi": "arm64-v8a",
+      "filename": "libsyscall.so",
+      "path": "lib/arm64-v8a/libsyscall.so",
+      "sha256": "d04cde70d766dc8cda0072377343b6ea7cac82fe82e2ccbdde54335807e7a8f6",
+      "size": 41808
+    },
+    {
+      "abi": "armeabi-v7a",
+      "filename": "libarchive-jni.so",
+      "path": "lib/armeabi-v7a/libarchive-jni.so",
+      "sha256": "5a6ea70e6f75945f5ad197f0d32b7581860ceb851b23cbc8cf5207d9940d6cd3",
+      "size": 1195920
+    },
+    {
+      "abi": "armeabi-v7a",
+      "filename": "libhiddenapi.so",
+      "path": "lib/armeabi-v7a/libhiddenapi.so",
+      "sha256": "0a4e5ff1a5517b10e2a23cf2094349ce71f5d30bc3195db1aa6314a173a887f5",
+      "size": 3336
+    },
+    {
+      "abi": "armeabi-v7a",
+      "filename": "libselinux-jni.so",
+      "path": "lib/armeabi-v7a/libselinux-jni.so",
+      "sha256": "fcf32d1261ec956b98d2dc1dd138bc8fdcc5b350ec48c4fff412885fcb125cb2",
+      "size": 13596
+    },
+    {
+      "abi": "armeabi-v7a",
+      "filename": "libsyscall.so",
+      "path": "lib/armeabi-v7a/libsyscall.so",
+      "sha256": "dbcce876576f08ffafbd913b97317e5d7e3ac52e74fba0f03863f68b537b3553",
+      "size": 29140
+    },
+    {
+      "abi": "x86",
+      "filename": "libarchive-jni.so",
+      "path": "lib/x86/libarchive-jni.so",
+      "sha256": "0d04c13b1ca3f82805d8f4af71b5de6045086e12a8ecdf8faaf866791d5f1b22",
+      "size": 1763024
+    },
+    {
+      "abi": "x86",
+      "filename": "libhiddenapi.so",
+      "path": "lib/x86/libhiddenapi.so",
+      "sha256": "cc40d5b0032c0b8db501f2dfce45c4efd41b437da9090d4cfa0d15dd5eac4cd7",
+      "size": 3572
+    },
+    {
+      "abi": "x86",
+      "filename": "libselinux-jni.so",
+      "path": "lib/x86/libselinux-jni.so",
+      "sha256": "6c1b6f00a9e0501f0d8fee88ae4ca4522b084c12f6f48030051d5ac05ec6aba1",
+      "size": 17304
+    },
+    {
+      "abi": "x86",
+      "filename": "libsyscall.so",
+      "path": "lib/x86/libsyscall.so",
+      "sha256": "b6380be1cfc4ca2f871211e76ce5fffa2b85dc2b288fda7f840a6494e617df52",
+      "size": 36860
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libarchive-jni.so",
+      "path": "lib/x86_64/libarchive-jni.so",
+      "sha256": "1298e4d8f0dc7d88052f684a170c4e41fe87927a3db13021831c45c931668e6d",
+      "size": 1810216
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libhiddenapi.so",
+      "path": "lib/x86_64/libhiddenapi.so",
+      "sha256": "9f0635280433d15b256c031f65f992fc3703f8dff7b210ae11d549b8c82881c8",
+      "size": 4656
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libselinux-jni.so",
+      "path": "lib/x86_64/libselinux-jni.so",
+      "sha256": "b657f4f19f55ac85330069e6e4f60cf282ab7a45b7f837175390baaa557f2fcf",
+      "size": 20296
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libsyscall.so",
+      "path": "lib/x86_64/libsyscall.so",
+      "sha256": "e410a25ae2d9b57e8d1a49635bf1f87a6d6736e712d2a18042e9d9d935e65e7d",
+      "size": 40832
+    }
+  ],
+  "resources_arsc_present": true
+}

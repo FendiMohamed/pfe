@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "added": 1438041600000,
+    "authorEmail": "easyxkcd@gmail.com",
+    "authorName": "tomanders",
+    "categories": [
+      "Reading"
+    ],
+    "changelog": "https://github.com/tom-anders/Easy_xkcd/blob/HEAD/CHANGELOG.md",
+    "description": {
+      "en-US": "A fast and beautiful way to view your favorite xkcd comics.\n\nFeatures:\n\nComic Browser:\n\n- Offline Mode\n- Favorites\n- Notifications\n- Explain xkcd integration \n- Long press to view alt text\n- Overview Mode\n- Open Reddit Thread\n- Search for title, transcript or number\n- Share comic url or image\n- Support for large images (e.g comic 657)\n- Option to display alt text by default\n\nWhat If?:\n\n- Full support for footnotes, formulas and alt text\n- Offline mode and notifications\n- Mark articles as read and hide them\n- Swipe between articles (disabled by default)\n- Quick search for article titles\n- Random articles\n\nGeneral:\n\n- Custom themes\n- Material design elements like Snackbars, Floating Action Button, tinted Status Bar, animations....\n- (Auto) Night mode (with option to invert comic colors)\n"
+    },
+    "donate": [
+      "https://www.paypal.com/donate/?hosted_button_id=9P95ACMNTXPM6"
+    ],
+    "featureGraphic": {
+      "en-US": {
+        "name": "/de.tap.easy_xkcd/en-US/featureGraphic_UIKO8QTJ0iakzabHFjeyKalCqjtIK0PkAypnu4sdGIg=.png",
+        "sha256": "50828ef104c9d226a4cda6c71637b229a942aa3b482b43e4032a67bb8b1d1888",
+        "size": 573911
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/de.tap.easy_xkcd/en-US/icon_GLoVGkq1hPRz7N4G7_EwtcGNNZxI_d5-oycqrpdiong=.png",
+        "sha256": "18ba151a4ab584f473ecde06eff130b5c18d359c48fdde7ea3272aae9762a278",
+        "size": 36824
+      }
+    },
+    "issueTracker": "https://github.com/tom-anders/Easy_xkcd/issues",
+    "lastUpdated": 1696790092000,
+    "license": "Apache-2.0",
+    "name": {
+      "en-US": "Easy Xkcd"
+    },
+    "preferredSigner": "cd03952f93fd430252ff8c00b790a8f2ea9c17490a1f15f7d7d68a03a8493204",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/de.tap.easy_xkcd/en-US/phoneScreenshots/1.png",
+            "sha256": "23a8d643ec73078c4af934f0916b299d601afda2b4b2173c2e41430f149a60d7",
+            "size": 652709
+          },
+          {
+            "name": "/de.tap.easy_xkcd/en-US/phoneScreenshots/2.png",
+            "sha256": "66bd35a9f4a6761a6ecff5a8b1b4a46fff560fb271c02bf90d51c02b32d9a624",
+            "size": 645300
+          },
+          {
+            "name": "/de.tap.easy_xkcd/en-US/phoneScreenshots/3.png",
+            "sha256": "ffa534b7b5ef8ebe7bfc90c64a46d851bea316b116139b0800aa5ed7f8ba7cb0",
+            "size": 259108
+          },
+          {
+            "name": "/de.tap.easy_xkcd/en-US/phoneScreenshots/4.png",
+            "sha256": "b068fd0ff80cb97d64b1d0aa5873f9e57e509734da34db50cda1f32fa375d958",
+            "size": 2014191
+          },
+          {
+            "name": "/de.tap.easy_xkcd/en-US/phoneScreenshots/Screenshot_20151209-183348.png",
+            "sha256": "e1e74e4329849078410e3ee7c3d64c4b354271d98c335cdac4a787ddcf382cd3",
+            "size": 1546668
+          },
+          {
+            "name": "/de.tap.easy_xkcd/en-US/phoneScreenshots/Screenshot_20200321-161938.png",
+            "sha256": "2d13928869df7822ae0ba5aee8b464480a46f52e306ba24fe38a2bd9cae81563",
+            "size": 291736
+          },
+          {
+            "name": "/de.tap.easy_xkcd/en-US/phoneScreenshots/Screenshot_20200321-162001.png",
+            "sha256": "cd6fab9b4f4f3b25b8bf6f843cb52dccd0ebc602f1e6b7fb73b66faee874f17a",
+            "size": 325606
+          },
+          {
+            "name": "/de.tap.easy_xkcd/en-US/phoneScreenshots/Screenshot_20200321-162025.png",
+            "sha256": "948b9d7465f37a23548837ab415ca444ede5d86e1513769b6ee7f9b7842e3505",
+            "size": 168437
+          },
+          {
+            "name": "/de.tap.easy_xkcd/en-US/phoneScreenshots/Screenshot_20200321-162035.png",
+            "sha256": "909e919c46943b536326b7994fcd4c043f3bea82e2b361398df67412f37f9a86",
+            "size": 459285
+          },
+          {
+            "name": "/de.tap.easy_xkcd/en-US/phoneScreenshots/Screenshot_20200321-162201.png",
+            "sha256": "701a8f66f91adbb06d6b5fbbb11c2a83b727acb839becb855319024b2ab01db0",
+            "size": 443315
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/tom-anders/Easy_xkcd",
+    "summary": {
+      "en-US": "Easy xkcd is an Open Source reader for xkcd"
+    }
+  },
+  "version": {
+    "added": 1696790092000,
+    "antiFeatures": {
+      "NonFreeNet": {
+        "en-US": "xkcd website itself uses a not entirely libre license (CC BY-NC)."
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeibgcitsobyj6qce4q62dfgq4dg7ye6gktadux6pplo5rg73cl7eda",
+      "name": "/de.tap.easy_xkcd_193.apk",
+      "sha256": "bf2b2c7dd23d9ac1ad7a8c1daf3a9a17a64e6731ca90f3d3fe14617b57cf0c40",
+      "size": 15482183
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "cd03952f93fd430252ff8c00b790a8f2ea9c17490a1f15f7d7d68a03a8493204"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "de.tap.easy_xkcd.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 33
+      },
+      "versionCode": 193,
+      "versionName": "8.4"
+    },
+    "src": {
+      "name": "/de.tap.easy_xkcd_193_src.tar.gz",
+      "sha256": "143fd334c56f22f1440f7375482512702ce8d8f78c838591909bbbb451b242a3",
+      "size": 16139178
+    }
+  }
+}

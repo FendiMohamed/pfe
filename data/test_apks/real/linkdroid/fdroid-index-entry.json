@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "added": 1727602291000,
+    "authorName": "David Aderbauer",
+    "categories": [
+      "Bookmark",
+      "Internet",
+      "Reading"
+    ],
+    "description": {
+      "de": "<b>LinkDroid erm\u00f6glicht die einfache native Nutzung von <em>Linkwarden</em> auf Android-Ger\u00e4ten.</b>\nDu kannst schnell deine Links direkt mit deiner <em>Linkwarden</em> Instanz teilen, auf die Webapp zugreifen und deine Sammlung verwalten!\nWeitere Optionen erleichtern dir die Verwendung von <em>Linkwarden</em> auf Android!\n\n<ul>\n    <li>Schnelles Link teilen</li>\n    <li>Eingebauter Webzugriff</li>\n    <li>Direkte Verbindung zu deiner Linkwarden Instanz</li>\n    <li>Tablet Unterst\u00fctzung</li>\n    <li>Unterst\u00fctzung f\u00fcr viele Sprachen wie fr, es, de, pt, pl, zh, uk, ...</li>\n    <li>Kein Tracking oder Drittanbieterdienste</li>\n    <li>Komplett FOSS unter GPLv3 Lizenz</li>\n</ul>\n\nDie App funktioniert am besten auf Ger\u00e4ten mit Android 13+. Auf fr\u00fcheren Versionen sind die Farben der Webansicht verf\u00e4lscht.\nFalls du eine L\u00f6sung f\u00fcr dieses Problem kennst lass es mich bitte wissen!\nF\u00fcr eine optimale Erfahrung verwende bitte ein Authentifizierungstoken in den Einstellungen.\n\nFragen, Feedback und Problemmeldungen in einem der Repositories auf github und gitlab sind jederzeit willkommen.\nWir sind immer auf der Suche nach \u00dcbersetzern und \u00dcbersetzungen und Beitragenden zum Code! Wenn du eine Idee f\u00fcr die App hast lass es uns wissen!\n\nSupport f\u00fcr Android Versionen 5 bis 8.1+ wurde in Version 2.0.0 eingestellt um moderne features nutzen zu k\u00f6nnen.",
+      "en-US": "<b>LinkDroid is an companion app for <em>Linkwarden</em> on Android.</b>\nYou can quickly share links directly to your <em>Linkwarden</em> instance via the context menu, access the webapp and manage your collection!\nVarious options help in improving your <em>Linkwarden</em> experience on Android!\n\n<ul>\n    <li>Quick link sharing</li>\n    <li>Built-in web browsing</li>\n    <li>Direct connection to your Linkwarden instance</li>\n    <li>Tablet support</li>\n    <li>Support for various languages including fr, es, de, pt, pl, zh, uk, ...</li>\n    <li>No tracking or third party-services</li>\n    <li>Completely FOSS under GPLv3 license</li>\n</ul>\n\nThe app works best on Android version 13 and above. On lower versions the colors of the webview are messed up.\nIf you know a fix for that please let me know!\nMake sure to add an auth token in the settings for an optimal experience.\n\nYou're always welcome to leave questions, feedback and issues in the repositories on gitlab and github.\nWe're always looking for new translators and contributors! If you have an idea for the app let us know!\n\nSupport of API levels 21 to 26 was dropped in version 2.0.0 in favour of modern features.",
+      "fr": "<b>LinkDroid is an companion app for <em>Linkwarden</em> on Android.</b>\nYou can quickly share links directly to your <em>Linkwarden</em> instance via the context menu, access the webapp and manage your collection!\nVarious options help in improving your <em>Linkwarden</em> experience on Android!\n\n<ul>\n    <li>Quick link sharing</li>\n    <li>Built-in web browsing</li>\n    <li>Direct connection to your Linkwarden instance</li>\n    <li>Tablet support</li>\n    <li>Support for various languages including fr, es, de, pt, pl, zh, uk, ...</li>\n    <li>No tracking or third party-services</li>\n    <li>Completely FOSS under GPLv3 license</li>\n</ul>\n\nThe app works best on Android version 13 and above. On lower versions the colors of the webview are messed up.\nIf you know a fix for that please let me know!\nMake sure to add an auth token in the settings for an optimal experience.\n\nYou're always welcome to leave questions, feedback and issues in the repositories on gitlab and github.\nWe're always looking for new translators and contributors! If you have an idea for the app let us know!\n\nSupport of API levels 21 to 26 was dropped in version 2.0.0 in favour of modern features."
+    },
+    "featureGraphic": {
+      "en-US": {
+        "name": "/com.sbv.linkdroid/en-US/featureGraphic_5JFUgVExj42P6mTLu8if2ndeTfH2XrgB7FoGRF0u_0w=.png",
+        "sha256": "e491548151318f8d8fea64cbbbc89fda775e4df1f65eb801ec5a06445d2eff4c",
+        "size": 1210954
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/com.sbv.linkdroid/en-US/icon_C8IflCf9cC_knR8093_6oYX63nM-No8eBjkkC0S3xMw=.png",
+        "sha256": "0bc21f9427fd702fe49d1f34f77ffaa185fade733e368f1e0639240b44b7c4cc",
+        "size": 139089
+      }
+    },
+    "issueTracker": "https://github.com/Dacid99/LinkDroid-for-Linkwarden/issues",
+    "lastUpdated": 1777497257511,
+    "license": "GPL-3.0-only",
+    "name": {
+      "de": "LinkDroid f\u00fcr Linkwarden",
+      "en-US": "LinkDroid for Linkwarden",
+      "et": "LinkDroid Linkwardeni jaoks"
+    },
+    "preferredSigner": "f9fdd3561b63e897ecf40fcb0efd0f530433b452a0492e077b09deb97dc38723",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.sbv.linkdroid/en-US/phoneScreenshots/1.jpg",
+            "sha256": "37a861e38b7e16da0c3119117e35dc89e1319d0aed8b34c5eddd8c41a525c1c0",
+            "size": 58972
+          },
+          {
+            "name": "/com.sbv.linkdroid/en-US/phoneScreenshots/1.png",
+            "sha256": "658fb66f93abd58e512db09882034088c3efef781d736e83350a73a590177f8d",
+            "size": 128670
+          },
+          {
+            "name": "/com.sbv.linkdroid/en-US/phoneScreenshots/2.jpg",
+            "sha256": "f0f6c925f8e6ed9e2cb080d97ac1f4a797191aa1c34b1f6af0feef39add9cc3d",
+            "size": 50043
+          },
+          {
+            "name": "/com.sbv.linkdroid/en-US/phoneScreenshots/2.png",
+            "sha256": "f9f4be43053fd82894722a37ff85061a41b8f24de6530d8eaa900b6f3cb578f6",
+            "size": 86780
+          },
+          {
+            "name": "/com.sbv.linkdroid/en-US/phoneScreenshots/3.jpg",
+            "sha256": "cce23c9136a8c644821c738672a8dc5962ec764bd68c1f3c06b25743ed5f78ba",
+            "size": 64614
+          },
+          {
+            "name": "/com.sbv.linkdroid/en-US/phoneScreenshots/3.png",
+            "sha256": "e663a3c28cea884b2a29a37fb275a40d60ee8ea085a2ba88b391e5bba38be6d9",
+            "size": 60352
+          },
+          {
+            "name": "/com.sbv.linkdroid/en-US/phoneScreenshots/4.jpg",
+            "sha256": "861be247ef49dbb18326b93475ffecb90eeb4ba359fb0a420a448efa69149207",
+            "size": 64635
+          },
+          {
+            "name": "/com.sbv.linkdroid/en-US/phoneScreenshots/4.png",
+            "sha256": "8231814812c34230978b2968f1bec9fdddd47e3b9c9eaccb37d81fe1e930c7d5",
+            "size": 86145
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/Dacid99/LinkDroid-for-Linkwarden",
+    "summary": {
+      "de": "Die App f\u00fcr Linkwarden auf Android - Greife schnell auf deine Linkwarden Instanz",
+      "en-US": "Companion App for Linkwarden on Android - Quickly access your Linkwarden instanc",
+      "et": "Androidile loodud kaaslane sinu Linkwardeni serveri jaoks - mugav ligip\u00e4\u00e4s Linkw"
+    }
+  },
+  "version": {
+    "added": 1777497257511,
+    "file": {
+      "ipfsCIDv1": "bafybeic4e3tjmxfn4vw25jhubbnf6xj7xnrwjoovfbdtvwmjabvqzx52ge",
+      "name": "/com.sbv.linkdroid_26.apk",
+      "sha256": "c152f4cece2a81bc19f95bc5832b9e7f016d900647b557f0f53e1cbafd5434ed",
+      "size": 6642905
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "f9fdd3561b63e897ecf40fcb0efd0f530433b452a0492e077b09deb97dc38723"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.ACCESS_WIFI_STATE"
+        },
+        {
+          "name": "com.sbv.linkdroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 27,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 26,
+      "versionName": "2.1.9"
+    },
+    "src": {
+      "name": "/com.sbv.linkdroid_26_src.tar.gz",
+      "sha256": "4c8a0b038dd3b7e43f15ccf46d7914ece39c63b27522ae9877543fafdc4e5cbe",
+      "size": 2324882
+    },
+    "whatsNew": {
+      "en-US": "- updated dependencies"
+    }
+  }
+}

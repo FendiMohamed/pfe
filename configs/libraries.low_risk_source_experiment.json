@@ -1,0 +1,69 @@
+{
+  "libraries": [
+    {
+      "artifact": "appcompat",
+      "group": "androidx.appcompat",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.2.0",
+        "1.6.1"
+      ]
+    },
+    {
+      "artifact": "core",
+      "group": "androidx.core",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.3.0"
+      ]
+    },
+    {
+      "artifact": "fragment",
+      "group": "androidx.fragment",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.3.6"
+      ]
+    },
+    {
+      "artifact": "lifecycle-runtime",
+      "group": "androidx.lifecycle",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.1.0",
+        "2.5.1"
+      ]
+    },
+    {
+      "artifact": "lifecycle-viewmodel",
+      "group": "androidx.lifecycle",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.5.1"
+      ]
+    },
+    {
+      "artifact": "recyclerview",
+      "group": "androidx.recyclerview",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "kotlinx-coroutines-android",
+      "group": "org.jetbrains.kotlinx",
+      "packaging": "jar",
+      "versions": [
+        "1.6.1",
+        "1.6.4"
+      ]
+    }
+  ]
+}

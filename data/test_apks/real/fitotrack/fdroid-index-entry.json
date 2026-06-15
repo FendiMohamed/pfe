@@ -1,0 +1,203 @@
+{
+  "metadata": {
+    "added": 1575936000000,
+    "authorName": "Jannis",
+    "bitcoin": "3BSbGRbJaiSxVg3D6nVRK5C1SZEezhjtK5",
+    "categories": [
+      "Sports & Health",
+      "Workout"
+    ],
+    "changelog": "https://codeberg.org/jannis/FitoTrack/src/branch/master/CHANGELOG.md",
+    "description": {
+      "cs-CZ": "FitoTrack je mobiln\u00ed aplikace pro z\u00e1znam a prohl\u00ed\u017een\u00ed va\u0161ich cvi\u010den\u00ed. A\u0165 u\u017e b\u011bh\u00e1te, jezd\u00edte na kole nebo chod\u00edte na t\u00fary, FitoTrack v\u00e1m v\u017edy zobraz\u00ed nejd\u016fle\u017eit\u011bj\u0161\u00ed informace s podrobn\u00fdmi grafy a statistikami. Je open-source a kompletn\u011b bez reklam.\n\nFunkce:\n* Z\u00e1znam cvi\u010den\u00ed. Vyberte si typ sportu, kter\u00fd chcete zaznamenat a jednodu\u0161e za\u010dn\u011bte b\u011bhat, jezdit nebo d\u011blat cokoli jin\u00e9ho. Obecn\u00e9 informace uvid\u00edte p\u0159\u00edmo pod mapou na obrazovce z\u00e1znamu.\n* Prohl\u00e9dn\u011bte si sv\u00e1 cvi\u010den\u00ed. Zobrazte si obecn\u00e9 informace jako datum, \u010das, trv\u00e1n\u00ed, vzd\u00e1lenost, rychlost a tempo. Prohl\u00e9dn\u011bte si svou trasu na map\u011b. Z rychlostn\u00edho diagramu zjist\u011bte, jak\u00e1 je va\u0161e v\u00fdkonnost.\n* Open-source. Aplikace je bez reklam a nesleduje v\u00e1s, jej\u00ed k\u00f3d je nav\u00edc otev\u0159en\u00fd a licencovan\u00fd jako GPLv3.\n",
+      "da": "FitoTrack er en mobil app til at logge og se din tr\u00e6ning. Om du l\u00f8ber, cykler eller hiker, vil FitoTrack vise dig de vigtigste informationer, med detaljerede charts og statistikker. Det er Open Source og helt reklame-fri.\n\nFeatures:\n* Track tr\u00e6ning. V\u00e6lg typen af tr\u00e6ning du vil tracke og s\u00e5 bare start med f.eks. at l\u00f8be, cykle eller hike. Du kan se generel information lige under kortet p\u00e5 tracking sk\u00e6rmen.\n* Se din tr\u00e6ning. Se generelle informationer som, dato, tid, varighed, distance og hastighed. Se din rute p\u00e5 et kort. Find ud af dit niveau udfra hastighedsdiagrammet.\n* Open Source. Der er hverken reklamer eller tracking, og kildekoden er \u00e5ben og under GPLv3 licens.\n",
+      "de": "FitoTrack ist eine App zum Aufzeichnen und Auswerten deiner Workouts. Ob du l\u00e4ufst, Fahrrad f\u00e4hrst oder wanderst: FitoTrack zeigt die wichtigsten Daten mit detaillierten Diagrammen und Statistiken. Es ist Open-Source und komplett ohne Werbung!\n\nFunktionen:\n* Workouts aufzeichnen. W\u00e4hle deine Sportart und fange einfach an zu laufen/Fahrrad fahren/wandern. Du kannst w\u00e4hrenddessen die wichtigest Informationen unter der Karte sehen.\n* Workouts angucken. Schaue dir allgemeine Informationen an wie Datum, Dauer, Distanz, Geschwindigkeit, Pace, etc. Sehe die Route auf einer Karte. Untersuche deine Leistung im Geschwindigkeitsdiagramm.\n* Open-Source. Es gibt keine Werbung, kein Tracking und der source code ist \u00f6ffentlich zug\u00e4nglich f\u00fcr jeden unter der GPLv3-Lizenz.\n",
+      "en-US": "FitoTrack is a mobile app for logging and viewing your workouts. Whether you\u2019re running, cycling or hiking, FitoTrack will show you the most important information, with detailed charts and statistics. It is open-source and completely ad-free.\n\nFeatures:\n* Track workouts. Choose the type of sport you would like to track and just start running, cycling or hiking, for example. You can see the general information right below the map on the tracking screen.\n* View your workouts. View general information such as date, time, duration, distance, speed and pace. See your route on a map. Work out your level of performance from the speed diagram.\n* Open-Source. There is neither advertisement nor tracking, and the source code is open and licensed under the GPLv3.",
+      "es": "FitoTrack es una aplicaci\u00f3n m\u00f3vil para registrar y visualizar tus entrenamientos. Tanto si corres como si vas en bici o de excursi\u00f3n, FitoTrack te mostrar\u00e1 la informaci\u00f3n m\u00e1s importante, con gr\u00e1ficos y estad\u00edsticas detalladas. Es de c\u00f3digo abierto y completamente libre de anuncios.\n\nCaracter\u00edsticas:\n* Seguimiento de los entrenamientos. Elige el tipo de deporte que quieres seguir y empieza a correr, montar en bicicleta o hacer senderismo, por ejemplo. Puedes ver la informaci\u00f3n general justo debajo del mapa en la pantalla de seguimiento.\n* Ver tus entrenamientos. Ver informaci\u00f3n general como la fecha, la hora, la duraci\u00f3n, la distancia, la velocidad y el ritmo. Ver tu ruta en un mapa. Calcula tu nivel de rendimiento a partir del diagrama de velocidad.\n* C\u00f3digo abierto. No hay publicidad ni seguimiento, y el c\u00f3digo fuente es abierto y con licencia GPLv3.\n",
+      "fa-IR": "FitoTrack \u06cc\u06a9 \u0646\u0631\u0645\u200c\u0627\u0641\u0632\u0627\u0631 \u0645\u0648\u0628\u0627\u06cc\u0644 \u0628\u0631\u0627\u06cc \u062b\u0628\u062a \u0648 \u0645\u0634\u0627\u0647\u062f\u0647 \u062a\u0645\u0631\u06cc\u0646\u0627\u062a \u0634\u0645\u0627 \u0627\u0633\u062a. \u0686\u0647 \u062f\u0631 \u062d\u0627\u0644 \u062f\u0648\u06cc\u062f\u0646\u060c \u062f\u0648\u0686\u0631\u062e\u0647 \u0633\u0648\u0627\u0631\u06cc \u06cc\u0627 \u067e\u06cc\u0627\u062f\u0647 \u0631\u0648\u06cc \u0628\u0627\u0634\u06cc\u062f\u060c FitoTrack \u0645\u0647\u0645 \u062a\u0631\u06cc\u0646 \u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0631\u0627 \u0647\u0645\u0631\u0627\u0647 \u0628\u0627 \u0646\u0645\u0648\u062f\u0627\u0631\u0647\u0627 \u0648 \u0622\u0645\u0627\u0631 \u062f\u0642\u06cc\u0642 \u0628\u0647 \u0634\u0645\u0627 \u0646\u0634\u0627\u0646 \u0645\u06cc \u062f\u0647\u062f. \u0645\u0646\u0628\u0639 \u0628\u0627\u0632 \u0648 \u06a9\u0627\u0645\u0644\u0627\u064b \u0628\u062f\u0648\u0646 \u0622\u06af\u0647\u06cc \u0627\u0633\u062a.\n\n\u0627\u0645\u06a9\u0627\u0646\u0627\u062a:\n* \u067e\u06cc\u06af\u06cc\u0631\u06cc \u062a\u0645\u0631\u06cc\u0646\u0627\u062a. \u0646\u0648\u0639 \u0648\u0631\u0632\u0634\u06cc \u0631\u0627 \u06a9\u0647 \u062f\u0648\u0633\u062a \u062f\u0627\u0631\u06cc\u062f \u062f\u0646\u0628\u0627\u0644 \u06a9\u0646\u06cc\u062f \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u062f \u0648 \u0628\u0631\u0627\u06cc \u0645\u062b\u0627\u0644\u060c \u0641\u0642\u0637 \u062f\u0648\u06cc\u062f\u0646\u060c \u062f\u0648\u0686\u0631\u062e\u0647 \u0633\u0648\u0627\u0631\u06cc \u06cc\u0627 \u067e\u06cc\u0627\u062f\u0647 \u0631\u0648\u06cc \u0631\u0627 \u0634\u0631\u0648\u0639 \u06a9\u0646\u06cc\u062f. \u0634\u0645\u0627 \u0645\u06cc \u062a\u0648\u0627\u0646\u06cc\u062f \u0627\u0637\u0644\u0627\u0639\u0627\u062a \u06a9\u0644\u06cc \u0631\u0627 \u062f\u0642\u06cc\u0642\u0627\u064b \u062f\u0631 \u0632\u06cc\u0631 \u0646\u0642\u0634\u0647 \u062f\u0631 \u0635\u0641\u062d\u0647 \u0631\u062f\u06cc\u0627\u0628\u06cc \u0645\u0634\u0627\u0647\u062f\u0647 \u06a9\u0646\u06cc\u062f.\n* \u062a\u0645\u0631\u06cc\u0646\u0627\u062a \u062e\u0648\u062f \u0631\u0627 \u0645\u0634\u0627\u0647\u062f\u0647 \u06a9\u0646\u06cc\u062f. \u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0639\u0645\u0648\u0645\u06cc \u0645\u0627\u0646\u0646\u062f \u062a\u0627\u0631\u06cc\u062e\u060c \u0632\u0645\u0627\u0646\u060c \u0645\u062f\u062a \u0632\u0645\u0627\u0646\u060c \u0645\u0633\u0627\u0641\u062a \u0648 \u0633\u0631\u0639\u062a \u0631\u0627 \u0645\u0634\u0627\u0647\u062f\u0647 \u06a9\u0646\u06cc\u062f. \u0645\u0633\u06cc\u0631 \u062e\u0648\u062f \u0631\u0627 \u0631\u0648\u06cc \u0646\u0642\u0634\u0647 \u0628\u0628\u06cc\u0646\u06cc\u062f. \u0633\u0637\u062d \u0639\u0645\u0644\u06a9\u0631\u062f \u062e\u0648\u062f \u0631\u0627 \u0627\u0632 \u0646\u0645\u0648\u062f\u0627\u0631 \u0633\u0631\u0639\u062a \u0645\u062d\u0627\u0633\u0628\u0647 \u06a9\u0646\u06cc\u062f.\n* \u0645\u062a\u0646 \u0628\u0627\u0632. \u0646\u0647 \u062a\u0628\u0644\u06cc\u063a\u0627\u062a\u06cc \u0648\u062c\u0648\u062f \u062f\u0627\u0631\u062f \u0648 \u0646\u0647 \u0631\u062f\u06cc\u0627\u0628\u06cc\u060c \u0648 \u06a9\u062f \u0645\u0646\u0628\u0639 \u0628\u0627\u0632 \u0648 \u062a\u062d\u062a \u0645\u062c\u0648\u0632 GPLv3 \u0627\u0633\u062a.\n",
+      "fi": "FitoTrack on mobiilisovellus, jonka avulla voit tallettaa ja katsella kuntoiluun liittyvi\u00e4 tietoja. FitoTrack n\u00e4ytt\u00e4\u00e4 t\u00e4rkeimm\u00e4t juoksu-, py\u00f6r\u00e4ily-, vaellus- ja muihin treeneihisi liittyv\u00e4t tiedot yksityiskohtaisin kaavioin ja tilastoin. Sovellus on avointa l\u00e4hdekoodia ja se ei sis\u00e4ll\u00e4 lainkaan mainoksia.\n\nOminaisuudet:\n* Seuraa treenej\u00e4. Valitse treenityyppi ja aloita kuntoilu. N\u00e4et yleistiedot seurantan\u00e4yt\u00f6ll\u00e4 kartan alapuolella.\n* Katsele treenej\u00e4si. Katso perustiedot kuten p\u00e4iv\u00e4, aika, kesto, et\u00e4isyys, nopeus ja tahti. N\u00e4e reittisi kartalla. Haasta itsesi nopeuskaavioita seuraamalla.\n* Avoin l\u00e4hdekoodi. Ei mainoksia, ei seurantaa. L\u00e4hdekoodi on avointa ja GPLv3-lisenssin alaista.\n",
+      "fr": "FitoTrack est une application mobile pour enregistrer et suivre vos entra\u00eenements. Durant la course, le v\u00e9lo ou la randonn\u00e9e, FitoTrack vous montrera les informations les plus importantes avec des graphiques et des statistiques. C'est libre et sans publicit\u00e9.\n\nFonctionnalit\u00e9s\u202f:\n* Suivre ses entra\u00eenements. Choisissez le type de sport que vous souhaitez enregistrer et commencez \u00e0 courir, faire du v\u00e9lo ou de la randonn\u00e9e, par exemple. Vous pourrez voir des informations g\u00e9n\u00e9rales sous la carte.\n* Voir ses entra\u00eenements. Consultez les informations g\u00e9n\u00e9rales telles que la date, le temps, la dur\u00e9e, la distance parcourue, la vitesse et le rythme. Visualisez votre parcours sur une carte. Estimez vos performances depuis le diagramme de vitesse.\n* Libre. Il n'y a ni publicit\u00e9 ni pistage. De plus le code source est ouvert, sous licence GPLv3.\n",
+      "ga": "Is feidhmchl\u00e1r soghluaiste \u00e9 FitoTrack chun log\u00e1il isteach agus f\u00e9achaint ar do chuid cleachta\u00ed. Cib\u00e9 an bhfuil t\u00fa ag rith, ag rotha\u00edocht n\u00f3 ag si\u00fal, taispe\u00e1nfaidh FitoTrack an fhaisn\u00e9is is t\u00e1bhachta\u00ed duit, le cairteacha mionsonraithe agus staitistic\u00ed. T\u00e1 s\u00e9 foinse oscailte agus go hioml\u00e1n saor \u00f3 fh\u00f3gra\u00ed.\n\nGn\u00e9ithe:\n* Traenacha rian. Roghnaigh an cine\u00e1l sp\u00f3irt ar mhaith leat a rian\u00fa agus gan ach tos\u00fa ag rith, ag rotha\u00edocht n\u00f3 ag f\u00e1na\u00edocht, mar shampla. Is f\u00e9idir leat an t-eolas ginear\u00e1lta a fheice\u00e1il d\u00edreach th\u00edos den l\u00e9arsc\u00e1il ar an sc\u00e1ile\u00e1n rianaithe.\n* F\u00e9ach ar do workouts. F\u00e9ach ar eolas ginear\u00e1lta ar n\u00f3s d\u00e1ta, am, fad, luas agus luas. F\u00e9ach ar do bhealach ar l\u00e9arsc\u00e1il. Oibrigh amach do leibh\u00e9al feidhm\u00edochta \u00f3n l\u00e9ar\u00e1id luais.\n* Foinse oscailte. N\u00edl f\u00f3gra n\u00e1 rian\u00fa ann, agus t\u00e1 an c\u00f3d foinse oscailte agus cead\u00fanaithe faoin GPLv3.\n",
+      "hu": "A FitoTrack az edz\u00e9sek napl\u00f3z\u00e1s\u00e1hoz \u00e9s megtekint\u00e9s\u00e9hez k\u00e9sz\u00fclt mobilalkalmaz\u00e1s. Mindegy, hogy fut, ker\u00e9kp\u00e1rozik vagy t\u00far\u00e1zik, a FitoTrack r\u00e9szletes grafikonokkal \u00e9s statisztik\u00e1kkal jelen\u00edti meg a legfontosabb inform\u00e1ci\u00f3kat. Ez egy ny\u00edlt forr\u00e1sk\u00f3d\u00fa \u00e9s teljesen rekl\u00e1mmentes alkalmaz\u00e1s.\n\nFunkci\u00f3k:\n* Edz\u00e9sek k\u00f6vet\u00e9se. V\u00e1lassza ki a k\u00f6vetni k\u00edv\u00e1nt sportt\u00edpust, \u00e9s kezdjen el futni, ker\u00e9kp\u00e1rozni vagy t\u00far\u00e1zni. Az \u00e1ltal\u00e1nos inform\u00e1ci\u00f3kat k\u00f6zvetlen\u00fcl a k\u00f6vet\u0151 k\u00e9perny\u0151n l\u00e9v\u0151 t\u00e9rk\u00e9p alatt l\u00e1thatja.\n* Edz\u00e9sek megtekint\u00e9se. N\u00e9zze meg az \u00e1ltal\u00e1nos inform\u00e1ci\u00f3kat, mint p\u00e9ld\u00e1ul d\u00e1tum, id\u0151, id\u0151tartam, t\u00e1vols\u00e1g, sebess\u00e9g \u00e9s gyorsas\u00e1g. N\u00e9zze meg az \u00fatvonalat egy t\u00e9rk\u00e9pen. Dolgozza ki a teljes\u00edtm\u00e9nyszintj\u00e9t a sebess\u00e9gdiagramb\u00f3l.\n* Ny\u00edlt forr\u00e1sk\u00f3d\u00fa. Nincs benne se hirdet\u00e9s, se felhaszn\u00e1l\u00f3-k\u00f6vet\u00e9s. Az alkalmaz\u00e1s forr\u00e1sk\u00f3dja ny\u00edlt \u00e9s a GPLv3 alapj\u00e1n licencelt.\n",
+      "it": "FitoTrack \u00e8 un'applicazione mobile per la registrazione e la visualizzazione dei tuoi allenamenti. Corsa, ciclismo o escursionismo, FitoTrack ti mostrer\u00e0 le informazioni pi\u00f9 importanti, con grafici e statistiche dettagliate. \u00c8 open-source e completamente privo di pubblicit\u00e0.\n\nCaratteristiche:\n* Tieni traccia degli allenamenti. Scegli il tipo di sport che vuoi monitorare e inizia a correre, andare in bicicletta o fare escursioni. Puoi vedere le informazioni generali proprio sotto la mappa nella schermata di tracciamento.\n* Visualizza i tuoi allenamenti. Visualizza le informazioni generali come la data, l'ora, la durata, la distanza, la velocit\u00e0 e il ritmo. Visualizza il tuo percorso sulla mappa. Migliora il tuo livello di prestazione a partire dal diagramma di velocit\u00e0.\n* Open-Source. Non contiene pubblicit\u00e0 n\u00e9 tracciamento, il codice sorgente \u00e8 aperto e compreso sotto licenza GPLv3.",
+      "nb-NO": "Loggf\u00f8r og vis trenings\u00f8ktene dine. N\u00e5r du springer, sykler eller g\u00e5r vil du bli vist viktig info, med detaljerte diagrammer og statistikk. Fri programvare og reklamefritt.\n\n* Loggf\u00f8r trenings\u00f8kter. Velg typen sport du \u00f8nsker og begynn \u00e5 springe, sykle, eller g\u00e5. Generell info er tilgjengelig rett nedenfor kartet p\u00e5 sporingsskjermen.\n* Vis trenings\u00f8ktene dine. Dato, tid, varighet, avstand og tempo. Sjekk ruten p\u00e5 et kart. Finn ut hva ytelsen din er fra hastighetsdiagrammet.\n* Fri programvare. Ingen reklame eller sporing av deg, og kildekoden er gemenhetslig fri programvare, lisensiert GPLv3+.\n",
+      "nl": "FitoTrack is een mobiele app voor het opnemen en bekijken van trainingen. Voor zowel voor hardlopen, fietsen als wandelen toont FitoTrack belangrijke informatie met gedetailleerde grafieken en statistieken. Dit is een open source app zonder advertenties.\n\nEigenschappen:\n* Trainingen opnemen. Kies het type sport die je wilt vastleggen en start met hardlopen, fietsen of wandelen. Je kunt de algemene informatie zien onder de kaart op het opnamescherm.\n* Trainingen bekijken. Bekijk je trainingsinformatie zoals datum, tijd, tijdsduur, afstand, snelheid en tempo. Bekijk de route op de kaart. Onderzoek je prestatieniveau vanaf het snelheidsdiagram.\n* Open Source. Geen advertenties of tracking. En de broncode is open onder de GPLv3 licentie.",
+      "pl": "FitoTrack to aplikacja mobilna do rejestrowania i przegl\u0105dania Twoich trening\u00f3w. Niezale\u017cnie od tego, czy biegasz, je\u017adzisz na rowerze, czy w\u0119drujesz, FitoTrack poka\u017ce Ci najwa\u017cniejsze informacje wraz ze szczeg\u00f3\u0142owymi wykresami i statystykami. Jest otwarto\u017ar\u00f3d\u0142owy i ca\u0142kowicie wolny od reklam.\n\nCechy:\n* \u015aled\u017a treningi. Wybierz dyscyplin\u0119 sportu, kt\u00f3r\u0105 chcesz \u015bledzi\u0107, i po prostu zacznij biega\u0107, jecha\u0107 na rowerze czy w\u0119drowa\u0107. Mo\u017cesz zobaczy\u0107 og\u00f3lne informacje tu\u017c pod map\u0105 na ekranie \u015bledzenia.\n* Przegl\u0105daj swoje treningi. Przejrzyj og\u00f3lne informacje, takie jak data, godzina, czas trwania, dystans, pr\u0119dko\u015b\u0107 i tempo. Zobacz swoj\u0105 tras\u0119 na mapie. Wypracuj sw\u00f3j poziom wydajno\u015bci na podstawie wykresu pr\u0119dko\u015bci.\n* Otwarto\u017ar\u00f3d\u0142owe. Nie ma reklam ani \u015bledzenia, a kod \u017ar\u00f3d\u0142owy jest otwarty i na licencji GPLv3.\n",
+      "pt": "O FitoTrack \u00e9 um aplicativo m\u00f3vel para registrar e ver seus exerc\u00edcios. Seja correndo, pedalando ou escalando, o FitoTrack vai lhe mostrar as informa\u00e7\u00f5es mais importantes, com gr\u00e1ficos detalhados e estat\u00edsticas. Ele tem seu c\u00f3digo aberto e \u00e9 livre de an\u00fancios.\n\nFun\u00e7\u00f5es:\n* Monitore exerc\u00edcios. Escolha o tipo de esporte que voc\u00ea gostaria de monitorar e comece a correr, pedalar ou escalar, por exemplo. Voc\u00ea pode ver as informa\u00e7\u00f5es gerais embaixo do mapa na tela de monitoramento.\n* Veja seus exerc\u00edcios. Confira informa\u00e7\u00f5es gerais, como data, hora, dura\u00e7\u00e3o, dist\u00e2ncia, velocidade e passo. Cheque sua rota no mapa. Descubra sua performance no diagrama de velocidade.\n* C\u00f3digo-aberto. N\u00e3o h\u00e1 an\u00fancios nem rastreadores, e o c\u00f3digo \u00e9 aberto e licenciado sob a GPLv3.\n",
+      "ru": "FitoTrack - \u044d\u0442\u043e \u043c\u043e\u0431\u0438\u043b\u044c\u043d\u043e\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0434\u043b\u044f \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438 \u0438 \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0430 \u0432\u0430\u0448\u0438\u0445 \u0442\u0440\u0435\u043d\u0438\u0440\u043e\u0432\u043e\u043a. \u0411\u0435\u0433\u0430\u0435\u0442\u0435 \u043b\u0438 \u0432\u044b, \u043a\u0430\u0442\u0430\u0435\u0442\u0435\u0441\u044c \u043d\u0430 \u0432\u0435\u043b\u043e\u0441\u0438\u043f\u0435\u0434\u0435 \u0438\u043b\u0438 \u0445\u043e\u0434\u0438\u0442\u0435 \u0432 \u043f\u043e\u0445\u043e\u0434\u044b, FitoTrack \u043f\u043e\u043a\u0430\u0436\u0435\u0442 \u0432\u0430\u043c \u0441\u0430\u043c\u0443\u044e \u0432\u0430\u0436\u043d\u0443\u044e \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044e \u0441 \u043f\u043e\u0434\u0440\u043e\u0431\u043d\u044b\u043c\u0438 \u0433\u0440\u0430\u0444\u0438\u043a\u0430\u043c\u0438 \u0438 \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u043e\u0439. \u042d\u0442\u043e \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0441 \u043e\u0442\u043a\u0440\u044b\u0442\u044b\u043c \u0438\u0441\u0445\u043e\u0434\u043d\u044b\u043c \u043a\u043e\u0434\u043e\u043c \u0438 \u043f\u043e\u043b\u043d\u043e\u0435 \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435 \u0440\u0435\u043a\u043b\u0430\u043c\u044b.\n\n\u041e\u0441\u043e\u0431\u0435\u043d\u043d\u043e\u0441\u0442\u0438:\n* \u041e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u043d\u0438\u0435 \u0442\u0440\u0435\u043d\u0438\u0440\u043e\u0432\u043e\u043a. \u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0438\u0434 \u0441\u043f\u043e\u0440\u0442\u0430, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u0432\u044b \u0445\u043e\u0442\u0438\u0442\u0435 \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u0442\u044c, \u0438 \u043f\u0440\u043e\u0441\u0442\u043e \u043d\u0430\u0447\u043d\u0438\u0442\u0435, \u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \u0431\u0435\u0433\u0430\u0442\u044c, \u0435\u0437\u0434\u0438\u0442\u044c \u043d\u0430 \u0432\u0435\u043b\u043e\u0441\u0438\u043f\u0435\u0434\u0435 \u0438\u043b\u0438 \u0445\u043e\u0434\u0438\u0442\u044c \u0432 \u043f\u043e\u0445\u043e\u0434\u044b. \u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0432\u0438\u0434\u0435\u0442\u044c \u043e\u0431\u0449\u0443\u044e \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044e \u043f\u0440\u044f\u043c\u043e \u043f\u043e\u0434 \u043a\u0430\u0440\u0442\u043e\u0439 \u043d\u0430 \u044d\u043a\u0440\u0430\u043d\u0435 \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u043d\u0438\u044f.\n* \u041f\u0440\u043e\u0441\u043c\u043e\u0442\u0440 \u0441\u0432\u043e\u0438\u0445 \u0442\u0440\u0435\u043d\u0438\u0440\u043e\u0432\u043e\u043a. \u041f\u0440\u043e\u0441\u043c\u043e\u0442\u0440 \u043e\u0431\u0449\u0435\u0439 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438, \u0442\u0430\u043a\u043e\u0439 \u043a\u0430\u043a \u0434\u0430\u0442\u0430, \u0432\u0440\u0435\u043c\u044f, \u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c, \u0440\u0430\u0441\u0441\u0442\u043e\u044f\u043d\u0438\u0435, \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0438 \u0442\u0435\u043c\u043f. \u041f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0441\u0432\u043e\u0439 \u043c\u0430\u0440\u0448\u0440\u0443\u0442 \u043d\u0430 \u043a\u0430\u0440\u0442\u0435. \u041e\u043f\u0440\u0435\u0434\u0435\u043b\u0438\u0442\u0435 \u0441\u0432\u043e\u0439 \u0443\u0440\u043e\u0432\u0435\u043d\u044c \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438 \u043f\u043e \u0434\u0438\u0430\u0433\u0440\u0430\u043c\u043c\u0435 \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u0438.\n* \u041e\u0442\u043a\u0440\u044b\u0442\u044b\u0439 \u0438\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u043a\u043e\u0434. \u041d\u0435\u0442 \u043d\u0438 \u0440\u0435\u043a\u043b\u0430\u043c\u044b, \u043d\u0438 \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u043d\u0438\u044f, \u0430 \u0438\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u043a\u043e\u0434 \u043e\u0442\u043a\u0440\u044b\u0442 \u0438 \u043b\u0438\u0446\u0435\u043d\u0437\u0438\u0440\u043e\u0432\u0430\u043d \u043f\u043e\u0434 GPLv3.\n",
+      "tr": "FitoTrack, egzersizlerinizin g\u00fcnl\u00fc\u011f\u00fcn\u00fc kaydetmek ve g\u00f6r\u00fcnt\u00fclemek i\u00e7in bir mobil uygulamad\u0131r. \u0130ster ko\u015fuyor, ister bisiklete biniyor veya y\u00fcr\u00fcy\u00fc\u015f yap\u0131yor olun, FitoTrack size en \u00f6nemli bilgileri ayr\u0131nt\u0131l\u0131 \u00e7izelgeler ve istatistiklerle g\u00f6sterecektir. A\u00e7\u0131k kaynakl\u0131d\u0131r ve tamamen reklams\u0131zd\u0131r.\n\n\u00d6zellikleri:\n* Egzersizleri takip edin. Takip etmek istedi\u011finiz spor t\u00fcr\u00fcn\u00fc se\u00e7in ve \u00f6rne\u011fin ko\u015fmaya, bisiklete binmeye veya y\u00fcr\u00fcy\u00fc\u015fe ba\u015flay\u0131n. Genel bilgileri takip ekran\u0131nda haritan\u0131n hemen alt\u0131nda g\u00f6rebilirsiniz.\n* Egzersizlerinizi g\u00f6r\u00fcnt\u00fcleyin. Tarih, saat, s\u00fcre, mesafe, h\u0131z ve tempo gibi genel bilgileri g\u00f6r\u00fcnt\u00fcleyin. Rotan\u0131z\u0131 bir harita \u00fczerinde g\u00f6r\u00fcn. H\u0131z diyagram\u0131ndan performans seviyenizi hesaplay\u0131n.\n* A\u00e7\u0131k kaynakl\u0131. Reklam veya izleme yoktur ve kaynak kodu a\u00e7\u0131k ve GPLv3 ile lisanslanm\u0131\u015ft\u0131r.\n",
+      "uk": "FitoTrack \u2014 \u0446\u0435 \u043c\u043e\u0431\u0456\u043b\u044c\u043d\u0438\u0439 \u0437\u0430\u0441\u0442\u043e\u0441\u0443\u043d\u043e\u043a \u0434\u043b\u044f \u0436\u0443\u0440\u043d\u0430\u043b\u044e\u0432\u0430\u043d\u043d\u044f \u0456 \u043f\u0435\u0440\u0435\u0433\u043b\u044f\u0434\u0443 \u0432\u0430\u0448\u0438\u0445 \u0442\u0440\u0435\u043d\u0443\u0432\u0430\u043d\u044c. \u041d\u0435\u0437\u0430\u043b\u0435\u0436\u043d\u043e \u0432\u0456\u0434 \u0442\u043e\u0433\u043e, \u0431\u0456\u0433\u0430\u0454\u0442\u0435 \u0432\u0438, \u0457\u0434\u0435\u0442\u0435 \u043d\u0430 \u0432\u0435\u043b\u043e\u0441\u0438\u043f\u0435\u0434\u0456 \u0447\u0438 \u0445\u043e\u0434\u0438\u0442\u0435 \u043f\u0456\u0448\u043a\u0438, FitoTrack \u043f\u043e\u043a\u0430\u0436\u0435 \u0432\u0430\u043c \u043d\u0430\u0439\u0432\u0430\u0436\u043b\u0438\u0432\u0456\u0448\u0443 \u0456\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u044e, \u0437 \u0434\u0435\u0442\u0430\u043b\u044c\u043d\u0438\u043c\u0438 \u0433\u0440\u0430\u0444\u0456\u043a\u0430\u043c\u0438 \u0442\u0430 \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u043e\u044e. \u0426\u0435 \u0432\u0456\u043b\u044c\u043d\u0438\u0439 \u0434\u043e\u0434\u0430\u0442\u043e\u043a \u0431\u0435\u0437 \u0440\u0435\u043a\u043b\u0430\u043c\u0438.\n\n\u0424\u0443\u043d\u043a\u0446\u0456\u0457:\n* \u0412\u0456\u0434\u0441\u0442\u0435\u0436\u0443\u0439\u0442\u0435 \u0442\u0440\u0435\u043d\u0443\u0432\u0430\u043d\u043d\u044f. \u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0432\u0438\u0434 \u0441\u043f\u043e\u0440\u0442\u0443, \u044f\u043a\u0438\u0439 \u0432\u0430\u043c \u043f\u043e\u0434\u043e\u0431\u0430\u0454\u0442\u044c\u0441\u044f \u0456 \u043f\u0440\u043e\u0441\u0442\u043e \u043f\u043e\u0447\u043d\u0456\u0442\u044c \u0431\u0456\u0433\u0430\u0442\u0438, \u0457\u0437\u0434\u0438\u0442\u0438 \u043d\u0430 \u0432\u0435\u043b\u043e\u0441\u0438\u043f\u0435\u0434\u0456 \u0430\u0431\u043e \u0445\u043e\u0434\u0438\u0442\u0438 \u043f\u0456\u0448\u043a\u0438. \u0412\u0438 \u043c\u043e\u0436\u0435\u0442\u0435 \u043f\u043e\u0431\u0430\u0447\u0438\u0442\u0438 \u0437\u0430\u0433\u0430\u043b\u044c\u043d\u0443 \u0456\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u044e \u043f\u0440\u044f\u043c\u043e \u043f\u0456\u0434 \u043a\u0430\u0440\u0442\u043e\u044e \u043d\u0430 \u0435\u043a\u0440\u0430\u043d\u0456 \u0432\u0456\u0434\u0441\u0442\u0435\u0436\u0435\u043d\u043d\u044f.\n* \u041f\u0435\u0440\u0435\u0433\u043b\u044f\u0434 \u0442\u0440\u0435\u043d\u0443\u0432\u0430\u043d\u044c. \u041f\u0435\u0440\u0435\u0433\u043b\u044f\u0434\u0430\u0439\u0442\u0435 \u0437\u0430\u0433\u0430\u043b\u044c\u043d\u0443 \u0456\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u044e, \u0442\u0430\u043a\u0443 \u044f\u043a \u0434\u0430\u0442\u0430, \u0447\u0430\u0441, \u0442\u0440\u0438\u0432\u0430\u043b\u0456\u0441\u0442\u044c, \u0432\u0456\u0434\u0441\u0442\u0430\u043d\u044c, \u0448\u0432\u0438\u0434\u043a\u0456\u0441\u0442\u044c \u0456 \u0442\u0435\u043c\u043f. \u0422\u0430\u043a\u043e\u0436 \u0432\u0438 \u043c\u043e\u0436\u0435\u0442\u0435 \u043f\u0435\u0440\u0435\u0433\u043b\u044f\u0434\u0430\u0442\u0438 \u0441\u0432\u0456\u0439 \u043c\u0430\u0440\u0448\u0440\u0443\u0442 \u043d\u0430 \u043a\u0430\u0440\u0442\u0456. \u0412\u0438\u0437\u043d\u0430\u0447\u0430\u0439\u0442\u0435 \u0441\u0432\u0456\u0439 \u0440\u0456\u0432\u0435\u043d\u044c \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438\u0432\u043d\u043e\u0441\u0442\u0456 \u0437\u0430 \u0434\u043e\u043f\u043e\u043c\u043e\u0433\u043e\u044e \u0434\u0456\u0430\u0433\u0440\u0430\u043c\u0438 \u0448\u0432\u0438\u0434\u043a\u043e\u0441\u0442\u0456.\n* \u0412\u0456\u0434\u043a\u0440\u0438\u0442\u0438\u0439 \u0432\u0438\u0445\u0456\u0434\u043d\u0438\u0439 \u043a\u043e\u0434. \u0422\u0443\u0442 \u043d\u0435\u043c\u0430\u0454 \u043d\u0456 \u0440\u0435\u043a\u043b\u0430\u043c\u0438, \u043d\u0456 \u0432\u0456\u0434\u0441\u0442\u0435\u0436\u0435\u043d\u043d\u044f, \u0430 \u0432\u0438\u0445\u0456\u0434\u043d\u0438\u0439 \u043a\u043e\u0434 \u0432\u0456\u0434\u043a\u0440\u0438\u0442\u0438\u0439 \u043f\u0456\u0434 \u043b\u044f\u0446\u0435\u043d\u0446\u0456\u0454\u044e GPLv3.\n"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/de.tadris.fitness/en-US/icon_EsXo47Mqybe5xI8NynkI0fm00NypYBw4LBF506A6NkI=.png",
+        "sha256": "12c5e8e3b32ac9b7b9c48f0dca7908d1f9b4d0dca9601c382c1179d3a03a3642",
+        "size": 35702
+      }
+    },
+    "issueTracker": "https://codeberg.org/jannis/FitoTrack/issues",
+    "lastUpdated": 1722692639000,
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "en-US": "FitoTrack"
+    },
+    "preferredSigner": "d60bc3dc526365ea5883b421306aa0b50bade59aed5080f1070f118fe3b7f78e",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/de.tadris.fitness/en-US/phoneScreenshots/screenshot1.png",
+            "sha256": "86b2addf1a94408ed6a9aa7b2aad7492b167ba1188491abbe927301ed30d5bac",
+            "size": 488245
+          },
+          {
+            "name": "/de.tadris.fitness/en-US/phoneScreenshots/screenshot2.png",
+            "sha256": "0577c05a87a2dad6688e832984c53c80db5b86d5c477918fae3f47c47b2614d9",
+            "size": 549593
+          },
+          {
+            "name": "/de.tadris.fitness/en-US/phoneScreenshots/screenshot3.png",
+            "sha256": "28142f079514a55127135ba023e15b4fd0b4adac0d5fb54926a5c3468e2aebc6",
+            "size": 952873
+          },
+          {
+            "name": "/de.tadris.fitness/en-US/phoneScreenshots/screenshot4.png",
+            "sha256": "bcd2ace68a20cd110b50e8d520914586d6afafdfd23d5cbb3e90a508cdb0cf27",
+            "size": 504640
+          },
+          {
+            "name": "/de.tadris.fitness/en-US/phoneScreenshots/screenshot6.png",
+            "sha256": "c990288caa2c90c25983feb7e94b4a30619368a6ef4fb02a86472ae8adf79926",
+            "size": 134275
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://codeberg.org/jannis/FitoTrack",
+    "summary": {
+      "cs-CZ": "Fitness tracker zam\u011b\u0159en\u00fd na ochranu soukrom\u00ed",
+      "da": "En fitness tracker med fokus p\u00e5 privatliv",
+      "de": "Ein Fitness Tracker, der deine Privatsph\u00e4re achtet",
+      "en-US": "A privacy oriented fitness tracker",
+      "es": "Un rastreador de fitness orientado a la privacidad",
+      "fa-IR": "\u06cc\u06a9 \u0631\u062f\u06cc\u0627\u0628 \u062a\u0646\u0627\u0633\u0628 \u0627\u0646\u062f\u0627\u0645 \u0645\u0628\u062a\u0646\u06cc \u0628\u0631 \u062d\u0631\u06cc\u0645 \u062e\u0635\u0648\u0635\u06cc",
+      "fi": "Yksityisyytt\u00e4 kunnioittava kuntoseuranta",
+      "fr": "Un outil de suivi fitness respectueux de votre vie priv\u00e9e",
+      "ga": "Lorgaire acla\u00edochta at\u00e1 d\u00edrithe ar phr\u00edobh\u00e1ideacht",
+      "gl-ES": "Rexistro de actividades con atenci\u00f3n \u00e1 privacidade",
+      "hu": "Egy mag\u00e1n\u00e9letet tiszteletben tart\u00f3 edz\u00e9sk\u00f6vet\u0151",
+      "id": "Pelacak kebugaran berorientasi privasi",
+      "it": "Un tracker per attivit\u00e0 sportiva orientato alla privacy",
+      "nb-NO": "En personvernsrespekterende treningskamerat",
+      "nl": "Een Fitness Tracker die je privacy respecteert",
+      "pl": "\u015aledzenie trening\u00f3w dbaj\u0105ce o prywatno\u015b\u0107",
+      "pt": "Um monitor de exerc\u00edcios focado em privacidade",
+      "ru": "\u0424\u0438\u0442\u043d\u0435\u0441-\u0442\u0440\u0435\u043a\u0435\u0440, \u043e\u0440\u0438\u0435\u043d\u0442\u0438\u0440\u043e\u0432\u0430\u043d \u043d\u0430 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u044c",
+      "sv": "En integritetsorienterad fitnes-sp\u00e5rare",
+      "tr": "Gizlilik odakl\u0131 bir fitness takip\u00e7isi",
+      "uk": "\u0424\u0456\u0442\u043d\u0435\u0441-\u0442\u0440\u0435\u043a\u0435\u0440, \u043e\u0440\u0456\u0454\u043d\u0442\u043e\u0432\u0430\u043d\u0438\u0439 \u043d\u0430 \u043a\u043e\u043d\u0444\u0456\u0434\u0435\u043d\u0446\u0456\u0439\u043d\u0456\u0441\u0442\u044c"
+    },
+    "webSite": "https://codeberg.org/jannis/FitoTrack"
+  },
+  "version": {
+    "added": 1722692639000,
+    "file": {
+      "ipfsCIDv1": "bafybeig643ekebhd4hv2nxidiizt6rsbyi56dcnrefcp5zbt43mc7qzmfy",
+      "name": "/de.tadris.fitness_1560.apk",
+      "sha256": "b4eb46832ded822f46dc6509fde179ba0540481b272e681cdbb41e3b36b557b1",
+      "size": 11398604
+    },
+    "manifest": {
+      "features": [
+        {
+          "name": "android.hardware.location.gps"
+        }
+      ],
+      "signer": {
+        "sha256": [
+          "d60bc3dc526365ea5883b421306aa0b50bade59aed5080f1070f118fe3b7f78e"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "maxSdkVersion": 30,
+          "name": "android.permission.BLUETOOTH"
+        },
+        {
+          "maxSdkVersion": 30,
+          "name": "android.permission.BLUETOOTH_ADMIN"
+        },
+        {
+          "name": "android.permission.BLUETOOTH_SCAN"
+        },
+        {
+          "name": "android.permission.BLUETOOTH_CONNECT"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.NFC"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_LOCATION"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_HEALTH"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.permission.ACTIVITY_RECOGNITION"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "de.tadris.fitness.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 34
+      },
+      "versionCode": 1560,
+      "versionName": "15.6"
+    },
+    "src": {
+      "name": "/de.tadris.fitness_1560_src.tar.gz",
+      "sha256": "8c484669521094c4ee97be35708e7e4c9a543692ab70f42fa81240e81b71661d",
+      "size": 7779393
+    },
+    "whatsNew": {
+      "en-US": "- Fix crash when starting workouts\n- Update translations"
+    }
+  }
+}

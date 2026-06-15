@@ -1,0 +1,65 @@
+{
+  "selections": [
+    {
+      "app": "Simple Time Tracker",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "time-tracker",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.razeeman.util.simpletimetracker",
+      "reason": "No-native maintained Kotlin/Android utility with a larger APK than prior clean-candidate utilities; likely to expose non-sparse AndroidX/Kotlin Maven evidence.",
+      "slug": "simple-time-tracker",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "MedTimer",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "health-utility",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.futsch1.medtimer",
+      "reason": "No-native health/reminder utility with source tarball metadata and enough APK size to test a non-sparse clean candidate.",
+      "slug": "medtimer",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Doodle",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "wallpaper",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "xyz.zedler.patrick.doodle",
+      "reason": "No-native modern wallpaper app with source tarball metadata; useful UI-heavy AndroidX/Kotlin clean-candidate evidence if source validation succeeds.",
+      "slug": "doodle",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "KeePassVault",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "security",
+        "password-manager",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.ivanovsky.passnotes",
+      "reason": "No-native security/password-manager app with source tarball metadata; tests whether a more dependency-rich security app can become clean source-validated evidence.",
+      "slug": "keepassvault",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    }
+  ]
+}

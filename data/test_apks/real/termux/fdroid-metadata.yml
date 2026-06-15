@@ -1,0 +1,845 @@
+Categories:
+  - Development
+License: GPL-3.0-only
+AuthorName: Tarek Sander
+WebSite: https://termux.com
+SourceCode: https://github.com/termux/termux-app
+IssueTracker: https://github.com/termux/termux-app/issues
+Changelog: https://github.com/termux/termux-app/releases
+Donate: https://termux.com/donate.html
+OpenCollective: Termux
+
+AutoName: Termux
+Description: |-
+  Termux combines powerful terminal emulation with an extensive Linux package
+  collection.
+
+  * Enjoy the bash and zsh shells.
+  * Edit files with nano and vim.
+  * Access servers over ssh.
+  * Compile code with gcc and clang.
+  * Use the python console as a pocket calculator.
+  * Check out projects with git and subversion.
+  * Run text-based games with frotz.
+
+  At first start a small base system is downloaded - desired packages can then be
+  installed using the apt package manager known from the Debian and Ubuntu Linux
+  distributions. Access the built-in help by long-pressing anywhere on the
+  terminal and selecting the Help menu option to learn more.
+
+  Read help online: <a href="https://wiki.termux.com/">https://wiki.termux.com/</a>
+
+  Reddit Community: <a href="https://termux.com/community">https://termux.com/community</a>
+
+RepoType: git
+Repo: https://github.com/termux/termux-app.git
+
+Builds:
+  - versionName: '0.16'
+    versionCode: 16
+    commit: dea7c9d2ceb3060c
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - app/src/main/jniLibs
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.17'
+    versionCode: 17
+    commit: v0.17
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - app/src/main/jniLibs
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.18'
+    versionCode: 18
+    commit: v0.18
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - app/src/main/jniLibs
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.19'
+    versionCode: 19
+    commit: v0.19
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - app/src/main/jniLibs
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.20'
+    versionCode: 20
+    commit: v0.20
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - app/src/main/jniLibs
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.21'
+    versionCode: 21
+    commit: v0.21
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - app/src/main/jniLibs
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.22'
+    versionCode: 22
+    commit: v0.22
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - app/src/main/jniLibs
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.23'
+    versionCode: 23
+    commit: v0.23
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - app/src/main/jniLibs
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.24'
+    versionCode: 24
+    commit: v0.24
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - app/src/main/jniLibs
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.25'
+    versionCode: 25
+    commit: v0.25
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - app/src/main/jniLibs
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.26'
+    versionCode: 26
+    commit: v0.26
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - app/src/main/jniLibs
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.27'
+    versionCode: 27
+    commit: v0.27
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - app/src/main/jniLibs
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.28'
+    versionCode: 28
+    commit: v0.28
+    subdir: app
+    gradle:
+      - yes
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.29'
+    versionCode: 29
+    commit: v0.29
+    subdir: app
+    gradle:
+      - yes
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.30'
+    versionCode: 30
+    commit: v0.30
+    subdir: app
+    gradle:
+      - yes
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.31'
+    versionCode: 31
+    commit: v0.31
+    subdir: app
+    gradle:
+      - yes
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.32'
+    versionCode: 32
+    commit: v0.32
+    subdir: app
+    gradle:
+      - yes
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.33'
+    versionCode: 33
+    commit: v0.33
+    subdir: app
+    gradle:
+      - yes
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.34'
+    versionCode: 34
+    commit: v0.34
+    subdir: app
+    gradle:
+      - yes
+    build:
+      - cd ..
+      - ./build-jnilibs.sh
+
+  - versionName: '0.35'
+    versionCode: 36
+    commit: v0.35
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.37'
+    versionCode: 37
+    commit: v0.37
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.38'
+    versionCode: 38
+    commit: v0.38
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.39'
+    versionCode: 39
+    commit: v0.39
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.40'
+    versionCode: 40
+    commit: v0.40
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.41'
+    versionCode: 41
+    commit: v0.41
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.42'
+    versionCode: 42
+    commit: v0.42
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.44'
+    versionCode: 44
+    commit: v0.44
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.45'
+    versionCode: 45
+    commit: v0.45
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.46'
+    versionCode: 46
+    commit: v0.46
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.47'
+    versionCode: 47
+    commit: v0.47
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.48'
+    versionCode: 48
+    commit: v0.48
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.50'
+    versionCode: 50
+    commit: v0.50
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.51'
+    versionCode: 51
+    commit: v0.51
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.52'
+    versionCode: 52
+    commit: v0.52
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.53'
+    versionCode: 53
+    commit: v0.53
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.54'
+    versionCode: 54
+    commit: v0.54
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.55'
+    versionCode: 55
+    commit: v0.55
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.56'
+    versionCode: 56
+    commit: v0.56
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.57'
+    versionCode: 57
+    commit: v0.57
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.59'
+    versionCode: 59
+    commit: v0.59
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.60'
+    versionCode: 60
+    commit: v0.60
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.61'
+    versionCode: 61
+    commit: v0.61
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.62'
+    versionCode: 62
+    commit: v0.62
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.63'
+    versionCode: 63
+    commit: v0.63
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.64'
+    versionCode: 64
+    commit: v0.64
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.65'
+    versionCode: 65
+    commit: v0.65
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.66'
+    versionCode: 66
+    commit: v0.66
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.67'
+    versionCode: 67
+    commit: v0.67
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.68'
+    versionCode: 68
+    commit: v0.68
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.69'
+    versionCode: 69
+    commit: v0.69
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.70'
+    versionCode: 70
+    commit: v0.70
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.71'
+    versionCode: 71
+    commit: v0.71
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.72'
+    versionCode: 72
+    commit: v0.72
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.73'
+    versionCode: 73
+    commit: v0.73
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.74'
+    versionCode: 74
+    commit: v0.74
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.75'
+    versionCode: 75
+    commit: v0.75
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.76'
+    versionCode: 76
+    commit: v0.76
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.77'
+    versionCode: 77
+    commit: v0.77
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.82'
+    versionCode: 82
+    commit: v0.82
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.84'
+    versionCode: 84
+    commit: v0.84
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.86'
+    versionCode: 86
+    commit: v0.86
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.88'
+    versionCode: 88
+    commit: v0.88
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.90'
+    versionCode: 90
+    commit: v0.90
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.92'
+    versionCode: 92
+    commit: v0.92
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.94'
+    versionCode: 94
+    commit: v0.94
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21
+
+  - versionName: '0.95'
+    versionCode: 95
+    commit: v0.95
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/21.2.6472646/21.3.6528147/' build.gradle
+    ndk: r21d
+
+  - versionName: '0.96'
+    versionCode: 96
+    commit: v0.96
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/21.2.6472646/21.3.6528147/' build.gradle
+    ndk: r21d
+
+  - versionName: '0.99'
+    versionCode: 99
+    commit: v0.99
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: '0.101'
+    versionCode: 101
+    commit: v0.101
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: '0.102'
+    versionCode: 102
+    commit: v0.102
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: '0.103'
+    versionCode: 103
+    commit: v0.103
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: '0.104'
+    versionCode: 104
+    commit: v0.104
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: '0.106'
+    versionCode: 106
+    commit: v0.106
+    subdir: app
+    gradle:
+      - yes
+    ndk: r22
+
+  - versionName: '0.107'
+    versionCode: 107
+    commit: v0.107
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/splits\ {/,+8d' build.gradle
+    ndk: r22
+
+  - versionName: '0.108'
+    versionCode: 108
+    commit: v0.108
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/splits\ {/,+8d' build.gradle
+      - sed -i -e '/publishing {/,/^}/d' ../terminal-{emulator,view}/build.gradle
+    ndk: r22
+
+  - versionName: '0.111'
+    versionCode: 111
+    commit: v0.111
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/splits\ {/,+8d' build.gradle
+      - sed -i -e '/publishing {/,/^}/d' ../terminal-{emulator,view}/build.gradle
+      - sed -i -e '/publishing {/,/^}/d' ../termux-shared/build.gradle
+      - sed -i -e 's/22.0.7026061/22.1.7171670/' ../gradle.properties
+    ndk: r22b
+
+  - versionName: '0.112'
+    versionCode: 112
+    commit: v0.112
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/splits\ {/,+8d' build.gradle
+      - sed -i -e '/publishing {/,/^}/d' ../terminal-{emulator,view}/build.gradle
+      - sed -i -e '/publishing {/,/^}/d' ../termux-shared/build.gradle
+      - sed -i -e 's/22.0.7026061/22.1.7171670/' ../gradle.properties
+    ndk: r22b
+
+  - versionName: '0.113'
+    versionCode: 113
+    commit: v0.113
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/splits\ {/,+8d' build.gradle
+      - sed -i -e '/publishing {/,/^}/d' ../terminal-{emulator,view}/build.gradle
+      - sed -i -e '/publishing {/,/^}/d' ../termux-shared/build.gradle
+      - sed -i -e 's/22.0.7026061/22.1.7171670/' ../gradle.properties
+    ndk: r22b
+
+  - versionName: '0.114'
+    versionCode: 114
+    commit: v0.114
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/splits\ {/,+8d' build.gradle
+      - sed -i -e '/publishing {/,/^}/d' ../terminal-{emulator,view}/build.gradle
+      - sed -i -e '/publishing {/,/^}/d' ../termux-shared/build.gradle
+      - sed -i -e 's/22.0.7026061/22.1.7171670/' ../gradle.properties
+    ndk: r22b
+
+  - versionName: '0.115'
+    versionCode: 115
+    commit: bde9d01f766d70007f82d34a68122fc34aa1afe5
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/publishing {/,/^    }/d' ../terminal-{emulator,view}/build.gradle
+      - sed -i -e '/publishing {/,/^    }/d' ../termux-shared/build.gradle
+    ndk: r22b
+
+  - versionName: '0.116'
+    versionCode: 116
+    commit: 78be0e793eba633f5a3278f20681983877341f7a
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/publishing {/,/^    }/d' ../terminal-{emulator,view}/build.gradle
+      - sed -i -e '/publishing {/,/^    }/d' ../termux-shared/build.gradle
+    ndk: r22b
+
+  - versionName: '0.117'
+    versionCode: 117
+    commit: 9272a757affc0dae4aa044248800f3987e06c52b
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/publishing {/,/^    }/d' ../terminal-{emulator,view}/build.gradle
+      - sed -i -e '/publishing {/,/^    }/d' ../termux-shared/build.gradle
+    ndk: r22b
+
+  - versionName: 0.118.0
+    versionCode: 118
+    commit: 6e2689f55295fa444be8ac8592c527c2c5ef3253
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/publishing {/,/^    }/d' ../terminal-{emulator,view}/build.gradle
+      - sed -i -e '/publishing {/,/^    }/d' ../termux-shared/build.gradle
+    ndk: r22b
+
+  - versionName: 0.118.1
+    versionCode: 1000
+    commit: 43317b78c920a48254f8846f5e14b5f873faa271
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/publishing {/,/^    }/d' ../terminal-{emulator,view}/build.gradle
+      - sed -i -e '/publishing {/,/^    }/d' ../termux-shared/build.gradle
+    ndk: 22.1.7171670
+
+  - versionName: 0.118.2
+    versionCode: 1001
+    commit: 21c0d51fb6c9b27c386aceb0de67b99a97d1eeb8
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/publishing {/,/^    }/d' ../terminal-{emulator,view}/build.gradle
+      - sed -i -e '/publishing {/,/^    }/d' ../termux-shared/build.gradle
+    ndk: 22.1.7171670
+
+  - versionName: 0.118.3
+    versionCode: 1002
+    commit: 5b657c6adf4304e5198951ce815fe0205dcac29c
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/publishing {/,/^    }/d' ../terminal-{emulator,view}/build.gradle
+      - sed -i -e '/publishing {/,/^    }/d' ../termux-shared/build.gradle
+    ndk: 22.1.7171670
+
+  - versionName: 0.119.0-beta.2
+    versionCode: 1021
+    commit: e34495153463f1f0de2bd75d7df661a73565e5e4
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/publishing {/,/^    }/d' ../terminal-{emulator,view}/build.gradle
+      - sed -i -e '/publishing {/,/^    }/d' ../termux-shared/build.gradle
+    ndk: 22.1.7171670
+
+  - versionName: 0.119.0-beta.3
+    versionCode: 1022
+    commit: e634d8f981f48b6b89202cf0e04533f0889e03b3
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/publishing {/,/^    }/d' ../terminal-{emulator,view}/build.gradle
+      - sed -i -e '/publishing {/,/^    }/d' ../termux-shared/build.gradle
+    ndk: 22.1.7171670
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v\d+\.\d+\.\d+$
+CurrentVersion: 0.118.3
+CurrentVersionCode: 1002

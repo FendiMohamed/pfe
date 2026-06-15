@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "added": 1635638400000,
+    "authorEmail": "patrick@zedler.xyz",
+    "authorName": "Patrick Zedler",
+    "authorWebSite": "https://patrick.zedler.xyz/",
+    "categories": [
+      "Wallpaper"
+    ],
+    "changelog": "https://github.com/patzly/doodle-android/releases",
+    "description": {
+      "en-US": "<p>Doodle is an open-source Android app that provides colorful live wallpapers with auto dark mode and power-efficient animations.</p>\n<p>The wallpapers are based on the original Doodle live wallpaper collection of the Google Pixel 4. Additionally there is an exclusive \"Material You\"-inspired live wallpaper included.</p>\n<p>The app is not just a copy of the original wallpapers, it's a complete rewrite without the permanent animations to save battery and storage space. In addition, there are many customization options to match your preferences.</p>\n\n<p><b>Features:</b></p><ul>\n   <li>Stunning wallpaper designs and Pixel feeling</li>\n   <li>System dependent dark mode</li>\n   <li>Power-efficient parallax effect on page swipe or when tilting the device</li>\n   <li>Optional zoom effects</li>\n   <li>Direct boot support (immediately active after device restart)</li>\n   <li>No ads and no analytics</li>\n   <li>100% open-source</li>\n</ul>\n\n<p><b>Advantages over original Pixel 4 live wallpapers:</b></p><ul>\n   <li>Permanent animations (when tilting the device) are optional</li>\n   <li>Support for Android 12 color extraction</li>\n   <li>Exclusive \"Material You\"-inspired live wallpaper</li>\n   <li>No battery-hungry 3D engine</li>\n   <li>Improved text contrast (dark text for light themes instead of white text with shadow)</li>\n   <li>Support for Android 11 zoom effect</li>\n   <li>Many additional customization options</li>\n   <li>Rendering works well even on less powerful devices (very efficient rendering engine)</li>\n   <li>Also suitable for larger devices like tablets (scaling option available)</li>\n   <li>Tiny installation size</li>\n</ul>\n\n<p><b>Source code and issue tracker:</b></p>\n<p><a href=\"https://github.com/patzly/doodle-android\">github.com/patzly/doodle-android</a></p>\n\n<p><b>Translation management:</b></p>\n<p><a href=\"https://www.transifex.com/patzly/doodle-android\">www.transifex.com/patzly/doodle-android</a></p>"
+    },
+    "featureGraphic": {
+      "en-US": {
+        "name": "/xyz.zedler.patrick.doodle/en-US/featureGraphic_cb9fJrR-sB0sxln6r3_modNMEJ42O-tI1tZLGDQ_4_Q=.png",
+        "sha256": "71bf5f26b47eb01d2cc659faaf7fe6a1d34c109e363beb48d6d64b18343fe3f4",
+        "size": 267117
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/xyz.zedler.patrick.doodle/en-US/icon_3fyxhfUcYbfcC1TSiXFYxqp_6lMGkjjNdLyRUkZ3FaE=.png",
+        "sha256": "ddfcb185f51c61b7dc0b54d2897158c6aa7fea53069238cd74bc9152467715a1",
+        "size": 23218
+      }
+    },
+    "issueTracker": "https://github.com/patzly/doodle-android/issues",
+    "lastUpdated": 1730816560000,
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "en-US": "Doodle: Live Wallpapers"
+    },
+    "preferredSigner": "1c952b715c5c2d6a35ea9847b8ae39b502a9145919a7b46b06d29823ac4d338a",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/xyz.zedler.patrick.doodle/en-US/phoneScreenshots/1_en-US.jpg",
+            "sha256": "7a11131c3859bde21d8d2298dff1b97c5413acf92b1054e7fe58912a138998e3",
+            "size": 181043
+          },
+          {
+            "name": "/xyz.zedler.patrick.doodle/en-US/phoneScreenshots/1_en-US.png",
+            "sha256": "01123a77d5efd3d980bb099bd7c3e874d43667c9354733c47a582677a73ee1a3",
+            "size": 1346241
+          },
+          {
+            "name": "/xyz.zedler.patrick.doodle/en-US/phoneScreenshots/2_en-US.jpg",
+            "sha256": "2250be88322f38c6ffe3001f7063cd48e1223f0375fdc978459976b2d3e10ba6",
+            "size": 154877
+          },
+          {
+            "name": "/xyz.zedler.patrick.doodle/en-US/phoneScreenshots/2_en-US.png",
+            "sha256": "b8f96c15b8dbb9b9ba01c172946b8a418e6d781723ab8805284cd1a46eecfb23",
+            "size": 981352
+          },
+          {
+            "name": "/xyz.zedler.patrick.doodle/en-US/phoneScreenshots/3_en-US.jpg",
+            "sha256": "db1a42eed97908acc4d424bf4fe9386ac68cd4293ccc4b6f36ee8ef46578cac0",
+            "size": 143515
+          },
+          {
+            "name": "/xyz.zedler.patrick.doodle/en-US/phoneScreenshots/3_en-US.png",
+            "sha256": "2ee4fc26770eb67d5a21631cba548fd79ad4751cab596051b520e660e7748475",
+            "size": 831377
+          },
+          {
+            "name": "/xyz.zedler.patrick.doodle/en-US/phoneScreenshots/4_en-US.jpg",
+            "sha256": "314272300b94b89e3d0fda1d14e642eb3c4200a54e5bcf5364c6f9252d95f961",
+            "size": 186780
+          },
+          {
+            "name": "/xyz.zedler.patrick.doodle/en-US/phoneScreenshots/4_en-US.png",
+            "sha256": "6b8abb3b898531569e1e6908f7f05beb1db9b7f9d8137b0b17be0eafff1cb68a",
+            "size": 1237972
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/patzly/doodle-android",
+    "summary": {
+      "en-US": "Colorful live wallpapers with auto dark mode and power-efficient animations"
+    },
+    "translation": "https://www.transifex.com/patzly/doodle-android/",
+    "webSite": "https://patrick.zedler.xyz/doodle/"
+  },
+  "version": {
+    "added": 1730816560000,
+    "file": {
+      "ipfsCIDv1": "bafybeiffcjy2upy3c3bblcbnl53ijtce6ipx25r6hmsekmxbgofn6yoc2m",
+      "name": "/xyz.zedler.patrick.doodle_42.apk",
+      "sha256": "411b810bec14dec9efc2f92ad90775e1450ae303b343efa775b543a777f46fef",
+      "size": 18957281
+    },
+    "manifest": {
+      "features": [
+        {
+          "name": "android.software.live_wallpaper"
+        }
+      ],
+      "signer": {
+        "sha256": [
+          "1c952b715c5c2d6a35ea9847b8ae39b502a9145919a7b46b06d29823ac4d338a"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.permission.SET_WALLPAPER"
+        },
+        {
+          "name": "xyz.zedler.patrick.doodle.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 42,
+      "versionName": "6.0.0"
+    },
+    "src": {
+      "name": "/xyz.zedler.patrick.doodle_42_src.tar.gz",
+      "sha256": "2226902930f08a1da489a3d98e269282c80d4657743db6030d86fe838faf2ae8",
+      "size": 23489784
+    }
+  }
+}

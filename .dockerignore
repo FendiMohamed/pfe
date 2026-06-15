@@ -6,6 +6,7 @@ __pycache__
 venv
 data/results/*
 data/reference_db/*
+data/source/*
+data/test_apks/*
 !data/results/.gitkeep
 !data/reference_db/.gitkeep
-

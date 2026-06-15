@@ -1,0 +1,274 @@
+{
+  "metadata": {
+    "added": 1381622400000,
+    "authorName": "bitfire web engineering",
+    "bitcoin": "bc1q0hvy0mknt9vce2f9hh829h72n3sht9llaltumk",
+    "categories": [
+      "Internet"
+    ],
+    "changelog": "https://github.com/bitfireAT/davx5-ose/releases",
+    "description": {
+      "ar": "DAVx\u2075 \u0647\u0648 \u062a\u0637\u0628\u064a\u0642 \u0625\u062f\u0627\u0631\u0629 \u0648\u0645\u0632\u0627\u0645\u0646\u0629 \u0644\u0622\u0646\u062f\u0631\u0648\u064a\u062f \u064a\u062a\u0643\u0627\u0645\u0644 \u0645\u0639 \u0627\u0644\u062a\u0637\u0628\u064a\u0642\u0627\u062a \u0627\u0644\u0623\u0635\u064a\u0644\u0629 \u0644\u0644\u062a\u0642\u0648\u064a\u0645 \u0648\u062c\u0647\u0627\u062a \u0627\u0644\u0627\u062a\u0635\u0627\u0644 \u0641\u064a \u0646\u0638\u0627\u0645 \u0622\u0646\u062f\u0631\u0648\u064a\u062f.\n\n\u0627\u0633\u062a\u062e\u062f\u0645\u0647 \u0645\u0639 \u062e\u0627\u062f\u0645\u0643 \u0627\u0644\u062e\u0627\u0635 \u0623\u0648 \u0645\u0639 \u062c\u0647\u0629 \u0627\u0633\u062a\u0636\u0627\u0641\u0629 \u062a\u062b\u0642 \u0628\u0647\u0627 \u0644\u0625\u0628\u0642\u0627\u0621 \u062c\u0647\u0627\u062a \u0627\u062a\u0635\u0627\u0644\u0643 \u0648 \u0623\u062d\u062f\u0627\u062b\u0643 \u0648 \u0645\u0647\u0627\u0645\u0643 \u062a\u062d\u062a \u0633\u064a\u0637\u0631\u062a\u0643.\n\n\u0644\u0644\u062d\u0635\u0648\u0644 \u0639\u0644\u0649 \u0642\u0627\u0626\u0645\u0629 \u0628\u0627\u0644\u062e\u0627\u062f\u0645\u0627\u062a/\u0627\u0644\u062e\u062f\u0645\u0627\u062a \u0627\u0644\u062a\u064a \u062a\u0645\u062a \u062a\u062c\u0631\u0628\u062a\u0647\u0627 \u060c \u0648\u0644\u0644\u0645\u0632\u064a\u062f \u0645\u0646 \u0627\u0644\u0645\u0639\u0644\u0648\u0645\u0627\u062a \u060c \u0623\u0644\u0642 \u0646\u0638\u0631\u0629 \u0639\u0644\u0649 \u0645\u0648\u0642\u0639 \u0627\u0644\u0648\u064a\u0628.\n",
+      "bg": "DAVx\u2075 \u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0437\u0430 Android, \u043a\u043e\u0435\u0442\u043e \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0438\u0440\u0430 \u0434\u0430\u043d\u043d\u0438 \u043f\u043e \u043f\u0440\u043e\u0442\u043e\u043a\u043e\u043b\u0430 CalDAV/CardDAV \u0438 \u0441\u0435 \u0438\u043d\u0442\u0435\u0433\u0440\u0438\u0440\u0430 \u0441 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u0442\u0430 \u0437\u0430 \u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440 \u0438 \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u0438.\n\n\u0418\u0437\u043f\u043e\u043b\u0437\u0432\u0430\u0439\u0442\u0435 \u0433\u043e \u0441\u044a\u0441 \u0441\u043e\u0431\u0441\u0442\u0432\u0435\u043d \u0441\u044a\u0440\u0432\u044a\u0440 \u0438\u043b\u0438 \u0441 \u0434\u043e\u0432\u0435\u0440\u0435\u043d \u0434\u043e\u0441\u0442\u0430\u0432\u0447\u0438\u043a, \u0438 \u0434\u0440\u044a\u0436\u0442\u0435 \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u0438\u0442\u0435, \u0441\u044a\u0431\u0438\u0442\u0438\u044f\u0442\u0430 \u0438 \u0437\u0430\u0434\u0430\u0447\u0438\u0442\u0435 \u0441\u0438 \u043f\u043e\u0434 \u0441\u0432\u043e\u0439 \u043a\u043e\u043d\u0442\u0440\u043e\u043b.\n\n\u0417\u0430 \u043f\u043e\u0432\u0435\u0447\u0435 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f \u0438 \u0441\u043f\u0438\u0441\u044a\u043a \u043d\u0430 \u043f\u0440\u043e\u0432\u0435\u0440\u0435\u043d\u0438 \u0441\u044a\u0440\u0432\u044a\u0440\u0438 \u0438 \u0443\u0441\u043b\u0443\u0433\u0438 \u043f\u043e\u0441\u0435\u0442\u0435\u0442\u0435 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430\u0442\u0430.\n",
+      "ca": "DAVx\u2075 \u00e9s una aplicaci\u00f3 que permet administrar i sincronitzar CalDAV/CardDAV, i s'integra nativament amb les aplicacions de contactes/calendari.\n\nEs pot utilitzar amb un servidor propi, o b\u00e9 amb un prove\u00efdor de confian\u00e7a que permeti mantenir els contactes, esdeveniments i tasques sota el teu control.\n\nPer obtenir m\u00e9s informaci\u00f3 i una llista de servidors/serveis verificats, dirigeix-te al lloc web.\n",
+      "cs": "DAVx\u2075 je aplikace pro spr\u00e1vu a synchronizaci CalDAV/CardDAV pro Android, kter\u00e1 se nativn\u011b propojuje s aplikacemi kalend\u00e1\u0159/kontakty v syst\u00e9mu Android.\n\nPou\u017eijte ji ve spojen\u00ed s vlastn\u00edm serverem nebo hostingem, kter\u00e9mu d\u016fv\u011b\u0159ujete a uchovejte si tak kontrolu nad sv\u00fdmi kontakty, ud\u00e1lostmi a \u00fakoly.\n\nDal\u0161\u00ed informace a seznam vyzkou\u0161en\u00fdch server\u016f/slu\u017eeb naleznete na webov\u00fdch str\u00e1nk\u00e1ch projektu.\n",
+      "da": "DAVx\u2075 er en CalDAV/CardDAV h\u00e5ndtering og synkronisering program til Android som naturlig integrere med  Android kalender/kontakt programmer.\n\nBrug den med lokal server eller med trov\u00e6rdig v\u00e6rt for at gemme kontakter, begivenheder og opgaver under egen kontrol.\n\nFor mere information og en liste over testede server/tjenester, g\u00e5 til netstedet.\n",
+      "de": "DAVx\u2075 ist eine CalDAV/CardDAV-Verwaltungs- und Synchronisierungs-App f\u00fcr Android, die sich nahtlos mit Kalender- und Kontakte-Apps integriert.\n\nMit DAVx\u2075 haben Sie Ihre Kontakte, Termine und Aufgaben auf Ihrem eigenen Server oder einem vertrauensw\u00fcrdigen CalDAV/CardDAV-Dienst unter eigener Kontrolle!\n\nWeitere Informationen und eine Liste der getesteten Server/Dienste finden sich auf der Website.\n",
+      "el": "\u03a4\u03bf DAVx\u2075 \u03b5\u03af\u03bd\u03b1\u03b9 \u03bc\u03b9\u03b1 \u03b5\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ae \u03b4\u03b9\u03b1\u03c7\u03b5\u03af\u03c1\u03b9\u03c3\u03b7\u03c2 \u03ba\u03b1\u03b9 \u03c3\u03c5\u03b3\u03c7\u03c1\u03bf\u03bd\u03b9\u03c3\u03bc\u03bf\u03cd CalDAV/CardDAV \u03b3\u03b9\u03b1 \u03c4\u03bf Android \u03c0\u03bf\u03c5 \u03b5\u03bd\u03c3\u03c9\u03bc\u03b1\u03c4\u03ce\u03bd\u03b5\u03b9 \u03b5\u03b3\u03b3\u03b5\u03bd\u03ce\u03c2 \u03c4\u03b9\u03c2 \u03b5\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ad\u03c2 Android \u03b7\u03bc\u03b5\u03c1\u03bf\u03bb\u03bf\u03b3\u03af\u03bf\u03c5/\u03b5\u03c0\u03b1\u03c6\u03ce\u03bd.\n\n\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03ae\u03c3\u03c4\u03b5 \u03c4\u03bf \u03c3\u03c4\u03bf\u03bd \u03b4\u03b9\u03ba\u03cc \u03c3\u03b1\u03c2 \u03b4\u03b9\u03b1\u03ba\u03bf\u03bc\u03b9\u03c3\u03c4\u03ae \u03ae \u03bc\u03b5 \u03ad\u03bd\u03b1\u03bd \u03ad\u03bc\u03c0\u03b9\u03c3\u03c4\u03bf \u03b4\u03b9\u03b1\u03ba\u03bf\u03bc\u03b9\u03c3\u03c4\u03ae \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03b4\u03b9\u03b1\u03c4\u03ae\u03c1\u03b7\u03c3\u03b7 \u03c4\u03c9\u03bd \u03b5\u03c0\u03b1\u03c6\u03ce\u03bd, \u03c4\u03c9\u03bd \u03c3\u03c5\u03bc\u03b2\u03ac\u03bd\u03c4\u03c9\u03bd \u03ba\u03b1\u03b9 \u03b5\u03c1\u03b3\u03b1\u03c3\u03b9\u03ce\u03bd \u03c5\u03c0\u03cc \u03c4\u03bf\u03bd \u03ad\u03bb\u03b5\u03b3\u03c7\u03cc \u03c3\u03b1\u03c2.\n\n\u0393\u03b9\u03b1 \u03c0\u03b5\u03c1\u03b9\u03c3\u03c3\u03cc\u03c4\u03b5\u03c1\u03b5\u03c2 \u03c0\u03bb\u03b7\u03c1\u03bf\u03c6\u03bf\u03c1\u03af\u03b5\u03c2 \u03ba\u03b1\u03b9 \u03bb\u03af\u03c3\u03c4\u03b1 \u03c4\u03c9\u03bd \u03b4\u03bf\u03ba\u03b9\u03bc\u03b1\u03c3\u03bc\u03ad\u03bd\u03c9\u03bd \u03b4\u03b9\u03b1\u03ba\u03bf\u03bc\u03b9\u03c3\u03c4\u03ce\u03bd/\u03c5\u03c0\u03b7\u03c1\u03b5\u03c3\u03b9\u03ce\u03bd, \u03b4\u03b5\u03af\u03c4\u03b5 \u03c3\u03c4\u03b7\u03bd \u03b9\u03c3\u03c4\u03bf\u03c3\u03b5\u03bb\u03af\u03b4\u03b1.\n",
+      "en-GB": "DAVx\u2075 is a CalDAV/CardDAV management and synchronisation app for Android, which natively integrates with Android calendar/contact apps.\n\nUse it with your own server or with a trusted hoster to keep your contacts, events and tasks under your control.\n\nFor more information and a list of tested servers/services, have a look at the website.\n",
+      "en-US": "DAVx\u2075 is a CalDAV/CardDAV management and synchronization app for Android which natively integrates with Android calendar/contact apps.\n\nUse it with your own server or with a trusted hoster to keep your contacts, events and tasks under your control.\n\nFor more information and a list of tested servers/services, have a look at the Web site.\n",
+      "es": "DAVx\u2075 es una aplicaci\u00f3n de administraci\u00f3n y sincronizaci\u00f3n CalDAV/CardDAV para Android la cual se integra nativamente con la aplicaci\u00f3n de calendario/contactos de Android.\n\n\u00daselo con su su servidor o con un anfitri\u00f3n de confianza para mantener sus contactos, incluso sus tareas bajo su control.\n\nPara m\u00e1s informaci\u00f3n y una lista de servicios/servidores probados, revise el sitio web.\n",
+      "et": "DAVx\u2075 on CalDAVi/CardDAVi haldus- ja s\u00fcnkroniseerimisrakendus Androidi jaoks, mis sujuvalt liidestub Androidi kalendri- ja kontaktirakendustega.\n\nKasuta seda oma kontaktide, s\u00fcndmuste ja \u00fclesannete privaatseks haldamiseks kas oma serveris v\u00f5i usaldusv\u00e4\u00e4rse teenusepakkuja juures.\n\nLisateavet ja testitud serverite ning teenuste loendi leiad meie veebisaidist.\n",
+      "eu": "DAVx\u2075 Androiderako CalDAV/CardDAV kudeatze eta sinkronizazio aplikazio bat da, Android egutegi/kontaktu aplikazio integrazioarekin.\n\nErabili ezazu zure zerbitzarian edo ostalari fidagarri batekin kontaktuak, ekitaldiak eta zereginak zure kontrolpean edukitzeko.\n\nInformazio gehiago izateko eta zerbitzarien/zerbitzuen zerrenda aztertzeko, joan zaitez webgunera.\n",
+      "fa": "DAVx\u2075 \u06cc\u06a9 \u0628\u0631\u0646\u0627\u0645\u0647\u200c\u06cc CalDAV/CardDAV \u0645\u062f\u06cc\u0631\u062a\u06cc \u0648 \u0647\u0645\u06af\u0627\u0645 \u0633\u0627\u0632\u06cc \u0628\u0631\u0627\u06cc \u0627\u0646\u062f\u0631\u0648\u06cc\u062f \u0627\u0633\u062a \u06a9\u0647 \u0628\u0647 \u0635\u0648\u0631\u062a \u0628\u0648\u0645\u06cc \u0628\u0627 \u0628\u0631\u0646\u0627\u0645\u0647\u200c\u06cc \u062a\u0642\u0648\u06cc\u0645 \u0648 \u0645\u062e\u0627\u0637\u0628\u06cc\u0646 \u0627\u0646\u062f\u0631\u0648\u06cc\u062f \u0627\u062f\u0642\u0627\u0645 \u0645\u06cc\u200c\u0634\u0648\u062f.\n\n\u0628\u0627 \u0647\u0645\u0631\u0627\u0647\u06cc \u0633\u0631\u0648\u0631 \u062e\u0648\u062f\u062a\u0627\u0646 \u06cc\u0627 \u0628\u0627 \u06cc\u06a9 \u0645\u06cc\u0632\u0628\u0627\u0646 \u0642\u0627\u0628\u0644 \u0627\u0637\u0645\u06cc\u0646\u0627\u0646 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u06a9\u0646\u06cc\u062f \u062a\u0627 \u0645\u062e\u0627\u0637\u0628\u06cc\u0646\u060c \u0648\u0642\u0627\u06cc\u0639 \u0648 \u0648\u0638\u0627\u06cc\u0641\u062a \u062a\u062d\u062a \u06a9\u0646\u062a\u0631\u0644 \u062e\u0648\u062f\u062a\u0627\u0646 \u0628\u0627\u0634\u062f.\n\n\u0628\u0631\u0627\u06cc \u062f\u0631\u06cc\u0627\u0641\u062a \u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0628\u06cc\u0634\u062a\u0631 \u0648 \u06cc\u06a9 \u0644\u06cc\u0633\u062a \u0627\u0645\u062a\u062d\u0627\u0646 \u0634\u062f \u0627\u0632 \u0633\u0631\u0648\u0631\u0647\u0627 \u0648 \u0633\u0631\u0648\u06cc\u0633\u200c\u0647\u0627 \u0646\u06af\u0627\u0647\u06cc \u0628\u0647 \u0633\u0627\u06cc\u062a \u0628\u06cc\u0627\u0646\u062f\u0627\u0632\u06cc\u062f.\n",
+      "fi": "DAVx\u2075 on CalDAV/CardDAV- hallinta- ja synkronointisovellus Android-laitteille, jonka avulla kalenterit/yhteystiedot liitet\u00e4\u00e4n CalDAV/CardDAV-j\u00e4rjestelm\u00e4st\u00e4 Androidin omaan kalenterien ja yhteystietojen sovellukseen.\n\nK\u00e4yt\u00e4 sovellusta omalla palvelimellasi tai luotetun palveluntarjoajan kanssa pit\u00e4\u00e4ksesi yhteystietosi, tapahtumasi ja teht\u00e4v\u00e4si omassa hallinnassasi.\n\nSaadaksesi lis\u00e4tietoja sek\u00e4 listan testatuista palvelimista/palvelinohjelmista, k\u00e4y katsomassa Internet-sivustollamme.\n",
+      "fr": "DAVx\u2075 est une application de gestion et synchronisation CalDAV/CardDAV sous Android compatible avec les application de contact et les calendriers Android.\n\nUtilisez-la avec votre serveur personnel ou un h\u00f4te de confiance pour garder vos contacts, \u00e9v\u00e9nements et t\u00e2ches sous contr\u00f4le.\n\nPour plus d'information et pour consulter la liste des serveurs/services test\u00e9s consultez le site web.",
+      "fy": "DAVx\u2075 is in CalDAV/CardDAV-behear en -syngronisaasjeapp foar Android dat integrearret mei Android kalendar- en kontaktprogramma's.\n\nH\u00e2ld dyn kontakten, \u00f4fspraken en taken \u00fbnder dyn eigen kontrole troch te syngronisearjen mei dyn eigen server of mei in fertroud bedriuw.\n\nFoar mear informaasje en in list fan ferifiearre servers, besykje de webside.\n",
+      "gl": "DAVx\u2075 \u00e9 un xestor CalDAV/CardDAV e aplicaci\u00f3n de sincronizaci\u00f3n para Android que se integra de xeito nativo coas apps de contactos/calendario de Android.\n\nUtil\u00edceo co seu propio servidor ou con un de confianza para manter os seus contactos, eventos e tarefas baixo o seu control.\n\nPara m\u00e1is informaci\u00f3n e unha lista de servidores/servizos, bote unha ollada no sitio Web.\n",
+      "hr": "DAVx\u2075 je aplikacija za upravljanje i sinkronizaciju CalDAV / CardDAV za Android koja se izvorno integrira s Android kalendarom / aplikacijama za kontakt.\n\nKoristite ga s vlastitim poslu\u017eiteljem ili s pouzdanom uslugom iznajmljivanja poslu\u017eitelja kako biste svoje kontakte, doga\u0111aje i zadatke dr\u017eali pod svojom kontrolom.\n\nZa vi\u0161e informacija i popis testiranih poslu\u017eitelja / usluga pogledajte na web lokaciji.\n",
+      "hu": "A DAVx\u2075 egy CalDAV/CardDAV-kezel\u0151 \u00e9s szinkroniz\u00e1l\u00f3 alkalmaz\u00e1s Androidra, amely rendszerszinten integr\u00e1l\u00f3dik a napt\u00e1r- \u00e9s n\u00e9vjegy-alkalmaz\u00e1sokkal.\n\nHaszn\u00e1lhatja saj\u00e1t szerver\u00e9vel vagy megb\u00edzhat\u00f3nak tartott szolg\u00e1ltat\u00f3kkal, hogy a n\u00e9vjegyek, napt\u00e1rbejegyz\u00e9sek \u00e9s feladatok feletti kontrollja megmaradjon.\n\nTov\u00e1bbi inform\u00e1ci\u00f3kat, valamint a tesztelt szerverek/szolg\u00e1ltat\u00e1sok list\u00e1j\u00e1t a weboldalunkon tal\u00e1lja.\n",
+      "id": "DAVx\u2075 adalah aplikasi pengelolaan dan sinkronisasi CalDAV/CardDAV untuk Android yang terintegrasi dengan aplikasi kalender/kontak Android.\n\nGunakan dengan server Anda sendiri atau dengan penyedia yang terpercaya untuk menjaga kontak, acara, dan tugas di bawah kendali Anda.\n\nUntuk lebih banyak informasi dan daftar server/layanan yang telah diuji coba, lihat situs web kami.\n",
+      "it": "DAVx\u2075 \u00e8 un'applicazione di gestione e sincronizzazione CalDAV/CardDAV per Android che \u00e8 integrata nativamente con le applicazione Android di calendario/contatti.\n\nUtilizzalo con un server di tua propriet\u00e0 o con un server fidato per sincronizzare i tuoi contatti, gli eventi o attivit\u00e0.\n\nPer maggiori informazioni e per una lista di server/servizi testati, guarda nel sito Web.\n",
+      "ja": "DAVx\u2075 \u306f\u3001Android \u306e\u30ab\u30ec\u30f3\u30c0\u30fc/\u9023\u7d61\u5148\u30a2\u30d7\u30ea\u3068\u30cd\u30a4\u30c6\u30a3\u30d6\u306b\u7d71\u5408\u3055\u308c\u305f Android \u7528 CalDAV/CardDAV \u7ba1\u7406\u304a\u3088\u3073\u540c\u671f\u30a2\u30d7\u30ea\u3067\u3059\u3002\n\n\u3042\u306a\u305f\u72ec\u81ea\u306e\u30b5\u30fc\u30d0\u30fc\u3084\u4fe1\u983c\u3067\u304d\u308b\u30db\u30b9\u30c8\u3068\u4e00\u7dd2\u306b\u4f7f\u7528\u3057\u3066\u3001\u9023\u7d61\u5148\u3001\u4e88\u5b9a\u3001\u30bf\u30b9\u30af\u3092\u7ba1\u7406\u3057\u3066\u304f\u3060\u3055\u3044\u3002\n\n\u8a73\u7d30\u3068\u3001\u30c6\u30b9\u30c8\u6e08\u307f\u306e\u30b5\u30fc\u30d0\u30fc/\u30b5\u30fc\u30d3\u30b9\u306e\u4e00\u89a7\u306b\u3064\u3044\u3066\u306f\u3001\u30a6\u30a7\u30d6\u30b5\u30a4\u30c8\u3092\u53c2\u7167\u3057\u3066\u304f\u3060\u3055\u3044\u3002\n",
+      "ka": "DAVx\u2075 \u10d0\u10e0\u10d8\u10e1 CalDAV/CardDAV-\u10e1 \u10db\u10d0\u10e0\u10d7\u10d5\u10d8\u10e1\u10d0 \u10d3\u10d0 \u10e1\u10d8\u10dc\u10e5\u10e0\u10dd\u10dc\u10d8\u10d6\u10d0\u10ea\u10d8\u10d8\u10e1 \u10d0\u10de\u10d8 Android-\u10e1\u10d7\u10d5\u10d8\u10e1 \u10e0\u10dd\u10db\u10d4\u10da\u10d8\u10ea \u10d0\u10d3\u10d2\u10d8\u10da\u10dd\u10d1\u10e0\u10d8\u10d5\u10d0\u10d3 \u10d8\u10dc\u10e2\u10d4\u10d2\u10e0\u10d8\u10e0\u10d3\u10d4\u10d1\u10d0 Android-\u10d8\u10e1 \u10d9\u10d0\u10da\u10d4\u10dc\u10d3\u10d0\u10e0\u10d8\u10e1/\u10d9\u10dd\u10dc\u10e2\u10d0\u10e5\u10e2\u10d8\u10e1 \u10d0\u10de\u10d4\u10d1\u10d7\u10d0\u10dc.\n\n\u10d2\u10d0\u10db\u10dd\u10d8\u10e7\u10d4\u10dc\u10d4\u10d7 \u10d7\u10e5\u10d5\u10d4\u10dc\u10e1 \u10e1\u10d4\u10e0\u10d5\u10d4\u10e0\u10d7\u10d0\u10dc \u10d0\u10dc \u10e1\u10d0\u10dc\u10d3\u10dd \u10dd\u10de\u10d4\u10e0\u10d0\u10e2\u10dd\u10e0\u10d7\u10d0\u10dc \u10d7\u10e5\u10d5\u10d4\u10dc\u10d8 \u10d9\u10dd\u10dc\u10e2\u10d0\u10e5\u10e2\u10d4\u10d1\u10d8\u10e1, \u10e6\u10dd\u10dc\u10d8\u10e1\u10eb\u10d8\u10d4\u10d1\u10d4\u10d1\u10d8\u10e1 \u10d3\u10d0 \u10d3\u10d0\u10d5\u10d0\u10da\u10d4\u10d1\u10d4\u10d1\u10d8\u10e1 \u10d7\u10e5\u10d5\u10d4\u10dc\u10d8 \u10d9\u10dd\u10dc\u10e2\u10e0\u10dd\u10da\u10d8\u10e1 \u10e5\u10d5\u10d4\u10e8 \u10d3\u10d0\u10e1\u10d0\u10e2\u10dd\u10d5\u10d4\u10d1\u10da\u10d0\u10d3.\n\n\u10db\u10d4\u10e2\u10d8 \u10d8\u10dc\u10e4\u10dd\u10e0\u10db\u10d0\u10ea\u10d8\u10d8\u10e1\u10d7\u10d5\u10d8\u10e1 \u10d3\u10d0 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10e3\u10da\u10d8 \u10e1\u10d4\u10e0\u10d5\u10d4\u10e0\u10d4\u10d1\u10d8\u10e1/\u10e1\u10d4\u10e0\u10d5\u10d8\u10e1\u10d4\u10d1\u10d8\u10e1 \u10e1\u10d8\u10d8\u10e1\u10d0\u10d7\u10d5\u10d8\u10e1 \u10d2\u10d0\u10d3\u10d0\u10ee\u10d4\u10d3\u10d4\u10d7 \u10d5\u10d4\u10d1 \u10e1\u10d0\u10d8\u10e2\u10e1.\n",
+      "ko": "DAVx\u00b2\ub294 \uc548\ub4dc\ub85c\uc774\ub4dc\uc6a9 CalDAV/CardDAV \uad00\ub9ac \ubc0f \ub3d9\uae30\ud654 \uc571\uc73c\ub85c \uc548\ub4dc\ub85c\uc774\ub4dc \uce98\ub9b0\ub354/\uc5f0\ub77d\ucc98 \uc571\uacfc \uae30\ubcf8\uc801\uc73c\ub85c \ud1b5\ud569\ub41c\ub2e4.\n\n\uc5f0\ub77d\ucc98, \uc774\ubca4\ud2b8 \ubc0f \uc791\uc5c5\uc744 \uc81c\uc5b4\ud558\uae30 \uc704\ud574 \uc790\uc2e0\uc758 \uc11c\ubc84 \ub610\ub294 \uc2e0\ub8b0\ud560 \uc218 \uc788\ub294 \ud638\uc2a4\ud2b8\uc5d0\uac8c \uc0ac\uc6a9\ud569\ub2c8\ub2e4.\n\n\uc790\uc138\ud55c \ub0b4\uc6a9\uacfc \ud14c\uc2a4\ud2b8\ub41c \uc11c\ubc84/\uc11c\ube44\uc2a4 \ubaa9\ub85d\uc740 \uc6f9 \uc0ac\uc774\ud2b8\ub97c \ucc38\uc870\ud558\uc2ed\uc2dc\uc624.\n",
+      "nl": "DAVx\u2075 is een CalDAV/CardDAV management en synchronisatie app voor Android die integreert met de standaard Android kalender/contact apps.\n\nGebruik het met je eigen server of met een vertrouwde hoster om je contacten, afspraken en taken onder je eigen controle te houden.\n\nKijk voor meer informatie en een lijst met geteste servers / services op onze website.\n",
+      "pl": "DAVx\u2075 to aplikacja do zarz\u0105dzania i synchronizacji CalDAV/CardDAV na Androida, kt\u00f3ra natywnie integruje si\u0119 z aplikacjami kalendarza/kontakt\u00f3w w systemie Android.\n\nU\u017cywaj go z w\u0142asnym serwerem lub zaufan\u0105 firm\u0105 hostingow\u0105, aby mie\u0107 kontrol\u0119 nad swoimi kontaktami, wydarzeniami i zadaniami.\n\nAby uzyska\u0107 wi\u0119cej informacji i list\u0119 przetestowanych serwer\u00f3w/us\u0142ug, zajrzyj na stron\u0119 internetow\u0105.\n",
+      "pt": "A DAVx\u2075 \u00e9 uma aplica\u00e7\u00e3o de gerenciamento e sincroniza\u00e7\u00e3o CalDAV/CardDAV para Android que se integra nativamente com aplicativos de calend\u00e1rio/contactos do Android.\n\nUse-a com seu pr\u00f3prio servidor ou com um h\u00f3spede confi\u00e1vel para manter seus contactos, eventos e tarefas sob seu controle.\n\nPara mais informa\u00e7\u00f5es e uma lista de servidores/servi\u00e7os testados, visite o s\u00edtio.\n",
+      "pt-BR": "O DAVx\u2075 \u00e9 um aplicativo de gerenciamento e sincroniza\u00e7\u00e3o de CalDAV/CardDAV para Android que se integra nativamente com aplicativos de calend\u00e1rio e de contatos do Android.\n\nUse-o com o seu pr\u00f3prio servidor ou com um hospedeiro confiado para manter seus contatos, eventos, e tarefas sob seu controle.\n\nPara mais informa\u00e7\u00f5es, e uma lista de servidores/servi\u00e7os testados, d\u00ea uma olhada no site.\n",
+      "ro": "DAVx\u2075 este o aplica\u021bie de gestionare \u0219i sincronizare CalDAV/CardDAV pentru Android care se integreaz\u0103 \u00een mod nativ cu aplica\u021biile de calendar/contacte Android.\n\nUtilizeaz\u0103-l cu propriul server sau cu o gazd\u0103 de \u00eencredere pentru a p\u0103stra contactele, evenimentele \u0219i sarcinile sub control.\n\nPentru mai multe informa\u021bii \u0219i o list\u0103 de servere/servicii testate, arunc\u0103 o privire pe site-ul Web.\n",
+      "ru": "DAVx\u2075 - \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0434\u043b\u044f \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u0438 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u0438 CalDAV/CardDAV \u0434\u043b\u044f Android, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u0438\u0437\u043d\u0430\u0447\u0430\u043b\u044c\u043d\u043e \u0438\u043d\u0442\u0435\u0433\u0440\u0438\u0440\u0443\u0435\u0442\u0441\u044f \u0441 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u043c\u0438 Android \u0434\u043b\u044f \u0440\u0430\u0431\u043e\u0442\u044b \u0441 \u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440\u0435\u043c \u0438 \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u0430\u043c\u0438.\n\n\u0418\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0439\u0442\u0435 \u0435\u0433\u043e \u0441 \u0432\u0430\u0448\u0438\u043c \u0441\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u043c \u0441\u0435\u0440\u0432\u0435\u0440\u043e\u043c \u0438\u043b\u0438 \u0434\u043e\u0432\u0435\u0440\u0435\u043d\u043d\u044b\u043c \u0445\u043e\u0441\u0442\u0435\u0440\u043e\u043c, \u0447\u0442\u043e\u0431\u044b \u0434\u0435\u0440\u0436\u0430\u0442\u044c \u0432\u0430\u0448\u0438 \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u044b, \u0441\u043e\u0431\u044b\u0442\u0438\u044f \u0438 \u0437\u0430\u0434\u0430\u0447\u0438 \u043f\u043e\u0434 \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u0435\u043c.\n\n\u0414\u043b\u044f \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u044f \u0434\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0439 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438 \u0438 \u0441\u043f\u0438\u0441\u043a\u0430 \u043f\u0440\u043e\u0442\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0445 \u0441\u0435\u0440\u0432\u0435\u0440\u043e\u0432/\u0441\u043b\u0443\u0436\u0431, \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435 \u0441\u0430\u0439\u0442.\n",
+      "sk": "DAVx\u2075 je aplik\u00e1cia na spr\u00e1vu a synchroniz\u00e1ciu CalDAV/CardDAV pre Android  ktor\u00e1 sa nat\u00edvne integruje s Android aplik\u00e1ciami kalend\u00e1r/kontakt.\n\nPou\u017e\u00edvajte s va\u0161im vlastn\u00fdm serverom alebo s poskytovate\u013eom server-hostingu ktor\u00e9mu d\u00f4verujete a majte svoje kontakty, udalosti a \u00falohy pod kontrolou.\n\n\u010eal\u0161ie inform\u00e1cie a zoznam testovan\u00fdch serverov/slu\u017eieb n\u00e1jdete na webovom s\u00eddle.\n",
+      "sl": "DAVx\u2075 je CalDAV/CardDAV android aplikacija za urejanje in sinhronizacijo z koledarja/kontaktov.\n\nUporabite jo z va\u0161im lastnim stre\u017enikom ali drugimi ponudniki stre\u017enikov, ki jim zaupate, in imejte tako va\u0161e kontakte, dogodke in naloge pod svojim nadzorom.\n\nVe\u010d informacij ter seznam serverjev/storitev lahko dobite na spletni strani\n",
+      "sr": "DAVx\u2075 \u0458\u0435 \u0430\u043f\u043b\u0438\u043a\u0430\u0446\u0438\u0458\u0430 \u0437\u0430 \u0443\u043f\u0440\u0430\u0432\u0459\u0430\u045a\u0435 \u0438 \u0441\u0438\u043d\u0445\u043e\u0440\u043d\u0438\u0437\u0430\u0446\u0438\u0458\u0443 \u041a\u0430\u043b\u0414\u0410\u0412/\u041a\u0430\u0440\u0434\u0414\u0410\u0412-\u0430 \u0437\u0430 \u0410\u043d\u0434\u0440\u043e\u0438\u0434 \u043a\u043e\u0458\u0430 \u0441\u0435 \u043d\u043e\u0440\u043c\u0430\u043b\u043d\u043e \u0438\u043d\u0442\u0435\u0433\u0440\u0438\u0448\u0435 \u0441\u0430 \u0410\u0434\u0440\u043e\u0438\u0434 \u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440/\u043a\u043e\u043d\u0442\u0430\u043a\u0442 \u0430\u043f\u043b\u0438\u043a\u0430\u0446\u0438\u0458\u0430\u043c\u0430.\n\n\u041a\u043e\u0440\u0438\u0441\u0442\u0438\u0442\u0435 \u0458\u0435 \u0441\u0430 \u0441\u0432\u043e\u0458\u0438\u043c \u0441\u0435\u0440\u0432\u0435\u0440\u043e\u043c \u0438\u043b\u0438 \u0441\u0430 \u0434\u043e\u0431\u0430\u0432\u0459\u0430\u0447\u0435\u043c \u043e\u0434 \u043f\u043e\u0432\u0435\u0440\u0435\u045a\u0430 \u0434\u0430 \u0431\u0438 \u0441\u0442\u0435 \u0434\u0440\u0436\u0430\u043b\u0438 \u0441\u0432\u043e\u0458\u0435 \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u0435, \u0434\u043e\u0433\u0430\u0452\u0430\u0458\u0435 \u0438 \u0437\u0430\u0434\u0430\u0442\u043a\u0435 \u043f\u043e\u0434 \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u043e\u043c.\n\n\u0417\u0430 \u0432\u0438\u0448\u0435 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0458\u0430 \u0438 \u043b\u0438\u0441\u0442\u0443 \u043f\u0440\u043e\u0432\u0435\u0440\u0435\u043d\u0438\u0445 \u0441\u0435\u0440\u0432\u0435\u0440\u0430/\u0443\u0441\u043b\u0443\u0433\u0430, \u043f\u043e\u0433\u043b\u0435\u0434\u0430\u0458\u0442\u0435 \u0432\u0435\u0431-\u0441\u0430\u0458\u0442.\n",
+      "sv": "DAVx\u2075 \u00e4r en CalDAV/CardDAV-hanterings och synkroniseringsapp f\u00f6r Android som naturligt integreras med Androids kalender/kontakt-appar.\n\nAnv\u00e4nd den med din egen server eller med en betrodd v\u00e4rd f\u00f6r att h\u00e5lla dina kontakter, h\u00e4ndelser och uppgifter under din kontroll.\n\nF\u00f6r mer information och en lista \u00f6ver testade servrar/tj\u00e4nster, ta en titt p\u00e5 webbplatsen.\n",
+      "szl": "DAVx\u2075 to je aplikacyjo zarz\u014dndzanio i synchr\u014dnizacyje CalDAV/CardDAV dlo Androida, co natywnie integruje sie ze aplikacyjami kalyndorza/k\u014dntakt\u014dw Androida.\n\nU\u017cywej to ze swojim w\u0142osnym serwerym abo ze zaufanym hostym, \u017ceby trzima\u0107 swoje k\u014dntakty, zdarzynia i zadania pod k\u014dntrol\u014dm.\n\nPo wiyncyj informacyji i lista przetestowanych serwer\u014dw/serwis\u014dw, wejzdrzij na str\u014dna internetowo.\n",
+      "uk": "DAVx\u2075 \u0446\u0435 Android \u0434\u043e\u0434\u0430\u0442\u043e\u043a \u0434\u043b\u044f \u043a\u0435\u0440\u0443\u0432\u0430\u043d\u043d\u044f \u0442\u0430 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0456\u0437\u0430\u0446\u0456\u0457 CalDAV/CardDAV, \u044f\u043a\u0438\u0439 \u043e\u0440\u0433\u0430\u043d\u0456\u0447\u043d\u043e \u0456\u043d\u0442\u0435\u0433\u0440\u0443\u0454\u0442\u044c\u0441\u044f \u0437 Android \u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440\u0435\u043c/\u043a\u043e\u043d\u0442\u0430\u043a\u0442\u0430\u043c\u0438.\n\n\u0412\u0438\u043a\u043e\u0440\u0438\u0441\u0442\u043e\u0432\u0443\u0439\u0442\u0435 \u0439\u043e\u0433\u043e \u0437 \u0432\u043b\u0430\u0441\u043d\u0438\u043c \u0441\u0435\u0440\u0432\u0435\u0440\u043e\u043c \u0430\u0431\u043e \u0437 \u0434\u043e\u0432\u0456\u0440\u0435\u043d\u0438\u043c \u043f\u043e\u0441\u0442\u0430\u0447\u0430\u043b\u044c\u043d\u0438\u043a\u043e\u043c, \u0430\u0431\u0438 \u0437\u0431\u0435\u0440\u0435\u0433\u0442\u0438 \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044c \u043d\u0430\u0434  \u0432\u0430\u0448\u0438\u043c\u0438 \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u0430\u043c\u0438, \u043f\u043e\u0434\u0456\u044f\u043c\u0438 \u0442\u0430 \u0437\u0430\u0434\u0430\u0447\u0430\u043c\u0438.\n\n\u0414\u043b\u044f \u0431\u0456\u043b\u044c\u0448 \u0434\u0435\u0442\u0430\u043b\u044c\u043d\u043e\u0457 \u0456\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u0457 \u0442\u0430 \u0441\u043f\u0438\u0441\u043a\u0443 \u043f\u0435\u0440\u0435\u0432\u0456\u0440\u0435\u043d\u0438\u0445 \u0441\u0435\u0440\u0432\u0435\u0440\u0456\u0432/\u0441\u0435\u0440\u0432\u0456\u0441\u0456\u0432 \u0434\u0438\u0432\u0456\u0442\u044c\u0441\u044f \u043d\u0430\u0448\u0443 Web \u0441\u0442\u043e\u0440\u0456\u043d\u043a\u0443.\n",
+      "vi": "DAVx\u2075 l\u00e0 m\u1ed9t \u1ee9ng d\u1ee5ng qu\u1ea3n l\u00fd v\u00e0 \u0111\u1ed3ng b\u1ed9 ho\u00e1 CalDAV/CardDAV d\u00e0nh cho Android, n\u00f3 t\u00edch h\u1ee3p v\u1edbi \u1ee9ng d\u1ee5ng l\u1ecbch/danh b\u1ea1 c\u1ee7a Android.\n\nS\u1eed d\u1ee5ng n\u00f3 v\u1edbi m\u00e1y ch\u1ee7 c\u1ee7a b\u1ea1n ho\u1eb7c v\u1edbi m\u1ed9t ng\u01b0\u1eddi l\u01b0u tr\u1eef \u0111\u01b0\u1ee3c tin c\u1eady \u0111\u1ec3 gi\u1eef c\u00e1c danh b\u1ea1, s\u1ef1 ki\u1ec7n v\u00e0 c\u00f4ng vi\u1ec7c c\u1ee7a b\u1ea1n d\u01b0\u1edbi quy\u1ec1n ki\u1ec3m so\u00e1t c\u1ee7a b\u1ea1n.\n\n\u0110\u1ec3 bi\u1ebft th\u00eam th\u00f4ng tin v\u00e0 xem m\u1ed9t danh s\u00e1ch c\u00e1c m\u00e1y ch\u1ee7/d\u1ecbch v\u1ee5 \u0111\u00e3 \u0111\u01b0\u1ee3c th\u1eed nghi\u1ec7m, h\u00e3y xem trang web.\n",
+      "zh": "DAVx\u2075 \u662f\u4e00\u6b3e Android \u7684 CalDAV/CardDAV \u7ba1\u7406\u540c\u6b65\u5e94\u7528\uff0c\u4e0e Android \u7684\u65e5\u5386\u3001\u901a\u8baf\u5f55\u8f6f\u4ef6\u539f\u751f\u96c6\u6210\u3002\n\n\u901a\u8fc7\u8be5\u5e94\u7528\uff0c\u53ef\u5728\u81ea\u5df1\u7684\u670d\u52a1\u5668\u6216\u4fe1\u4efb\u7684\u6258\u7ba1\u5546\u4e0a\u4fdd\u5b58\u901a\u8baf\u5f55\u3001\u65f6\u95f4\u548c\u4efb\u52a1\u6570\u636e\uff0c\u4fdd\u8bc1\u53ef\u63a7\u3002\n\n\u8bf7\u6d4f\u89c8\u7f51\u7ad9\uff0c\u4e86\u89e3\u66f4\u591a\u4fe1\u606f\uff0c\u5305\u62ec\u6d4b\u8bd5\u901a\u8fc7\u7684\u670d\u52a1\u5668\u3001\u7f51\u7ad9\u5217\u8868\u3002\n",
+      "zh-TW": "DAVx\u2075 \u662f\u4e00\u500b CalDAV/CardDAV \u7ba1\u7406\u8207\u540c\u6b65\u5de5\u5177\uff0c\u5728 Android \u8a2d\u5099\u4e0a\u904b\u884c\uff0c\u4e26\u96c6\u5408\u4e86 Android \u5185\u7f6e\u7684\u884c\u4e8b\u66c6\u548c\u806f\u7d61\u4ebaAPP\u3002\n\n\u5728\u60a8\u81ea\u5df1\u7684\u4f3a\u670d\u5668\u4e0a\uff0c\u6216\u8005\u5728\u53ef\u4fe1\u4efb\u7684\u7ba1\u7406\u670d\u52d9\u4e0a\u4fdd\u7ba1\u4f60\u7684\u806f\u7d61\u4eba\uff0c\u4e8b\u9805\u548c\u4efb\u52d9\u3002\n\n\u60a8\u53ef\u4ee5\u5728\u7db2\u969b\u7db2\u7d61\u4e0a\u7372\u53d6\u66f4\u591a\u8a73\u7d30\u8cc7\u6599\uff0c\u5b83\u542b\u6709\u4e00\u500b\u7d93\u904e\u6e2c\u8a66\u6210\u529f\u7684\u670d\u52d9\u548c\u4f3a\u670d\u5668\u6e05\u55ae\u3002"
+    },
+    "donate": [
+      "https://www.davx5.com/donate"
+    ],
+    "featureGraphic": {
+      "en-US": {
+        "name": "/at.bitfire.davdroid/en-US/featureGraphic_FM_c9ctGVZc_spox1bN4-795DxGrkd6MpmXblMRj_p0=.png",
+        "sha256": "14cfdcf5cb4655973fb29a31d5b378fbbf790f11ab91de8ca665db94c463fe9d",
+        "size": 482539
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/at.bitfire.davdroid/en-US/icon_NexNou7vmaD45rbdc8kjLj0Rv7FW128Mde9OQpHFXPE=.png",
+        "sha256": "35ec4da2eeef99a0f8e6b6dd73c9232e3d11bfb156d76f0c75ef4e4291c55cf1",
+        "size": 21851
+      }
+    },
+    "issueTracker": "https://github.com/bitfireAT/davx5-ose/issues",
+    "lastUpdated": 1779090136410,
+    "liberapay": "DAVx5",
+    "license": "GPL-3.0-only",
+    "name": {
+      "ca": "DAVx\u2075",
+      "en-US": "DAVx\u2075"
+    },
+    "preferredSigner": "8b48e676a6864967791783c1d8d0fc0dd6d2ce33e1fb36787793ecd086d44707",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/at.bitfire.davdroid/en-US/phoneScreenshots/1.png",
+            "sha256": "b12b1e44852efcc74f6ff22edea05d761fc7a471ebd84426e3cacb3304eb2e72",
+            "size": 644548
+          },
+          {
+            "name": "/at.bitfire.davdroid/en-US/phoneScreenshots/2.png",
+            "sha256": "73f492dae517033fc91d58b5923f3da4139d66ad31e71c905f236c8a5a22af4f",
+            "size": 831356
+          },
+          {
+            "name": "/at.bitfire.davdroid/en-US/phoneScreenshots/3.png",
+            "sha256": "1b167dc77b6defde46f411efd2fcebf8f6eff3c62fdfd23f3b00b149ae33e323",
+            "size": 593403
+          },
+          {
+            "name": "/at.bitfire.davdroid/en-US/phoneScreenshots/4.png",
+            "sha256": "608b0c55e81c7b0aac506a19d0c426ec547ef01440f4091c591bf3fa01bc94f7",
+            "size": 943402
+          },
+          {
+            "name": "/at.bitfire.davdroid/en-US/phoneScreenshots/5.png",
+            "sha256": "c8252ccb6e5b54b5e40a9c72f8fb984b5f9e55cccf10da5d3214281d5722d46f",
+            "size": 675474
+          },
+          {
+            "name": "/at.bitfire.davdroid/en-US/phoneScreenshots/6.png",
+            "sha256": "bebc13659390c6898277ada149f5451f3845504e3bb305998d87dae53641e783",
+            "size": 870457
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/bitfireAT/davx5-ose/",
+    "summary": {
+      "ar": "\u0645\u0632\u0627\u0645\u0646\u0629 \u0648\u0639\u0645\u064a\u0644 \u0644\u0640 CalDAV/CardDAV",
+      "bg": "\u0421\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u044f \u0438 \u043a\u043b\u0438\u0435\u043d\u0442 \u0437\u0430 CalDAV/CardDAV",
+      "ca": "Client i sincronitzaci\u00f3 de CalDAV/CardDAV",
+      "cs": "Synchronizace CalDAV/CardDAV a klient",
+      "da": "CalDAV/CardDAV synkronisering og klient",
+      "de": "CalDAV/CardDAV-Synchronisierung und -Client",
+      "el": "\u03a3\u03c5\u03b3\u03c7\u03c1\u03bf\u03bd\u03b9\u03c3\u03bc\u03cc\u03c2 CalDAV/CardDAV \u03bc\u03b5 \u03c0\u03b5\u03bb\u03ac\u03c4\u03b7",
+      "en-GB": "CalDAV/CardDAV Synchronisation and Client",
+      "en-US": "CalDAV/CardDAV Synchronization and Client",
+      "es": "Cliente y Sincronizaci\u00f3n de CalDAV/CardDAV",
+      "et": "CalDAV/CardDAV s\u00fcnkroniseerimine ja klient",
+      "eu": "CalDAV/CardDAV sinkronizazio eta bezeroa",
+      "fi": "CalDAV/CardDAV Synkronointi- ja asiakasohjelma",
+      "fr": "Synchronisation et Client CalDAV/CardDAV",
+      "fy": "CalDAV/CardDAV-syngronisaasje en -br\u00fbkersprogramma",
+      "gl": "Sincronizaci\u00f3n CalDAV/CardDAV e Cliente",
+      "hr": "CalDAV / CardDAV sinkronizacija i klijent",
+      "hu": "CalDAV/CardDAV szinkroniz\u00e1ci\u00f3 \u00e9s kliens",
+      "id": "Sinkronisasi dan Klien CalDAV/CardDAV",
+      "it": "Client e Sincronizzazione CalDAV/CardDAV",
+      "ja": "CalDAV/CardDAV \u540c\u671f\u3068\u30af\u30e9\u30a4\u30a2\u30f3\u30c8",
+      "ka": "CalDAV/CardDAV \u10e1\u10d8\u10dc\u10e5\u10e0\u10dd\u10dc\u10d8\u10d6\u10d0\u10ea\u10d8\u10d0 \u10d3\u10d0 \u10d9\u10da\u10d8\u10d4\u10dc\u10e2\u10d8",
+      "ko": "CalDAV/CardDAV \ub3d9\uae30\ud654 \ubc0f \ud074\ub77c\uc774\uc5b8\ud2b8",
+      "nl": "CalDAV/CardDAV synchronisatie en client",
+      "pl": "Synchronizacja i klient CalDAV/CardDAV",
+      "pt": "Sincroniza\u00e7\u00e3o e cliente de CalDAV/CardDAV",
+      "pt-BR": "Sincroniza\u00e7\u00e3o e cliente de CalDAV/CardDAV",
+      "ro": "Sincronizare \u0219i client CalDAV/CardDAV",
+      "ru": "\u0421\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u044f CalDAV/CardDAV \u0438 \u043a\u043b\u0438\u0435\u043d\u0442",
+      "si": "CalDAV/CardDAV \u0dc3\u0db8\u0db8\u0dd4\u0dc4\u0dd6\u0dbb\u0dca\u0dad\u0dba \u0dc4\u0dcf \u0d85\u0db1\u0dd4\u0d9c\u0dca\u200d\u0dbb\u0dcf\u0dc4\u0d9a\u0dba",
+      "sk": "CalDAV/CardDAV synchroniz\u00e1cia a klient",
+      "sl": "CalDAV/CardDAV sinhronizacija in klient",
+      "sr": "\u041a\u0430\u043b\u0414\u0410\u0412/\u041a\u0430\u0440\u0434\u0414\u0410\u0412 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u0458\u0430 \u0438 \u043a\u043b\u0438\u0458\u0435\u043d\u0442",
+      "sv": "CalDAV/CardDAV Synkronisering och klient",
+      "szl": "Synchr\u014dnizacyjo i klijynt CalDAV/CardDAV",
+      "uk": "\u041a\u043b\u0456\u0454\u043d\u0442 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0456\u0437\u0430\u0446\u0456\u0457 CalDAV/CardDAV",
+      "vi": "\u1ee8ng d\u1ee5ng kh\u00e1ch v\u00e0 \u0111\u1ed3ng b\u1ed9 ho\u00e1 CalDAV/CardDAV",
+      "zh": "CalDAV/CardDAV \u540c\u6b65\u5ba2\u6237\u7aef",
+      "zh-TW": "CalDAV/CardDAV \u540c\u6b65\u670d\u52d9\u548c\u5ba2\u6236\u7aef"
+    },
+    "translation": "https://hosted.weblate.org/engage/davx5",
+    "video": {
+      "ca": "https://www.youtube.com/watch?v=fqsK7VCX_fM",
+      "en-US": "https://www.youtube.com/watch?v=fqsK7VCX_fM"
+    },
+    "webSite": "https://www.davx5.com/"
+  },
+  "version": {
+    "added": 1779090136410,
+    "file": {
+      "ipfsCIDv1": "bafybeicrwzmuv6ckxhlk23vq3ilahlyev6e5jasbuf3tstscqeopldjbb4",
+      "name": "/at.bitfire.davdroid_405120004.apk",
+      "sha256": "a22312f5ba76d6e05d67da3b604fc0794e2df2b46de6b6f57ed17c340630030f",
+      "size": 15993488
+    },
+    "manifest": {
+      "nativecode": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86",
+        "x86_64"
+      ],
+      "signer": {
+        "sha256": [
+          "8b48e676a6864967791783c1d8d0fc0dd6d2ce33e1fb36787793ecd086d44707"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.ACCESS_WIFI_STATE"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.READ_SYNC_SETTINGS"
+        },
+        {
+          "name": "android.permission.READ_SYNC_STATS"
+        },
+        {
+          "name": "android.permission.WRITE_SYNC_SETTINGS"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "at.bitfire.davdroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "name": "android.permission.READ_CALENDAR"
+        },
+        {
+          "name": "android.permission.WRITE_CALENDAR"
+        },
+        {
+          "name": "android.permission.READ_CONTACTS"
+        },
+        {
+          "name": "android.permission.WRITE_CONTACTS"
+        },
+        {
+          "name": "org.dmfs.permission.READ_TASKS"
+        },
+        {
+          "name": "org.dmfs.permission.WRITE_TASKS"
+        },
+        {
+          "name": "org.tasks.permission.READ_TASKS"
+        },
+        {
+          "name": "org.tasks.permission.WRITE_TASKS"
+        },
+        {
+          "name": "at.techbee.jtx.permission.READ"
+        },
+        {
+          "name": "at.techbee.jtx.permission.WRITE"
+        }
+      ],
+      "usesPermissionSdk23": [
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_BACKGROUND_LOCATION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 24,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 405120004,
+      "versionName": "4.5.12-ose"
+    },
+    "src": {
+      "name": "/at.bitfire.davdroid_405120004_src.tar.gz",
+      "sha256": "5fdd7a68eb8241efb3c22da453e9e486cd36d6e1aacc08710b4713065e092133",
+      "size": 8496150
+    }
+  }
+}

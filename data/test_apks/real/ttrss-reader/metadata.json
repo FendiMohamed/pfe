@@ -1,0 +1,63 @@
+{
+  "apk": {
+    "expected_sha256": "6049ea122bd506123f97c45b736eed41243bf31fb82bf638e551314891c20726",
+    "index_size": 3523521,
+    "path": "data/test_apks/real/ttrss-reader/ttrss-reader.apk",
+    "sha256": "6049ea122bd506123f97c45b736eed41243bf31fb82bf638e551314891c20726",
+    "size": 3523521,
+    "url": "https://f-droid.org/repo/org.ttrssreader_1981.apk"
+  },
+  "app": "TTRSS-Reader",
+  "categories": [
+    "Internet",
+    "News"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "internet",
+    "news",
+    "rss",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/org.ttrssreader/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "org.ttrssreader",
+  "proof_status": "report-generated",
+  "reason": "No-native RSS/news client with target SDK 36, source tarball, and network/background-service behavior; selected as a likely non-sparse internet app while avoiding already-used Nextcloud News and HomeFeed rows.",
+  "report": {
+    "detected_component_count": 0,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v13/report-real-ttrss-reader",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v13/report-real-ttrss-reader/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v13/report-real-ttrss-reader/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "medium",
+      "reasons": [
+        "1 DEX file(s) failed parsing."
+      ],
+      "score": 0.25
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v13/report-real-ttrss-reader/sbom.cdx.json",
+    "sbom_component_count": 0,
+    "status": "ok"
+  },
+  "slug": "ttrss-reader",
+  "source_repo": "https://github.com/nilsbraden/ttrss-reader-fork",
+  "source_tarball": {
+    "sha256": "56e5dd025205835bdaa3b71e89f1641688321f489a8eb6fd18fca6ea9e89706d",
+    "size": 3259018,
+    "url": "https://f-droid.org/repo/org.ttrssreader_1981_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 1981,
+  "version_name": "1.98.1"
+}

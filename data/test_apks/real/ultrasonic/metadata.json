@@ -1,0 +1,63 @@
+{
+  "apk": {
+    "expected_sha256": "b06e4958e3f6040228e06e270729b2363358d1e2ba8348ad07a7ebc6a0f85daa",
+    "index_size": 5631434,
+    "path": "data/test_apks/real/ultrasonic/ultrasonic.apk",
+    "sha256": "b06e4958e3f6040228e06e270729b2363358d1e2ba8348ad07a7ebc6a0f85daa",
+    "size": 5631434,
+    "url": "https://f-droid.org/repo/org.moire.ultrasonic_131.apk"
+  },
+  "app": "Ultrasonic",
+  "categories": [
+    "Internet",
+    "Multimedia"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "internet",
+    "multimedia",
+    "music-streaming",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/org.moire.ultrasonic/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "org.moire.ultrasonic",
+  "proof_status": "report-generated",
+  "reason": "No-native Subsonic music client with target SDK 36, a medium APK, and a source tarball; selected to broaden media/internet evidence without native `.so` boundaries.",
+  "report": {
+    "detected_component_count": 39,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v15/report-real-ultrasonic",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v15/report-real-ultrasonic/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v15/report-real-ultrasonic/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v15/report-real-ultrasonic/sbom.cdx.json",
+    "sbom_component_count": 39,
+    "status": "ok"
+  },
+  "slug": "ultrasonic",
+  "source_repo": "https://gitlab.com/ultrasonic/ultrasonic",
+  "source_tarball": {
+    "sha256": "afabcc241a0123caef3667c1628e8a019693ba4e6ecb3a088e14850123de2c9a",
+    "size": 11069169,
+    "url": "https://f-droid.org/repo/org.moire.ultrasonic_131_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 131,
+  "version_name": "4.9.0"
+}

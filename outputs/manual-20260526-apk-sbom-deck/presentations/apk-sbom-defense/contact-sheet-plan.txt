@@ -1,0 +1,15 @@
+﻿Contact sheet plan:
+1. Cover with pipeline strip
+2. Problem split: source metadata vs compiled APK
+3. State-of-the-art gap table
+4. Goal/output workflow
+5. Architecture flow
+6. Evidence signal matrix
+7. Confidence and ambiguity triad
+8. Evaluation layer ladder
+9. Main results horizontal bars
+10. Mixed-case interpretation map
+11. SBOM/CVE demo panels
+12. Limitations and next work roadmap
+
+Macro-layout guard: no more than two table-heavy slides in a row; vary flows, matrix, bars, and roadmap. Every slide must read at thumbnail size with a visible claim and proof object.

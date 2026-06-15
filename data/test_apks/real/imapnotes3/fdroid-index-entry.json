@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "added": 1671964584000,
+    "authorEmail": "peter@niendo.de",
+    "categories": [
+      "Email",
+      "Internet",
+      "Note",
+      "Writing"
+    ],
+    "changelog": "https://github.com/niendo1/ImapNotes3/releases",
+    "description": {
+      "de": "Ein kostenloser und schneller Notizeneditor f\u00fcr Android, der die Synchronisierung mit IMAP-Servern erm\u00f6glicht.\n\nAllgemeine Eigenschaften\n\u2022 kompatibel mit verschiedenen IMAP-Servern (Gmail, Yahoo, AOL, Posteo und Ihrem Server)\n\u2022 Sicherheitsoptionen umfassen Nur-Text, SSL/TLS oder STARTTLS\n\u2022 Notizen als Standard-HTML-E-Mails speichern\n\u2022 mehrere IMAP-Konten und/oder Notizbl\u00f6cke verwalten\n\u2022 offline arbeiten (mit Hintergrundsynchronisierung)\n\nFunktionsreicher HTML-Editor\n\u2022 vielseitige Textformatierung\n\u2022 Bildintegration\n\u2022 Checklisten erstellen\n\u2022 Volltextsuche\n\u2022 Schriftfarben und Hintergrundfarben \u00e4ndern\n\nZus\u00e4tzliche Funktionen\n\u2022 vollst\u00e4ndig OpenSource\n\u2022 kein Tracking oder Werbung\n\u2022 Hell- und Dunkelmodus\n\u2022 Ihre Notizen nach #HashTags filtern und organisieren\n\u2022 Notizen mit anderen Apps teilen (Import/Export)\n\u2022 Notizen als lokales Zip-Archiv sichern\n\u2022 alle oder nur eine einzelne Notiz aus einem lokalen Archiv wiederherstellen\n\n",
+      "en-US": "A free and fast notes editor for Android that allows for synchronization with IMAP servers.\n\nGeneral Attributes\n\u2022 compatible with various IMAP servers (Gmail, Yahoo, AOL, Posteo, and your server)\n\u2022 security options include plain text, SSL/TLS, or STARTTLS\n\u2022 save notes as standard HTML E-mails\n\u2022 manage multiple IMAP accounts and/or notepads\n\u2022 works offline (with background synchronization)\n\nFeature-Rich HTML Editor\n\u2022 versatile text formatting\n\u2022 image integration\n\u2022 create checklists\n\u2022 full-text search\n\u2022 individual font and background colors\n\nAdditional Capabilities\n\u2022 no tracking or advertising\n\u2022 light and dark mode support\n\u2022 filter and organize your notes by #HashTags\n\u2022 note sharing with other apps (import/export)\n\u2022 backup notes as local zip archive\n\u2022 restore all or just a single note from a local archive\n  \nAll of these features are contained in this fully open source app, which has no tracking or advertising, and requires only minimal user permissions.",
+      "es-ES": "\u2022 Editor de notas con muchas funciones\n   - atributos de fuente\n   - tablas\n   - casillas de verificaci\u00f3n\n   - listas\n   - insertar im\u00e1genes, enlaces, etc.\n   - deshacer / rehacer\n   - mucho m\u00e1s\n\u2022 sincronizar notas HTML entre dispositivos Android y servidores IMAP.\n\u2022 utilizar con diferentes servidores IMAP (Gmail, Yahoo, AOL, Posteo y su servidor)\n\u2022 crear listas de comprobaci\u00f3n\n\u2022 b\u00fasqueda de texto completo\n\u2022 filtrar y organizar sus notas por #HashTags\n\u2022 soporte de modo claro y oscuro\n\u2022 soporte de color para las notas\n\u2022 Comparte tus notas\n\u2022 copia de seguridad de tus notas en un archivo zip local\n\u2022 Restaurar todas o s\u00f3lo una nota de un archivo local\n\u2022 las notas se guardan como correos electr\u00f3nicos HTML est\u00e1ndar\n\u2022 la seguridad puede ser texto plano, SSL/TLS o STARTTLS\n\u2022 Se pueden gestionar m\u00faltiples cuentas IMAP y/o blocs de notas.\n\u2022 funciona sin conexi\u00f3n y la sincronizaci\u00f3n se realiza en segundo plano\n\u2022 S\u00f3lo se requiere un m\u00ednimo de permisos de usuario\n\u2022 completamente de c\u00f3digo abierto - sin tracker o publicidad\n\u2022 colores personalizables para el editor\n",
+      "fr-FR": "\u2022  Editeur pour vos notes avec de nombreuses fonctionnalit\u00e9s\n - attributs de police\n - tableaux\n - cases \u00e0 cocher\n - listes\n - insertion d'images, de liens etc.\n   -  annuler / r\u00e9tablir\n - beaucoup plus\n\u2022 synchroniser les notes HTML entre les appareils Android et les serveurs IMAP.\n\u2022 cr\u00e9er des checklistes\n\u2022 recherche plein texte\n\u2022 filtrer et organiser vos notes par #HashTags\n\u2022 support des modes clair et fonc\u00e9\n\u2022 support des couleurs pour les notes\n\u2022 partager vos notes\n\u2022 sauvegarder vos notes dans une archive zip locale\n\u2022 restaurer toutes les notes ou seulement une note \u00e0 partir d'une archive locale\n\u2022 les notes sont sauvegard\u00e9es en tant qu'e-mails HTML standard\n\u2022 la s\u00e9curit\u00e9 peut \u00eatre en texte brut, SSL/TLS ou STARTTLS\n\u2022 plusieurs comptes IMAP et/ou blocs-notes peuvent \u00eatre g\u00e9r\u00e9s\n\u2022 fonctionne hors ligne et la synchronisation se fait en arri\u00e8re-plan\n\u2022 seulement un minimum d'autorisations utilisateur requises\n\u2022 enti\u00e8rement open source - pas de tracker ou de publicit\u00e9\n\u2022 couleurs personnalisables pour l'\u00e9diteur\n",
+      "it-IT": "\u2022 Editor per le tue note ricco di funzionalit\u00e0\n   - formattazione di base\n   - tabelle\n   - caselle di controllo\n   - liste\n   - immagini e collegamenti\n   - annulla/ripeti\n   - e molto altro\n\u2022 Sincronizza note HTML tra dispositivi Android e server IMAP\n\u2022 Utilizza diversi server IMAP (Gmail, Yahoo, AOL, Posteo e il tuo server)\n\u2022 Crea liste di controllo\n\u2022 Ricerca testuale completa\n\u2022 Filtra e organizza le tue note con #HashTags\n\u2022 Supporto per temi chiaro e scuro\n\u2022 Personalizza il colore delle tue note\n\u2022 Condividi le tue note\n\u2022 Effettua il backup delle tue note su di un archivio .zip locale\n\u2022 Ripristina il backup completo o anche solo una nota\n\u2022 Salva le tue note come normali messaggi email HTML\n\u2022 Imposta l'autenticazione in testo semplice, SSL/TLS o STARTTLS\n\u2022 Gestisci pi\u00f9 account IMAP e pi\u00f9 raccolte di note\n\u2022 Lavora senza connessione e sincronizza in background\n\u2022 Richiede permessi minimi\n\u2022 Interamente open source - nessun tracciamento n\u00e9 pubblicit\u00e0\n\u2022 Colori personalizzabili per l'editor\n",
+      "ru-RU": "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0438 \u0431\u044b\u0441\u0442\u0440\u044b\u0439 \u0440\u0435\u0434\u0430\u043a\u0442\u043e\u0440 \u0437\u0430\u043c\u0435\u0442\u043e\u043a, \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u044e\u0449\u0438\u0439 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u0441 \u0441\u0435\u0440\u0432\u0435\u0440\u0430\u043c\u0438 IMAP.\n\n\u0413\u043b\u0430\u0432\u043d\u044b\u0435 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438\n\u2022 \u0421\u043e\u0432\u043c\u0435\u0441\u0442\u0438\u043c\u043e \u0441 \u0440\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u043c\u0438 \u0441\u0435\u0440\u0432\u0435\u0440\u0430\u043c\u0438 IMAP (Gmail, Yahoo, AOL, Posteo \u0438 \u0432\u0430\u0448 \u0441\u0435\u0440\u0432\u0435\u0440)\n\u2022 \u041f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438: \u0431\u0435\u0437 \u0448\u0438\u0444\u0440\u043e\u0432\u0430\u043d\u0438\u044f, TLS \u0438 STARTTLS\n\u2022 \u0421\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u0438\u0435 \u0437\u0430\u043c\u0435\u0442\u043e\u043a \u0432 \u0432\u0438\u0434\u0435 \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043d\u044b\u0445 HTML-\u043f\u0438\u0441\u0435\u043c\n\u2022 \u0423\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u043c\u0438 \u0443\u0447\u0451\u0442\u043d\u044b\u043c\u0438 \u0437\u0430\u043f\u0438\u0441\u044f\u043c\u0438 IMAP \u0438 \u0431\u043b\u043e\u043a\u043d\u043e\u0442\u0430\u043c\u0438\n\u2022 \u0420\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u0432 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u043e\u043c \u0440\u0435\u0436\u0438\u043c\u0435 (\u0441 \u0444\u043e\u043d\u043e\u0432\u043e\u0439 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u0435\u0439)\n\n\u041f\u043e\u043b\u043d\u043e\u0446\u0435\u043d\u043d\u044b\u0439 \u0440\u0435\u0434\u0430\u043a\u0442\u043e\u0440 HTML\n\u2022 \u0423\u043d\u0438\u0432\u0435\u0440\u0441\u0430\u043b\u044c\u043d\u043e\u0435 \u0444\u043e\u0440\u043c\u0430\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0442\u0435\u043a\u0441\u0442\u0430\n\u2022 \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0439\n\u2022 \u0421\u043e\u0437\u0434\u0430\u043d\u0438\u0435 \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044c\u043d\u044b\u0445 \u0441\u043f\u0438\u0441\u043a\u043e\u0432 (\u0447\u0435\u043a\u043b\u0438\u0441\u0442\u043e\u0432)\n\u2022 \u041f\u043e\u043b\u043d\u043e\u0442\u0435\u043a\u0441\u0442\u043e\u0432\u044b\u0439 \u043f\u043e\u0438\u0441\u043a\n\u2022 \u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430 \u0446\u0432\u0435\u0442\u0430 \u0448\u0440\u0438\u0444\u0442\u0430 \u0438 \u0444\u043e\u043d\u0430\n\n\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438\n\u2022 \u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435 \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0438 \u0440\u0435\u043a\u043b\u0430\u043c\u044b\n\u2022 \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 \u0441\u0432\u0435\u0442\u043b\u043e\u0433\u043e \u0438 \u0442\u0451\u043c\u043d\u043e\u0433\u043e \u0440\u0435\u0436\u0438\u043c\u043e\u0432\n\u2022 \u0424\u0438\u043b\u044c\u0442\u0440\u0430\u0446\u0438\u044f \u0438 \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0446\u0438\u044f \u0437\u0430\u043c\u0435\u0442\u043e\u043a \u043f\u043e #\u041c\u0435\u0442\u043a\u0430\u043c\n\u2022 \u041e\u0431\u043c\u0435\u043d \u0437\u0430\u043c\u0435\u0442\u043a\u0430\u043c\u0438 \u0441 \u0434\u0440\u0443\u0433\u0438\u043c\u0438 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u043c\u0438 (\u0438\u043c\u043f\u043e\u0440\u0442/\u044d\u043a\u0441\u043f\u043e\u0440\u0442)\n\u2022 \u0420\u0435\u0437\u0435\u0440\u0432\u043d\u043e\u0435 \u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0437\u0430\u043c\u0435\u0442\u043e\u043a \u0432 \u0432\u0438\u0434\u0435 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e\u0433\u043e zip-\u0430\u0440\u0445\u0438\u0432\u0430\n\u2022 \u0412\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \u0432\u0441\u0435\u0445 \u0438\u043b\u0438 \u0442\u043e\u043b\u044c\u043a\u043e \u043e\u0434\u043d\u043e\u0439 \u0437\u0430\u043c\u0435\u0442\u043a\u0438 \u0438\u0437 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0430\u0440\u0445\u0438\u0432\u0430\n\n\u0412\u0441\u0435 \u044d\u0442\u0438 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438 \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u044d\u0442\u0438\u043c \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e \u043e\u0442\u043a\u0440\u044b\u0442\u043e\u043c \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435\u043c, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u043d\u0435 \u0438\u043c\u0435\u0435\u0442 \u0441\u043b\u0435\u0434\u0438\u043b\u043e\u043a \u0438 \u0440\u0435\u043a\u043b\u0430\u043c\u044b \u0438 \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u0442\u043e\u043b\u044c\u043a\u043e \u043c\u0438\u043d\u0438\u043c\u0430\u043b\u044c\u043d\u044b\u0435 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u044f.\n",
+      "uk": "\u0411\u0435\u0437\u043a\u043e\u0448\u0442\u043e\u0432\u043d\u0438\u0439 \u0442\u0430 \u0448\u0432\u0438\u0434\u043a\u0438\u0439 \u0440\u0435\u0434\u0430\u043a\u0442\u043e\u0440 \u043d\u043e\u0442\u0430\u0442\u043e\u043a \u0434\u043b\u044f Android, \u044f\u043a\u0438\u0439 \u0434\u043e\u0437\u0432\u043e\u043b\u044f\u0454 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0456\u0437\u0430\u0446\u0456\u044e \u0456\u0437 \u0441\u0435\u0440\u0432\u0435\u0440\u0430\u043c\u0438 IMAP.\n\n\u0417\u0430\u0433\u0430\u043b\u044c\u043d\u0456 \u043c\u043e\u0436\u043b\u0438\u0432\u043e\u0441\u0442\u0456\n\u2022 \u0441\u0443\u043c\u0456\u0441\u043d\u0438\u0439 \u0437 \u0440\u0456\u0437\u043d\u0438\u043c\u0438 \u0441\u0435\u0440\u0432\u0435\u0440\u0430\u043c\u0438 IMAP (Gmail, Yahoo, AOL, Posteo \u0430\u0431\u043e \u0432\u0430\u0448\u0438\u043c \u0441\u0435\u0440\u0432\u0435\u0440\u043e\u043c)\n\u2022 \u043e\u043f\u0446\u0456\u0457 \u0431\u0435\u0437\u043f\u0435\u043a\u0438 \u0432\u043a\u043b\u044e\u0447\u0430\u044e\u0442\u044c \u0432\u0456\u0434\u043a\u0440\u0438\u0442\u0438\u0439 \u0442\u0435\u043a\u0441\u0442, SSL/TLS \u0430\u0431\u043e STARTTLS\n\u2022 \u0437\u0431\u0435\u0440\u0456\u0433\u0430\u0442\u0438 \u043d\u043e\u0442\u0430\u0442\u043a\u0438 \u044f\u043a \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043d\u0456 \u0435\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u0456 \u043b\u0438\u0441\u0442\u0438 HTML\n\u2022 \u043a\u0435\u0440\u0443\u0432\u0430\u0442\u0438 \u043a\u0456\u043b\u044c\u043a\u043e\u043c\u0430 \u043e\u0431\u043b\u0456\u043a\u043e\u0432\u0438\u043c\u0438 \u0437\u0430\u043f\u0438\u0441\u0430\u043c\u0438 IMAP \u0442\u0430/\u0430\u0431\u043e \u0431\u043b\u043e\u043a\u043d\u043e\u0442\u0430\u043c\u0438\n\u2022 \u043f\u0440\u0430\u0446\u044e\u0454 \u043e\u0444\u043b\u0430\u0439\u043d (\u0437 \u0444\u043e\u043d\u043e\u0432\u043e\u044e \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0456\u0437\u0430\u0446\u0456\u0454\u044e)\n\n\u0411\u0430\u0433\u0430\u0442\u043e\u0444\u0443\u043d\u043a\u0446\u0456\u043e\u043d\u0430\u043b\u044c\u043d\u0438\u0439 HTML-\u0440\u0435\u0434\u0430\u043a\u0442\u043e\u0440\n\u2022 \u0440\u043e\u0437\u0432\u0438\u043d\u0443\u0442\u0435 \u0444\u043e\u0440\u043c\u0430\u0442\u0443\u0432\u0430\u043d\u043d\u044f \u0442\u0435\u043a\u0441\u0442\u0443\n\u2022 \u0456\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0456\u044f \u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u044c\n\u2022 \u0441\u0442\u0432\u043e\u0440\u0435\u043d\u043d\u044f \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044c\u043d\u0438\u0445 \u0441\u043f\u0438\u0441\u043a\u0456\u0432\n\u2022 \u043f\u043e\u0432\u043d\u043e\u0442\u0435\u043a\u0441\u0442\u043e\u0432\u0438\u0439 \u043f\u043e\u0448\u0443\u043a\n\u2022 \u043e\u0441\u043e\u0431\u043b\u0438\u0432\u0456 \u0448\u0440\u0438\u0444\u0442\u0438 \u0442\u0430 \u043a\u043e\u043b\u044c\u043e\u0440\u0438\n\n\u0414\u043e\u0434\u0430\u0442\u043a\u043e\u0432\u0456 \u043c\u043e\u0436\u043b\u0438\u0432\u043e\u0441\u0442\u0456\n\u2022 \u0432\u0456\u0434\u0441\u0443\u0442\u043d\u0456\u0441\u0442\u044c \u0432\u0456\u0434\u0441\u0442\u0435\u0436\u0435\u043d\u043d\u044f \u0442\u0430 \u0440\u0435\u043a\u043b\u0430\u043c\u0438\n\u2022 \u043f\u0456\u0434\u0442\u0440\u0438\u043c\u043a\u0430 \u0441\u0432\u0456\u0442\u043b\u043e\u0433\u043e \u0442\u0430 \u0442\u0435\u043c\u043d\u043e\u0433\u043e \u0440\u0435\u0436\u0438\u043c\u0456\u0432\n\u2022 \u0444\u0456\u043b\u044c\u0442\u0440\u0430\u0446\u0456\u044f \u0442\u0430 \u0432\u043f\u043e\u0440\u044f\u0434\u043a\u0443\u0432\u0430\u043d\u043d\u044f \u043d\u043e\u0442\u0430\u0442\u043e\u043a \u0437\u0430 #\u0425\u0435\u0448\u0442\u0435\u0433\u0430\u043c\u0438\n\u2022 \u043e\u0431\u043c\u0456\u043d \u043d\u043e\u0442\u0430\u0442\u043a\u0430\u043c\u0438 \u0437 \u0456\u043d\u0448\u0438\u043c\u0438 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u0430\u043c\u0438 (\u0456\u043c\u043f\u043e\u0440\u0442/\u0435\u043a\u0441\u043f\u043e\u0440\u0442)\n\u2022 \u0440\u0435\u0437\u0435\u0440\u0432\u043d\u0435 \u043a\u043e\u043f\u0456\u044e\u0432\u0430\u043d\u043d\u044f \u043d\u043e\u0442\u0430\u0442\u043e\u043a \u0443 \u0432\u0438\u0433\u043b\u044f\u0434\u0456 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e\u0433\u043e zip-\u0430\u0440\u0445\u0456\u0432\u0443\n\u2022 \u0432\u0456\u0434\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044f \u0432\u0441\u0456\u0445 \u0430\u0431\u043e \u043b\u0438\u0448\u0435 \u043e\u0434\u043d\u0456\u0454\u0457 \u043d\u043e\u0442\u0430\u0442\u043a\u0438 \u0437 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0430\u0440\u0445\u0456\u0432\u0443\n\n\u0423\u0441\u0456 \u0446\u0456 \u0444\u0443\u043d\u043a\u0446\u0456\u0457 \u043c\u0456\u0441\u0442\u044f\u0442\u044c\u0441\u044f \u0432 \u0446\u044c\u043e\u043c\u0443 \u043f\u043e\u0432\u043d\u0456\u0441\u0442\u044e \u0432\u0456\u0434\u043a\u0440\u0438\u0442\u043e\u043c\u0443 \u0434\u043e\u0434\u0430\u0442\u043a\u0443, \u044f\u043a\u0438\u0439 \u043d\u0435 \u043c\u0430\u0454 \u0432\u0456\u0434\u0441\u0442\u0435\u0436\u0435\u043d\u043d\u044f \u0442\u0430 \u0440\u0435\u043a\u043b\u0430\u043c\u0438 \u0442\u0430 \u0432\u0438\u043c\u0430\u0433\u0430\u0454 \u043b\u0438\u0448\u0435 \u043c\u0456\u043d\u0456\u043c\u0430\u043b\u044c\u043d\u0438\u0445 \u0434\u043e\u0437\u0432\u043e\u043b\u0456\u0432 \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u0447\u0430.\n",
+      "zh-SIMPLIFIED": "\u2022 \u5177\u6709\u8bb8\u591a\u529f\u80fd\u7684\u7b14\u8bb0\u7f16\u8f91\u5668\n   - \u5b57\u4f53\u5c5e\u6027\n   - \u9009\u9879\u5361\n   - \u590d\u9009\u6846\n   - \u5217\u8868\n   - \u63d2\u5165\u56fe\u50cf\u3001\u94fe\u63a5\u7b49\u3002\n   - \u64a4\u6d88/\u6062\u590d\n   - \u66f4\u591a\n\u2022 \u5728Android\u8bbe\u5907\u548cIMAP\u670d\u52a1\u5668\u4e4b\u95f4\u540c\u6b65HTML\u7b14\u8bb0\u3002\n\u2022 \u9002\u7528\u4e8e\u4e0d\u540c\u7684IMAP\u670d\u52a1\u5668\uff08Gmail\u3001Yahoo\u3001AOL\u3001Posteo\u548c\u60a8\u7684\u670d\u52a1\u5668\uff09\n\u2022 \u521b\u5efa\u68c0\u67e5\u5217\u8868\n\u2022 \u5168\u6587\u641c\u7d22\n\u2022 \u6309#HashTags\u8fc7\u6ee4\u548c\u7ec4\u7ec7\u7b14\u8bb0\n\u2022 \u4eae\u6697\u6a21\u5f0f\u652f\u6301\n\u2022 \u7b14\u8bb0\u7684\u989c\u8272\u652f\u6301\n\u2022 \u5206\u4eab\u4f60\u7684\u7b14\u8bb0\n\u2022 \u5c06\u7b14\u8bb0\u5907\u4efd\u5230\u672c\u5730zip\u5b58\u6863\n\u2022 \u4ece\u672c\u5730\u5b58\u6863\u4e2d\u6062\u590d\u6240\u6709\u7b14\u8bb0\u6216\u4ec5\u6062\u590d\u4e00\u4e2a\u7b14\u8bb0\n\u2022 \u7b14\u8bb0\u4fdd\u5b58\u4e3a\u6807\u51c6HTML\u7535\u5b50\u90ae\u4ef6\n\u2022 \u5b89\u5168\u6027\u53ef\u4ee5\u662f\u7eaf\u6587\u672c\u3001SSL/TLS\u6216STARTTLS\n\u2022 \u53ef\u4ee5\u7ba1\u7406\u591a\u4e2aIMAP\u5e10\u6237\u548c/\u6216\u8bb0\u4e8b\u672c\n\u2022 \u8131\u673a\u5de5\u4f5c\uff0c\u540c\u6b65\u5728\u540e\u53f0\u5b8c\u6210\n\u2022 \u53ea\u9700\u8981\u6700\u4f4e\u9650\u5ea6\u7684\u7528\u6237\u6743\u9650\n\u2022 \u5b8c\u5168\u5f00\u6e90-\u65e0\u8ddf\u8e2a\u5668\u6216\u5e7f\u544a\n\u2022 \u7f16\u8f91\u5668\u7684\u53ef\u81ea\u5b9a\u4e49\u989c\u8272\n"
+    },
+    "featureGraphic": {
+      "en-US": {
+        "name": "/de.niendo.ImapNotes3/en-US/featureGraphic_VSmKN6fNIYtBECQnVTkHLpDB4srbJCxgt01ox_VIxtM=.png",
+        "sha256": "55298a37a7cd218b411024275539072e90c1e2cadb242c60b74d68c7f548c6d3",
+        "size": 35525
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/de.niendo.ImapNotes3/en-US/icon_SgIjH5KTv95cLGkKcH6ERvWXLxErblgOecS-O4nlE4A=.png",
+        "sha256": "4a02231f9293bfde5c2c690a707e8446f5972f112b6e580e79c4be3b89e51380",
+        "size": 34695
+      }
+    },
+    "issueTracker": "https://github.com/niendo1/ImapNotes3/issues",
+    "lastUpdated": 1770108040000,
+    "license": "GPL-3.0-only",
+    "name": {
+      "de": "ImapNotes3",
+      "en-US": "ImapNotes3",
+      "es-ES": "ImapNotes3",
+      "fr-FR": "ImapNotes3",
+      "it-IT": "ImapNotes3",
+      "ru-RU": "ImapNotes3",
+      "zh-SIMPLIFIED": "ImapNotes3"
+    },
+    "preferredSigner": "efad1559e516914bc855fc6950fe2ab7ee2620a60d36977818dc9da152123461",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/de.niendo.ImapNotes3/en-US/phoneScreenshots/1.png",
+            "sha256": "cd57d49e4add5c636070de669058fab757b4ae47cc3efb2413711caa29469bd4",
+            "size": 313157
+          },
+          {
+            "name": "/de.niendo.ImapNotes3/en-US/phoneScreenshots/2.png",
+            "sha256": "b1b52f9316099a2988cec2d036d1a990055c65b5995339c358427218284054b1",
+            "size": 155493
+          },
+          {
+            "name": "/de.niendo.ImapNotes3/en-US/phoneScreenshots/3.png",
+            "sha256": "4de140c6e78780ce3ca8de91e1e056d7baee4dd0de5453a0738c137207436842",
+            "size": 486929
+          },
+          {
+            "name": "/de.niendo.ImapNotes3/en-US/phoneScreenshots/4.png",
+            "sha256": "bd287d5e591219fbf10f1c19f74675088b521230168755e7c2127d010895cf12",
+            "size": 365943
+          },
+          {
+            "name": "/de.niendo.ImapNotes3/en-US/phoneScreenshots/5.png",
+            "sha256": "ec80211ea1c49e9524c50f0b0d922a0b1ece5ff4d492610bdfeae24e77d4f825",
+            "size": 147500
+          },
+          {
+            "name": "/de.niendo.ImapNotes3/en-US/phoneScreenshots/6.png",
+            "sha256": "c35751f386cf11a7566a491f192c021dffe252255e65ba5d0c8464775aa9cf05",
+            "size": 295856
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/niendo1/ImapNotes3",
+    "summary": {
+      "de": "App f\u00fcr Notizen und ToDo-Listen, die in IMAP-Postf\u00e4chern gespeichert werden.",
+      "en-US": "A notes and checklist app that synchronizes in your IMAP mailbox.",
+      "es-ES": "Vea, edite y sincronice notas HTML y listas de verificaci\u00f3n en sus buzones IMAP",
+      "fr-FR": "Afficher et synchroniser des notes et checklistes IMAP",
+      "it-IT": "Visualizza, modifica e sincronizza note e liste HTML sulle tue mailbox IMAP",
+      "ru-RU": "\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0437\u0430\u043c\u0435\u0442\u043e\u043a \u0438 \u0441\u043f\u0438\u0441\u043a\u043e\u0432 \u0434\u0435\u043b \u0441\u043e \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u0439 \u043f\u043e IMAP \u0432 \u043f\u0430\u043f\u043a\u0430\u0445 \u0432\u0430\u0448\u0435\u0439 \u043f\u043e\u0447\u0442\u044b.",
+      "uk": "\u041d\u043e\u0442\u0430\u0442\u043d\u0438\u043a, \u044f\u043a\u0438\u0439 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0456\u0437\u0443\u0454\u0442\u044c\u0441\u044f \u0443 \u0432\u0430\u0448\u0456\u0439 \u043f\u043e\u0448\u0442\u043e\u0432\u0456\u0439 \u0441\u043a\u0440\u0438\u043d\u044c\u0446\u0456 IMAP.",
+      "zh-SIMPLIFIED": "\u4e00\u4e2a\u540c\u6b65\u5230\u4f60\u7684IMAP\u90ae\u7bb1\u7684\u7b14\u8bb0\u548c\u68c0\u67e5\u5217\u8868\u5e94\u7528"
+    }
+  },
+  "version": {
+    "added": 1770108040000,
+    "file": {
+      "ipfsCIDv1": "bafybeiaszlig2x635jnkupanxirsucanmmkvgfhlvfd27lysq2vzq2bmj4",
+      "name": "/de.niendo.ImapNotes3_10407.apk",
+      "sha256": "86da9849485fe43ae82ac95218accbdc0826039b3e02586845fc5fc7855b74b8",
+      "size": 6566176
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "efad1559e516914bc855fc6950fe2ab7ee2620a60d36977818dc9da152123461"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.READ_SYNC_SETTINGS"
+        },
+        {
+          "name": "android.permission.WRITE_SYNC_SETTINGS"
+        },
+        {
+          "name": "android.permission.READ_SYNC_STATS"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "de.niendo.ImapNotes3.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 25,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 10407,
+      "versionName": "v1.4-07"
+    },
+    "src": {
+      "name": "/de.niendo.ImapNotes3_10407_src.tar.gz",
+      "sha256": "b02de2022397ffe33404002447411090cf7d8ab3ddfa6d2dc9752962528d8908",
+      "size": 2109317
+    },
+    "whatsNew": {
+      "de": "* Build Updates (libs, gradle usw.)\n* Weblate: f\u00fcge ukrainische \u00dcbersetzung hinzu  (Dank an Maxim Reznik)\n* Weblate: verbessere spanische \u00dcbersetzung (Dank an z97febao)\n* Weblate: verbessere franz\u00f6sische \u00dcbersetzung (Dank an z97febao)\n* Swipe zum Abgleichen",
+      "en-US": "* build updates (libs, gradle etc.)\n* Weblate: add Ukrainian translation (thanks to Maxim Reznik)\n* Weblate: improve Spanish translation (thanks to z97febao)\n* Weblate: improve French translation (thanks to z97febao)\n* Swipe to refresh"
+    }
+  }
+}

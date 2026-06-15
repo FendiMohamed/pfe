@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "added": 1644105600000,
+    "authorName": "Peter Serwylo",
+    "authorWebSite": "https://peter.serwylo.com",
+    "categories": [
+      "Reading",
+      "Science & Education",
+      "Writing"
+    ],
+    "changelog": "https://github.com/babydots/babybook/releases",
+    "description": {
+      "en-US": "<b>Make your own books</b>\nCreate your book, search for wiki pages, watch images and text flow onto your pages.\n\n<b>Learn with your kids</b>\nInterested in biology? Want to build a book for you and your kids to learn more about it? Try creating a new book, add some pages by searching for Organism, Animal, Plant, and then Fungi, then watch your book come to life.\n\n<b>Share your creations</b>\nGenerate a PDF and email it to a friend, or print it for your own physical book.\n\n<b>Limitations</b>\nThis is still in the early stages of development. Some things which are on the roadmap:\n<ul><li>Proper attribution for Wikipedia sources in resulting PDFs.</li><li>More intuitive swipe controls (e.g. for changing pages when reading, or for re-ordering pages in a book).</li><li>Select your favourite image(s) from a wiki page instead of being forced to use the one the app selected.</li><li>Sharing of books between Android devices to support remixing and improving others books (rather than just PDF export as we have now).</li></ul>\n\nDonate via <a href=\"https://liberapay.com/BabyDots\">Liberapay</a> or <a href=\"https://github.com/sponsors/pserwylo\">GitHub Sponsors</a> to support further development.\n\n"
+    },
+    "donate": [
+      "https://github.com/sponsors/pserwylo"
+    ],
+    "featureGraphic": {
+      "en-US": {
+        "name": "/com.serwylo.babybook/en-US/featureGraphic_6fvglE8Ih4RDncE0T8z2MYxiW4otyYkLV2aicj16c3A=.png",
+        "sha256": "e9fbe0944f088784439dc1344fccf6318c625b8a2dc9890b5766a2723d7a7370",
+        "size": 622965
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/com.serwylo.babybook/en-US/icon_qp6bw-0AdivPTnll9s_vnK3aV7R3CrvfpHQjWeog1rA=.png",
+        "sha256": "aa9e9bc3ed00762bcf4e7965f6cfef9cadda57b4770abbdfa4742359ea20d6b0",
+        "size": 48669
+      }
+    },
+    "issueTracker": "https://github.com/babydots/babybook/issues",
+    "lastUpdated": 1724242085000,
+    "liberapay": "BabyDots",
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "en-US": "Baby Books"
+    },
+    "preferredSigner": "5b91f2f95667cd8de0eedefc7bdede3574ea58987c49ccb1374267061b3b4987",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.serwylo.babybook/en-US/phoneScreenshots/01_book_list.png",
+            "sha256": "8c45966cd877767b3e880c85a6c7fde7db9f786442594b95dce49b411d8f8c19",
+            "size": 2698132
+          },
+          {
+            "name": "/com.serwylo.babybook/en-US/phoneScreenshots/02_page_a.png",
+            "sha256": "248311818a8ac210e97b5e12340da33f165d47305664f2a90256b2fb5d31bae9",
+            "size": 1971981
+          },
+          {
+            "name": "/com.serwylo.babybook/en-US/phoneScreenshots/03_edit_book.png",
+            "sha256": "d1ddfd06ec47e707d4ede7c21d5a7845d64239106aea520c8397dbe01df2164b",
+            "size": 1515874
+          },
+          {
+            "name": "/com.serwylo.babybook/en-US/phoneScreenshots/04_edit_page_a.png",
+            "sha256": "5065aab46a5539de61be345094b3b926c0d0e72276b415ee3470a12bcd8e61ce",
+            "size": 1551671
+          },
+          {
+            "name": "/com.serwylo.babybook/en-US/phoneScreenshots/04_edit_page_b.png",
+            "sha256": "32404ca8d5805d028bf19c94bfce467a75bbbcc1306ee09bdb7b2a24f0dcc4e8",
+            "size": 368946
+          },
+          {
+            "name": "/com.serwylo.babybook/en-US/phoneScreenshots/05_share.png",
+            "sha256": "2cefdc975848a7db1b9937486f5f2c19831e7ccb82e890ac45cd83aece49c3a9",
+            "size": 106827
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/babydots/babybook",
+    "summary": {
+      "en-US": "Make your own picture books using images and words from Wikipedia"
+    }
+  },
+  "version": {
+    "added": 1724242085000,
+    "file": {
+      "ipfsCIDv1": "bafybeifh6zec2kgbcezl2vwvgfzm7u6wxzijmnqnw2j6cpoky35evserde",
+      "name": "/com.serwylo.babybook_12.apk",
+      "sha256": "89b4e283c76e27453ee0cfcd0052bad2928ea41e674661690162fc85dbf03403",
+      "size": 21054062
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "5b91f2f95667cd8de0eedefc7bdede3574ea58987c49ccb1374267061b3b4987"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "com.serwylo.babybook.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 34
+      },
+      "versionCode": 12,
+      "versionName": "0.9.2"
+    },
+    "src": {
+      "name": "/com.serwylo.babybook_12_src.tar.gz",
+      "sha256": "ae9277bb2062197e7247a528b03b13ed5a2c305d347afee9e1bec76b91bc5d1c",
+      "size": 20578071
+    },
+    "whatsNew": {
+      "en-US": "Bump target SDK to latest version."
+    }
+  }
+}

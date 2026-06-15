@@ -1,0 +1,47 @@
+{
+  "title": "ORLIS: Obfuscation-Resilient Library Detection for Android",
+  "authors": ["Haoyu Wang", "Yao Guo", "Zhongjie Wu", "Atanas Rountev"],
+  "year": 2018,
+  "venue": "IEEE/ACM International Conference on Mobile Software Engineering and Systems (MOBILESoft)",
+  "tool_name": "ORLIS",
+  "category": "similarity-based",
+  "detection_method": "Two-stage approach: (1) coarse sdhash app-level filtering to narrow candidate libraries; (2) fine-grained ssdeep CFG hashing + Jaccard similarity for class-level matching",
+  "module_decoupling": "None explicit — operates on decompiled app classes matched against library class profiles; no separate module decoupling phase",
+  "features_used": [
+    "sdhash (context-triggered piecewise hash) for app-level filtering",
+    "ssdeep (fuzzy hash) of CFG structures for class-level matching",
+    "Jaccard similarity coefficient for partial class matches"
+  ],
+  "matching_algorithm": "Two-stage: Stage 1 computes sdhash of full app to filter candidate libraries; Stage 2 computes ssdeep CFG hashes per class and compares via Jaccard similarity against library class profiles",
+  "obfuscation_handling": "Uses structural CFG features that survive identifier renaming, package flattening, and control-flow modifications; ssdeep fuzzy hashing tolerates minor structural variations",
+  "r8_resilience": "Not tested (pre-R8 era; tested on Allatori and ProGuard obfuscation)",
+  "lib_level_f1": "~62-67% library-level F1 (lowest among Gen-1 tools)",
+  "version_level_f1": "Not reported — no version-level detection metrics",
+  "class_level_f1": "Not explicitly reported",
+  "precision": "~90% against Allatori and ProGuard obfuscation",
+  "recall": "Not explicitly reported (F1 of ~62-67% with ~90% precision implies recall of ~48-53%)",
+  "speed": "~1,438s per app (slowest among all evaluated tools)",
+  "dataset_size": "Not explicitly quantified in available data; evaluated on obfuscated apps with Allatori and ProGuard",
+  "partial_lib_handling": "Yes — Jaccard similarity naturally handles partial library inclusion via set-based overlap scoring",
+  "sbom_output": "No — no SBOM output capability",
+  "open_source": "Not confirmed publicly available; requires Soot environment (difficult installation)",
+  "cve_mapping": "No — no CVE mapping capability",
+  "transitive_deps": "No — does not handle transitive dependencies",
+  "strengths": [
+    "Pioneered CFG-based matching for obfuscation resilience",
+    "~90% precision against Allatori and ProGuard obfuscation",
+    "Jaccard similarity provides natural partial library inclusion handling",
+    "Two-stage architecture (fast filter + deep check) is a reusable design pattern",
+    "Structural CFG features survive renaming, package flattening, and control-flow modifications"
+  ],
+  "weaknesses": [
+    "Extremely slow (~1,438s/app) — prohibitive for large-scale analysis",
+    "Lowest library-level F1 among Gen-1 tools (~62-67%)",
+    "No version-level detection metrics reported",
+    "No CDG-based module decoupling",
+    "Difficult installation (requires Soot environment)",
+    "Crashes on apps requiring 16GB+ RAM",
+    "Not tested on R8 obfuscation"
+  ],
+  "impact_on_project": "ORLIS demonstrates that CFG-based structural matching is viable for obfuscation resilience but the speed cost is prohibitive. The two-stage architecture (sdhash coarse filter + ssdeep fine match) is a useful design pattern that could be adapted with more efficient hashing. Jaccard similarity for partial library inclusion is a technique worth adopting. However, the ~1,438s/app processing time means ORLIS itself is not usable for production SBOM extraction — any adopted approach must be orders of magnitude faster. The 62-67% F1 also sets a low bar that must be exceeded."
+}

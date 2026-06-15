@@ -1,0 +1,63 @@
+{
+  "apk": {
+    "expected_sha256": "6ff2549f7e9d1bf38fb0abf989d43d14cfce313877faf9de072f295f612391d3",
+    "index_size": 10440604,
+    "path": "data/test_apks/real/ftpclient/ftpclient.apk",
+    "sha256": "6ff2549f7e9d1bf38fb0abf989d43d14cfce313877faf9de072f295f612391d3",
+    "size": 10440604,
+    "url": "https://f-droid.org/repo/de.qwerty287.ftpclient_27.apk"
+  },
+  "app": "FTPClient",
+  "categories": [
+    "Cloud Storage & File Sync",
+    "Internet"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "internet",
+    "cloud-storage",
+    "file-transfer",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/de.qwerty287.ftpclient/",
+  "license": "MIT",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "de.qwerty287.ftpclient",
+  "proof_status": "report-generated",
+  "reason": "No-native FTP/FTPS/SFTP client with target SDK 36 and a 10 MB APK; selected as a compact connectivity/file-transfer row likely to expose networking dependencies.",
+  "report": {
+    "detected_component_count": 39,
+    "dex_file_count": 5,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v15/report-real-ftpclient",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v15/report-real-ftpclient/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v15/report-real-ftpclient/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v15/report-real-ftpclient/sbom.cdx.json",
+    "sbom_component_count": 39,
+    "status": "ok"
+  },
+  "slug": "ftpclient",
+  "source_repo": "https://codeberg.org/qwerty287/ftpclient",
+  "source_tarball": {
+    "sha256": "fec9581c3cf2e17918264fd6f9f128e296d9c2e0311ade11e667c73669a3b52a",
+    "size": 276692,
+    "url": "https://f-droid.org/repo/de.qwerty287.ftpclient_27_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 27,
+  "version_name": "3.0.1"
+}

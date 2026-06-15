@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "66d58af232509bed40b9b988f72c45ebcc220a17d1f3c0fbcad19434ad510410",
+    "index_size": 13150168,
+    "path": "data/test_apks/real/prosereader/prosereader.apk",
+    "sha256": "66d58af232509bed40b9b988f72c45ebcc220a17d1f3c0fbcad19434ad510410",
+    "size": 13150168,
+    "url": "https://f-droid.org/repo/timur.prose_10906.apk"
+  },
+  "app": "ProseReader",
+  "categories": [
+    "Ebook Reader",
+    "Reading"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "ebook-reader",
+    "reading",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/timur.prose/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "timur.prose",
+  "proof_status": "report-generated",
+  "reason": "No-native ebook/reading app with target SDK 36, a medium APK, and a moderate source tarball; selected to diversify the reading bucket beyond dictionary/reference apps.",
+  "report": {
+    "detected_component_count": 0,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-prosereader",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-prosereader/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-prosereader/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "Structural evidence is stronger than package-name evidence."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-prosereader/sbom.cdx.json",
+    "sbom_component_count": 0,
+    "status": "ok"
+  },
+  "slug": "prosereader",
+  "source_repo": "https://codeberg.org/timurmobi/prosereader-android",
+  "source_tarball": {
+    "sha256": "cad3870bfbf8e8eb12d9e926406b67b90e1d6cdde9073d220224193219e43a26",
+    "size": 6212897,
+    "url": "https://f-droid.org/repo/timur.prose_10906_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 10906,
+  "version_name": "1.9.6"
+}

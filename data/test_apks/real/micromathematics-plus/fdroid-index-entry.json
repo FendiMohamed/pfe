@@ -1,0 +1,123 @@
+{
+  "metadata": {
+    "added": 1502755200000,
+    "categories": [
+      "Calculator",
+      "Science & Education"
+    ],
+    "changelog": "https://github.com/mkulesh/microMathematics/releases",
+    "description": {
+      "en-US": "With microMathematics Plus, you can not only perform mathematical calculations in naturally readable form, but can also create and manage your own collection of interactive formulas!\n\nThe microMathematics Plus is a revolutionary new kind of mobile calculator. It is the world\u2019s first scientific graphing calculator and function plotter on Android oriented around a worksheet. It allows live editing of mathematical identities combined with highly accurate computations.\n\nThe app is 100% open source. Please feel free to download, explore, fork or contribute to it on https://github.com/mkulesh/microMathematics\n\nNot only students, but also everybody who likes mathematics or needs more than just a basic calculator will benefit from this amazing technique of mathematical calculations and plotting.\n\nBenefits and features:\n\n* Maximum privacy: No ads, no trackers, no telemetry, no special permissions\n* The modern Material design supports different color themes and works on smartphones and/or tablets in portrait and landscape mode\n* Verification, validation, documentation and re-use of mathematical calculations\n* Works on smartphone or tablet in portrait and landscape mode\n* Supports all commonly used mathematical operations\n* Mathematical expressions are written in an intuitive and naturally readable form\n* Supports SI and non-SI units (including units of information)\n* Powerful mathematical touch-screen editor with undo function makes editing easier\n* You can do multiple calculations and subsequently correct or change all used formulas\n* It is possible to store intermediate results into 1D, 2D, or 3D array that can improve calculation performance\n* Mathematical expressions are collected in a document, that includes not only formulas and plots, but also additional text and images (SVG format is also supported)\n* You can store your document on SD card and export it into LaTeX format or an image (SD writing permission is needed)\n* SD card on Android 6+ is also supported\n* The app contains detailed \"How to use\" page and several examples\n* Supports data import from ASCII files\n* Supports units of measurements, arrays, complex numbers, functions of many arguments, plots for several functions, contour and 3D plots, summation and product operations, derivative and definite integrals, if-function and logical operators, Fourier transform, root finding.\n\nThis version has following mathematical limitations: it does not support special functions, vectors, matrices and many other things from high-level mathematics.\n\nLanguages: English, Russian, German, Brazilian Portuguese, Chinese, Spanish"
+    },
+    "featureGraphic": {
+      "en-US": {
+        "name": "/com.mkulesh.micromath.plus/en-US/featureGraphic_fcE8FlDjTRle7uyuEdb09GnbTFy8ramuICfIzFVsy-s=.png",
+        "sha256": "7dc13c1650e34d195eeeecae11d6f4f469db4c5cbcada9ae2027c8cc556ccbeb",
+        "size": 195632
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/com.mkulesh.micromath.plus/en-US/icon_HpDN0yOoJufWrhLNAGriDvCipa2q44WdiQWzSdAphQ8=.png",
+        "sha256": "1e90cdd323a826e7d6ae12cd006ae20ef0a2a5adaae3859d8905b349d029850f",
+        "size": 169021
+      }
+    },
+    "issueTracker": "https://github.com/mkulesh/microMathematics/issues",
+    "lastUpdated": 1772364555000,
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-US": "microMathematics Plus"
+    },
+    "preferredSigner": "a7f4545d30fa5ebc7b55880f29b50d012345ac62a61429f4aa3b71dcd18e74e3",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.mkulesh.micromath.plus/en-US/phoneScreenshots/1.png",
+            "sha256": "1e3fa74591fa761f8e3431957c419c5d6b4020792862f698d2ed97e57f18a3a7",
+            "size": 267709
+          },
+          {
+            "name": "/com.mkulesh.micromath.plus/en-US/phoneScreenshots/2.png",
+            "sha256": "ac0a0324e07a43eec01b7d84f5989f853fb19c9b8414a2bbe7f2b96d8392beb5",
+            "size": 222720
+          },
+          {
+            "name": "/com.mkulesh.micromath.plus/en-US/phoneScreenshots/3.png",
+            "sha256": "a6df9352a09fe976d9a1bbd63ea27d7ac1decdf4f9f6fe291d9bd488ce4da5bd",
+            "size": 280257
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/mkulesh/microMathematics",
+    "summary": {
+      "ar": "\u0646\u0638\u0627\u0645 \u062c\u0628\u0631 \u062d\u0627\u0633\u0648\u0628\u064a",
+      "ba": "\u041a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440 \u0430\u043b\u0433\u0435\u0431\u0440\u0430\u04bb\u044b \u0441\u0438\u0441\u0442\u0435\u043c\u0430\u04bb\u044b",
+      "ca": "Sistema d'\u00e0lgebra inform\u00e0tica",
+      "cs": "Po\u010d\u00edta\u010dov\u00fd algebraick\u00fd syst\u00e9m",
+      "de": "Computer-Algebrasystem",
+      "en-US": "Computer algebra system",
+      "es": "Sistema de \u00e1lgebra computarizada",
+      "fr": "Syst\u00e8me d'alg\u00e8bre informatique",
+      "ga": "C\u00f3ras ailg\u00e9abar r\u00edomhaireachta",
+      "he": "\u05de\u05e2\u05e8\u05db\u05ea \u05d0\u05dc\u05d2\u05d1\u05e8\u05d9\u05ea \u05dc\u05de\u05d7\u05e9\u05d1",
+      "id": "Sistem aljabar komputer",
+      "ja": "\u6570\u5f0f\u51e6\u7406\u30b7\u30b9\u30c6\u30e0",
+      "nb": "Dataalgebrasystem",
+      "pl": "System algebry komputerowej",
+      "pt": "Sistema de \u00e1lgebra computacional",
+      "pt-BR": "Sistema de \u00e1lgebra computacional",
+      "pt-PT": "Sistema de \u00e1lgebra computacional",
+      "ro": "Sistem de algebr\u0103 pe calculator",
+      "ru": "\u0421\u0438\u0441\u0442\u0435\u043c\u0430 \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440\u043d\u043e\u0439 \u0430\u043b\u0433\u0435\u0431\u0440\u044b",
+      "sq": "Sistem kompjuterik algjebre",
+      "sr": "\u0421\u0438\u0441\u0442\u0435\u043c \u0437\u0430 \u043a\u043e\u043c\u043f\u0458\u0443\u0442\u0435\u0440\u0441\u043a\u0443 \u0430\u043b\u0433\u0435\u0431\u0440\u0443",
+      "sw": "Mfumo wa aljebra ya kompyuta",
+      "ta": "\u0b95\u0ba3\u0bbf\u0ba9\u0bbf \u0b87\u0baf\u0bb1\u0bcd\u0b95\u0ba3\u0bbf\u0ba4 \u0b85\u0bae\u0bc8\u0baa\u0bcd\u0baa\u0bc1",
+      "tr": "Bilgisayar cebir sistemi",
+      "uk": "\u041a\u043e\u043c\u043f\u2019\u044e\u0442\u0435\u0440\u043d\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430 \u0430\u043b\u0433\u0435\u0431\u0440\u0438",
+      "zh-CN": "\u8ba1\u7b97\u673a\u4ee3\u6570\u7cfb\u7edf",
+      "zh-TW": "\u8a08\u7b97\u6a5f\u4ee3\u6578\u4fc2\u7d71"
+    }
+  },
+  "version": {
+    "added": 1772364555000,
+    "file": {
+      "ipfsCIDv1": "bafybeifzeim52537q4c2r3wdy4qrcbyiyzgh2xroq2dfroznayzpph5rbe",
+      "name": "/com.mkulesh.micromath.plus_325.apk",
+      "sha256": "07fdb9f23f8ecc1f9ad1726a1491ffd08bd92750fdb9db94b841d02168dc4c08",
+      "size": 8664691
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "a7f4545d30fa5ebc7b55880f29b50d012345ac62a61429f4aa3b71dcd18e74e3"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "com.mkulesh.micromath.plus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 14,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 325,
+      "versionName": "2.23.3"
+    },
+    "src": {
+      "name": "/com.mkulesh.micromath.plus_325_src.tar.gz",
+      "sha256": "c18cdd40a8c5bc89df69d8b524ec5da933ac015501330819614bb2739d3ed02c",
+      "size": 16831979
+    }
+  }
+}

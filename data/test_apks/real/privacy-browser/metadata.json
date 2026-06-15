@@ -1,0 +1,61 @@
+{
+  "apk": {
+    "expected_sha256": "209e0670cb44a959dd628737eaa5b8df05bfb605e4706de49ea2b72684cf72e3",
+    "index_size": 17083571,
+    "path": "data/test_apks/real/privacy-browser/privacy-browser.apk",
+    "sha256": "209e0670cb44a959dd628737eaa5b8df05bfb605e4706de49ea2b72684cf72e3",
+    "size": 17083571,
+    "url": "https://f-droid.org/repo/com.stoutner.privacybrowser.standard_81.apk"
+  },
+  "app": "Privacy Browser",
+  "categories": [
+    "Browser",
+    "Internet"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "browser",
+    "security",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.stoutner.privacybrowser.standard/",
+  "license": "GPL-3.0-or-later",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.stoutner.privacybrowser.standard",
+  "proof_status": "report-generated",
+  "reason": "No-native browser/security app with source tarball metadata; tests a different app family without native library claims.",
+  "report": {
+    "detected_component_count": 0,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v4/report-real-privacy-browser",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v4/report-real-privacy-browser/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v4/report-real-privacy-browser/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "Structural evidence is stronger than package-name evidence."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v4/report-real-privacy-browser/sbom.cdx.json",
+    "sbom_component_count": 0,
+    "status": "ok"
+  },
+  "slug": "privacy-browser",
+  "source_repo": "https://gitweb.stoutner.com/?p=PrivacyBrowserAndroid.git;a=summary",
+  "source_tarball": {
+    "sha256": "5a41fad1d8341e863d3dec97b56aca1f201258bd808e42a8c79b586e59e1b1c5",
+    "size": 24460323,
+    "url": "https://f-droid.org/repo/com.stoutner.privacybrowser.standard_81_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 81,
+  "version_name": "3.20.1"
+}

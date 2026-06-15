@@ -1,0 +1,64 @@
+{
+  "apk": {
+    "expected_sha256": "9aaed4386570630a76b0f435ef9b6f239ab0f2a6bca9b0de82c8e37eeca41afa",
+    "index_size": 12011511,
+    "path": "data/test_apks/real/clock/clock.apk",
+    "sha256": "9aaed4386570630a76b0f435ef9b6f239ab0f2a6bca9b0de82c8e37eeca41afa",
+    "size": 12011511,
+    "url": "https://f-droid.org/repo/com.best.deskclock_2032.apk"
+  },
+  "app": "Clock",
+  "categories": [
+    "Clock",
+    "Time",
+    "Timer"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "time",
+    "clock",
+    "timer",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.best.deskclock/",
+  "license": "Apache-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.best.deskclock",
+  "proof_status": "report-generated",
+  "reason": "No-native clock/timer app with target SDK 36, a 12 MB APK, and a moderate source tarball; selected as a dependency-rich time utility outside the already counted Todo Agenda and Working Time rows.",
+  "report": {
+    "detected_component_count": 38,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v15/report-real-clock",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v15/report-real-clock/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v15/report-real-clock/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v15/report-real-clock/sbom.cdx.json",
+    "sbom_component_count": 38,
+    "status": "ok"
+  },
+  "slug": "clock",
+  "source_repo": "https://github.com/BlackyHawky/Clock",
+  "source_tarball": {
+    "sha256": "82865723d20b6ec6990c6ad681e054bea3c4d0140724fb6d16ec702dc7e6494f",
+    "size": 9656327,
+    "url": "https://f-droid.org/repo/com.best.deskclock_2032_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 2032,
+  "version_name": "2.29"
+}

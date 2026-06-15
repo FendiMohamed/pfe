@@ -1,0 +1,161 @@
+{
+  "metadata": {
+    "added": 1752243614000,
+    "authorName": "egdels",
+    "categories": [
+      "Cloud Storage & File Sync",
+      "Connectivity"
+    ],
+    "description": {
+      "en-US": "SambaLite is a lightweight, modern, and open-source Android client for SMB/CIFS shares (Samba).\nIt is designed as a minimalist, reliable, and secure tool for accessing SMB shares on your local network \u2013 without ads, tracking, or unnecessary features.\n\nSambaLite is a file client, not a system-level filesystem. It focuses on accessing and transferring files, not on providing a mounted network drive.\n\nThe app is intended for tech-savvy users who prefer a lean, transparent solution and value privacy and open source.\n\nMain features:\n\n\u2022 Manage connections: SMB server (hostname/IP), share/path, username, password, optional domain\n\u2022 Multiple connections with custom names\n\u2022 Connection testing with clear error messages\n\u2022 Secure credential storage (Android Keystore)\n\u2022 File browser with name, type, size, and modification date\n\u2022 Pull-to-refresh\n\u2022 Sorting (name, date, size)\n\u2022 File operations: download, upload, delete, rename\n\u2022 File properties\n\u2022 Dark/Light mode (system default)\n\nCompatibility:\n\n\u2022 Supports modern SMB2/SMB3 servers\n\u2022 SMB1 is not supported (deprecated and insecure)\n\nSecurity & Privacy:\n\n\u2022 No telemetry or third-party connections\n\u2022 No unencrypted storage of sensitive data\n\u2022 Credentials stored securely using the Android Keystore\n\nPermissions:\n\nSambaLite only requests the permissions required for its functionality:\n\n\u2022 Network access (SMB communication)\n\u2022 Access to user-selected storage locations (via Android system file picker)\n\u2022 Foreground service and notifications (for reliable background transfers and progress display)\n\nNo data is collected or transmitted to third parties.\n\nSambaLite provides a modern, minimal, and privacy-friendly way to access SMB shares on Android \u2013 focused on reliability and transparency."
+    },
+    "donate": [
+      "https://www.paypal.com/paypalme/egdels"
+    ],
+    "featureGraphic": {
+      "en-US": {
+        "name": "/de.schliweb.sambalite/en-US/featureGraphic_OGWuIJ_vDg_oSwSBcmeEH43wsmQOxMLoLp-jw8MwHDs=.png",
+        "sha256": "3865ae209fef0e0fe84b04817267841f8df0b2640ec4c2e82e9fa3c3c3301c3b",
+        "size": 413121
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/de.schliweb.sambalite/en-US/icon_K7rWkSBvN35lzCgCBwmNgPckbZgs91a8OhEndKLhbN8=.png",
+        "sha256": "2bbad691206f377e65cc280207098d80f7246d982cf756bc3a112774a2e16cdf",
+        "size": 31431
+      }
+    },
+    "issueTracker": "https://github.com/egdels/SambaLite/issues",
+    "lastUpdated": 1779525379559,
+    "license": "Apache-2.0",
+    "name": {
+      "en-US": "SambaLite"
+    },
+    "preferredSigner": "ae322d3fb71afe21df4727e37a5c6803511d5a2fe1fc3135430cee0699fa1b34",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/de.schliweb.sambalite/en-US/phoneScreenshots/1_en-US.png",
+            "sha256": "bc358f07ab03950cd57e499e11df25166e4416e8bdc80f61e5cdd40c8b278202",
+            "size": 117421
+          },
+          {
+            "name": "/de.schliweb.sambalite/en-US/phoneScreenshots/2_en-US.png",
+            "sha256": "97b96bf8551b0971f039ed3a8751467121faddf4859f02a61e84b679372416a6",
+            "size": 182615
+          },
+          {
+            "name": "/de.schliweb.sambalite/en-US/phoneScreenshots/3_en-US.png",
+            "sha256": "6f54ce664e1cda07c11c10b00c7dab89e1a9f9b88cf54b097ce027cb49a4946a",
+            "size": 123636
+          },
+          {
+            "name": "/de.schliweb.sambalite/en-US/phoneScreenshots/4_en-US.png",
+            "sha256": "fe4b21346787d1530a7ace0fc10fb6564326104f57affb91d74e8a8e5b405963",
+            "size": 255526
+          },
+          {
+            "name": "/de.schliweb.sambalite/en-US/phoneScreenshots/5_en-US.png",
+            "sha256": "e9a2cd4a4bb66c9cd04b79f6c298f1150fcb6cfa79f3198ed8e9e36b0dfbb62d",
+            "size": 189714
+          },
+          {
+            "name": "/de.schliweb.sambalite/en-US/phoneScreenshots/6_en-US.png",
+            "sha256": "f21909cf2844c5f3d65bddf81363cfbba528b48d7fdae10e73b943ce0613b131",
+            "size": 114832
+          },
+          {
+            "name": "/de.schliweb.sambalite/en-US/phoneScreenshots/7_en-US.png",
+            "sha256": "551469e04048676611820775540e3e269552d5f3e4280ba261a5ec3bc56c69ce",
+            "size": 218429
+          },
+          {
+            "name": "/de.schliweb.sambalite/en-US/phoneScreenshots/8_en-US.png",
+            "sha256": "a6ff249509bb83da69eb0e36fe17f30f70a8b193acefa9e5840ef57495b3074f",
+            "size": 220357
+          },
+          {
+            "name": "/de.schliweb.sambalite/en-US/phoneScreenshots/9_en-US.png",
+            "sha256": "125a7c83d9058724a9f6c7640aacfb152bf3c9e3b17321cfe7f65170979f2797",
+            "size": 208280
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/egdels/SambaLite",
+    "summary": {
+      "en-US": "A lightweight, modern, and open-source Android client for SMB/CIFS shares."
+    },
+    "webSite": "https://egdels.github.io/SambaLite/"
+  },
+  "version": {
+    "added": 1779525379559,
+    "file": {
+      "ipfsCIDv1": "bafybeigwigk3yvtntwkt6oui7ysrllrexrqkogolhnnzbah6vrnkjj6osa",
+      "name": "/de.schliweb.sambalite_20501.apk",
+      "sha256": "a2ec5deb14f9a140289db8b2bb11e381bdbb4c9a847d77f579e233d448fe55b4",
+      "size": 15995575
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "ae322d3fb71afe21df4727e37a5c6803511d5a2fe1fc3135430cee0699fa1b34"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.ACCESS_WIFI_STATE"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+        },
+        {
+          "name": "android.permission.USE_BIOMETRIC"
+        },
+        {
+          "name": "android.permission.USE_FINGERPRINT"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "de.schliweb.sambalite.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 28,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 20501,
+      "versionName": "2.5.1"
+    },
+    "src": {
+      "name": "/de.schliweb.sambalite_20501_src.tar.gz",
+      "sha256": "33bdf1b71fa448def629fc7ee6b8df819d09c88f17ac27f387a767627809a5ed",
+      "size": 2901420
+    },
+    "whatsNew": {
+      "en-US": "- Added: Battery optimization reminder controls with 14-day snooze and \u201cDo not show again\u201d.\n- Added: Modern Material Design 3 battery optimization dialog with updated icon and layout.\n- Changed: Reminder text now explains background upload, download, and scheduled sync reliability more clearly.\n- Fixed: Invalid SMB share names are now caught in add/edit dialogs, and existing invalid connections prompt users to edit them."
+    }
+  }
+}

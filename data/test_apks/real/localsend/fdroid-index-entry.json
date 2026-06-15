@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "added": 1674293297000,
+    "authorName": "Tien Do Nam",
+    "authorWebSite": "https://tienisto.com",
+    "categories": [
+      "Connectivity",
+      "File Transfer"
+    ],
+    "changelog": "https://github.com/localsend/localsend/blob/HEAD/app/assets/CHANGELOG.md",
+    "description": {
+      "en-US": "LocalSend is an open source app to share files and messages between nearby devices using the local wifi network.\nThe communication between devices is entirely end-to-end encrypted via HTTPS.\nNo Internet required. No tracking*. No ads.\n\nCurrently, this app is available on Android, iOS, macOS, Windows and Linux. You can find all download options on the official homepage.\n\n*The operating system may still gather usage data.\n",
+      "pt-BR": "LocalSend \u00e9 um app de c\u00f3digo aberto para compartilhar arquivos e mensagens entre dispositivos por perto usando a rede WiFi local.\nA comunica\u00e7\u00e3o entre dispositivos \u00e9 criptografada inteiramente via HTTPS.\nInternet n\u00e3o \u00e9 necess\u00e1rio. Sem rastreamento*. Sem an\u00fancios.\n\nAtualmente, este app est\u00e1 dispon\u00edvel no Android, iOS, macOS, Windows e Linux. Voc\u00ea pode encontrar todas as op\u00e7\u00f5es de download na p\u00e1gina oficial.\n\n*O sistema operacional pode ainda coletar dados de utiliza\u00e7\u00e3o."
+    },
+    "donate": [
+      "https://github.com/sponsors/Tienisto"
+    ],
+    "icon": {
+      "en-US": {
+        "name": "/org.localsend.localsend_app/en-US/icon_dWMGq3-j8OMRJVh9FIZdNi18jl9qo_z2pjjXR-l_oaI=.png",
+        "sha256": "756306ab7fa3f0e31125587d14865d362d7c8e5f6aa3fcf6a638d747e97fa1a2",
+        "size": 4930
+      }
+    },
+    "issueTracker": "https://github.com/localsend/localsend/issues",
+    "lastUpdated": 1741905762000,
+    "license": "Apache-2.0",
+    "name": {
+      "en-US": "LocalSend"
+    },
+    "preferredSigner": "3220c353a73cfbd0c2f3052471c445324cf452bcba26de1c473a52fe5c44e1d6",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/org.localsend.localsend_app/en-US/phoneScreenshots/1.jpg",
+            "sha256": "7bb52fecc8a88b5416ae731ff190de55b5a9cf367d5d57c680903d34a18bcf90",
+            "size": 80876
+          },
+          {
+            "name": "/org.localsend.localsend_app/en-US/phoneScreenshots/2.jpg",
+            "sha256": "85d60f3aaffbc3d7bfdfe58056cdf436e859447712464b76dd69881d1404e59c",
+            "size": 104479
+          },
+          {
+            "name": "/org.localsend.localsend_app/en-US/phoneScreenshots/3.jpg",
+            "sha256": "97aba6211be845249ce5bdee76159a905f772ee9d84f30909e0f8ba280cdc765",
+            "size": 87375
+          },
+          {
+            "name": "/org.localsend.localsend_app/en-US/phoneScreenshots/4.jpg",
+            "sha256": "693ed795582940d7dfed917d80d3293e8a992a93ab2096d7effeda567c39fb6e",
+            "size": 101671
+          },
+          {
+            "name": "/org.localsend.localsend_app/en-US/phoneScreenshots/5.jpg",
+            "sha256": "19b7b974502c5867736c39715196b8574c71076d59028626714aa6969461efda",
+            "size": 75455
+          },
+          {
+            "name": "/org.localsend.localsend_app/en-US/phoneScreenshots/6.jpg",
+            "sha256": "64b4bc093885b21b85f00cd62e20eddfa18c6fa5c37095f81a0f861626a37267",
+            "size": 135099
+          },
+          {
+            "name": "/org.localsend.localsend_app/en-US/phoneScreenshots/7.jpg",
+            "sha256": "40c438dbaa01cd8817c21c83b64daa9d6bb4b4e91d164c5562736d1c8cddb02d",
+            "size": 93289
+          },
+          {
+            "name": "/org.localsend.localsend_app/en-US/phoneScreenshots/8.jpg",
+            "sha256": "1c71c210ec5d7b89b3fedd87074ea76cad3d636a3c1c39de6b0559feed2f32f1",
+            "size": 115007
+          }
+        ],
+        "pt-BR": [
+          {
+            "name": "/org.localsend.localsend_app/pt-BR/phoneScreenshots/1.png",
+            "sha256": "42c8b12fe8fd050a40aadfa086f0b777c5b5fd471975656102d80f520671f202",
+            "size": 82014
+          },
+          {
+            "name": "/org.localsend.localsend_app/pt-BR/phoneScreenshots/2.png",
+            "sha256": "d286491fd8f526905c2f7a997caae68ac16a1c360657e888fde1a690560df7e5",
+            "size": 94898
+          },
+          {
+            "name": "/org.localsend.localsend_app/pt-BR/phoneScreenshots/3.png",
+            "sha256": "7f61e7501e457d9398c4c7a338cb69d6fbedbe018e140db70dcd68e68d0c23a6",
+            "size": 65356
+          },
+          {
+            "name": "/org.localsend.localsend_app/pt-BR/phoneScreenshots/4.png",
+            "sha256": "933a76444cb7eff0db822d40208550d3a69f27549d2a8a676dc51577478af5b0",
+            "size": 82068
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/localsend/localsend",
+    "summary": {
+      "en-US": "Cross-Platform file sharing solution via WiFi.",
+      "pt-BR": "Solu\u00e7\u00e3o de compartilhamento de arquivos por WiFi multi-plataforma."
+    },
+    "translation": "https://hosted.weblate.org/projects/localsend/app/",
+    "webSite": "https://localsend.org"
+  },
+  "version": {
+    "added": 1740346811000,
+    "file": {
+      "ipfsCIDv1": "bafybeidq26mjst5no3aqmzo33ifeofp4wbnksyd6q247ak4a366kelct6e",
+      "name": "/org.localsend.localsend_app_583.apk",
+      "sha256": "2c7f5fd4872da25115bb8e5e62f92de94dda47b0f249ff387ac667b13871dc3e",
+      "size": 17491108
+    },
+    "manifest": {
+      "nativecode": [
+        "arm64-v8a"
+      ],
+      "signer": {
+        "sha256": [
+          "3220c353a73cfbd0c2f3052471c445324cf452bcba26de1c473a52fe5c44e1d6"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_IMAGES"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_VIDEO"
+        },
+        {
+          "name": "android.permission.ACCESS_MEDIA_LOCATION"
+        },
+        {
+          "name": "android.permission.QUERY_ALL_PACKAGES"
+        },
+        {
+          "name": "android.permission.REQUEST_INSTALL_PACKAGES"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.ACCESS_WIFI_STATE"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_AUDIO"
+        },
+        {
+          "name": "org.localsend.localsend_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 34
+      },
+      "versionCode": 583,
+      "versionName": "1.17.0"
+    },
+    "src": {
+      "name": "/org.localsend.localsend_app_583_src.tar.gz",
+      "sha256": "7128b875b5fddd1b0b722dd70da9373a4c4c16ebcd4fd3c16fcdac3a3ecfa0cc",
+      "size": 454005642
+    }
+  }
+}

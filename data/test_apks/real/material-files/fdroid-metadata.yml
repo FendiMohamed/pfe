@@ -1,0 +1,192 @@
+Categories:
+  - Cloud Storage & File Sync
+  - File Encryption & Vault
+  - File Transfer
+  - System
+  - Text Editor
+License: GPL-3.0-or-later
+AuthorName: Hai Zhang
+AuthorEmail: dreaming.in.code.zh@gmail.com
+SourceCode: https://github.com/zhanghai/MaterialFiles
+IssueTracker: https://github.com/zhanghai/MaterialFiles/issues
+Translation: https://www.transifex.com/zhanghai/MaterialFiles
+Changelog: https://github.com/zhanghai/MaterialFiles/releases
+
+AutoName: Material Files
+
+RepoType: git
+Repo: https://github.com/zhanghai/MaterialFiles.git
+
+Builds:
+  - versionName: 1.4.1
+    versionCode: 27
+    commit: f1603c5b61374824da6cfd98aa6a1d9be5fbe6b3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - app/src/main/java/me/zhanghai/android/files/nonfree
+    prebuild: find -type f -exec sed -i '/\/\/#ifdef NONFREE/,/\/\/#endif/d' {} +
+    ndk: r23b
+
+  - versionName: 1.4.2
+    versionCode: 28
+    commit: dd398ab9c2943b608f96cf23c85382d6d6f8c4a8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - app/src/main/java/me/zhanghai/android/files/nonfree
+    prebuild: find -type f -exec sed -i '/\/\/#ifdef NONFREE/,/\/\/#endif/d' {} +
+    ndk: r23b
+
+  - versionName: 1.5.0
+    versionCode: 29
+    commit: f349dc75273d09ec1633b9f612ef09acdeb3b096
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - app/src/main/java/me/zhanghai/android/files/nonfree
+    prebuild: find -type f -exec sed -i '/\/\/#ifdef NONFREE/,/\/\/#endif/d' {} +
+    ndk: r24
+
+  - versionName: 1.5.1
+    versionCode: 30
+    commit: 31f0d146388ade6cca84a4d5f8af43a1f19b81e7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - app/src/main/java/me/zhanghai/android/files/nonfree
+    prebuild: find -type f -exec sed -i '/\/\/#ifdef NONFREE/,/\/\/#endif/d' {} +
+    ndk: r24
+
+  - versionName: 1.5.2
+    versionCode: 31
+    commit: 6728563b3aae24e7c74fd2da617d85561aead938
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - app/src/main/java/me/zhanghai/android/files/nonfree
+    prebuild: find -type f -exec sed -i '/\/\/#ifdef NONFREE/,/\/\/#endif/d' {} +
+    ndk: r24
+
+  - versionName: 1.6.0
+    versionCode: 32
+    commit: 7a80a3ac18db233c04bcc0de33317db83737e84b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - app/src/main/java/me/zhanghai/android/files/nonfree
+    prebuild: find -type f -exec sed -i '/\/\/#ifdef NONFREE/,/\/\/#endif/d' {} +
+    ndk: r25c
+
+  - versionName: 1.6.1
+    versionCode: 33
+    commit: c70c01a3b6823bbb82bde85b789849dacf075dee
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - app/src/main/java/me/zhanghai/android/files/nonfree
+    prebuild: find -type f -exec sed -i '/\/\/#ifdef NONFREE/,/\/\/#endif/d' {} +
+    ndk: r25c
+
+  - versionName: 1.6.2
+    versionCode: 34
+    commit: e834bbc40a7c87cabce500330dac502bfc56bb00
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - app/src/main/java/me/zhanghai/android/files/nonfree
+    prebuild: find -type f -exec sed -i '/\/\/#ifdef NONFREE/,/\/\/#endif/d' {} +
+    ndk: r26
+
+  - versionName: 1.7.0
+    versionCode: 35
+    commit: 084f7772aac6fd66e42b7fa09b4d0ed96c6f9019
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - app/src/main/java/me/zhanghai/android/files/nonfree
+    prebuild: find -type f -exec sed -i '/\/\/#ifdef NONFREE/,/\/\/#endif/d' {} +
+    ndk: 26.2.11394342
+
+  - versionName: 1.7.1
+    versionCode: 36
+    commit: 9dfb35b9f9f7fb9d7da05c8dfe5b60d94437bd2e
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/main/java/me/zhanghai/android/files/nonfree
+    prebuild: find -type f -exec sed -i '/\/\/#ifdef NONFREE/,/\/\/#endif/d' {} +
+    ndk: 26.2.11394342
+
+  - versionName: 1.7.2
+    versionCode: 37
+    commit: 0901066958e90e7cb142a53770d46b895d4daa62
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/main/java/me/zhanghai/android/files/nonfree
+    prebuild: find -type f -exec sed -i '/\/\/#ifdef NONFREE/,/\/\/#endif/d' {} +
+    ndk: 26.3.11579264
+
+  - versionName: 1.7.4
+    versionCode: 39
+    commit: 61a3cffede303d159ee9ad805319b89c21c3aa04
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/main/java/me/zhanghai/android/files/nonfree
+    prebuild: find -type f -exec sed -i '/\/\/#ifdef NONFREE/,/\/\/#endif/d' {} +
+    ndk: 26.3.11579264
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v.+$
+CurrentVersion: 1.7.4
+CurrentVersionCode: 39

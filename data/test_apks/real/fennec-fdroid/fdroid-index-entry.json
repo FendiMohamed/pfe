@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "added": 1422748800000,
+    "categories": [
+      "Browser",
+      "Internet"
+    ],
+    "changelog": "https://www.mozilla.org/en-US/firefox/android/notes/",
+    "description": {
+      "ca": "<ul>\n  <li>Amplia col\u00b7lecci\u00f3 de complements, inclosos els bloquejadors d'anuncis.</li>\n  <li>Protecci\u00f3 de seguiment millorada.</li>\n  <li>Mode privat disponible amb un sol toc.</li>\n  <li>Disposici\u00f3 personalitzable de la pantalla d'inici i posici\u00f3 de la barra de navegaci\u00f3 (superior o inferior).</li>\n  <li>Tema fosc.</li>\n  <li>Col\u00b7leccions de pestanyes.</li>\n  <li>Sincronitzaci\u00f3 de pestanyes, adreces d'inter\u00e8s, contrasenyes, etc. en diversos dispositius mitjan\u00e7ant Firefox Sync.</li>\n  <li>Mode d'imatge en imatge.</li>\n</ul>\n<p>Fennec F-Droid es basa en l'\u00faltima versi\u00f3 de Mozilla Firefox.  S'han eliminat els bits propietaris i la telemetria, per\u00f2 encara es connecta a diversos serveis de Mozilla que poden fer un seguiment dels usuaris.</p>\n",
+      "cs-CZ": "<ul>\n <li>\u0160irok\u00e1 sb\u00edrka dopl\u0148k\u016f, v\u010detn\u011b blokova\u010d\u016f reklam.</li>\n <li>Vylep\u0161en\u00e1 ochrana p\u0159ed sledov\u00e1n\u00edm.</li>\n <li>Soukrom\u00fd re\u017eim dostupn\u00fd jedin\u00fdm klepnut\u00edm.</li>\n <li>P\u0159izp\u016fsobiteln\u00e9 rozvr\u017een\u00ed \u00favodn\u00ed obrazovky a um\u00edst\u011bn\u00ed naviga\u010dn\u00ed li\u0161ty (naho\u0159e nebo dole).</li>\n <li>Tmav\u00fd motiv.</li>\n <li>Sb\u00edrky panel\u016f.</li>\n <li>Synchronizace karet, z\u00e1lo\u017eek, hesel atd. mezi v\u00edce za\u0159\u00edzen\u00edmi prost\u0159ednictv\u00edm slu\u017eby Firefox Sync.</li>\n <li>Re\u017eim obrazu v obraze.</li>\n</ul>\n<p>Prohl\u00ed\u017ee\u010d Fennec F-Droid je zalo\u017een na nejnov\u011bj\u0161\u00ed verzi prohl\u00ed\u017ee\u010de Mozilla Firefox. M\u00e1 odstran\u011bn\u00e9 propriet\u00e1rn\u00ed bity a telemetrii, ale st\u00e1le se p\u0159ipojuje k r\u016fzn\u00fdm slu\u017eb\u00e1m organizace Mozilla, kter\u00e9 mohou sledovat u\u017eivatele.</p>\n",
+      "de-DE": "<ul>\n  <li>Gro\u00dfe Sammlung von Add-ons, einschlie\u00dflich Werbeblockern</li>\n  <li>Verbesserter Schutz vor Tracking.</li>\n  <li>Privater Modus \u2013 nur einen Fingertipp entfernt.</li>\n  <li>Anpassbares Layout des Startbildschirms und Position der Navigationsleiste (oben oder unten).</li>\n  <li>Dunkles Design.</li>\n  <li>Tab-Sammlungen.</li>\n  <li>Synchronisierung von Tabs, Lesezeichen, Passw\u00f6rtern usw. auf mehreren Ger\u00e4ten \u00fcber Firefox Sync.</li>\n  <li>Bild-im-Bild-Modus.</li>\n</ul>\n<p>Fennec F-Droid Browser basiert auf der neuesten Version von Mozilla Firefox. Propriet\u00e4re Bits und Telemetrie wurden entfernt, er verbindet sich aber weiterhin mit verschiedenen Mozilla-Diensten, die Benutzer verfolgen k\u00f6nnen.</p>\n",
+      "en-US": "<ul>\n  <li>Wide collection of addons, including ad blockers.</li>\n  <li>Improved tracking protection.</li>\n  <li>Private mode available in a single tap.</li>\n  <li>Customizable start screen layout and navigation bar position (top or bottom).</li>\n  <li>Dark theme.</li>\n  <li>Collections of tabs.</li>\n  <li>Synchronization of tabs, bookmarks, passwords, etc. across multiple devices via Firefox Sync.</li>\n  <li>Picture-in-picture mode.</li>\n</ul>\n<p>Fennec F-Droid browser is based on the latest Mozilla Firefox release. It has proprietary bits and telemetry removed, but still connects to various Mozilla services that can track users.</p>\n",
+      "eo": "<ul>\n<li>vasta elekto da etenda\u0135oj, inkluzivante reklam-blokilojn</li>\n<li>plibonigita protekto kontra\u016d spurado</li>\n<li>privata re\u011dimo enirebla per unuopa fingr-frapo</li>\n<li>al\u011dustigeblaj eka pa\u011do kaj pozicio de naviga strio (supro a\u016d malsupro de ekrano)</li>\n<li>malhela re\u011dimo</li>\n<li>grupoj de langetoj</li>\n<li>eblo samtempigi langetojn, legosignojn, pasvortojn, ktp. inter pluraj aparatoj per Spegulado (\u00abFirefox Sync\u00bb)</li>\n<li>eblo bildo en bildo</li>\n</ul>\n<p>La retfoliumilo Fennec F-Droid estas bazita sur la plej aktuala eldono de Mozilla Firefox. \u011ci estas senigita de fermitkodaj binara\u0135oj kaj telemezurado, tamen plue konekti\u011das kun Mozilla-servoj, kiuj povas spuri uzantojn.</p>\n",
+      "et": "<ul>\n  <li>Lai valik lisamooduleid, sh reklaamiblokeerijaid.</li>\n  <li>Parandatud kaitse j\u00e4litamise vastu.</li>\n  <li>Privaatne vaade avaneb \u00fche puudutusega.</li>\n  <li>Kohandatav avavaade ja aadressiriba asukoht (\u00fclal v\u00f5i all).</li>\n  <li>Tume kujundus.</li>\n  <li>Vahekaartide kogumik.</li>\n  <li>Vahekaartide, j\u00e4rjehoidjate, salas\u00f5nade, jmt s\u00fcnkroniseerimine eri seadmete vahel Firefox Synci abil.</li>\n  <li>Pilt-pildis vaade.</li>\n</ul>\n<p>Fenneci brauser F-Droidis p\u00f5hineb Mozilla Firefoxi viimasel versioonil. Suletud komponendid ja telemeetria on eemaldatud, kuid kasutusel on siiski mitmed Mozilla teenused, mis v\u00f5imaldavad kasutaja m\u00f5ningast j\u00e4litamist.</p>\n",
+      "fa-IR": "<ul>\n  <li>\u0645\u062c\u0645\u0648\u0639\u0647 \u06af\u0633\u062a\u0631\u062f\u0647\u200c\u0627\u06cc \u0627\u0632 \u0627\u0641\u0632\u0648\u0646\u0647\u200c\u0647\u0627\u060c \u0634\u0627\u0645\u0644 \u0645\u0633\u062f\u0648\u062f\u06a9\u0646\u0646\u062f\u0647 \u0622\u06af\u0647\u06cc.</li>\n  <li>\u0645\u062d\u0627\u0641\u0638\u062a \u067e\u06cc\u0634\u0631\u0641\u062a\u0647 \u0627\u0632 \u0631\u062f\u06cc\u0627\u0628\u06cc.</li>\n  <li>\u062d\u0627\u0644\u062a \u062e\u0635\u0648\u0635\u06cc \u0628\u0627 \u06cc\u06a9 \u0644\u0645\u0633 \u062f\u0631 \u062f\u0633\u062a\u0631\u0633.</li>\n  <li>\u0686\u06cc\u062f\u0645\u0627\u0646 \u0635\u0641\u062d\u0647 \u0622\u063a\u0627\u0632\u06cc\u0646 \u0648 \u062c\u0627\u06cc\u06af\u0627\u0647 \u0646\u0648\u0627\u0631 \u0646\u0627\u0648\u0628\u0631\u06cc (\u0628\u0627\u0644\u0627 \u06cc\u0627 \u067e\u0627\u06cc\u06cc\u0646) \u062a\u0646\u0638\u06cc\u0645\u200c\u067e\u0630\u06cc\u0631.</li>\n  <li>\u067e\u0648\u0633\u062a\u0647 \u062a\u06cc\u0631\u0647.</li>\n  <li>\u0645\u062c\u0645\u0648\u0639\u0647\u200c\u0647\u0627\u06cc \u0632\u0628\u0627\u0646\u0647\u200c\u0647\u0627.</li>\n  <li>\u0647\u0645\u06af\u0627\u0645\u200c\u0633\u0627\u0632\u06cc \u0632\u0628\u0627\u0646\u0647\u200c\u0647\u0627\u060c \u0646\u0634\u0627\u0646\u06a9\u200c\u0647\u0627\u060c \u06af\u0630\u0631\u0648\u0627\u0698\u0647\u200c\u0647\u0627 \u0648 \u062f\u06cc\u06af\u0631 \u062f\u0631 \u062f\u0633\u062a\u06af\u0627\u0647\u200c\u0647\u0627\u06cc \u0645\u062e\u062a\u0644\u0641 \u0628\u0627 \u0647\u0645\u06af\u0627\u0645\u200c\u0633\u0627\u0632 \u0641\u0627\u06cc\u0631\u0641\u0627\u06a9\u0633.</li>\n  <li>\u062d\u0627\u0644\u062a \u062a\u0635\u0648\u06cc\u0631 \u062f\u0631 \u062a\u0635\u0648\u06cc\u0631.</li>\n</ul>\n<p>Fennec F-Droid \u0628\u0631 \u067e\u0627\u06cc\u0647 \u0622\u062e\u0631\u06cc\u0646 \u0646\u06af\u0627\u0631\u0634 \u0645\u0648\u0632\u06cc\u0644\u0627 \u0641\u0627\u06cc\u0631\u0641\u0627\u06a9\u0633 \u0633\u0627\u062e\u062a\u0647 \u0634\u062f\u0647 \u0627\u0633\u062a. \u0627\u062c\u0632\u0627\u06cc \u0627\u0646\u062d\u0635\u0627\u0631\u06cc \u0648 \u0631\u062f\u06cc\u0627\u0628 \u067e\u0627\u06a9 \u0634\u062f\u0647\u200c\u0627\u0646\u062f\u060c \u0627\u0645\u0627 \u0647\u0645\u0686\u0646\u0627\u0646 \u0628\u0647 \u062e\u062f\u0645\u0627\u062a \u0645\u062e\u062a\u0644\u0641 \u0645\u0648\u0632\u06cc\u0644\u0627 \u0645\u062a\u0635\u0644 \u0645\u06cc\u200c\u0634\u0648\u062f \u06a9\u0647 \u0645\u0645\u06a9\u0646 \u0627\u0633\u062a \u06a9\u0627\u0631\u0628\u0631\u0627\u0646 \u0631\u0627 \u0631\u062f\u06cc\u0627\u0628\u06cc \u06a9\u0646\u0646\u062f.</p>\n",
+      "fil": "<ul>\n<li>Malaking koleksyon ng mga addon, kasama ang mga ad blocker.</li>\n<li>Pinahusay na proteksyon sa pagsubaybay.</li>\n<li>Available sa isang pindot ang Pribadong mode.</li>\n<li>Nako-customize na start screen na layout at posisyon navigation bar (itaas o ibaba).</li>\n<li>Madilim na tema.</li>\n<li>Koleksyon ng mga tab.</li>\n<li>Pag-sync ng mga tab, bookmark, password, atbp. sa mga maraming device sa pamamagitan ng Firefox Sync.</li>\n<li>Picture-in-picture mode.</li>\n</ul>\n<p>Ang Fennec F-Droid ay nakabase sa napapanahong bersyon ng Mozilla Firefox. May mga proprietary na bahagi na tinanggal, ngunit kumokonekta pa rin sa ilang mga serbisyo ng Mozilla na maaaring subaybayan ang mga user.</p>\n",
+      "fr-FR": "<ul>\n  <li>Large collection d'addons, incluant des bloqueurs de pub.</li>\n  <li>Protection contre le pistage am\u00e9lior\u00e9e.</li>\n  <li>Mode priv\u00e9e disponible en un clic.</li>\n  <li>Mise en page personnalisable de l'\u00e9cran de d\u00e9marrage et de la position de la barre de navigation (en haut ou en bas)</li>\n  <li>Th\u00e8me fonc\u00e9.</li>\n  <li>Collections d'onglets.</li>\n  <li>Synchronisation des onglets, des marques-pages, des mots de passe, etc. sur plusieurs appareils gr\u00e2ce \u00e0 Firefox Sync.</li>\n  <li>Mode picture-in-picture.</li>\n</ul>\n<p>Fennec F-Droid est bas\u00e9 sur la derni\u00e8re version de Mozilla Firefox. Il a les \u00e9l\u00e9ments propri\u00e9taires et la t\u00e9l\u00e9m\u00e9trie retir\u00e9s, mais se connecte quand m\u00eame aux services Mozilla qui peuvent pister les utilisateurs.</p>\n",
+      "hu-HU": "<ul>\n  <li>kieg\u00e9sz\u00edt\u0151k sz\u00e9les gy\u0171jtem\u00e9nye, bele\u00e9rtve a hirdet\u00e9sblokkol\u00f3kat is.</li>\n  <li>tov\u00e1bbfejlesztett K\u00f6vet\u00e9sv\u00e9delem.</li>\n  <li>priv\u00e1t m\u00f3d egyetlen \u00e9rint\u00e9ssel el\u00e9rhet\u0151.</li>\n  <li>testreszabhat\u00f3 kezd\u0151k\u00e9perny\u0151 elrendez\u00e9s \u00e9s navig\u00e1ci\u00f3s s\u00e1v poz\u00edci\u00f3 (fels\u0151 vagy als\u00f3).</li>\n  <li>s\u00f6t\u00e9t t\u00e9ma.</li>\n  <li>lapok gy\u0171jtem\u00e9nyei.</li>\n  <li>f\u00fclek, k\u00f6nyvjelz\u0151k, jelszavak stb. t\u00f6bb eszk\u00f6z\u00f6n kereszt\u00fcl Firefox Sync.</li>\n  <li>k\u00e9p a k\u00e9pben m\u00f3d.</li>\n</ul>\n<p>Fennec F-Droid alapul a leg\u00fajabb Mozilla Firefox kiad\u00e1s. V\u00e9dett biteket \u00e9s telemetri\u00e1t t\u00e1vol\u00edtottak el, de tov\u00e1bbra is csatlakozik a Mozilla k\u00fcl\u00f6nf\u00e9le szolg\u00e1ltat\u00e1saihoz, amelyek nyomon k\u00f6vethetik a felhaszn\u00e1l\u00f3kat.</p>\n",
+      "id": "<ul>\n  <li>Koleksi pengaya yang luas, termasuk pemblokir iklan.</li>\n  <li>Perlindungan pelacakan yang ditingkatkan.</li>\n  <li>Mode privat tersedia dalam satu ketukan.</li>\n  <li>Tata letak layar awal yang dapat disesuaikan dan posisi bilah navigasi (atas atau bawah).</li>\n  <li>Tema gelap.</li>\n  <li>Koleksi tab.</li>\n  <li>Sinkronisasi tab, penanda, kata sandi, dll. di beberapa perangkat melalui Firefox Sync.</li>\n  <li>Mode gambar-dalam-gambar.</li>\n</ul>\n<p>Fennec F-Droid didasarkan pada rilis Mozilla Firefox terbaru. Bit dan telemetri yang dimiliki telah dihapus, tetapi masih terhubung ke berbagai layanan Mozilla yang dapat melacak pengguna.</p>\n",
+      "ja-JP": "<ul>\n  <li>\u5e83\u544a\u30d6\u30ed\u30c3\u30ab\u30fc\u3092\u542b\u3080\u3001\u5e83\u7bc4\u306a\u30a2\u30c9\u30aa\u30f3\u306e\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u3002</li>\n  <li>\u5f37\u5316\u578b\u30c8\u30e9\u30c3\u30ad\u30f3\u30b0\u9632\u6b62\u3002</li>\n  <li>\u30d7\u30e9\u30a4\u30d9\u30fc\u30c8\u30e2\u30fc\u30c9\u306f\u4e00\u5ea6\u89e6\u308c\u308b\u3060\u3051\u3067\u5229\u7528\u53ef\u80fd\u3002</li>\n  <li>\u30ab\u30b9\u30bf\u30de\u30a4\u30ba\u53ef\u80fd\u306a\u958b\u59cb\u753b\u9762\u306e\u914d\u7f6e\u3068\u30ca\u30d3\u30b2\u30fc\u30b7\u30e7\u30f3\u30d0\u30fc\u306e\u4f4d\u7f6e \uff08\u753b\u9762\u4e0a\u90e8\u3068\u753b\u9762\u4e0b\u90e8\uff09\u3002</li>\n  <li>\u30c0\u30fc\u30af\u30c6\u30fc\u30de\u3002</li>\n  <li>\u8af8\u30bf\u30d6\u306e\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u3002</li>\n  <li>Firefox Sync \u3092\u4ecb\u3057\u3066\u8907\u6570\u306e\u7aef\u672b\u306b\u6e21\u3063\u3066\u3001\u30bf\u30d6\u3001\u30d6\u30c3\u30af\u30de\u30fc\u30af\u3001\u30d1\u30b9\u30ef\u30fc\u30c9\u306a\u3069\u3092\u540c\u671f\u3002</li>\n  <li>\u30d4\u30af\u30c1\u30e3\u30fc\u30a4\u30f3\u30d4\u30af\u30c1\u30e3\u30fc\u30e2\u30fc\u30c9</li>\n</ul>\n<p>Fennec F-Droid \u306f\u6700\u65b0\u306e Mozilla Firefox \u306e\u30ea\u30ea\u30fc\u30b9\u3092\u57fa\u306b\u3057\u307e\u3059\u3002\u5c02\u6709\u306e\u4e0d\u81ea\u7531\u306a\u30d3\u30c3\u30c8\u3068\u9060\u9694\u8abf\u67fb\u6a5f\u80fd\u3092\u53d6\u308a\u9664\u304d\u307e\u3059\u304c\u3001\u5229\u7528\u8005\u3092\u8ffd\u8de1\u53ef\u80fd\u306a\u69d8\u3005\u306a Mozilla \u306e\u30b5\u30fc\u30d3\u30b9\u306b\u306f\u3001\u4f9d\u7136\u3068\u3057\u3066\u63a5\u7d9a\u3057\u307e\u3059\u3002</p>\n",
+      "pl-PL": "<ul>\n  <li>Szeroki wyb\u00f3r rozszerze\u0144, w tym ad blocki.</li>\n  <li>Ulepszona ochrona przed \u015bledzeniem w sieci.</li>\n  <li>Prze\u0142\u0105czanie w tryb prywatny za pomoc\u0105 jednego klikni\u0119cia.</li>\n  <li>Mo\u017cliwo\u015b\u0107 dostosowania strony startowej i pozycji paska nawigacji (na dole lub na g\u00f3rze).</li>\n  <li>Ciemny motyw.</li>\n  <li>Kolekcja kart.</li>\n  <li>Synchronizacja kart, zak\u0142adek, pase\u0142 itp. pomi\u0119dzy wieloma urz\u0105dzeniami za pomoc\u0105 Firefox Sync.</li>\n  <li>Funkcja obraz w obrazie.</li>\n</ul>\n<p>Fennec F-Droid jest oparty na najnowszym wydaniu Mozilla Firefox. Usuni\u0119to z niego w\u0142asno\u015bciowe cz\u0119\u015bci kodu i zbieranie danych telemetrycznych, ale nadal \u0142\u0105czy si\u0119 z r\u00f3\u017cnymi us\u0142ugami Mozilli, kt\u00f3re mog\u0105 \u015bledzi\u0107 u\u017cytkownik\u00f3w.</p>\n",
+      "pt": "<ul>\n<li>Ampla cole\u00e7\u00e3o de complementos, incluindo bloqueadores de an\u00fancios.</li>\n<li>Prote\u00e7\u00e3o de rastreamento aprimorada.</li>\n<li>Modo privado dispon\u00edvel com um \u00fanico toque.</li>\n<li>Layout de tela inicial personaliz\u00e1vel e posi\u00e7\u00e3o da barra de navega\u00e7\u00e3o (superior ou inferior).</li>\n<li>Tema escuro.</li>\n<li>Cole\u00e7\u00f5es de guias.</li>\n<li>Sincroniza\u00e7\u00e3o de guias, favoritos, senhas, etc. em v\u00e1rios dispositivos via Firefox Sync.</li>\n<li>Modo imagem em imagem.</li>\n</ul>\n<p>O Fennec F-Droid \u00e9 baseado na vers\u00e3o mais recente do Mozilla Firefox. Ele tem bits propriet\u00e1rios e telemetria removidos, mas ainda se conecta a v\u00e1rios servi\u00e7os da Mozilla que podem rastrear usu\u00e1rios.</p>\n",
+      "pt-BR": "<ul>\n  <li>Cole\u00e7\u00e3o ampla de extens\u00f5es, incluindo bloqueadores de an\u00fancio.</li>\n  <li>Prote\u00e7\u00e3o aprimorada contra rastreamento.</li>\n  <li>Modo privado dispon\u00edvel em um \u00fanico toque.</li>\n  <li>Layout da tela inicial e a posi\u00e7\u00e3o da barra de navega\u00e7\u00e3o (embaixo ou em cima) customiz\u00e1veis.</li>\n  <li>Tema escuro.</li>\n  <li>Cole\u00e7\u00f5es de abas.</li>\n  <li>Sincroniza\u00e7\u00e3o de abas, favoritos, senhas, e outros entre v\u00e1rios dispositivos com o Firefox Sync.</li>\n  <li>Modo picture-in-picture.</li>\n</ul>\n<p>O navegador Fennec F-Droid \u00e9 baseado no lan\u00e7amento mais recente do Mozilla Firefox. Partes propriet\u00e1rias, e a telemetria foram removidas, por\u00e9m ainda se conecta a v\u00e1rios servi\u00e7os da Mozilla que podem rastrear seus usu\u00e1rios.</p>\n",
+      "ro": "<ul>\n <li>Colec\u021bie larg\u0103 de suplimente, inclusiv blocante de anun\u021buri.</li>\n <li>Protec\u021bie \u00eembun\u0103t\u0103\u021bit\u0103 la urm\u0103rire.</li>\n <li>Modul privat disponibil cu o singur\u0103 atingere.</li>\n <li>Dispunerea ecranului de pornire personalizabil\u0103 \u0219i pozi\u021bia barei de navigare (sus sau jos).</li>\n <li>Tem\u0103 \u00eentunecat\u0103.</li>\n <li>Colec\u021bii de file.</li>\n <li>Sincronizarea filelor, marcajelor, parolelor etc. pe mai multe dispozitive prin Firefox Sync.</li>\n <li>Modul imagine \u00een imagine.</li>\n</ul>\n<p>Fennec F-Droid se bazeaz\u0103 pe cea mai recent\u0103 versiune Mozilla Firefox. Are bi\u021bi proprietari \u0219i telemetria eliminate, dar se conecteaz\u0103 \u00een continuare la diferite Mozilla servicii care pot urm\u0103ri utilizatorii.</p>\n",
+      "ru-RU": "<ul>\n  <li>\u041e\u0431\u0448\u0438\u0440\u043d\u0430\u044f \u043a\u043e\u043b\u043b\u0435\u043a\u0446\u0438\u044f \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0439, \u0432\u043a\u043b\u044e\u0447\u0430\u044f \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0449\u0438\u043a\u0438 \u0440\u0435\u043a\u043b\u0430\u043c\u044b.</li>\n  <li>\u0423\u043b\u0443\u0447\u0448\u0435\u043d\u043d\u0430\u044f \u0437\u0430\u0449\u0438\u0442\u0430 \u043e\u0442 \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u043d\u0438\u044f.</li>\n  <li>\u041f\u0440\u0438\u0432\u0430\u0442\u043d\u044b\u0439 \u0440\u0435\u0436\u0438\u043c, \u0430\u043a\u0442\u0438\u0432\u0438\u0440\u0443\u0435\u043c\u044b\u0439 \u043e\u0434\u043d\u0438\u043c \u043d\u0430\u0436\u0430\u0442\u0438\u0435\u043c.</li>\n  <li>\u041d\u0430\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0435\u043c\u044b\u0439 \u0441\u0442\u0430\u0440\u0442\u043e\u0432\u044b\u0439 \u044d\u043a\u0440\u0430\u043d \u0438 \u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0430\u0434\u0440\u0435\u0441\u043d\u043e\u0439 \u0441\u0442\u0440\u043e\u043a\u0438 (\u0432\u0432\u0435\u0440\u0445\u0443 \u0438\u043b\u0438 \u0432\u043d\u0438\u0437\u0443).</li>\n  <li>\u0422\u0451\u043c\u043d\u0430\u044f \u0442\u0435\u043c\u0430.</li>\n  <li>\u041a\u043e\u043b\u043b\u0435\u043a\u0446\u0438\u0438 \u0432\u043a\u043b\u0430\u0434\u043e\u043a.</li>\n  <li>\u0421\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u044f \u0432\u043a\u043b\u0430\u0434\u043e\u043a, \u0437\u0430\u043a\u043b\u0430\u0434\u043e\u043a, \u043f\u0430\u0440\u043e\u043b\u0435\u0439 \u0438 \u0442.\u00a0\u0434. \u043c\u0435\u0436\u0434\u0443 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u043c\u0438 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430\u043c\u0438 \u0447\u0435\u0440\u0435\u0437 Firefox Sync.</li>\n  <li>\u0420\u0435\u0436\u0438\u043c \u00ab\u043a\u0430\u0440\u0442\u0438\u043d\u043a\u0430 \u0432 \u043a\u0430\u0440\u0442\u0438\u043d\u043a\u0435\u00bb.</li>\n</ul>\n<p>Fennec F-Droid \u043e\u0441\u043d\u043e\u0432\u0430\u043d \u043d\u0430 \u043f\u043e\u0441\u043b\u0435\u0434\u043d\u0435\u043c \u0432\u044b\u043f\u0443\u0441\u043a\u0435 Mozilla Firefox. \u041f\u0440\u043e\u043f\u0440\u0438\u0435\u0442\u0430\u0440\u043d\u044b\u0439 \u043a\u043e\u0434 \u0438 \u0442\u0435\u043b\u0435\u043c\u0435\u0442\u0440\u0438\u044f \u0443\u0434\u0430\u043b\u0435\u043d\u044b, \u043e\u0434\u043d\u0430\u043a\u043e \u043e\u043d \u0432\u0441\u0451 \u0440\u0430\u0432\u043d\u043e \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0430\u0435\u0442\u0441\u044f \u043a \u0440\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u043c \u0441\u0435\u0440\u0432\u0438\u0441\u0430\u043c Mozilla, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043c\u043e\u0433\u0443\u0442 \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u0442\u044c \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439.</p>\n",
+      "sk": "<ul>\n <li>\u0160irok\u00e1 zbierka doplnkov vr\u00e1tane blokova\u010dov rekl\u00e1m.</li>\n <li>Vylep\u0161en\u00e1 ochrana pred sledovan\u00edm.</li>\n <li>S\u00fakromn\u00fd re\u017eim dostupn\u00fd jedin\u00fdm klepnut\u00edm.</li>\n <li>Prisp\u00f4sobite\u013en\u00e9 rozlo\u017eenie \u00favodnej obrazovky a poloha naviga\u010dn\u00e9ho panela (hore alebo dole).</li>\n <li>Tmav\u00fd mot\u00edv.</li>\n <li>Kolekcie kariet.</li>\n <li>Synchroniz\u00e1cia kariet, z\u00e1lo\u017eiek, hesiel at\u010f. na viacer\u00fdch zariadeniach prostredn\u00edctvom n\u00e1stroja Firefox Sync.</li>\n <li>Re\u017eim obrazu v obraze.</li>\n</ul>\n<p>Fennec F-Droid je zalo\u017een\u00fd na najnov\u0161om vydan\u00ed prehliada\u010da Mozilla Firefox. M\u00e1 propriet\u00e1rne bity a telemetria boli odstr\u00e1nen\u00e9, ale st\u00e1le sa prip\u00e1ja k r\u00f4znym Mozille slu\u017eby, ktor\u00e9 m\u00f4\u017eu sledova\u0165 pou\u017e\u00edvate\u013eov.</p>\n",
+      "sl": "<ul>\n <li>\u0160iroka zbirka dodatkov, vklju\u010dno z zaviralci oglasov.</li>\n <li>Izbolj\u0161ana za\u0161\u010dita pred sledenjem.</li>\n <li>Zasebni na\u010din je na voljo z enim dotikom.</li>\n <li>Prilagodljiva postavitev za\u010detnega zaslona in polo\u017eaj navigacijske vrstice (zgoraj ali spodaj).</li>\n <li>Temna tema.</li>\n <li>Zbirke zavihkov.</li>\n <li>Sinhronizacija zavihkov, zaznamkov, gesel itd. v ve\u010d napravah prek Firefox Sync.</li>\n <li>Na\u010din slika v sliki.</li>\n</ul>\n<p>Fennec F-Droid temelji na najnovej\u0161i izdaji brskalnika Mozilla Firefox. Ima lastni\u0161ki bitovi in telemetrija odstranjeni, vendar se \u0161e vedno povezuje z razli\u010dnimi Mozillami storitve, ki lahko sledijo uporabnikom.</p>\n",
+      "sv-SE": "<ul>\n  <li>En bred samling av till\u00e4gg, inklusive annonsblockerare.</li>\n  <li>F\u00f6rb\u00e4ttrat sp\u00e5rningsskydd.</li>\n  <li>Privat l\u00e4ge tillg\u00e4ngligt via ett enkelt tryck.</li>\n  <li>Anpassningsbar layout f\u00f6r startsk\u00e4rmen och positionen f\u00f6r navigeringsf\u00e4ltet (l\u00e4ngst upp eller l\u00e4ngst ner).</li>\n  <li>M\u00f6rkt tema.</li>\n  <li>Samling av flikar.</li>\n  <li>Synkronisering av flikar, bokm\u00e4rken, l\u00f6senord osv. f\u00f6r flertalet enheter via Firefox Sync.</li>\n  <li>Bild-i-Bild-l\u00e4ge.</li>\n</ul>\n<p>Fennec F-Droid-browsern \u00e4r baserad p\u00e5 den senaste utg\u00e5van av Mozilla Firefox. Den har sina propriet\u00e4ra delar och telemetri borttaget, men den ansluter fortfarande till diverse Mozilla-tj\u00e4nster som kan sp\u00e5ra anv\u00e4ndare.</p>\n",
+      "tr-TR": "<ul>\n<li>Reklam engelleyiciler de dahil olmak \u00fczere geni\u015f eklenti koleksiyonu.</li>\n<li>Geli\u015ftirilmi\u015f izleme korumas\u0131.</li>\n<li>Tek bir dokunu\u015fla kullan\u0131labilen \u00f6zel mod.</li>\n<li>\u00d6zelle\u015ftirilebilir ba\u015flang\u0131\u00e7 ekran\u0131 d\u00fczeni ve gezinme \u00e7ubu\u011fu konumu (\u00fcst veya alt).</li>\n<li>Koyu tema.</li>\n<li>Sekme koleksiyonlar\u0131.</li>\n<li>Firefox Sync arac\u0131l\u0131\u011f\u0131yla birden fazla cihazda sekmelerin, yer imlerinin, parolalar\u0131n vb. senkronizasyonu.</li>\n<li>Resim i\u00e7inde resim modu.</li>\n</ul>\n<p>Fennec F-Droid taray\u0131c\u0131s\u0131, en son Mozilla Firefox s\u00fcr\u00fcm\u00fcne dayanmaktad\u0131r. Tescilli bitler ve telemetri kald\u0131r\u0131lm\u0131\u015ft\u0131r, ancak yine de kullan\u0131c\u0131lar\u0131 izleyebilen \u00e7e\u015fitli Mozilla hizmetlerine ba\u011flan\u0131r.</p>\n",
+      "uk": "<ul>\n  <li>\u0412\u0435\u043b\u0438\u043a\u0430 \u043a\u043e\u043b\u0435\u043a\u0446\u0456\u044f \u0430\u0434\u0434\u043e\u043d\u0456\u0432, \u0443 \u0442\u043e\u043c\u0443 \u0447\u0438\u0441\u043b\u0456 \u0431\u043b\u043e\u043a\u0443\u0432\u0430\u043b\u044c\u043d\u0438\u043a\u0456\u0432 \u0440\u0435\u043a\u043b\u0430\u043c\u0438.</li>\n  <li>\u041f\u043e\u043a\u0440\u0430\u0449\u0435\u043d\u0438\u0439 \u0437\u0430\u0445\u0438\u0441\u0442 \u0432\u0456\u0434 \u0432\u0456\u0434\u0441\u0442\u0435\u0436\u0435\u043d\u043d\u044f.</li>\n  <li>\u041f\u0440\u0438\u0432\u0430\u0442\u043d\u0438\u0439 \u0440\u0435\u0436\u0438\u043c, \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u0438\u0439 \u043e\u0434\u043d\u0438\u043c \u0434\u043e\u0442\u0438\u043a\u043e\u043c.</li>\n  <li>\u041d\u0430\u0441\u0442\u0440\u043e\u044e\u0432\u0430\u043d\u0438\u0439 \u043c\u0430\u043a\u0435\u0442 \u043f\u043e\u0447\u0430\u0442\u043a\u043e\u0432\u043e\u0433\u043e \u0435\u043a\u0440\u0430\u043d\u0430 \u0442\u0430 \u043f\u043e\u043b\u043e\u0436\u0435\u043d\u043d\u044f \u043f\u0430\u043d\u0435\u043b\u0456 \u043d\u0430\u0432\u0456\u0433\u0430\u0446\u0456\u0457 (\u0432\u0433\u043e\u0440\u0456 \u0430\u0431\u043e \u0432\u043d\u0438\u0437\u0443).</li>\n  <li>\u0422\u0435\u043c\u043d\u0430 \u0442\u0435\u043c\u0430.</li>\n  <li>\u041a\u043e\u043b\u0435\u043a\u0446\u0456\u0457 \u0432\u043a\u043b\u0430\u0434\u043e\u043a.</li>\n  <li>\u0421\u0438\u043d\u0445\u0440\u043e\u043d\u0456\u0437\u0430\u0446\u0456\u044f \u0432\u043a\u043b\u0430\u0434\u043e\u043a, \u0437\u0430\u043a\u043b\u0430\u0434\u043e\u043a, \u043f\u0430\u0440\u043e\u043b\u0456\u0432 \u0442\u043e\u0449\u043e \u043d\u0430 \u043a\u0456\u043b\u044c\u043a\u043e\u0445 \u043f\u0440\u0438\u0441\u0442\u0440\u043e\u044f\u0445 \u0437\u0430 \u0434\u043e\u043f\u043e\u043c\u043e\u0433\u043e\u044e Firefox Sync.</li>\n  <li>\u0420\u0435\u0436\u0438\u043c \u00ab\u043a\u0430\u0440\u0442\u0438\u043d\u043a\u0430 \u0432 \u043a\u0430\u0440\u0442\u0438\u043d\u0446\u0456\u00bb.</li>\n</ul>\n<p>\u0411\u0440\u0430\u0443\u0437\u0435\u0440 Fennec F-Droid \u0431\u0430\u0437\u0443\u0454\u0442\u044c\u0441\u044f \u043d\u0430 \u043e\u0441\u0442\u0430\u043d\u043d\u0456\u0439 \u0432\u0435\u0440\u0441\u0456\u0457 Mozilla Firefox. \u0423 \u043d\u044c\u043e\u043c\u0443 \u0432\u0438\u0434\u0430\u043b\u0435\u043d\u043e \u043f\u0440\u043e\u043f\u0440\u0456\u0454\u0442\u0430\u0440\u043d\u0456 \u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0438 \u0456 \u0442\u0435\u043b\u0435\u043c\u0435\u0442\u0440\u0456\u044e, \u0430\u043b\u0435 \u0432\u0456\u043d \u0443\u0441\u0435 \u0449\u0435 \u043f\u0456\u0434\u043a\u043b\u044e\u0447\u0430\u0454\u0442\u044c\u0441\u044f \u0434\u043e \u0440\u0456\u0437\u043d\u0438\u0445 \u0441\u043b\u0443\u0436\u0431 Mozilla, \u044f\u043a\u0456 \u043c\u043e\u0436\u0443\u0442\u044c \u0432\u0456\u0434\u0441\u0442\u0435\u0436\u0443\u0432\u0430\u0442\u0438 \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u0447\u0456\u0432.</p>\n",
+      "zh-CN": "<ul>\n  <li>\u4e30\u5bcc\u7684\u9644\u52a0\u7ec4\u4ef6\u6536\u85cf\u96c6\uff0c\u5305\u62ec\u5e7f\u544a\u62e6\u622a\u5668\u3002</li>\n  <li>\u589e\u5f3a\u578b\u8ddf\u8e2a\u4fdd\u62a4\u3002</li>\n  <li>\u4e00\u952e\u5373\u53ef\u8fdb\u5165\u9690\u79c1\u6d4f\u89c8\u6a21\u5f0f\u3002</li>\n  <li>\u53ef\u81ea\u5b9a\u4e49\u8d77\u59cb\u5c4f\u5e55\u5e03\u5c40\u548c\u5bfc\u822a\u680f\u4f4d\u7f6e\uff08\u9876\u90e8\u6216\u5e95\u90e8\uff09\u3002</li>\n  <li>\u6df1\u8272\u4e3b\u9898\u3002</li>\n  <li>\u6807\u7b7e\u9875\u6536\u85cf\u96c6\u3002</li>\n  <li>\u901a\u8fc7 Firefox Sync \u5728\u591a\u53f0\u8bbe\u5907\u95f4\u540c\u6b65\u6807\u7b7e\u9875\u3001\u4e66\u7b7e\u3001\u5bc6\u7801\u7b49\u3002</li>\n  <li>\u753b\u4e2d\u753b\u6a21\u5f0f\u3002</li>\n</ul>\n<p>Fennec F-Droid \u6d4f\u89c8\u5668\u57fa\u4e8e\u6700\u65b0\u7684 Mozilla Firefox \u7248\u672c\uff0c\u79fb\u9664\u4e86\u4e13\u6709\u7ec4\u4ef6\u548c\u9065\u6d4b\u529f\u80fd\uff0c\u4f46\u4ecd\u8fde\u63a5\u5230\u53ef\u4ee5\u8ddf\u8e2a\u7528\u6237\u7684\u5404\u79cd Mozilla \u670d\u52a1\u3002</p>\n"
+    },
+    "donate": [
+      "https://sendto.mozilla.org/page/contribute/openwebfund"
+    ],
+    "icon": {
+      "en-US": {
+        "name": "/org.mozilla.fennec_fdroid/en-US/icon_RCxqbONQXgoTeWvoYAQjC0nmDVTlBoCXvzZ1Rx27gRM=.png",
+        "sha256": "442c6a6ce3505e0a13796be86004230b49e60d54e5068097bf3675471dbb8113",
+        "size": 41859
+      }
+    },
+    "issueTracker": "https://gitlab.com/relan/fennecbuild/-/issues",
+    "lastUpdated": 1780172537598,
+    "license": "MPL-2.0",
+    "name": {
+      "en-US": "Fennec F-Droid"
+    },
+    "preferredSigner": "06665358efd8ba05be236a47a12cb0958d7d75dd939d77c2b31f5398537ebdc5",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/org.mozilla.fennec_fdroid/en-US/phoneScreenshots/1.png",
+            "sha256": "aa594e9baf44b0909d2e8d7fe55d04d5fd201bc7103f78a21437580db7262be6",
+            "size": 210735
+          },
+          {
+            "name": "/org.mozilla.fennec_fdroid/en-US/phoneScreenshots/2.png",
+            "sha256": "51d77a5b66936b31d46064942f74e1502e232d4d0f8f98c14fc2dff37f484187",
+            "size": 377790
+          },
+          {
+            "name": "/org.mozilla.fennec_fdroid/en-US/phoneScreenshots/3.png",
+            "sha256": "b36a2d2891ad3589617e5fcf7167d3db5ef951d32f5a772a83c8e6b099e9e801",
+            "size": 277603
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://hg.mozilla.org/mozilla-central/file/tip/mobile/android",
+    "summary": {
+      "ar": "\u062a\u0635\u0641\u062d \u0627\u0644\u0648\u064a\u0628",
+      "ba": "\u0412\u0435\u0431-\u0441\u0430\u0439\u0442\u0442\u0430\u0440\u0499\u044b \u04a1\u0430\u0440\u0430\u0443",
+      "ca": "Navega per la web",
+      "cs": "Proch\u00e1zejte web",
+      "da": "Browse p\u00e5 nettet",
+      "de": "Im Internet surfen",
+      "el": "\u03a0\u03b5\u03c1\u03b9\u03b7\u03b3\u03b7\u03b8\u03b5\u03af\u03c4\u03b5 \u03c3\u03c4\u03bf \u03b4\u03b9\u03b1\u03b4\u03af\u03ba\u03c4\u03c5\u03bf",
+      "en-US": "Browse the web",
+      "eo": "Retfoliumilo bazita sur Mozilla Firefox",
+      "es": "Navegar por la web",
+      "eu": "Arakatu weba",
+      "fi": "Selaa netti\u00e4",
+      "fr": "Naviguez sur le web",
+      "ga": "Brabhs\u00e1il an gr\u00e9as\u00e1n",
+      "gd": "Brabhsaich an l\u00econ",
+      "he": "\u05d2\u05dc\u05d9\u05e9\u05d4 \u05d1\u05d0\u05d9\u05e0\u05d8\u05e8\u05e0\u05d8",
+      "hr": "Pregledaj internet",
+      "id": "Menelusuri web",
+      "is": "Flakka \u00e1 vefnum",
+      "it": "Naviga sul web",
+      "ja": "\u30a6\u30a7\u30d6\u3092\u95b2\u89a7",
+      "nb": "Bes\u00f8k nettsider",
+      "nn": "Nettlesar",
+      "pl": "Przegl\u0105darka stron internetowych",
+      "pt": "Navegar na web",
+      "pt-BR": "Navegue a web",
+      "pt-PT": "Navegar na web",
+      "ro": "Naviga\u021bi pe web",
+      "ru": "\u041f\u043e\u0438\u0441\u043a \u0432 \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0435",
+      "sq": "Shfletoni n\u00eb Web",
+      "sr": "\u041f\u0440\u0435\u0452\u0438\u0442\u0435 \u043d\u0430 \u0432\u0435\u0431",
+      "sw": "Vinjari wavuti",
+      "ta": "\u0bb5\u0bb2\u0bc8\u0baf\u0bc8 \u0b89\u0bb2\u0bbe\u0bb5\u0bc1\u0b95",
+      "tr": "\u0130nternette gezinin",
+      "uk": "\u041f\u0435\u0440\u0435\u0433\u043b\u044f\u0434\u0430\u0447 \u043c\u0435\u0440\u0435\u0436\u0456",
+      "zh-CN": "\u6d4f\u89c8\u7f51\u9875",
+      "zh-TW": "\u700f\u89bd\u7db2\u9801"
+    },
+    "translation": "https://translate.codeberg.org/projects/fennec/",
+    "webSite": "https://support.mozilla.org/products/mobile"
+  },
+  "version": {
+    "added": 1780172537598,
+    "antiFeatures": {
+      "Tracking": {
+        "en-US": "Connects to various Mozilla services that can track users."
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeie2cvf7t4zazcbvyvzpdb6tphzpg5rolpqjzqui6bzbggqbjidzdi",
+      "name": "/org.mozilla.fennec_fdroid_1510220.apk",
+      "sha256": "e3749dd147bf55688fac464fbc022cc384073133445e8c0b830aa4f2674cfa40",
+      "size": 122483642
+    },
+    "manifest": {
+      "nativecode": [
+        "arm64-v8a"
+      ],
+      "signer": {
+        "sha256": [
+          "06665358efd8ba05be236a47a12cb0958d7d75dd939d77c2b31f5398537ebdc5"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "maxSdkVersion": 28,
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "name": "android.permission.CAMERA"
+        },
+        {
+          "name": "android.permission.RECORD_AUDIO"
+        },
+        {
+          "maxSdkVersion": 26,
+          "name": "com.android.launcher.permission.INSTALL_SHORTCUT"
+        },
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.permission.USE_BIOMETRIC"
+        },
+        {
+          "name": "android.permission.QUERY_ALL_PACKAGES"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_AUDIO"
+        },
+        {
+          "name": "android.permission.CREDENTIAL_MANAGER_SET_ORIGIN"
+        },
+        {
+          "name": "android.permission.CREDENTIAL_MANAGER_QUERY_CANDIDATE_CREDENTIALS"
+        },
+        {
+          "name": "com.adjust.preinstall.READ_PERMISSION"
+        },
+        {
+          "name": "org.mozilla.fennec_fdroid.permission.PROFILER_INTERNAL"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_VISUAL_USER_SELECTED"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"
+        },
+        {
+          "name": "org.mozilla.fennec_fdroid.permission.RECEIVE_DOWNLOAD_BROADCAST"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+        },
+        {
+          "name": "android.permission.USE_FINGERPRINT"
+        },
+        {
+          "name": "android.permission.HIGH_SAMPLING_RATE_SENSORS"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.MODIFY_AUDIO_SETTINGS"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "org.mozilla.fennec_fdroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesPermissionSdk23": [
+        {
+          "name": "android.permission.REQUEST_INSTALL_PACKAGES"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 1510220,
+      "versionName": "151.0.2"
+    },
+    "src": {
+      "name": "/org.mozilla.fennec_fdroid_1510220_src.tar.gz",
+      "sha256": "36a886fd1e183993ff10191b35ee4932889a315a36fd7a9a6e249b7a759767e7",
+      "size": 1174410
+    }
+  }
+}

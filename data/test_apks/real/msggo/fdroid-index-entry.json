@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "added": 1767650849000,
+    "authorName": "Yztz",
+    "authorWebSite": "https://github.com/yztz",
+    "categories": [
+      "Phone & SMS"
+    ],
+    "changelog": "https://github.com/yztz/MsgGo/releases",
+    "description": {
+      "en-US": "MsgGo is a lightweight, modern bulk SMS tool for Android. Built with Material Design 3, it allows you to import data from Excel spreadsheets and use custom templates for efficient, personalized message distribution.\n\n<b>Features</b>\n<ul>\n<li><b>Excel Import</b>: Supports importing contact lists from .xls and .xlsx files.</li>\n<li><b>Magic Variables</b>: Automatically detects headers and supports inserting variables (e.g., \"${Name}\") into message templates for personalized bulk sending.</li>\n<li><b>Multi-SIM Support</b>: Fully compatible with multi-SIM devices; choose which SIM card to use.</li>\n<li><b>Progress Monitoring</b>: View sending progress and delivery status in real-time.</li>\n<li><b>History Management</b>: Automatically saves sending records and templates for easy reuse.</li>\n<li><b>Privacy Focused</b>: No INTERNET permission required; all data is processed locally.</li>\n<li><b>Delay Mechanism</b>: Supports randomized sending delays to reduce the risk of being blocked by carriers.</li>\n<li><b>Modern Design</b>: Follows Material Design 3 guidelines.</li>\n</ul>",
+      "zh-CN": "MsgGo \u662f\u4e00\u6b3e\u8f7b\u91cf\u3001\u73b0\u4ee3\u5316\u7684\u5b89\u5353\u6279\u91cf\u77ed\u4fe1\u7fa4\u53d1\u5de5\u5177\u3002\u5b83\u57fa\u4e8e Material Design 3 \u8bbe\u8ba1\uff0c\u652f\u6301\u4ece Excel \u8868\u683c\u5bfc\u5165\u6570\u636e\uff0c\u914d\u5408\u81ea\u5b9a\u4e49\u6a21\u677f\u5b9e\u73b0\u9ad8\u6548\u3001\u4e2a\u6027\u5316\u7684\u6d88\u606f\u5206\u53d1\u3002\n\n<b>\u529f\u80fd\u7279\u6027</b>\n<ul>\n<li><b>Excel \u5bfc\u5165</b>\uff1a\u652f\u6301\u5bfc\u5165 .xls \u548c .xlsx \u683c\u5f0f\u7684\u901a\u8baf\u5f55\u6587\u4ef6\u3002</li>\n<li><b>\u9b54\u6cd5\u53d8\u91cf</b>\uff1a\u81ea\u52a8\u8bc6\u522b\u8868\u5934\uff0c\u652f\u6301\u5728\u77ed\u4fe1\u6a21\u677f\u4e2d\u63d2\u5165\u53d8\u91cf\uff08\u5982\u201c${\u59d3\u540d}\u201d\uff09\uff0c\u5b9e\u73b0\u4e2a\u6027\u5316\u7fa4\u53d1\u3002</li>\n<li><b>\u591a\u5361\u652f\u6301</b>\uff1a\u5b8c\u7f8e\u9002\u914d\u591a\u5361\u624b\u673a\uff0c\u53ef\u6307\u5b9a SIM \u5361\u53d1\u9001\u3002</li>\n<li><b>\u8fdb\u5ea6\u76d1\u63a7</b>\uff1a\u5b9e\u65f6\u67e5\u770b\u53d1\u9001\u8fdb\u5ea6\u548c\u6210\u529f/\u5931\u8d25\u72b6\u6001\u3002</li>\n<li><b>\u5386\u53f2\u8bb0\u5f55</b>\uff1a\u81ea\u52a8\u4fdd\u5b58\u53d1\u9001\u8bb0\u5f55\u548c\u6a21\u677f\uff0c\u65b9\u4fbf\u91cd\u590d\u4f7f\u7528\u3002</li>\n<li><b>\u9690\u79c1\u5b89\u5168</b>\uff1a\u65e0\u9700\u8054\u7f51\u6743\u9650\uff0c\u6240\u6709\u6570\u636e\u672c\u5730\u5904\u7406\u3002</li>\n<li><b>\u5ef6\u65f6\u673a\u5236</b>\uff1a\u652f\u6301\u8bbe\u7f6e\u968f\u673a\u53d1\u9001\u5ef6\u8fdf\uff0c\u964d\u4f4e\u88ab\u8fd0\u8425\u5546\u62e6\u622a\u7684\u98ce\u9669\u3002</li>\n<li><b>\u73b0\u4ee3\u8bbe\u8ba1</b>\uff1a\u9075\u5faa Material Design 3 \u89c4\u8303\u3002</li>\n</ul>"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/top.yztz.msggo/en-US/icon_6BhBsxbbSWnEgkWwielW3J33azZ8oY_l5JuA2YKcHjU=.png",
+        "sha256": "e81841b316db4969c48245b089e956dc9df76b367ca18fe5e49b80d9829c1e35",
+        "size": 143999
+      },
+      "zh-CN": {
+        "name": "/top.yztz.msggo/zh-CN/icon_6BhBsxbbSWnEgkWwielW3J33azZ8oY_l5JuA2YKcHjU=.png",
+        "sha256": "e81841b316db4969c48245b089e956dc9df76b367ca18fe5e49b80d9829c1e35",
+        "size": 143999
+      }
+    },
+    "issueTracker": "https://github.com/yztz/MsgGo/issues",
+    "lastUpdated": 1773608901411,
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "en-US": "MsgGo",
+      "zh-CN": "MsgGo"
+    },
+    "preferredSigner": "a860ba3787ca4c4c1a216ce5eadd9487e2c53f21272b4ac4cb45f8d0bbe167ec",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/top.yztz.msggo/en-US/phoneScreenshots/1.png",
+            "sha256": "d607d5540ae13907d7e7baed14072e037169ea44a1546868863dc33603bb32fa",
+            "size": 612517
+          },
+          {
+            "name": "/top.yztz.msggo/en-US/phoneScreenshots/2.png",
+            "sha256": "f842cb9ce20aacdffbb1ee4a0c30a8714461987803dcb3c9db767fdfe1371a87",
+            "size": 456433
+          },
+          {
+            "name": "/top.yztz.msggo/en-US/phoneScreenshots/3.png",
+            "sha256": "83109530c08f20f4fc97d8d92f5cf07a6ef30476803523ba46dc46ca9b6d7a52",
+            "size": 647823
+          },
+          {
+            "name": "/top.yztz.msggo/en-US/phoneScreenshots/4.png",
+            "sha256": "86816714dd1afdd162013f7b71d5684d7b232c4ba8f32345e29e9c5a8b2ea444",
+            "size": 407403
+          },
+          {
+            "name": "/top.yztz.msggo/en-US/phoneScreenshots/5.png",
+            "sha256": "ba15d4ef049cac4f6dff5cdacb31efcf929bfb0d3f3494411dfc37946b8b1fa3",
+            "size": 418985
+          }
+        ],
+        "zh-CN": [
+          {
+            "name": "/top.yztz.msggo/zh-CN/phoneScreenshots/1.png",
+            "sha256": "3a6b6661e12fde7e60e345672c8bef828cf3151e02d292f7f2f4454e1aabe0a2",
+            "size": 611805
+          },
+          {
+            "name": "/top.yztz.msggo/zh-CN/phoneScreenshots/2.png",
+            "sha256": "1e0b9432c75b824be4c88937355feaa8b7b60f129142f767a61738e3f3687c1b",
+            "size": 450135
+          },
+          {
+            "name": "/top.yztz.msggo/zh-CN/phoneScreenshots/3.png",
+            "sha256": "b66f9e6c5afb376246f3ea81f83a82ca7aaf88b234fff37e871ced9d304c3b78",
+            "size": 663236
+          },
+          {
+            "name": "/top.yztz.msggo/zh-CN/phoneScreenshots/4.png",
+            "sha256": "80e632f28afdf6a679df02f9c89de521df9970a9dbc0cca21e7fffde69bcaea3",
+            "size": 420728
+          },
+          {
+            "name": "/top.yztz.msggo/zh-CN/phoneScreenshots/5.png",
+            "sha256": "5d18f085479efebacda171aecb43198310597ae4668a734a906e40cec2b8e2c8",
+            "size": 418824
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/yztz/MsgGo",
+    "summary": {
+      "en-US": "Open source, lightweight, and modern bulk SMS tool for Android.",
+      "zh-CN": "\u5f00\u6e90\u3001\u8f7b\u91cf\u3001\u73b0\u4ee3\u5316\u7684\u77ed\u4fe1\u7fa4\u53d1\u5de5\u5177\u3002"
+    }
+  },
+  "version": {
+    "added": 1773608901411,
+    "file": {
+      "ipfsCIDv1": "bafybeidi6tliiewr557rkikqvl7z3h442xs3bfw43utlnbfdqw3rsqctli",
+      "name": "/top.yztz.msggo_26000309.apk",
+      "sha256": "64a6fcd9face083a2f8507387c4a4243759c4a404d93e44f75fb19c60787a0c3",
+      "size": 16996204
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "a860ba3787ca4c4c1a216ce5eadd9487e2c53f21272b4ac4cb45f8d0bbe167ec"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.SEND_SMS"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+        },
+        {
+          "name": "android.permission.READ_SMS"
+        },
+        {
+          "name": "android.permission.RECEIVE_SMS"
+        },
+        {
+          "name": "android.permission.RECEIVE_MMS"
+        },
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.provider.Telephony.SMS_RECEIVED"
+        },
+        {
+          "name": "android.permission.READ_PHONE_STATE"
+        },
+        {
+          "name": "top.yztz.msggo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 26000309,
+      "versionName": "3.9"
+    },
+    "src": {
+      "name": "/top.yztz.msggo_26000309_src.tar.gz",
+      "sha256": "fd6348715ab3e02439208f1a03f5480db167e4a1fdf787c4df0f23dcab80fcf8",
+      "size": 7543735
+    },
+    "whatsNew": {
+      "en-US": "see GitHub\uff1a\nhttps://github.com/yztz/MsgGo/releases",
+      "zh-CN": "\u7248\u672c\u8bf4\u660e\u8bf7\u53c2\u8003 GitHub\uff1a\nhttps://github.com/yztz/MsgGo/releases"
+    }
+  }
+}

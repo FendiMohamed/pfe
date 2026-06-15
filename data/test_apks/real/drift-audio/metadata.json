@@ -1,0 +1,60 @@
+{
+  "apk": {
+    "expected_sha256": "a725bc0d4f6b919013a30c2aa148236cd0bc7cbee6d278c159fded3acdc104fd",
+    "index_size": 10943067,
+    "path": "data/test_apks/real/drift-audio/drift-audio.apk",
+    "sha256": "a725bc0d4f6b919013a30c2aa148236cd0bc7cbee6d278c159fded3acdc104fd",
+    "size": 10943067,
+    "url": "https://f-droid.org/repo/io.github.probably_oxy.drift_1.apk"
+  },
+  "app": "Drift // Audio",
+  "categories": [
+    "Multimedia"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "multimedia",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/io.github.probably_oxy.drift/",
+  "license": "MIT",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "io.github.probably_oxy.drift",
+  "proof_status": "report-generated",
+  "reason": "No-native modern multimedia app with a medium APK, target SDK 36, and a sizeable source tree that may emit a richer Kotlin/AndroidX dependency surface than the sparse clean rows.",
+  "report": {
+    "detected_component_count": 13,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v8/report-real-drift-audio",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v8/report-real-drift-audio/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v8/report-real-drift-audio/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v8/report-real-drift-audio/sbom.cdx.json",
+    "sbom_component_count": 13,
+    "status": "ok"
+  },
+  "slug": "drift-audio",
+  "source_repo": "https://github.com/probably-oxy/drift-audio",
+  "source_tarball": {
+    "sha256": "84707b60aa97854cb8839052039064f19c1cc12af28868001b61853a74b7e6fc",
+    "size": 13887433,
+    "url": "https://f-droid.org/repo/io.github.probably_oxy.drift_1_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 1,
+  "version_name": "0.1.0"
+}

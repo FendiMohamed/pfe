@@ -1,0 +1,63 @@
+{
+  "apk": {
+    "expected_sha256": "aea035d36c59cb7c88ad88a42f507054125cd18b97b06e5ce0b4b82ecf771824",
+    "index_size": 8416003,
+    "path": "data/test_apks/real/runnerup/runnerup.apk",
+    "sha256": "aea035d36c59cb7c88ad88a42f507054125cd18b97b06e5ce0b4b82ecf771824",
+    "size": 8416003,
+    "url": "https://f-droid.org/repo/org.runnerup.free_23000372.apk"
+  },
+  "app": "RunnerUp",
+  "categories": [
+    "Sports & Health",
+    "Workout"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "sports-health",
+    "workout",
+    "gps-tracker",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/org.runnerup.free/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "org.runnerup.free",
+  "proof_status": "report-generated",
+  "reason": "No-native workout/GPS tracker with target SDK 36, a medium APK, and a manageable source tarball; selected for a sports-health row with likely AndroidX/location/audio dependency evidence.",
+  "report": {
+    "detected_component_count": 39,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v15/report-real-runnerup",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v15/report-real-runnerup/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v15/report-real-runnerup/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v15/report-real-runnerup/sbom.cdx.json",
+    "sbom_component_count": 39,
+    "status": "ok"
+  },
+  "slug": "runnerup",
+  "source_repo": "https://github.com/jonasoreland/runnerup",
+  "source_tarball": {
+    "sha256": "002578b97204b8a7c5ea96d706700029f02fb8cbc5b5251f4d15a687e5313dea",
+    "size": 3296207,
+    "url": "https://f-droid.org/repo/org.runnerup.free_23000372_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 23000372,
+  "version_name": "2.11.0.1"
+}

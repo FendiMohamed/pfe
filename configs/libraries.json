@@ -3,12 +3,42 @@
     {
       "group": "com.squareup.okhttp3",
       "artifact": "okhttp",
-      "versions": ["4.8.0", "4.9.0", "4.9.1", "4.10.0"]
+      "versions": ["4.8.0", "4.9.0", "4.9.1", "4.10.0", "4.12.0"]
     },
     {
       "group": "com.squareup.okio",
       "artifact": "okio",
-      "versions": ["2.8.0", "2.9.0", "3.0.0"]
+      "versions": ["2.8.0", "2.9.0"]
+    },
+    {
+      "group": "com.squareup.okio",
+      "artifact": "okio-jvm",
+      "versions": ["3.0.0", "3.6.0", "3.7.0"]
+    },
+    {
+      "group": "io.ktor",
+      "artifact": "ktor-client-core-jvm",
+      "versions": ["2.3.12"]
+    },
+    {
+      "group": "io.ktor",
+      "artifact": "ktor-client-okhttp-jvm",
+      "versions": ["2.3.12"]
+    },
+    {
+      "group": "io.ktor",
+      "artifact": "ktor-http-jvm",
+      "versions": ["2.3.12"]
+    },
+    {
+      "group": "io.ktor",
+      "artifact": "ktor-io-jvm",
+      "versions": ["2.3.12"]
+    },
+    {
+      "group": "io.ktor",
+      "artifact": "ktor-utils-jvm",
+      "versions": ["2.3.12"]
     },
     {
       "group": "com.squareup.retrofit2",
@@ -32,4 +62,3 @@
     }
   ]
 }
-

@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "added": 1449360000000,
+    "categories": [
+      "Reading",
+      "Science & Education",
+      "Translation & Dictionary"
+    ],
+    "changelog": "https://github.com/rdoeffinger/Dictionary/releases",
+    "description": {
+      "en-US": "Resurrection of https://f-droid.org/packages/com.hughes.android.dictionary to a new maintainer. Uses data\nfrom Wiktionary and Beolingus to generate dictionary files that can be used\noffline. These can be downloaded from within the app. These can also be\ngenerated automatically, though documentation for the process is currently\nmissing."
+    },
+    "issueTracker": "https://github.com/rdoeffinger/Dictionary/issues",
+    "lastUpdated": 1762890762000,
+    "license": "Apache-2.0",
+    "name": {
+      "en-US": "QuickDic"
+    },
+    "preferredSigner": "c4c86d3351bded455480dc8e878f8cc282410ddd569164a8f6663d71a29de335",
+    "sourceCode": "https://github.com/rdoeffinger/Dictionary",
+    "summary": {
+      "ar": "\u0642\u0627\u0645\u0648\u0633 \u0627\u0644\u062a\u0631\u062c\u0645\u0629 \u062f\u0648\u0646 \u0627\u062a\u0635\u0627\u0644",
+      "ba": "\u041e\u0444\u043b\u0430\u0439\u043d \u0442\u04d9\u0440\u0436\u0435\u043c\u04d9 \u04bb\u04af\u0499\u043b\u0435\u0433\u0435",
+      "ca": "Diccionari de traducci\u00f3 fora de l\u00ednia",
+      "cs": "Offline p\u0159ekladov\u00fd slovn\u00edk",
+      "de": "Offline-\u00dcbersetzungsw\u00f6rterbuch",
+      "en-US": "Offline translation dictionary",
+      "es": "Diccionario de traducci\u00f3n sin conexi\u00f3n",
+      "fr": "Dictionnaire de traductions hors-ligne",
+      "ga": "Focl\u00f3ir aistri\u00fach\u00e1in as l\u00edne",
+      "he": "\u05de\u05d9\u05dc\u05d5\u05df \u05ea\u05e8\u05d2\u05d5\u05dd \u05d1\u05dc\u05ea\u05d9 \u05de\u05e7\u05d5\u05d5\u05df",
+      "hr": "Offline rje\u010dnik prijevoda",
+      "id": "Kamus terjemahan luring",
+      "it": "Dizionario di traduzione offline",
+      "ja": "\u30aa\u30d5\u30e9\u30a4\u30f3\u7ffb\u8a33\u8f9e\u66f8",
+      "nb": "Frakoblet oversettelsesordbok",
+      "pl": "S\u0142ownik t\u0142umacze\u0144 offline",
+      "pt": "Dicion\u00e1rio de tradu\u00e7\u00e3o offline",
+      "pt-BR": "Dicion\u00e1rio de tradu\u00e7\u00e3o offline",
+      "pt-PT": "Dicion\u00e1rio de tradu\u00e7\u00e3o offline",
+      "ro": "Dic\u021bionar de traducere offline",
+      "ru": "\u041e\u0444\u0444\u043b\u0430\u0439\u043d \u0441\u043b\u043e\u0432\u0430\u0440\u044c \u043f\u0435\u0440\u0435\u0432\u043e\u0434\u0430",
+      "sq": "Fjalor p\u00ebrkthimi pa internet",
+      "sr": "\u041e\u0444\u043b\u0430\u0458\u043d \u0440\u0435\u0447\u043d\u0438\u043a \u0437\u0430 \u043f\u0440\u0435\u0432\u043e\u0452\u0435\u045a\u0435",
+      "sw": "Kamusi ya utafsiri ya nje ya mtandaoni",
+      "ta": "\u0b87\u0ba3\u0bc8\u0baa\u0bcd\u0baa\u0bbf\u0bb2\u0bcd\u0bb2\u0bbe\u0ba4 \u0bae\u0bca\u0bb4\u0bbf\u0baa\u0bc6\u0baf\u0bb0\u0bcd\u0baa\u0bcd\u0baa\u0bc1 \u0b85\u0b95\u0bb0\u0bbe\u0ba4\u0bbf",
+      "tr": "\u00c7evrimd\u0131\u015f\u0131 \u00e7eviri s\u00f6zl\u00fc\u011f\u00fc",
+      "uk": "\u0421\u043b\u043e\u0432\u043d\u0438\u043a \u043e\u0444\u043b\u0430\u0439\u043d-\u043f\u0435\u0440\u0435\u043a\u043b\u0430\u0434\u0443",
+      "zh-CN": "\u79bb\u7ebf\u7ffb\u8bd1\u8bcd\u5178",
+      "zh-TW": "\u96e2\u7dda\u7ffb\u8b6f\u8a5e\u5178"
+    }
+  },
+  "version": {
+    "added": 1762890762000,
+    "file": {
+      "ipfsCIDv1": "bafybeib24q6awpoiwmwgh7xbeiqpcps22ycc2ez7fbu2uf3rje4bml2eaq",
+      "name": "/de.reimardoeffinger.quickdic_131.apk",
+      "sha256": "aacd874ce21065064b382fdb22b67b1b4420b20db01406bd830e29ef2585a15a",
+      "size": 13972230
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "c4c86d3351bded455480dc8e878f8cc282410ddd569164a8f6663d71a29de335"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "de.reimardoeffinger.quickdic.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 131,
+      "versionName": "5.8.2"
+    },
+    "src": {
+      "name": "/de.reimardoeffinger.quickdic_131_src.tar.gz",
+      "sha256": "2b629d65320c5a6c8170947bb980234743260dd082a71d5ab9fb8d409f4c0561",
+      "size": 6752090
+    }
+  }
+}

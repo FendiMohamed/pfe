@@ -1,0 +1,234 @@
+{
+  "metadata": {
+    "added": 1647648000000,
+    "authorName": "Team LibreTube",
+    "categories": [
+      "Internet",
+      "Multimedia",
+      "Online Media Player"
+    ],
+    "changelog": "https://github.com/libre-tube/LibreTube/releases",
+    "description": {
+      "en-US": "<i>LibreTube</i> is an alternative frontend for YouTube, focusing on user privacy and better watching experience. It doesn't require any YouTube account or Google Services installed on your device.\n<br />\nIn comparison to YouTube, LibreTube has some additional features like SponsorBlock, DeArrow, Subscription Groups, Playlist bookmarks, and many more. Apart from that, you can subscribe to channels and create private playlists just as you're used to from YouTube.\n<br />\nLibreTube optionally allows you to use <a href='https://github.com/TeamPiped/Piped' target='_blank' rel='nofollow'>Piped</a> to load data and play videos for better privacy as well as syncing your subscriptions and playlists between different devices.\n"
+    },
+    "donate": [
+      "https://github.com/sponsors/Bnyro"
+    ],
+    "icon": {
+      "en-US": {
+        "name": "/com.github.libretube/en-US/icon_p6_cfoYk-2IlerJpH4rKIQmkI76zXtS3R9-RZp-3Ggk=.png",
+        "sha256": "a7afdc7e8624fb62257ab2691f8aca2109a423beb35ed4b747df91669fb71a09",
+        "size": 11915
+      }
+    },
+    "issueTracker": "https://github.com/libre-tube/LibreTube/issues",
+    "lastUpdated": 1780094298321,
+    "liberapay": "Bnyro",
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "en-US": "LibreTube"
+    },
+    "preferredSigner": "a86631e8cc555838e8dfc29019fb0f7dac333ef1cda1139c424d1a08d68a030b",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/Screenshot_1.jpg",
+            "sha256": "405237e0cf8b698f4a90bbf45461c07c90601eedf8ead3b825df76b992ba8081",
+            "size": 278191
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/Screenshot_1.png",
+            "sha256": "fa03217a7994ac693dde6c4101f9fb06456d9adff4ed8108c71334b698b539f9",
+            "size": 2163592
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/Screenshot_10.jpg",
+            "sha256": "f677daaa6d11e976814279951982f9bee3afbda0a22da5d3479958543a42c78e",
+            "size": 103221
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/Screenshot_11.jpg",
+            "sha256": "6495ba2d8ce18202e8181068d4cb7b0a053073fc455401a1e5a4bf3a4c49d227",
+            "size": 120366
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/Screenshot_12.jpg",
+            "sha256": "c816ef2cfd0b63a4d49f6d674c404e7fc128d158ad12c708fa32a99fcdbcec72",
+            "size": 177803
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/Screenshot_2.jpg",
+            "sha256": "812a92598fcb7598826cab860d876f5a8610e624dfcbd8b5bd1c742e21ffa784",
+            "size": 192270
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/Screenshot_2.png",
+            "sha256": "3e3d95c50ecdb0acf6b6852cb357157cc027ca5bd05fa241d1f8b71dd47898b7",
+            "size": 1655890
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/Screenshot_3.jpg",
+            "sha256": "f19259121d0800698d2754d282a97b9d1ecd2cd03fde48ec8505743648f2d891",
+            "size": 293011
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/Screenshot_3.png",
+            "sha256": "041f95a0c4fe689bcdc878e1d392a3f6efcd6324b91342b47ff9fc2da0aa4e7e",
+            "size": 2448762
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/Screenshot_4.jpg",
+            "sha256": "8deba879bc71e6d6a705bb0197bbd96cae18ae33edb2be897b6744b74e05ed91",
+            "size": 158828
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/Screenshot_4.png",
+            "sha256": "6e52996751fa8e5481c29a00e038df0774d61c9d9694dd001eae09f35563cefd",
+            "size": 557520
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/Screenshot_5.jpg",
+            "sha256": "45567ec19c7a8f14bc428f5446140dded7dc34681f4a81fac34165eabde718eb",
+            "size": 322948
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/Screenshot_6.jpg",
+            "sha256": "d773087ff1bfa54c2be857c46b5e76e5344cd5cd2e3dbc58b567f3e2e9c0e2de",
+            "size": 254459
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/Screenshot_7.jpg",
+            "sha256": "8e6ed30f2d138cead5e0eecbd48ddc885b5833efb1696aced60a43beb1b3df4d",
+            "size": 253517
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/Screenshot_8.jpg",
+            "sha256": "582ed9cd9af27c49d735ae0e01dc9d928b34df35f19d893f7ef30c2df1e718aa",
+            "size": 322217
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/Screenshot_9.jpg",
+            "sha256": "70c7d569a2bbfc3518a87077d4553963e936b536f5650b74aa7e25fe2c2efe62",
+            "size": 324102
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/shot_1.png",
+            "sha256": "291ec40209f8a42b02d35c7d48353e30822b59484f01774df2bac8db32c77909",
+            "size": 892947
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/shot_2.png",
+            "sha256": "ef117af0a4cdfec750b58a0e71bffcfa16e4f581f9c64ce52e38506569a4a770",
+            "size": 705478
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/shot_3.png",
+            "sha256": "bd990e5225fe5926db0dff4692988b9004a76843c9eec1eae44231138d902605",
+            "size": 594996
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/shot_4.png",
+            "sha256": "91151b478e2eb12ba473c0c7e4bfafc6ce5eb896e189829118ff0bbcc658aa40",
+            "size": 969701
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/shot_5.png",
+            "sha256": "5c3143416ccd6e518b16962db49eba603f9cc7c6658f998594d68257a51fecf4",
+            "size": 1000393
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/shot_6.png",
+            "sha256": "f6f9d94899d44e16fc435cd914b07fa027955f8d016f1b4cae558805247e3bb6",
+            "size": 1131352
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/shot_7.png",
+            "sha256": "276f19be8f1f4d438225570f9b539e2514384790f1ba739adeb0e2295c2fd60d",
+            "size": 914210
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/shot_8.png",
+            "sha256": "4346eb777ee037078d0a147e870b314b3473662d81287ed4a98e48b9da22db02",
+            "size": 267100
+          },
+          {
+            "name": "/com.github.libretube/en-US/phoneScreenshots/shot_9.png",
+            "sha256": "679367cbd37b6ffad3734a388ec33c2c92071aa3b9c4d1da692b7dc81fa1a630",
+            "size": 141777
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/libre-tube/LibreTube",
+    "summary": {
+      "en-US": "Alternative frontend for YouTube with focus on privacy"
+    },
+    "translation": "https://hosted.weblate.org/projects/libretube/libretube/",
+    "webSite": "https://libre-tube.github.io"
+  },
+  "version": {
+    "added": 1780094298321,
+    "antiFeatures": {
+      "NonFreeNet": {
+        "en-US": "Depends on Youtube."
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeiduwknu4f5urbqt5tas7vs6au2odmxlbefml55niagwj7njdohd7u",
+      "name": "/com.github.libretube_70.apk",
+      "sha256": "80878a8fc2aa22ec9383f5176b0f5376116d04911bb72cbf606c0d8ee2a4c947",
+      "size": 9187236
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "a86631e8cc555838e8dfc29019fb0f7dac333ef1cda1139c424d1a08d68a030b"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "com.github.libretube.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 70,
+      "versionName": "31.4"
+    },
+    "src": {
+      "name": "/com.github.libretube_70_src.tar.gz",
+      "sha256": "0aba089518c3ce4f174a99eb9c9bfa31c2c904f4e20ad5a19fabe15c1f6c5d69",
+      "size": 7218772
+    },
+    "whatsNew": {
+      "en-US": "Fixed issues with video playback and channel pages due to recent YouTube API changes.\n"
+    }
+  }
+}

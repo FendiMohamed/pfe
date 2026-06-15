@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "added": 1779632797957,
+    "authorName": "oxy",
+    "categories": [
+      "Multimedia"
+    ],
+    "description": {
+      "en-US": "Drift is an ambient soundscape mixer. Layer nature recordings and synthesised drones at independent volumes, mix freely across two categories, and let the sleep timer fade things out when you're done. Everything runs offline.\n\nSound categories:\n\n* Planetside \u2014 rain, fire, water, wind, birds, crickets, and other nature sounds.\n* Deep Space \u2014 synthesised drones and recorded engine and hull textures.\n\nFeatures:\n\n* Mix any number of sound layers at independent volumes\n* Built-in presets for quick atmospheres\n* Sleep timer with 15, 30, 60, and 90 minute options\n* Background playback with lock-screen media controls\n* Fully offline \u2014 no network access required after install\n* No ads, no tracking, no account\n\nDrift is free and open source software under the MIT licence. Field recordings are under Creative Commons (CC0 and CC BY). Full attribution is available in the Credits menu and in the project repository.\n"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/io.github.probably_oxy.drift/en-US/phoneScreenshots/icon_T72BPaFL0b5FDc3iHMdrad0SBEjsovFHPrs-CO-uB2s=.png",
+        "sha256": "4fbd813da14bd1be450dcde21cc76b69dd120448eca2f1473ebb3e08efae076b",
+        "size": 37475
+      },
+      "phoneScreenshots": {
+        "name": "/io.github.probably_oxy.drift/phoneScreenshots/icon_T72BPaFL0b5FDc3iHMdrad0SBEjsovFHPrs-CO-uB2s=.png",
+        "sha256": "4fbd813da14bd1be450dcde21cc76b69dd120448eca2f1473ebb3e08efae076b",
+        "size": 37475
+      }
+    },
+    "issueTracker": "https://github.com/probably-oxy/drift-audio/issues",
+    "lastUpdated": 1779632797957,
+    "license": "MIT",
+    "name": {
+      "en-US": "Drift // Audio"
+    },
+    "preferredSigner": "02bceaa3c1dad2e54d4141d97cf695ae518b8b4525183c30f6a42fca3ae1da81",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/io.github.probably_oxy.drift/en-US/phoneScreenshots/1.png",
+            "sha256": "34f8e6cd1965e3b57d9edf80a45e7eb57750aa4bfe3a709cfc789fc176021a1a",
+            "size": 126430
+          },
+          {
+            "name": "/io.github.probably_oxy.drift/en-US/phoneScreenshots/2.png",
+            "sha256": "8c685709278b3bb224d09b321b53f806e8a4adc16eea9d0bc891d176dd2aabed",
+            "size": 131218
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/probably-oxy/drift-audio",
+    "summary": {
+      "en-US": "Ambient sound mixer for sleep and focus on long nights and long flights"
+    }
+  },
+  "version": {
+    "added": 1779632797957,
+    "file": {
+      "ipfsCIDv1": "bafybeidvcrnpgk4nqdemivfrbrvx7dnib4vvyn646wc5usx5jbx7llym3y",
+      "name": "/io.github.probably_oxy.drift_1.apk",
+      "sha256": "a725bc0d4f6b919013a30c2aa148236cd0bc7cbee6d278c159fded3acdc104fd",
+      "size": 10943067
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "02bceaa3c1dad2e54d4141d97cf695ae518b8b4525183c30f6a42fca3ae1da81"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "io.github.probably_oxy.drift.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 24,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 1,
+      "versionName": "0.1.0"
+    },
+    "src": {
+      "name": "/io.github.probably_oxy.drift_1_src.tar.gz",
+      "sha256": "84707b60aa97854cb8839052039064f19c1cc12af28868001b61853a74b7e6fc",
+      "size": 13887433
+    },
+    "whatsNew": {
+      "en-US": "First public release.\n"
+    }
+  }
+}

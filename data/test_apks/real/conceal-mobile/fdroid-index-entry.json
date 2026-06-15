@@ -1,0 +1,123 @@
+{
+  "metadata": {
+    "added": 1758365619000,
+    "authorEmail": "acktarius@protonmail.com",
+    "authorName": "acktarius (Conceal Network Developer)",
+    "categories": [
+      "Internet",
+      "Money",
+      "Wallet"
+    ],
+    "changelog": "https://github.com/ConcealNetwork/conceal-wallet-cordova/releases",
+    "description": {
+      "en-US": "Conceal Mobile is the official mobile wallet for the Conceal Network blockchain, providing a secure and private way to manage your CCX cryptocurrency.\n\nFEATURES:\n\u2022 Create and manage Conceal wallet with industry-standard encryption\n\u2022 Send and receive CCX transactions with real-time network confirmation\n\u2022 QR code scanning for quick and easy import\n\u2022 Secure wallet encryption with military-grade algorithms\n\u2022 Complete transaction history with detailed information\n\u2022 Real-time network status monitoring and synchronization\n\u2022 Privacy-focused design that respects your anonymity\n\u2022 Encrypted messaging system for secure communications\n\u2022 Deposit and withdraw (Conceal Earn) in direct interaction with the blockchain\n\u2022 Multi-language support for global accessibility\n\nSECURITY & PRIVACY:\n- Secure key generation and storage\n- No personal data collection or tracking\n- Open source code that's auditable and transparent\n- Regular security updates and patches\n- Cold storage support for maximum security\n\nCONCEAL NETWORK:\nConceal Network is a privacy-focused blockchain platform that provides secure, private, and decentralized financial services. Built on advanced cryptography, it ensures your transactions remain confidential while maintaining full transparency of the blockchain itself.\n\nWHY CHOOSE CONCEAL MOBILE:\n\u2022 Official wallet with direct network integration\n\u2022 User-friendly interface designed for both beginners and experts\n\u2022 Regular updates with new features and improvements\n\u2022 Active community support and development\n\u2022 Cross-platform compatibility\n\u2022 Lightweight and fast performance\n\nDownload Conceal Mobile today and experience the future of private, decentralized finance. Join thousands of users who trust Conceal Network for their cryptocurrency needs.\n\nFor support and updates, visit: https://conceal.network\n"
+    },
+    "donate": [
+      "https://wallet.conceal.network/#!donate"
+    ],
+    "icon": {
+      "en-US": {
+        "name": "/com.concealnetwork.concealmobile/en-US/icon_vVour-R3mTseBOKTrAmDSd9iK5Mao2XoSe8NhwxOPKY=.png",
+        "sha256": "bd5a2eafe477993b1e04e293ac098349df622b931aa365e849ef0d870c4e3ca6",
+        "size": 49287
+      }
+    },
+    "issueTracker": "https://github.com/ConcealNetwork/conceal-wallet-cordova/issues",
+    "lastUpdated": 1760259395000,
+    "license": "BSD-3-Clause",
+    "name": {
+      "en-US": "Conceal Mobile"
+    },
+    "preferredSigner": "7282c0675240b2b5716def5bffd5cdb6955401b02871e4a1f40458aadde2ca56",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.concealnetwork.concealmobile/en-US/phoneScreenshots/1.png",
+            "sha256": "c8e3da70842dc897b99582ed9a24a8b927b3a2dde805c8aca35e64ddae110d3c",
+            "size": 456550
+          },
+          {
+            "name": "/com.concealnetwork.concealmobile/en-US/phoneScreenshots/2.png",
+            "sha256": "908ab4386fa8e211e901b3a661acb70f945b6285b47a883b4bb5f374b9de203b",
+            "size": 309409
+          },
+          {
+            "name": "/com.concealnetwork.concealmobile/en-US/phoneScreenshots/3.png",
+            "sha256": "20046b19471dd8dccbb203db04c080ae8ae9b8e5d5eb44c916033b9676ced860",
+            "size": 501942
+          },
+          {
+            "name": "/com.concealnetwork.concealmobile/en-US/phoneScreenshots/4.png",
+            "sha256": "f7879d954875e9351f27087401ebec14a2d88ece2786d4990879922463c0112f",
+            "size": 344000
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/ConcealNetwork/conceal-wallet-cordova",
+    "summary": {
+      "en-US": "Secure mobile client for the Conceal Network web wallet."
+    },
+    "webSite": "https://conceal.network"
+  },
+  "version": {
+    "added": 1760259395000,
+    "antiFeatures": {
+      "TetheredNet": {
+        "en-US": "Relies on conceal.network proprietary servers for initial wallet creation and fallback; interoperable with open-source community nodes, offering transparency once setup is complete."
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeiaoih6seagbevds6oa5lqoo62h7h742kg25uogpjagnsfgxjjesoi",
+      "name": "/com.concealnetwork.concealmobile_50.apk",
+      "sha256": "4e66ea01310b5a57f885d52a57b1a99bcd1a6602ea467edf7f03177b54b25626",
+      "size": 8472992
+    },
+    "manifest": {
+      "maxSdkVersion": 35,
+      "signer": {
+        "sha256": [
+          "7282c0675240b2b5716def5bffd5cdb6955401b02871e4a1f40458aadde2ca56"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.READ_CLIPBOARD"
+        },
+        {
+          "name": "android.permission.WRITE_CLIPBOARD"
+        },
+        {
+          "name": "android.permission.CAMERA"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "com.concealnetwork.concealmobile.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 22,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 50,
+      "versionName": "5.0.4"
+    },
+    "src": {
+      "name": "/com.concealnetwork.concealmobile_50_src.tar.gz",
+      "sha256": "69290f590532e5b7f27ab41b2ad0c70e268bb930821d3556acb71f80ca8bf537",
+      "size": 13956932
+    },
+    "whatsNew": {
+      "en-US": "- Fix transaction sent without message\n- rephrase Import page\n- Improve initialization sequence when generating wallet"
+    }
+  }
+}

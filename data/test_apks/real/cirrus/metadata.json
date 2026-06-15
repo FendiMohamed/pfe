@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "b75aa6d349c24988ebfbfab482f55358308aeee37ead822f927f0710d448b778",
+    "index_size": 11421115,
+    "path": "data/test_apks/real/cirrus/cirrus.apk",
+    "sha256": "b75aa6d349c24988ebfbfab482f55358308aeee37ead822f927f0710d448b778",
+    "size": 11421115,
+    "url": "https://f-droid.org/repo/org.woheller69.omweather_47.apk"
+  },
+  "app": "Cirrus",
+  "categories": [
+    "Internet",
+    "Weather"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "weather",
+    "internet",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/org.woheller69.omweather/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "org.woheller69.omweather",
+  "proof_status": "report-generated",
+  "reason": "No-native weather app with source tarball metadata; adds a compact internet/weather family to the clean-candidate search.",
+  "report": {
+    "detected_component_count": 19,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v5/report-real-cirrus",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v5/report-real-cirrus/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v5/report-real-cirrus/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v5/report-real-cirrus/sbom.cdx.json",
+    "sbom_component_count": 19,
+    "status": "ok"
+  },
+  "slug": "cirrus",
+  "source_repo": "https://github.com/woheller69/omweather",
+  "source_tarball": {
+    "sha256": "8ee4b3b98ecd208c1899dbf840b350c5122cfc7f89bba52506c2ad494d778b95",
+    "size": 5946864,
+    "url": "https://f-droid.org/repo/org.woheller69.omweather_47_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 47,
+  "version_name": "4.7"
+}

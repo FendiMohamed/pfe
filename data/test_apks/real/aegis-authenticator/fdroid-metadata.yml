@@ -1,0 +1,335 @@
+Categories:
+  - Password & 2FA
+  - Security
+License: GPL-3.0-only
+AuthorName: Beem Development
+AuthorEmail: beemdevelopment@gmail.com
+WebSite: https://getaegis.app
+SourceCode: https://github.com/beemdevelopment/Aegis
+IssueTracker: https://github.com/beemdevelopment/Aegis/issues
+Translation: https://crowdin.com/project/aegis-authenticator
+Changelog: https://github.com/beemdevelopment/Aegis/releases
+Donate: https://www.buymeacoffee.com/beemdevelopment
+
+AutoName: Aegis
+
+RepoType: git
+Repo: https://github.com/beemdevelopment/Aegis.git
+
+Builds:
+  - versionName: '0.2'
+    versionCode: 3
+    commit: v0.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.2
+    versionCode: 5
+    commit: v0.2.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.3'
+    versionCode: 6
+    commit: v0.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.2
+    versionCode: 8
+    commit: v0.3.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.3
+    versionCode: 9
+    commit: v0.3.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.4'
+    versionCode: 10
+    commit: v0.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.4.1
+    versionCode: 11
+    commit: v0.4.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.4.2
+    versionCode: 12
+    commit: v0.4.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.4.3
+    versionCode: 14
+    commit: v0.4.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.0'
+    versionCode: 19
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.2
+    versionCode: 21
+    commit: v1.0.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.3
+    versionCode: 22
+    commit: v1.0.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 24
+    commit: v1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 25
+    commit: v1.1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 26
+    commit: v1.1.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.4
+    versionCode: 28
+    commit: v1.1.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 35
+    commit: v1.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 36
+    commit: v1.2.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 39
+    commit: v1.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 43
+    commit: v1.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.1
+    versionCode: 44
+    commit: v1.4.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 45
+    commit: v1.4.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 48
+    commit: v2.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.1
+    versionCode: 49
+    commit: eb22101b0227fb8033a32c4567adc86ecbcb36fc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.2
+    versionCode: 50
+    commit: 80960e23fc9351fc2d775801158157c969fd947a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.3
+    versionCode: 51
+    commit: 32ee0915a74ac5dc43cebee333c6d614a050f7e4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1-beta2
+    versionCode: 53
+    commit: b2a98d979975e0746350a2b42bc153cb9219402d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.1'
+    versionCode: 55
+    commit: 506d9efab39f6a5218c789efd29ddba6d18ee920
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.1
+    versionCode: 56
+    commit: 780a215a6bdaa8997146ab44ff2868c7466b1d7e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.2
+    versionCode: 57
+    commit: cad2ecfe1b6db90c6e46bab15f47c69df3c22f4f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.3
+    versionCode: 58
+    commit: f0f9653acee3233b8422f6d0f345b3adb396268d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.2
+    versionCode: 62
+    commit: dd9c307deacfe75c968ecb14221cb72fcf121b63
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 64
+    commit: f9f37d30b2f38440e8b9968bf1623522824241bc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.1
+    versionCode: 65
+    commit: f44fe389d7916042788ccf4b64d72a936a4961a8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.1'
+    versionCode: 67
+    commit: 29ebe31f8a525fc20b2667ddc05cb9703e139478
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.1
+    versionCode: 70
+    commit: 8960ffffb4251fbb1b202a6bb210e21c2a5a4234
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.2'
+    versionCode: 71
+    commit: 0046e8827ed80b5cfb79afa3f24115e2f972946a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.3.1
+    versionCode: 74
+    commit: 337cb74f72122550f3214dcdf050d26cb79e6551
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.3.2
+    versionCode: 75
+    commit: 0eb11945782f3cdf876978188ed25644c3e68c20
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.3.3
+    versionCode: 76
+    commit: 81a26ccad82ba727b1d663e853d6cd40b026768c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.3.4
+    versionCode: 77
+    commit: 9ab949a59e75079897b80c89cf388b8e4993b5b8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.4'
+    versionCode: 79
+    commit: 36bd8f945abf3d7dc584efb999c2936d0daec078
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.4.1
+    versionCode: 80
+    commit: 491a81584dd184d9f21b283ccd2ced5c6e3ef0c0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.4.2
+    versionCode: 81
+    commit: 59d5c640d6a2d0d16f243dbdd735758eed65bc63
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^((?!alpha|beta).)*$
+CurrentVersion: 3.4.2
+CurrentVersionCode: 81

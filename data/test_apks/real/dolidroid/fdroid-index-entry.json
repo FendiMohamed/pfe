@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "added": 1482278400000,
+    "categories": [
+      "Internet"
+    ],
+    "changelog": "https://github.com/DoliCloud/dolidroid/blob/develop/ChangeLog",
+    "description": {
+      "en-US": "This application is not a standalone program. It is a front end client to use\nyour online hosted instance of Dolibarr ERP & CRM software (Open-source web\nsoftware to manage your business). The advantages of DoliDroid are:\n\n* DoliDroid is not a duplicated code of Dolibarr for Android, but rewamps your Dolibarr web installation, so all your online existing features are supported by this application. This is also true for external modules features.\n* Upgrading Dolibarr will not break DoliDroid.\n* DoliDroid use embedded image resources of your version, when available, to reduce bandwidth usage.\n* DoliDroid use internal cache for pages that should not change during session (like menu page)\n* Connections parameters (login/password) are saved. No need to enter them each time you use DoliDroid.\n* Integration with your phone or other applications is better (Clicking on a PDF opens the PDF reader, clicking onto email or phone launch your email application or launch Android dialer, ...)\n* A lot of other enhancement make usability of your Dolibarr from a smartphone better like:\n* Save spaces of the menus bars by replacing the menu with a button always visible to choose your meny entry more friendly.\n* Provide a button, always available, to make a quick search on any item.\n* All visible dates use year on 2 chars instead of 4 to save you space.\n* When the popup calendar is opened, the keyword is no more opened if not required, like it is on a common browser (Dolibarr v7 required).\n* Components that provide help information on mouse hover are hidden to save space (they are useless without a mouse).\n* A lot of other not useful information are hidden.\n\nNote: If you don't have your own online Dolibarr ERP CRM instances, you can get one on https://www.dolicloud.com/\n"
+    },
+    "donate": [
+      "https://github.com/sponsors/eldy"
+    ],
+    "icon": {
+      "en-US": {
+        "name": "/com.nltechno.dolidroidpro/en-US/icon_8rxGCyPOaMGMN55KOXtgxh6rIQ-egdJf_NnqDwANzdY=.png",
+        "sha256": "f2bc460b23ce68c18c379e4a397b60c61eab210f9e81d25ffcd9ea0f000dcdd6",
+        "size": 18890
+      }
+    },
+    "issueTracker": "https://github.com/DoliCloud/dolidroid/issues",
+    "lastUpdated": 1771138709000,
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-US": "DoliDroid"
+    },
+    "preferredSigner": "ebd3c7ae4270b19dc0a9bcf013dc288ceeea953602a35515f177ec4b4dd6878b",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.nltechno.dolidroidpro/en-US/phoneScreenshots/m1.png",
+            "sha256": "f7b0e7d7dd018634df97d3a63e5230cb19209a0411930591df4764a4bdff57e3",
+            "size": 92203
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/DoliCloud/dolidroid",
+    "summary": {
+      "en-US": "Front-end application to use any Dolibarr ERP CRM instances"
+    },
+    "translation": "https://www.transifex.com/dolibarr-association/dolidroid/",
+    "video": {
+      "en-US": "https://youtu.be/hJSXQj_KeE0?si=1RglCs8QF3MXY5O2"
+    },
+    "webSite": "https://wiki.dolibarr.org/index.php/Application_Android_-_DoliDroid"
+  },
+  "version": {
+    "added": 1771138709000,
+    "file": {
+      "ipfsCIDv1": "bafybeictyuyrcrhkwaaupijegyawvgxlyxouka5na2x4qomroyaoqvfphu",
+      "name": "/com.nltechno.dolidroidpro_69.apk",
+      "sha256": "48078a09b0c10e39cde5bfe373b056d8f7da80d3967b80fe49ec33832b1e1517",
+      "size": 11497897
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "ebd3c7ae4270b19dc0a9bcf013dc288ceeea953602a35515f177ec4b4dd6878b"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.USE_BIOMETRIC"
+        },
+        {
+          "name": "android.permission.USE_FINGERPRINT"
+        },
+        {
+          "name": "com.nltechno.dolidroidpro.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 69,
+      "versionName": "3.0.69"
+    },
+    "src": {
+      "name": "/com.nltechno.dolidroidpro_69_src.tar.gz",
+      "sha256": "c5e49561b0b19acc966d26b8590bb18ba870be5601dad220967ba563be1c0c74",
+      "size": 43004026
+    }
+  }
+}

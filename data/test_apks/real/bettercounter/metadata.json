@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "a48916f7a52913c189f84e38bca5c058d7a83b3e133cae7af03f581e72889feb",
+    "index_size": 2732198,
+    "path": "data/test_apks/real/bettercounter/bettercounter.apk",
+    "sha256": "a48916f7a52913c189f84e38bca5c058d7a83b3e133cae7af03f581e72889feb",
+    "size": 2732198,
+    "url": "https://f-droid.org/repo/org.kde.bettercounter_60003.apk"
+  },
+  "app": "BetterCounter",
+  "categories": [
+    "Habit Tracker",
+    "Sports & Health",
+    "Time"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "kde-utility",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/org.kde.bettercounter/",
+  "license": "GPL-2.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "org.kde.bettercounter",
+  "proof_status": "report-generated",
+  "reason": "Recent no-native KDE utility app; useful as a compact modern clean candidate if Maven evidence is non-sparse.",
+  "report": {
+    "detected_component_count": 7,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v2/report-real-bettercounter",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v2/report-real-bettercounter/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v2/report-real-bettercounter/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v2/report-real-bettercounter/sbom.cdx.json",
+    "sbom_component_count": 7,
+    "status": "ok"
+  },
+  "slug": "bettercounter",
+  "source_repo": "https://github.com/albertvaka/bettercounter",
+  "source_tarball": {
+    "sha256": "f722e18ba4f83b53f58375f1bad7d0763ea8d840f5ae2d1f33b0cf9eb6b5cf5e",
+    "size": 807451,
+    "url": "https://f-droid.org/repo/org.kde.bettercounter_60003_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 60003,
+  "version_name": "6.0.3"
+}

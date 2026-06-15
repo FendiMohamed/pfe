@@ -1,0 +1,47 @@
+{
+  "title": "Reliable Third-Party Library Detection in Android and its Security Applications",
+  "authors": ["Michael Backes", "Sven Bugiel", "Erik Derr"],
+  "year": 2016,
+  "venue": "ACM Conference on Computer and Communications Security (CCS)",
+  "tool_name": "LibScout",
+  "category": "similarity-based",
+  "detection_method": "3-layer Merkle tree profiles (Package → Class → Method) with fuzzy descriptors that replace custom types with 'X' placeholders; CHA for hierarchy analysis; similarity score 0-1 for partial matches",
+  "module_decoupling": "Package-structure-based — libraries are identified by matching pre-built profiles against package subtrees in decompiled DEX",
+  "features_used": [
+    "Method signatures with fuzzy type descriptors",
+    "Class hierarchy via CHA",
+    "Package-level containment structure",
+    "Merkle tree of (Package, Class, Method) layers"
+  ],
+  "matching_algorithm": "Profile-based matching using Merkle tree hashing across 3 layers; each layer propagates upward via hash composition; similarity score calculated for partial matches when exact hashes differ",
+  "obfuscation_handling": "100% resilient to identifier renaming via fuzzy descriptors (custom types replaced with 'X' placeholder); no protection against package flattening (−75% F1), control-flow randomization, or method inlining",
+  "r8_resilience": "Version F1 drops to 12.7% on adjacent versions under R8 shrinkage+optimization (Group-1 version F1 64%)",
+  "lib_level_f1": "~83% on 96,995 packages from 3,590 apps",
+  "version_level_f1": "97.4% precision at version level; Group-1 version F1 64%, drops to 12.7% under R8",
+  "class_level_f1": "Not reported",
+  "precision": "97.4% at version level",
+  "recall": "Not explicitly reported (library-level recall embedded in F1 of ~83%)",
+  "speed": "82s per app profile generation; 2.8s per library for profile generation",
+  "dataset_size": "164 libraries, 2,065 versions; tested on 96,995 packages from 3,590 apps",
+  "partial_lib_handling": "Score-based (similarity score 0-1); partial matches supported via fuzzy descriptor fallback when exact hash mismatches",
+  "sbom_output": "Partial — outputs library name and version list, but not in standard SBOM format (no CycloneDX/SPDX)",
+  "open_source": "Yes — available on GitHub (active repository)",
+  "cve_mapping": "No built-in CVE mapping; demonstrated security analysis manually (vulnerability window ~190 days for Facebook SDK; 3.7B device installs affected by crypto API misuse in ad libs)",
+  "transitive_deps": "No — does not handle transitive dependency resolution",
+  "strengths": [
+    "100% resilient to identifier renaming obfuscation",
+    "High version-level precision (97.4%)",
+    "Large-scale evaluation on 3,590 apps",
+    "Fuzzy descriptors are a foundational obfuscation-resilience technique",
+    "Open source and actively maintained"
+  ],
+  "weaknesses": [
+    "Fragile against modern R8 transformations (F1 drops to 12.7% under shrinkage+optimization)",
+    "No protection against package flattening (−75% F1), control-flow randomization, method inlining",
+    "No CDG-based module decoupling — relies on package structure",
+    "No standard SBOM output format",
+    "No transitive dependency handling",
+    "No built-in CVE mapping"
+  ],
+  "impact_on_project": "Foundational baseline for version-level library detection. The fuzzy descriptor technique (replacing custom types with 'X') is a key obfuscation-resilience mechanism worth adopting, but the reliance on package-structure-based module decoupling is a critical weakness given modern R8 obfuscation. The 3-layer Merkle tree structure provides an elegant profile representation but is insufficient alone. The 12.7% R8 version F1 establishes the gap this project must close. LibScout's approach should serve as a pre-R8 baseline comparator, not the core architecture."
+}

@@ -1,0 +1,63 @@
+{
+  "apk": {
+    "expected_sha256": "1355f824abc85e7601b050008fbeb5330fa8c0034a4c012c2b8189d2de6c222e",
+    "index_size": 12214039,
+    "path": "data/test_apks/real/diaguard/diaguard.apk",
+    "sha256": "1355f824abc85e7601b050008fbeb5330fa8c0034a4c012c2b8189d2de6c222e",
+    "size": 12214039,
+    "url": "https://f-droid.org/repo/com.faltenreich.diaguard_68.apk"
+  },
+  "app": "Diaguard",
+  "categories": [
+    "Diet",
+    "Health Manager",
+    "Sports & Health"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "health-manager",
+    "diary",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.faltenreich.diaguard/",
+  "license": "GPL-3.0-or-later",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.faltenreich.diaguard",
+  "proof_status": "report-generated",
+  "reason": "No-native health/diary app with source tarball metadata, target SDK 36, and a moderate dependency surface candidate.",
+  "report": {
+    "detected_component_count": 5,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v6/report-real-diaguard",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v6/report-real-diaguard/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v6/report-real-diaguard/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v6/report-real-diaguard/sbom.cdx.json",
+    "sbom_component_count": 5,
+    "status": "ok"
+  },
+  "slug": "diaguard",
+  "source_repo": "https://github.com/Faltenreich/Diaguard",
+  "source_tarball": {
+    "sha256": "f4a29861cb6ed1cc99c142db17bf648fe910adb6b562974a91395a6453c629ce",
+    "size": 15574765,
+    "url": "https://f-droid.org/repo/com.faltenreich.diaguard_68_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 68,
+  "version_name": "3.15.1"
+}

@@ -1,0 +1,31 @@
+{
+  "libraries": [
+    {
+      "artifact": "activity",
+      "group": "androidx.activity",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.6.0"
+      ]
+    },
+    {
+      "artifact": "concurrent-futures",
+      "group": "androidx.concurrent",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "core",
+      "group": "androidx.core",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.9.0"
+      ]
+    }
+  ]
+}

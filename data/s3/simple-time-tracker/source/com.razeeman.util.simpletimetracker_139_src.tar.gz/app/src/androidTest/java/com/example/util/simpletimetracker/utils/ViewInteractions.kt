@@ -1,0 +1,140 @@
+@file:Suppress("unused")
+
+package com.example.util.simpletimetracker.utils
+
+import android.view.View
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.Espresso.pressBack
+import androidx.test.espresso.ViewInteraction
+import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.action.ViewActions.longClick
+import androidx.test.espresso.action.ViewActions.replaceText
+import androidx.test.espresso.assertion.ViewAssertions.doesNotExist
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.contrib.PickerActions.setTime
+import androidx.test.espresso.contrib.RecyclerViewActions.scrollTo
+import androidx.test.espresso.contrib.RecyclerViewActions.scrollToPosition
+import androidx.test.espresso.matcher.ViewMatchers.isChecked
+import androidx.test.espresso.matcher.ViewMatchers.isCompletelyDisplayed
+import androidx.test.espresso.matcher.ViewMatchers.isDescendantOfA
+import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
+import androidx.test.espresso.matcher.ViewMatchers.isNotChecked
+import androidx.test.espresso.matcher.ViewMatchers.withClassName
+import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.withText
+import com.example.util.simpletimetracker.feature_base_adapter.BaseRecyclerViewHolder
+import com.example.util.simpletimetracker.feature_dialogs.dateTime.CustomTimePicker
+import org.hamcrest.CoreMatchers.allOf
+import org.hamcrest.CoreMatchers.equalTo
+import org.hamcrest.CoreMatchers.not
+import org.hamcrest.Matcher
+
+fun checkViewIsNotDisplayed(matcher: Matcher<View>): ViewInteraction =
+    onView(matcher).check(matches(not(isDisplayed())))
+
+fun checkViewDoesNotExist(matcher: Matcher<View>): ViewInteraction =
+    onView(matcher).check(doesNotExist())
+
+fun checkViewIsDisplayed(matcher: Matcher<View>): ViewInteraction =
+    onView(matcher).check(matches(isDisplayed()))
+
+fun typeTextIntoView(id: Int, text: String): ViewInteraction =
+    onView(withId(id)).perform(replaceText(text)) // typeText sometimes misses letters
+
+fun clickOnViewWithId(id: Int): ViewInteraction =
+    onView(withId(id)).perform(click())
+
+fun clickOnPrevDate() {
+    unconstrainedClickOnView(dateSelectorMatcher(-1))
+    Thread.sleep(200) // Wait for scroll.
+}
+
+fun clickOnNextDate() {
+    unconstrainedClickOnView(dateSelectorMatcher(1))
+    Thread.sleep(200) // Wait for scroll.
+}
+
+fun clickOnCurrentDate(position: Int = 0) {
+    unconstrainedClickOnView(dateSelectorMatcher(position))
+    Thread.sleep(200) // Wait for scroll.
+}
+
+fun clickOnCurrentSelectedDate() {
+    clickOnView(selectedDateMatcher())
+}
+
+fun longClickOnCurrentSelectedDate() {
+    longClickOnView(selectedDateMatcher())
+}
+
+fun longClickOnCurrentDate(position: Int = 0): ViewInteraction =
+    longClickOnView(dateSelectorMatcher(position))
+
+fun clickOnViewWithIdOnPager(id: Int): ViewInteraction =
+    onView(allOf(isCompletelyDisplayed(), withId(id))).perform(click())
+
+fun longClickOnViewWithIdOnPager(id: Int): ViewInteraction =
+    onView(allOf(isCompletelyDisplayed(), withId(id))).perform(longClick())
+
+fun clickOnViewWithText(textId: Int): ViewInteraction =
+    onView(withText(textId)).perform(click())
+
+fun clickOnViewWithText(text: String): ViewInteraction =
+    onView(withText(text)).perform(click())
+
+fun clickOnView(matcher: Matcher<View>): ViewInteraction =
+    onView(matcher).perform(click())
+
+fun unconstrainedClickOnView(matcher: Matcher<View>): ViewInteraction =
+    onView(matcher).perform(unconstrainedClick())
+
+fun clickOnVisibleView(matcher: Matcher<View>): ViewInteraction =
+    onView(allOf(matcher, isCompletelyDisplayed())).perform(click())
+
+fun longClickOnView(matcher: Matcher<View>): ViewInteraction =
+    onView(matcher).perform(longClick())
+
+fun longClickOnViewWithId(id: Int): ViewInteraction =
+    onView(withId(id)).perform(longClick())
+
+fun longClickOnVisibleView(matcher: Matcher<View>): ViewInteraction =
+    onView(allOf(matcher, isCompletelyDisplayed())).perform(longClick())
+
+fun clickOnRecyclerItem(id: Int, matcher: Matcher<View>): ViewInteraction =
+    onView(allOf(isDescendantOfA(withId(id)), matcher)).perform(click())
+
+fun scrollRecyclerToPosition(id: Int, position: Int): ViewInteraction =
+    onView(withId(id)).perform(scrollToPosition<BaseRecyclerViewHolder>(position))
+
+fun scrollRecyclerInPagerToPosition(id: Int, position: Int): ViewInteraction =
+    onView(allOf(withId(id), isCompletelyDisplayed())).perform(scrollToPosition<BaseRecyclerViewHolder>(position))
+
+fun scrollRecyclerToView(id: Int, matcher: Matcher<View>): ViewInteraction =
+    onView(withId(id)).perform(scrollTo<BaseRecyclerViewHolder>(matcher))
+
+fun scrollRecyclerInPagerToView(id: Int, matcher: Matcher<View>): ViewInteraction =
+    onView(allOf(withId(id), isCompletelyDisplayed())).perform(scrollTo<BaseRecyclerViewHolder>(matcher))
+
+fun toastTextShowing(textId: Int): ViewInteraction =
+    onView(withText(textId)).inRoot(isToast()).check(matches(isDisplayed()))
+
+fun clickOnSpinnerWithId(id: Int) {
+    onView(withId(id)).perform(nestedScrollTo())
+    // Double click to avoid failure on low api small screens
+    clickOnViewWithId(id)
+    pressBack()
+    clickOnViewWithId(id)
+}
+
+fun checkSliderValue(id: Int, expectedValue: Int): ViewInteraction =
+    onView(withId(id)).check(matches(withSliderValue((expectedValue))))
+
+fun setPickerTime(hour: Int, minute: Int) {
+    onView(withClassName(equalTo(CustomTimePicker::class.java.name))).perform(setTime(hour, minute))
+}
+
+fun checkCheckboxIsChecked(matcher: Matcher<View>): ViewInteraction =
+    onView(matcher).check(matches(isChecked()))
+
+fun checkCheckboxIsNotChecked(matcher: Matcher<View>): ViewInteraction =
+    onView(matcher).check(matches(isNotChecked()))

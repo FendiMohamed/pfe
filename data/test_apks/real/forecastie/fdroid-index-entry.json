@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "added": 1451433600000,
+    "categories": [
+      "Internet",
+      "Weather"
+    ],
+    "changelog": "https://github.com/martykan/forecastie/releases",
+    "description": {
+      "en-US": "A simple, copylefted libre software weather app for Android. It gathers data from OpenWeatherMap, via their public API.\n\n* Simple design\n* Detailed 5 day forecast\n* Multiple units\n* Works with any city in the world\n* Offline functionality\n"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/cz.martykan.forecastie/en-US/icon_laqgosbqKeQqKeaITfRLLuyL5tuTrogyMqeVm7GuDFE=.png",
+        "sha256": "95aaa0a2c6ea29e42a29e6884df44b2eec8be6db93ae883232a7959bb1ae0c51",
+        "size": 12928
+      }
+    },
+    "issueTracker": "https://github.com/martykan/forecastie/issues",
+    "lastUpdated": 1765203161000,
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "en-US": "Forecastie"
+    },
+    "preferredSigner": "41af52e9f90197a82627ca6b4ce59f14f565131fb29e48c8a46c0ca2def41fb9",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/cz.martykan.forecastie/en-US/phoneScreenshots/1.png",
+            "sha256": "e76e0ce6a8a77ce14577ca3d82886cb309486618d9514d5602580b15f88357b8",
+            "size": 113778
+          },
+          {
+            "name": "/cz.martykan.forecastie/en-US/phoneScreenshots/2.png",
+            "sha256": "83c5eed1ad0554e729c25baad0095162ccc40202ae771ec80cdc4f155daf1bac",
+            "size": 45501
+          },
+          {
+            "name": "/cz.martykan.forecastie/en-US/phoneScreenshots/3.jpg",
+            "sha256": "ec9067e964ceead84a0e0d7b5cb91d3690d1937cdeca988e923985d2eb66e7f5",
+            "size": 78059
+          }
+        ]
+      },
+      "tenInch": {
+        "en-US": [
+          {
+            "name": "/cz.martykan.forecastie/en-US/tenInchScreenshots/1.png",
+            "sha256": "45c903da4e49d3ed8d5ef02ffdc4dd573bcda0c88fbdda7835a25776ddd98215",
+            "size": 216072
+          },
+          {
+            "name": "/cz.martykan.forecastie/en-US/tenInchScreenshots/2.png",
+            "sha256": "575eaa17d9e86c8223d58161c07da4495e24df5b09ae1041d6a959dbda59b9d8",
+            "size": 128669
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/martykan/forecastie",
+    "summary": {
+      "en-US": "A simple, copylefted libre software weather app for Android."
+    },
+    "translation": "https://www.transifex.com/forecastie/forecastie/"
+  },
+  "version": {
+    "added": 1765203161000,
+    "antiFeatures": {
+      "NonFreeNet": {
+        "en-US": "Depends on OpenWeatherMap, which is not libre."
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeigok5devli5hzcjprupqu2n6v7fzo3yd2uoryaw27rsffy5jjxvce",
+      "name": "/cz.martykan.forecastie_75.apk",
+      "sha256": "47ba38160de899da56e577f33ef848b41833bf6ac9452d9b7682f5cb9c188129",
+      "size": 4488735
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "41af52e9f90197a82627ca6b4ce59f14f565131fb29e48c8a46c0ca2def41fb9"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.SCHEDULE_EXACT_ALARM"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 19,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 75,
+      "versionName": "1.23"
+    },
+    "src": {
+      "name": "/cz.martykan.forecastie_75_src.tar.gz",
+      "sha256": "eca9939e7c9af23feedcd7e2e2a7179696d2314456daffd0a840d4c6616ddaab",
+      "size": 3752976
+    }
+  }
+}

@@ -1,0 +1,643 @@
+{
+  "schema_version": 1,
+  "policy": "Profiles are validation-only dependency-tree rescue hints. They must not change matcher scoring, SBOM component selection, vulnerability labels, reference DB contents, or source-validated metrics unless a runtime dependency tree and validate-source-deps output are produced.",
+  "profiles": {
+    "modern-android-missing-compile-sdk": {
+      "purpose": "Repair modern Android Gradle projects that fail before runtime classpath resolution because root Android SDK settings or plugin setup do not reach the app module under the current Docker Gradle lane.",
+      "allowed_validation_copy_edits": [
+        "inject or preserve compileSdk/minSdk/targetSdk values needed for project configuration",
+        "prefer root app module dependency tasks over broad module guessing",
+        "disable build-time analysis plugins when they do not affect runtime dependency declarations"
+      ]
+    },
+    "legacy-gradle-jdk11": {
+      "purpose": "Retry older F-Droid source trees with a JDK 11 and Gradle 5/6 style lane before classifying them as source-linked blocked.",
+      "allowed_validation_copy_edits": [
+        "correct sdk.dir to /opt/android-sdk",
+        "remove stale ndk.dir lines when native build is not needed for Maven runtime dependency resolution",
+        "replace obsolete jcenter() wiring only when required for dependency metadata resolution"
+      ]
+    },
+    "cordova-gradle": {
+      "purpose": "Resolve Cordova-era Android projects whose Gradle scripts fail before runtime classpath generation.",
+      "allowed_validation_copy_edits": [
+        "patch Cordova Gradle script compatibility enough to list runtime dependencies",
+        "align Cordova build-tools metadata with Docker-installed Android SDK tools when needed for configuration",
+        "avoid building Cordova assets or APK outputs",
+        "keep Cordova rescue rows outside metrics unless validate-source-deps completes"
+      ]
+    },
+    "android-module-only-validation-copy": {
+      "purpose": "Handle multi-project source tarballs where non-Android frontend, web, or CLI modules block configuration before the Android runtime classpath is resolved.",
+      "allowed_validation_copy_edits": [
+        "limit settings.gradle to the real Android app module and local runtime library modules",
+        "omit deployment or frontend-only task wiring that is unrelated to APK runtime dependencies",
+        "preserve Android implementation/api dependency declarations and local runtime project links",
+        "keep the row outside metrics unless validate-source-deps completes"
+      ]
+    },
+    "legacy-agp8-runtime-validation-copy": {
+      "purpose": "Retry older Android Gradle plugin projects whose source AGP cannot run under the Docker Gradle lane before runtime dependency-tree capture.",
+      "allowed_validation_copy_edits": [
+        "upgrade only the Android Gradle plugin used for dependency-tree capture",
+        "add AGP-required namespace or BuildConfig flags when existing source declarations require them",
+        "preserve declared Maven runtime dependencies",
+        "keep the row outside metrics unless validate-source-deps completes"
+      ]
+    },
+    "react-native-node-prebuild": {
+      "purpose": "Classify React Native/native-heavy rows that need Node/npm/prebuild tooling before Gradle can expose Android runtime dependencies.",
+      "allowed_validation_copy_edits": [
+        "document required Node/npm/native toolchain pieces",
+        "do not treat missing Java/Kotlin dependency proof as matcher failure",
+        "keep framework-boundary rows outside metrics unless runtime dependency proof completes"
+      ]
+    },
+        "included-build-plugin-isolation": {
+            "purpose": "Handle projects whose included Gradle build logic blocks dependency-tree generation before app module configuration.",
+            "allowed_validation_copy_edits": [
+                "prefer repository-order fixes and bounded retries",
+                "avoid broad source rewrites that could change declared runtime dependencies",
+                "record plugin-build blockers as build-system evidence when unresolved"
+            ]
+        },
+        "k9-plugin-lite-runtime-graph-validation-copy": {
+            "purpose": "K-9/Thunderbird Android lane: isolate included build-plugin overhead in a validation-only source copy while preserving the app-k9mail foss release runtime dependency graph.",
+            "allowed_validation_copy_edits": [
+                "disable build-time quality, test, dependency-check, coverage, badging, and full-flavor plugin wiring that is not needed for runtime dependency listing",
+                "preserve app-k9mail, its foss release runtime project graph, and runtime implementation/api/project dependencies",
+                "comment build-time-only plugin aliases and non-foss/test/debug dependency blocks only in the validation copy",
+                "keep the row partial unless validate-source-deps completes against the generated fossReleaseRuntimeClasspath tree"
+            ]
+        },
+    "modern-gradle9-ksp-detekt-validation-copy": {
+      "purpose": "OpenCloud-specific lane: disable KSP/Detekt/Sonar build-time plugins in a validation copy so Gradle 9.5 can configure app modules and resolve runtime dependencies.",
+      "allowed_validation_copy_edits": [
+        "disable KSP plugin application and ksp compiler dependencies",
+        "disable Kotlin/Parcelize build plugins and kotlinOptions blocks when Gradle API compatibility prevents project configuration",
+        "disable Detekt/Sonar plugin application and Detekt task configuration",
+        "preserve runtime implementation/api dependencies and project module links"
+      ]
+    },
+    "owncloud-modern-runtime-validation-copy": {
+      "purpose": "Retry ownCloud where modern Kotlin/KSP/analysis plugin wiring fails before :owncloudApp runtime classpath resolution under the current Docker Gradle lane.",
+      "allowed_validation_copy_edits": [
+        "disable KSP, Kotlin, Parcelize, Ktlint, Detekt, Sonar, and CycloneDX build-time wiring in a validation copy",
+        "preserve ownCloud app/library modules and runtime implementation/api dependencies",
+        "pin dependency-tree capture to :owncloudApp runtime classpath configurations",
+        "keep the row outside metrics unless validate-source-deps completes"
+      ]
+    },
+    "simplelogin-detekt-validation-copy": {
+      "purpose": "Retry SimpleLogin where the old Detekt report configuration fails before app runtime classpath resolution under the current Gradle lane.",
+      "allowed_validation_copy_edits": [
+        "disable Detekt plugin application and Detekt task/report configuration",
+        "preserve the app module, product flavors, and runtime implementation/api dependencies",
+        "keep the row outside metrics unless validate-source-deps completes"
+      ]
+    },
+    "omni-notes-analysis-plugin-validation-copy": {
+      "purpose": "Retry Omni Notes where SonarQube/test-logger/Jacoco build-time analysis wiring fails before app runtime classpath resolution under the current Gradle lane.",
+      "allowed_validation_copy_edits": [
+        "disable SonarQube and test-logger buildscript/plugin wiring",
+        "disable Jacoco report/test task configuration that is not needed for runtime dependency listing",
+        "preserve the omniNotes app module, foss product flavor, and runtime implementation/api dependencies",
+        "keep the row outside metrics unless validate-source-deps completes"
+      ]
+    },
+    "strict-module-runtime-config": {
+      "purpose": "Retry source trees where the generic APK proof runner found the correct Gradle root but probed the wrong app module names.",
+      "allowed_validation_copy_edits": [
+        "prefer the actual Android app module declared in settings.gradle",
+        "limit retries to runtime dependency configurations that naturally exist for that module",
+        "do not patch source files until a strict module/config retry proves the blocker is not only wrong-module probing"
+      ]
+    },
+    "modern-agp8-gradle813-runtime-config": {
+      "purpose": "Retry modern Android Gradle Plugin 8.x source trees with the Docker Gradle 8.13 lane when the default Gradle 9.x lane fails before runtime classpath resolution.",
+      "allowed_validation_copy_edits": [
+        "do not patch source files for this profile",
+        "switch only the validation Gradle launcher to /opt/gradle-8.13/bin/gradle",
+        "preserve declared app-module runtime dependency configurations"
+      ]
+    },
+    "todo-agenda-archive-name-validation-copy": {
+      "purpose": "Retry Todo Agenda where obsolete APK archive output naming fails before runtime classpath resolution under the current Docker Gradle/AGP lane.",
+      "allowed_validation_copy_edits": [
+        "omit the defaultConfig archivesBaseName output naming line in a validation copy",
+        "preserve app/colorpicker modules and runtime implementation/api/project dependencies",
+        "keep the row outside metrics unless validate-source-deps completes"
+      ]
+    },
+    "jcenter-to-maven-central-validation-copy": {
+      "purpose": "Retry source trees that fail during Gradle configuration only because modern Gradle removed the jcenter() repository method.",
+      "allowed_validation_copy_edits": [
+        "replace jcenter() repository method calls with mavenCentral() in a validation copy",
+        "preserve declared runtime implementation/api dependencies",
+        "keep rows outside metrics unless runtime dependency proof and source validation complete"
+      ]
+    },
+    "openkeychain-fdroid-submodule-validation-copy": {
+      "purpose": "Retry OpenKeychain's F-Droid source tarball where the wrapper root lacks settings.gradle and some local source submodules referenced by the app are absent from the tarball.",
+      "allowed_validation_copy_edits": [
+        "add a settings.gradle that includes the real OpenKeychain Android app module and present local Android library modules",
+        "replace removed jcenter() repository method calls with mavenCentral() in the validation copy",
+        "omit missing local project module wires when the referenced source directories are absent from the F-Droid source tarball",
+        "enable buildConfig generation when the Android Gradle plugin requires it for existing custom BuildConfig fields",
+        "set android.useAndroidX=true when AGP refuses to resolve an AndroidX runtime classpath without the project property",
+        "preserve declared Maven runtime implementation/api dependencies"
+      ]
+    }
+  },
+  "assignments": {
+    "opencloud": {
+      "profiles": [
+        "modern-android-missing-compile-sdk",
+        "modern-gradle9-ksp-detekt-validation-copy"
+      ],
+      "validation_copy": true,
+      "validation_copy_only": true,
+      "strict_configurations": true,
+      "tasks": [
+        ":opencloudApp:dependencies"
+      ],
+      "configurations": [
+        "originalReleaseRuntimeClasspath",
+        "qaReleaseRuntimeClasspath",
+        "originalDebugRuntimeClasspath",
+        "qaDebugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "org/gradle/api/internal/HasConvention",
+        "compileSdkVersion is not specified while configuring :opencloudApp"
+      ]
+    },
+    "owncloud": {
+      "profiles": [
+        "modern-android-missing-compile-sdk",
+        "owncloud-modern-runtime-validation-copy"
+      ],
+      "validation_copy": true,
+      "validation_copy_only": true,
+      "strict_configurations": true,
+      "gradle_command": [
+        "/opt/gradle-8.13/bin/gradle"
+      ],
+      "tasks": [
+        ":owncloudApp:dependencies"
+      ],
+      "configurations": [
+        "originalReleaseRuntimeClasspath",
+        "qaReleaseRuntimeClasspath",
+        "originalDebugRuntimeClasspath",
+        "qaDebugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "org/gradle/api/internal/HasConvention",
+        "compileSdkVersion is not specified while configuring :owncloudApp",
+        "generic proof runner probed :app/:mobile/:main and plugins subroot instead of the real :owncloudApp module"
+      ]
+    },
+    "waistline": {
+      "profiles": [
+        "cordova-gradle"
+      ],
+      "validation_copy": true,
+      "validation_copy_only": true,
+      "strict_configurations": true,
+      "tasks": [
+        ":app:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "Cordova cordova.gradle cannot resolve XmlParser"
+      ]
+    },
+    "baby-books": {
+      "profiles": [
+        "android-module-only-validation-copy"
+      ],
+      "validation_copy": true,
+      "validation_copy_only": true,
+      "strict_configurations": true,
+      "gradle_command": [
+        "/opt/gradle-8.13/bin/gradle"
+      ],
+      "tasks": [
+        ":android:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "generic proof runner probed :app/:mobile/:main, but the source app module is :android",
+        "org/gradle/api/artifacts/SelfResolvingDependency from unrelated frontend module configuration under Gradle 9.5"
+      ]
+    },
+    "odysee": {
+      "profiles": [
+        "cordova-gradle"
+      ],
+      "validation_copy": true,
+      "validation_copy_only": true,
+      "strict_configurations": true,
+      "gradle_command": [
+        "/opt/gradle-8.14.3/bin/gradle"
+      ],
+      "tasks": [
+        ":app:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "Cordova cordova.gradle cannot resolve XmlParser"
+      ]
+    },
+    "radarweather": {
+      "profiles": [
+        "legacy-agp8-runtime-validation-copy"
+      ],
+      "validation_copy": true,
+      "validation_copy_only": true,
+      "strict_configurations": true,
+      "tasks": [
+        ":app:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "AGP 7.1.1 calls Provider.forUseAtConfigurationTime under the Docker Gradle 9.5 lane"
+      ]
+    },
+    "primitive-ftpd": {
+      "profiles": [
+        "strict-module-runtime-config"
+      ],
+      "validation_copy": false,
+      "strict_configurations": true,
+      "tasks": [
+        ":primitiveFTPd:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "generic proof runner probed :app/:mobile/:main, but the source app module is :primitiveFTPd"
+      ]
+    },
+    "dolidroid": {
+      "profiles": [
+        "jcenter-to-maven-central-validation-copy"
+      ],
+      "validation_copy": true,
+      "validation_copy_only": true,
+      "strict_configurations": true,
+      "tasks": [
+        ":app:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "Could not find method jcenter() for arguments [] on repository container"
+      ]
+    },
+    "poet-assistant": {
+      "profiles": [
+        "jcenter-to-maven-central-validation-copy"
+      ],
+      "validation_copy": true,
+      "validation_copy_only": true,
+      "strict_configurations": true,
+      "tasks": [
+        ":app:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "Could not find method jcenter() for arguments [] on repository container"
+      ]
+    },
+    "radiodroid": {
+      "profiles": [
+        "jcenter-to-maven-central-validation-copy"
+      ],
+      "validation_copy": true,
+      "validation_copy_only": true,
+      "strict_configurations": true,
+      "gradle_command": [
+        "/opt/gradle-8.13/bin/gradle"
+      ],
+      "tasks": [
+        ":app:dependencies"
+      ],
+      "configurations": [
+        "freeReleaseRuntimeClasspath",
+        "playReleaseRuntimeClasspath",
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "Could not find method jcenter() for arguments [] on repository container",
+        "DependencyHandler.module(java.lang.Object) is unavailable under Docker Gradle 9.5"
+      ]
+    },
+    "openkeychain": {
+      "profiles": [
+        "jcenter-to-maven-central-validation-copy",
+        "openkeychain-fdroid-submodule-validation-copy"
+      ],
+      "validation_copy": true,
+      "validation_copy_only": true,
+      "strict_configurations": true,
+      "gradle_command": [
+        "/opt/gradle-8.13/bin/gradle"
+      ],
+      "tasks": [
+        ":OpenKeychain:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "Could not find method jcenter() for arguments [] on repository container",
+        "wrapper root has no settings.gradle",
+        "F-Droid source tarball is missing local submodule directories referenced by OpenKeychain/build.gradle"
+      ]
+    },
+    "password-generator": {
+      "profiles": [
+        "strict-module-runtime-config"
+      ],
+      "validation_copy": false,
+      "strict_configurations": true,
+      "tasks": [
+        ":passwordgenerator:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "generic proof runner probed :app/:mobile/:main, but the source app module is :passwordgenerator"
+      ]
+    },
+    "todo-agenda": {
+      "profiles": [
+        "strict-module-runtime-config",
+        "todo-agenda-archive-name-validation-copy"
+      ],
+      "validation_copy": true,
+      "validation_copy_only": true,
+      "strict_configurations": true,
+      "tasks": [
+        ":app:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "defaultConfig archivesBaseName is unavailable under the current Docker Gradle/AGP lane"
+      ]
+    },
+    "c3nav": {
+      "profiles": [
+        "strict-module-runtime-config"
+      ],
+      "validation_copy": false,
+      "strict_configurations": true,
+      "tasks": [
+        ":app:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "generic proof runner was interrupted before reaching the nested CongressRoutePlanner :app runtime configuration"
+      ]
+    },
+    "keep-it-up": {
+      "profiles": [
+        "strict-module-runtime-config"
+      ],
+      "validation_copy": false,
+      "strict_configurations": true,
+      "tasks": [
+        ":keepitupmain:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "generic proof runner probes common module names, but the source app module is :keepitupmain"
+      ]
+    },
+    "simplelogin": {
+      "profiles": [
+        "simplelogin-detekt-validation-copy"
+      ],
+      "validation_copy": true,
+      "validation_copy_only": true,
+      "strict_configurations": true,
+      "gradle_command": [
+        "/opt/gradle-8.13/bin/gradle"
+      ],
+      "tasks": [
+        ":app:dependencies"
+      ],
+      "configurations": [
+        "fdroidReleaseRuntimeClasspath",
+        "fdroidDebugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "Root build.gradle Detekt report configuration fails with org/gradle/util/ConfigureUtil"
+      ]
+    },
+    "omni-notes": {
+      "profiles": [
+        "strict-module-runtime-config",
+        "omni-notes-analysis-plugin-validation-copy"
+      ],
+      "validation_copy": true,
+      "validation_copy_only": true,
+      "strict_configurations": true,
+      "gradle_command": [
+        "/opt/gradle-8.13/bin/gradle"
+      ],
+      "tasks": [
+        ":omniNotes:dependencies"
+      ],
+      "configurations": [
+        "fossReleaseRuntimeClasspath",
+        "fossDebugRuntimeClasspath",
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "org.gradle.api.artifacts.SelfResolvingDependency",
+        "generic proof runner probed :app/:mobile/:main, but the source app module is :omniNotes",
+        "root build uses SonarQube 3.2.0 and test-logger 2.1.0 build-time plugins"
+      ]
+    },
+        "k9-thunderbird-android": {
+            "profiles": [
+                "included-build-plugin-isolation",
+                "k9-plugin-lite-runtime-graph-validation-copy"
+            ],
+            "validation_copy": true,
+            "validation_copy_only": true,
+            "strict_configurations": true,
+            "tasks": [
+                ":app-k9mail:dependencies"
+            ],
+            "configurations": [
+                "fossReleaseRuntimeClasspath"
+            ],
+            "validation_source_copy": "data/results/source-validation/k9-thunderbird-android/source-plugin-lite",
+            "runtime_project_graph": "data/results/source-validation/k9-thunderbird-android/source-plugin-lite/k9-runtime-project-graph.txt",
+            "resolved_dependency_tree": "data/results/source-validation/k9-thunderbird-android/fossReleaseRuntimeClasspath.plugin-lite-runtimegraph-composefix.txt",
+            "source_validation": "data/results/source-validation/k9-thunderbird-android-report-validation/source-validation.json",
+            "blocker_seen": [
+                "included build-plugin setup stalls before fossReleaseRuntimeClasspath",
+                "validation-only plugin-lite/runtime-graph copy generated fossReleaseRuntimeClasspath and validate-source-deps confirms 5/11"
+            ]
+        },
+    "imapnotes3": {
+      "profiles": [
+        "strict-module-runtime-config"
+      ],
+      "validation_copy": false,
+      "strict_configurations": true,
+      "tasks": [
+        ":ImapNotes3:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "generic proof runner probed :app/:mobile/:main, but the source app module is :ImapNotes3"
+      ]
+    },
+    "ultrasonic": {
+      "profiles": [
+        "strict-module-runtime-config"
+      ],
+      "validation_copy": false,
+      "strict_configurations": true,
+      "tasks": [
+        ":ultrasonic:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "generic proof runner probed :app/:mobile/:main, but the source app module is :ultrasonic"
+      ]
+    },
+    "runnerup": {
+      "profiles": [
+        "strict-module-runtime-config"
+      ],
+      "validation_copy": false,
+      "strict_configurations": true,
+      "tasks": [
+        ":app:dependencies"
+      ],
+      "configurations": [
+        "latestReleaseRuntimeClasspath",
+        "latestDebugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "source app module is :app, but generic releaseRuntimeClasspath probing missed the latest product-flavor runtime configuration"
+      ]
+    },
+    "password-master": {
+      "profiles": [
+        "strict-module-runtime-config"
+      ],
+      "validation_copy": false,
+      "strict_configurations": true,
+      "tasks": [
+        ":passwordmaster:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "generic proof runner probed :app, but settings.gradle includes the real app module as :passwordmaster"
+      ]
+    },
+    "flying-carpet": {
+      "profiles": [
+        "strict-module-runtime-config",
+        "modern-agp8-gradle813-runtime-config"
+      ],
+      "validation_copy": false,
+      "strict_configurations": true,
+      "gradle_command": [
+        "/opt/gradle-8.13/bin/gradle"
+      ],
+      "tasks": [
+        ":app:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "default Docker Gradle lane failed before runtime classpath resolution with org/gradle/api/artifacts/SelfResolvingDependency",
+        "direct Gradle 8.13 retry against :app releaseRuntimeClasspath produced a runtime dependency tree"
+      ]
+    },
+    "fitotrack": {
+      "profiles": [
+        "strict-module-runtime-config",
+        "modern-agp8-gradle813-runtime-config"
+      ],
+      "validation_copy": false,
+      "strict_configurations": true,
+      "gradle_command": [
+        "/opt/gradle-8.13/bin/gradle"
+      ],
+      "tasks": [
+        ":app:dependencies"
+      ],
+      "configurations": [
+        "releaseRuntimeClasspath",
+        "debugRuntimeClasspath"
+      ],
+      "blocker_seen": [
+        "default Docker Gradle lane failed before runtime classpath resolution with org/gradle/api/artifacts/SelfResolvingDependency",
+        "default lane also surfaced compileSdkVersion is not specified while configuring app",
+        "direct Gradle 8.13 retry against :app releaseRuntimeClasspath produced a runtime dependency tree"
+      ]
+    },
+    "jitsi-meet": {
+      "profiles": [
+        "react-native-node-prebuild"
+      ],
+      "validation_copy": false,
+      "blocker_seen": [
+        "React Native/native-heavy dependency-tree validation needs Node/npm/prebuild tooling"
+      ]
+    }
+  }
+}

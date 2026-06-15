@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "added": 1760259491000,
+    "authorName": "Max Poliakov",
+    "categories": [
+      "Time",
+      "Time Tracker"
+    ],
+    "changelog": "https://github.com/Jaimies/SkillApp/releases",
+    "description": {
+      "en-US": "SkillApp is a simple skill tracker that doesn't clutter your mind with unnecessary features, allowing you to focus entirely on your productivity.\n\nThe app does not collect your data, does not connect to the internet, and does not contain ads.\n\nFeatures:\n\u2022 Completely offline: the app doesn't even have the INTERNET permission\n\u2022 Organize related skills into groups\n\u2022 Various measurement units: Hours, Kilometers, Times, Pages, Reps, Steps, Calories\n\u2022 Set your goals and achieve them\n\u2022 See your productivity at a glance with statistics\n\u2022 Local backup into a folder of your choosing\n\u2022 Stay productive at any time of day with the Dark mode\n",
+      "ru-RU": "SkillApp \u044d\u0442\u043e \u043f\u0440\u043e\u0441\u0442\u043e\u0439 \u0442\u0440\u0435\u043a\u0435\u0440 \u043d\u0430\u0432\u044b\u043a\u043e\u0432, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u043d\u0435 \u0437\u0430\u0431\u0438\u0432\u0430\u0435\u0442 \u0433\u043e\u043b\u043e\u0432\u0443 \u043b\u0438\u0448\u043d\u0438\u043c \u0444\u0443\u043d\u043a\u0446\u0438\u043e\u043d\u0430\u043b\u043e\u043c, \u0447\u0442\u043e\u0431\u044b \u0432\u044b \u043c\u043e\u0433\u043b\u0438 \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e \u0441\u0444\u043e\u043a\u0443\u0441\u0438\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u043d\u0430 \u0441\u0432\u043e\u0435\u0439 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438\u0432\u043d\u043e\u0441\u0442\u0438.\n\n\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043d\u0435 \u0441\u043e\u0431\u0438\u0440\u0430\u0435\u0442 \u0432\u0430\u0448\u0438 \u0434\u0430\u043d\u043d\u044b\u0435, \u043d\u0435 \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0430\u0435\u0442\u0441\u044f \u043a \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0443, \u0432 \u043d\u0451\u043c \u043d\u0435\u0442 \u0440\u0435\u043a\u043b\u0430\u043c\u044b.\n\n<b>\u041e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u043d\u0438\u0435 \u043d\u0430\u0432\u044b\u043a\u043e\u0432 \u043e\u0434\u043d\u0438\u043c \u043d\u0430\u0436\u0430\u0442\u0438\u0435\u043c \u043a\u043d\u043e\u043f\u043a\u0438</b>\n\u041f\u0440\u043e\u0441\u0442\u043e \u0432\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u043d\u0430\u0432\u044b\u043a \u0438 \u0437\u0430\u043f\u0443\u0441\u0442\u0438\u0442\u0435 \u0442\u0430\u0439\u043c\u0435\u0440.\n\n<b>\u0421\u0442\u0430\u0432\u044c\u0442\u0435 \u0446\u0435\u043b\u0438 \u0438 \u0434\u043e\u0441\u0442\u0438\u0433\u0430\u0439\u0442\u0435 \u0438\u0445</b>\n\u0423\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0439\u0442\u0435 \u0446\u0435\u043b\u0438 \u043d\u0430 \u0434\u0435\u043d\u044c, \u043d\u0435\u0434\u0435\u043b\u044e, \u043c\u0435\u0441\u044f\u0446, \u0433\u043e\u0434, \u043b\u0438\u0431\u043e \u0431\u0435\u0437 \u043f\u0440\u0438\u0432\u044f\u0437\u043a\u0438 \u043a\u043e \u0432\u0440\u0435\u043c\u0435\u043d\u0438.\n\n<b>\u0420\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u0435 \u0435\u0434\u0438\u043d\u0438\u0446\u044b \u0438\u0437\u043c\u0435\u0440\u0435\u043d\u0438\u044f</b>\n\u0418\u0437\u043c\u0435\u0440\u044f\u0439\u0442\u0435 \u0441\u0432\u043e\u0439 \u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441 \u0432 \u0447\u0430\u0441\u0430\u0445, \u043a\u0438\u043b\u043e\u043c\u0435\u0442\u0440\u0430\u0445, \u0440\u0430\u0437\u0430\u0445, \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430\u0445, \u0448\u0430\u0433\u0430\u0445, \u043f\u043e\u0432\u0442\u043e\u0440\u0435\u043d\u0438\u044f\u0445, \u043a\u0438\u043b\u043e\u0433\u0440\u0430\u043c\u043c\u0430\u0445, \u043a\u0430\u043b\u043e\u0440\u0438\u044f\u0445.\n\n<b>\u0413\u0440\u0443\u043f\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u043d\u0430\u0432\u044b\u043a\u043e\u0432</b>\n\u041e\u0440\u0433\u0430\u043d\u0438\u0437\u043e\u0432\u044b\u0432\u0430\u0439\u0442\u0435 \u0441\u0432\u044f\u0437\u0430\u043d\u043d\u044b\u0435 \u043d\u0430\u0432\u044b\u043a\u0438 \u0432 \u0433\u0440\u0443\u043f\u043f\u044b.\n\n<b>\u0420\u0435\u0437\u0435\u0440\u0432\u043d\u043e\u0435 \u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435</b>\n\u0421\u043e\u0445\u0440\u0430\u043d\u044f\u0439\u0442\u0435 \u0441\u0432\u043e\u0438 \u0434\u0430\u043d\u043d\u044b\u0435 \u0432 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u0440\u0435\u0437\u0435\u0440\u0432\u043d\u043e\u0433\u043e \u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u0432 \u043b\u044e\u0431\u0443\u044e \u043f\u0430\u043f\u043a\u0443 \u043d\u0430 \u0432\u0430\u0448\u0435\u043c \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0435.\n\n<b>\u0422\u0435\u043c\u043d\u0430\u044f \u0442\u0435\u043c\u0430</b>\n\u041e\u0441\u0442\u0430\u0432\u0430\u0439\u0442\u0435\u0441\u044c \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438\u0432\u043d\u044b\u043c\u0438 \u0432 \u043b\u044e\u0431\u043e\u0435 \u0432\u0440\u0435\u043c\u044f \u0434\u043d\u044f.\n\n<b>\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430</b>\n\u041b\u0435\u0433\u043a\u043e \u043e\u0446\u0435\u043d\u0438\u0432\u0430\u0439\u0442\u0435 \u0441\u0432\u043e\u044e \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438\u0432\u043d\u043e\u0441\u0442\u044c \u043f\u043e \u0434\u043d\u044f\u043c, \u043d\u0435\u0434\u0435\u043b\u044f\u043c, \u043c\u0435\u0441\u044f\u0446\u0430\u043c, \u0438 \u0433\u043e\u0434\u0430\u043c.\n",
+      "uk": "SkillApp \u0446\u0435 \u043f\u0440\u043e\u0441\u0442\u0438\u0439 \u0442\u0430\u0439\u043c \u0442\u0440\u0435\u043a\u0435\u0440, \u044f\u043a\u0438\u0439 \u043d\u0435 \u0437\u0430\u0431\u0438\u0432\u0430\u0454 \u0433\u043e\u043b\u043e\u0432\u0443 \u0437\u0430\u0439\u0432\u0438\u043c \u0444\u0443\u043d\u043a\u0446\u0456\u043e\u043d\u0430\u043b\u043e\u043c, \u0449\u043e\u0431 \u0432\u0438 \u043c\u043e\u0433\u043b\u0438 \u043f\u043e\u0432\u043d\u0456\u0441\u0442\u044e \u0437\u043e\u0441\u0435\u0440\u0435\u0434\u0438\u0442\u0438\u0441\u044f \u043d\u0430 \u0441\u0432\u043e\u0457\u0439 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438\u0432\u043d\u043e\u0441\u0442\u0456.\n\n\u0414\u043e\u0434\u0430\u0442\u043e\u043a \u043d\u0435 \u0437\u0431\u0438\u0440\u0430\u0454 \u0432\u0430\u0448\u0456 \u0434\u0430\u043d\u0456, \u043d\u0435 \u043f\u0456\u0434\u043a\u043b\u044e\u0447\u0430\u0454\u0442\u044c\u0441\u044f \u0434\u043e \u0456\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0443, \u0432 \u043d\u044c\u043e\u043c\u0443 \u043d\u0435\u043c\u0430\u0454 \u0440\u0435\u043a\u043b\u0430\u043c\u0438.\n\n<b>\u0412\u0456\u0434\u0441\u0442\u0435\u0436\u0435\u043d\u043d\u044f \u0447\u0430\u0441\u0443 \u043e\u0434\u043d\u0438\u043c \u043d\u0430\u0442\u0438\u0441\u043a\u0430\u043d\u043d\u044f\u043c \u043a\u043d\u043e\u043f\u043a\u0438</b>\n\u041f\u0440\u043e\u0441\u0442\u043e \u0432\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u043d\u0430\u0432\u0438\u043a \u0456 \u0437\u0430\u043f\u0443\u0441\u0442\u0456\u0442\u044c \u0442\u0430\u0439\u043c\u0435\u0440.\n\n<b>\u0421\u0442\u0430\u0432\u0442\u0435 \u0446\u0456\u043b\u0456 \u0442\u0430 \u0434\u043e\u0441\u044f\u0433\u0430\u0439\u0442\u0435 \u0457\u0445</b>\n\u0412\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u044e\u0439\u0442\u0435 \u0446\u0456\u043b\u0456 \u043d\u0430 \u0434\u0435\u043d\u044c, \u0442\u0438\u0436\u0434\u0435\u043d\u044c, \u043c\u0456\u0441\u044f\u0446\u044c, \u0440\u0456\u043a, \u0430\u0431\u043e \u0431\u0435\u0437 \u043f\u0440\u0438\u0432'\u044f\u0437\u043a\u0438 \u0434\u043e \u0447\u0430\u0441\u0443.\n\n<b>\u041e\u0434\u0438\u043d\u0438\u0446\u0456 \u0432\u0438\u043c\u0456\u0440\u044e\u0432\u0430\u043d\u043d\u044f</b>\n\u0412\u0438\u043c\u0456\u0440\u044e\u0439\u0442\u0435 \u0441\u0432\u0456\u0439 \u043f\u0440\u043e\u0433\u0440\u0435\u0441 \u0443 \u0433\u043e\u0434\u0438\u043d\u0430\u0445, \u043a\u0456\u043b\u043e\u043c\u0435\u0442\u0440\u0430\u0445, \u0440\u0430\u0437\u0430\u0445, \u0441\u0442\u043e\u0440\u0456\u043d\u043a\u0430\u0445, \u043a\u0440\u043e\u043a\u0430\u0445, \u043f\u043e\u0432\u0442\u043e\u0440\u0435\u043d\u043d\u044f\u0445, \u043a\u0456\u043b\u043e\u0433\u0440\u0430\u043c\u0430\u0445, \u043a\u0430\u043b\u043e\u0440\u0456\u044f\u0445.\n\n<b>\u0420\u0435\u0437\u0435\u0440\u0432\u043d\u0435 \u043a\u043e\u043f\u0456\u044e\u0432\u0430\u043d\u043d\u044f \u0432 Google Drive</b>\n\u0417\u0431\u0435\u0440\u0456\u0433\u0430\u0439\u0442\u0435 \u0441\u0432\u043e\u0457 \u0434\u0430\u043d\u0456 \u0432 \u0431\u0435\u0437\u043f\u0435\u0446\u0456 \u0437\u0430 \u0434\u043e\u043f\u043e\u043c\u043e\u0433\u043e\u044e \u0440\u0435\u0437\u0435\u0440\u0432\u043d\u043e\u0433\u043e \u043a\u043e\u043f\u0456\u044e\u0432\u0430\u043d\u043d\u044f \u0432 \u0431\u0443\u0434\u044c-\u044f\u043a\u0443 \u043f\u0430\u043f\u043a\u0443 \u043d\u0430 \u0432\u0430\u0448\u043e\u043c\u0443 \u043f\u0440\u0438\u0441\u0442\u0440\u043e\u0457.\n\n<b>\u0413\u0440\u0443\u043f\u0443\u0432\u0430\u043d\u043d\u044f \u043d\u0430\u0432\u0438\u0447\u043e\u043a</b>\n\u041e\u0440\u0433\u0430\u043d\u0456\u0437\u043e\u0432\u0443\u0439\u0442\u0435 \u043f\u043e\u0432'\u044f\u0437\u0430\u043d\u0456 \u043d\u0430\u0432\u0438\u0447\u043a\u0438 \u0432 \u0433\u0440\u0443\u043f\u0438.\n\n<b>\u0422\u0435\u043c\u043d\u0430 \u0442\u0435\u043c\u0430</b>\n\u0417\u0430\u043b\u0438\u0448\u0430\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438\u0432\u043d\u0438\u043c\u0438 \u0432 \u0431\u0443\u0434\u044c-\u044f\u043a\u0438\u0439 \u0447\u0430\u0441 \u0434\u043d\u044f.\n\n<b>\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430</b>\n\u041b\u0435\u0433\u043a\u043e \u043e\u0446\u0456\u043d\u044e\u0439\u0442\u0435 \u0441\u0432\u043e\u044e \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438\u0432\u043d\u0456\u0441\u0442\u044c \u043f\u043e \u0434\u043d\u044f\u0445, \u0442\u0438\u0436\u043d\u044f\u0445, \u043c\u0456\u0441\u044f\u0446\u044f\u0445, \u0456 \u0440\u043e\u043a\u0430\u0445.\n"
+    },
+    "donate": [
+      "https://buymeacoffee.com/skillapp"
+    ],
+    "featureGraphic": {
+      "en-US": {
+        "name": "/com.theskillapp.skillapp/en-US/featureGraphic_7A0vXzBTsVYuy544KNlsdWHekS_iPC0CHPAP5ynSUj0=.jpeg",
+        "sha256": "ec0d2f5f3053b1562ecb9e3828d96c7561de912fe23c2d021cf00fe729d2523d",
+        "size": 10482
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/com.theskillapp.skillapp/en-US/icon_TU17_L76jw_lxiSUIq8oIL1eoVmwAUeWr0EzD_88klQ=.png",
+        "sha256": "4d4d7bfcbefa8f0fe5c6249422af2820bd5ea159b0014796af41330fff3c9254",
+        "size": 14208
+      }
+    },
+    "issueTracker": "https://github.com/Jaimies/SkillApp/issues",
+    "lastUpdated": 1776321736942,
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-US": "SkillApp"
+    },
+    "preferredSigner": "83cd3bc11e211fb8e40e4b1865f1cbefa59492111fc1e8160debba64de59c266",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.theskillapp.skillapp/en-US/phoneScreenshots/1.png",
+            "sha256": "7e64fffffefb9552733f33ea51d4da22b839dc865fdfe8000e14ddcd863b3adc",
+            "size": 952755
+          },
+          {
+            "name": "/com.theskillapp.skillapp/en-US/phoneScreenshots/2.png",
+            "sha256": "917628927f4853e25b41d3f1546981a868596df038c38708acca6e802bc0b166",
+            "size": 675584
+          },
+          {
+            "name": "/com.theskillapp.skillapp/en-US/phoneScreenshots/3.png",
+            "sha256": "800545757160777773ce648f200c08068125fdc24ef696f736c53122bd010a63",
+            "size": 493634
+          },
+          {
+            "name": "/com.theskillapp.skillapp/en-US/phoneScreenshots/4.png",
+            "sha256": "2ad3fc07497ff3d85846bf1fefbe59e951cd5531999a8e19197c0b2b18cdc4d3",
+            "size": 520232
+          },
+          {
+            "name": "/com.theskillapp.skillapp/en-US/phoneScreenshots/5.png",
+            "sha256": "19a09ec5f93744bb63815dd3954ddfdda95f053af942c5bbf26072637f41fc99",
+            "size": 545117
+          }
+        ],
+        "ru-RU": [
+          {
+            "name": "/com.theskillapp.skillapp/ru-RU/phoneScreenshots/1.png",
+            "sha256": "fdcd4dd71fb5c4ca4a2f2dffe6b803e5c10e21b671f9e1fa38c60e06622ab779",
+            "size": 996610
+          },
+          {
+            "name": "/com.theskillapp.skillapp/ru-RU/phoneScreenshots/2.png",
+            "sha256": "0bd39996eb3b6403b17882bbc639b88bdd0fec2ceebba98dbe0e7d3ccb452dc6",
+            "size": 690310
+          },
+          {
+            "name": "/com.theskillapp.skillapp/ru-RU/phoneScreenshots/3.png",
+            "sha256": "b03a99d15c560c1639a4ca60a16b874ae78f20ddf684543a4051f189b26da20c",
+            "size": 496890
+          },
+          {
+            "name": "/com.theskillapp.skillapp/ru-RU/phoneScreenshots/4.png",
+            "sha256": "b3bd37e9783c5007892ce1ae3b0818427ba3f58cacbd390124e8ff1f083d137d",
+            "size": 518281
+          },
+          {
+            "name": "/com.theskillapp.skillapp/ru-RU/phoneScreenshots/5.png",
+            "sha256": "0ed5b1139aa96069cb07ac52c330f8640342668dee6a362a98c33e4870581db8",
+            "size": 597132
+          }
+        ],
+        "uk": [
+          {
+            "name": "/com.theskillapp.skillapp/uk/phoneScreenshots/1.png",
+            "sha256": "e4505e458c40cc2f646920b2676d0768b13cb3050980790d2b8b97f639deee59",
+            "size": 990237
+          },
+          {
+            "name": "/com.theskillapp.skillapp/uk/phoneScreenshots/2.png",
+            "sha256": "ce6d74e7748b828b778a51bf9a74ee6306f4cf26c291450b779060520f56beae",
+            "size": 707143
+          },
+          {
+            "name": "/com.theskillapp.skillapp/uk/phoneScreenshots/3.png",
+            "sha256": "4d63dc30c38abab033c9fa1a2d4424021c465f7289ea795a84081a3074604ad5",
+            "size": 495976
+          },
+          {
+            "name": "/com.theskillapp.skillapp/uk/phoneScreenshots/4.png",
+            "sha256": "4a14d742fda1c2f38eed4d8be89223ef683d194002574b975cd348b129b780cb",
+            "size": 517597
+          },
+          {
+            "name": "/com.theskillapp.skillapp/uk/phoneScreenshots/5.png",
+            "sha256": "316add113268789cae55c314dc6cb343fd32c099008858d09fd736a7dbd080af",
+            "size": 564645
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/Jaimies/SkillApp",
+    "summary": {
+      "en-US": "Simple, fully offline time-tracking app",
+      "ru-RU": "\u041f\u0440\u043e\u0441\u0442\u043e\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0434\u043b\u044f \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432\u0440\u0435\u043c\u0435\u043d\u0438, \u0440\u0430\u0431\u043e\u0442\u0430\u044e\u0449\u0435\u0435 \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e \u043e\u0444\u0444\u043b\u0430\u0439\u043d.",
+      "uk": "\u041f\u0440\u043e\u0441\u0442\u0438\u0439 \u0434\u043e\u0434\u0430\u0442\u043e\u043a \u0434\u043b\u044f \u0432\u0456\u0434\u0441\u0442\u0435\u0436\u0443\u0432\u0430\u043d\u043d\u044f \u0447\u0430\u0441\u0443, \u0449\u043e \u043f\u0440\u0430\u0446\u044e\u0454 \u043f\u043e\u0432\u043d\u0456\u0441\u0442\u044e \u043e\u0444\u043b\u0430\u0439\u043d."
+    },
+    "webSite": "https://theskillapp.com/"
+  },
+  "version": {
+    "added": 1776321736942,
+    "file": {
+      "ipfsCIDv1": "bafybeicpho3pl6qti2oyjtvbpltc7z2xvh2drhr5bk6lmo45nizgzdhlpa",
+      "name": "/com.theskillapp.skillapp_357.apk",
+      "sha256": "7bfa1d7275b6ae6a2b8e45689ff92527886242915321736f6c7403ebcf1de4db",
+      "size": 3687299
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "83cd3bc11e211fb8e40e4b1865f1cbefa59492111fc1e8160debba64de59c266"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "com.theskillapp.skillapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 23,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 357,
+      "versionName": "4.1.0"
+    },
+    "src": {
+      "name": "/com.theskillapp.skillapp_357_src.tar.gz",
+      "sha256": "a6001aea57cad8de37f2d3889a26dd9f29c08c002c2c904db9312fe832da7656",
+      "size": 18461474
+    },
+    "whatsNew": {
+      "en-US": "- The app is now displayed edge-to-edge. In particular, this fixes overlapping with the status bar on Android 15 and higher\n- Added an option in the settings to view the introduction again\n",
+      "ru-RU": "- \u0418\u0441\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043e \u043d\u0430\u043b\u043e\u0436\u0435\u043d\u0438e \u0441\u0442\u0440\u043e\u043a\u0438 \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u044f \u043d\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043d\u0430 Android 15 \u0438 \u0431\u043e\u043b\u0435\u0435 \u043d\u043e\u0432\u044b\u0445 \u0432\u0435\u0440\u0441\u0438\u044f\u0445\n- \u0412 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0434\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u0430 \u043e\u043f\u0446\u0438\u044f \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0430 \u0432\u0432\u0435\u0434\u0435\u043d\u0438\u044f \u0435\u0449\u0451 \u0440\u0430\u0437\n",
+      "uk": "- \u0412\u0438\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043e \u043d\u0430\u043a\u043b\u0430\u0434\u0435\u043d\u043d\u044f \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u0438 \u043d\u0430 \u043f\u0430\u043d\u0435\u043b\u044c \u0441\u0442\u0430\u043d\u0443 \u043d\u0430 Android 15 \u0456 \u043d\u043e\u0432\u0456\u0448\u0438\u0445 \u0432\u0435\u0440\u0441\u0456\u044f\u0445\n- \u0412 \u043d\u0430\u043b\u0430\u0448\u0442\u0443\u0432\u0430\u043d\u043d\u044f \u0434\u043e\u0434\u0430\u043d\u0430 \u043e\u043f\u0446\u0456\u044f \u043f\u0435\u0440\u0435\u0433\u043b\u044f\u043d\u0443\u0442\u0438 \u0432\u0441\u0442\u0443\u043f \u0449\u0435 \u0440\u0430\u0437\n"
+    }
+  }
+}

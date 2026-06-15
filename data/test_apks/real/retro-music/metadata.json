@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "c1898e1fcef73ceb4b60e018561674ad37c71f61d051020ed05c3fe209743f89",
+    "index_size": 9159048,
+    "path": "data/test_apks/real/retro-music/retro-music.apk",
+    "sha256": "c1898e1fcef73ceb4b60e018561674ad37c71f61d051020ed05c3fe209743f89",
+    "size": 9159048,
+    "url": "https://f-droid.org/repo/code.name.monkey.retromusic_10660.apk"
+  },
+  "app": "Retro Music",
+  "categories": [
+    "Local Media Player",
+    "Multimedia"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "multimedia",
+    "local-media-player",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/code.name.monkey.retromusic/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "code.name.monkey.retromusic",
+  "proof_status": "report-generated",
+  "reason": "No-native media player with source tarball metadata, target SDK 36, and a medium APK/source size; useful for a richer AndroidX/Kotlin clean-candidate probe.",
+  "report": {
+    "detected_component_count": 6,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v6/report-real-retro-music",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v6/report-real-retro-music/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v6/report-real-retro-music/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v6/report-real-retro-music/sbom.cdx.json",
+    "sbom_component_count": 6,
+    "status": "ok"
+  },
+  "slug": "retro-music",
+  "source_repo": "https://github.com/RetroMusicPlayer/RetroMusicPlayer",
+  "source_tarball": {
+    "sha256": "a0da009210fbfe808149d5f63c4de4cbcf1800576f6c2177ab6da7bc6bfeea4c",
+    "size": 15957771,
+    "url": "https://f-droid.org/repo/code.name.monkey.retromusic_10660_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 10660,
+  "version_name": "6.6.0"
+}

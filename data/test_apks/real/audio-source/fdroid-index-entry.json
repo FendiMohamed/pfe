@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "added": 1727254245000,
+    "authorName": "gdzx",
+    "categories": [
+      "Multimedia",
+      "System"
+    ],
+    "changelog": "https://github.com/gdzx/audiosource/releases",
+    "description": {
+      "en-US": "<i>Audio Source</i> forwards Android microphone audio input to the PulseAudio daemon through ADB, so you can use your Android device as a USB microphone.\n\n<b>Requirements:</b>\n\n* Device with at least Android 4.0 (API level 14), but fully tested only on Android 10 (API level 29) so your mileage may vary.\n* GNU/Linux machine with:\n    * Android SDK Platform Tools (requires adb in PATH).\n    * PulseAudio or PipeWire with PulseAudio support (requires pactl in PATH).\n    * Python 3 (requires python3 in PATH).\n\nFor further details, see the project's documentation.\n"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/fr.dzx.audiosource/en-US/icon_HdbnocsPszRmKujLiCHm5MhYRcbWDj0F1l2FwyenZbU=.png",
+        "sha256": "1dd6e7a1cb0fb334662ae8cb8821e6e4c85845c6d60e3d05d65d85c327a765b5",
+        "size": 12886
+      }
+    },
+    "issueTracker": "https://github.com/gdzx/audiosource/issues",
+    "lastUpdated": 1773269930193,
+    "license": "MIT",
+    "name": {
+      "en-US": "Audio Source"
+    },
+    "preferredSigner": "02f25f26fd68c6bbbc79e484a8b7b218b919bb37dd0f18a18a5d7a26ccf33d45",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/fr.dzx.audiosource/en-US/phoneScreenshots/1.png",
+            "sha256": "7d67ec456eb80d88d999cd50e3f8157fd2f8f7548a81b41c8bb8953d80e6eb7d",
+            "size": 209391
+          }
+        ]
+      },
+      "sevenInch": {
+        "en-US": [
+          {
+            "name": "/fr.dzx.audiosource/en-US/sevenInchScreenshots/1.png",
+            "sha256": "7d67ec456eb80d88d999cd50e3f8157fd2f8f7548a81b41c8bb8953d80e6eb7d",
+            "size": 209391
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/gdzx/audiosource",
+    "summary": {
+      "en-US": "Use an Android device as a USB microphone"
+    }
+  },
+  "version": {
+    "added": 1773269930193,
+    "file": {
+      "ipfsCIDv1": "bafybeiakw7jabkx5ic2fllz5kboxphqdv3fqrlbujejpdvuv2eckean7k4",
+      "name": "/fr.dzx.audiosource_7.apk",
+      "sha256": "cd48532829f41060d3c9909daa5563a669394eb9dd00baf303b6db1b5b2db1fa",
+      "size": 1284104
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "02f25f26fd68c6bbbc79e484a8b7b218b919bb37dd0f18a18a5d7a26ccf33d45"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_MICROPHONE"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.RECORD_AUDIO"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 14,
+        "targetSdkVersion": 34
+      },
+      "versionCode": 7,
+      "versionName": "1.5"
+    },
+    "src": {
+      "name": "/fr.dzx.audiosource_7_src.tar.gz",
+      "sha256": "677aae2c9423e377d430c58615212175ae1f8a79f6f55cb148a3c7fed9ec3646",
+      "size": 302015
+    }
+  }
+}

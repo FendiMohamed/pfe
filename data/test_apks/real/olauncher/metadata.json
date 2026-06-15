@@ -1,0 +1,61 @@
+{
+  "apk": {
+    "expected_sha256": "3014016000aa67f1b2572955bb6424dc87015c04a22bc65108ae21bfb09184c3",
+    "index_size": 2304587,
+    "path": "data/test_apks/real/olauncher/olauncher.apk",
+    "sha256": "3014016000aa67f1b2572955bb6424dc87015c04a22bc65108ae21bfb09184c3",
+    "size": 2304587,
+    "url": "https://f-droid.org/repo/app.olauncher_105.apk"
+  },
+  "app": "Olauncher",
+  "categories": [
+    "Launcher"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "launcher",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/app.olauncher/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "app.olauncher",
+  "proof_status": "report-generated",
+  "reason": "Recent no-native launcher with source tarball metadata; tests a UI-heavy Java/Kotlin app family.",
+  "report": {
+    "detected_component_count": 2,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v2/report-real-olauncher",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v2/report-real-olauncher/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v2/report-real-olauncher/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "medium",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates.",
+        "Structural evidence is stronger than package-name evidence."
+      ],
+      "score": 0.4
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v2/report-real-olauncher/sbom.cdx.json",
+    "sbom_component_count": 2,
+    "status": "ok"
+  },
+  "slug": "olauncher",
+  "source_repo": "https://github.com/tanujnotes/Olauncher",
+  "source_tarball": {
+    "sha256": "b5650c78847e9c1b96997a5b51aeffeb68ed76488ac01d062f18269a4f9de440",
+    "size": 398351,
+    "url": "https://f-droid.org/repo/app.olauncher_105_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 105,
+  "version_name": "v6.4.2"
+}

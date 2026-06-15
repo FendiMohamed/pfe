@@ -1,0 +1,174 @@
+{
+  "metadata": {
+    "added": 1575331200000,
+    "authorName": "AndStatus",
+    "categories": [
+      "Calendar & Agenda",
+      "Task",
+      "Time"
+    ],
+    "changelog": "https://github.com/andstatus/todoagenda/blob/HEAD/README.md#changelog",
+    "description": {
+      "en-US": "Todo Agenda is home screen widgets for your Android device.\nIt displays a list of calendar events and tasks\nso that you can easily have a glimpse at your due, current and upcoming appointments.\n\nFeatures:\n\n* No advertising. Free and Open Source.\n* Displays all events from your calendars and task lists. Optionally shows past events.\n* Automatically updates when you add/delete/modify an event. Or you may update the list instantly.\n* Select only the calendars you want to see in the widget.\n* Create several widgets, if you need. Each widget will have its own settings, including layouts, colors, filters and selected calendars.\n* Customize background colors and transparency of different widget parts, text's black and white shading.\n* Scroll through the list of events. Use \"Go to Today\" button to return to today instantly.\n* Customize the text size of the widget.\n* Fully resizable widget with alternative layouts.\n* Indicators for alerts and recurring events.\n* Lock time zone when travelling to different time zones.\n* Turn off Widget or Day headers, event icons, Days from today, etc. and see only what you need.\n* Android 7.0+ supported. Supports Android tablets.\nFor the older devices please use <a href=\"https://f-droid.org/packages/com.plusonelabs.calendar/\">Todo Agenda for Android 4 - 7.0</a> app."
+    },
+    "featureGraphic": {
+      "en-US": {
+        "name": "/org.andstatus.todoagenda/en-US/featureGraphic_-zqDEBiDT0_AUFuy7DEvy0X5Iihglqg3VVD71l034C0=.png",
+        "sha256": "fb3a831018834f4fc0505bb2ec312fcb45f922286096a8375550fbd65d37e02d",
+        "size": 779649
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/org.andstatus.todoagenda/en-US/icon_I_i6pvWvqfWkNrC91-kUMeeMY0-Xbgcb8F4JENmFzfU=.png",
+        "sha256": "23f8baa6f5afa9f5a436b0bdd7e91431e78c634f976e071bf05e0910d985cdf5",
+        "size": 8521
+      }
+    },
+    "issueTracker": "https://github.com/andstatus/todoagenda/issues",
+    "lastUpdated": 1742725301000,
+    "license": "Apache-2.0",
+    "name": {
+      "en-US": "Todo Agenda",
+      "ru-RU": "Todo Agenda"
+    },
+    "preferredSigner": "9577dfe6de7ae7ce7b6be263548cf5f35f6abead640ca3895ad4e1c0b951c788",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/org.andstatus.todoagenda/en-US/phoneScreenshots/prefs-calendars.png",
+            "sha256": "5da3baeef321738d8f08ea28bd89854447aa58737d521d6a671649723bf835c2",
+            "size": 84789
+          },
+          {
+            "name": "/org.andstatus.todoagenda/en-US/phoneScreenshots/prefs-color-chooser.png",
+            "sha256": "95949de31f178ae9c67ba253a4c4f3feb4cff37b10e492ec1a0cb0f50171636b",
+            "size": 142245
+          },
+          {
+            "name": "/org.andstatus.todoagenda/en-US/phoneScreenshots/prefs-colors.png",
+            "sha256": "ad7b3321b24eac12a1146f75ccf8a3a685b117b2bb7203decd82314a2fcfc403",
+            "size": 78106
+          },
+          {
+            "name": "/org.andstatus.todoagenda/en-US/phoneScreenshots/prefs-event-filters.png",
+            "sha256": "fe20edae28f8e38ed0eb5ee65b914f091fca5c3b0891c2e1a18e712d7ac7c498",
+            "size": 70543
+          },
+          {
+            "name": "/org.andstatus.todoagenda/en-US/phoneScreenshots/prefs-overview.png",
+            "sha256": "776abbe84947f59cf9021d2b3263bf1be25f72a74efcb6f26541b0f0c975011e",
+            "size": 82202
+          },
+          {
+            "name": "/org.andstatus.todoagenda/en-US/phoneScreenshots/widget-compact.png",
+            "sha256": "5101d6a57ace39f7bb01163a7e661880e914590540116d40fbca9e00d3e9914d",
+            "size": 1394584
+          },
+          {
+            "name": "/org.andstatus.todoagenda/en-US/phoneScreenshots/widget-default.png",
+            "sha256": "224464ba7fa3404f6b7c257e8d7bdd706a22ce88dabd91cd13d81b57591a00cd",
+            "size": 257576
+          },
+          {
+            "name": "/org.andstatus.todoagenda/en-US/phoneScreenshots/widget-one-row.png",
+            "sha256": "8cc94001d6251aff4ae8611176e3fde308c96232dd6bd297a99bb69946383d2d",
+            "size": 1239865
+          }
+        ],
+        "ru-RU": [
+          {
+            "name": "/org.andstatus.todoagenda/ru-RU/phoneScreenshots/prefs-color-chooser.png",
+            "sha256": "66c9843715d4d0280f212a20afe19edc0eb8c00b985f824963fc93877742db34",
+            "size": 110798
+          },
+          {
+            "name": "/org.andstatus.todoagenda/ru-RU/phoneScreenshots/prefs-event-filters.png",
+            "sha256": "4e240f429337a1b7eda5f2c1d8e21b4b6d8c2bf17ed927c43fa4894e02a275cf",
+            "size": 194784
+          },
+          {
+            "name": "/org.andstatus.todoagenda/ru-RU/phoneScreenshots/prefs-overview.png",
+            "sha256": "bfc6220faedc91ec9ce670d763208d99b0ffd160a89af7760e493d5024d8e009",
+            "size": 212145
+          },
+          {
+            "name": "/org.andstatus.todoagenda/ru-RU/phoneScreenshots/widget-default-en.png",
+            "sha256": "7278055e68ad2d919af69403aa758bd923507799647cd45fdb92262f186298c4",
+            "size": 396935
+          },
+          {
+            "name": "/org.andstatus.todoagenda/ru-RU/phoneScreenshots/widget-default.png",
+            "sha256": "ee146dc1a3d35019b7a0982a03aa60fc3774644921c38143734a4fc5977646d8",
+            "size": 1164742
+          },
+          {
+            "name": "/org.andstatus.todoagenda/ru-RU/phoneScreenshots/widget-one-row.png",
+            "sha256": "1fda441f7c57542a5da9d3afe08fdf36375e13f9a57f30bb87a958f9f9d3eb7b",
+            "size": 366908
+          }
+        ]
+      },
+      "tenInch": {
+        "en-US": [
+          {
+            "name": "/org.andstatus.todoagenda/en-US/tenInchScreenshots/widget-collage.png",
+            "sha256": "279b4bbe0d950aebfd07123ade67324d25cd7be5dd1998455050964a73825984",
+            "size": 2494287
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/andstatus/todoagenda",
+    "summary": {
+      "en-US": "Home screen widgets displaying events from selected calendars and task lists",
+      "ru-RU": "\u0412\u0438\u0434\u0436\u0435\u0442\u044b \u0434\u043e\u043c\u0430\u0448\u043d\u0435\u0433\u043e \u044d\u043a\u0440\u0430\u043d\u0430, \u043e\u0442\u043e\u0431\u0440\u0430\u0436\u0430\u044e\u0442 \u0441\u043e\u0431\u044b\u0442\u0438\u044f \u0438\u0437 \u0432\u044b\u0431\u0440\u0430\u043d\u043d\u044b\u0445 \u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440\u0435\u0439 \u0438 \u0437\u0430\u0434\u0430\u0447"
+    }
+  },
+  "version": {
+    "added": 1742725301000,
+    "file": {
+      "ipfsCIDv1": "bafybeihvtrtr4mdkobbo7al62tprioc6tbnzqp2vrpis45siz43nuvywxi",
+      "name": "/org.andstatus.todoagenda_717.apk",
+      "sha256": "ab228dab8e350c74c73991cff165ff9b755477c812c6e2a7f4f8f6d3ce13a85a",
+      "size": 4280770
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "9577dfe6de7ae7ce7b6be263548cf5f35f6abead640ca3895ad4e1c0b951c788"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.READ_CALENDAR"
+        },
+        {
+          "name": "org.dmfs.permission.READ_TASKS"
+        },
+        {
+          "name": "org.tasks.permission.READ_TASKS"
+        },
+        {
+          "name": "org.andstatus.todoagenda.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 24,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 717,
+      "versionName": "4.13.3"
+    },
+    "src": {
+      "name": "/org.andstatus.todoagenda_717_src.tar.gz",
+      "sha256": "ec3b66ab8afddd381807c23dfa91e2778a4e1bde6058e694e4258ea8c2658d7a",
+      "size": 19706729
+    },
+    "whatsNew": {
+      "en-US": "v4.13.0. Ongoing events color, Current time line and Time until tag.\n",
+      "ru-RU": "v4.13.0. \u0426\u0432\u0435\u0442 \u0442\u0435\u043a\u0443\u0449\u0438\u0445 \u0441\u043e\u0431\u044b\u0442\u0438\u0439. \u041b\u0438\u043d\u0438\u044f \u0442\u0435\u043a\u0443\u0449\u0435\u0433\u043e \u0432\u0440\u0435\u043c\u0435\u043d\u0438. \u0412\u0440\u0435\u043c\u044f \u0434\u043e \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0435\u0433\u043e \u0441\u043e\u0431\u044b\u0442\u0438\u044f.\n"
+    }
+  }
+}

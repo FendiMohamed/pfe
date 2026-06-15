@@ -1,0 +1,83 @@
+﻿{
+  "apk_path": "data/test_apks/real/antennapod/antennapod.apk",
+  "apk_sha256": "8faee459f952e62e5c12be18620911b01c15b5fa0ee67768dcf8ae1e1a68b09c",
+  "apk_size": 12295036,
+  "dex_files": [
+    "classes.dex",
+    "classes2.dex",
+    "classes3.dex"
+  ],
+  "forensic_summary": {
+    "extraction_risk": "low",
+    "indicators": [],
+    "native_abis": [
+      "arm64-v8a",
+      "armeabi-v7a",
+      "x86",
+      "x86_64"
+    ],
+    "native_library_count": 4,
+    "nonstandard_dex_files": [],
+    "standard_dex_files": [
+      "classes.dex",
+      "classes2.dex",
+      "classes3.dex"
+    ],
+    "zip_entries": 1312
+  },
+  "has_multidex": true,
+  "manifest_metadata": {
+    "min_sdk": "21",
+    "package_name": "de.danoeh.antennapod",
+    "parse_error": null,
+    "parse_status": "parsed",
+    "permissions": [
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.ACCESS_WIFI_STATE",
+      "android.permission.BLUETOOTH",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "android.permission.INTERNET",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.VIBRATE",
+      "android.permission.WAKE_LOCK",
+      "de.danoeh.antennapod.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "target_sdk": "35",
+    "version_code": "3110495",
+    "version_name": "3.11.4"
+  },
+  "manifest_present": true,
+  "native_libraries": [
+    {
+      "abi": "arm64-v8a",
+      "filename": "libconscrypt_jni.so",
+      "path": "lib/arm64-v8a/libconscrypt_jni.so",
+      "sha256": "fd5a080ced130e2c2e7982cb9c82b5601fc84df61f41129dd0d3ecdbf2c96155",
+      "size": 2103592
+    },
+    {
+      "abi": "armeabi-v7a",
+      "filename": "libconscrypt_jni.so",
+      "path": "lib/armeabi-v7a/libconscrypt_jni.so",
+      "sha256": "009ee440620105adefff81c5af4fafd23aebefff5b8d03d7180212c02983b532",
+      "size": 1284028
+    },
+    {
+      "abi": "x86",
+      "filename": "libconscrypt_jni.so",
+      "path": "lib/x86/libconscrypt_jni.so",
+      "sha256": "a005cac24028f662269e969b13bca38fa7f759e1479eecbd4e48dba9cfdc889b",
+      "size": 2267028
+    },
+    {
+      "abi": "x86_64",
+      "filename": "libconscrypt_jni.so",
+      "path": "lib/x86_64/libconscrypt_jni.so",
+      "sha256": "9ee2eccb596cbbf5316572c11efa5ce4c2612ceba540c215b360e2750a665d87",
+      "size": 2501432
+    }
+  ],
+  "resources_arsc_present": true
+}

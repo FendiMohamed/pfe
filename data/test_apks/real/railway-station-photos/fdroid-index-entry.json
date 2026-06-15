@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "added": 1729414389000,
+    "authorName": "Railwaystations Team",
+    "categories": [
+      "Navigation"
+    ],
+    "description": {
+      "de-DE": "Mit der Bahnhofsfotos-App kannst Du das OpenData Projekt https://railway-Stations.org unterst\u00fctzen. W\u00e4hle ein Land und finde Bahnh\u00f6fe zu denen wir noch kein Bahnhofsfoto auf http://www.deutschlands-bahnhoefe.de / https://railway-stations.org haben. Inzwischen sind \u00fcber 20 L\u00e4nder in unserer Datenbank. Weitere werden St\u00fcck f\u00fcr St\u00fcck hinzugef\u00fcgt.\n\nIm Men\u00fcpunkt \"Deine Daten\" gibst Du an, wie Du die Fotos schicken m\u00f6chtest - als verlinkter Fotograf oder anonym, mit Lizenz ohne Namensnennung und ob Du das Foto selbst geknipst hast. Wenn Du verlinkt werden m\u00f6chtest, ben\u00f6tigen wir den Link und den Nicknamen zu z.B. Deinem Twitter-Account.\nWenn Du einen Token anforderst, kannst Du Deine Fotos auch hochladen.\n\nMittles Klick auf das Suchsymbol oben im Startbildschirm, kannst Du eine Volltextsuche ausl\u00f6sen.\n\nIm Men\u00fcpunkt \"Bahnhofskarte\" kannst Du Deinen Standord ermitteln und Bahnh\u00f6fe in der N\u00e4he finden. Es l\u00e4sst sich filtern, ob Du nur Bahnh\u00f6fe mit oder ohne Foto sehen m\u00f6chtest. \n\nMelde inaktive oder fehlende Bahnh\u00f6fe \u00fcber die App.\n\nDu kannst auch ausw\u00e4hlen, ob Du benachrichtigt werden m\u00f6chtest, wenn sich ein Bahnhof in unmittelbarer N\u00e4he befindet.\n",
+      "en-US": "Support the https://railway-stations.org OpenData project with the Railway stations photo app. Select a country and find a station without a photo. Over 20 countries are already in our database, more to be added step by step.\n\nCreate an account under \"My Data\". You can contribute photos anonymously or with your nicknamen. If you like you can define a link to a social media profile of yours, e.g. Twitter, then we add it to all of your uploaded photos.\n\nWith the station map you can find your location and stations nearby. Stations can be filtered by if they already have a photo or not. You can mark a station as inactive or report missing stations by long clicking on the position on the map.\n\nYou can enable notifications of nearby stations when you are on a tour.\n",
+      "fr-FR": "Soutenez le projet OpenData https://railway-stations.org avec l'application \u00ab Railway stations \u00bb de prise de photo de gares. S\u00e9lectionnez un pays et trouvez une gare sans photo. Plus de 20 pays sont d\u00e9j\u00e0 impl\u00e9ment\u00e9s dans notre base de donn\u00e9es, davantage devant \u00eatre ajout\u00e9s pas \u00e0 pas.\n\nCr\u00e9ez un compte sous \u00ab Mes donn\u00e9es \u00bb. Vous pouvez contribuer avec des photos anonymement ou avec un pseudo. Si vous le souhaitez, vous pouvez d\u00e9finir un lien vers un profil de r\u00e9seau social vous appartenant, par exemple X, que nous ajouterons ensuite \u00e0 toutes vos photos envoy\u00e9es.\n\nDepuis la carte des gares, vous pouvez trouver votre contr\u00e9e, ainsi que les gares \u00e0 proximit\u00e9. Les gares peuvent \u00eatre tri\u00e9es de fa\u00e7on \u00e0 s\u00e9parer celles qui comportent d\u00e9j\u00e0 une photo de celles qui n'en ont pas. Vous pouvez marquer une gare comme inactive ou signaler une gare manquante en appuyant longuement \u00e0l'endroit de sa position sur la carte.\n\nVous pouver aussi recevoir des notifications provenant des gares proches lors de vos voyages.\n",
+      "pt-BR": "Apoie o projeto de dados abertos https://railway-stations.org com o aplicativo de fotos de esta\u00e7\u00f5es ferrovi\u00e1rias. Selecione um pa\u00eds e encontre uma esta\u00e7\u00e3o sem foto. Mais de 20 pa\u00edses j\u00e1 est\u00e3o em nosso banco de dados, e mais ser\u00e3o adicionados gradualmente.\n\nCrie uma conta em \"Meus dados\". Voc\u00ea pode contribuir com fotos anonimamente ou com seu apelido. Se desejar, voc\u00ea pode definir um link para um perfil seu nas redes sociais, p. ex., X, e n\u00f3s o adicionaremos a todas as suas fotos enviadas.\n\nCom o mapa de esta\u00e7\u00f5es, voc\u00ea pode encontrar sua localiza\u00e7\u00e3o e as esta\u00e7\u00f5es pr\u00f3ximas. As esta\u00e7\u00f5es podem ser filtradas por j\u00e1 terem ou n\u00e3o uma foto. Voc\u00ea pode marcar uma esta\u00e7\u00e3o como inativa ou relatar esta\u00e7\u00f5es ausentes clicando longamente na posi\u00e7\u00e3o no mapa.\n\nVoc\u00ea pode ativar notifica\u00e7\u00f5es de esta\u00e7\u00f5es pr\u00f3ximas quando estiver em uma viagem.\n"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/de.bahnhoefe.deutschlands.bahnhofsfotos/en-US/icon_1booBVUVWp0IWs6wyPf-lT8Bvxpux2SYEvzUL_voLbI=.png",
+        "sha256": "d5ba280555155a9d085aceb0c8f7fe953f01bf1a6ec7649812fcd42ffbe82db2",
+        "size": 17097
+      }
+    },
+    "issueTracker": "https://codeberg.org/RailwayStations/RSAndroidApp/issues",
+    "lastUpdated": 1770554824000,
+    "liberapay": "Railway-Stations.org",
+    "license": "MIT",
+    "name": {
+      "de-DE": "Bahnhofsfotos",
+      "en-US": "Railway station photos",
+      "fr-FR": "Photos de Gares",
+      "pt-BR": "Fotos de esta\u00e7\u00f5es ferrovi\u00e1rias"
+    },
+    "preferredSigner": "88352051351be1cc46a202f3a1b493e7a446a7f3f50fd22ebcd8657c358e9ef8",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/de.bahnhoefe.deutschlands.bahnhofsfotos/en-US/phoneScreenshots/1-main-screen.png",
+            "sha256": "ce0fa270411c4299821b4238330cab17a203a14e5d060489bc4ac15177ce3e03",
+            "size": 95585
+          },
+          {
+            "name": "/de.bahnhoefe.deutschlands.bahnhofsfotos/en-US/phoneScreenshots/2-station-details.png",
+            "sha256": "cd6f8d38e7c73583fba8983c21abcdbf13b8761495e841794923f1b7469384d6",
+            "size": 698341
+          },
+          {
+            "name": "/de.bahnhoefe.deutschlands.bahnhofsfotos/en-US/phoneScreenshots/3-search-station.png",
+            "sha256": "3391d7e4099fe1f8a06080a3951b4ed48394974a64f2b9d85a45b040c060d90c",
+            "size": 144712
+          },
+          {
+            "name": "/de.bahnhoefe.deutschlands.bahnhofsfotos/en-US/phoneScreenshots/4-highscore.png",
+            "sha256": "aaa4589f07c24684997a335967e7b87ebd6538b6fa467fee5847a7aeddf8b6c3",
+            "size": 89588
+          },
+          {
+            "name": "/de.bahnhoefe.deutschlands.bahnhofsfotos/en-US/phoneScreenshots/5-station-map.png",
+            "sha256": "5a5894b3282898c362e442124c3a0ed1739619387bd5957b2454a2ed832e03b0",
+            "size": 969022
+          },
+          {
+            "name": "/de.bahnhoefe.deutschlands.bahnhofsfotos/en-US/phoneScreenshots/6-navigation-options.png",
+            "sha256": "0d5ece97d14f9d81af3505f70cbe240950a4c92ce06c368320342ccc13e623e7",
+            "size": 190009
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://codeberg.org/RailwayStations/RSAndroidApp",
+    "summary": {
+      "de-DE": "Sammle Bahnhofsfotos f\u00fcr https://railway-stations.org",
+      "en-US": "Collect photos of railway stations for https://railway-stations.org",
+      "fr-FR": "Recueillez des photos de gares pour https://railway-stations.org",
+      "pt-BR": "Colete fotos de esta\u00e7\u00f5es ferrovi\u00e1rias para https://railway-stations.org"
+    },
+    "translation": "https://translate.codeberg.org/projects/railwaystations-android-app",
+    "webSite": "https://railway-stations.org"
+  },
+  "version": {
+    "added": 1770554824000,
+    "file": {
+      "ipfsCIDv1": "bafybeicxvsdxzxtj56z7kgr7balmtoef74w3yscl7z4p2776rckxvj3zku",
+      "name": "/de.bahnhoefe.deutschlands.bahnhofsfotos_97.apk",
+      "sha256": "1e06f01b39221ac543ff3817ab5a9465cfc40e1d61823057eebedd7f2d206a24",
+      "size": 8985729
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "88352051351be1cc46a202f3a1b493e7a446a7f3f50fd22ebcd8657c358e9ef8"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "de.bahnhoefe.deutschlands.bahnhofsfotos.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 97,
+      "versionName": "16.4.0"
+    },
+    "src": {
+      "name": "/de.bahnhoefe.deutschlands.bahnhofsfotos_97_src.tar.gz",
+      "sha256": "59358d5f2fd35603e822bfeaa5b66d120eaf304e36de3815bc1f370919d7a53f",
+      "size": 3400213
+    },
+    "whatsNew": {
+      "de-DE": "- Abh\u00e4ngigkeiten aktualisiert\n- \u00dcbersetzungen aktualisiert\n",
+      "en-US": "- update dependencies\n- update translations"
+    }
+  }
+}

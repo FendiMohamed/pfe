@@ -1,0 +1,174 @@
+{
+  "metadata": {
+    "added": 1677151836000,
+    "authorName": "woheller69",
+    "categories": [
+      "Internet",
+      "Weather"
+    ],
+    "description": {
+      "de-DE": "Wetter und Regenradar f\u00fcr jeden Ort - weltweit\n\nDie Wetterdaten werden \u00fcber die freie API von Open-Meteo.com und RainViewer.com bereitgestellt.\n\nFeatures:\n- Aktuelles Wetter\n- St\u00fcndliches Wetter f\u00fcr bis zu 16 Tage\n- Regenradar\n- Widget mit optionaler automatischer GPS-Positionsaktualisierung\n- Keine Werbung\n\nMinimale Berechtigungen:\nCirrus ben\u00f6tigt nur ein Minimum an Berechtigungen, n\u00e4mlich nur die INTERNET-Berechtigung. Diese ist n\u00f6tig, um HTTP-Anfragen an entfernte Server zu stellen, um Wetterdaten zu erhalten.\nOptional: Berechtigung f\u00fcr GPS.\n\n\n",
+      "en-US": "Weather and rain radar for any location - worldwide\n\nWeather data is provided via the free API from Open-Meteo.com and RainViewer.com.\n\nFeatures:\n- Current weather\n- Hourly forecasts for up to 16 days\n- Rain radar\n- Widget with optional GPS auto position update\n- No advertisement\n\nMinimum permissions:\nCirrus only requires the minimum amount of permission, namely only the INTERNET permission. This permission is necessary to make HTTP requests to remote servers for retrieving weather data.\nOptional: authorization for GPS.\n",
+      "pl-PL": "Radar pogodowy i deszczowy dla dowolnej lokalizacji - na ca\u0142ym \u015bwiecie\n\nDane pogodowe s\u0105 dostarczane za po\u015brednictwem bezp\u0142atnego interfejsu API z Open-Meteo.com i RainViewer.com.\n\nCechy:\n- Obecna pogoda\n- Prognozy godzinowe do 16 dni\n- Radar deszczowy\n- Wid\u017cet z opcjonaln\u0105 automatyczn\u0105 aktualizacj\u0105 pozycji GPS\n- \u017badnych reklam\n\nMinimalne uprawnienia:\nCirrus wymaga tylko minimalnej ilo\u015bci uprawnie\u0144, a mianowicie tylko uprawnie\u0144 INTERNETOWYCH. To uprawnienie jest niezb\u0119dne do wysy\u0142ania \u017c\u0105da\u0144 HTTP do zdalnych serwer\u00f3w w celu pobrania danych pogodowych.\nOpcjonalnie: autoryzacja dla GPS.\n",
+      "uk-UA": "\u041f\u043e\u0433\u043e\u0434\u0430 \u0442\u0430 \u0440\u0430\u0434\u0430\u0440 \u0434\u043e\u0449\u0443 \u0434\u043b\u044f \u0431\u0443\u0434\u044c-\u044f\u043a\u043e\u0433\u043e \u043c\u0456\u0441\u0446\u0435\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u043d\u044f \u043f\u043e \u0432\u0441\u044c\u043e\u043c\u0443 \u0441\u0432\u0456\u0442\u0443\n\n\u0414\u0430\u043d\u0456 \u043f\u0440\u043e \u043f\u043e\u0433\u043e\u0434\u0443 \u043d\u0430\u0434\u0430\u044e\u0442\u044c\u0441\u044f \u0447\u0435\u0440\u0435\u0437 \u0431\u0435\u0437\u043a\u043e\u0448\u0442\u043e\u0432\u043d\u0438\u0439 API \u0432\u0456\u0434 Open-Meteo.com \u0456 RainViewer.com.\n\n\u041e\u0441\u043e\u0431\u043b\u0438\u0432\u043e\u0441\u0442\u0456:\n- \u041f\u043e\u0442\u043e\u0447\u043d\u0430 \u043f\u043e\u0433\u043e\u0434\u0430\n- \u041f\u043e\u0433\u043e\u0434\u0438\u043d\u043d\u0438\u0439 \u043f\u0440\u043e\u0433\u043d\u043e\u0437 \u0434\u043e 16 \u0434\u043d\u0456\u0432\n- \u0420\u0430\u0434\u0430\u0440 \u0434\u043e\u0449\u0443\n- \u0412\u0456\u0434\u0436\u0435\u0442 \u0456\u0437 \u0434\u043e\u0434\u0430\u0442\u043a\u043e\u0432\u0438\u043c \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u043d\u0438\u043c \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044f\u043c \u043f\u043e\u0437\u0438\u0446\u0456\u0457 GPS\n- \u0411\u0435\u0437 \u0440\u0435\u043a\u043b\u0430\u043c\u0438\n\n\u041c\u0456\u043d\u0456\u043c\u0430\u043b\u044c\u043d\u0456 \u0434\u043e\u0437\u0432\u043e\u043b\u0438:\nCirrus \u0432\u0438\u043c\u0430\u0433\u0430\u0454 \u043b\u0438\u0448\u0435 \u043c\u0456\u043d\u0456\u043c\u0430\u043b\u044c\u043d\u043e\u0457 \u043a\u0456\u043b\u044c\u043a\u043e\u0441\u0442\u0456 \u0434\u043e\u0437\u0432\u043e\u043b\u0456\u0432, \u0430 \u0441\u0430\u043c\u0435 \u0434\u043e\u0437\u0432\u043e\u043b\u0443 \u0406\u041d\u0422\u0415\u0420\u041d\u0415\u0422. \u0426\u0435\u0439 \u0434\u043e\u0437\u0432\u0456\u043b \u043d\u0435\u043e\u0431\u0445\u0456\u0434\u043d\u0438\u0439 \u0434\u043b\u044f \u043d\u0430\u0434\u0441\u0438\u043b\u0430\u043d\u043d\u044f HTTP-\u0437\u0430\u043f\u0438\u0442\u0456\u0432 \u0434\u043e \u0432\u0456\u0434\u0434\u0430\u043b\u0435\u043d\u0438\u0445 \u0441\u0435\u0440\u0432\u0435\u0440\u0456\u0432 \u0434\u043b\u044f \u043e\u0442\u0440\u0438\u043c\u0430\u043d\u043d\u044f \u0434\u0430\u043d\u0438\u0445 \u043f\u0440\u043e \u043f\u043e\u0433\u043e\u0434\u0443.\n\u0414\u043e\u0434\u0430\u0442\u043a\u043e\u0432\u043e: \u0430\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0456\u044f \u0434\u043b\u044f GPS.\n"
+    },
+    "featureGraphic": {
+      "en-US": {
+        "name": "/org.woheller69.omweather/en-US/featureGraphic_pgtm-E6LwMyVqR07JounyJRjCG36T9HdeqHyquQVt4Y=.png",
+        "sha256": "a60b66f84e8bc0cc95a91d3b268ba7c89463086dfa4fd1dd7aa1f2aae415b786",
+        "size": 248063
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/org.woheller69.omweather/en-US/icon_E3rAVMKaoXV3S6EdjZbr8Ah3yVuGV4teI7GOx4SRxl4=.png",
+        "sha256": "137ac054c29aa175774ba11d8d96ebf00877c95b86578b5e23b18ec78491c65e",
+        "size": 41989
+      }
+    },
+    "issueTracker": "https://github.com/woheller69/omweather/issues",
+    "lastUpdated": 1778872699860,
+    "license": "GPL-3.0-only",
+    "name": {
+      "de-DE": "Cirrus",
+      "en-US": "Cirrus"
+    },
+    "preferredSigner": "7cb8326b359fcf06101cf0337b56af89e3952b711c9a00ffdc7f7b2f8c09d85b",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/org.woheller69.omweather/en-US/phoneScreenshots/01.png",
+            "sha256": "2b76eddc1ccd0eaf98b79cf07d9e7b89b5b9e02fd678a73f22a7f6c28068e28d",
+            "size": 73593
+          },
+          {
+            "name": "/org.woheller69.omweather/en-US/phoneScreenshots/02.png",
+            "sha256": "b83b6f124cb6ea827aa919328ee4e5e025826c458f1453d981bf57657c9bad1e",
+            "size": 85744
+          },
+          {
+            "name": "/org.woheller69.omweather/en-US/phoneScreenshots/03.png",
+            "sha256": "17bb15938a6c1c89116312f23b68e51fe55d804ef86f567bb957ba2e4dfa5b6e",
+            "size": 896441
+          },
+          {
+            "name": "/org.woheller69.omweather/en-US/phoneScreenshots/04.png",
+            "sha256": "b63de52353e9d8035932cbca29afcb3a256773512ddf6977cf8cd2f498ea62f0",
+            "size": 63184
+          },
+          {
+            "name": "/org.woheller69.omweather/en-US/phoneScreenshots/05.png",
+            "sha256": "e1445b34bca5f7f5e8d0f39afc5a1aaf3424aaed55267121a36d0684679f745c",
+            "size": 38018
+          },
+          {
+            "name": "/org.woheller69.omweather/en-US/phoneScreenshots/06.png",
+            "sha256": "32f705db0e17b62777c5d1bad2814afc21044f4f672723532577675f343dff83",
+            "size": 240094
+          },
+          {
+            "name": "/org.woheller69.omweather/en-US/phoneScreenshots/07.png",
+            "sha256": "3b1c1d8e6a297667cfa059a3c3e203c022e12167c1e2b2cccce8f80845abd63b",
+            "size": 123312
+          },
+          {
+            "name": "/org.woheller69.omweather/en-US/phoneScreenshots/08.png",
+            "sha256": "46a6eebe58dd75f66f0e018095574b85ba90295f9bfef55d29ce547a6984a359",
+            "size": 69048
+          },
+          {
+            "name": "/org.woheller69.omweather/en-US/phoneScreenshots/09.png",
+            "sha256": "e87220df74ed1ab1ff8c6bdce6f3973bf627fe81fa03c32b8e23898e6480ceb8",
+            "size": 41942
+          },
+          {
+            "name": "/org.woheller69.omweather/en-US/phoneScreenshots/10.png",
+            "sha256": "4137b6ebec9fa9bf4403f7554f57569c7ca15243483eef0e94c714206af95a3e",
+            "size": 308701
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/woheller69/omweather",
+    "summary": {
+      "de-DE": "Wetter und Regenradar f\u00fcr jeden Ort - weltweit",
+      "en-US": "Weather and rain radar for any location - worldwide",
+      "pl-PL": "Radar pogodowy i deszczowy dla dowolnej lokalizacji - na ca\u0142ym \u015bwiecie",
+      "uk-UA": "\u041f\u043e\u0433\u043e\u0434\u0430 \u0442\u0430 \u0440\u0430\u0434\u0430\u0440 \u0434\u043e\u0449\u0443 \u0434\u043b\u044f \u0431\u0443\u0434\u044c-\u044f\u043a\u043e\u0433\u043e \u043c\u0456\u0441\u0446\u0435\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u043d\u044f \u043f\u043e \u0432\u0441\u044c\u043e\u043c\u0443 \u0441\u0432\u0456\u0442\u0443"
+    }
+  },
+  "version": {
+    "added": 1778872699860,
+    "antiFeatures": {
+      "TetheredNet": {
+        "en-US": "Weather/Geocoding data is provided by Open-Meteo.com"
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeietbqos3nujxbhidkiiybniptvty6bevyswbrlnprbrk27nqi74gy",
+      "name": "/org.woheller69.omweather_47.apk",
+      "sha256": "b75aa6d349c24988ebfbfab482f55358308aeee37ead822f927f0710d448b778",
+      "size": 11421115
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "7cb8326b359fcf06101cf0337b56af89e3952b711c9a00ffdc7f7b2f8c09d85b"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_BACKGROUND_LOCATION"
+        },
+        {
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "org.woheller69.omweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 47,
+      "versionName": "4.7"
+    },
+    "src": {
+      "name": "/org.woheller69.omweather_47_src.tar.gz",
+      "sha256": "8ee4b3b98ecd208c1899dbf840b350c5122cfc7f89bba52506c2ad494d778b95",
+      "size": 5946864
+    },
+    "whatsNew": {
+      "en-US": "RainViewer: fix max zoom\nCode improvement"
+    }
+  }
+}

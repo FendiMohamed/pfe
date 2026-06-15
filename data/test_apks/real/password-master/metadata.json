@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "986ff17d4836019378b9d8c76e7b97d3fb5f835dd4783441277fc285501a6023",
+    "index_size": 8781975,
+    "path": "data/test_apks/real/password-master/password-master.apk",
+    "sha256": "986ff17d4836019378b9d8c76e7b97d3fb5f835dd4783441277fc285501a6023",
+    "size": 8781975,
+    "url": "https://f-droid.org/repo/com.vecturagames.android.app.passwordmaster_15.apk"
+  },
+  "app": "Password Master",
+  "categories": [
+    "Password & 2FA",
+    "Security"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "security",
+    "password-manager",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.vecturagames.android.app.passwordmaster/",
+  "license": "Apache-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.vecturagames.android.app.passwordmaster",
+  "proof_status": "report-generated",
+  "reason": "No-native password/security utility with target SDK 36 and source tarball metadata; selected to add a compact security row outside KeePassDX and Password Generator.",
+  "report": {
+    "detected_component_count": 18,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-password-master",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-password-master/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-password-master/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-password-master/sbom.cdx.json",
+    "sbom_component_count": 18,
+    "status": "ok"
+  },
+  "slug": "password-master",
+  "source_repo": "https://gitlab.com/vecturagames/passwordmaster",
+  "source_tarball": {
+    "sha256": "5fdbf1e46a6526f0435085a4bfc05e2c5273347d470924de756180034e960261",
+    "size": 3254380,
+    "url": "https://f-droid.org/repo/com.vecturagames.android.app.passwordmaster_15_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 15,
+  "version_name": "1.5.1"
+}

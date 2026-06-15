@@ -1,0 +1,51 @@
+{
+  "title": "LibD: Scalable and Precise Third-party Library Detection in Android Markets",
+  "authors": ["Menghan Li", "Wei Wang", "Peiming Wang", "Shuai Wang", "Dinghao Wu", "Jian Liu", "Rui Xue", "Wei Huo"],
+  "year": 2017,
+  "venue": "IEEE/ACM International Conference on Software Engineering (ICSE)",
+  "tool_name": "LibD",
+  "category": "clustering-based",
+  "detection_method": "Homogeny graph using Inclusion, Inheritance, and Call relations to recover library boundaries from bytecode; feature hashing via CFG opcode per basic block → method hash → class hash → instance fingerprint",
+  "module_decoupling": "Homogeny graph — builds graph of class relations (inclusion, inheritance, call edges) and partitions it to recover library boundaries without relying on package names",
+  "features_used": [
+    "CFG opcodes per basic block",
+    "Method-level hash chains",
+    "Class-level hash aggregation",
+    "Inclusion relations",
+    "Inheritance relations",
+    "Call relations"
+  ],
+  "matching_algorithm": "Instance fingerprint matching via hierarchical hash chain (block → method → class → instance); clustering-based detection requires library to appear in ≥10 apps",
+  "obfuscation_handling": "Opcode hashing inherently resilient to name-based obfuscation; homogeny graph handles package structure mutations since it uses structural relations not package names",
+  "r8_resilience": "Not explicitly tested (pre-R8 era; tested on ProGuard-obfuscated apps)",
+  "lib_level_f1": "Not explicitly reported as F1 — detected 1,954 libraries vs LibRadar's 670 on 1.4M apps",
+  "version_level_f1": "None — no version-level detection (clustering only)",
+  "class_level_f1": "Not reported",
+  "precision": "False positive rate 25% vs LibRadar's 60.6% (precision inversely inferred ~75%)",
+  "recall": "Higher than LibRadar (found 1,954 vs 670 libraries); absolute recall not computable without ground truth for 1.4M apps",
+  "speed": "Scalable to 1.4M apps (specific per-app timing not reported)",
+  "dataset_size": "1.4 million apps from 10 Android markets",
+  "partial_lib_handling": "None — library must appear in ≥10 apps (binary threshold), no partial score",
+  "sbom_output": "No — outputs library name list only, no version info, no standard format",
+  "open_source": "No — reproducibility limited; no public repository found",
+  "cve_mapping": "No — no CVE mapping capability",
+  "transitive_deps": "No — does not model dependency chains between libraries",
+  "strengths": [
+    "Massive scale — evaluated on 1.4M apps across 10 markets",
+    "Homogeny graph recovers library boundaries without relying on package names (structural approach)",
+    "Opcode hashing inherently resilient to name-based obfuscation",
+    "Lower false positive rate (25%) than LibRadar (60.6%)",
+    "Ghost call detection — discovers calls to nonexistent functions revealing hidden behavior",
+    "Found google/gson had 421 packaging variations, demonstrating scale of packaging diversity"
+  ],
+  "weaknesses": [
+    "No version-level detection — clustering only, cannot distinguish library versions",
+    "Threshold requirement (≥10 apps) misses rare or app-specific libraries",
+    "25% false positive rate still significant",
+    "No partial library inclusion scoring",
+    "No SBOM output",
+    "No CVE mapping",
+    "Not open source / reproducibility limited"
+  ],
+  "impact_on_project": "Demonstrates that opcode-based hashing and structural dependency graphs (not package names) are the right direction for obfuscation-resilient library detection. The homogeny graph concept for module decoupling is a precursor to CDG-based approaches and validates that structural relations survive obfuscation better than naming conventions. The ghost call detection technique is valuable for uncovering hidden/dependency behavior. However, the lack of version-level detection means LibD alone is insufficient for SBOM generation — version identification must be added. The 421 packaging variations of gson highlight the scale of the version-identification challenge."
+}

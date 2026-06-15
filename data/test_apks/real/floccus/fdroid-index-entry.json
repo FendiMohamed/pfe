@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "added": 1653436800000,
+    "authorName": "Marcel Klehr",
+    "authorWebSite": "https://floccus.org/",
+    "categories": [
+      "Bookmark",
+      "Internet",
+      "Reading"
+    ],
+    "changelog": "https://github.com/floccusaddon/floccus/releases",
+    "description": {
+      "en-US": "Manage and synchronize your bookmarks via Nextcloud, or any WebDAV service, or any Git service, or Google Drive, or Dropbox, end-to-end encrypted, if you want.\n\nThis is the standalone bookmarks manager android app variant of floccus. You can also install floccus on your Desktop browsers to sync bookmarks with them. This App, due to technical reasons, cannot access bookmarks in your mobile browser apps directly, which is why you can only view them in the app or import and export them as a html file.\n\nMore information on https://floccus.org\n\nSupport\n\nIf you'd like to support the creation and maintenance of this software, you can donate here:\nhttps://floccus.org/donate/\n\nProblems?\n\nPlease file bug reports or requests for help over on Github:\nhttps://github.com/floccusaddon/floccus\n\nLegal\n\nLicense: https://github.com/marcelklehr/floccus/blob/master/LICENSE.txt\n\nPrivacy Policy: https://github.com/marcelklehr/floccus/blob/master/PRIVACY_POLICY.md"
+    },
+    "donate": [
+      "https://www.paypal.com/donate/?hosted_button_id=R3SDCC7AFSYZU"
+    ],
+    "featureGraphic": {
+      "en-US": {
+        "name": "/org.handmadeideas.floccus/en-US/featureGraphic__S94RCYSc32T7O-jfsSnbItn53Ll3y_802yMetv2HAI=.png",
+        "sha256": "fd2f78442612737d93ecefa37ec4a76c8b67e772e5df2ffcd36c8c7adbf61c02",
+        "size": 36501
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/org.handmadeideas.floccus/en-US/icon_ZOWxMHzNpSx8fxUsXD2HIWp9bM8yPwk8rgJTYsAVrrA=.png",
+        "sha256": "64e5b1307ccda52c7c7f152c5c3d87216a7d6ccf323f093cae025362c015aeb0",
+        "size": 4149
+      }
+    },
+    "issueTracker": "https://github.com/floccusaddon/floccus/issues",
+    "lastUpdated": 1775982620185,
+    "liberapay": "marcelklehr",
+    "license": "MPL-2.0",
+    "name": {
+      "en-US": "floccus bookmark sync"
+    },
+    "openCollective": "floccus",
+    "preferredSigner": "ed70ee84eb35bbbf8756c7b2d5afb86ecabadd074f6579ecef5cd74fc893cc12",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/org.handmadeideas.floccus/en-US/phoneScreenshots/01.png",
+            "sha256": "287fb1613249b61b41385eac2669df0ef526d2d19d531bb118d87a76b02b8fb7",
+            "size": 480820
+          },
+          {
+            "name": "/org.handmadeideas.floccus/en-US/phoneScreenshots/02.png",
+            "sha256": "0f66eeabec50a4813893405085f47ec77e88c66b92ba3767f8ceb292c9206df8",
+            "size": 438888
+          },
+          {
+            "name": "/org.handmadeideas.floccus/en-US/phoneScreenshots/03.png",
+            "sha256": "8785d6eb781e4a66556dbabd4f534055ffd44df16907cb634d1c84ccd398a516",
+            "size": 230193
+          },
+          {
+            "name": "/org.handmadeideas.floccus/en-US/phoneScreenshots/04.png",
+            "sha256": "da776a47d8094ef71fa63039564df835125077a860edb128a9804a42d6838697",
+            "size": 350356
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/floccusaddon/floccus",
+    "summary": {
+      "en-US": "Sync your bookmarks privately across browsers and devices"
+    },
+    "webSite": "https://floccus.org/"
+  },
+  "version": {
+    "added": 1775982620185,
+    "file": {
+      "ipfsCIDv1": "bafybeidsruvinfgfj2k44vzryndsgelfmlx7odn3igvehd5bpn6rr4j3ye",
+      "name": "/org.handmadeideas.floccus_5009001.apk",
+      "sha256": "fb59edee44f8c3ac0cbedc21046ec5e0ec376391475c6b7b159f62669ef5dd62",
+      "size": 17915743
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "ed70ee84eb35bbbf8756c7b2d5afb86ecabadd074f6579ecef5cd74fc893cc12"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "org.handmadeideas.floccus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 23,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 5009001,
+      "versionName": "5.9.1"
+    },
+    "src": {
+      "name": "/org.handmadeideas.floccus_5009001_src.tar.gz",
+      "sha256": "946a3007486cb727c35321fe6f2d813b13ed44f452bd956b19b63986de138800",
+      "size": 104872038
+    }
+  }
+}

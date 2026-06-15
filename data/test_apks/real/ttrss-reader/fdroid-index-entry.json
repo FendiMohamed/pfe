@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "added": 1295654400000,
+    "authorName": "Nils Braden",
+    "categories": [
+      "Internet",
+      "News"
+    ],
+    "changelog": "https://github.com/nilsbraden/ttrss-reader-fork/wiki/Changelog",
+    "description": {
+      "en-US": "An offline reader that works with the Tiny Tiny RSS (also known as ttrss or\ntt-rss) web-based feed reader/aggregator.\n\n<b>Features:</b>\n\n* Swipe for faster browsing\n* Optional navigation with volume-buttons\n* View and download attached media files\n* Cache articles and images locally\n* Share URLs\n* Easily mark things as read, starred or publish/comment them\n* SSL with self-signed certificates\n* Fast JSON-Parsing with stream-based parser GSON\n* Scheduled updates via Tasker/Locale\n* Layout optimized for tablets\n* Dark and light themes available\n* many more, Changelog and Feature-List can be found on the project-page..."
+    },
+    "donate": [
+      "https://github.com/nilsbraden/ttrss-reader-fork/wiki/Donations"
+    ],
+    "icon": {
+      "en-US": {
+        "name": "/org.ttrssreader/en-US/icon_Dsh6NP9F-OcWyzciQrU23AlKWXHeSP0XXNlC8kuodPc=.png",
+        "sha256": "0ec87a34ff45f8e716cb372242b536dc094a5971de48fd175cd942f24ba874f7",
+        "size": 40442
+      }
+    },
+    "issueTracker": "https://github.com/nilsbraden/ttrss-reader-fork/issues",
+    "lastUpdated": 1767199153000,
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-US": "TTRSS-Reader"
+    },
+    "preferredSigner": "ecc76fac21fba91e7e0370a95c297362a4df0eafcd5a01b7be2ff6822e08f700",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/org.ttrssreader/en-US/phoneScreenshots/1_en-US.png",
+            "sha256": "5635abecbf9cc56692ab389422d28c2d146542a799df654c36d223687b5c48ac",
+            "size": 49445
+          },
+          {
+            "name": "/org.ttrssreader/en-US/phoneScreenshots/2_en-US.png",
+            "sha256": "0ba962614870f3a9106827cb710b9c007dae900f2472217e795256154349c1e0",
+            "size": 66794
+          },
+          {
+            "name": "/org.ttrssreader/en-US/phoneScreenshots/3_en-US.png",
+            "sha256": "5f6b64e6dc8c12bda0f5d17e93e51152111f90f5ef9ae34b9ac052aa7acec1d7",
+            "size": 111606
+          },
+          {
+            "name": "/org.ttrssreader/en-US/phoneScreenshots/4_en-US.png",
+            "sha256": "91c90e9e8fcd690d4a0351eb0a2f4d12a4fcf3d3c32c48972fd87e8c734622cb",
+            "size": 73582
+          }
+        ]
+      },
+      "tenInch": {
+        "en-US": [
+          {
+            "name": "/org.ttrssreader/en-US/tenInchScreenshots/1_en-US.png",
+            "sha256": "e4f5cbf7d4f512ddfb8ee745bb24bb542ebb3f2360fb241e5168009a787ea41c",
+            "size": 206282
+          },
+          {
+            "name": "/org.ttrssreader/en-US/tenInchScreenshots/2_en-US.png",
+            "sha256": "994fcaf1a8b4eb8e862f0343b40ac5b58df94d7847f74ead7e58775a64150a64",
+            "size": 448872
+          },
+          {
+            "name": "/org.ttrssreader/en-US/tenInchScreenshots/3_en-US.png",
+            "sha256": "2d836c5c359bbe41c4ec605d90d49a471bc29cc546164105ca007cc63f817a74",
+            "size": 782093
+          },
+          {
+            "name": "/org.ttrssreader/en-US/tenInchScreenshots/4_en-US.png",
+            "sha256": "d621f727bb4bd9028e952a8e6892ddac17e649ebbe72b8cda7684b5a429dfbdc",
+            "size": 188555
+          },
+          {
+            "name": "/org.ttrssreader/en-US/tenInchScreenshots/5_en-US.png",
+            "sha256": "0db89836badda20228e7cf69c9a9cd266ebf1aa9e733a499b07f316dcc251384",
+            "size": 184067
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/nilsbraden/ttrss-reader-fork",
+    "summary": {
+      "ar": "\u0642\u0627\u0631\u0626 RSS \u0644\u0640 Tiny Tiny RSS",
+      "ba": "Tiny Tiny RSS \u04e9\u0441\u04e9\u043d RSS \u0443\u04a1\u044b\u0443\u0441\u044b",
+      "ca": "Un lector RSS per a Tiny Tiny RSS",
+      "cs": "\u010cte\u010dka RSS pro Tiny Tiny RSS",
+      "de": "Ein RSS-Reader f\u00fcr TinyTiny RSS",
+      "en-US": "An RSS reader for Tiny Tiny RSS",
+      "es": "Un lector RSS para Tiny Tiny RSS",
+      "fr": "Lecteur hors ligne pour Tiny Tiny RSS",
+      "ga": "An l\u00e9itheoir RSS do Tiny Tiny RSS",
+      "he": "\u05e7\u05d5\u05e8\u05d0 RSS \u05e2\u05d1\u05d5\u05e8 Tiny Tiny RSS",
+      "hr": "RSS \u010dita\u010d za Tiny Tiny RSS",
+      "id": "Pembaca RSS untuk Tiny Tiny RSS",
+      "is": "RSS streymislesari fyrir Tiny Tiny RSS",
+      "it": "Un lettore RSS per Tiny Tiny RSS",
+      "ja": "Tiny Tiny RSS\u5411\u3051RSS\u30ea\u30fc\u30c0\u30fc",
+      "pl": "Czytnik RSS dla Tiny RSS",
+      "pt": "Um leitor de RSS para Tiny Tiny RSS",
+      "pt-BR": "Um leitor de RSS para Tiny Tiny RSS",
+      "pt-PT": "Um leitor de RSS para Tiny Tiny RSS",
+      "ro": "Un cititor RSS pentru Tiny Tiny RSS",
+      "ru": "RSS \u0447\u0438\u0442\u0430\u043b\u043a\u0430 \u0434\u043b\u044f Tiny TIny RSS",
+      "sq": "Nj\u00eb lexues RSS p\u00ebr Tiny Tiny RSS",
+      "sr": "RSS \u0447\u0438\u0442\u0430\u0447 \u0437\u0430 Tiny Tiny RSS",
+      "sw": "Kisomaji cha RSS kwa ajili ya Tiny Tiny RSS",
+      "ta": "\u0b9a\u0bbf\u0bb1\u0bbf\u0baf \u0b9a\u0bbf\u0bb1\u0bbf\u0baf \u0b86\u0bb0\u0bcd.\u0b8e\u0b9a\u0bcd.\u0b8e\u0b9a\u0bcd",
+      "tr": "Tiny Tiny RSS i\u00e7in bir RSS okuyucu",
+      "uk": "\u0427\u0438\u0442\u0430\u0447 RSS \u0434\u043b\u044f Tiny Tiny RSS",
+      "zh-CN": "\u7528\u4e8e Tiny Tiny RSS \u7684 RSS \u9605\u8bfb\u5668"
+    },
+    "translation": "https://github.com/nilsbraden/ttrss-reader-fork/wiki/Developer-Information#Language_and_Translations",
+    "webSite": "https://github.com/nilsbraden/ttrss-reader-fork/wiki"
+  },
+  "version": {
+    "added": 1767199153000,
+    "file": {
+      "ipfsCIDv1": "bafybeifjoqprktnmnt3ec2dutil2tyexll3s7bxjqsquiqfgnwewsm72ai",
+      "name": "/org.ttrssreader_1981.apk",
+      "sha256": "6049ea122bd506123f97c45b736eed41243bf31fb82bf638e551314891c20726",
+      "size": 3523521
+    },
+    "manifest": {
+      "features": [
+        {
+          "name": "android.hardware.faketouch"
+        }
+      ],
+      "signer": {
+        "sha256": [
+          "ecc76fac21fba91e7e0370a95c297362a4df0eafcd5a01b7be2ff6822e08f700"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_WIFI_STATE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "org.ttrssreader.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 23,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 1981,
+      "versionName": "1.98.1"
+    },
+    "src": {
+      "name": "/org.ttrssreader_1981_src.tar.gz",
+      "sha256": "56e5dd025205835bdaa3b71e89f1641688321f489a8eb6fd18fca6ea9e89706d",
+      "size": 3259018
+    }
+  }
+}

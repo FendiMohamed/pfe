@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "added": 1479772800000,
+    "authorEmail": "pfa@secuso.org",
+    "authorName": "SECUSO - Security Usability Society",
+    "authorWebSite": "https://secuso.aifb.kit.edu/english/105.php",
+    "categories": [
+      "Task",
+      "Time",
+      "Writing"
+    ],
+    "changelog": "https://github.com/SecUSo/privacy-friendly-todo-list/blob/HEAD/CHANGELOG.md",
+    "description": {
+      "de": "Die Privacy Friendly To-Do-Liste kann verwendet werden, um unerledigte Aufgaben im Auge zu behalten und einen pers\u00f6nlichen Zeitplan zu erstellen. Diese Anwendung erm\u00f6glicht das Erstellen von To-Do Listen, die individuell verwaltet werden k\u00f6nnen. Jede Liste enth\u00e4lt eine Reihe von Aufgaben. Jede Aufgabe kann einen Termin, eine Erinnerungszeit und Teilaufgaben haben. Durch Setzen einer Erinnerungszeit wird der Benutzer durch eine Benachrichtigung informiert. Es ist m\u00f6glich Aufgaben, die eine Deadline besitzen in einem Kalender anzuzeigen. Die Anwendung kann mit einem geheimen Pin gesch\u00fctzt und Aufgaben innerhalb einer Liste sortiert und priorisiert werden. Farben kennzeichnen die Dringlichkeit einer Aufgabe (unter Ber\u00fccksichtigung der Deadline).\n\nFeatures der Privacy Friendly To-Do Liste\n1. PIN Schutz\n\u00d6ffnen Sie die Einstellungen, um einen PIN-Schutz f\u00fcr Ihre Anwendung einzurichten. Die PIN muss eine 4-stellige Zahl sein. Sie werden bei jedem Start der Anwendung / Start der Hauptansicht danach gefragt.\n2. Erinnerung\nSie k\u00f6nnen eine Erinnerung an Aufgaben zuweisen, die Sie benachrichtigt, wenn ein Termin bevorsteht. Die Einstellungen bieten Ihnen die M\u00f6glichkeit, einen Benachrichtigungston zu aktivieren.\n3. Widget\nDar\u00fcber hinaus bietet diese App ein Widget, das Sie dem Startbildschirm Ihres Ger\u00e4ts hinzuf\u00fcgen k\u00f6nnen. Das Widget zeigt Ihnen Aufgaben, die zu einer ausgew\u00e4hlten Liste geh\u00f6ren. Ein Klick auf eine Aufgabe oder deren Checkbox f\u00fchrt zur Hauptansicht der Privacy Friendly To-Do-Liste.\n4. Fortschritt durch Teilaufgaben\nStandardm\u00e4\u00dfig kann der Fortschritt beim Anlegen oder Bearbeiten einer Aufgabe vom Benutzer frei gew\u00e4hlt werden. Die To-Do-Liste bietet die M\u00f6glichkeit, den Fortschritt einer Aufgabe automatisch zu berechnen und anzuzeigen, abh\u00e4ngig von den erledigten Teilaufgaben. Gehen Sie diesbez\u00fcglich zu den Einstellungen und aktivieren Sie Fortschritt durch Teilaufgaben.\n\nUnsere Privacy Friendly App unterscheidet sich in drei Punkten von anderen Anwendungen:\n1) Minimale Berechtigungen\nDie Privacy Friendly To-Do Liste verwendet nicht mehr Berechtigungen, als unbedingt notwendig, um ihre Funktionalit\u00e4t bereitzustellen.\n\n2) Keine Werbung\nDie Privacy Friendly To-Do-Liste verzichtet vollst\u00e4ndig auf Werbung.\nViele andere kostenlose Apps im Google Play Store schalten l\u00e4stige Werbung, die auch die Akkulaufzeit verk\u00fcrzt.\n\n3) Kein Tracking\nPrivacy Friendly To-Do List verwendet keinerlei Tracker.\n\nDie App geh\u00f6rt zur Gruppe der Privacy Friendly Apps, die von der Forschungsgruppe SECUSO am Karlsruher Institut f\u00fcr Technologie entwickelt werden. Mehr Informationen unter: https://secuso.org/pfa\n\nKontaktieren Sie uns gerne \u00fcber:\nX - @SECUSOResearch https://x.com/secusoresearch\nMastodon - @SECUSO_Research@baw\u00fc.social https://xn--baw-joa.social/@SECUSO_Research/\nOffene Stellen - https://secuso.aifb.kit.edu/83.php\n",
+      "en-US": "The Privacy Friendly To-Do List can be used to keep outstanding tasks in mind and organize a personal schedule. This application allows to create lists of tasks which can be individually managed. Each list contains a set of tasks. Each task can have a deadline, a reminder time and a list of subtasks. By setting a reminder time the user will be informed by a notification. It is possible to display all tasks in a calendar, to protect the app with a secret pin and to sort and prioritize tasks within a list. Colors indicate the urgency of a task (taking the deadline into account).\n\nFeatures of Privacy Friendly To-Do List\n\n1. PIN protection\nOpen the Settings menu to setup a PIN protection for your application. The PIN needs to be a number with 4 digits. You are asked for it every time you start the application / start the main view.\n\n2. Reminder\nYou can set a reminder to your tasks that will notify you if a deadline is approaching. Settings provide you the possibility to enable a notification sound.\n\n3. Widget\nIn addition, this app provides a widget that you can add to your device\u2019s home screen. The widget presents you tasks that belong to a chosen list. Clicking on a task or its checkbox leads to the main view of Privacy Friendly To-Do List.\n\n4. Progress by subtasks\nBy default, progress can be chosen freely by the user when creating or editing a task. To-Do List gives the opportunity to automatically compute and show the progress of a task dependent on its done subtasks. Therefore go to Settings and enable progress by subtasks.\n\nOur Privacy Friendly App differs from other applications with respect to three aspects:\n\n1) Minimal permissions\nPrivacy Friendly To-Do List does not use more permissions than are strictly necessary to provide its functionality.\n\n2) No advertisement\nPrivacy Friendly To-Do List completely relinquishes advertisement.\nMany other free apps in the Google Play Store dazzle annoying advertising which also shortens battery life.\n\n3) No tracking\nPrivacy Friendly To-Do List does not use any trackers.\n\nPrivacy Friendly To-Do List is part of the Privacy Friendly Apps group developed by the research group SECUSO at Karlsruhe Institute of Technology. More information at: https://secuso.org/pfa\n\nYou can reach us via\nX - @SECUSOResearch https://x.com/secusoresearch\nMastodon - @SECUSO_Research@baw\u00fc.social https://xn--baw-joa.social/@SECUSO_Research/\nJob Offers - https://secuso.aifb.kit.edu/english/Job_Offers.php\n",
+      "pt-BR": "A Lista de Tarefas com Prote\u00e7\u00e3o de Privacidade pode ser usada para manter suas tarefas pendentes em mente e organizar sua agenda pessoal. Este aplicativo permite criar listas de tarefas que podem ser gerenciadas individualmente. Cada lista cont\u00e9m um conjunto de tarefas. Cada tarefa pode ter um prazo, um lembrete e uma lista de subtarefas. Ao definir um lembrete, o usu\u00e1rio ser\u00e1 notificado. \u00c9 poss\u00edvel exibir todas as tarefas em um calend\u00e1rio, proteger o aplicativo com um PIN secreto e classificar e priorizar as tarefas dentro de uma lista. As cores indicam a urg\u00eancia de uma tarefa (levando em considera\u00e7\u00e3o o prazo).\n\nRecursos da Lista de Tarefas com Prote\u00e7\u00e3o de Privacidade\n\n1. Prote\u00e7\u00e3o por PIN\nAbra o menu Configura\u00e7\u00f5es para configurar a prote\u00e7\u00e3o por PIN para o seu aplicativo. O PIN precisa ser um n\u00famero com 4 d\u00edgitos. Voc\u00ea ser\u00e1 solicitado a digit\u00e1-lo sempre que iniciar o aplicativo ou acessar a tela principal.\n\n2. Lembrete\nVoc\u00ea pode definir um lembrete para suas tarefas que o notificar\u00e1 quando um prazo estiver se aproximando. As configura\u00e7\u00f5es permitem ativar um som de notifica\u00e7\u00e3o.\n\n 3. Widget\nAl\u00e9m disso, este aplicativo oferece um widget que voc\u00ea pode adicionar \u00e0 tela inicial do seu dispositivo. O widget apresenta as tarefas que pertencem a uma lista selecionada. Clicar em uma tarefa ou em sua caixa de sele\u00e7\u00e3o leva \u00e0 visualiza\u00e7\u00e3o principal da Lista de Tarefas com Privacidade Amig\u00e1vel.\n\n4. Progresso por subtarefas\nPor padr\u00e3o, o progresso pode ser escolhido livremente pelo usu\u00e1rio ao criar ou editar uma tarefa. A Lista de Tarefas com Privacidade Amig\u00e1vel oferece a op\u00e7\u00e3o de calcular e exibir automaticamente o progresso de uma tarefa com base em suas subtarefas conclu\u00eddas. Portanto, acesse as Configura\u00e7\u00f5es e ative o progresso por subtarefas.\n\nNosso aplicativo com Privacidade Amig\u00e1vel difere de outros aplicativos em tr\u00eas aspectos:\n\n1) Permiss\u00f5es m\u00ednimas\nA Lista de Tarefas com Privacidade Amig\u00e1vel n\u00e3o utiliza mais permiss\u00f5es do que o estritamente necess\u00e1rio para fornecer sua funcionalidade.\n\n2) Sem an\u00fancios\nA Lista de Tarefas com Privacidade Amig\u00e1vel dispensa completamente os an\u00fancios.\n\nMuitos outros aplicativos gratuitos na Google Play Store exibem an\u00fancios irritantes que tamb\u00e9m reduzem a dura\u00e7\u00e3o da bateria.\n\n 3) Sem rastreamento\nA Lista de Tarefas com Privacidade Amig\u00e1vel n\u00e3o utiliza nenhum rastreador.\n\nA Lista de Tarefas com Privacidade Amig\u00e1vel faz parte do grupo de Aplicativos com Privacidade Amig\u00e1vel desenvolvido pelo grupo de pesquisa SECUSO do Instituto de Tecnologia de Karlsruhe. Mais informa\u00e7\u00f5es em: https://secuso.org/pfa\n\nVoc\u00ea pode nos contatar atrav\u00e9s de:\nX - @SECUSOResearch https://x.com/secusoresearch\nMastodon - @SECUSO_Research@baw\u00fc.social https://xn--baw-joa.social/@SECUSO_Research/\nOfertas de emprego - https://secuso.aifb.kit.edu/english/Job_Offers.php\n",
+      "ru-RU": "\u041f\u0440\u0438\u0432\u0430\u0442\u043d\u044b\u0439 \u0421\u043f\u0438\u0441\u043e\u043a \u0414\u0435\u043b \u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d \u0434\u043b\u044f \u0441\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u0438\u044f \u0442\u0435\u043a\u0443\u0449\u0438\u0445 \u0437\u0430\u0434\u0430\u0447 \u0438 \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0446\u0438\u0438 \u043b\u0438\u0447\u043d\u043e\u0433\u043e \u0440\u0430\u0441\u043f\u0438\u0441\u0430\u043d\u0438\u044f. \u0414\u0430\u043d\u043d\u043e\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0441\u043e\u0437\u0434\u0430\u0432\u0430\u0442\u044c \u0441\u043f\u0438\u0441\u043a\u0438 \u0437\u0430\u0434\u0430\u0447, \u043a\u043e\u0442\u043e\u0440\u044b\u043c\u0438 \u043c\u043e\u0436\u043d\u043e \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0442\u044c \u0438\u043d\u0434\u0438\u0432\u0438\u0434\u0443\u0430\u043b\u044c\u043d\u043e. \u041a\u0430\u0436\u0434\u044b\u0439 \u0441\u043f\u0438\u0441\u043e\u043a \u0441\u043e\u0434\u0435\u0440\u0436\u0438\u0442 \u0432 \u0441\u0435\u0431\u0435 \u043d\u0430\u0431\u043e\u0440 \u0437\u0430\u0434\u0430\u0447. \u041a\u0430\u0436\u0434\u0430\u044f \u0437\u0430\u0434\u0430\u0447\u0430 \u043c\u043e\u0436\u0435\u0442 \u0438\u043c\u0435\u0442\u044c \u043a\u0440\u0430\u0439\u043d\u0438\u0439 \u0441\u0440\u043e\u043a, \u0432\u0440\u0435\u043c\u044f \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u044f, \u0438 \u0441\u043f\u0438\u0441\u043e\u043a \u043f\u043e\u0434\u0437\u0430\u0434\u0430\u0447. \u041f\u0443\u0442\u0451\u043c \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0438 \u0432\u0440\u0435\u043c\u0435\u043d\u0438 \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u044f, \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c \u0431\u0443\u0434\u0435\u0442 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0451\u043d \u0447\u0435\u0440\u0435\u0437 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u0435. \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e \u043e\u0442\u043e\u0431\u0440\u0430\u0436\u0430\u0442\u044c \u0432\u0441\u0435 \u0437\u0430\u0434\u0430\u0447\u0438 \u0432 \u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440\u0435, \u0437\u0430\u0449\u0438\u0442\u0438\u0442\u044c \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u0441\u0435\u043a\u0440\u0435\u0442\u043d\u043e\u0433\u043e PIN-\u043a\u043e\u0434\u0430, \u0430 \u0442\u0430\u043a\u0436\u0435 \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0438 \u043f\u0440\u0438\u043e\u0440\u0438\u0442\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0437\u0430\u0434\u0430\u0447\u0438 \u0432 \u043f\u0440\u0435\u0434\u0435\u043b\u0430\u0445 \u0441\u043f\u0438\u0441\u043a\u0430. \u0426\u0432\u0435\u0442\u0430 \u043e\u0442\u0440\u0430\u0436\u0430\u044e\u0442 \u0441\u0440\u043e\u0447\u043d\u043e\u0441\u0442\u044c \u0437\u0430\u0434\u0430\u0447\u0438 (\u043f\u0440\u0438\u043d\u0438\u043c\u0430\u044f \u0432\u043e \u0432\u043d\u0438\u043c\u0430\u043d\u0438\u0435 \u043a\u0440\u0430\u0439\u043d\u0438\u0439 \u0441\u0440\u043e\u043a).\n\n\u0424\u0443\u043d\u043a\u0446\u0438\u0438 \u041f\u0440\u0438\u0432\u0430\u0442\u043d\u043e\u0433\u043e \u0421\u043f\u0438\u0441\u043a\u0430 \u0414\u0435\u043b\n\n1. \u0417\u0430\u0449\u0438\u0442\u0430 PIN-\u043a\u043e\u0434\u043e\u043c\n\u041e\u0442\u043a\u0440\u043e\u0439\u0442\u0435 \u043c\u0435\u043d\u044e \u043d\u0430\u0441\u0442\u0440\u043e\u0435\u043a, \u0447\u0442\u043e\u0431\u044b \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c PIN-\u043a\u043e\u0434 \u0434\u043b\u044f \u0437\u0430\u0449\u0438\u0442\u044b \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f. PIN-\u043a\u043e\u0434 \u0434\u043e\u043b\u0436\u0435\u043d \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0442\u044c \u0432 \u0441\u0435\u0431\u0435 \u043a\u0430\u043a \u043c\u0438\u043d\u0438\u043c\u0443\u043c 4 \u0446\u0438\u0444\u0440\u044b. \u041e\u043d \u0431\u0443\u0434\u0435\u0442 \u0437\u0430\u043f\u0440\u0430\u0448\u0438\u0432\u0430\u0442\u044c\u0441\u044f \u043a\u0430\u0436\u0434\u044b\u0439 \u0440\u0430\u0437 \u043f\u043e\u0441\u043b\u0435 \u0437\u0430\u043f\u0443\u0441\u043a\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f / \u043e\u0442\u043a\u0440\u044b\u0442\u0438\u044f \u0433\u043b\u0430\u0432\u043d\u043e\u0433\u043e \u044d\u043a\u0440\u0430\u043d\u0430.\n\n2. \u041d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u0435\n\u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u0432\u0430\u0448\u0438\u0445 \u0437\u0430\u0434\u0430\u0447, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u043e\u043f\u043e\u0432\u0435\u0441\u0442\u0438\u0442 \u0432\u0430\u0441 \u043e \u043f\u0440\u0438\u0431\u043b\u0438\u0436\u0435\u043d\u0438\u0438 \u043a\u0440\u0430\u0439\u043d\u0435\u0433\u043e \u0441\u0440\u043e\u043a\u0430. \u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0434\u0430\u044e\u0442 \u0432\u0430\u043c \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c \u0432\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u0437\u0432\u0443\u043a \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f.\n\n3. \u0412\u0438\u0434\u0436\u0435\u0442\n\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u043e, \u0434\u0430\u043d\u043d\u043e\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c \u0432\u0438\u0434\u0436\u0435\u0442, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0434\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u043d\u0430 \u0434\u043e\u043c\u0430\u0448\u043d\u0438\u0439 \u044d\u043a\u0440\u0430\u043d \u0441\u0432\u043e\u0435\u0433\u043e \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430. \u0412\u0438\u0434\u0436\u0435\u0442 \u043f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0435\u0442 \u0432\u0430\u043c \u0437\u0430\u0434\u0430\u0447\u0438, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043e\u0442\u043d\u043e\u0441\u044f\u0442\u0441\u044f \u043a \u0432\u044b\u0431\u0440\u0430\u043d\u043d\u043e\u043c\u0443 \u0441\u043f\u0438\u0441\u043a\u0443. \u041d\u0430\u0436\u0430\u0442\u0438\u0435 \u043d\u0430 \u0437\u0430\u0434\u0430\u0447\u0443 \u0438\u043b\u0438 \u0435\u0451 \u0444\u043b\u0430\u0436\u043e\u043a \u043f\u0440\u0438\u0432\u0435\u0434\u0451\u0442 \u043a \u043e\u0442\u043a\u0440\u044b\u0442\u0438\u044e \u0433\u043b\u0430\u0432\u043d\u043e\u0433\u043e \u044d\u043a\u0440\u0430\u043d\u0430 \u041f\u0440\u0438\u0432\u0430\u0442\u043d\u043e\u0433\u043e \u0421\u043f\u0438\u0441\u043a\u0430 \u0414\u0435\u043b.\n\n4. \u041f\u0440\u043e\u0433\u0440\u0435\u0441\u0441 \u0447\u0435\u0440\u0435\u0437 \u043f\u043e\u0434\u0437\u0430\u0434\u0430\u0447\u0438\n\u041f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e, \u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441 \u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c \u0441\u0432\u043e\u0431\u043e\u0434\u043d\u043e \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u043c \u043f\u0440\u0438 \u0441\u043e\u0437\u0434\u0430\u043d\u0438\u0438 \u0438\u043b\u0438 \u0440\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0438 \u0437\u0430\u0434\u0430\u0447\u0438. \u0421\u043f\u0438\u0441\u043e\u043a \u0414\u0435\u043b \u0434\u0430\u0451\u0442 \u0432\u0430\u043c \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u0432\u044b\u0441\u0447\u0438\u0442\u044b\u0432\u0430\u0442\u044c \u0438 \u043e\u0442\u043e\u0431\u0440\u0430\u0436\u0430\u0442\u044c \u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441 \u0437\u0430\u0434\u0430\u0447\u0438, \u0437\u0430\u0432\u0438\u0441\u044f\u0449\u0438\u0439 \u043e\u0442 \u0432\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u043d\u044b\u0445 \u043f\u043e\u0434\u0437\u0430\u0434\u0430\u0447. \u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0437\u0430\u0439\u0442\u0438 \u0432 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438, \u0438 \u0432\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441 \u0447\u0435\u0440\u0435\u0437 \u043f\u043e\u0434\u0437\u0430\u0434\u0430\u0447\u0438.\n\n\u041d\u0430\u0448\u0435 \u041f\u0440\u0438\u0432\u0430\u0442\u043d\u043e\u0435 \u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043e\u0442\u043b\u0438\u0447\u0430\u0435\u0442\u0441\u044f \u043e\u0442 \u0434\u0440\u0443\u0433\u0438\u0445 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0439 \u043f\u043e \u0442\u0440\u0451\u043c \u0430\u0441\u043f\u0435\u043a\u0442\u0430\u043c:\n\n1) \u041c\u0438\u043d\u0438\u043c\u0430\u043b\u044c\u043d\u043e\u0435 \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u0439\n\u041f\u0440\u0438\u0432\u0430\u0442\u043d\u044b\u0439 \u0421\u043f\u0438\u0441\u043e\u043a \u0414\u0435\u043b \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442 \u0442\u043e\u043b\u044c\u043a\u043e \u0442\u0435 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u044f, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0441\u0442\u0440\u043e\u0433\u043e \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u044b \u0434\u043b\u044f \u0435\u0433\u043e \u0444\u0443\u043d\u043a\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438.\n\n2) \u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435 \u0440\u0435\u043a\u043b\u0430\u043c\u044b\n\u0412 \u041f\u0440\u0438\u0432\u0430\u0442\u043d\u043e\u043c \u0421\u043f\u0438\u0441\u043a\u0435 \u0414\u0435\u043b \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u0440\u0435\u043a\u043b\u0430\u043c\u0430.\n\u041c\u043d\u043e\u0433\u0438\u0435 \u0434\u0440\u0443\u0433\u0438\u0435 \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u0432 \u041c\u0430\u0433\u0430\u0437\u0438\u043d\u0435 Google Play \u043f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u044e\u0442 \u0447\u0435\u0440\u0435\u0441\u0447\u0443\u0440 \u043c\u043d\u043e\u0433\u043e \u043d\u0430\u0437\u043e\u0439\u043b\u0438\u0432\u043e\u0439 \u0440\u0435\u043a\u043b\u0430\u043c\u044b, \u043a\u043e\u0442\u043e\u0440\u0430\u044f \u0442\u0430\u043a\u0436\u0435 \u0431\u044b\u0441\u0442\u0440\u0435\u0435 \u0440\u0430\u0437\u0440\u044f\u0436\u0430\u0435\u0442 \u0431\u0430\u0442\u0430\u0440\u0435\u044e.\n\n3) \u041d\u0435\u0442 \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u043d\u0438\u044f\n\u041f\u0440\u0438\u0432\u0430\u0442\u043d\u044b\u0439 \u0421\u043f\u0438\u0441\u043e\u043a \u0414\u0435\u043b \u043d\u0435 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442 \u043a\u0430\u043a\u0438\u0435-\u043b\u0438\u0431\u043e \u0441\u043b\u0435\u0434\u0438\u043b\u043a\u0438.\n\n\u042d\u0442\u043e\u0442 \u0421\u043f\u0438\u0441\u043e\u043a \u0434\u0435\u043b \u044f\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u0447\u0430\u0441\u0442\u044c\u044e \u0433\u0440\u0443\u043f\u043f\u044b \u041f\u0440\u0438\u0432\u0430\u0442\u043d\u044b\u0445 \u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0439 (Privacy Friendly Apps \u0438\u043b\u0438 PFA), \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0430\u043d\u043d\u044b\u0445 \u0438\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u0441\u043a\u043e\u0439 \u043a\u043e\u043c\u0430\u043d\u0434\u043e\u0439 SECUSO \u0432 \u0422\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u043e\u043c \u0418\u043d\u0441\u0442\u0438\u0442\u0443\u0442\u0435 \u041a\u0430\u0440\u043b\u0441\u0440\u0443\u044d. \u0411\u043e\u043b\u044c\u0448\u0435 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438 \u043c\u043e\u0436\u043d\u043e \u043d\u0430\u0439\u0442\u0438 \u0437\u0434\u0435\u0441\u044c: https://secuso.org/pfa\n\n\u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0441\u0432\u044f\u0437\u0430\u0442\u044c\u0441\u044f \u0441 \u043d\u0430\u043c\u0438 \u0447\u0435\u0440\u0435\u0437:\n<a href=\"https://bsky.app/profile/secusoresearch.bsky.social\">Bluesky</a>\nTwitter: <a href=\"https://twitter.com/secusoresearch\">@SECUSOResearch</a>\nMastodon: <a href=\"https://xn--baw-joa.social/@SECUSO_Research/\">@SECUSO_Research@baw\u00fc.social</a>\n<a href=\"https://secuso.aifb.kit.edu/english/Job_Offers.php\">\u041e\u0442\u043a\u0440\u044b\u0442\u044b\u0435 \u0432\u0430\u043a\u0430\u043d\u0441\u0438\u0438<a/>\n"
+    },
+    "icon": {
+      "de-DE": {
+        "name": "/org.secuso.privacyfriendlytodolist/de-DE/icon_J25ub0_VErFzMn9H_sHZEYPJnruOxwdTPUAcANBOvFs=.png",
+        "sha256": "276e6e6f4fd512b173327f47fec1d91183c99ebb8ec707533d401c00d04ebc5b",
+        "size": 12180
+      },
+      "en-US": {
+        "name": "/org.secuso.privacyfriendlytodolist/en-US/icon_muCAiEnC-seBQpNk-apzYHYW9pgIECNn46gYuorR2ZM=.png",
+        "sha256": "9ae0808849c2fac781429364f9aa73607616f69808102367e3a818ba8ad1d993",
+        "size": 9947
+      }
+    },
+    "issueTracker": "https://github.com/SecUSo/privacy-friendly-todo-list/issues",
+    "lastUpdated": 1768764520000,
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "de": "Todo Liste (PFA)",
+      "en-US": "Todo List (PFA)",
+      "et": "Tegemiste loend (PFA)",
+      "pl-PL": "Lista zada\u0144 (PFA)",
+      "pt-BR": "Todo List",
+      "ru-RU": "\u0421\u043f\u0438\u0441\u043e\u043a \u0414\u0435\u043b (PFA)"
+    },
+    "preferredSigner": "c1ef57684f78c5475dfbfafb34e961e31d3b5fff393bf82577e1fe5fa7eac3fe",
+    "screenshots": {
+      "phone": {
+        "de": [
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/de/phoneScreenshots/1.jpg",
+            "sha256": "9929e4ac16f7dbccec006e9a273fe881b27a8f7fad1be13004b1670fe007428b",
+            "size": 35226
+          },
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/de/phoneScreenshots/1.png",
+            "sha256": "8dc888dc7823250cecf32839089abaa93c895481181c4455f4bba3e8216c1730",
+            "size": 52066
+          },
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/de/phoneScreenshots/2.jpg",
+            "sha256": "310a2067df90ad52c032ec7ddf7173a20c8a1aed6b8e4db241c25a86ea613a8a",
+            "size": 24986
+          },
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/de/phoneScreenshots/2.png",
+            "sha256": "e6794f15112f946729acabd608308ed323c1ef263780a47198e52a6873bc5430",
+            "size": 51250
+          },
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/de/phoneScreenshots/3.jpg",
+            "sha256": "7c729775f70fd20ff37d3f44049b69fd9f996916d3d32fea0609a448e65c4fba",
+            "size": 30923
+          },
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/de/phoneScreenshots/3.png",
+            "sha256": "8dc6458875ffb32778ec68738601ab2b51e4c1446e88b714d4e9dca117b577e2",
+            "size": 44732
+          },
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/de/phoneScreenshots/4.png",
+            "sha256": "c193d4a719a7dc3e27ad027b087b664e0ff3d6a215b2a36456c336a526e1ba8f",
+            "size": 61385
+          },
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/de/phoneScreenshots/5.png",
+            "sha256": "f57edc3d607e44c0a74ed27ac7637e86280d3bc01a4cf23fb428f23719913228",
+            "size": 47686
+          }
+        ],
+        "de-DE": [
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/de-DE/phoneScreenshots/1.jpg",
+            "sha256": "9929e4ac16f7dbccec006e9a273fe881b27a8f7fad1be13004b1670fe007428b",
+            "size": 35226
+          },
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/de-DE/phoneScreenshots/2.jpg",
+            "sha256": "310a2067df90ad52c032ec7ddf7173a20c8a1aed6b8e4db241c25a86ea613a8a",
+            "size": 24986
+          },
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/de-DE/phoneScreenshots/3.jpg",
+            "sha256": "7c729775f70fd20ff37d3f44049b69fd9f996916d3d32fea0609a448e65c4fba",
+            "size": 30923
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/en-US/phoneScreenshots/1.jpg",
+            "sha256": "0ffa04781b5e0ce47078f36b2204e94baa96787cb40e384d0150801754c59442",
+            "size": 30376
+          },
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/en-US/phoneScreenshots/1.png",
+            "sha256": "79487ad4e95d5919aca078299ec56685fd949c95ea847271c30fe21f031b120e",
+            "size": 47681
+          },
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/en-US/phoneScreenshots/2.jpg",
+            "sha256": "ef096a2919f92784ae143c4a8e82e390028cba648ae3ce7ca26bf3e2aa7a91f1",
+            "size": 23725
+          },
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/en-US/phoneScreenshots/2.png",
+            "sha256": "7c47c2a5b328e40c2406a029cc4951f68fb73b1067bd007d57fcc6663e15b317",
+            "size": 46708
+          },
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/en-US/phoneScreenshots/3.jpg",
+            "sha256": "37a9336785f9a428d6dd9bae0fed5c09fe325be7317ac92ffb78b8e42ec1f632",
+            "size": 28870
+          },
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/en-US/phoneScreenshots/3.png",
+            "sha256": "616315ee87d13af2f0f3e15928a89e3e9668ef1629a2ed9aca91fb7aefbdab2e",
+            "size": 43060
+          },
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/en-US/phoneScreenshots/4.png",
+            "sha256": "b7b19f2bda295fad162c48dc467a0101b8dfb283a78658e0c0f3240b20af32a4",
+            "size": 56388
+          },
+          {
+            "name": "/org.secuso.privacyfriendlytodolist/en-US/phoneScreenshots/5.png",
+            "sha256": "f57edc3d607e44c0a74ed27ac7637e86280d3bc01a4cf23fb428f23719913228",
+            "size": 47686
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/SecUSo/privacy-friendly-todo-list",
+    "summary": {
+      "de": "(SECUSO) To-Do Listen erstellen und individuell verwalten.",
+      "en-US": "(SECUSO) Create lists of tasks which can be individually managed.",
+      "et": "(SECUSO) Koosta oma \u00fclesannete loend ja halda neid \u00fckshaaval.",
+      "pt-BR": "(SECUSO) Criar listas de tarefas que podem ser gerenciadas individualmente.",
+      "ru-RU": "(SECUSO) \u0421\u043e\u0437\u0434\u0430\u0432\u0430\u0439\u0442\u0435 \u0441\u043f\u0438\u0441\u043a\u0438 \u0437\u0430\u0434\u0430\u0447, \u043a\u043e\u0442\u043e\u0440\u044b\u043c\u0438 \u043c\u043e\u0436\u043d\u043e \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0442\u044c \u0438\u043d\u0434\u0438\u0432\u0438\u0434\u0443\u0430\u043b\u044c\u043d\u043e."
+    },
+    "webSite": "https://secuso.aifb.kit.edu/english/To-Do-List.php"
+  },
+  "version": {
+    "added": 1768764520000,
+    "file": {
+      "ipfsCIDv1": "bafybeielq6qdglkxuij7pvyjjqjvzdczhx34cmqhusuy3fgnyobevfte54",
+      "name": "/org.secuso.privacyfriendlytodolist_103.apk",
+      "sha256": "80c6f68ec94a561157ad8db4d335003d2b2c8aeba2b649ab9f446b44743fc0af",
+      "size": 8758556
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "c1ef57684f78c5475dfbfafb34e961e31d3b5fff393bf82577e1fe5fa7eac3fe"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.SCHEDULE_EXACT_ALARM"
+        },
+        {
+          "name": "org.secuso.privacyfriendlytodolist.TODO_PERMISSION"
+        },
+        {
+          "name": "org.secuso.privacyfriendlyproductivitytimer.TODO_RE_PERMISSION"
+        },
+        {
+          "name": "org.secuso.privacyfriendlytodolist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 103,
+      "versionName": "3.4.0"
+    },
+    "src": {
+      "name": "/org.secuso.privacyfriendlytodolist_103_src.tar.gz",
+      "sha256": "b29d33ffedc958412e40b01282b2ded98062fef9df4a989dfd3c2737e5e44989",
+      "size": 890575
+    }
+  }
+}

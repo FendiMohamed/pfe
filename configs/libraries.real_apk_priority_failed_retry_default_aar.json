@@ -1,0 +1,4572 @@
+{
+  "libraries": [
+    {
+      "artifact": "okhttp-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.squareup.okhttp3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.1.0",
+        "5.3.2"
+      ]
+    },
+    {
+      "artifact": "timber",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.jakewharton.timber",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.7.1",
+        "5.0.1"
+      ]
+    },
+    {
+      "artifact": "core",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.noties.markwon",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "eventbus",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "org.greenrobot",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.1"
+      ]
+    },
+    {
+      "artifact": "fastadapter",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.7.0"
+      ]
+    },
+    {
+      "artifact": "osmdroid-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "org.osmdroid",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "6.1.20"
+      ]
+    },
+    {
+      "artifact": "appauth",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "net.openid",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.11.1"
+      ]
+    },
+    {
+      "artifact": "PhotoView",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.chrisbanes",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.3.0"
+      ]
+    },
+    {
+      "artifact": "ext-tables",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.noties.markwon",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "conscrypt-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "org.conscrypt",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.5.3"
+      ]
+    },
+    {
+      "artifact": "rxandroid",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.reactivex.rxjava3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.0",
+        "3.0.2"
+      ]
+    },
+    {
+      "artifact": "dagger-lint-aar",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.google.dagger",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.45",
+        "2.59",
+        "2.59.2"
+      ]
+    },
+    {
+      "artifact": "coil-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.coil-kt.coil3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0",
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "coil-core-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.coil-kt.coil3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0",
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "androidsvg-aar",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.caverock",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.3",
+        "1.4"
+      ]
+    },
+    {
+      "artifact": "MPAndroidChart",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.PhilJay",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "v3.0.3",
+        "v3.1.0"
+      ]
+    },
+    {
+      "artifact": "speed-dial",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.leinardi.android",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "ext-strikethrough",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.noties.markwon",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "html",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.noties.markwon",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "library",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "me.zhanghai.android.materialprogressbar",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.4.2"
+      ]
+    },
+    {
+      "artifact": "preferencex",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.takisoft.preferencex",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "glide",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.bumptech.glide",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.8.0",
+        "5.0.5"
+      ]
+    },
+    {
+      "artifact": "coil-network-core-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.coil-kt.coil3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0",
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "picasso",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.squareup.picasso",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.8",
+        "2.71828"
+      ]
+    },
+    {
+      "artifact": "rxandroid",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.reactivex.rxjava2",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.1"
+      ]
+    },
+    {
+      "artifact": "SearchPreference",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.ByteHamster",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.7.3"
+      ]
+    },
+    {
+      "artifact": "core",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.afollestad.material-dialogs",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.9.6.0"
+      ]
+    },
+    {
+      "artifact": "gifdecoder",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.bumptech.glide",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.8.0",
+        "5.0.5"
+      ]
+    },
+    {
+      "artifact": "floatingactionbutton",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.getbase",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.10.1"
+      ]
+    },
+    {
+      "artifact": "colorpicker",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.jaredrummler",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "williamchart",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.diogobernardino",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.2"
+      ]
+    },
+    {
+      "artifact": "disklrucache",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.bumptech.glide",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.0.5"
+      ]
+    },
+    {
+      "artifact": "hsv-alpha-color-picker-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.martin-stone",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.1.0"
+      ]
+    },
+    {
+      "artifact": "logback-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.tony19",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "android-image-cropper",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.vanniktech",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.7.0"
+      ]
+    },
+    {
+      "artifact": "coil-network-okhttp-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.coil-kt.coil3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "ext-tasklist",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.noties.markwon",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "koin-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.insert-koin",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.3",
+        "4.1.1"
+      ]
+    },
+    {
+      "artifact": "hilt-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.google.dagger",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.59",
+        "2.59.2"
+      ]
+    },
+    {
+      "artifact": "coil-base",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.coil-kt",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.2",
+        "2.7.0"
+      ]
+    },
+    {
+      "artifact": "coil-gif",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.coil-kt.coil3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "koin-core-viewmodel-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.insert-koin",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.1.1"
+      ]
+    },
+    {
+      "artifact": "core",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "6.0.0"
+      ]
+    },
+    {
+      "artifact": "dagger-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.google.dagger",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.59.2"
+      ]
+    },
+    {
+      "artifact": "fastadapter-extensions-expandable",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.7.0"
+      ]
+    },
+    {
+      "artifact": "circleimageview",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "de.hdodenhof",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.1.0"
+      ]
+    },
+    {
+      "artifact": "coil",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.coil-kt",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.2",
+        "2.7.0"
+      ]
+    },
+    {
+      "artifact": "acra-core",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "ch.acra",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.13.1"
+      ]
+    },
+    {
+      "artifact": "nanojson",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.TeamNewPipe",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "e9d656ddb49a412a5a0a5d5ef20ca7ef09549996"
+      ]
+    },
+    {
+      "artifact": "recyclerview-fastscroll",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.simplecityapps",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.1"
+      ]
+    },
+    {
+      "artifact": "curtains",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.squareup.curtains",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.4"
+      ]
+    },
+    {
+      "artifact": "leakcanary-android-utils",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.squareup.leakcanary",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "commons",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.afollestad.material-dialogs",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.9.6.0"
+      ]
+    },
+    {
+      "artifact": "androidplot-core",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.androidplot",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.11"
+      ]
+    },
+    {
+      "artifact": "GlideToVectorYou",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.2coffees1team",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "v2.0.0"
+      ]
+    },
+    {
+      "artifact": "AppIntro",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.AppIntro",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "6.3.1"
+      ]
+    },
+    {
+      "artifact": "patternlockview",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.aritraroy.PatternLockView",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "a90b0d4bf0"
+      ]
+    },
+    {
+      "artifact": "nio",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "6.0.0"
+      ]
+    },
+    {
+      "artifact": "FreeDroidWarn",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.woheller69",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "V1.13"
+      ]
+    },
+    {
+      "artifact": "ambilwarna",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.github.yukuku",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.1"
+      ]
+    },
+    {
+      "artifact": "dagger-android-support",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.google.dagger",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.59.2"
+      ]
+    },
+    {
+      "artifact": "advrecyclerview",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.h6ah4i.android.widget.advrecyclerview",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "figlib",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.halfhp.fig",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.11"
+      ]
+    },
+    {
+      "artifact": "zxing-android-embedded",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.journeyapps",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.3.0"
+      ]
+    },
+    {
+      "artifact": "egloo",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.otaliastudios.opengl",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.6.1"
+      ]
+    },
+    {
+      "artifact": "materialish-progress",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.pnikosis",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.7"
+      ]
+    },
+    {
+      "artifact": "plumber-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.squareup.leakcanary",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "plumber-android-core",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "com.squareup.leakcanary",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "coil-compose-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.coil-kt.coil3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "coil-compose-core-android",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.coil-kt.coil3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "koin-androidx-workmanager",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "io.insert-koin",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.3"
+      ]
+    },
+    {
+      "artifact": "ShortcutBadger",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "me.leolin",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.22"
+      ]
+    },
+    {
+      "artifact": "library",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "me.zhanghai.android.fastscroll",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.3.0"
+      ]
+    },
+    {
+      "artifact": "dfu",
+      "category": "tier1-repeated-real-apk-version",
+      "group": "no.nordicsemi.android",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.11.0"
+      ]
+    },
+    {
+      "artifact": "hilt-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.google.dagger",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.45",
+        "2.52",
+        "2.56.2",
+        "2.57.1",
+        "2.57.2"
+      ]
+    },
+    {
+      "artifact": "react-native",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.react",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "com.facebook.react"
+      ]
+    },
+    {
+      "artifact": "fbcore",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "imagepipeline",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "middleware",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "acra-core",
+      "category": "tier2-single-real-apk-version",
+      "group": "ch.acra",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.8.3",
+        "5.11.2",
+        "5.12.0"
+      ]
+    },
+    {
+      "artifact": "imagepipeline-native",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "fastadapter-extensions-drag",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.7.0"
+      ]
+    },
+    {
+      "artifact": "collection",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.grishka.litex",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "threetenabp",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.jakewharton.threetenabp",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.1",
+        "1.4.6",
+        "1.4.9"
+      ]
+    },
+    {
+      "artifact": "aboutlibraries",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "8.9.4",
+        "10.10.0",
+        "11.2.1",
+        "11.2.3",
+        "11.3.0-rc02"
+      ]
+    },
+    {
+      "artifact": "aboutlibraries-core-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "10.10.0",
+        "11.2.1",
+        "11.2.3",
+        "11.3.0-rc02",
+        "14.2.0"
+      ]
+    },
+    {
+      "artifact": "fastadapter",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.2.6",
+        "3.3.0",
+        "5.4.1"
+      ]
+    },
+    {
+      "artifact": "iconics-core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.4",
+        "3.1.0",
+        "4.0.2",
+        "5.4.0"
+      ]
+    },
+    {
+      "artifact": "coil-base",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.coil-kt",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.6.0"
+      ]
+    },
+    {
+      "artifact": "ui-backhandler-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.jetbrains.compose.ui",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.0-beta03",
+        "1.9.1"
+      ]
+    },
+    {
+      "artifact": "uri-kmp-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.eygraber",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.0.21"
+      ]
+    },
+    {
+      "artifact": "memory-type-ashmem",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "memory-type-java",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "memory-type-native",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "ui-common",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "frameanimation",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "landscapist-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.skydoves",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.9.5"
+      ]
+    },
+    {
+      "artifact": "landscapist-coil3-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.skydoves",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.9.5"
+      ]
+    },
+    {
+      "artifact": "dagger-lint-aar",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.google.dagger",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.52",
+        "2.56.2",
+        "2.57.1",
+        "2.57.2"
+      ]
+    },
+    {
+      "artifact": "materialdrawer",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "6.0.8",
+        "6.1.2",
+        "9.0.2"
+      ]
+    },
+    {
+      "artifact": "leakcanary-object-watcher-android-core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.squareup.leakcanary",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "coil-video",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.coil-kt.coil3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "koin-androidx-compose",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.insert-koin",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.1.1"
+      ]
+    },
+    {
+      "artifact": "koin-compose-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.insert-koin",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.1.1"
+      ]
+    },
+    {
+      "artifact": "koin-compose-viewmodel-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.insert-koin",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.1.1"
+      ]
+    },
+    {
+      "artifact": "core",
+      "category": "tier2-single-real-apk-version",
+      "group": "no.nordicsemi.android.kotlin.ble",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.3.1"
+      ]
+    },
+    {
+      "artifact": "framework",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.apache.cordova",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "10.1.1",
+        "14.0.1"
+      ]
+    },
+    {
+      "artifact": "components-resources-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.jetbrains.compose.components",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.10.2"
+      ]
+    },
+    {
+      "artifact": "core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.afollestad.material-dialogs",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "ui-core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "soloader",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.soloader",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.12.1"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "fastadapter-extensions-swipe",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.7.0"
+      ]
+    },
+    {
+      "artifact": "fastadapter-extensions-utils",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.7.0"
+      ]
+    },
+    {
+      "artifact": "colorpicker",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.takisoft.colorpicker",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "datetimepicker",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.takisoft.datetimepicker",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.2"
+      ]
+    },
+    {
+      "artifact": "preferencex-colorpicker",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.takisoft.preferencex",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "preferencex-datetimepicker",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.takisoft.preferencex",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "ckchangelog-core",
+      "category": "tier2-single-real-apk-version",
+      "group": "de.cketti.library.changelog",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.0-beta02"
+      ]
+    },
+    {
+      "artifact": "safe-content-resolver-v21",
+      "category": "tier2-single-real-apk-version",
+      "group": "de.cketti.safecontentresolver",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "recyclerview",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.grishka.litex",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.1.1"
+      ]
+    },
+    {
+      "artifact": "android.joda",
+      "category": "tier2-single-real-apk-version",
+      "group": "net.danlew",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.12.5",
+        "2.14.2"
+      ]
+    },
+    {
+      "artifact": "libvlc-all",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.videolan.android",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.7.0"
+      ]
+    },
+    {
+      "artifact": "acra-dialog",
+      "category": "tier2-single-real-apk-version",
+      "group": "ch.acra",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.8.3",
+        "5.12.0"
+      ]
+    },
+    {
+      "artifact": "acra-http",
+      "category": "tier2-single-real-apk-version",
+      "group": "ch.acra",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.11.2",
+        "5.13.1"
+      ]
+    },
+    {
+      "artifact": "acra-mail",
+      "category": "tier2-single-real-apk-version",
+      "group": "ch.acra",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.8.3",
+        "5.12.0"
+      ]
+    },
+    {
+      "artifact": "lottie",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.airbnb.android",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.0.3",
+        "6.6.0"
+      ]
+    },
+    {
+      "artifact": "fbjni",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fbjni",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.7.0"
+      ]
+    },
+    {
+      "artifact": "fresco",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "imagepipeline-base",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "imagepipeline-okhttp3",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "hermes-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.react",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.77.2"
+      ]
+    },
+    {
+      "artifact": "react-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.react",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.77.2"
+      ]
+    },
+    {
+      "artifact": "MPAndroidChart",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.PhilJay",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.1.0",
+        "v2.2.5"
+      ]
+    },
+    {
+      "artifact": "dbflow-core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.Raizlabs.DBFlow",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.2.4"
+      ]
+    },
+    {
+      "artifact": "GlyphConverter",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.ThothDroid",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.7.0"
+      ]
+    },
+    {
+      "artifact": "SignProvider",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.ThothDroid",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.2"
+      ]
+    },
+    {
+      "artifact": "core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.afollestad.material-dialogs",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.9.6.0"
+      ]
+    },
+    {
+      "artifact": "cert4android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bitfireat",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "b8e2d33f09"
+      ]
+    },
+    {
+      "artifact": "material-about-library",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.daniel-stoneuk",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.4",
+        "3.1.2"
+      ]
+    },
+    {
+      "artifact": "android-simple-tooltip",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.douglasjunior",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.2.2",
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "groupie",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.lisawray.groupie",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.10.1"
+      ]
+    },
+    {
+      "artifact": "mapsforge-core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map-reader",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.nextcloud.android-common",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.33.2"
+      ]
+    },
+    {
+      "artifact": "material-calendarview",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.prolificinteractive",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.6.1",
+        "2.0.1"
+      ]
+    },
+    {
+      "artifact": "balloon",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.skydoves",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.3",
+        "1.7.6"
+      ]
+    },
+    {
+      "artifact": "disk-lru-cache",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.solkin",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.2"
+      ]
+    },
+    {
+      "artifact": "service",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.2.2",
+        "6.0.0"
+      ]
+    },
+    {
+      "artifact": "dagger-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.google.dagger",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.45"
+      ]
+    },
+    {
+      "artifact": "zxing-android-embedded",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.journeyapps",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0",
+        "3.6.0"
+      ]
+    },
+    {
+      "artifact": "aboutlibraries-core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "8.9.4"
+      ]
+    },
+    {
+      "artifact": "community-material-typeface",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.54.2",
+        "3.7.95.4-kotlin"
+      ]
+    },
+    {
+      "artifact": "fastadapter-extensions-expandable",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.2.6",
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "google-material-typeface",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.0.3.original",
+        "3.0.1.4.original-kotlin"
+      ]
+    },
+    {
+      "artifact": "materialize",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.2",
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "filemojicompat",
+      "category": "tier2-single-real-apk-version",
+      "group": "de.c1710",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.1"
+      ]
+    },
+    {
+      "artifact": "filemojicompat-ui",
+      "category": "tier2-single-real-apk-version",
+      "group": "de.c1710",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.1"
+      ]
+    },
+    {
+      "artifact": "aidl",
+      "category": "tier2-single-real-apk-version",
+      "group": "dev.rikka.shizuku",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "13.1.5"
+      ]
+    },
+    {
+      "artifact": "libsuperuser",
+      "category": "tier2-single-real-apk-version",
+      "group": "eu.chainfire",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0",
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "coil-svg",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.coil-kt",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.6.0",
+        "2.7.0"
+      ]
+    },
+    {
+      "artifact": "koin-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.insert-koin",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.5.0",
+        "3.5.6"
+      ]
+    },
+    {
+      "artifact": "swiperefreshlayout",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.grishka.litex",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.0-beta01"
+      ]
+    },
+    {
+      "artifact": "viewpager",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.grishka.litex",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "library",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.zhanghai.android.materialprogressbar",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.6.1"
+      ]
+    },
+    {
+      "artifact": "i2p",
+      "category": "tier2-single-real-apk-version",
+      "group": "net.i2p",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.11.0-1"
+      ]
+    },
+    {
+      "artifact": "streaming",
+      "category": "tier2-single-real-apk-version",
+      "group": "net.i2p.client",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.11.0-1"
+      ]
+    },
+    {
+      "artifact": "konfetti-core",
+      "category": "tier2-single-real-apk-version",
+      "group": "nl.dionsegijn",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.2",
+        "2.0.4"
+      ]
+    },
+    {
+      "artifact": "konfetti-xml",
+      "category": "tier2-single-real-apk-version",
+      "group": "nl.dionsegijn",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.2",
+        "2.0.4"
+      ]
+    },
+    {
+      "artifact": "ble",
+      "category": "tier2-single-real-apk-version",
+      "group": "no.nordicsemi.android",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.4"
+      ]
+    },
+    {
+      "artifact": "android-sdk",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.maplibre.gl",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "13.0.2"
+      ]
+    },
+    {
+      "artifact": "osmdroid-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.osmdroid",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "6.1.1",
+        "6.1.18"
+      ]
+    },
+    {
+      "artifact": "connector",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.unifiedpush.android",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.10",
+        "3.3.2"
+      ]
+    },
+    {
+      "artifact": "medialibrary-all",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.videolan.android",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.13.17"
+      ]
+    },
+    {
+      "artifact": "sparkbutton-compose",
+      "category": "tier2-single-real-apk-version",
+      "group": "at.connyduck.sparkbutton",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0-beta1"
+      ]
+    },
+    {
+      "artifact": "customactivityoncrash",
+      "category": "tier2-single-real-apk-version",
+      "group": "cat.ereza",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.4.0"
+      ]
+    },
+    {
+      "artifact": "acra",
+      "category": "tier2-single-real-apk-version",
+      "group": "ch.acra",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.11.1"
+      ]
+    },
+    {
+      "artifact": "acra-notification",
+      "category": "tier2-single-real-apk-version",
+      "group": "ch.acra",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.13.1"
+      ]
+    },
+    {
+      "artifact": "acra-toast",
+      "category": "tier2-single-real-apk-version",
+      "group": "ch.acra",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.11.2"
+      ]
+    },
+    {
+      "artifact": "material-cab",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.afollestad",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.1"
+      ]
+    },
+    {
+      "artifact": "viewpagerdots",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.afollestad",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "color",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.afollestad.material-dialogs",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "input",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.afollestad.material-dialogs",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "pinentryedittext",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.alimuzaffar.lib",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.6"
+      ]
+    },
+    {
+      "artifact": "patternlockview",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.andrognito.patternlockview",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "pinlockview",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.andrognito.pinlockview",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.0"
+      ]
+    },
+    {
+      "artifact": "sublimepickerlibrary",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.appeaser.sublimepickerlibrary",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.2"
+      ]
+    },
+    {
+      "artifact": "certificatetransparency-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.appmattus.certificatetransparency",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.7.0"
+      ]
+    },
+    {
+      "artifact": "proguard-rules",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.artemzin.rxjava",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.3.3.0"
+      ]
+    },
+    {
+      "artifact": "jwtdecode",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.auth0.android",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.2"
+      ]
+    },
+    {
+      "artifact": "ChipsLayoutManager",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.beloo.widget",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.3.7"
+      ]
+    },
+    {
+      "artifact": "bottomsheet",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.cocosw",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.0"
+      ]
+    },
+    {
+      "artifact": "library",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.code-troopers.betterpickers",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.1.0"
+      ]
+    },
+    {
+      "artifact": "subsampling-scale-image-view-androidx",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.davemorrissey.labs",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.10.0"
+      ]
+    },
+    {
+      "artifact": "drawer",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.drakeet.drawer",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.3"
+      ]
+    },
+    {
+      "artifact": "multitype",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.drakeet.multitype",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.3.0"
+      ]
+    },
+    {
+      "artifact": "rangebar",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.edmodo",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "recyclerview-stickyheaders",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.eowise",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.5.2"
+      ]
+    },
+    {
+      "artifact": "android-state",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.evernote",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.4.1"
+      ]
+    },
+    {
+      "artifact": "drawee",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "nativeimagefilters",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "nativeimagetranscoder",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "soloader",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "urimod",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "vito-source",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.fresco",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "shimmer",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.facebook.shimmer",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.5.0"
+      ]
+    },
+    {
+      "artifact": "nordpol-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.fidesmo",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.1.22"
+      ]
+    },
+    {
+      "artifact": "parallaxeverywhere",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.fmsirvent",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.4"
+      ]
+    },
+    {
+      "artifact": "relinker",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.getkeepsafe.relinker",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.4.5"
+      ]
+    },
+    {
+      "artifact": "taptargetview",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.getkeepsafe.taptargetview",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.13.2"
+      ]
+    },
+    {
+      "artifact": "jaudiotagger",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.Adonai",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.3.15"
+      ]
+    },
+    {
+      "artifact": "AndroidChart",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.AppDevNext",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.1.0.31"
+      ]
+    },
+    {
+      "artifact": "AppIntro",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.AppIntro",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "6.2.0"
+      ]
+    },
+    {
+      "artifact": "PhotoView",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.Baseflow",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.3.0"
+      ]
+    },
+    {
+      "artifact": "SearchPreference",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.ByteHamster",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "v2.3.0"
+      ]
+    },
+    {
+      "artifact": "Android-XML-to-PDF-Generator",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.Gkemon",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.6.8"
+      ]
+    },
+    {
+      "artifact": "TextFieldBoxes",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.HITGIF",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.4.5"
+      ]
+    },
+    {
+      "artifact": "osmbonuspack",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.MKergall",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "6.9.0"
+      ]
+    },
+    {
+      "artifact": "TouchImageView",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.MikeOrtiz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.7.1"
+      ]
+    },
+    {
+      "artifact": "gene-rate",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.Pixplicity",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "v1.1.8"
+      ]
+    },
+    {
+      "artifact": "ors-android-client",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.Pygmalion69",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.3.1"
+      ]
+    },
+    {
+      "artifact": "dbflow",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.Raizlabs.DBFlow",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.2.4"
+      ]
+    },
+    {
+      "artifact": "html-textview",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.SufficientlySecure",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "v3.6"
+      ]
+    },
+    {
+      "artifact": "NewPipeExtractor",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.TeamNewPipe",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "v0.26.1"
+      ]
+    },
+    {
+      "artifact": "NoNonsense-FilePicker",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.TeamNewPipe",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.0.0"
+      ]
+    },
+    {
+      "artifact": "MAAT",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.ThothDroid",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.1"
+      ]
+    },
+    {
+      "artifact": "THOTH",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.ThothDroid",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.4.1"
+      ]
+    },
+    {
+      "artifact": "commons",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.afollestad.material-dialogs",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.9.6.0"
+      ]
+    },
+    {
+      "artifact": "fzf4j",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.aivanovski",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.2.1"
+      ]
+    },
+    {
+      "artifact": "keepass-tree-builder",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.aivanovski",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.4.0"
+      ]
+    },
+    {
+      "artifact": "keepass-tree-diff",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.aivanovski",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.4.0"
+      ]
+    },
+    {
+      "artifact": "appintro",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.apl-devs",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "v4.2.3"
+      ]
+    },
+    {
+      "artifact": "krop",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.avito-tech",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.52"
+      ]
+    },
+    {
+      "artifact": "immersivelock",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.babydots",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.2"
+      ]
+    },
+    {
+      "artifact": "Treessence",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bastienpaulfr",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.5"
+      ]
+    },
+    {
+      "artifact": "synctools",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bitfireAT",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "06f2de81e1"
+      ]
+    },
+    {
+      "artifact": "dav4jvm",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bitfireat",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1f2f5a7793"
+      ]
+    },
+    {
+      "artifact": "fadingedgelayout",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bosphere.android-fadingedgelayout",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "filelogger",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bosphere.android-filelogger",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.7"
+      ]
+    },
+    {
+      "artifact": "gifdecoder",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bumptech.glide",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.9.0"
+      ]
+    },
+    {
+      "artifact": "glide",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bumptech.glide",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.9.0"
+      ]
+    },
+    {
+      "artifact": "okhttp3-integration",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.bumptech.glide",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.0.5"
+      ]
+    },
+    {
+      "artifact": "ExpandableLayout",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.cachapa",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.9.2"
+      ]
+    },
+    {
+      "artifact": "fab",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.clans",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.6.4"
+      ]
+    },
+    {
+      "artifact": "subsampling-scale-image-view",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.cryptomator",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.10.1-dev.0002"
+      ]
+    },
+    {
+      "artifact": "QuickPermissions-Kotlin",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.cyb3rko",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.6"
+      ]
+    },
+    {
+      "artifact": "library",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.devgianlu.MaterialPreferences",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "cbb81daaed"
+      ]
+    },
+    {
+      "artifact": "TableView",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.evrencoskun",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "v0.8.9.4"
+      ]
+    },
+    {
+      "artifact": "Omni-Notes-Commons",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.federicoiosue",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.4.0"
+      ]
+    },
+    {
+      "artifact": "Springpad-Importer",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.federicoiosue",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.1"
+      ]
+    },
+    {
+      "artifact": "checklistview",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.federicoiosue",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.1.0"
+      ]
+    },
+    {
+      "artifact": "pixlui",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.federicoiosue",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.1"
+      ]
+    },
+    {
+      "artifact": "simplegallery",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.federicoiosue",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.1"
+      ]
+    },
+    {
+      "artifact": "smart-location-lib",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.federicoiosue",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.2.6"
+      ]
+    },
+    {
+      "artifact": "android-preferences",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.firebirdberlin",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "36.0.5"
+      ]
+    },
+    {
+      "artifact": "tab-digit",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.firebirdberlin",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "v36.0.3"
+      ]
+    },
+    {
+      "artifact": "expansionpanel",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.florent37",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "changelog",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.gabrielemariotti.changeloglib",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.0"
+      ]
+    },
+    {
+      "artifact": "sdk",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.hCaptcha.hcaptcha-android-sdk",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.4.0"
+      ]
+    },
+    {
+      "artifact": "MagicIndicator",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.hackware1993",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.7.0"
+      ]
+    },
+    {
+      "artifact": "android-file-chooser",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.hedzr",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "v1.2.0-final"
+      ]
+    },
+    {
+      "artifact": "android-snowfall",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.jetradarmobile",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "NewPipeExtractor",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.libre-tube",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0c7e95b"
+      ]
+    },
+    {
+      "artifact": "groupie-viewbinding",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.lisawray.groupie",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.10.1"
+      ]
+    },
+    {
+      "artifact": "bridge",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.livefront",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "v2.0.2"
+      ]
+    },
+    {
+      "artifact": "pikolo",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.madrapps",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.2"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-themes",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "hsv-alpha-color-picker-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.martin-stone",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.1"
+      ]
+    },
+    {
+      "artifact": "android-about-page",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.medyo",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.3"
+      ]
+    },
+    {
+      "artifact": "fyydlin",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.mfietz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "e1d25f347641fe5e26c4c2b9756d4e9001a398dd"
+      ]
+    },
+    {
+      "artifact": "android-library",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.nextcloud",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "cd6ef9c073cd7c23bd36f9712d1f8c1030cc6804"
+      ]
+    },
+    {
+      "artifact": "qrcodescanner",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.nextcloud-deps",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.1.2.4"
+      ]
+    },
+    {
+      "artifact": "sectioned-recyclerview",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.nextcloud-deps",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.6.1"
+      ]
+    },
+    {
+      "artifact": "material-color-utilities",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.nextcloud.android-common",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.33.2"
+      ]
+    },
+    {
+      "artifact": "ui",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.nextcloud.android-common",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.33.2"
+      ]
+    },
+    {
+      "artifact": "richeditor-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.niendo1",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.4"
+      ]
+    },
+    {
+      "artifact": "openpgp-api",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.open-keychain.open-keychain",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "v5.7.1"
+      ]
+    },
+    {
+      "artifact": "android-dav",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.opencloud-eu",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "oc_support_2.1.5"
+      ]
+    },
+    {
+      "artifact": "dav4android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.owncloud",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "oc_support_2.1.5"
+      ]
+    },
+    {
+      "artifact": "appintro",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.paolorotolo",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.3.0"
+      ]
+    },
+    {
+      "artifact": "apng",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "avif",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "awebp",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "gif",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "glide-plugin",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.penfeizhou.android.animation",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.5"
+      ]
+    },
+    {
+      "artifact": "reactivenetwork-rx2",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.pwittchen",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.8"
+      ]
+    },
+    {
+      "artifact": "totp-kt",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.robinohs",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "v1.0.0"
+      ]
+    },
+    {
+      "artifact": "Material-ViewPagerIndicator",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.ronaldsmartin",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.4"
+      ]
+    },
+    {
+      "artifact": "bottomsheetbuilder",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.rubensousa",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.6.1"
+      ]
+    },
+    {
+      "artifact": "file-dialogs",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.rustamg",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0"
+      ]
+    },
+    {
+      "artifact": "indeterminate-checkbox",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.sevar83",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.5"
+      ]
+    },
+    {
+      "artifact": "SJ-Dialog",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.sj14apps",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.7.0.1"
+      ]
+    },
+    {
+      "artifact": "colorpickerview",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.skydoves",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.4.0"
+      ]
+    },
+    {
+      "artifact": "compose-stability-runtime-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.skydoves",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.7.1"
+      ]
+    },
+    {
+      "artifact": "sardine-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.thegrizzlylabs",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.8"
+      ]
+    },
+    {
+      "artifact": "MPAndroidChart",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.thuryn",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "v4.0.4"
+      ]
+    },
+    {
+      "artifact": "android-gpx-parser",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.ticofab",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.3.1"
+      ]
+    },
+    {
+      "artifact": "core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.2.2"
+      ]
+    },
+    {
+      "artifact": "io",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.topjohnwu.libsu",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "6.0.0"
+      ]
+    },
+    {
+      "artifact": "android-lockpattern",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.ukanth",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "8.0.4"
+      ]
+    },
+    {
+      "artifact": "contract",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.wax911.android-emojify",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.7"
+      ]
+    },
+    {
+      "artifact": "emojify",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.wax911.android-emojify",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.7"
+      ]
+    },
+    {
+      "artifact": "gson",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.wax911.android-emojify",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.7"
+      ]
+    },
+    {
+      "artifact": "FreeDroidWarn",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.woheller69",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "V1.11"
+      ]
+    },
+    {
+      "artifact": "SimplyPDF",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.wwdablu",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.1"
+      ]
+    },
+    {
+      "artifact": "RecyclerViewSwipeDecorator",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.xabaras",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.3"
+      ]
+    },
+    {
+      "artifact": "material-popup-menu",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.zawadz88.materialpopupmenu",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "dav4jvm",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.github.zhanghai",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "c317607"
+      ]
+    },
+    {
+      "artifact": "betterpickers",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.gitlab.askanimus",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.2.7"
+      ]
+    },
+    {
+      "artifact": "dagger-android-support",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.google.dagger",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.45"
+      ]
+    },
+    {
+      "artifact": "materialshadowninepatch",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.h6ah4i.android.materialshadowninepatch",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "adapterdelegates4",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.hannesdorfmann",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.3.2"
+      ]
+    },
+    {
+      "artifact": "material-intro",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.heinrichreimersoftware",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.0.0"
+      ]
+    },
+    {
+      "artifact": "process-phoenix",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.jakewharton",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "rxbinding",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.jakewharton.rxbinding2",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.0"
+      ]
+    },
+    {
+      "artifact": "rxbinding",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.jakewharton.rxbinding4",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.0.0"
+      ]
+    },
+    {
+      "artifact": "material-spinner",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.jaredrummler",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.5"
+      ]
+    },
+    {
+      "artifact": "graphview",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.jjoe64",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.2.2"
+      ]
+    },
+    {
+      "artifact": "android-iconify",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.joanzapata.iconify",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.2"
+      ]
+    },
+    {
+      "artifact": "android-iconify-fontawesome",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.joanzapata.iconify",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.2"
+      ]
+    },
+    {
+      "artifact": "library",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.jpardogo.materialtabstrip",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "dexter",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.karumi",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "6.2.2"
+      ]
+    },
+    {
+      "artifact": "view",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.kizitonwose.calendar",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.10.1"
+      ]
+    },
+    {
+      "artifact": "HoloColorPicker",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.larswerkman",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.5"
+      ]
+    },
+    {
+      "artifact": "dfc",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.lazygeniouz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.8"
+      ]
+    },
+    {
+      "artifact": "icondialog",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.maltaisn",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "aboutlibraries-compose-core-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "14.2.0"
+      ]
+    },
+    {
+      "artifact": "aboutlibraries-compose-m3-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "14.2.0"
+      ]
+    },
+    {
+      "artifact": "fastadapter-commons",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "fontawesome-typeface",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.3.1.1"
+      ]
+    },
+    {
+      "artifact": "iconics-typeface-api",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.4.0"
+      ]
+    },
+    {
+      "artifact": "iconics-views",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.0.2"
+      ]
+    },
+    {
+      "artifact": "library",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.2.6"
+      ]
+    },
+    {
+      "artifact": "library-core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.2.6"
+      ]
+    },
+    {
+      "artifact": "materialdrawer-iconics",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.mikepenz",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "9.0.2"
+      ]
+    },
+    {
+      "artifact": "fingerprint-auth",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.multidots",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.1"
+      ]
+    },
+    {
+      "artifact": "materialfilepicker",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.nbsp",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.1"
+      ]
+    },
+    {
+      "artifact": "snackbar",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.nispok",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.11.0"
+      ]
+    },
+    {
+      "artifact": "zoomlayout",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.otaliastudios",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.0"
+      ]
+    },
+    {
+      "artifact": "bottomsheetpickers",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.philliphsu",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.4.1"
+      ]
+    },
+    {
+      "artifact": "library",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.pixplicity.easyprefs",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.0"
+      ]
+    },
+    {
+      "artifact": "materialish-progress",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.pnikosis",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.5"
+      ]
+    },
+    {
+      "artifact": "dynamic-toasts",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.pranavpandey.android",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.3.0"
+      ]
+    },
+    {
+      "artifact": "dynamic-utils",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.pranavpandey.android",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.1"
+      ]
+    },
+    {
+      "artifact": "android-extensions",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.pushbullet",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.4"
+      ]
+    },
+    {
+      "artifact": "slidableactivity",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.r0adkll",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.0"
+      ]
+    },
+    {
+      "artifact": "library",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.rengwuxian.materialedittext",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.4"
+      ]
+    },
+    {
+      "artifact": "android-crop",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.soundcloud.android",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "leakcanary-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.squareup.leakcanary",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "leakcanary-android-core",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.squareup.leakcanary",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "leakcanary-object-watcher-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.squareup.leakcanary",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "leakcanary-object-watcher-android-androidx",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.squareup.leakcanary",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "leakcanary-object-watcher-android-support-fragments",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.squareup.leakcanary",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "okhttp-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.squareup.okhttp3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.0.0-alpha.16"
+      ]
+    },
+    {
+      "artifact": "android-driver",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.squareup.sqldelight",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.4"
+      ]
+    },
+    {
+      "artifact": "preferencex-ringtone",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.takisoft.preferencex",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "rxpermissions",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.tbruyelle.rxpermissions",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.4.2"
+      ]
+    },
+    {
+      "artifact": "dotsindicator",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.tbuonomo",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.2"
+      ]
+    },
+    {
+      "artifact": "android-image-cropper",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.vanniktech",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.0"
+      ]
+    },
+    {
+      "artifact": "emoji-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.vanniktech",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.23.0"
+      ]
+    },
+    {
+      "artifact": "emoji-google-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.vanniktech",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.23.0"
+      ]
+    },
+    {
+      "artifact": "ui-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "com.vanniktech",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.10.0"
+      ]
+    },
+    {
+      "artifact": "commons-logging",
+      "category": "tier2-single-real-apk-version",
+      "group": "commons-logging",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "org.slf4j"
+      ]
+    },
+    {
+      "artifact": "filemojicompat-defaults",
+      "category": "tier2-single-real-apk-version",
+      "group": "de.c1710",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.1"
+      ]
+    },
+    {
+      "artifact": "ckchangelog",
+      "category": "tier2-single-real-apk-version",
+      "group": "de.cketti.library.changelog",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.2"
+      ]
+    },
+    {
+      "artifact": "licensesdialog",
+      "category": "tier2-single-real-apk-version",
+      "group": "de.psdev.licensesdialog",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.0"
+      ]
+    },
+    {
+      "artifact": "graphview",
+      "category": "tier2-single-real-apk-version",
+      "group": "dev.bandb.graphview",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.8.1"
+      ]
+    },
+    {
+      "artifact": "insetter",
+      "category": "tier2-single-real-apk-version",
+      "group": "dev.chrisbanes",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.3.1"
+      ]
+    },
+    {
+      "artifact": "insetter-ktx",
+      "category": "tier2-single-real-apk-version",
+      "group": "dev.chrisbanes",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.3.1"
+      ]
+    },
+    {
+      "artifact": "insetter",
+      "category": "tier2-single-real-apk-version",
+      "group": "dev.chrisbanes.insetter",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.6.1"
+      ]
+    },
+    {
+      "artifact": "simplemenu-preference",
+      "category": "tier2-single-real-apk-version",
+      "group": "dev.rikka.rikkax.preference",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.3"
+      ]
+    },
+    {
+      "artifact": "api",
+      "category": "tier2-single-real-apk-version",
+      "group": "dev.rikka.shizuku",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "13.1.5"
+      ]
+    },
+    {
+      "artifact": "shared",
+      "category": "tier2-single-real-apk-version",
+      "group": "dev.rikka.shizuku",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "13.1.5"
+      ]
+    },
+    {
+      "artifact": "flexible-adapter",
+      "category": "tier2-single-real-apk-version",
+      "group": "eu.davidea",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "5.1.0"
+      ]
+    },
+    {
+      "artifact": "flexible-adapter-livedata",
+      "category": "tier2-single-real-apk-version",
+      "group": "eu.davidea",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0-b2"
+      ]
+    },
+    {
+      "artifact": "flexible-adapter-ui",
+      "category": "tier2-single-real-apk-version",
+      "group": "eu.davidea",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0-b5"
+      ]
+    },
+    {
+      "artifact": "compressor",
+      "category": "tier2-single-real-apk-version",
+      "group": "id.zelory",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.1"
+      ]
+    },
+    {
+      "artifact": "webrtc-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "im.conversations.webrtc",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "129.0.0"
+      ]
+    },
+    {
+      "artifact": "coil",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.coil-kt",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.6.0"
+      ]
+    },
+    {
+      "artifact": "coil-gif",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.coil-kt",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.6.0"
+      ]
+    },
+    {
+      "artifact": "coil-video",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.coil-kt",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.6.0"
+      ]
+    },
+    {
+      "artifact": "coil-compose-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.coil-kt.coil3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "coil-compose-core-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.coil-kt.coil3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.3.0"
+      ]
+    },
+    {
+      "artifact": "coil-core-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.coil-kt.coil3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.1.0"
+      ]
+    },
+    {
+      "artifact": "coil-gif",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.coil-kt.coil3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "coil-network-core-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.coil-kt.coil3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.1.0"
+      ]
+    },
+    {
+      "artifact": "coil-svg-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.coil-kt.coil3",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "transcoder-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.deepmedia.community",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.11.2"
+      ]
+    },
+    {
+      "artifact": "photoview",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.getstream",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.3"
+      ]
+    },
+    {
+      "artifact": "bom",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.github.Rosemoe.sora-editor",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.23.4"
+      ]
+    },
+    {
+      "artifact": "editor",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.github.Rosemoe.sora-editor",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.23.4"
+      ]
+    },
+    {
+      "artifact": "language-textmate",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.github.Rosemoe.sora-editor",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.23.4"
+      ]
+    },
+    {
+      "artifact": "simpledialogfragments",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.github.eltos",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.10"
+      ]
+    },
+    {
+      "artifact": "loaderviewlibrary",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.github.elye",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "overscroll-decor-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.github.everythingme",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "whatsnew",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.github.tonnyl",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.1.7"
+      ]
+    },
+    {
+      "artifact": "ionfilesystem-android",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.ionic.libs",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "editor",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.noties.markwon",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "image",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.noties.markwon",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "image-coil",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.noties.markwon",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "linkify",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.noties.markwon",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "syntax-highlight",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.noties.markwon",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.6.2"
+      ]
+    },
+    {
+      "artifact": "rxandroid",
+      "category": "tier2-single-real-apk-version",
+      "group": "io.reactivex",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "artifact": "glide-transformations",
+      "category": "tier2-single-real-apk-version",
+      "group": "jp.wasabeef",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "4.3.0"
+      ]
+    },
+    {
+      "artifact": "picasso-transformations",
+      "category": "tier2-single-real-apk-version",
+      "group": "jp.wasabeef",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.3.1"
+      ]
+    },
+    {
+      "artifact": "recyclerview-animators",
+      "category": "tier2-single-real-apk-version",
+      "group": "jp.wasabeef",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "core",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.dm7.barcodescanner",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.8"
+      ]
+    },
+    {
+      "artifact": "zxing",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.dm7.barcodescanner",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.9.8"
+      ]
+    },
+    {
+      "artifact": "appkit",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.grishka.appkit",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.3"
+      ]
+    },
+    {
+      "artifact": "browser",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.grishka.litex",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.4.0"
+      ]
+    },
+    {
+      "artifact": "concurrent",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.grishka.litex",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "dynamicanimation",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.grishka.litex",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0-alpha03"
+      ]
+    },
+    {
+      "artifact": "palette",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.grishka.litex",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "viewpager2",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.grishka.litex",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "circularSeekBar",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.tankery.lib",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.4.2"
+      ]
+    },
+    {
+      "artifact": "free_reflection",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.weishu",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.0"
+      ]
+    },
+    {
+      "artifact": "appiconloader",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.zhanghai.android.appiconloader",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.0"
+      ]
+    },
+    {
+      "artifact": "appiconloader-iconloaderlib",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.zhanghai.android.appiconloader",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.0"
+      ]
+    },
+    {
+      "artifact": "library",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.zhanghai.android.fastscroll",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.0"
+      ]
+    },
+    {
+      "artifact": "library",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.zhanghai.android.foregroundcompat",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.2"
+      ]
+    },
+    {
+      "artifact": "library",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.zhanghai.android.libarchive",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "library",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.zhanghai.android.libselinux",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.1.0"
+      ]
+    },
+    {
+      "artifact": "library",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.zhanghai.android.retrofile",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "library",
+      "category": "tier2-single-real-apk-version",
+      "group": "me.zhanghai.android.systemuihelper",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "time-duration-picker",
+      "category": "tier2-single-real-apk-version",
+      "group": "mobi.upod",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.3"
+      ]
+    },
+    {
+      "artifact": "router",
+      "category": "tier2-single-real-apk-version",
+      "group": "net.i2p",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.11.0-1"
+      ]
+    },
+    {
+      "artifact": "floatingactionbutton",
+      "category": "tier2-single-real-apk-version",
+      "group": "net.i2p.android.ext",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.10.1"
+      ]
+    },
+    {
+      "artifact": "mstreaming",
+      "category": "tier2-single-real-apk-version",
+      "group": "net.i2p.client",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.11.0-1"
+      ]
+    },
+    {
+      "artifact": "appauth",
+      "category": "tier2-single-real-apk-version",
+      "group": "net.openid",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.9.1"
+      ]
+    },
+    {
+      "artifact": "keyboardvisibilityevent",
+      "category": "tier2-single-real-apk-version",
+      "group": "net.yslibrary.keyboardvisibilityevent",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.0-RC3"
+      ]
+    },
+    {
+      "artifact": "ble-common",
+      "category": "tier2-single-real-apk-version",
+      "group": "no.nordicsemi.android",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.2.4"
+      ]
+    },
+    {
+      "artifact": "client-api",
+      "category": "tier2-single-real-apk-version",
+      "group": "no.nordicsemi.android.kotlin.ble",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.3.1"
+      ]
+    },
+    {
+      "artifact": "mock",
+      "category": "tier2-single-real-apk-version",
+      "group": "no.nordicsemi.android.kotlin.ble",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.3.1"
+      ]
+    },
+    {
+      "artifact": "scanner",
+      "category": "tier2-single-real-apk-version",
+      "group": "no.nordicsemi.android.kotlin.ble",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.3.1"
+      ]
+    },
+    {
+      "artifact": "server-api",
+      "category": "tier2-single-real-apk-version",
+      "group": "no.nordicsemi.android.kotlin.ble",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.3.1"
+      ]
+    },
+    {
+      "artifact": "android-beacon-library",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.altbeacon",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "2.21.2"
+      ]
+    },
+    {
+      "artifact": "avif",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.aomedia.avif.android",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.1.14d8e3c4"
+      ]
+    },
+    {
+      "artifact": "commons-numbers-parent",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.apache.commons",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.0"
+      ]
+    },
+    {
+      "artifact": "platform.sdk",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.cyanogenmod",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "6.0"
+      ]
+    },
+    {
+      "artifact": "webrtc",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.jitsi",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "124.0.0"
+      ]
+    },
+    {
+      "artifact": "android-smsmms",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.kde.invent.sredman",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "kdeconnect-1-21-0"
+      ]
+    },
+    {
+      "artifact": "android-plugin-annotation-v9",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.maplibre.gl",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.2"
+      ]
+    },
+    {
+      "artifact": "maplibre-android-gestures",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.maplibre.gl",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.0.4"
+      ]
+    },
+    {
+      "artifact": "safe-parcel",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.microg",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.5.0"
+      ]
+    },
+    {
+      "artifact": "html-textview",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.sufficientlysecure",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.1"
+      ]
+    },
+    {
+      "artifact": "connector-ui",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.unifiedpush.android",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "artifact": "embedded-fcm-distributor",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.unifiedpush.android",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "remote-access",
+      "category": "tier2-single-real-apk-version",
+      "group": "org.videolan.android",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "0.17.0"
+      ]
+    },
+    {
+      "artifact": "android-gif-drawable",
+      "category": "tier2-single-real-apk-version",
+      "group": "pl.droidsonroids.gif",
+      "notes": "Priority failed-download retry; Maven Central AAR fallback.",
+      "packaging": "aar",
+      "versions": [
+        "1.2.31"
+      ]
+    }
+  ]
+}

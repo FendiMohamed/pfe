@@ -1,0 +1,61 @@
+{
+  "apk": {
+    "expected_sha256": "09205b109cdac34845385e0738731f27eaf2bec8af29191eae66587fcfc499bc",
+    "index_size": 1061073,
+    "path": "data/test_apks/real/foxy-droid/foxy-droid.apk",
+    "sha256": "09205b109cdac34845385e0738731f27eaf2bec8af29191eae66587fcfc499bc",
+    "size": 1061073,
+    "url": "https://f-droid.org/repo/nya.kitsunyan.foxydroid_4.apk"
+  },
+  "app": "Foxy Droid",
+  "categories": [
+    "App Store & Updater",
+    "System"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "app-store-client",
+    "androidx-likely",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/nya.kitsunyan.foxydroid/",
+  "license": "GPL-3.0-or-later",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "nya.kitsunyan.foxydroid",
+  "proof_status": "report-generated",
+  "reason": "No-native F-Droid app-store client with source tarball metadata; likely to emit non-sparse Java/Kotlin Maven evidence.",
+  "report": {
+    "detected_component_count": 6,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep/report-real-foxy-droid",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep/report-real-foxy-droid/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep/report-real-foxy-droid/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep/report-real-foxy-droid/sbom.cdx.json",
+    "sbom_component_count": 6,
+    "status": "ok"
+  },
+  "slug": "foxy-droid",
+  "source_repo": "https://github.com/kitsunyan/foxy-droid",
+  "source_tarball": {
+    "sha256": "3e248b9810751b5c38190a4b0e0210a322c4cfbd4dd03abe3cf85ae0b092881c",
+    "size": 662672,
+    "url": "https://f-droid.org/repo/nya.kitsunyan.foxydroid_4_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 4,
+  "version_name": "1.3"
+}

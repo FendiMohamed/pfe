@@ -1,0 +1,64 @@
+{
+  "apk": {
+    "expected_sha256": "243de7e55695f199e32241037be404cb5c9bf915cbedf1fc4b678ed7be31eb8d",
+    "index_size": 13081820,
+    "path": "data/test_apks/real/afwall-plus/afwall-plus.apk",
+    "sha256": "243de7e55695f199e32241037be404cb5c9bf915cbedf1fc4b678ed7be31eb8d",
+    "size": 13081820,
+    "url": "https://f-droid.org/repo/dev.ukanth.ufirewall_20260301.apk"
+  },
+  "app": "AFWall+",
+  "categories": [
+    "Firewall",
+    "Internet",
+    "Security"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "security",
+    "firewall",
+    "internet",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/dev.ukanth.ufirewall/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "dev.ukanth.ufirewall",
+  "proof_status": "report-generated",
+  "reason": "No-native firewall/security app with source tarball metadata; tests another security family without native library claims.",
+  "report": {
+    "detected_component_count": 18,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v5/report-real-afwall-plus",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v5/report-real-afwall-plus/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v5/report-real-afwall-plus/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v5/report-real-afwall-plus/sbom.cdx.json",
+    "sbom_component_count": 18,
+    "status": "ok"
+  },
+  "slug": "afwall-plus",
+  "source_repo": "https://github.com/ukanth/afwall",
+  "source_tarball": {
+    "sha256": "2887d5727b79ecee5d492f38cae3c6bf5e50d9ec7c1807cefd1c8cf62f0049e6",
+    "size": 1887565,
+    "url": "https://f-droid.org/repo/dev.ukanth.ufirewall_20260301_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 20260301,
+  "version_name": "4.0.3"
+}

@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "added": 1541462400000,
+    "authorEmail": "gotify@protonmail.com",
+    "authorName": "Gotify",
+    "categories": [
+      "Internet"
+    ],
+    "changelog": "https://github.com/gotify/android/releases",
+    "description": {
+      "en-US": "Gotify is a service for sending and receiving push notifications.\n\nThis app subscribes to gotify/server and creates push notifications for incoming messages.\n\nNote: A self-hosted gotify/server is required for this app to work. \n"
+    },
+    "donate": [
+      "https://jmattheis.de/donate"
+    ],
+    "featureGraphic": {
+      "en-US": {
+        "name": "/com.github.gotify/en-US/featureGraphic_D5R6ekBuQFCslwsTzocuIUvIG4-2raxBZ1Pl1M5eecw=.png",
+        "sha256": "0f947a7a406e4050ac970b13ce872e214bc81b8fb6adac416753e5d4ce5e79cc",
+        "size": 68656
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/com.github.gotify/en-US/icon_dZzYyqYLbiyccNEO4PmwLNlfzOdOP13LOF-yNULEwfY=.png",
+        "sha256": "759cd8caa60b6e2c9c70d10ee0f9b02cd95fcce74e3f5dcb385fb23542c4c1f6",
+        "size": 22133
+      }
+    },
+    "issueTracker": "https://github.com/gotify/android/issues",
+    "lastUpdated": 1777330022541,
+    "license": "MIT",
+    "name": {
+      "en-US": "Gotify"
+    },
+    "preferredSigner": "5d73c22fa3a466d602c5041774dcb05be624ea8e080ded752c1425b1a39c996b",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/com.github.gotify/en-US/phoneScreenshots/1.png",
+            "sha256": "91f52fbb92b940c8421c7d4603b30484cc925d44784d09e65e90a866d57aba2b",
+            "size": 110378
+          },
+          {
+            "name": "/com.github.gotify/en-US/phoneScreenshots/2.png",
+            "sha256": "e9bf27207839ebad9ca4d078a5c63c7aa9047b495f93ed7a9eb71f58cc30960b",
+            "size": 108767
+          },
+          {
+            "name": "/com.github.gotify/en-US/phoneScreenshots/3.png",
+            "sha256": "23c628d88b60f7ba3710ab602a964cab34e4a00bbb145fea0fd5a40ec26dc4b7",
+            "size": 48461
+          },
+          {
+            "name": "/com.github.gotify/en-US/phoneScreenshots/4.png",
+            "sha256": "afd29d063aa23bbc2924d4548e29b6cf64069e98ddd1fa484fcdee43c4510c3e",
+            "size": 45374
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/gotify/android",
+    "summary": {
+      "en-US": "A client for receiving push notifications"
+    },
+    "video": {
+      "en-US": "https://raw.githubusercontent.com/gotify/android/master/app.gif"
+    },
+    "webSite": "https://gotify.net/"
+  },
+  "version": {
+    "added": 1777330022541,
+    "file": {
+      "ipfsCIDv1": "bafybeidrjwb44qnqdevpmn5dokjaf37kwxsy7yahfy2ozqxv7lcn2yqdn4",
+      "name": "/com.github.gotify_35.apk",
+      "sha256": "8b02fbb73f37c6efd71301b2131ffe2984e4022f38b70b06443065d9f820f669",
+      "size": 6833806
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "5d73c22fa3a466d602c5041774dcb05be624ea8e080ded752c1425b1a39c996b"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.SYSTEM_ALERT_WINDOW"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.SCHEDULE_EXACT_ALARM"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+        },
+        {
+          "name": "com.github.gotify.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 35,
+      "versionName": "2.10.0"
+    },
+    "src": {
+      "name": "/com.github.gotify_35_src.tar.gz",
+      "sha256": "bd5eceba48d8d5d8abc2fa183392bb43af9e0f031dccff46054afdce1c68e7cc",
+      "size": 1606668
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "added": 1670168539000,
+    "authorName": "phramusca",
+    "categories": [
+      "Multimedia",
+      "Online Media Player"
+    ],
+    "changelog": "https://github.com/phramusca/JaMuz-Remote/releases",
+    "description": {
+      "en": "Audio Player:\n - Playlist editor (user tags, rating and genre)\n - Tag editor (user tags, rating and genre)\n - Replaygain support (MP3 only, FLAC on its way)\n - One finger control\n - Voice commands\n\nMerge your statistics with <a href=\"https://phramusca.github.io/JaMuz/\">JaMuz Desktop</a>\n - And so with all players JaMuz Desktop can merge with (Mixxx, Kodi, guayadeque,...)\n\nSync files from <a href=\"https://phramusca.github.io/JaMuz/\">JaMuz Desktop</a> over WiFi\n - Select a playlist on JaMuz Desktop, connect JaMuz Android, and wait for your files.\n\nRemote Control for <a href=\"https://phramusca.github.io/JaMuz/\">JaMuz Desktop</a>"
+    },
+    "icon": {
+      "en": {
+        "name": "/org.phramusca.jamuz/en/icon_0wS6-9VzG28cjztvayCES8Tja9dfgKyZX8bAvByg898=.png",
+        "sha256": "d304bafbd5731b6f1c8f3b6f6b20844bc4e36bd75f80ac995fc6c0bc1ca0f3df",
+        "size": 16869
+      }
+    },
+    "issueTracker": "https://github.com/phramusca/JaMuz-Remote/issues",
+    "lastUpdated": 1773686176611,
+    "liberapay": "phramusca",
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "en": "JaMuz",
+      "en-US": "JaMuz"
+    },
+    "preferredSigner": "cceaf559b8271d37d79851eba7dc3089e5f6f249e35b1d89d6c02cd251989118",
+    "screenshots": {
+      "phone": {
+        "en": [
+          {
+            "name": "/org.phramusca.jamuz/en/phoneScreenshots/1.png",
+            "sha256": "84b664869ca5edd5c87ae8cdb9418152d656b792604bbd9207d4824ea0fd38a4",
+            "size": 1151158
+          },
+          {
+            "name": "/org.phramusca.jamuz/en/phoneScreenshots/10.png",
+            "sha256": "f9c00deb30c0611c710a1122df244f886facf95d381f067027b983b43882248c",
+            "size": 555420
+          },
+          {
+            "name": "/org.phramusca.jamuz/en/phoneScreenshots/11.png",
+            "sha256": "bcfd07ea262ed9cceea934ed0e0274e9da3a3f077338f1eff4c9548365148610",
+            "size": 627467
+          },
+          {
+            "name": "/org.phramusca.jamuz/en/phoneScreenshots/12.png",
+            "sha256": "4e7340d09a5c9d10c5a6c5a3887c2760a0c481b640e6d041aaf4648b363139b9",
+            "size": 946344
+          },
+          {
+            "name": "/org.phramusca.jamuz/en/phoneScreenshots/13.png",
+            "sha256": "cb036037eb55004cff350e198d6bbbb662885789d0f46098f80cee46c99fdb1d",
+            "size": 459967
+          },
+          {
+            "name": "/org.phramusca.jamuz/en/phoneScreenshots/14.png",
+            "sha256": "09bd852b3b95cc4de2a1445b6b6d492d0b40d1cfe6870faf5944505ea577fb2e",
+            "size": 324860
+          },
+          {
+            "name": "/org.phramusca.jamuz/en/phoneScreenshots/15.png",
+            "sha256": "b0024678c1865759dad1aff4288c1f11d7fc5683f71d207fc0fcb5ced53cfddc",
+            "size": 107371
+          },
+          {
+            "name": "/org.phramusca.jamuz/en/phoneScreenshots/2.png",
+            "sha256": "93080129e75bec712c3f812e1a9872cd345a736377efb17d8513d08f18da41b1",
+            "size": 132681
+          },
+          {
+            "name": "/org.phramusca.jamuz/en/phoneScreenshots/3.png",
+            "sha256": "2ba02c6749221941f254a8b5b6b3fc8980266893ad8a3d133a25ea1259de2ef1",
+            "size": 1134110
+          },
+          {
+            "name": "/org.phramusca.jamuz/en/phoneScreenshots/4.png",
+            "sha256": "4b388b6abd02d56898cd1e4516b9002cbe044eefc3c75f879683116a72d9a2dc",
+            "size": 867067
+          },
+          {
+            "name": "/org.phramusca.jamuz/en/phoneScreenshots/5.png",
+            "sha256": "4528ce5105945cafe176e2daf88e1fe345355dec961a9ae8e0482206762eaba0",
+            "size": 1033773
+          },
+          {
+            "name": "/org.phramusca.jamuz/en/phoneScreenshots/6.png",
+            "sha256": "c789068c63397b492cf0d24f1bf1aab55d505482bd35fa82dacd95ea56c2df92",
+            "size": 1065643
+          },
+          {
+            "name": "/org.phramusca.jamuz/en/phoneScreenshots/7.png",
+            "sha256": "7f2e9651f397cc2a7162823b8eff66b286e1ba4ea6c37812e768885f037b7ecf",
+            "size": 883677
+          },
+          {
+            "name": "/org.phramusca.jamuz/en/phoneScreenshots/8.png",
+            "sha256": "d713f5e6648917171bac344f563f23f44a0f8eebb9e6376dc9a8ba727bc17899",
+            "size": 1028902
+          },
+          {
+            "name": "/org.phramusca.jamuz/en/phoneScreenshots/9.png",
+            "sha256": "26456a00a10bf1861e125173a87a44a21fcbc1cd9da14a270650bf65882cd8f8",
+            "size": 652734
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/phramusca/JaMuz-Remote",
+    "summary": {
+      "en": "Audio Player synced with JaMuz Desktop"
+    },
+    "translation": "https://hosted.weblate.org/engage/jamuz-remote/",
+    "webSite": "https://phramusca.github.io/JaMuz/"
+  },
+  "version": {
+    "added": 1773686176611,
+    "file": {
+      "ipfsCIDv1": "bafybeigq6heitzfuiho4fvfgbmlnzgcdonfcpyqswlq4qygpga7kfl5if4",
+      "name": "/org.phramusca.jamuz_21.apk",
+      "sha256": "d75ce16615e2b9693c8cee1c77c608b3488ab5a0fcea5ce5263b3c9959e2bd3e",
+      "size": 8054008
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "cceaf559b8271d37d79851eba7dc3089e5f6f249e35b1d89d6c02cd251989118"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_AUDIO"
+        },
+        {
+          "name": "android.permission.BLUETOOTH"
+        },
+        {
+          "name": "android.permission.BLUETOOTH_CONNECT"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+        },
+        {
+          "name": "android.permission.CAMERA"
+        },
+        {
+          "name": "org.phramusca.jamuz.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 21,
+      "versionName": "0.6.14"
+    },
+    "src": {
+      "name": "/org.phramusca.jamuz_21_src.tar.gz",
+      "sha256": "21ce970f64281f295e53141a711f3a005616f7ce5e99752ad57b756730ecb5ca",
+      "size": 11684909
+    },
+    "whatsNew": {
+      "en": "v0.6.14\n\n- Remote control: connect to JaMuz via SSE, receive playing state and position, send play/pause/next/previous/forward/rewind/volume from buttons and swipes. Correct local/remote display and rebind on resume; switch back to local on disconnect.\n- Build: Android API 34\u219236, min 21, AGP and Gradle update, Java 21, ProGuard config.\n- Themes: multiple themes (BlueGrey, Teal, Grey, Yellow), theme selection in settings.\n- Database & scan: update DB only when file modified; update only required "
+    }
+  }
+}

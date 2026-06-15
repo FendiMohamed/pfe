@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "added": 1518739200000,
+    "authorEmail": "christi@nutritionfacts.org",
+    "authorName": "NutritionFacts.org",
+    "authorWebSite": "https://nutritionfacts.org/",
+    "bitcoin": "3GQUrb9sw36MoQeZNJ4g16CCNqgr3Va6bx",
+    "categories": [
+      "Diet",
+      "Sports & Health"
+    ],
+    "changelog": "https://github.com/nutritionfactsorg/daily-dozen-android/releases",
+    "description": {
+      "en-US": "In the years of research required to create the more than a thousand\nevidence-based videos on NutritionFacts.org, Michael Greger, MD, FACLM, has\narrived at a list of what he considers the most important foods to include in a\nhealthy daily diet.\n\nYes, greens are good for you, but how much should we try to eat each day? Dr.\nGreger's Daily Dozen details the healthiest foods and how many servings of each\nwe should try to check off every day. He explains his rationale in his book\n<a href=\"https://NutritionFacts.org/book\">How Not to Die</a>. All his proceeds from his\nbooks, DVDs, and speaking engagements is all donated to charity.\n\nNutritionFacts.org is a non-commercial, nonprofit, science-based public service\nprovided by Dr. Greger, providing free daily updates on the latest in nutrition\nresearch via bite-sized videos. He has nearly a thousand videos on every aspect\nof healthy eating, with new videos and articles uploaded every day. Like this\napp, everything on the website is both free of ads and free of charge.\n\nThis app was developed thanks to the volunteer efforts of John Slavick."
+    },
+    "donate": [
+      "https://nutritionfacts.org/donate/"
+    ],
+    "issueTracker": "https://github.com/nutritionfactsorg/daily-dozen-android/issues",
+    "lastUpdated": 1762023261000,
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-US": "Daily Dozen"
+    },
+    "preferredSigner": "4b43c4e0fa3df9ce84ef14d31b28469977502606e7a61525dd03797b524ea868",
+    "sourceCode": "https://github.com/nutritionfactsorg/daily-dozen-android",
+    "summary": {
+      "ar": "\u062a\u062a\u0628\u0639 \u0627\u0644\u0623\u0637\u0639\u0645\u0629 \u0627\u0644\u062a\u064a \u064a\u0648\u0635\u064a \u0628\u0647\u0627 \u0627\u0644\u062f\u0643\u062a\u0648\u0631 \u062c\u0631\u064a\u062c\u0631 \u0641\u064a \u0643\u062a\u0627\u0628\u0647 How Not to Die",
+      "ba": "\u0414\u043e\u043a\u0442\u043e\u0440 \u0413\u0440\u0435\u0433\u0435\u0440\u0499\u044b\u04a3 \"\u041d\u0438\u0441\u0435\u043a \u04af\u043b\u043c\u04d9\u04ab\u043a\u04d9\" \u043a\u0438\u0442\u0430\u0431\u044b\u043d\u0434\u0430 \u0442\u04d9\u04a1\u0434\u0438\u043c \u0438\u0442\u0435\u043b\u0433\u04d9\u043d \u0430\u0499\u044b\u04a1-\u0442\u04af\u043b\u0435\u043a\u0442\u0435 \u043a\u04af\u0499\u04d9\u0442\u0435\u043f \u0431",
+      "ca": "Seguiment dels aliments que el Dr. Greger recomana al seu llibre How not to Die",
+      "cs": "Sledujte potraviny, kter\u00e9 Dr. Greger doporu\u010duje ve sv\u00e9 knize Jak nezem\u0159\u00edt",
+      "de": "Dr. Gregers Ern\u00e4hrungsempfehlungen aus seinem Buch \u201eHow Not to Die\u201c folgen",
+      "en-US": "Keep track of the foods that Dr Greger recommends in his book How Not to Die",
+      "es": "Registro de los alimentos que el Dr. Greger muestra en su libro C\u00f3mo no morir",
+      "et": "Pea arvet toitude \u00fcle, mida Dr Greger soovitab oma raamatus \u201eHow Not to Die\u201c",
+      "fr": "Notez les aliments recommand\u00e9s par Dr Greger dans son livre How Not to Die",
+      "ga": "Coinnigh s\u00fail ar na bianna a mholann an Dr Greger ina leabhar How Not to Die",
+      "he": "\u05de\u05e2\u05e7\u05d1 \u05d0\u05d7\u05e8 \u05d4\u05de\u05d6\u05d5\u05df \u05e9\u05d3\u05f4\u05e8 \u05d2\u05e8\u05d2\u05e8 \u05de\u05de\u05dc\u05d9\u05e5 \u05e2\u05dc\u05d9\u05d5 \u05d1\u05e1\u05e4\u05e8\u05d5 \u05d0\u05d9\u05da \u05dc\u05d0 \u05dc\u05de\u05d5\u05ea",
+      "id": "Pantau makanan yang direkomendasikan Dr. Greger di buku How Not to Die",
+      "it": "Traccia degli alimenti che il dr Greger raccomanda nel suo libro Come non morire",
+      "ja": "\u30de\u30a4\u30b1\u30eb\u30fb\u30b0\u30ec\u30ac\u30fc\u535a\u58eb\u306e\u8457\u66f8\u300cHow Not to Die\u300d\u3067\u63a8\u5968\u3057\u3066\u3044\u308b\u98df\u54c1\u3092\u8a18\u9332",
+      "pl": "\u015aled\u017a produkty, kt\u00f3re dr Greger zaleca w swojej ksi\u0105\u017cce How not to Die",
+      "pt": "Rastrear os alimentos que o Dr. Greger recomenda no seu livro How Not to Die",
+      "pt-BR": "Acompanhe os alimentos que o Dr. Greger recomenda em seu livro How Not to Die",
+      "pt-PT": "Rastrear os alimentos que o Dr. Greger recomenda no seu livro How Not to Die",
+      "ro": "Urm\u0103ri\u021bi alimentele pe care Dr. Greger le recomand\u0103 \u00een cartea sa Cum s\u0103 nu mori",
+      "ru": "\u0421\u043b\u0435\u0434\u0438\u0442\u0435 \u0437\u0430 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0430\u043c\u0438, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0440\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0443\u0435\u0442 \u0414.\u0413\u0440\u0435\u0433\u0435\u0440 \u0432 \u043a\u043d\u0438\u0433\u0435 \u00ab\u041a\u0430\u043a \u043d\u0435 \u0443\u043c\u0435\u0440\u0435\u0442\u044c\u00bb",
+      "sr": "\u041f\u0440\u0430\u0442\u0438\u0442\u0435 \u0445\u0440\u0430\u043d\u0443 \u043a\u043e\u0458\u0443 \u043f\u0440\u0435\u043f\u043e\u0440\u0443\u0447\u0443\u0458\u0435 \u0434\u0440 \u0413\u0440\u0435\u0433\u0435\u0440",
+      "sv": "H\u00e5ll koll p\u00e5 de livsmedel som Dr Greger rekommenderar i sin bok How Not to Die",
+      "sw": "Coinnigh s\u00fail ar na bianna a mholann an Dr Greger ina leabhar How Not to Die",
+      "ta": "\u0bae\u0bb0\u0bc1\u0ba4\u0bcd\u0ba4\u0bc1\u0bb5\u0bb0\u0bcd \u0b95\u0bbf\u0bb0\u0bc7\u0b95\u0bb0\u0bcd \u0ba4\u0ba9\u0ba4\u0bc1 \u0b8e\u0baa\u0bcd\u0baa\u0b9f\u0bbf \u0b87\u0bb0\u0b95\u0bcd\u0b95\u0b95\u0bc2\u0b9f\u0ba4\u0bc1 \u0baa\u0bc1\u0ba4\u0bcd\u0ba4\u0b95\u0ba4\u0bcd\u0ba4\u0bbf\u0bb2\u0bcd \u0baa\u0bb0\u0bbf\u0ba8\u0bcd\u0ba4\u0bc1\u0bb0\u0bc8\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd \u0b89\u0ba3\u0bb5\u0bc1\u0b95\u0bb3\u0bc8\u0b95\u0bcd",
+      "tr": "Dr Greger'in Nas\u0131l \u00d6l\u00fcnmez adl\u0131 kitab\u0131nda \u00f6nerdi\u011fi yiyecekleri izleyin",
+      "uk": "\u0421\u0442\u0435\u0436\u0442\u0435 \u0437\u0430 \u0457\u0436\u0435\u044e, \u044f\u043a\u0443 \u0434\u043e\u043a\u0442\u043e\u0440 \u0490\u0440\u0435\u0491\u0435\u0440 \u0440\u0430\u0434\u0438\u0442\u044c \u0443 \u0441\u0432\u043e\u0457\u0439 \u043a\u043d\u0438\u0437\u0456 \"\u042f\u043a \u043d\u0435 \u043f\u043e\u043c\u0435\u0440\u0442\u0438\"",
+      "zh-CN": "\u8ddf\u8e2a Greger \u535a\u58eb\u5728\u4ed6\u7684\u4e66\u300a\u5982\u4f55\u4e0d\u6b7b\u300b\u4e2d\u63a8\u8350\u7684\u98df\u7269"
+    },
+    "webSite": "https://nutritionfacts.org/open-source/"
+  },
+  "version": {
+    "added": 1762023261000,
+    "file": {
+      "ipfsCIDv1": "bafybeictdtt6yriu3sdktz6lsnsc6wywytixusg57kogfuuva7i6psg2ne",
+      "name": "/org.nutritionfacts.dailydozen_93.apk",
+      "sha256": "d85ac3c4e04a99629e84e9e91bdc4dcb2680a1db3477a23b966800b91fa304e4",
+      "size": 23383298
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "4b43c4e0fa3df9ce84ef14d31b28469977502606e7a61525dd03797b524ea868"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "maxSdkVersion": 29,
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "org.nutritionfacts.dailydozen.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "maxSdkVersion": 29,
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 93,
+      "versionName": "28"
+    },
+    "src": {
+      "name": "/org.nutritionfacts.dailydozen_93_src.tar.gz",
+      "sha256": "fef05394388b138874261364b8cf96e5db8ff730a78b5c7ca64e39ea73a2a45d",
+      "size": 19911576
+    }
+  }
+}

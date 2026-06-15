@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "8e6687fd840ddd5b8d048dfbd1f1fc909e5246ffdaafc3add84645bb41fe8a1f",
+    "index_size": 12275723,
+    "path": "data/test_apks/real/opencloud/opencloud.apk",
+    "sha256": "8e6687fd840ddd5b8d048dfbd1f1fc909e5246ffdaafc3add84645bb41fe8a1f",
+    "size": 12275723,
+    "url": "https://f-droid.org/repo/eu.opencloud.android_9.apk"
+  },
+  "app": "OpenCloud",
+  "categories": [
+    "Cloud Storage & File Sync",
+    "Internet"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "cloud-storage",
+    "internet",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/eu.opencloud.android/",
+  "license": "GPL-2.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "eu.opencloud.android",
+  "proof_status": "report-generated",
+  "reason": "No-native cloud/file-sync client with target SDK 35 and source tarball metadata; adds another sync-client clean-candidate while avoiding previously blocked ownCloud.",
+  "report": {
+    "detected_component_count": 22,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-opencloud",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-opencloud/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-opencloud/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-opencloud/sbom.cdx.json",
+    "sbom_component_count": 22,
+    "status": "ok"
+  },
+  "slug": "opencloud",
+  "source_repo": "https://github.com/opencloud-eu/android",
+  "source_tarball": {
+    "sha256": "d883ccd2b03a2f904a23c1abeb31bfce9a177cac65cd59697307c8f2e1ab25ad",
+    "size": 6691959,
+    "url": "https://f-droid.org/repo/eu.opencloud.android_9_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 9,
+  "version_name": "1.2.3"
+}

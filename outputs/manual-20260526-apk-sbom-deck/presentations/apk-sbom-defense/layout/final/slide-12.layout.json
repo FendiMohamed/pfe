@@ -1,0 +1,937 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/zty1tm",
+    "id": "zty1tm",
+    "slide": 12,
+    "layoutId": "9b5a485f-0ebd-4537-ab9e-8dd56e257032",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "bb418f5b-2560-4361-b666-cde00419d42e",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#F6F8FB",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Aptos",
+      "Aptos Display"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "9b5a485f-0ebd-4537-ab9e-8dd56e257032",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "bb418f5b-2560-4361-b666-cde00419d42e",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "bb418f5b-2560-4361-b666-cde00419d42e",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7qpg3ex0",
+      "id": "1",
+      "bbox": [
+        56,
+        28,
+        760,
+        24
+      ],
+      "geometry": "rect",
+      "text": "LIMITATIONS AND NEXT WORK",
+      "textPreview": "LIMITATIONS AND NEXT WORK",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Aptos",
+        "color": "#1F9D8A",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "LIMITATIONS AND NEXT WORK"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "LIMITATIONS AND NEXT WORK",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Aptos",
+            "color": "#1F9D8A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "LIMITATIONS AND NEXT WORK",
+              "fontSize": 13,
+              "typeface": "Aptos",
+              "color": "#1F9D8A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0bi9s36h",
+      "id": "2",
+      "bbox": [
+        56,
+        58,
+        860,
+        58
+      ],
+      "geometry": "rect",
+      "text": "The MVP is credible because it exposes scope boundaries and next improvements",
+      "textPreview": "The MVP is credible because it exposes scope boundaries and next improvements",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 28,
+        "typeface": "Aptos Display",
+        "color": "#151922",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The MVP is credible because it exposes scope boundaries and next"
+          },
+          {
+            "index": 2,
+            "text": "improvements"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The MVP is credible because it exposes scope boundaries and next improvements",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "typeface": "Aptos Display",
+            "color": "#151922",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The MVP is credible because it exposes scope boundaries and next improvements",
+              "fontSize": 28,
+              "typeface": "Aptos Display",
+              "color": "#151922",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pwb2hwfy",
+      "id": "3",
+      "bbox": [
+        1168,
+        32,
+        56,
+        26
+      ],
+      "geometry": "rect",
+      "text": "12",
+      "textPreview": "12",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Aptos",
+        "color": "#596575",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "12"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "12",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Aptos",
+            "color": "#596575",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "12",
+              "fontSize": 13,
+              "typeface": "Aptos",
+              "color": "#596575",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ed8v6psf",
+      "id": "4",
+      "name": "rule",
+      "bbox": [
+        56,
+        126,
+        1168,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D6DEE8",
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7y1kre1w",
+      "id": "5",
+      "bbox": [
+        74,
+        178,
+        540,
+        356
+      ],
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#C34E5A",
+      "lineWidth": 1
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wjudg7ad",
+      "id": "6",
+      "bbox": [
+        100,
+        206,
+        260,
+        30
+      ],
+      "geometry": "rect",
+      "text": "Current limitations",
+      "textPreview": "Current limitations",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Aptos",
+        "color": "#C34E5A",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Current limitations"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Current limitations",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Aptos",
+            "color": "#C34E5A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Current limitations",
+              "fontSize": 22,
+              "typeface": "Aptos",
+              "color": "#C34E5A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p4r65wju",
+      "id": "7",
+      "bbox": [
+        100,
+        258,
+        420,
+        210
+      ],
+      "geometry": "rect",
+      "text": "- normal metric is not full dependency recall\n- v2 lane is not APK-only accuracy\n- adjacent AndroidX/Kotlin versions can tie\n- native .so files are hash-only\n- hidden DEX/dynamic loading is risk-labeled\n- 1425 matcher suggestions stay report-only",
+      "textPreview": "- normal metric is not full dependency recall | - v2 lane is not APK-only accuracy | - adjacent AndroidX/Kotlin versions can tie | - nati...",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Aptos",
+        "color": "#151922",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 6,
+        "lines": [
+          {
+            "index": 1,
+            "text": "- normal metric is not full dependency recall"
+          },
+          {
+            "index": 2,
+            "text": "- v2 lane is not APK-only accuracy"
+          },
+          {
+            "index": 3,
+            "text": "- adjacent AndroidX/Kotlin versions can tie"
+          },
+          {
+            "index": 4,
+            "text": "- native .so files are hash-only"
+          },
+          {
+            "index": 5,
+            "text": "- hidden DEX/dynamic loading is risk-labeled"
+          },
+          {
+            "index": 6,
+            "text": "- 1425 matcher suggestions stay report-only"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "- normal metric is not full dependency recall",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- normal metric is not full dependency recall",
+              "fontSize": 15,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "- v2 lane is not APK-only accuracy",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- v2 lane is not APK-only accuracy",
+              "fontSize": 15,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "- adjacent AndroidX/Kotlin versions can tie",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- adjacent AndroidX/Kotlin versions can tie",
+              "fontSize": 15,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "- native .so files are hash-only",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- native .so files are hash-only",
+              "fontSize": 15,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "- hidden DEX/dynamic loading is risk-labeled",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- hidden DEX/dynamic loading is risk-labeled",
+              "fontSize": 15,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 6,
+          "text": "- 1425 matcher suggestions stay report-only",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- 1425 matcher suggestions stay report-only",
+              "fontSize": 15,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ih4byhgn",
+      "id": "8",
+      "bbox": [
+        666,
+        178,
+        540,
+        356
+      ],
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#356AC3",
+      "lineWidth": 1
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/72x4nap4",
+      "id": "9",
+      "bbox": [
+        692,
+        206,
+        220,
+        30
+      ],
+      "geometry": "rect",
+      "text": "Next work",
+      "textPreview": "Next work",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Aptos",
+        "color": "#356AC3",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Next work"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Next work",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Aptos",
+            "color": "#356AC3",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Next work",
+              "fontSize": 22,
+              "typeface": "Aptos",
+              "color": "#356AC3",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zqtcj6to",
+      "id": "10",
+      "bbox": [
+        692,
+        258,
+        420,
+        188
+      ],
+      "geometry": "rect",
+      "text": "- improve matcher recall for 2281 exact-in-DB gaps\n- retry 442 remaining missing-reference candidates\n- add safe pruning/reranking controls\n- expand framework families\n- keep vulnerability confidence labels strict",
+      "textPreview": "- improve matcher recall for 2281 exact-in-DB gaps | - retry 442 remaining missing-reference candidates | - add safe pruning/reranking co...",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Aptos",
+        "color": "#151922",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": "- improve matcher recall for 2281 exact-in-DB gaps"
+          },
+          {
+            "index": 2,
+            "text": "- retry 442 remaining missing-reference candidates"
+          },
+          {
+            "index": 3,
+            "text": "- add safe pruning/reranking controls"
+          },
+          {
+            "index": 4,
+            "text": "- expand framework families"
+          },
+          {
+            "index": 5,
+            "text": "- keep vulnerability confidence labels strict"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "- improve matcher recall for 2281 exact-in-DB gaps",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- improve matcher recall for 2281 exact-in-DB gaps",
+              "fontSize": 15,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "- retry 442 remaining missing-reference candidates",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- retry 442 remaining missing-reference candidates",
+              "fontSize": 15,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "- add safe pruning/reranking controls",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- add safe pruning/reranking controls",
+              "fontSize": 15,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "- expand framework families",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- expand framework families",
+              "fontSize": 15,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "- keep vulnerability confidence labels strict",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- keep vulnerability confidence labels strict",
+              "fontSize": 15,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/65wjudg7",
+      "id": "11",
+      "bbox": [
+        128,
+        588,
+        1024,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Closing: useful, measurable, and transparent beats a perfect-looking score that hides difficult APKs.",
+      "textPreview": "Closing: useful, measurable, and transparent beats a perfect-looking score that hides difficult APKs.",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 20,
+        "typeface": "Aptos",
+        "color": "#151922",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Closing: useful, measurable, and transparent beats a perfect-looking score that hides difficult APKs."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Closing: useful, measurable, and transparent beats a perfect-looking score that hides difficult APKs.",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Closing: useful, measurable, and transparent beats a perfect-looking score that hides difficult APKs.",
+              "fontSize": 20,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hwfyxobm",
+      "id": "12",
+      "bbox": [
+        56,
+        680,
+        1000,
+        20
+      ],
+      "geometry": "rect",
+      "text": "APK-to-SBOM MVP | emitted confirmation != full recall; v2 source-known lane != APK-only accuracy",
+      "textPreview": "APK-to-SBOM MVP | emitted confirmation != full recall; v2 source-known lane != APK-only accuracy",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10,
+        "typeface": "Aptos",
+        "color": "#596575",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "APK-to-SBOM MVP | emitted confirmation != full recall; v2 source-known lane != APK-only accuracy"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "APK-to-SBOM MVP | emitted confirmation != full recall; v2 source-known lane != APK-only accuracy",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "typeface": "Aptos",
+            "color": "#596575",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "APK-to-SBOM MVP | emitted confirmation != full recall; v2 source-known lane != APK-only accuracy",
+              "fontSize": 10,
+              "typeface": "Aptos",
+              "color": "#596575",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

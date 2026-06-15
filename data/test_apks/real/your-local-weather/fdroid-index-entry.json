@@ -1,0 +1,246 @@
+{
+  "metadata": {
+    "added": 1515974400000,
+    "categories": [
+      "Internet",
+      "Weather"
+    ],
+    "changelog": "https://raw.githubusercontent.com/thuryn/your-local-weather/HEAD/CHANGELOG",
+    "description": {
+      "cs-CZ": "Aplikace vyu\u017e\u00edv\u00e1 mobiln\u00ed s\u00ed\u0165, WIFI s\u00edt\u011b a p\u0159\u00edpadn\u011b GPS pro z\u00edsk\u00e1n\u00ed Va\u0161\u00ed polohy a zobrazen\u00ed po\u010das\u00ed v m\u00edst\u011b, kde se pr\u00e1v\u011b nach\u00e1z\u00edte.\nPokud vyu\u017eijete widget na sv\u00e9m telefonu nebo tabletu, uvid\u00edte Va\u0161\u00ed polohu a aktu\u00e1ln\u00ed po\u010das\u00ed na sv\u00e9 hlavn\u00ed obrazovce. Aktualizace polohy m\u016f\u017ee b\u00fdt nastavena dle zadan\u00e9 periody (nap\u0159\u00edklad ka\u017edou hodinu) nebo aplikace m\u016f\u017ee vyu\u017e\u00edvat akcelerometr u detekci pohybu. Aktualizaci polohy je mo\u017en\u00e9 vypnout - pak se bude aktualizovat jen po\u010das\u00ed.\n\nAktualizace dle zadan\u00e9 periody:\nAplikace po zadan\u00e9 period\u011b provede aktualizaci polohy a na\u010dten\u00ed aktu\u00e1ln\u00edho po\u010das\u00ed. Nap\u0159\u00edklad m\u016f\u017eete nastavit aktualizaci na ka\u017edou hodinu.\n\nAktualizace dle akcelerometru:\nPoloha bude aktualizov\u00e1na dle na\u010dten\u00e9 vzd\u00e1lenosti m\u011b\u0159en\u00e9 akcelerometrem. Pokud nam\u011b\u0159en\u00e1 vzd\u00e1lenost bude v\u011bt\u0161\u00ed ne\u017e prahov\u00e1 hodnota, dojde k na\u010dten\u00ed aktu\u00e1ln\u00ed polohy. Nam\u011b\u0159en\u00e1 hodnota z\u00e1vis\u00ed na zp\u016fsobu pohybu - pokud m\u00e1te telefon v kapse, nam\u011b\u0159en\u00e1 vzd\u00e1lenost bude p\u0159ib\u00fdvat rychleji - telefon se pohybuje sem a tam v rytmu ch\u016fze. Po ka\u017ed\u00e9 aktualizaci polohy bude t\u00e9\u017e aktualizov\u00e1no po\u010das\u00ed. Po\u010das\u00ed bude aktualizov\u00e1no t\u00e9\u017e p\u0159i ka\u017ed\u00e9m rozsv\u00edcen\u00ed displeje - av\u0161ak ne \u010dast\u011bji, ne\u017e jednou za 15 minut (pokud nebyla b\u011bhem posledn\u00edch 15 minut aktualizov\u00e1na poloha).\n\nK z\u00edsk\u00e1n\u00ed polohy je nejprve vyu\u017eita informace z mobiln\u00ed s\u00edt\u011b (BTS) a WIFI s\u00edt\u00ed p\u0159\u00edtomn\u00fdch v dan\u00e9 lokalit\u011b. Z t\u011bchto informac\u00ed jsou pomoc\u00ed slu\u017eby Mozilla location service z\u00edsk\u00e1ny sou\u0159adnice. Pokud sou\u0159adnice nejsou dostupn\u00e9, pokus\u00ed se aplikace z\u00edskat polohu z GPS. Z\u00edskan\u00e9 sou\u0159adnice jsou pomoc\u00ed slu\u017eby Nominatim p\u0159evedena na adresu, kter\u00e1 je zobrazena v aplikaci nebo widgetu.\n\nK z\u00edsk\u00e1n\u00ed aktu\u00e1ln\u00edho po\u010das\u00ed je vyu\u017eita slu\u017eba open-meteo.com.\n\nDal\u0161\u00ed vlastnosti\n\n    P\u0159elo\u017eeno do: \u010de\u0161tina, angli\u010dtina, francou\u0161tina, n\u011bm\u010dina, japon\u0161tina, \u0161pan\u011bl\u0161tina, pol\u0161tina, ru\u0161tina\n    Aktu\u00e1ln\u00ed po\u010das\u00ed\n    7-denn\u00ed p\u0159edpov\u011b\u010f\n    Mnoho lokalit\n    Upozorn\u011bn\u00ed\n    Podpora r\u016fzn\u00fdch jednotek\n    Bez reklam",
+      "en-GB": "Uses cell networks, Wi-Fi networks and GPS to get your location and show you the weather where you are.\nLocation updates can be set to a certain period, or the app can use accelerometer to detect movement.\nBy using the optional widget, you can see your location and current weather on the main screen.\n\nThe open-meteo.com service is used for weather data.\n\nAdditional features include\n    Current weather\n    7 day forecast\n    Many locations\n    Notifications\n    Support different measuring units\n    Turn off location updates to only update weather\n    Ad-free\n    Different languages: Albanian, Arabic, Basque, Belarusian, Chinese (simplified), Czech, English, French, German, Japanese, Norwegian Bokm\u00e5l,\n    Serbian, Spanish, Polish, Portugese, Russian, Turkish and more.\n\nHelp improve translations by following this link: https://hosted.weblate.org/projects/your-local-weather/strings\n",
+      "en-US": "Application uses cell network, WIFI and GPS to get your location and show you weather on the place where you are actually.\nif you use widget on your phone or tablet, you can see your location and current weather on the main screen. Update of location could be used by some specific period (ex. hourly) or application can use accelerometer to detect movement. You can switch update of location off - weather only is updated in this case.\n\nUpdate by specific period of time:\nApplication update the location and weather by specified amount of time. For example, you can set update period to one hour o'clock.\n\nUpdate by accelerometer:\nLocation is updated by a distance counted by accelerometer. When distance is longer then minimal value for update, application update your location. Distance derived by accelerometer depends on the way how you carry your phone - when you carry your phone in a pocket the distance is increases faster - the phone is moving back and forth as you go. The weather is updated immediately after the update of location. The weather is updated when screen goes on too - but not more often then once per 15 minutes (and when weather is not updated in the last 15 minutes).\n\nTo get the location, cell network (BTS) and WIFIs available on the place are used. These information are used to get location coordinates by Mozilla location service. Application try to use GPS when location is not available from cell network and WIFIs. Location coordinates are used to get address by Nominatim service. The address is used in the application or widget.\n\nApplication uses open-meteo.com service to get current weather .\n\nAdditional features include:\n    Different languages: Czech, Basque, Belarusian, Czech, English, French, German, Japanese, Spanish, Polish, Russian\n    Current weather\n    7 day forecast\n    Many locations\n    Notifications\n    Support different measuring units\n    Ad-free\n\nWould you like to help with translation? Follow this link: https://hosted.weblate.org/projects/your-local-weather/strings\n",
+      "ru-RU": "\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442 \u0441\u043e\u0442\u043e\u0432\u0443\u044e \u0441\u0435\u0442\u044c, Wi-Fi \u0438 GPS \u0434\u043b\u044f \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u044f \u0432\u0430\u0448\u0435\u0433\u043e \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u0438 \u043e\u0442\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u044f \u043f\u043e\u0433\u043e\u0434\u044b \u0432 \u043c\u0435\u0441\u0442\u0435, \u0433\u0434\u0435 \u0432\u044b \u043d\u0430\u0445\u043e\u0434\u0438\u0442\u0435\u0441\u044c.\n\u0415\u0441\u043b\u0438 \u0432\u044b \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0435 \u0432\u0438\u0434\u0436\u0435\u0442 \u043d\u0430 \u0441\u0432\u043e\u0435\u043c \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0435 \u0438\u043b\u0438 \u043f\u043b\u0430\u043d\u0448\u0435\u0442\u0435, \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0432\u0438\u0434\u0435\u0442\u044c \u0441\u0432\u043e\u0451 \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0438 \u0442\u0435\u043a\u0443\u0449\u0443\u044e \u043f\u043e\u0433\u043e\u0434\u0443 \u043d\u0430 \u0433\u043b\u0430\u0432\u043d\u043e\u043c \u044d\u043a\u0440\u0430\u043d\u0435. \u041e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u043c\u043e\u0436\u0435\u0442 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u043f\u043e \u0438\u043d\u0442\u0435\u0440\u0432\u0430\u043b\u0443 (\u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \u043f\u043e\u0447\u0430\u0441\u043e\u0432\u043e) \u0438\u043b\u0438 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043c\u043e\u0436\u0435\u0442 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c \u0430\u043a\u0441\u0435\u043b\u0435\u0440\u043e\u043c\u0435\u0442\u0440 \u0434\u043b\u044f \u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0435\u043d\u0438\u044f \u0434\u0432\u0438\u0436\u0435\u043d\u0438\u044f. \u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043e\u0442\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u2014 \u0432 \u044d\u0442\u043e\u043c \u0441\u043b\u0443\u0447\u0430\u0435 \u043e\u0431\u043d\u043e\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u0442\u043e\u043b\u044c\u043a\u043e \u043f\u043e\u0433\u043e\u0434\u0430.\n\n\u041e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \u043f\u043e \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0451\u043d\u043d\u043e\u043c\u0443 \u0438\u043d\u0442\u0435\u0440\u0432\u0430\u043b\u0443 \u0432\u0440\u0435\u043c\u0435\u043d\u0438:\n\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043e\u0431\u043d\u043e\u0432\u043b\u044f\u0435\u0442 \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0438 \u043f\u043e\u0433\u043e\u0434\u0443 \u043f\u043e \u0443\u043a\u0430\u0437\u0430\u043d\u043d\u043e\u043c\u0443 \u0438\u043d\u0442\u0435\u0440\u0432\u0430\u043b\u0443. \u041d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u043f\u0435\u0440\u0438\u043e\u0434 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f \u043d\u0430 \u043e\u0434\u0438\u043d \u0447\u0430\u0441.\n\n\u041e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \u043f\u043e \u0430\u043a\u0441\u0435\u043b\u0435\u0440\u043e\u043c\u0435\u0442\u0440\u0443:\n\u041c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043e\u0431\u043d\u043e\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u043f\u043e \u0440\u0430\u0441\u0441\u0442\u043e\u044f\u043d\u0438\u044e, \u0440\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u043d\u043d\u043e\u043c\u0443 \u0430\u043a\u0441\u0435\u043b\u0435\u0440\u043e\u043c\u0435\u0442\u0440\u043e\u043c. \u041a\u043e\u0433\u0434\u0430 \u0440\u0430\u0441\u0441\u0442\u043e\u044f\u043d\u0438\u0435 \u0431\u043e\u043b\u044c\u0448\u0435 \u043c\u0438\u043d\u0438\u043c\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0434\u043b\u044f \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f, \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043e\u0431\u043d\u043e\u0432\u043b\u044f\u0435\u0442 \u0432\u0430\u0448\u0435 \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435. \u0420\u0430\u0441\u0441\u0442\u043e\u044f\u043d\u0438\u0435, \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u043d\u043e\u0435 \u043f\u043e \u0430\u043a\u0441\u0435\u043b\u0435\u0440\u043e\u043c\u0435\u0442\u0440\u0443, \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043e\u0442 \u0442\u043e\u0433\u043e, \u043a\u0430\u043a \u0432\u044b \u043d\u043e\u0441\u0438\u0442\u0435 \u0441\u0432\u043e\u0439 \u0442\u0435\u043b\u0435\u0444\u043e\u043d \u2014 \u043a\u043e\u0433\u0434\u0430 \u0432\u044b \u043d\u043e\u0441\u0438\u0442\u0435 \u0442\u0435\u043b\u0435\u0444\u043e\u043d \u0432 \u043a\u0430\u0440\u043c\u0430\u043d\u0435, \u0440\u0430\u0441\u0441\u0442\u043e\u044f\u043d\u0438\u0435 \u0443\u0432\u0435\u043b\u0438\u0447\u0438\u0432\u0430\u0435\u0442\u0441\u044f \u0431\u044b\u0441\u0442\u0440\u0435\u0435 \u2014 \u0442\u0435\u043b\u0435\u0444\u043e\u043d \u0434\u0432\u0438\u0436\u0435\u0442\u0441\u044f \u0432\u043f\u0435\u0440\u0435\u0434 \u0438 \u043d\u0430\u0437\u0430\u0434 \u043f\u043e \u043c\u0435\u0440\u0435 \u0442\u043e\u0433\u043e, \u043a\u0430\u043a \u0432\u044b \u0438\u0434\u0435\u0442\u0435. \u041f\u043e\u0433\u043e\u0434\u0430 \u043e\u0431\u043d\u043e\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u0441\u0440\u0430\u0437\u0443 \u043f\u043e\u0441\u043b\u0435 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044f. \u041f\u043e\u0433\u043e\u0434\u0430 \u0442\u0430\u043a\u0436\u0435 \u043e\u0431\u043d\u043e\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u043f\u0440\u0438 \u0432\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0438 \u044d\u043a\u0440\u0430\u043d\u0430, \u043d\u043e \u043d\u0435 \u0447\u0430\u0449\u0435, \u0447\u0435\u043c \u0440\u0430\u0437 \u0432 15 \u043c\u0438\u043d\u0443\u0442 (\u0438 \u0435\u0441\u043b\u0438 \u043f\u043e\u0433\u043e\u0434\u0430 \u043d\u0435 \u043e\u0431\u043d\u043e\u0432\u043b\u044f\u043b\u0430\u0441\u044c \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 \u043f\u043e\u0441\u043b\u0435\u0434\u043d\u0438\u0445 15 \u043c\u0438\u043d\u0443\u0442).\n\n\u0414\u043b\u044f \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u044f \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u044e\u0442\u0441\u044f \u0441\u043e\u0442\u043e\u0432\u0430\u044f \u0441\u0435\u0442\u044c (BTS) \u0438 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u044b\u0435 \u0432 \u044d\u0442\u043e\u043c \u043c\u0435\u0441\u0442\u0435 \u0441\u0435\u0442\u0438 Wi-Fi. \u042d\u0442\u0430 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f \u0434\u043b\u044f \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u044f \u043a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0442 \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u0441\u043b\u0443\u0436\u0431\u043e\u0439 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u044f \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044f Mozilla. \u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043f\u044b\u0442\u0430\u0435\u0442\u0441\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c GPS, \u043a\u043e\u0433\u0434\u0430 \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043d\u0435\u0434\u043e\u0441\u0442\u0443\u043f\u043d\u043e \u0447\u0435\u0440\u0435\u0437 \u0441\u043e\u0442\u043e\u0432\u0443\u044e \u0441\u0435\u0442\u044c \u0438 \u0441\u0435\u0442\u0438 Wi-Fi. \u041a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0442\u044b \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u044e\u0442\u0441\u044f \u0434\u043b\u044f \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u044f \u0430\u0434\u0440\u0435\u0441\u0430 \u0441\u043b\u0443\u0436\u0431\u043e\u0439 Nominatim. \u0410\u0434\u0440\u0435\u0441 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f \u0432 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0438 \u0438\u043b\u0438 \u0432\u0438\u0434\u0436\u0435\u0442\u0435.\n\n\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442 open-meteo.com \u0434\u043b\u044f \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u044f \u0442\u0435\u043a\u0443\u0449\u0435\u0439 \u043f\u043e\u0433\u043e\u0434\u044b.\n\n\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0444\u0443\u043d\u043a\u0446\u0438\u0438 \u0432\u043a\u043b\u044e\u0447\u0430\u044e\u0442:\n    \u0420\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u0435 \u044f\u0437\u044b\u043a\u0438: \u0447\u0435\u0448\u0441\u043a\u0438\u0439, \u0431\u0430\u0441\u043a\u0441\u043a\u0438\u0439, \u0431\u0435\u043b\u043e\u0440\u0443\u0441\u0441\u043a\u0438\u0439, \u0447\u0435\u0448\u0441\u043a\u0438\u0439, \u0430\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u0438\u0439, \u0444\u0440\u0430\u043d\u0446\u0443\u0437\u0441\u043a\u0438\u0439, \u043d\u0435\u043c\u0435\u0446\u043a\u0438\u0439, \u044f\u043f\u043e\u043d\u0441\u043a\u0438\u0439, \u0438\u0441\u043f\u0430\u043d\u0441\u043a\u0438\u0439, \u043f\u043e\u043b\u044c\u0441\u043a\u0438\u0439, \u0440\u0443\u0441\u0441\u043a\u0438\u0439\n    \u0422\u0435\u043a\u0443\u0449\u0430\u044f \u043f\u043e\u0433\u043e\u0434\u0430\n    \u041f\u0440\u043e\u0433\u043d\u043e\u0437 \u043d\u0430 7 \u0434\u043d\u0435\u0439\n    \u041c\u043d\u043e\u0436\u0435\u0441\u0442\u0432\u043e \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0439\n    \u0423\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f\n    \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 \u0440\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u0445 \u0435\u0434\u0438\u043d\u0438\u0446 \u0438\u0437\u043c\u0435\u0440\u0435\u043d\u0438\u044f\n    \u0411\u0435\u0437 \u0440\u0435\u043a\u043b\u0430\u043c\u044b\n\n\u0425\u043e\u0442\u0438\u0442\u0435 \u043f\u043e\u043c\u043e\u0447\u044c \u0441 \u043f\u0435\u0440\u0435\u0432\u043e\u0434\u043e\u043c? \u041f\u0435\u0440\u0435\u0439\u0434\u0438\u0442\u0435 \u043f\u043e \u044d\u0442\u043e\u0439 \u0441\u0441\u044b\u043b\u043a\u0435: https://hosted.weblate.org/projects/your-local-weather/strings/ru/\n"
+    },
+    "featureGraphic": {
+      "cs-CZ": {
+        "name": "/org.thosp.yourlocalweather/cs-CZ/featureGraphic_1K-Mh3BWPYqBqIMep_hNw3K85-B1oV72wpWqMljp5pk=.png",
+        "sha256": "d4af8c8770563d8a81a8831ea7f84dc372bce7e075a15ef6c295aa3258e9e699",
+        "size": 63094
+      },
+      "en-GB": {
+        "name": "/org.thosp.yourlocalweather/en-GB/featureGraphic_7ohGsd8WWqSjcQJkvDCToEbnesyA2KjaDOuHXXAyxx4=.jpg",
+        "sha256": "ee8846b1df165aa4a3710264bc3093a046e77acc80d8a8da0ceb875d7032c71e",
+        "size": 37107
+      }
+    },
+    "icon": {
+      "en-GB": {
+        "name": "/org.thosp.yourlocalweather/en-GB/icon_MDOwAe8lWtZFZoy1TzN-d8U-luyz9qiV9VtCU30_Z_0=.png",
+        "sha256": "3033b001ef255ad645668cb54f337e77c53e96ecb3f6a895f55b42537d3f67fd",
+        "size": 29359
+      }
+    },
+    "issueTracker": "https://github.com/thuryn/your-local-weather/issues",
+    "lastUpdated": 1779353198872,
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "cs-CZ": "Va\u0161e m\u00edstn\u00ed po\u010das\u00ed",
+      "en-GB": "Your local weather",
+      "en-US": "Your local weather",
+      "ru-RU": "\u041c\u0435\u0441\u0442\u043d\u0430\u044f \u043f\u043e\u0433\u043e\u0434\u0430"
+    },
+    "preferredSigner": "9080549da030fe1ea2d586de56aa5df085fd86be17457fd185548d441ebf8928",
+    "screenshots": {
+      "phone": {
+        "cs-CZ": [
+          {
+            "name": "/org.thosp.yourlocalweather/cs-CZ/phoneScreenshots/phone_1.png",
+            "sha256": "868ad5bb63d6101aef43b1f862d5c996f6447d58fc166f330ba3ba80fb04553d",
+            "size": 188344
+          },
+          {
+            "name": "/org.thosp.yourlocalweather/cs-CZ/phoneScreenshots/phone_2.png",
+            "sha256": "d9267f95895a921cb48db169b1d5f1b8eba9344ff17492fab750067b494900c3",
+            "size": 142536
+          },
+          {
+            "name": "/org.thosp.yourlocalweather/cs-CZ/phoneScreenshots/phone_3.png",
+            "sha256": "0b7ded7004ebb6deb823e79e8e5192a061e308c483c4ba160908c7e146ca2560",
+            "size": 194280
+          },
+          {
+            "name": "/org.thosp.yourlocalweather/cs-CZ/phoneScreenshots/phone_4.png",
+            "sha256": "c53e8bc092e37ef5f061db54bf2454fc706967c3b8a298eb7f4e9f837e83ca06",
+            "size": 106766
+          }
+        ],
+        "en-GB": [
+          {
+            "name": "/org.thosp.yourlocalweather/en-GB/phoneScreenshots/phone_1.png",
+            "sha256": "9da9b10949d59a63a289dd3cc20e7abd2b825333bc09911751ee2fa43c7f8f44",
+            "size": 187280
+          },
+          {
+            "name": "/org.thosp.yourlocalweather/en-GB/phoneScreenshots/phone_2.png",
+            "sha256": "8d54794c6ebab4e2cc87531759977d49a25d20d1009530020888a2a518844a6c",
+            "size": 132032
+          },
+          {
+            "name": "/org.thosp.yourlocalweather/en-GB/phoneScreenshots/phone_3.png",
+            "sha256": "ff730387e164fd1aca06741e85e0cee4dba37c1e200a66a96108e6d880af305a",
+            "size": 218689
+          },
+          {
+            "name": "/org.thosp.yourlocalweather/en-GB/phoneScreenshots/phone_4.png",
+            "sha256": "115f7367c811966bdd00115a0999acd181b4cadcc5c685df3dbb6bc33f3fe133",
+            "size": 110371
+          }
+        ]
+      },
+      "sevenInch": {
+        "cs-CZ": [
+          {
+            "name": "/org.thosp.yourlocalweather/cs-CZ/sevenInchScreenshots/sevenInchTablet_1.png",
+            "sha256": "67475e98c63069c4ee616d33f76f6306fc7f6523e998fb809b5b648bd01d49de",
+            "size": 577289
+          }
+        ],
+        "en-GB": [
+          {
+            "name": "/org.thosp.yourlocalweather/en-GB/sevenInchScreenshots/sevenInchTablet_1.png",
+            "sha256": "d8e6cc75c278ee05ff5dcde8323a0681e89e9c99b7c8c69243cb5a8ecaa2efe5",
+            "size": 571382
+          }
+        ]
+      },
+      "tenInch": {
+        "cs-CZ": [
+          {
+            "name": "/org.thosp.yourlocalweather/cs-CZ/tenInchScreenshots/tenInchTablet_1.png",
+            "sha256": "8730fdbf836b5c93b3e65d1decf553f0e1ea7d89fb3cc236fe1b2d698db22160",
+            "size": 1064622
+          }
+        ],
+        "en-GB": [
+          {
+            "name": "/org.thosp.yourlocalweather/en-GB/tenInchScreenshots/tenInchTablet_1.png",
+            "sha256": "bff1effb29d8ac380bba59e27326c65d63929a7b68a40c38b39f23ba7fb49d26",
+            "size": 1060575
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/thuryn/your-local-weather",
+    "summary": {
+      "cs-CZ": "Aplikace pro zobrazen\u00ed po\u010das\u00ed v m\u00edst\u011b, kde se pr\u00e1v\u011b nach\u00e1z\u00edte.",
+      "en-US": "Application displays current weather and location wherever you are.",
+      "ru-RU": "\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043e\u0442\u043e\u0431\u0440\u0430\u0436\u0430\u0435\u0442 \u0442\u0435\u043a\u0443\u0449\u0443\u044e \u043f\u043e\u0433\u043e\u0434\u0443 \u0438 \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435, \u0433\u0434\u0435 \u0431\u044b \u0432\u044b \u043d\u0438 \u043d\u0430\u0445\u043e\u0434\u0438\u043b\u0438\u0441\u044c."
+    },
+    "translation": "https://hosted.weblate.org/projects/your-local-weather/strings"
+  },
+  "version": {
+    "added": 1779353198872,
+    "antiFeatures": {
+      "NonFreeNet": {
+        "en-US": "Depends on OpenWeatherMap"
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeicjccakcfqcj7tqq5nvgybrfmgychlklhzduq43hkerbuyxd2mgfi",
+      "name": "/org.thosp.yourlocalweather_193.apk",
+      "sha256": "63a458e146211de201f59da1edd699a8243fd5cba4e3b05de759043991ad84ad",
+      "size": 15389511
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "9080549da030fe1ea2d586de56aa5df085fd86be17457fd185548d441ebf8928"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.READ_PHONE_STATE"
+        },
+        {
+          "name": "android.permission.ACCESS_WIFI_STATE"
+        },
+        {
+          "name": "android.permission.CHANGE_WIFI_STATE"
+        },
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.MODIFY_AUDIO_SETTINGS"
+        },
+        {
+          "name": "android.permission.BLUETOOTH"
+        },
+        {
+          "name": "android.permission.ACCESS_BACKGROUND_LOCATION"
+        },
+        {
+          "name": "android.permission.BLUETOOTH_CONNECT"
+        },
+        {
+          "name": "android.permission.HIGH_SAMPLING_RATE_SENSORS"
+        },
+        {
+          "name": "android.permission.SCHEDULE_EXACT_ALARM"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_LOCATION"
+        },
+        {
+          "name": "android.permission.RUN_USER_INITIATED_JOBS"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+        },
+        {
+          "name": "org.thosp.yourlocalweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 23,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 193,
+      "versionName": "6.4.0-FOSS"
+    },
+    "src": {
+      "name": "/org.thosp.yourlocalweather_193_src.tar.gz",
+      "sha256": "043ed56fa930a1ba1dff9ed15e60502d24648913e8106ab028455159348b555c",
+      "size": 12256001
+    },
+    "whatsNew": {
+      "cs-CZ": "P\u0159ed\u011bl\u00e1na str\u00e1nka s p\u0159edpov\u011bd\u00ed po\u010das\u00ed",
+      "en-GB": "Redesigned weather forecast page",
+      "en-US": "Redesigned weather forecast page"
+    }
+  }
+}

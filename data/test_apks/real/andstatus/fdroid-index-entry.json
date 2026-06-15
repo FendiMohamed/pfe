@@ -1,0 +1,251 @@
+{
+  "metadata": {
+    "added": 1345680000000,
+    "authorEmail": "andstatus@gmail.com",
+    "authorName": "AndStatus",
+    "categories": [
+      "Internet",
+      "Social Network"
+    ],
+    "changelog": "http://andstatus.org/changelog.html",
+    "description": {
+      "en-US": "AndStatus is a multiple accounts client for multiple Social networks, including\n<a href=\"http://gnu.io/social\">GNU social</a>, <a href=\"https://github.com/tootsuite/documentation\">Mastodon</a>, <a href=\"https://twitter.com\">Twitter</a> and <a href=\"http://pump.io\">Pump.io</a>. AndStatus\ncan combine your feeds from all networks into one Timeline, and it allows you to\nread and post even when you are offline.\n\nFor Android v.7.0+ devices. Free/Libre and Open Source License.\n\nDifferentiating features of AndStatus:\n\n* Many accounts in different Social networks. You may have several accounts in each, write/reply as any \"You\" and share between accounts and networks.\n* You don't need to be online to read timelines and to post your updates: drafts and unsent posts are kept even after reboot. They will be sent when your device is Online.\n* Convenient tree-like \"Conversation view\".\n* \"Global search\" allowing you to search public notes in all networks with one query.\n* Lists of Friends and Followers, presented as User Lists and as Timelines (with the latest note by each User).\n* Notes (tweets)/avatars/attached images are being synced in a background, when your device has a good connection. By default, attachments are downloaded via WiFi only.\n* Cached data may be stored for years or for several days only - it's your choice.\n* Backup accounts and notes and Restore them on any of your devices. Own your data!\n* Free and without ads, community supported."
+    },
+    "donate": [
+      "https://andstatus.org/donate.html"
+    ],
+    "featureGraphic": {
+      "en-US": {
+        "name": "/org.andstatus.app/en-US/featureGraphic_u0r8mCRqRarNuu7UewoyVzcWLca5Zi7gU4DCVSYvqxE=.png",
+        "sha256": "bb4afc98246a45aacdbaeed47b0a325737162dc6b9662ee05380c255262fab11",
+        "size": 466660
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/org.andstatus.app/en-US/icon_UCYzhHU2eLht9B2Ozjd2bckNxMHMZVYekHRBCUBMU7Q=.png",
+        "sha256": "50263384753678b86df41d8ece37766dc90dc4c1cc65561e90744109404c53b4",
+        "size": 29272
+      }
+    },
+    "issueTracker": "https://github.com/andstatus/andstatus/issues",
+    "lastUpdated": 1734797821000,
+    "liberapay": "AndStatus",
+    "license": "Apache-2.0",
+    "name": {
+      "en-US": "AndStatus"
+    },
+    "preferredSigner": "20c36d5f4bd304a61ea2df4ae37887f62791af3d26eda1d47a7fe6823eb6ee60",
+    "promoGraphic": {
+      "en-US": {
+        "name": "/org.andstatus.app/en-US/promoGraphic_lt1UqJqZY5M51194cWmTf9YjkVw0eOgkBnFVDeMjxOU=.png",
+        "sha256": "96dd54a89a99639339d75f787169937fd623915c3478e8240671550de323c4e5",
+        "size": 27815
+      }
+    },
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/org.andstatus.app/en-US/phoneScreenshots/1.png",
+            "sha256": "911fa4987561d925d7306fc614038f345775bdeb6f47160e3b1dcb1456e0a67c",
+            "size": 222718
+          },
+          {
+            "name": "/org.andstatus.app/en-US/phoneScreenshots/2.png",
+            "sha256": "ea83e59ed6c3c24e68cec896391f96acb7e2f680afdb13243c3cb2112359b709",
+            "size": 251968
+          },
+          {
+            "name": "/org.andstatus.app/en-US/phoneScreenshots/3.png",
+            "sha256": "11677f4ee0da81923eec5000f967fcaed57954df38d4e040730f80233f4e99a1",
+            "size": 504619
+          },
+          {
+            "name": "/org.andstatus.app/en-US/phoneScreenshots/4.png",
+            "sha256": "f29a886f2b51742d712659c80e95754c723560fde173e7f03907aa966c788db9",
+            "size": 388632
+          },
+          {
+            "name": "/org.andstatus.app/en-US/phoneScreenshots/5.png",
+            "sha256": "669df4c238a710a1ed0747af97f875dd57df4fb86299e37fad9a0fb8ee1b8ae0",
+            "size": 227319
+          },
+          {
+            "name": "/org.andstatus.app/en-US/phoneScreenshots/6.png",
+            "sha256": "cf1f64837f89a02d0696b86d1033263565ea86117076441aed1802a506a8b9da",
+            "size": 215701
+          },
+          {
+            "name": "/org.andstatus.app/en-US/phoneScreenshots/7.png",
+            "sha256": "252d20350937f6fc7a2f830ba8995b191e93a640331f14e3d83385d6e021223e",
+            "size": 517828
+          }
+        ]
+      },
+      "sevenInch": {
+        "en-US": [
+          {
+            "name": "/org.andstatus.app/en-US/sevenInchScreenshots/1.png",
+            "sha256": "78901862d951812df79072248e589ce737ff084200e99428abfdf530e6e68a0b",
+            "size": 641500
+          },
+          {
+            "name": "/org.andstatus.app/en-US/sevenInchScreenshots/2.png",
+            "sha256": "61cb75a0ef903e4ab5fa9675cda9d47b0dde5d8464095a372c28f2291841bcc0",
+            "size": 727341
+          },
+          {
+            "name": "/org.andstatus.app/en-US/sevenInchScreenshots/3.png",
+            "sha256": "3eb3f98ded4d33237b09c7111efe149361d748aa17da39ff647def5813f0c207",
+            "size": 404752
+          }
+        ]
+      },
+      "tenInch": {
+        "en-US": [
+          {
+            "name": "/org.andstatus.app/en-US/tenInchScreenshots/1.png",
+            "sha256": "4083f79bd6df536242c3791e40b79587c6d396ee3fcb1ab5c45e060c4216e9ac",
+            "size": 842391
+          },
+          {
+            "name": "/org.andstatus.app/en-US/tenInchScreenshots/2.png",
+            "sha256": "5b7c75b47cfb19fe8e9bfde233d80b798b3b0c29e316d69ddfd133448d4f3cee",
+            "size": 565258
+          },
+          {
+            "name": "/org.andstatus.app/en-US/tenInchScreenshots/3.png",
+            "sha256": "a2c0cd0373acfa42fcf5a13dbb3b2764327e2c2c290ba0ccadc3acf5238f147b",
+            "size": 235835
+          },
+          {
+            "name": "/org.andstatus.app/en-US/tenInchScreenshots/4.png",
+            "sha256": "0708d54a057e98881f26508964cca1acc6101f39fa34083e7e1f88373cbd617a",
+            "size": 1720522
+          },
+          {
+            "name": "/org.andstatus.app/en-US/tenInchScreenshots/5.png",
+            "sha256": "2ad39165f2ed429463ad57cf29d283af85ed9c693fa35d8140170ff9d7457dcf",
+            "size": 142376
+          },
+          {
+            "name": "/org.andstatus.app/en-US/tenInchScreenshots/6.png",
+            "sha256": "609a54cb2791d0eb693a83a57885aa9bfcb8b3a3a5aee59f747e1d5f4d6284da",
+            "size": 650510
+          },
+          {
+            "name": "/org.andstatus.app/en-US/tenInchScreenshots/7.png",
+            "sha256": "1cb5445e0823b3d4b50a96ae6b97c44237199a6a3bdf0ace3d203c3c6ea1f9b0",
+            "size": 230994
+          },
+          {
+            "name": "/org.andstatus.app/en-US/tenInchScreenshots/8.png",
+            "sha256": "679b730aed3176170c076d5ac8940dc557892f3dd10ed1e3805d24f4212da475",
+            "size": 976095
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/andstatus/andstatus",
+    "summary": {
+      "ar": "\u0639\u0645\u064a\u0644 \u062d\u0633\u0627\u0628\u0627\u062a \u0645\u062a\u0639\u062f\u062f\u0629 \u0644\u0634\u0628\u0643\u0627\u062a \u0627\u062c\u062a\u0645\u0627\u0639\u064a\u0629 \u0645\u062a\u0639\u062f\u062f\u0629",
+      "ba": "\u0411\u0435\u0440 \u043d\u0438\u0441\u04d9 \u0441\u043e\u0446\u0438\u0430\u043b\u044c \u0441\u0435\u043b\u0442\u04d9\u0440 \u04e9\u0441\u04e9\u043d \u043a\u04af\u043f \u0430\u043a\u043a\u0430\u0443\u043d\u0442\u043b\u044b \u043a\u043b\u0438\u0435\u043d\u0442",
+      "ca": "Client de m\u00faltiples comptes per a m\u00faltiples xarxes socials",
+      "cs": "Klient s v\u00edce \u00fa\u010dty pro v\u00edce soci\u00e1ln\u00edch s\u00edt\u00ed",
+      "da-DK": "Open Source flere konti klient til flere sociale netv\u00e6rk",
+      "de": "Mehrkonten-Client f\u00fcr viele soziale Netzwerke",
+      "de-DE": "Open-Source-Client f\u00fcr mehrere Accounts in mehreren sozialen Netzwerken",
+      "en-US": "Multiple accounts client for multiple social networks",
+      "es": "Cliente de m\u00faltiples cuentas para m\u00faltiples redes sociales",
+      "es-ES": "Cliente liviano para redes sociales basadas en conversaciones ramificadas",
+      "et": "Klient mitmete sotsiaalv\u00f5rkude mitme kasutajakonto jaoks",
+      "fil": "Isang mababang trapik na kliyenteng pang-social networking na may parang puno...",
+      "fr": "Client de comptes multiples pour plusieurs r\u00e9seaux sociaux",
+      "fr-FR": "Client multi-comptes et Libre pour diff\u00e9rents r\u00e9seaux sociaux",
+      "ga": "Cliant cuntas iolrach le haghaidh l\u00edonra\u00ed s\u00f3isialta \u00e9ags\u00fala",
+      "gl-ES": "Cliente de C\u00f3digo Aberto para varias contas de varias redes sociais",
+      "he": "\u05dc\u05e7\u05d5\u05d7 \u05e2\u05dd \u05e8\u05d9\u05d1\u05d5\u05d9 \u05d7\u05e9\u05d1\u05d5\u05e0\u05d5\u05ea \u05dc\u05de\u05d2\u05d5\u05d5\u05df \u05e8\u05e9\u05ea\u05d5\u05ea \u05d7\u05d1\u05e8\u05ea\u05d9\u05d5\u05ea",
+      "id": "Klien multi-akun untuk multi-jejaring sosial",
+      "it": "Clienti con pi\u00f9 account per pi\u00f9 social network",
+      "it-IT": "Open Source multiple accounts client for multiple social networks",
+      "ja": "\u8907\u6570\u306e\u30bd\u30fc\u30b7\u30e3\u30eb\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u7528\u306e\u8907\u6570\u306e\u30a2\u30ab\u30a6\u30f3\u30c8\u306e\u30af\u30e9\u30a4\u30a2\u30f3\u30c8",
+      "ja-JP": "\u30c4\u30ea\u30fc\u5f62\u5f0f\u306e\u30b9\u30ec\u30c3\u30c9\u3067\u4f1a\u8a71\u3092\u8868\u793a\u3059\u308b\u4f4e\u30c8\u30e9\u30d5\u30a3\u30c3\u30af\u306a\u30bd\u30fc\u30b7\u30e3\u30eb\u30cd\u30c3\u30c8\u30ef\u30fc\u30ad\u30f3\u30b0\u306e\u30af\u30e9\u30a4\u30a2\u30f3\u30c8",
+      "no-NO": "\u00c5pen kildekode flere kontoer klient for mangfoldig sosiale nettverk",
+      "pl": "Klient wielu kont dla wielu sieci spo\u0142eczno\u015bciowych",
+      "pl-PL": "Lekki klient sieci spo\u0142eczno\u015bciowych o drzewiastej strukturze w\u0105tk\u00f3w",
+      "pt": "Cliente de v\u00e1rias contas para v\u00e1rias redes sociais",
+      "pt-BR": "Cliente de m\u00faltiplas contas para v\u00e1rias redes sociais",
+      "pt-PT": "Cliente de v\u00e1rias contas para v\u00e1rias redes sociais",
+      "ro": "Client cu mai multe conturi pentru mai multe re\u021bele sociale",
+      "ru": "\u041a\u043b\u0438\u0435\u043d\u0442 \u0441 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u043c\u0438 \u0443\u0447\u0435\u0442\u043d\u044b\u043c\u0438 \u0437\u0430\u043f\u0438\u0441\u044f\u043c\u0438 \u0434\u043b\u044f \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u0445 \u0441\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0445 \u0441\u0435\u0442\u0435\u0439",
+      "ru-RU": "\u041a\u043b\u0438\u0435\u043d\u0442 c \u043e\u0442\u043a\u0440\u044b\u0442\u044b\u043c \u0438\u0441\u0445\u043e\u0434\u043d\u044b\u043c \u043a\u043e\u0434\u043e\u043c \u0434\u043b\u044f \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u0445 \u0430\u043a\u043a\u0430\u0443\u043d\u0442\u043e\u0432 \u0438 \u0441\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0445 \u0441\u0435\u0442\u0435\u0439",
+      "sr": "\u041a\u043b\u0438\u0458\u0435\u043d\u0442 \u0437\u0430 \u0432\u0438\u0448\u0435 \u043d\u0430\u043b\u043e\u0433\u0430 \u043d\u0430 \u0434\u0440\u0443\u0448\u0442\u0432\u0435\u043d\u0438\u043c \u043c\u0440\u0435\u0436\u0430\u043c\u0430",
+      "sw": "Kiteja cha akaunti nyingi kwa ajili ya mitandao nyingi ya kijamii",
+      "ta": "\u0baa\u0bb2 \u0b9a\u0bae\u0bc2\u0b95 \u0bb5\u0bb2\u0bc8\u0baa\u0bcd\u0baa\u0bbf\u0ba9\u0bcd\u0ba9\u0bb2\u0bcd\u0b95\u0bb3\u0bc1\u0b95\u0bcd\u0b95\u0bbe\u0ba9 \u0baa\u0bb2 \u0b95\u0ba3\u0b95\u0bcd\u0b95\u0bc1\u0b95\u0bb3\u0bcd \u0bb5\u0bbe\u0b99\u0bcd\u0b95\u0bbf",
+      "tr": "Birden \u00e7ok sosyal a\u011f i\u00e7in \u00e7oklu hesap istemcisi",
+      "tr-TR": "Birden \u00e7ok sosyal a\u011f i\u00e7in A\u00e7\u0131k Kaynakl\u0131 \u00e7oklu hesap istemcisi",
+      "uk": "\u0411\u0430\u0433\u0430\u0442\u043e\u043e\u0431\u043b\u0456\u043a\u043e\u0432\u043e\u0437\u0430\u043f\u0438\u0441\u043d\u0438\u0439 \u043a\u043b\u0456\u0454\u043d\u0442 \u0434\u043b\u044f \u043a\u0456\u043b\u044c\u043a\u043e\u0445 \u0441\u043e\u0446\u0456\u0430\u043b\u044c\u043d\u0438\u0445 \u043c\u0435\u0440\u0435\u0436",
+      "zh-CN": "\u591a\u4e2a\u793e\u4ea4\u7f51\u7edc\u7684\u591a\u5e10\u6237\u5ba2\u6237\u7aef",
+      "zh-TW": "\u4f4e\u6d41\u91cf\u7684\u793e\u4ea4\u7db2\u7d61\u5ba2\u6236\u7aef\u8207\u6a39\u72c0\u7dda\u7a0b\u5c0d\u8a71"
+    },
+    "translation": "https://crowdin.com/project/andstatus",
+    "webSite": "http://andstatus.org"
+  },
+  "version": {
+    "added": 1734797821000,
+    "file": {
+      "ipfsCIDv1": "bafybeiavxoasozsdpb5hbwdy5les5mlpn24giuppdjiyxbrhdxdaf3z5z4",
+      "name": "/org.andstatus.app_370.apk",
+      "sha256": "8fa68144623e16fc72b1c187a798c25be17846ac28ab5fac59c13b2316079c4c",
+      "size": 8944313
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "20c36d5f4bd304a61ea2df4ae37887f62791af3d26eda1d47a7fe6823eb6ee60"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.READ_SYNC_SETTINGS"
+        },
+        {
+          "name": "android.permission.WRITE_SYNC_SETTINGS"
+        },
+        {
+          "name": "org.andstatus.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 24,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 370,
+      "versionName": "62.03"
+    },
+    "src": {
+      "name": "/org.andstatus.app_370_src.tar.gz",
+      "sha256": "afe8967188d40a0aeeffec7607dfcb19857aa5079def33ba137a2fa3b26ff49c",
+      "size": 12815007
+    },
+    "whatsNew": {
+      "en-US": "v.62.03 Mastodon login fixed, maximum number of characters in a message from a server's config. Updated for Android 15.\n"
+    }
+  }
+}

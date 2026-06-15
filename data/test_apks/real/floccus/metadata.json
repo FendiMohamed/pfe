@@ -1,0 +1,64 @@
+{
+  "apk": {
+    "expected_sha256": "fb59edee44f8c3ac0cbedc21046ec5e0ec376391475c6b7b159f62669ef5dd62",
+    "index_size": 17915743,
+    "path": "data/test_apks/real/floccus/floccus.apk",
+    "sha256": "fb59edee44f8c3ac0cbedc21046ec5e0ec376391475c6b7b159f62669ef5dd62",
+    "size": 17915743,
+    "url": "https://f-droid.org/repo/org.handmadeideas.floccus_5009001.apk"
+  },
+  "app": "floccus bookmark sync",
+  "categories": [
+    "Bookmark",
+    "Internet",
+    "Reading"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "bookmark",
+    "internet",
+    "reading",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/org.handmadeideas.floccus/",
+  "license": "MPL-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "org.handmadeideas.floccus",
+  "proof_status": "report-generated",
+  "reason": "No-native bookmark-sync app with target SDK 35, a medium APK, and a large source tarball; selected as a richer internet/reading clean non-sparse candidate.",
+  "report": {
+    "detected_component_count": 13,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-floccus",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-floccus/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-floccus/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v11/report-real-floccus/sbom.cdx.json",
+    "sbom_component_count": 13,
+    "status": "ok"
+  },
+  "slug": "floccus",
+  "source_repo": "https://github.com/floccusaddon/floccus",
+  "source_tarball": {
+    "sha256": "946a3007486cb727c35321fe6f2d813b13ed44f452bd956b19b63986de138800",
+    "size": 104872038,
+    "url": "https://f-droid.org/repo/org.handmadeideas.floccus_5009001_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 5009001,
+  "version_name": "5.9.1"
+}

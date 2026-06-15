@@ -1,0 +1,492 @@
+# Source-Observed Reference DB Batch Log
+
+This log records evaluation-only reference DB growth from the source-observed catalog. It does not change the shared calibrated DB, matcher scoring, SBOM output, vulnerability labels, or source-validation metrics.
+
+## Current Inputs
+
+| Input | Value |
+|---|---:|
+| Source-observed catalog | `configs/source_observed_reference_catalog.json` |
+| Source-version build config | `configs/libraries.source_observed_versions.json` |
+| Buildable source-observed coordinates | 1361 |
+| Buildable source-version artifact slots | 3347 |
+| Metadata-only skips before build | 9 |
+
+## Batch 000
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 25 --offset 0` into `data/reference_db/artifacts_source_observed_versions` | 25 downloaded, 0 failed |
+| Convert | `--limit 25 --offset 0` into `data/reference_db/dex_source_observed_versions` | 25 converted, 0 skipped, 0 failed |
+| Extract | `--reset` into `data/reference_db/reference_features_source_observed_versions.sqlite` | 25 stored, 0 failed |
+
+Feature extraction counts for this first evaluation-only DB slice:
+
+| Feature table / metric | Rows |
+|---|---:|
+| Components | 25 |
+| DEX files | 25 |
+| Packages | 103 |
+| Classes | 2671 |
+| Methods | 12200 |
+| Opcodes | 1689 |
+| API references | 16620 |
+| String literals | 2563 |
+| Dependency shapes | 326 |
+| Class dependencies | 4348 |
+| Opcode n-grams | 28288 |
+| Call-chain opcode fingerprints | 2645 |
+| Basic-block opcode fingerprints | 9681 |
+| Class-neighbor summaries | 885 |
+| Field-operation sequences | 1757 |
+| Literal/context features | 6438 |
+
+## Batch 001
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 25 --offset 25` into `data/reference_db/artifacts_source_observed_versions` | 25 downloaded, 0 failed |
+| Convert | `--limit 25 --offset 25` into `data/reference_db/dex_source_observed_versions` | 15 converted, 10 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `25` | 15 stored, 0 failed |
+
+No-bytecode skips in this batch were AndroidX wrapper/metadata artifacts where D8 completed but produced no `classes*.dex`: `androidx.activity:activity-ktx` (`1.10.1`, `1.11.0`, `1.12.2`, `1.12.4`, `1.13.0`, `1.9.0`, `1.9.1`, `1.9.2`, `1.9.3`) and `androidx.annotation:annotation@1.10.0`.
+
+## Batch 002
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 25 --offset 50` into `data/reference_db/artifacts_source_observed_versions` | 18 downloaded, 7 failed |
+| Convert | downloaded records after artifact offset `50` into `data/reference_db/dex_source_observed_versions` | 10 converted, 8 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `40` | 10 stored, 0 failed |
+
+Download failures were real `404 Not Found` results for `androidx.annotation:annotation-experimental` source versions `1.0.0`, `1.1.0`, `1.3.0`, `1.4.0`, `1.4.1`, `1.5.0`, and `1.5.1`. No-bytecode skips were `androidx.annotation:annotation` versions `1.6.0`, `1.7.0`, `1.7.1`, `1.8.0`, `1.8.1`, `1.8.2`, `1.9.0`, and `1.9.1`.
+
+## Batch 003
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 25 --offset 75` into `data/reference_db/artifacts_source_observed_versions` | 22 downloaded, 3 failed |
+| Convert | downloaded records after artifact offset `68` into `data/reference_db/dex_source_observed_versions` | 22 converted, 0 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `50` | 22 stored, 0 failed |
+
+Download failures were real `404 Not Found` results for `androidx.arch.core:core-runtime` source versions `2.0.0`, `2.1.0`, and `2.2.0`.
+
+## Batch 004
+
+This batch switches from 25-slot slices to 100-slot slices for faster source-observed DB growth while keeping failures explicit.
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 100` into `data/reference_db/artifacts_source_observed_versions` | 100 downloaded, 0 failed |
+| Convert | downloaded records after artifact offset `90` into `data/reference_db/dex_source_observed_versions` | 58 converted, 42 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `72` | 58 stored, 0 failed |
+
+No-bytecode skips in this batch were AndroidX wrapper/platform artifacts. The skip reasons were `D8 completed but no classes*.dex files were produced` for `androidx.collection:collection` / `collection-ktx` versions, and `AAR contains no classes.jar; no JVM bytecode to dex` for public Compose wrapper artifacts such as `androidx.compose.animation:animation`, `androidx.compose.animation:animation-core`, and `androidx.compose.foundation:foundation`.
+
+## Batch 005
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 200` into `data/reference_db/artifacts_source_observed_versions` | 95 downloaded, 5 failed |
+| Convert | downloaded records after artifact offset `190` into `data/reference_db/dex_source_observed_versions` | 53 converted, 42 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `130` | 53 stored, 0 failed |
+
+Download failures were real `404 Not Found` results for `androidx.compose.material:material-icons-extended@1.6.8` and `androidx.compose.runtime:runtime-annotation` versions `1.10.3`, `1.10.4`, `1.10.6`, and `1.11.1`. No-bytecode skips were mostly public Compose wrapper artifacts without `classes.jar`, including `foundation`, `foundation-layout`, `material`, `material-icons-core`, `material-icons-extended`, `material-ripple`, `material3`, adaptive Material3 artifacts, and `runtime`.
+
+## Batch 006
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 300` into `data/reference_db/artifacts_source_observed_versions` | 96 downloaded, 4 failed |
+| Convert | downloaded records after artifact offset `285` into `data/reference_db/dex_source_observed_versions` | 52 converted, 44 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `183` | 52 stored, 0 failed |
+
+Download failures were real `404 Not Found` results for `androidx.compose.runtime:runtime-annotation` versions `1.9.0`, `1.9.2`, `1.9.4`, and `1.9.5`. No-bytecode skips were public Compose runtime/UI wrapper artifacts without `classes.jar`, including `runtime-retain`, `runtime-saveable`, `ui`, `ui-geometry`, and `ui-graphics`.
+
+## Batch 007
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 400` into `data/reference_db/artifacts_source_observed_versions` | 91 downloaded, 9 failed |
+| Convert | downloaded records after artifact offset `381` into `data/reference_db/dex_source_observed_versions` | 52 converted, 39 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `235` | 52 stored, 0 failed |
+
+Download failures were real `404 Not Found` results for `androidx.concurrent:concurrent-futures-ktx` versions `1.1.0`, `1.2.0`, and `1.3.0`; `androidx.constraintlayout:constraintlayout-core` versions `1.0.0`, `1.0.2`, `1.0.4`, `1.1.0`, and `1.1.1`; and `androidx.constraintlayout:constraintlayout-solver@1.1.3`. No-bytecode skips were public Compose UI wrapper artifacts without `classes.jar`, plus `androidx.constraintlayout:constraintlayout-compose@1.1.1`.
+
+## Batch 008
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 500` into `data/reference_db/artifacts_source_observed_versions` | 88 downloaded, 12 failed |
+| Convert | downloaded records after artifact offset `472` into `data/reference_db/dex_source_observed_versions` | 88 converted, 0 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `287` | 88 stored, 0 failed |
+
+Download failures were real `404 Not Found` results for `androidx.constraintlayout:constraintlayout-solver@2.0.1`, `androidx.core:core-location-altitude-external-protobuf` versions `1.0.0-beta01` and `1.0.0-rc01`, `androidx.core:core-location-altitude-proto` versions `1.0.0-beta01` and `1.0.0-rc01`, and `androidx.databinding:databinding-common` versions `8.1.4`, `8.13.1`, `8.13.2`, `8.2.2`, `8.7.3`, `9.0.1`, and `9.1.0`.
+
+## Batch 009
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 600` into `data/reference_db/artifacts_source_observed_versions` | 88 downloaded, 12 failed |
+| Convert | downloaded records after artifact offset `560` into `data/reference_db/dex_source_observed_versions` | 83 converted, 5 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `375` | 83 stored, 0 failed |
+
+Download failures were real `404 Not Found` results for DataStore/protobuf, Glance/protobuf, Health Connect/protobuf, and Hilt common coordinates: `androidx.datastore:datastore-core@1.0.0`, `androidx.datastore:datastore-core-okio@1.2.0`, `androidx.datastore:datastore-core-okio-jvm@1.2.0`, `androidx.datastore:datastore-preferences-external-protobuf@1.2.0`, `androidx.datastore:datastore-preferences-proto@1.2.0`, `androidx.glance:glance-appwidget-external-protobuf@1.1.1`, `androidx.glance:glance-appwidget-proto@1.1.1`, `androidx.health.connect:connect-client-external-protobuf@1.1.0`, `androidx.health.connect:connect-client-proto@1.1.0`, and `androidx.hilt:hilt-common` versions `1.0.0`, `1.2.0`, and `1.3.0`. No-bytecode skips were `androidx.datastore` wrapper artifacts and `androidx.graphics:graphics-shapes@1.0.1`.
+
+## Batch 010
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 700` into `data/reference_db/artifacts_source_observed_versions` | 91 downloaded, 9 failed |
+| Convert | downloaded records after artifact offset `648` into `data/reference_db/dex_source_observed_versions` | 54 converted, 37 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `458` | 54 stored, 0 failed |
+
+Download failures were real `404 Not Found` results for `androidx.lifecycle:lifecycle-common-jvm` versions `2.10.0`, `2.8.2`, `2.8.4`, `2.8.6`, `2.8.7`, `2.9.0`, `2.9.1`, `2.9.3`, and `2.9.4`. No-bytecode skips were AndroidX legacy and Lifecycle wrapper artifacts, including `androidx.legacy:legacy-preference-v14@1.0.0`, `androidx.legacy:legacy-support-v4@1.0.0`, `androidx.lifecycle:lifecycle-common`, `androidx.lifecycle:lifecycle-common-java8`, `androidx.lifecycle:lifecycle-livedata-core-ktx`, and `androidx.lifecycle:lifecycle-livedata-ktx`.
+
+## Batch 011
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 800` into `data/reference_db/artifacts_source_observed_versions` | 100 downloaded, 0 failed |
+| Convert | downloaded records after artifact offset `739` into `data/reference_db/dex_source_observed_versions` | 60 converted, 40 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `512` | 60 stored, 0 failed |
+
+No-bytecode skips were mostly AndroidX Lifecycle wrapper artifacts where the public artifact has no JVM bytecode or D8 produced no `classes*.dex`, including `lifecycle-reactivestreams-ktx`, `lifecycle-runtime`, `lifecycle-runtime-compose`, `lifecycle-runtime-ktx`, `lifecycle-runtime-ktx-android`, and `lifecycle-viewmodel` versions from the `2.8.x`, `2.9.x`, and `2.10.0` bands.
+
+## Batch 012
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 900` into `data/reference_db/artifacts_source_observed_versions` | 100 downloaded, 0 failed |
+| Convert | downloaded records after artifact offset `839` into `data/reference_db/dex_source_observed_versions` | 83 bytecode-bearing records, 17 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `572` | 83 stored, 0 failed |
+
+The first two conversion attempts timed out after making progress, so the resumed conversion recorded `58` newly `converted` rows and `25` `existing` rows for bytecode outputs that were already present on disk. Extraction accepts both statuses and stored all `83` bytecode-bearing records. No-bytecode skips were Lifecycle wrapper artifacts, including `androidx.lifecycle:lifecycle-viewmodel-compose`, `androidx.lifecycle:lifecycle-viewmodel-ktx`, and `androidx.lifecycle:lifecycle-viewmodel-savedstate` versions from the `2.8.x`, `2.9.x`, and `2.10.0` bands.
+
+## Batch 013
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 1000` into `data/reference_db/artifacts_source_observed_versions` | 100 downloaded, 0 failed |
+| Convert | downloaded records after artifact offset `939` into `data/reference_db/dex_source_observed_versions` plus a six-record backfill at sorted artifact offset `889` | 68 bytecode-bearing records, 32 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `655`, plus targeted `--coordinate androidx.media:media` extraction | 68 stored, 0 failed |
+
+The download command timed out after writing all `100` metadata records. The first conversion attempt also timed out after progress, and the resumed conversion recorded `43` newly `converted` rows, `25` `existing` rows, and `32` no-bytecode skips across Navigation/NavigationEvent wrapper artifacts. A post-conversion consistency check found six missing conversion records for `androidx.media:media` versions `1.0.0`, `1.4.1`, `1.6.0`, `1.7.0`, `1.7.1`, and `1.8.0`; those were backfilled with `convert-reference-dex --limit 6 --offset 889` and then extracted with `extract-reference-features --coordinate androidx.media:media`. The final DB count matches the bytecode-bearing conversion count.
+
+## Batch 014
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 1100` into `data/reference_db/artifacts_source_observed_versions` | 90 downloaded, 10 failed |
+| Convert | downloaded records after artifact offset `1039` into `data/reference_db/dex_source_observed_versions` | 62 converted, 28 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `723` | 62 stored, 0 failed |
+
+Download failures were real `404 Not Found` results for `androidx.paging:paging-common-ktx` versions `3.1.1`, `3.2.1`, `3.3.6`, and `3.5.0`; `androidx.resourceinspection:resourceinspection-annotation@1.0.1`; and `androidx.room:room-common-jvm` versions `2.7.0`, `2.7.1`, `2.7.2`, `2.8.0`, and `2.8.4`. No-bytecode skips were AndroidX NavigationEvent, Paging, Room, and SavedState wrapper artifacts without JVM bytecode or without produced `classes*.dex`.
+
+## Batch 015
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 1200` into `data/reference_db/artifacts_source_observed_versions` | 100 downloaded, 0 failed |
+| Convert | downloaded records after artifact offset `1129` into `data/reference_db/dex_source_observed_versions` | 81 converted, 19 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `785` | 81 stored, 0 failed |
+
+No-bytecode skips were AndroidX SavedState, SQLite, SQLite Framework, and Tracing wrapper artifacts without JVM bytecode or without produced `classes*.dex`, including `androidx.savedstate:savedstate`, `savedstate-compose`, `savedstate-ktx`, `androidx.sqlite:sqlite`, `androidx.sqlite:sqlite-framework`, and `androidx.tracing:tracing` versions from the source-observed slice.
+
+## Batch 016
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 1300` into `data/reference_db/artifacts_source_observed_versions` | 65 downloaded, 35 failed |
+| Convert | downloaded records after artifact offset `1229` into `data/reference_db/dex_source_observed_versions` | 54 converted, 11 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `866` | 54 stored, 0 failed |
+
+Download failures were real `404 Not Found` results across AndroidX Window, SparkButton Compose, CustomActivityOnCrash, ACRA, Material Dialogs, Lottie, Pin/Pattern lock widgets, Billing, and legacy Android support-library alias rows. Some source-observed rows were not valid Maven versions, such as support aliases like `androidx.appcompat:appcompat:1.7.0` recorded under `com.android.support:appcompat-v7`. No-bytecode skips were `androidx.work:work-runtime-ktx` and Touchlab Stately wrapper artifacts where D8 produced no `classes*.dex`.
+
+## Batch 017
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 1400` into `data/reference_db/artifacts_source_observed_versions` | 35 downloaded, 65 failed |
+| Convert | downloaded records after artifact offset `1294` into `data/reference_db/dex_source_observed_versions` | 34 converted, 1 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `920` | 34 stored, 0 failed |
+
+Download failures were real `404 Not Found` results across legacy `com.android.support:*` alias rows, Volley, AndroidPlot, several old UI/widget libraries, certificate transparency, Facebook/Fresco/React Native coordinates, and other third-party artifacts absent from the queried repositories. Several source-observed rows again contained alias-style version strings rather than Maven-published versions, such as AndroidX coordinates stored under legacy support-library artifacts and `com.facebook.react:react-android:0.77.2` stored as the version for `com.facebook.react:react-native`. The only no-bytecode skip was `com.eygraber:uri-kmp@0.0.21`, where D8 produced no `classes*.dex`.
+
+## Batch 018
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 1500` into `data/reference_db/artifacts_source_observed_versions` | 48 downloaded, 52 failed |
+| Convert | downloaded records after artifact offset `1329` into `data/reference_db/dex_source_observed_versions` | 47 converted, 1 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `954` | 47 stored, 0 failed |
+
+Download failures were real `404 Not Found` results concentrated in GitHub/JitPack-style coordinates, tag-prefixed versions, and commit-hash source rows, including GlideToVectorYou, AppIntro, MPAndroidChart, NewPipeExtractor, ThothDroid, bitfireAT, Glide/Fresco-related modules, and other source-observed third-party artifacts absent from the queried repositories. The only no-bytecode skip was `com.github.bumptech.glide:compose@1.0.0-beta01`, where D8 produced no `classes*.dex`.
+
+## Batch 019
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 1600` into `data/reference_db/artifacts_source_observed_versions` | 31 downloaded, 69 failed |
+| Convert | downloaded records after artifact offset `1377` into `data/reference_db/dex_source_observed_versions` | 29 converted, 2 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `1001`, with one blocked record skipped | 28 stored, 1 extraction-blocked |
+
+Download failures were real `404 Not Found` results concentrated in GitHub/JitPack-style coordinates, tag-prefixed versions, and commit-hash source rows, including Glide, PhotoView, MaterialPreferences, Omni Notes, Mapsforge, Nextcloud, OpenKeychain, animation, calendar, and other source-observed third-party artifacts absent from the queried repositories. No-bytecode skips were `com.github.bumptech.glide:ktx@1.0.0-beta01` and `com.github.houbb:sensitive-word-data@1.0.0`, where D8 produced no `classes*.dex`. `com.github.houbb:heaven@0.13.0` converted to DEX but is extraction-blocked by malformed surrogate text (`'utf-8' codec can't encode characters ... surrogates not allowed`), so it is counted as bytecode-bearing conversion evidence but not as a stored DB component.
+
+## Batch 020
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 1700` into `data/reference_db/artifacts_source_observed_versions` | 70 downloaded, 30 failed |
+| Convert | downloaded records after artifact offset `1408`, resumed at artifact offset `1459` after timeout | 67 bytecode-bearing records, 3 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `1030` | 67 stored, 0 failed |
+
+Download failures were real `404 Not Found` results across GitHub/JitPack-style coordinates and several Google/accompanist rows, including Skydoves, Mapsforge, libsu, emojify, DashClock, and other source-observed artifacts absent from the queried repositories. Conversion timed out after writing some DEX outputs, then the resume recorded `48` converted rows, `19` existing bytecode rows, and `3` no-bytecode skips. No-bytecode skips were `com.github.skydoves:compose-stability-runtime@0.7.1`, `com.github.skydoves:landscapist@2.9.5`, and `com.github.skydoves:landscapist-coil3@2.9.5`, where D8 produced no `classes*.dex`.
+
+## Batch 021
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 1800` into `data/reference_db/artifacts_source_observed_versions` | 86 downloaded, 14 failed |
+| Convert | downloaded records after artifact offset `1478`, resumed at offsets `1539` and `1563` after timeouts | 85 bytecode-bearing records, 1 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `1097` | 85 stored, 0 failed |
+
+Download failures were real `404 Not Found` results for Dagger Android support/lint AAR versions, Firebase encoder artifacts, and older Android UI/helper libraries such as materialshadowninepatch, advrecyclerview, and figlib. Conversion timed out twice after writing DEX outputs, then narrow resumes recorded the remaining outputs as `existing`. The only no-bytecode skip was one source-observed artifact where no usable DEX was produced. The source-version config has `3347` buildable slots, so after this batch `1900` source-version slots have been attempted and `1447` remain.
+
+## Batch 022
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 1900` into `data/reference_db/artifacts_source_observed_versions` | 38 downloaded, 62 failed |
+| Convert | downloaded records after artifact offset `1564`, resumed at artifact offset `1584` after timeout | 32 bytecode-bearing records, 6 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `1182` | 32 stored, 0 failed |
+
+Download failures were real `404 Not Found` results across old Android UI/helper libraries and Mike Penz artifact/version rows, including adapterdelegates, material-intro, RxBinding, zxing-android-embedded, FastAdapter, AboutLibraries, Iconics, and MaterialDrawer families. Conversion timed out after 20 records and resumed cleanly. Extraction timed out while returning output, but the DB stored all `32` expected bytecode-bearing records. No-bytecode skips were Mike Penz AboutLibraries Compose/Core wrapper artifacts where D8 produced no `classes*.dex`. After this batch, `2000` of `3347` buildable source-version slots have been attempted and `1347` remain.
+
+## Batch 023
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 2000` into `data/reference_db/artifacts_source_observed_versions` | 70 downloaded, 30 failed |
+| Convert | downloaded records after artifact offset `1602`, resumed at artifact offset `1647` after timeout | 62 bytecode-bearing records, 8 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `1214` | 62 stored, 0 failed |
+
+Download failures were real `404 Not Found` results across older Android UI/helper libraries, LeakCanary Android module rows, and OkHttp Android-target artifacts absent from the queried repositories. Conversion timed out after 45 records and resumed cleanly. No-bytecode skips were public OkHttp 5 and Okio 3 wrapper artifacts where D8 produced no `classes*.dex`; Android/JVM target variants with bytecode were still converted and stored when present. After this batch, `2100` of `3347` buildable source-version slots have been attempted and `1247` remain.
+
+## Batch 024
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 2100` into `data/reference_db/artifacts_source_observed_versions` | 86 downloaded, 14 failed |
+| Convert | downloaded records after artifact offset `1672`, resumed at artifact offsets `1701` and `1727`, then finished the final missing artifact at artifact offset `1693` | 40 converted, 14 skipped, 30 existing, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `1347` | 2 stored, 0 failed |
+
+Download failures were real `404 Not Found` results across `com.squareup.sqldelight:android-driver@1.5.4`, Takisoft preference/datetime/color picker rows, `com.tbruyelle.rxpermissions:rxpermissions@0.4.2`, `com.tbuonomo:dotsindicator@4.2`, and several Vanniktech Android-image-cropper/emoji/ui rows. Conversion needed multiple resumes because the first pass timed out partway through the slice, and the final missing artifact was `com.squareup:otto@1.3.8`. No-bytecode skips included `com.vladsch.flexmark:flexmark-util@0.64.8`, where D8 produced no `classes*.dex`. The extractor stored the final two bytecode-bearing rows for this batch, but the stored component table still trails the bytecode-bearing conversion ledger by two rows, so the batch remains explicitly transparent about the current gap: `com.github.houbb:heaven@0.13.0` and `com.squareup:otto@1.3.8` are still not reflected in `components`. After this batch, `2200` of `3347` buildable source-version slots have been attempted and `1147` remain.
+
+## Batch 025
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 2200` into `data/reference_db/artifacts_source_observed_versions` | 49 downloaded, 51 failed |
+| Convert | downloaded records after artifact offset `1758`, resumed in multiple passes, then finished the final missing artifacts at artifact offsets `1805` and `1806` | 23 converted, 26 existing, 0 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `1347` | 0 new stored components, 0 failed |
+
+Download failures were real `404 Not Found` results across Commons Logging, `core:*` rows from the source-observed catalog, `de.c1710` filemoji rows, `de.cketti` changelog and safe-content-resolver rows, `de.hdodenhof:circleimageview`, `dev.chrisbanes` insetter rows, `dev.rikka` shizuku/preference rows, and `eu.chainfire:libsuperuser@1.1.0`. Conversion had to be resumed multiple times because the first run timed out before the tail was complete; the final two artifact rows were `dnsjava:dnsjava@3.6.4` and `eu.agno3.jcifs:jcifs-ng@2.1.10`. No new stored components were added in this batch because the remaining bytecode-bearing rows were already represented in the components table, and the two previously documented open-gap rows remain open for later resolution. After this batch, `2300` of `3347` buildable source-version slots have been attempted and `1047` remain.
+
+## Batch 026
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 2300` into `data/reference_db/artifacts_source_observed_versions` | 26 downloaded, 74 failed |
+| Convert | downloaded records after artifact offset `1807`, resumed once for the tail | 10 converted, 16 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `1347` | 59 stored, 0 failed |
+
+Download failures were real `404 Not Found` results across `eu.chainfire:libsuperuser@1.1.1`, `eu.davidea:flexible-adapter` rows, and many `feature:*` module coordinates from the source-observed catalog, plus `id.zelory:compressor@2.1.1`, `im.conversations.webrtc:webrtc-android@129.0.0`, and multiple `io.coil-kt.coil3:*` Android-target rows. No-bytecode skips were the `io.coil-kt.coil3` wrapper artifacts where D8 produced no `classes*.dex`. The extractor produced `59` new stored components from the `10` bytecode-bearing rows, but the stored table still trails the conversion ledger by two rows, so `com.github.houbb:heaven@0.13.0` and `com.squareup:otto@1.3.8` remain the open gaps. After this batch, `2400` of `3347` buildable source-version slots had been attempted and `947` remained; later batches exhausted the catalog.
+
+## Current Evaluation-Only DB Totals
+
+| Metric | Value |
+|---|---:|
+| Source-version slots attempted | 3347 |
+| Source-version slots remaining | 0 |
+| Downloaded artifact metadata records | 2649 |
+| Download failures recorded | 698 |
+| Bytecode-bearing conversion records | 1427 |
+| No-bytecode conversion skips | 699 |
+| Extraction-blocked bytecode records | 1 |
+| Stored DB components | 1449 |
+
+Current feature extraction counts:
+
+| Feature table / metric | Rows |
+|---|---:|
+| Components | 1449 |
+| DEX files | 1449 |
+| Packages | 10031 |
+| Classes | 320440 |
+| Methods | 2196638 |
+| Opcodes | 114424 |
+| API references | 2532522 |
+| String literals | 425846 |
+| Dependency shapes | 15276 |
+| Class dependencies | 627642 |
+| Opcode n-grams | 4030990 |
+| Call-chain opcode fingerprints | 342662 |
+| Basic-block opcode fingerprints | 1679519 |
+| Class-neighbor summaries | 76752 |
+| Field-operation sequences | 233669 |
+| Literal/context features | 723326 |
+
+## Commands
+
+```powershell
+python scripts\build_reference_db_coverage_dashboard.py
+python scripts\build_source_observed_reference_catalog.py
+docker compose run --rm apk-sbom python -m apk_sbom.cli download-maven --config configs/libraries.source_observed_versions.json --output-root data/reference_db/artifacts_source_observed_versions --limit 25 --offset 0 --quiet
+docker compose run --rm apk-sbom python -m apk_sbom.cli convert-reference-dex --artifact-root data/reference_db/artifacts_source_observed_versions --output-root data/reference_db/dex_source_observed_versions --limit 25 --offset 0 --quiet
+docker compose run --rm apk-sbom python -m apk_sbom.cli extract-reference-features --dex-root data/reference_db/dex_source_observed_versions --db-path data/reference_db/reference_features_source_observed_versions.sqlite --reset --quiet
+```
+
+The download step was executed through the Python downloader after sandboxed network access failed with `WinError 10013`; the approved unsandboxed run downloaded 25/25 artifacts. The artifact, DEX, and SQLite outputs live under ignored `data/reference_db/*` paths.
+
+## Next Batch
+
+Continue source-version downloads with `--limit 100 --offset 2400`. Because failed downloads are absent from the artifact metadata list, compute the conversion offset from the current downloaded metadata count before converting the next slice. Append to `data/reference_db/reference_features_source_observed_versions.sqlite` without `--reset`. Keep `com.github.houbb:heaven@0.13.0` documented as extraction-blocked unless the feature extractor later gains surrogate-safe string handling, and keep `com.squareup:otto@1.3.8` in the open-gap note until the stored component table catches up.
+
+## Batch 027
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 3200` into `data/reference_db/artifacts_source_observed_versions` | 91 downloaded, 9 failed |
+| Convert | downloaded records after artifact offset `2521` into `data/reference_db/dex_source_observed_versions` | 83 converted, 8 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `2520` | 0 new stored components, 0 failed |
+
+Download failures were real `404 Not Found` results across `org.jitsi:webrtc@124.0.0`, `org.kde.invent.sredman:android-smsmms@kdeconnect-1-21-0`, several `org.maplibre.gl:*` rows, `org.microg:safe-parcel@1.5.0`, and `org.osmdroid:osmdroid-android` versions `6.1.1`, `6.1.18`, and `6.1.20`. No-bytecode skips were `org.jetbrains.kotlinx:kotlinx-serialization-json` versions `1.5.1`, `1.6.2`, `1.6.3`, `1.7.3`, `1.8.1`, `1.9.0`, `org.jetbrains.kotlinx:kotlinx-serialization-json-io@1.11.0`, and `org.kobjects.ktxml:core@1.0.0`, where D8 produced no `classes*.dex`. The extract step added no new stored components because the newly converted rows were already reflected in the shared evaluation DB. After this batch, `2649` downloaded artifact metadata records and `2641` bytecode/no-bytecode conversion records are live in the evaluation-only pipeline, with `8` conversion gaps still open.
+
+## Batch 028
+
+| Step | Command scope | Result |
+|---|---|---|
+| Download | `--limit 100 --offset 3300` into `data/reference_db/artifacts_source_observed_versions` | 37 downloaded, 10 failed |
+| Convert | downloaded records after artifact offset `2612` into `data/reference_db/dex_source_observed_versions` | 37 converted, 0 skipped, 0 failed |
+| Extract | append into `data/reference_db/reference_features_source_observed_versions.sqlite` from conversion offset `2604` | 0 new stored components, 0 failed |
+
+Download failures were real `404 Not Found` results across `org.sufficientlysecure:html-textview@3.1`, `org.unifiedpush.android:connector@3.0.10` and `3.3.2`, `org.unifiedpush.android:connector-ui@1.1.0`, `org.unifiedpush.android:embedded-fcm-distributor@3.0.0`, `org.videolan.android:libvlc-all@3.7.0`, `org.videolan.android:medialibrary-all@0.13.17`, `org.videolan.android:remote-access@0.17.0`, `pl.droidsonroids.gif:android-gif-drawable@1.2.31`, and `plugins:openpgp-api-lib@openpgp-api`. All 37 downloaded rows were bytecode-bearing and converted cleanly. The evaluation-only DB now reflects the full source-observed catalog attempt set; a final `--offset 3400` download returned zero rows, confirming the catalog is exhausted.
+
+## Current Evaluation-Only DB Totals
+
+| Metric | Value |
+|---|---:|
+| Source-version slots attempted | 3347 |
+| Source-version slots remaining | 0 |
+| Downloaded artifact metadata records | 2649 |
+| Download failures recorded | 698 |
+| Bytecode-bearing conversion records | 1427 |
+| No-bytecode conversion skips | 699 |
+| Extraction-blocked bytecode records | 1 |
+| Stored DB components | 1449 |
+
+Current feature extraction counts:
+
+| Feature table / metric | Rows |
+|---|---:|
+| Components | 1449 |
+| DEX files | 1449 |
+| Packages | 10031 |
+| Classes | 320440 |
+| Methods | 2196638 |
+| Opcodes | 114424 |
+| API references | 2532522 |
+| String literals | 425846 |
+| Dependency shapes | 15276 |
+| Class dependencies | 627642 |
+| Opcode n-grams | 4030990 |
+| Call-chain opcode fingerprints | 342662 |
+| Basic-block opcode fingerprints | 1679519 |
+| Class-neighbor summaries | 76752 |
+| Field-operation sequences | 233669 |
+| Literal/context features | 723326 |
+
+## Next Batch
+
+The source-observed catalog is exhausted, so the next useful work is documentation reconciliation and the follow-on all-versions expansion lane. Keep `com.github.houbb:heaven@0.13.0` documented as extraction-blocked unless surrogate-safe string handling is added, and keep the open-gap note for the eight current conversion misses until a separate reconciliation pass resolves them or explicitly records why they cannot be converted.
+
+## Failed Download Retry 001
+
+| Step | Command scope | Result |
+|---|---|---|
+| Classify | `python scripts\build_source_observed_failed_download_retry_plan.py` | 698 reconstructed failed downloads; 222 automatic retry candidates |
+| Download | `configs/libraries.source_observed_failed_retry_alt_packaging.json` into `data/reference_db/artifacts_source_observed_failed_retry_alt_packaging` | 164 downloaded, 58 still failed |
+| Convert | retry artifacts into `data/reference_db/dex_source_observed_failed_retry_alt_packaging` | 148 converted, 16 skipped, 0 failed |
+| Extract | append retry DEX into `data/reference_db/reference_features_source_observed_versions.sqlite` | 148 stored, 0 failed |
+
+This retry pass attacks the earlier failed-download pool instead of moving directly to all-versions expansion. The generated plan reconstructs the `698` failed source-version rows by subtracting downloaded artifact metadata from `configs/libraries.source_observed_versions.json`, then classifies them into retry classes: `81` Google alternate-packaging rows, `141` JitPack candidates, `84` source-module aliases, `25` bad source-version strings, `10` Kotlin/toolchain boundary rows, `5` legacy support aliases, `3` special repository candidates, and `349` manual repository or unavailable rows. The automatic retry config recovered `164` artifacts; `148` of those produced bytecode and were stored in the evaluation-only DB. The DB now has `1597` stored components.
+
+Current retry feature extraction counts:
+
+| Feature table / metric | Rows |
+|---|---:|
+| Components | 1597 |
+| DEX files | 1597 |
+| Packages | 10613 |
+| Classes | 330796 |
+| Methods | 2303034 |
+| Opcodes | 124387 |
+| API references | 2646899 |
+| String literals | 441439 |
+| Dependency shapes | 16858 |
+| Class dependencies | 654373 |
+| Opcode n-grams | 4261256 |
+| Call-chain opcode fingerprints | 356825 |
+| Basic-block opcode fingerprints | 1758289 |
+| Class-neighbor summaries | 81047 |
+| Field-operation sequences | 246630 |
+| Literal/context features | 750342 |
+
+## Failed Download Retry 002
+
+| Step | Command scope | Result |
+|---|---|---|
+| Generate | rerun `scripts\build_source_observed_failed_download_retry_plan.py` | added Maven Central AAR and normalized-alias retry configs |
+| Download AAR retry | `configs/libraries.source_observed_failed_retry_default_aar.json` into `data/reference_db/artifacts_source_observed_failed_retry_default_aar` | 336 downloaded, 157 still failed |
+| Download alias retry | `configs/libraries.source_observed_failed_retry_alias_normalized.json` into `data/reference_db/artifacts_source_observed_failed_retry_alias_normalized` | 16 downloaded, 8 still failed |
+| Convert AAR retry | AAR retry artifacts into `data/reference_db/dex_source_observed_failed_retry_default_aar` | 326 converted, 10 skipped, 0 failed |
+| Convert alias retry | alias retry artifacts into `data/reference_db/dex_source_observed_failed_retry_alias_normalized` | 15 converted, 1 skipped, 0 failed |
+| Extract AAR retry | append AAR retry DEX into `data/reference_db/reference_features_source_observed_versions.sqlite` | 326 stored, 0 failed |
+| Extract alias retry | append alias retry DEX into `data/reference_db/reference_features_source_observed_versions.sqlite` | 15 processed/stored statuses, 1 net new component, 0 failed |
+
+This second retry pass addresses the user's concern that `1427` bytecode-bearing rows was too low by reattempting fixable failed downloads before all-versions expansion. The broader Maven Central AAR retry recovered `336` artifacts and `326` bytecode-bearing conversion records. The normalized-alias retry recovered `16` artifacts and `15` bytecode-bearing conversion records, but most alias-normalized rows were already represented in the DB, so the net component table increased by `1` during that final alias extraction. Across retry passes 001 and 002, the failed-download recovery lane recovered `516` artifacts, converted `489` bytecode-bearing records, and raised the evaluation-only DB from `1449` to `1924` stored components.
+
+Current post-retry feature extraction counts:
+
+| Feature table / metric | Rows |
+|---|---:|
+| Components | 1924 |
+| DEX files | 1924 |
+| Packages | 12227 |
+| Classes | 351066 |
+| Methods | 2440517 |
+| Opcodes | 146694 |
+| API references | 2852551 |
+| String literals | 495800 |
+| Dependency shapes | 20153 |
+| Class dependencies | 693724 |
+| Opcode n-grams | 4671173 |
+| Call-chain opcode fingerprints | 386334 |
+| Basic-block opcode fingerprints | 1890389 |
+| Class-neighbor summaries | 89051 |
+| Field-operation sequences | 268318 |
+| Literal/context features | 833814 |
+
+## Failed Download Retry 003
+
+| Step | Command scope | Result |
+|---|---|---|
+| Generate | rerun `scripts\build_source_observed_failed_download_retry_plan.py` | added normalized-alias alternate-packaging retry config |
+| Download | `configs/libraries.source_observed_failed_retry_alias_normalized_alt_packaging.json` into `data/reference_db/artifacts_source_observed_failed_retry_alias_normalized_alt_packaging` | 7 downloaded, 17 still failed |
+| Convert | alias alternate-packaging artifacts into `data/reference_db/dex_source_observed_failed_retry_alias_normalized_alt_packaging` | 3 converted, 4 skipped, 0 failed |
+| Extract | append alias alternate-packaging DEX into `data/reference_db/reference_features_source_observed_versions.sqlite` | 3 processed/stored statuses, 0 net new components, 0 failed |
+
+This cleanup pass recovered the remaining `androidx.annotation:annotation` alias rows as JARs, but four were no-bytecode annotation artifacts and the three bytecode-bearing rows were already represented in the evaluation DB. The component count therefore remains `1924`.
+
+After retry passes 001-003, `500` of the original `698` failed source-observed keys were recovered as artifacts in at least one retry root. `198` original failed keys remain unrecovered: `84` source-module aliases, `43` manual repository or unavailable rows, `27` still-failing JitPack candidates, `25` bad source-version-string rows, `10` Kotlin/toolchain-boundary rows, `5` legacy support aliases, and `4` Google alternate-packaging rows. These remaining rows should stay explicit as unavailable or normalization-required evidence unless a source-specific repository or coordinate rewrite is proven.

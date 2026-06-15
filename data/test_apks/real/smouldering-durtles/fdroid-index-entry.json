@@ -1,0 +1,313 @@
+{
+  "metadata": {
+    "added": 1746923621000,
+    "authorEmail": "contact@jhcooke.com",
+    "authorName": "Jerry Cooke",
+    "authorWebSite": "https://jhcooke.com",
+    "categories": [
+      "Science & Education"
+    ],
+    "changelog": "https://github.com/jerryhcooke/smouldering_durtles/releases",
+    "description": {
+      "en-GB": "Introducing Smouldering Durtles, your trusty companion app for the renowned WaniKani kanji learning platform, crafted by Tofugu! If you're on a quest to master Kanji with WaniKani, Smouldering Durtles is here to make your lessons and reviews engaging and enjoyable, with a plethora of features to enhance your learning experience.\n\nSmouldering Durtles offers advanced searching capabilities, allowing you to quickly locate the exact Kanji or vocabulary you're looking for. Bolster your learning with self-study quizzes, testing your knowledge and helping you retain what you've learned. Customize your experience with a variety of themes to suit your personal style and make your study sessions visually appealing. Plus, never miss a review session with the convenience of offline reviews, ensuring your progress remains uninterrupted.\n\nPlease note that an active WaniKani account is essential to access this app's full potential.\n\nSmouldering Durtles is an independent creation and is not officially supported or endorsed by Tofugu.",
+      "en-US": "Introducing Smouldering Durtles, your trusty companion app for the renowned WaniKani kanji learning platform, crafted by Tofugu! If you're on a quest to master Kanji with WaniKani, Smouldering Durtles is here to make your lessons and reviews engaging and enjoyable, with a plethora of features to enhance your learning experience.\n\nSmouldering Durtles offers advanced searching capabilities, allowing you to quickly locate the exact Kanji or vocabulary you're looking for. Bolster your learning with self-study quizzes, testing your knowledge and helping you retain what you've learned. Customize your experience with a variety of themes to suit your personal style and make your study sessions visually appealing. Plus, never miss a review session with the convenience of offline reviews, ensuring your progress remains uninterrupted.\n\nPlease note that an active WaniKani account is essential to access this app's full potential.\n\nSmouldering Durtles is an independent creation and is not officially supported or endorsed by Tofugu."
+    },
+    "donate": [
+      "https://ko-fi.com/jerrycooke"
+    ],
+    "featureGraphic": {
+      "en-GB": {
+        "name": "/com.smouldering_durtles.wk/en-GB/featureGraphic_etN0Smr_CSTQANJzMYGJm7fL2eg1WSwKhqigI49ncCg=.png",
+        "sha256": "7ad3744a6aff0924d000d2733181899bb7cbd9e835592c0a86a8a0238f677028",
+        "size": 292319
+      },
+      "en-US": {
+        "name": "/com.smouldering_durtles.wk/en-US/featureGraphic_etN0Smr_CSTQANJzMYGJm7fL2eg1WSwKhqigI49ncCg=.png",
+        "sha256": "7ad3744a6aff0924d000d2733181899bb7cbd9e835592c0a86a8a0238f677028",
+        "size": 292319
+      }
+    },
+    "icon": {
+      "en-GB": {
+        "name": "/com.smouldering_durtles.wk/en-GB/icon_t40sE6NfOmwiVR0QAQqCPihcO20eyJtdL2UsEIyQMo4=.png",
+        "sha256": "b78d2c13a35f3a6c22551d10010a823e285c3b6d1ec89b5d2f652c108c90328e",
+        "size": 39369
+      },
+      "en-US": {
+        "name": "/com.smouldering_durtles.wk/en-US/icon_t40sE6NfOmwiVR0QAQqCPihcO20eyJtdL2UsEIyQMo4=.png",
+        "sha256": "b78d2c13a35f3a6c22551d10010a823e285c3b6d1ec89b5d2f652c108c90328e",
+        "size": 39369
+      }
+    },
+    "issueTracker": "https://github.com/jerryhcooke/smouldering_durtles/issues",
+    "lastUpdated": 1746923621000,
+    "license": "Apache-2.0",
+    "name": {
+      "en-GB": "Smouldering Durtles",
+      "en-US": "Smouldering Durtles"
+    },
+    "preferredSigner": "b4ec768a30753a208261ee5bde4151ea656235026543c4d97aab82ce395cefd9",
+    "screenshots": {
+      "phone": {
+        "en-GB": [
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/phoneScreenshots/1_en-GB.png",
+            "sha256": "ddcd9edaf9a49c1193dde066aec58af8890716d8da24465a58654f6becf0250b",
+            "size": 171512
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/phoneScreenshots/2_en-GB.png",
+            "sha256": "7d4e33336dae9f7742ccdd07dadd885249a960cf46f11dd10ed0884b4c85b3cf",
+            "size": 163853
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/phoneScreenshots/3_en-GB.png",
+            "sha256": "a44a0e4e62ecab8e2b5994add718040d7e82a68133228f7b4343ed3df8e8669d",
+            "size": 183386
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/phoneScreenshots/4_en-GB.png",
+            "sha256": "c6c3c7dcde7d3a590f1d17e3b2148273125d7da3be2d3b20727cd93b814c496b",
+            "size": 298660
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/phoneScreenshots/5_en-GB.png",
+            "sha256": "e5aa92dfc1fb2d3ffe06f7ddd734eeab702f0ab7f9bfa5b88074743d570729f8",
+            "size": 216349
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/phoneScreenshots/6_en-GB.png",
+            "sha256": "aa2f8475f5f04d79a89300084f4f6927d21416d2e1bc8e551984be7591fadbb8",
+            "size": 222054
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/phoneScreenshots/7_en-GB.png",
+            "sha256": "8364ab13ba84cecfdd484197f8b7bfea802cbd8dd20b95fb877739da33391e03",
+            "size": 162879
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/phoneScreenshots/8_en-GB.png",
+            "sha256": "0d6357626b98100ecfbe6aeb69011b6871b0efb3e3131fc5d8a5411391c84630",
+            "size": 201441
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/phoneScreenshots/1_en-GB.png",
+            "sha256": "ddcd9edaf9a49c1193dde066aec58af8890716d8da24465a58654f6becf0250b",
+            "size": 171512
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/phoneScreenshots/2_en-GB.png",
+            "sha256": "7d4e33336dae9f7742ccdd07dadd885249a960cf46f11dd10ed0884b4c85b3cf",
+            "size": 163853
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/phoneScreenshots/3_en-GB.png",
+            "sha256": "a44a0e4e62ecab8e2b5994add718040d7e82a68133228f7b4343ed3df8e8669d",
+            "size": 183386
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/phoneScreenshots/4_en-GB.png",
+            "sha256": "c6c3c7dcde7d3a590f1d17e3b2148273125d7da3be2d3b20727cd93b814c496b",
+            "size": 298660
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/phoneScreenshots/5_en-GB.png",
+            "sha256": "e5aa92dfc1fb2d3ffe06f7ddd734eeab702f0ab7f9bfa5b88074743d570729f8",
+            "size": 216349
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/phoneScreenshots/6_en-GB.png",
+            "sha256": "aa2f8475f5f04d79a89300084f4f6927d21416d2e1bc8e551984be7591fadbb8",
+            "size": 222054
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/phoneScreenshots/7_en-GB.png",
+            "sha256": "8364ab13ba84cecfdd484197f8b7bfea802cbd8dd20b95fb877739da33391e03",
+            "size": 162879
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/phoneScreenshots/8_en-GB.png",
+            "sha256": "0d6357626b98100ecfbe6aeb69011b6871b0efb3e3131fc5d8a5411391c84630",
+            "size": 201441
+          }
+        ]
+      },
+      "sevenInch": {
+        "en-GB": [
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/sevenInchScreenshots/1_en-GB.png",
+            "sha256": "0d61dbac5f940b90b2ff404c549cada173a862c609c80fdcd606878ee3c7aeab",
+            "size": 200532
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/sevenInchScreenshots/2_en-GB.png",
+            "sha256": "8f5b14aedef2fa5a0390657f698eccb1bba554888f08c61a31a3e5951df28d72",
+            "size": 342578
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/sevenInchScreenshots/3_en-GB.png",
+            "sha256": "859d30907168b58da3a45952e8232ddef9d5803f6ccf9a3c3379e8cc1390dd92",
+            "size": 337026
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/sevenInchScreenshots/4_en-GB.png",
+            "sha256": "75343da70ea1ee0a87ce4bc567d18c3dc29583baef76cc875fc62588a6e8cbe7",
+            "size": 182574
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/sevenInchScreenshots/1_en-GB.png",
+            "sha256": "0d61dbac5f940b90b2ff404c549cada173a862c609c80fdcd606878ee3c7aeab",
+            "size": 200532
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/sevenInchScreenshots/2_en-GB.png",
+            "sha256": "8f5b14aedef2fa5a0390657f698eccb1bba554888f08c61a31a3e5951df28d72",
+            "size": 342578
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/sevenInchScreenshots/3_en-GB.png",
+            "sha256": "859d30907168b58da3a45952e8232ddef9d5803f6ccf9a3c3379e8cc1390dd92",
+            "size": 337026
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/sevenInchScreenshots/4_en-GB.png",
+            "sha256": "75343da70ea1ee0a87ce4bc567d18c3dc29583baef76cc875fc62588a6e8cbe7",
+            "size": 182574
+          }
+        ]
+      },
+      "tenInch": {
+        "en-GB": [
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/tenInchScreenshots/1_en-GB.png",
+            "sha256": "8fa97a00492713065e3eb94d77a87e8d7631eb3f51ae0f19727ff45c691a9516",
+            "size": 268142
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/tenInchScreenshots/2_en-GB.png",
+            "sha256": "44e597dad37bfcff4d1120046e46342bb693e955df610417cdf06c4f5a891522",
+            "size": 239202
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/tenInchScreenshots/3_en-GB.png",
+            "sha256": "42e8685bd28169348aabf4f90384c338d296a6354cf06c4a866619272c80cb5a",
+            "size": 625215
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/tenInchScreenshots/4_en-GB.png",
+            "sha256": "351ab1aeb88b3384a1e5c00d340dd91802fa774586bdd5b0822c4f4e82360160",
+            "size": 222255
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-GB/tenInchScreenshots/5_en-GB.png",
+            "sha256": "a36b43cf0967ca1c21891f2c7e69357005b8945c16fd2f10a4a69f74fc0545d3",
+            "size": 181809
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/tenInchScreenshots/1_en-GB.png",
+            "sha256": "8fa97a00492713065e3eb94d77a87e8d7631eb3f51ae0f19727ff45c691a9516",
+            "size": 268142
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/tenInchScreenshots/2_en-GB.png",
+            "sha256": "44e597dad37bfcff4d1120046e46342bb693e955df610417cdf06c4f5a891522",
+            "size": 239202
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/tenInchScreenshots/3_en-GB.png",
+            "sha256": "42e8685bd28169348aabf4f90384c338d296a6354cf06c4a866619272c80cb5a",
+            "size": 625215
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/tenInchScreenshots/4_en-GB.png",
+            "sha256": "351ab1aeb88b3384a1e5c00d340dd91802fa774586bdd5b0822c4f4e82360160",
+            "size": 222255
+          },
+          {
+            "name": "/com.smouldering_durtles.wk/en-US/tenInchScreenshots/5_en-GB.png",
+            "sha256": "a36b43cf0967ca1c21891f2c7e69357005b8945c16fd2f10a4a69f74fc0545d3",
+            "size": 181809
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/jerryhcooke/smouldering_durtles",
+    "summary": {
+      "en-GB": "A client for WaniKani, with advanced features built in and offline reviews!",
+      "en-US": "A client for WaniKani, with advanced features built in and offline reviews!"
+    }
+  },
+  "version": {
+    "added": 1746923621000,
+    "file": {
+      "ipfsCIDv1": "bafybeibvlkedt6dkqd6e2quns5rmi4nr52d64bcwdul5itt23porn6rsra",
+      "name": "/com.smouldering_durtles.wk_84.apk",
+      "sha256": "2380168cc41f290b905672c931ef5e6db497ee0b08075dea57c7b64ffa896598",
+      "size": 21824781
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "b4ec768a30753a208261ee5bde4151ea656235026543c4d97aab82ce395cefd9"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "com.android.alarm.permission.SET_ALARM"
+        },
+        {
+          "name": "android.permission.SCHEDULE_EXACT_ALARM"
+        },
+        {
+          "maxSdkVersion": 18,
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "maxSdkVersion": 18,
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "com.smouldering_durtles.wk.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 34
+      },
+      "versionCode": 84,
+      "versionName": "1.2.3"
+    },
+    "src": {
+      "name": "/com.smouldering_durtles.wk_84_src.tar.gz",
+      "sha256": "0eda3b0045faac534069587fc86147e6e044d61336b4b8f54d044f8e90e615a8",
+      "size": 23097582
+    }
+  }
+}

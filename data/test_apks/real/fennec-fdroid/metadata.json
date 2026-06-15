@@ -1,0 +1,64 @@
+{
+  "apk": {
+    "expected_sha256": "e3749dd147bf55688fac464fbc022cc384073133445e8c0b830aa4f2674cfa40",
+    "index_size": 122483642,
+    "path": "data/test_apks/real/fennec-fdroid/fennec-fdroid.apk",
+    "sha256": "e3749dd147bf55688fac464fbc022cc384073133445e8c0b830aa4f2674cfa40",
+    "size": 122483642,
+    "url": "https://f-droid.org/repo/org.mozilla.fennec_fdroid_1510220.apk"
+  },
+  "app": "Fennec F-Droid",
+  "categories": [
+    "Browser",
+    "Internet"
+  ],
+  "classifications": [
+    "large-apk",
+    "browser",
+    "native-so",
+    "modern",
+    "multidex-likely"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/org.mozilla.fennec_fdroid/",
+  "license": "MPL-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [
+    "arm64-v8a"
+  ],
+  "package_name": "org.mozilla.fennec_fdroid",
+  "proof_status": "report-generated",
+  "reason": "Large browser APK that stress-tests extraction/reporting and broadens the modern/native coverage.",
+  "report": {
+    "detected_component_count": 19,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/real-apk-growth-batch-v2/report-real-fennec-fdroid",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/real-apk-growth-batch-v2/report-real-fennec-fdroid/report.html",
+    "json": "data/results/evaluation/real-apk-growth-batch-v2/report-real-fennec-fdroid/report.json",
+    "native_library_count": 15,
+    "obfuscation_risk": {
+      "level": "medium",
+      "reasons": [
+        "APK extraction indicators suggest a medium forensic risk.",
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.35
+    },
+    "sbom": "data/results/evaluation/real-apk-growth-batch-v2/report-real-fennec-fdroid/sbom.cdx.json",
+    "sbom_component_count": 34,
+    "status": "ok"
+  },
+  "slug": "fennec-fdroid",
+  "source_repo": "https://hg.mozilla.org/mozilla-central/file/tip/mobile/android",
+  "source_tarball": {
+    "sha256": "36a886fd1e183993ff10191b35ee4932889a315a36fd7a9a6e249b7a759767e7",
+    "size": 1174410,
+    "url": "https://f-droid.org/repo/org.mozilla.fennec_fdroid_1510220_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "smoke-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 1510220,
+  "version_name": "151.0.2"
+}

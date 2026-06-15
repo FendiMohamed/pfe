@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "added": 1450915200000,
+    "categories": [
+      "Navigation"
+    ],
+    "changelog": "https://github.com/c3nav/c3nav-android/releases",
+    "description": {
+      "en-US": "This is the official Android app for c3nav, the map & indoor navigation software\nat the Chaos Communication Congress which you can find at <a href=\"https://c3nav.de\">c3nav.de</a>.\n\nWith this app, you get to use c3nav with native Android features, including:\n\n* Easier navigation\n* WiFi-based location\n* Sharing locations\n* Creating location shortcuts on your home screen"
+    },
+    "issueTracker": "https://github.com/c3nav/c3nav-android/issues",
+    "lastUpdated": 1766794391000,
+    "license": "Apache-2.0",
+    "name": {
+      "en-US": "c3nav"
+    },
+    "preferredSigner": "db5c285800645cee478e4ed0f7f76cd54fa801949b63dbbae22d7b4e57483ef4",
+    "sourceCode": "https://github.com/c3nav/c3nav-android/",
+    "summary": {
+      "af": "Binnenshuise navigasie vir die 33nd Chaos Kommunikasie Kongres, wat gebou is deu",
+      "ar": "\u0627\u0644\u062a\u0646\u0642\u0644 \u0627\u0644\u062f\u0627\u062e\u0644\u064a \u0644\u0644\u0645\u0624\u062a\u0645\u0631 \u0627\u0644\u0627\u062a\u0635\u0627\u0644\u0627\u062a 33nd \u0627\u0644\u0641\u0648\u0636\u0649\u060c \u0627\u0644\u062a\u064a \u0628\u0646\u0627\u0647\u0627 NoMoKeTo",
+      "ba": "Chaos Communication Congress \u04e9\u0441\u04e9\u043d \u0431\u0438\u043d\u0430 \u044d\u0441\u0435\u043d\u0434\u04d9 \u043d\u0430\u0432\u0438\u0433\u0430\u0446\u0438\u044f",
+      "bg": "\u0417\u0430\u043a\u0440\u0438\u0442 \u043d\u0430\u0432\u0438\u0433\u0430\u0446\u0438\u044f \u0437\u0430 33nd Chaos Communication \u043a\u043e\u043d\u0433\u0440\u0435\u0441, \u043f\u043e\u0441\u0442\u0440\u043e\u0435\u043d \u043e\u0442 NoMoKeTo",
+      "ca": "Navegaci\u00f3 d'interior pel Chaos Communication Congress 33a, fet per NoMoKeTo",
+      "cs": "Vnit\u0159n\u00ed navigace pro Chaos Communication Congress",
+      "da": "Indend\u00f8rs navigation til Chaos Communication Congress",
+      "de": "Routenplanung f\u00fcr den Communication Congress",
+      "el": "\u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae \u03c0\u03bf\u03ae\u03b3\u03b7\u03c3\u03b7 \u03b3\u03b9\u03b1 \u03c4\u03bf \u03a7\u03ac\u03bf\u03c2 \u03a3\u03c5\u03bd\u03ad\u03b4\u03c1\u03b9\u03bf \u0395\u03c0\u03b9\u03ba\u03bf\u03b9\u03bd\u03c9\u03bd\u03af\u03b1\u03c2",
+      "en-US": "Indoor navigation for the Chaos Communication Congress",
+      "eo": "Endoma navigilo NUR por \u0124aosa Komunikada Kongreso (CCC)",
+      "es": "Navegaci\u00f3n interior para el 33\u00ba Congreso de Comunicaci\u00f3n Caos, por NoMoKeTo",
+      "et": "Sise- navigeerimise 33nd kaos Side kongress, ehitatud NoMoKeTo",
+      "fr": "Navigation int\u00e9rieure pour le 33\u00e8me Chaos Communication Congress, par NoMoKeTo",
+      "ga": "Nasclean\u00faint faoi dh\u00edon don Chomhdh\u00e1il Cumars\u00e1ide Chaos",
+      "gd": "I\u00f9il taobh a-staigh Chaos Communication Congress",
+      "he": "\u05e0\u05d9\u05d5\u05d5\u05d8 \u05de\u05d1\u05e0\u05d4 \u05d1\u05beChaos Communication Congress",
+      "hi": "Chaos Communication Congress \u0915\u0947 \u0932\u093f\u090f \u092d\u0940\u0924\u0930\u0940 \u0928\u0948\u0935\u093f\u0917\u0947\u0936\u0928",
+      "hr": "Navigacija u unutarnjem prostoru za Chaos Communication Congress",
+      "hu": "Belt\u00e9ri navig\u00e1ci\u00f3 a Chaos Communication Congressen",
+      "id": "Navigasi dalam ruangan untuk Kongres Komunikasi",
+      "it": "Navigazione interna per il 33\u00b0 Chaos Communication Congress, fatta da NoMoKeTo",
+      "ja": "\u30ab\u30aa\u30b9\u30fb\u30b3\u30df\u30e5\u30cb\u30b1\u30fc\u30b7\u30e7\u30f3\u5927\u4f1a\u5411\u3051\u5c4b\u5185\u30ca\u30d3\u30b2\u30fc\u30b7\u30e7\u30f3",
+      "ko": "NoMoKeTo\uc5d0 \uc758\ud574 \ub9cc\ub4e4\uc5b4\uc9c4 33nd \uce74\uc624\uc2a4 \ud1b5\uc2e0 \uc758\ud68c \uc2e4\ub0b4 \ub0b4\ube44\uac8c\uc774\uc158,",
+      "lt": "Vidinis navigacija 33-am Chaos Communication Congress, pastatytas NoMoKeTo",
+      "lv": "Iek\u0161telpu navig\u0101cija Chaos sazi\u0146as kongresam",
+      "nb": "Innend\u00f8rs navigasjon for den 33 Kaoskommunikasjonskongressen, bygd av NoMoKeTo",
+      "nl": "Indoor navigatie voor de 33ste Chaos Communication Congress, gebouwd door NoMoKe",
+      "pl": "Nawigacja wewn\u0119trzna na Kongres Chaos Communication",
+      "pt": "Navega\u00e7\u00e3o para o interior no 33o Chaos Communication Congress, por NoMoKeTo",
+      "pt-BR": "Navega\u00e7\u00e3o interna para o 33\u00aa Chaos Communication Congress, por NoMoKeTo",
+      "pt-PT": "Navega\u00e7\u00e3o para o interior no 33o Chaos Communication Congress, por NoMoKeTo",
+      "ro": "Naviga\u021bia \u00een interior pentru Congresul Chaos Communication",
+      "ru": "\u0412\u043d\u0443\u0442\u0440\u0435\u043d\u043d\u044f\u044f \u043d\u0430\u0432\u0438\u0433\u0430\u0446\u0438\u044f \u0434\u043b\u044f Chaos Communication Congress",
+      "sr": "\u041d\u0430\u0432\u0438\u0433\u0430\u0446\u0438\u0458\u0430 \u0443 \u0437\u0430\u0442\u0432\u043e\u0440\u0435\u043d\u043e\u043c \u043f\u0440\u043e\u0441\u0442\u043e\u0440\u0443 \u0437\u0430 \u041a\u043e\u043d\u0433\u0440\u0435\u0441 \u043a\u043e\u043c\u0443\u043d\u0438\u043a\u0430\u0446\u0438\u0458\u0430 \u0445\u0430\u043e\u0441\u0430",
+      "sv": "Inomhus navigering f\u00f6r den 33: a Chaos Communication Congress, byggd av NoMoKeTo",
+      "sw": "Loingseoireacht laistigh don Chomhdh\u00e1il Chumars\u00e1ide Chaos",
+      "ta": "\u0b95\u0bc7\u0baf\u0bbe\u0b9a\u0bcd \u0ba4\u0b95\u0bb5\u0bb2\u0bcd\u0ba4\u0bca\u0b9f\u0bb0\u0bcd\u0baa\u0bc1 \u0b95\u0bbe\u0b99\u0bcd\u0b95\u0bbf\u0bb0\u0b9a\u0bc1\u0b95\u0bcd\u0b95\u0bc1 \u0b89\u0b9f\u0bcd\u0baa\u0bc1\u0bb1 \u0bb5\u0bb4\u0bbf\u0b9a\u0bc6\u0bb2\u0bc1\u0ba4\u0bcd\u0ba4\u0bb2\u0bcd",
+      "th": "\u0e19\u0e33\u0e17\u0e32\u0e07\u0e43\u0e19\u0e23\u0e48\u0e21\u0e2a\u0e33\u0e2b\u0e23\u0e31\u0e1a 33nd \u0e42\u0e01\u0e25\u0e32\u0e2b\u0e25\u0e2a\u0e37\u0e48\u0e2d\u0e2a\u0e32\u0e23\u0e23\u0e31\u0e10\u0e2a\u0e20\u0e32\u0e17\u0e35\u0e48\u0e2a\u0e23\u0e49\u0e32\u0e07\u0e02\u0e36\u0e49\u0e19\u0e42\u0e14\u0e22 NoMoKeTo",
+      "tr": "NoMoKeTo'nun geli\u015ftirdi\u011fi 33. Kaos \u0130leti\u015fim Kongresi i\u00e7in bina i\u00e7i navigasyon",
+      "uk": "\u041a\u0440\u0438\u0442\u0438\u0439 \u043d\u0430\u0432\u0456\u0433\u0430\u0446\u0456\u0457 \u0434\u043b\u044f 33nd Chaos Communication Congress, \u043f\u043e\u0431\u0443\u0434\u043e\u0432\u0430\u043d\u0438\u0439 NoMoKeTo",
+      "vi": "\u0110i\u1ec1u h\u01b0\u1edbng trong nh\u00e0 cho s\u1ef1 ki\u1ec7n Chaos Communication Congress",
+      "zh-CN": "\u6df7\u6c8c\u901a\u4fe1\u5927\u4f1a\u7684\u5ba4\u5185\u5bfc\u822a\u5e94\u7528",
+      "zh-TW": "\u7b2c 33 \u5c46\u6df7\u6c8c\u901a\u8a0a\u5927\u6703\u7684\u5ba4\u5167\u5c0e\u822a\uff0c\u7531 NoMoKeTo \u5efa\u7f6e"
+    }
+  },
+  "version": {
+    "added": 1766794391000,
+    "file": {
+      "ipfsCIDv1": "bafybeifhkmrnx4reepj4rangwbqkcgdis5noblqou2mcviwx3xnjnqr2tu",
+      "name": "/de.c3nav.droid_18040700.apk",
+      "sha256": "482e5c9b9746f352d616597f3f689d47614ff600662e61b8e9f7f8e36bb0125d",
+      "size": 4858841
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "db5c285800645cee478e4ed0f7f76cd54fa801949b63dbbae22d7b4e57483ef4"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.ACCESS_WIFI_STATE"
+        },
+        {
+          "name": "android.permission.CHANGE_WIFI_STATE"
+        },
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.NEARBY_WIFI_DEVICES"
+        },
+        {
+          "name": "android.permission.BLUETOOTH_SCAN"
+        },
+        {
+          "name": "com.android.launcher.permission.INSTALL_SHORTCUT"
+        },
+        {
+          "name": "android.permission.BLUETOOTH"
+        },
+        {
+          "name": "android.permission.BLUETOOTH_ADMIN"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "de.c3nav.droid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 18,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 18040700,
+      "versionName": "4.7.0"
+    },
+    "src": {
+      "name": "/de.c3nav.droid_18040700_src.tar.gz",
+      "sha256": "6c4bb41a5c3d53cc85f85ea9f8f9df34d487e1510f56e5f1e135d13d6ecad6e2",
+      "size": 25943256
+    }
+  }
+}

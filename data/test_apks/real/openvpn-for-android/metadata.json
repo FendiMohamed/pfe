@@ -1,0 +1,66 @@
+{
+  "apk": {
+    "expected_sha256": "8ef31ee086503b5e8377cbeeae246fdc9e936c756fe69985d2358829bb3b3198",
+    "index_size": 46753643,
+    "path": "data/test_apks/real/openvpn-for-android/openvpn-for-android.apk",
+    "sha256": "8ef31ee086503b5e8377cbeeae246fdc9e936c756fe69985d2358829bb3b3198",
+    "size": 46753643,
+    "url": "https://f-droid.org/repo/de.blinkt.openvpn_219.apk"
+  },
+  "app": "OpenVPN for Android",
+  "categories": [
+    "Internet",
+    "VPN & Proxy"
+  ],
+  "classifications": [
+    "native-heavy",
+    "vpn-security",
+    "source-linked",
+    "large-apk",
+    "native-so"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/de.blinkt.openvpn/",
+  "license": "GPL-2.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [
+    "arm64-v8a",
+    "armeabi-v7a",
+    "x86",
+    "x86_64"
+  ],
+  "package_name": "de.blinkt.openvpn",
+  "proof_status": "report-generated",
+  "reason": "Native-heavy VPN/security case; useful for keeping native hash-only behavior separate from Maven accuracy.",
+  "report": {
+    "detected_component_count": 20,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/real-apk-growth-batch-v2/report-real-openvpn-for-android",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/real-apk-growth-batch-v2/report-real-openvpn-for-android/report.html",
+    "json": "data/results/evaluation/real-apk-growth-batch-v2/report-real-openvpn-for-android/report.json",
+    "native_library_count": 24,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/real-apk-growth-batch-v2/report-real-openvpn-for-android/sbom.cdx.json",
+    "sbom_component_count": 44,
+    "status": "ok"
+  },
+  "slug": "openvpn-for-android",
+  "source_repo": "https://github.com/schwabe/ics-openvpn",
+  "source_tarball": {
+    "sha256": "652b7d3b32bcebf65a3c3fbc96d3a92ec2637a43d0d49edeec61ca622aba2a6b",
+    "size": 26717078,
+    "url": "https://f-droid.org/repo/de.blinkt.openvpn_219_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "limitation",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 219,
+  "version_name": "0.7.64"
+}

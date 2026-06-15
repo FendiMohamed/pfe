@@ -1,0 +1,221 @@
+{
+  "metadata": {
+    "added": 1378857600000,
+    "authorName": "Dominik Sch\u00fcrmann",
+    "authorWebSite": "https://www.schuermann.eu/android/",
+    "categories": [
+      "Security"
+    ],
+    "changelog": "https://github.com/open-keychain/open-keychain/blob/HEAD/OpenKeychain/src/main/res/raw/help_changelog.md",
+    "description": {
+      "en-US": "OpenKeychain helps you communicate more privately and securely. It uses encryption to ensure that your messages can be read only by the people you send them to, others can send you messages that only you can read, and these messages can be digitally signed so the people getting them are sure who sent them. OpenKeychain is based on the well established OpenPGP standard making encryption compatible across your devices and systems. For a list of compatible software for Windows, Mac OS, and other operating systems consult http://openpgp.org/software/.\n\nModern encryption is based on digital \u201ckeys\u201d. OpenKeychain stores and manages your keys, and those of the people you communicate with, on your Android smartphone. It also helps you find others\u2019 keys online, and exchange keys. But its most frequent use is in using those keys to encrypt and decrypt messages.\n\n\u2605 Integration with other Apps:\n\u2022 K-9 Mail\n\u2022 Conversations\n\u2022 and many more\u2026\n\n\u2605 Open Source: OpenKeychain is designed to be trustworthy. It\u2019s Free Software with no secrets; anyone can examine and validate every bit of it (Source code available at https://github.com/open-keychain/open-keychain)\n\n\u2605 Independent Security Audit: The auditing company Cure53 performed an intensive security audit of OpenKeychain. The security experts summarize their final result with \"[...] none of the spotted issues were considered to be of a critical severity in terms of security implications. The latter is a significant and impressive result for an app of this complexity and relevance.\"\n\n\u2605 Permissions: Because OpenKeychain is Free Software, anyone can validate that the permissions are indeed only required for the listed features.\n\u2022 In-app purchases: Donate to the developers\n\u2022 Identity: Pre-fill name and email addresses\n\u2022 Contacts: Connect keys to your contacts (only offline)\n\u2022 Photos/Media/Files: Import/export keys from SD card\n\u2022 Camera: Scan QR Codes to add other people's keys\n\u2022 Others: Internet permission to retrieve keys, NFC permission to use YubiKeys\n\nStarting with Android 6, permissions are requested when required in-app!"
+    },
+    "featureGraphic": {
+      "en-US": {
+        "name": "/org.sufficientlysecure.keychain/en-US/featureGraphic_x04zVsa7DXMXOstCzli2WNIh3kH0UjMoQCYfmdu8BDA=.png",
+        "sha256": "c74e3356c6bb0d73173acb42ce58b658d221de41f452332840261f99dbbc0430",
+        "size": 60481
+      },
+      "images": {
+        "name": "/org.sufficientlysecure.keychain/images/featureGraphic_R_oKPdOKiij2guB6JsKX5iod0g3VgwgooCbPJ4C8fqA=.png",
+        "sha256": "47fa0a3dd38a8a28f682e07a26c297e62a1dd20dd5830828a026cf2780bc7ea0",
+        "size": 64253
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/org.sufficientlysecure.keychain/en-US/icon_7CVWLf-lztDVEl2HY_TnF0d98nwq__xr05Yu8lLZoV4=.png",
+        "sha256": "ec25562dffa5ced0d5125d8763f4e717477df27c2afffc6bd3962ef252d9a15e",
+        "size": 26261
+      },
+      "images": {
+        "name": "/org.sufficientlysecure.keychain/images/icon_bOf6Hju4kK2_5uLCpzfVPrpaqn6ejNKbdc3TuqsL1_c=.png",
+        "sha256": "6ce7fa1e3bb890adbfe6e2c2a737d53eba5aaa7e9e8cd29b75cdd3baab0bd7f7",
+        "size": 26237
+      }
+    },
+    "issueTracker": "https://github.com/open-keychain/open-keychain/issues",
+    "lastUpdated": 1709664316000,
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "en-US": "OpenKeychain: Easy PGP"
+    },
+    "preferredSigner": "2805a6f465acb923103a2ab3a145e1a97a74c44acf751250b588ebc3f88a0cc9",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/org.sufficientlysecure.keychain/en-US/phoneScreenshots/device-2015-05-06-140816.png",
+            "sha256": "669d51ba3b558ffac7132854002bd9d3fe62ff641e7ca314a5393dfbc05b523f",
+            "size": 130166
+          },
+          {
+            "name": "/org.sufficientlysecure.keychain/en-US/phoneScreenshots/device-2015-05-06-141500.png",
+            "sha256": "5458515306aba43073f1654b8cf31058ead19c74055e1346491c9a2ba2b6f039",
+            "size": 81602
+          },
+          {
+            "name": "/org.sufficientlysecure.keychain/en-US/phoneScreenshots/device-2015-05-06-141508.png",
+            "sha256": "2967de1a73e72b8d69fcf5286d79c5a1fbded2dee9967aa68b304295517378b5",
+            "size": 128554
+          },
+          {
+            "name": "/org.sufficientlysecure.keychain/en-US/phoneScreenshots/device-2015-05-06-141517.png",
+            "sha256": "c974285f696a321a93d74a044c29d03c83e18af23cb30841c70e156b59a54c2a",
+            "size": 163553
+          },
+          {
+            "name": "/org.sufficientlysecure.keychain/en-US/phoneScreenshots/device-2015-05-06-141527.png",
+            "sha256": "b956b68e778d29432316a16e3f7c3055324f1031a34c78e49f3e94ac0fd72157",
+            "size": 68653
+          },
+          {
+            "name": "/org.sufficientlysecure.keychain/en-US/phoneScreenshots/device-2015-05-06-141552.png",
+            "sha256": "cc38c26a58b77e137b842ee2b987c6ad6635b189e2ec634c65cdbe19bb0ac05b",
+            "size": 66932
+          },
+          {
+            "name": "/org.sufficientlysecure.keychain/en-US/phoneScreenshots/device-2015-05-06-142026.png",
+            "sha256": "1328aa3ce7b8a8ab068210841fa2838e0e29fdcd6cf15d343f755f95d14ffad5",
+            "size": 250560
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/open-keychain/open-keychain",
+    "summary": {
+      "af": "Enkripteer jou l\u00eaers en Kommunikasie. Versoenbaar is met die OpenPGP Standard.",
+      "am": "\u12e8\u12a5\u122d\u1235\u12ce\u1295 \u134b\u12ed\u120e\u127d \u12a5\u1293 \u12ae\u1219\u1292\u12ac\u123d\u1295 \u12a2\u1295\u12ad\u122a\u1355\u1275. \u1352\u1302\u1352 \u1218\u12f0\u1260\u129b \u130b\u122d \u1270\u12b3\u1203\u129d.",
+      "ar": "\u062a\u0634\u0641\u064a\u0631 \u0627\u0644\u0645\u0644\u0641\u0627\u062a \u0648\u0627\u062a\u0635\u0627\u0644\u0627\u062a\u0643. \u0645\u062a\u0648\u0627\u0641\u0642\u0629 \u0645\u0639 \u0627\u0644\u062d\u0644 openpgp \u0642\u064a\u0627\u0633\u064a.",
+      "ba": "\u0424\u0430\u0439\u043b\u0434\u0430\u0440\u044b\u0493\u044b\u0499\u0499\u044b \u04bb\u04d9\u043c \u0431\u04d9\u0439\u043b\u04d9\u043d\u0435\u0448\u0442\u04d9\u0440\u0435\u0433\u0435\u0499\u0499\u0435 \u0448\u0438\u0444\u0440\u043b\u0430\u0493\u044b\u0499. OpenPGP \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u044b \u043c\u0435\u043d\u04d9\u043d \u044f\u0440\u0430\u0448\u043b\u044b.",
+      "bg": "\u0428\u0438\u0444\u0440\u043e\u0432\u0430\u043d\u0435 \u043d\u0430 \u0432\u0430\u0448\u0438\u0442\u0435 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u0438 \u0441\u044a\u043e\u0431\u0449\u0435\u043d\u0438\u044f\u0442\u0430. \u0421\u044a\u0432\u043c\u0435\u0441\u0442\u0438\u043c \u0441 OpenPGP \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u0430.",
+      "ca": "Xifrar els seus arxius i comunicacions. Compatible amb l'est\u00e0ndard OpenPGP.",
+      "cs": "\u0160ifrov\u00e1n\u00ed soubor\u016f a komunikace. Kompatibiln\u00ed se standardem OpenPGP.",
+      "da": "Krypt\u00e9r dine filer og kommunikation. Kompatibel med OpenPGP Standard.",
+      "de": "Dateien und Kommunikation verschl\u00fcsseln. Kompatibel mit OpenPGP.",
+      "el": "\u039a\u03c1\u03c5\u03c0\u03c4\u03bf\u03b3\u03c1\u03ac\u03c6\u03b7\u03c3\u03b7 \u03b1\u03c1\u03c7\u03b5\u03af\u03c9\u03bd \u03ba\u03b1\u03b9 \u0395\u03c0\u03b9\u03ba\u03bf\u03b9\u03bd\u03c9\u03bd\u03b9\u03ce\u03bd \u03c3\u03b1\u03c2. \u03a3\u03c5\u03bc\u03b2\u03b1\u03c4\u03cc \u03bc\u03b5 \u03c4\u03bf \u03c0\u03c1\u03cc\u03c4\u03c5\u03c0\u03bf OpenPGP.",
+      "en-US": "Encrypt your Files and Communications. Compatible with the OpenPGP Standard.",
+      "eo": "\u0108ifri dosierojn kaj komunikadon, kongrua kun la normo OpenPGP.",
+      "es": "Cifra tus archivos y comunicaciones, es compatible con el est\u00e1ndar OpenPGP.",
+      "et": "Kr\u00fcptida faile ja kommunikatsiooniminister. \u00dchildub OpenPGP standardit.",
+      "eu": "Enkriptatu fitxategiak eta komunikazioak. OpenPGP estandarrarekin bateragarria.",
+      "fi": "Salata tiedostoja ja viestint\u00e4ministeri\u00f6. Yhteensopiva OpenPGP-standardiin.",
+      "fr": "Chiffrer vos fichiers et communications. Compatible avec la norme OpenPGP.",
+      "ga": "Criptigh do Chomhaid agus Cumars\u00e1id. Ag lu\u00ed leis an gCaighde\u00e1n OpenPGP.",
+      "gd": "Crioptaich faidhlichean \u2019s conaltraidhean. Co-ch\u00f2rdail le stannard OpenPGP.",
+      "he": "\u05d4\u05e6\u05e4\u05e0\u05ea \u05d4\u05e7\u05d1\u05e6\u05d9\u05dd \u05d5\u05ea\u05e6\u05d5\u05e8\u05d5\u05ea \u05d4\u05ea\u05e7\u05e9\u05d5\u05e8\u05ea \u05e9\u05dc\u05da. \u05ea\u05d5\u05de\u05da \u05d1\u05ea\u05e7\u05df OpenPGP.",
+      "hi": "\u0905\u092a\u0928\u0940 \u092b\u093c\u093e\u0907\u0932\u0947\u0902 \u0914\u0930 \u0938\u0902\u091a\u093e\u0930 \u090f\u0928\u094d\u0915\u094d\u0930\u093f\u092a\u094d\u091f \u0915\u0930\u0947\u0902\u0964 OpenPGP \u092e\u093e\u0928\u0915 \u0915\u0947 \u0905\u0928\u0941\u0915\u0942\u0932\u0964",
+      "hr": "\u0160ifriranje datoteka i veza. Kompatibilan s OpenPGP standard.",
+      "hu": "Titkos\u00edtsa a f\u00e1jljait \u00e9s kommunik\u00e1ci\u00f3j\u00e1t. Kompatibilis az OpenPGP szabv\u00e1nnyal.",
+      "id": "Mengenkripsi File dan Komunikasi. Kompatibel dengan Standar OpenPGP.",
+      "is": "Dulrita\u00f0u skr\u00e1r og samskipti. Samh\u00e6ft vi\u00f0 OpenPGP-sta\u00f0alinn.",
+      "it": "Crittografare i file e delle comunicazioni. Compatibile con la OpenPGP standard.",
+      "ja": "\u30d5\u30a1\u30a4\u30eb\u3068\u901a\u4fe1\u3092\u6697\u53f7\u5316\u3002 OpenPGP\u306e\u898f\u683c\u3068\u4e92\u63db\u6027\u304c\u3042\u308a\u307e\u3059\u3002",
+      "ko": "\ud30c\uc77c\uacfc \ud1b5\uc2e0\uc744 \uc554\ud638\ud654\ud569\ub2c8\ub2e4. \uc758 OpenPGP \ud45c\uc900\uacfc \ud638\ud658\ub429\ub2c8\ub2e4.",
+      "lt": "\u0160ifruokite failus ir susira\u0161in\u0117jim\u0105. Suderinama su OpenPGP standartu.",
+      "nb": "Krypter filene og samtalene dine. Kompatibelt med OpenPGP-standarden.",
+      "nl": "Versleutel uw bestanden en Communicatie. Verenigbaar zijn met de OpenPGP standaa",
+      "pl": "Szyfrowanie plik\u00f3w i komunikacji. Kompatybilny ze standardem OpenPGP.",
+      "pt": "Criptografar os ficheiros e Comunica\u00e7\u00f5es. Compat\u00edvel com o padr\u00e3o OpenPGP.",
+      "pt-BR": "Criptografar os arquivos e Comunica\u00e7\u00f5es. Compat\u00edvel com o padr\u00e3o OpenPGP.",
+      "pt-PT": "Criptografar os ficheiros e Comunica\u00e7\u00f5es. Compat\u00edvel com o padr\u00e3o OpenPGP.",
+      "ro": "Cripta fi\u0219iere \u0219i comunica\u021biile. Compatibil cu standardul OpenPGP.",
+      "ru": "\u0428\u0438\u0444\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0444\u0430\u0439\u043b\u043e\u0432 \u0438 \u0441\u0432\u044f\u0437\u0438. \u0421\u043e\u0432\u043c\u0435\u0441\u0442\u0438\u043c\u043e\u0441\u0442\u044c \u0441 OpenPGP \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043e\u043c.",
+      "sk": "\u0160ifrovanie s\u00faborov a komunik\u00e1cie. Kompatibiln\u00fd s OpenPGP \u0161tandardu.",
+      "sl": "\u0160ifriranje datotek in komunikacij. Zdru\u017eljiva s standardom OpenPGP.",
+      "sr": "\u0428\u0438\u0444\u0440\u0443\u0458\u0442\u0435 \u0441\u0432\u043e\u0458\u0435 \u0444\u0430\u0458\u043b\u043e\u0432\u0435 \u0438 \u043a\u043e\u043c\u0443\u043d\u0438\u043a\u0430\u0446\u0438\u0458\u0435. \u041a\u043e\u043c\u043f\u0430\u0442\u0438\u0431\u0438\u043b\u043d\u043e \u0441\u0430 OpenPGP \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0434\u043e\u043c.",
+      "sv": "Kryptera dina filer och kommunikation. Kompatibel med OpenPGP Standard.",
+      "sw": "Fichamisha faili na mawasiliano yako. Inaoana na programu sanifu ya usimbajifich",
+      "ta": "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0b95\u0bcb\u0baa\u0bcd\u0baa\u0bc1\u0b95\u0bb3\u0bcd \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0ba4\u0b95\u0bb5\u0bb2\u0bcd\u0ba4\u0bca\u0b9f\u0bb0\u0bcd\u0baa\u0bc1\u0b95\u0bb3\u0bc8 \u0b95\u0bc1\u0bb1\u0bbf\u0baf\u0bbe\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd. OpenPGP \u0ba4\u0bb0\u0ba4\u0bcd\u0ba4\u0bc1\u0b9f\u0ba9\u0bcd \u0b87\u0ba3\u0b95\u0bcd\u0b95\u0bae",
+      "th": "\u0e40\u0e02\u0e49\u0e32\u0e23\u0e2b\u0e31\u0e2a\u0e44\u0e1f\u0e25\u0e4c\u0e41\u0e25\u0e30\u0e01\u0e32\u0e23\u0e2a\u0e37\u0e48\u0e2d\u0e2a\u0e32\u0e23\u0e02\u0e2d\u0e07\u0e04\u0e38\u0e13 \u0e40\u0e02\u0e49\u0e32\u0e01\u0e31\u0e19\u0e44\u0e14\u0e49\u0e01\u0e31\u0e1a\u0e21\u0e32\u0e15\u0e23\u0e10\u0e32\u0e19 OpenPGP",
+      "tr": "Dosyalar\u0131n\u0131z\u0131 ve \u0130leti\u015fiminizi \u015fifreleyin. OpenPGP \u00d6l\u00e7\u00fctlerine uyumludur.",
+      "uk": "\u0428\u0438\u0444\u0440\u0443\u0432\u0430\u043d\u043d\u044f \u0444\u0430\u0439\u043b\u0456\u0432 \u0456 \u0437\u0432'\u044f\u0437\u043a\u0443. \u0421\u0443\u043c\u0456\u0441\u043d\u0456\u0441\u0442\u044c \u0437 OpenPGP \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043e\u043c.",
+      "vi": "M\u00e3 h\u00f3a t\u1eadp tin v\u00e0 Truy\u1ec1n th\u00f4ng c\u1ee7a b\u1ea1n. T\u01b0\u01a1ng th\u00edch v\u1edbi c\u00e1c ti\u00eau chu\u1ea9n OpenPGP.",
+      "zh-CN": "\u52a0\u5bc6\u4f60\u7684\u6587\u4ef6\u548c\u901a\u4fe1\u3002\u517c\u5bb9 OpenPGP \u6807\u51c6\u3002",
+      "zh-TW": "\u52a0\u5bc6\u60a8\u7684\u6587\u4ef6\u548c\u901a\u8a0a\u3002\u76f8\u5bb9 OpenPGP \u6a19\u6e96\u3002"
+    },
+    "translation": "https://www.transifex.com/projects/p/open-keychain/",
+    "webSite": "https://www.openkeychain.org/"
+  },
+  "version": {
+    "added": 1709664316000,
+    "file": {
+      "ipfsCIDv1": "bafybeid4fqh7ha6lnvr5lx3olaoq3hakyifkz4scuqq6jyyg7a7d4eedbq",
+      "name": "/org.sufficientlysecure.keychain_60400.apk",
+      "sha256": "f88374b9113aa9ddba865258bd989eb3ac2ca1577d92e59d6e84228e080674ce",
+      "size": 12043256
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "2805a6f465acb923103a2ab3a145e1a97a74c44acf751250b588ebc3f88a0cc9"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.READ_MEDIA_IMAGES"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_VIDEO"
+        },
+        {
+          "name": "android.permission.READ_MEDIA_AUDIO"
+        },
+        {
+          "maxSdkVersion": 32,
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.ACCESS_WIFI_STATE"
+        },
+        {
+          "name": "android.permission.NFC"
+        },
+        {
+          "name": "android.permission.READ_SYNC_SETTINGS"
+        },
+        {
+          "name": "android.permission.WRITE_SYNC_SETTINGS"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.CAMERA"
+        },
+        {
+          "name": "org.sufficientlysecure.keychain.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 15,
+        "targetSdkVersion": 34
+      },
+      "versionCode": 60400,
+      "versionName": "6.0.4"
+    },
+    "src": {
+      "name": "/org.sufficientlysecure.keychain_60400_src.tar.gz",
+      "sha256": "33cbfc0316cef3ca36b794e1d85ac6bef05b9b86808b373779412a4ee9ebc9de",
+      "size": 26020446
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "selections": [
+    {
+      "app": "Drift // Audio",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "multimedia",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "io.github.probably_oxy.drift",
+      "reason": "No-native modern multimedia app with a medium APK, target SDK 36, and a sizeable source tree that may emit a richer Kotlin/AndroidX dependency surface than the sparse clean rows.",
+      "slug": "drift-audio",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "JaMuz",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "multimedia",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.phramusca.jamuz",
+      "reason": "No-native media/internet client with target SDK 36, a balanced APK size, and a large source tarball that looks promising for non-sparse emitted Maven evidence.",
+      "slug": "jamuz",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "monocles browser",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "browser",
+        "internet",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "de.monocles.browser",
+      "reason": "No-native privacy browser with a large modern source tree and target SDK 36; useful for another high-surface browser-family attempt toward a clean non-sparse row.",
+      "slug": "monocles-browser",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Conceal Mobile",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "money",
+        "wallet",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.concealnetwork.concealmobile",
+      "reason": "No-native wallet app with a medium APK, target SDK 35, and a substantial source tarball that broadens the clean-candidate search into the money/security-adjacent family.",
+      "slug": "conceal-mobile",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Ltt.rs",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "email",
+        "internet",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "rs.ltt.android",
+      "reason": "No-native email/internet app with a medium APK, target SDK 35, and a large source tree; it is a good candidate for a richer modern communication-family proof row.",
+      "slug": "lttrs",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    }
+  ]
+}

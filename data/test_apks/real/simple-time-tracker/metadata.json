@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "74fd2f25d08fa8c1a5ac405801fc8ff368700ec8d9e5e9c18a35839f9d620779",
+    "index_size": 18179323,
+    "path": "data/test_apks/real/simple-time-tracker/simple-time-tracker.apk",
+    "sha256": "74fd2f25d08fa8c1a5ac405801fc8ff368700ec8d9e5e9c18a35839f9d620779",
+    "size": 18179323,
+    "url": "https://f-droid.org/repo/com.razeeman.util.simpletimetracker_139.apk"
+  },
+  "app": "Simple Time Tracker",
+  "categories": [
+    "Time",
+    "Time Tracker",
+    "Timer"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "time-tracker",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.razeeman.util.simpletimetracker/",
+  "license": "GPL-3.0-or-later",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.razeeman.util.simpletimetracker",
+  "proof_status": "report-generated",
+  "reason": "No-native maintained Kotlin/Android utility with a larger APK than prior clean-candidate utilities; likely to expose non-sparse AndroidX/Kotlin Maven evidence.",
+  "report": {
+    "detected_component_count": 12,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v3/report-real-simple-time-tracker",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v3/report-real-simple-time-tracker/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v3/report-real-simple-time-tracker/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v3/report-real-simple-time-tracker/sbom.cdx.json",
+    "sbom_component_count": 12,
+    "status": "ok"
+  },
+  "slug": "simple-time-tracker",
+  "source_repo": "https://github.com/Razeeman/Android-SimpleTimeTracker",
+  "source_tarball": {
+    "sha256": "54b6536f7ca09080cad3ae16f6776538bbdbaaad5f0db07c01df3da25b0ca6b5",
+    "size": 10217882,
+    "url": "https://f-droid.org/repo/com.razeeman.util.simpletimetracker_139_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 139,
+  "version_name": "1.57"
+}

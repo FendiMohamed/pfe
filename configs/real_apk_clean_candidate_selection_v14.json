@@ -1,0 +1,135 @@
+{
+  "selections": [
+    {
+      "app": "Bimba",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "navigation",
+        "public-transport",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "xyz.apiote.bimba.czwek",
+      "reason": "No-native public-transport app with target SDK 36, a non-sparse APK, and a source tarball; selected as a transport/navigation row after v13 railway/map rows validated well.",
+      "slug": "bimba",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "wX",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "weather",
+        "science",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "joshuatee.wx",
+      "reason": "No-native weather/science app with target SDK 36 and substantial APK signal; selected to add a dependency-rich weather row outside the already validated map/note/security families.",
+      "slug": "wx",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Egyptian Writer",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "reading",
+        "science",
+        "writing",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.blueapps.egyptianwriter",
+      "reason": "No-native reading/education/writing app with target SDK 36, a moderate source tarball, and likely UI/text-processing dependencies; selected for category diversity.",
+      "slug": "egyptian-writer",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Smouldering Durtles",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "science",
+        "education",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.smouldering_durtles.wk",
+      "reason": "No-native WaniKani education client with target SDK 34 and a substantial source tree; selected as a likely dependency-rich education client.",
+      "slug": "smouldering-durtles",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Baby Books",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "reading",
+        "science",
+        "writing",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.serwylo.babybook",
+      "reason": "No-native reading/writing app with target SDK 34 and a moderate source tarball; selected as a content-authoring row likely to emit nontrivial Maven evidence.",
+      "slug": "baby-books",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Odysee",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "multimedia",
+        "media-client",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.odysee.floss",
+      "reason": "No-native media/internet client with target SDK 36 and a moderate source tree; selected to diversify source validation into online-media behavior without native files.",
+      "slug": "odysee",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "DNS Hero",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "dns",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "com.gianlu.dnshero",
+      "reason": "No-native DNS/internet utility with target SDK 36 and a manageable APK; selected as a networking utility row with a likely standard Gradle dependency tree.",
+      "slug": "dns-hero",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "RadarWeather",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "weather",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.woheller69.weather",
+      "reason": "No-native weather app with target SDK 34, internet behavior, and a moderate source tarball; selected as a second weather-style row to improve the chance of v14 proof yield.",
+      "slug": "radarweather",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    }
+  ]
+}

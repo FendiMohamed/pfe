@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "cc151e4608d68fa32aba0b5b80c9c89a286050d7b0710a081e77bc1dddbcc8b6",
+    "index_size": 9310262,
+    "path": "data/test_apks/real/fulguris-web-browser/fulguris-web-browser.apk",
+    "sha256": "cc151e4608d68fa32aba0b5b80c9c89a286050d7b0710a081e77bc1dddbcc8b6",
+    "size": 9310262,
+    "url": "https://f-droid.org/repo/net.slions.fulguris.full.fdroid_261.apk"
+  },
+  "app": "Fulguris Web Browser",
+  "categories": [
+    "Browser",
+    "Internet"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "browser",
+    "internet",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/net.slions.fulguris.full.fdroid/",
+  "license": "MPL-2.0",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "net.slions.fulguris.full.fdroid",
+  "proof_status": "report-generated",
+  "reason": "No-native browser candidate with a medium APK and large source tree; useful for another richer browser/internet clean-candidate pass.",
+  "report": {
+    "detected_component_count": 21,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-fulguris-web-browser",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-fulguris-web-browser/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-fulguris-web-browser/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "At least half of emitted components are low-confidence version candidates."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-fulguris-web-browser/sbom.cdx.json",
+    "sbom_component_count": 21,
+    "status": "ok"
+  },
+  "slug": "fulguris-web-browser",
+  "source_repo": "https://github.com/Slion/Fulguris",
+  "source_tarball": {
+    "sha256": "e171385c9a3c0917587c8d3924ecc58da6869d5ddc8717b295dbfabb46db4184",
+    "size": 23671598,
+    "url": "https://f-droid.org/repo/net.slions.fulguris.full.fdroid_261_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 261,
+  "version_name": "2.0.10"
+}

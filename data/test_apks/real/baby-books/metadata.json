@@ -1,0 +1,64 @@
+{
+  "apk": {
+    "expected_sha256": "89b4e283c76e27453ee0cfcd0052bad2928ea41e674661690162fc85dbf03403",
+    "index_size": 21054062,
+    "path": "data/test_apks/real/baby-books/baby-books.apk",
+    "sha256": "89b4e283c76e27453ee0cfcd0052bad2928ea41e674661690162fc85dbf03403",
+    "size": 21054062,
+    "url": "https://f-droid.org/repo/com.serwylo.babybook_12.apk"
+  },
+  "app": "Baby Books",
+  "categories": [
+    "Reading",
+    "Science & Education",
+    "Writing"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "reading",
+    "science",
+    "writing",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/com.serwylo.babybook/",
+  "license": "GPL-3.0-or-later",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "com.serwylo.babybook",
+  "proof_status": "report-generated",
+  "reason": "No-native reading/writing app with target SDK 34 and a moderate source tarball; selected as a content-authoring row likely to emit nontrivial Maven evidence.",
+  "report": {
+    "detected_component_count": 29,
+    "dex_file_count": 3,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v14/report-real-baby-books",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v14/report-real-baby-books/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v14/report-real-baby-books/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v14/report-real-baby-books/sbom.cdx.json",
+    "sbom_component_count": 29,
+    "status": "ok"
+  },
+  "slug": "baby-books",
+  "source_repo": "https://github.com/babydots/babybook",
+  "source_tarball": {
+    "sha256": "ae9277bb2062197e7247a528b03b13ed5a2c305d347afee9e1bec76b91bc5d1c",
+    "size": 20578071,
+    "url": "https://f-droid.org/repo/com.serwylo.babybook_12_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 12,
+  "version_name": "0.9.2"
+}

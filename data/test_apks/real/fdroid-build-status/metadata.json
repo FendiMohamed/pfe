@@ -1,0 +1,61 @@
+{
+  "apk": {
+    "expected_sha256": "a43fd434e0fdb7185476e5eeae3fa3568b1b3a05f490d1f3a76bad012009872f",
+    "index_size": 8824854,
+    "path": "data/test_apks/real/fdroid-build-status/fdroid-build-status.apk",
+    "sha256": "a43fd434e0fdb7185476e5eeae3fa3568b1b3a05f490d1f3a76bad012009872f",
+    "size": 8824854,
+    "url": "https://f-droid.org/repo/de.storchp.fdroidbuildstatus_118.apk"
+  },
+  "app": "F-Droid Build Status",
+  "categories": [
+    "Development"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "development",
+    "fdroid",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/de.storchp.fdroidbuildstatus/",
+  "license": "MIT",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "de.storchp.fdroidbuildstatus",
+  "proof_status": "report-generated",
+  "reason": "No-native F-Droid/development utility with target SDK 36 and a compact source tarball; selected to add a development-tool row different from Json List.",
+  "report": {
+    "detected_component_count": 24,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-fdroid-build-status",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-fdroid-build-status/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-fdroid-build-status/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "No obvious obfuscation indicators were raised by the current heuristics."
+      ],
+      "score": 0.0
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v16/report-real-fdroid-build-status/sbom.cdx.json",
+    "sbom_component_count": 24,
+    "status": "ok"
+  },
+  "slug": "fdroid-build-status",
+  "source_repo": "https://codeberg.org/pstorch/F-Droid_Build_Status",
+  "source_tarball": {
+    "sha256": "87febdd5c8b517a852733617fa234172025e4dd30dcd4b97b2f73e6bfd033749",
+    "size": 2441989,
+    "url": "https://f-droid.org/repo/de.storchp.fdroidbuildstatus_118_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 118,
+  "version_name": "5.14.0"
+}

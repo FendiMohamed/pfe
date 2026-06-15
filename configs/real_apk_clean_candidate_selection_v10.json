@@ -1,0 +1,87 @@
+{
+  "selections": [
+    {
+      "app": "Etar - OpenSource Calendar",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "calendar",
+        "time",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "ws.xsoh.etar",
+      "reason": "No-native calendar/time app with target SDK 36, medium APK size, and a source tarball; useful for a richer clean non-sparse AndroidX candidate probe.",
+      "slug": "etar",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "RadioDroid",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "multimedia",
+        "radio",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "net.programmierecke.radiodroid2",
+      "reason": "No-native internet/radio app with target SDK 33 and a moderate dependency surface; broadens clean-candidate coverage into multimedia streaming.",
+      "slug": "radiodroid",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "SimpleLogin Anti-spam",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "email",
+        "internet",
+        "security",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "io.simplelogin.android.fdroid",
+      "reason": "No-native email/security app with target SDK 34 and source tarball metadata; useful for a compact modern account/security clean-candidate probe.",
+      "slug": "simplelogin",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Omni Notes",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "notes",
+        "task",
+        "writing",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "it.feio.android.omninotes.foss",
+      "reason": "No-native notes/task app with target SDK 33, a medium APK, and a larger source tarball; useful for a non-sparse writing/productivity clean-candidate attempt.",
+      "slug": "omni-notes",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Primitive FTPd",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "connectivity",
+        "file-transfer",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.primftpd",
+      "reason": "No-native connectivity/file-transfer app with target SDK 36 and source tarball metadata; adds a network-service clean-candidate probe distinct from prior internet apps.",
+      "slug": "primitive-ftpd",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    }
+  ]
+}

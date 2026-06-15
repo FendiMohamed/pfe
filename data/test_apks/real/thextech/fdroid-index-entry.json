@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "added": 1738409867000,
+    "authorEmail": "admin@wohlnet.ru",
+    "authorName": "Vitaly Novichkov",
+    "categories": [
+      "Platformer Game"
+    ],
+    "changelog": "https://raw.githubusercontent.com/TheXTech/TheXTech/refs/heads/main/changelog.txt",
+    "description": {
+      "en-GB": "This is a game engine for platforming games. This is a complete and extended port of source code of the SMBX 1.3 game engine originally writtein in MS Visual Basic 6, and its direct unofficial continuation after development of original halted in the 2011th year. This engine preserves full compatibility with levels and episodes made for the original SMBX game, including its repacks. And it's allowed to create brand-new Levels, Episodes, and content packs. Unlike the original SMBX game that depends on Windows and x86, TheXTech can work on many operating systems (including Linux distros, macOS, xBSD, Android, Haiku, etc.) and processor architectures (including x86_64, ARM, PowerPC, MIPS, etc.).\n\n**NOTE:** This is a runtime engine only. It requires game packages to be downloaded and unpacked properly. Please follow this instruction in order to get any game work:\nhttps://github.com/TheXTech/TheXTech/wiki/Running-game-assets-on-Android\n",
+      "en-US": "This is a game engine for platforming games. This is a complete and extended port of source code of the SMBX 1.3 game engine originally writtein in MS Visual Basic 6, and its direct unofficial continuation after development of original halted in the 2011th year. This engine preserves full compatibility with levels and episodes made for the original SMBX game, including its repacks. And it's allowed to create brand-new Levels, Episodes, and content packs. Unlike the original SMBX game that depends on Windows and x86, TheXTech can work on many operating systems (including Linux distros, macOS, xBSD, Android, Haiku, etc.) and processor architectures (including x86_64, ARM, PowerPC, MIPS, etc.).\n\n**NOTE:** This is a runtime engine only. It requires game packages to be downloaded and unpacked properly. Please follow this instruction in order to get any game work:\nhttps://github.com/TheXTech/TheXTech/wiki/Running-game-assets-on-Android\n",
+      "ru": "\u042d\u0442\u043e \u0438\u0433\u0440\u043e\u0432\u043e\u0439 \u0434\u0432\u0438\u0436\u043e\u043a \u0434\u043b\u044f \u0438\u0433\u0440-\u043f\u043b\u0430\u0442\u0444\u043e\u0440\u043c\u0435\u0440\u043e\u0432. \u042d\u0442\u043e \u043f\u043e\u043b\u043d\u044b\u0439 \u0438 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u043d\u044b\u0439 \u043f\u043e\u0440\u0442 \u0438\u0437 \u0438\u0441\u0445\u043e\u0434\u043d\u043e\u0433\u043e \u043a\u043e\u0434\u0430 \u0434\u0432\u0438\u0436\u043a\u0430 SMBX 1.3, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u0438\u0437\u043d\u0430\u0447\u0430\u043b\u044c\u043d\u043e \u0431\u044b\u043b \u0441\u043e\u0437\u0434\u0430\u043d \u0447\u0435\u0440\u0435\u0437 MS Visual Basic 6, \u0430 \u0442\u0430\u043a\u0436\u0435, \u044d\u0442\u043e \u0435\u0433\u043e \u043f\u0440\u044f\u043c\u043e\u0435 \u043d\u0435\u043e\u0444\u0438\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0435 \u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0435\u043d\u0438\u0435 \u0441 \u0442\u0435\u0445 \u043f\u043e\u0440, \u043a\u0430\u043a \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 \u043e\u0440\u0438\u0433\u0438\u043d\u0430\u043b\u0430 \u0431\u044b\u043b\u0430 \u043f\u0440\u0435\u043a\u0440\u0430\u0449\u0435\u043d\u0430 \u0432 2011\u043c \u0433\u043e\u0434\u0443. \u0414\u0430\u043d\u043d\u044b\u0439 \u0434\u0432\u0438\u0436\u043e\u043a \u0441\u043e\u0445\u0440\u0430\u043d\u044f\u0435\u0442 \u043f\u043e\u043b\u043d\u0443\u044e \u0441\u043e\u0432\u043c\u0435\u0441\u0442\u0438\u043c\u043e\u0441\u0442\u044c \u0441 \u0443\u0440\u043e\u0432\u043d\u044f\u043c\u0438 \u0438 \u044d\u043f\u0438\u0437\u043e\u0434\u0430\u043c\u0438 \u0434\u043b\u044f \u043e\u0440\u0438\u0433\u0438\u043d\u0430\u043b\u044c\u043d\u043e\u0439 SMBX-\u0438\u0433\u0440\u044b, \u0432\u043a\u043b\u044e\u0447\u0430\u044f \u0435\u0451 \u043c\u043e\u0434\u0438\u0444\u0438\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u0438\u0437\u0434\u0430\u043d\u0438\u044f. \u0422\u0430\u043a\u0436\u0435, \u043f\u043e\u0434 \u0434\u0430\u043d\u043d\u044b\u0439 \u0434\u0432\u0438\u0436\u043e\u043a \u043c\u043e\u0436\u043d\u043e \u0441\u043e\u0437\u0434\u0430\u0432\u0430\u0442\u044c \u0441\u043e\u0432\u0435\u0440\u0448\u0435\u043d\u043d\u043e \u043d\u043e\u0432\u044b\u0435 \u0443\u0440\u043e\u0432\u043d\u0438, \u044d\u043f\u0438\u0437\u043e\u0434\u044b \u0438 \u043d\u0430\u0431\u043e\u0440\u044b \u0440\u0435\u0441\u0443\u0440\u0441\u043e\u0432. \u0412 \u043e\u0442\u043b\u0438\u0447\u0438\u0438 \u043e\u0442 \u043f\u0435\u0440\u0432\u043e\u043d\u0430\u0447\u0430\u043b\u044c\u043d\u043e\u0439 \u0438\u0433\u0440\u044b SMBX, \u043a\u043e\u0442\u043e\u0440\u0430\u044f \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043e\u0442 Windows \u0438 \u0430\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u044b x86, TheXTech \u0441\u043f\u043e\u0441\u043e\u0431\u0435\u043d \u0440\u0430\u0431\u043e\u0442\u0430\u0442\u044c \u043d\u0430 \u0448\u0438\u0440\u043e\u043a\u043e\u043c \u0441\u043f\u0435\u043a\u0442\u0440\u0435 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0445 \u0441\u0438\u0441\u0442\u0435\u043c (\u0432\u043a\u043b\u044e\u0447\u0430\u044f \u0440\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u0435 \u0434\u0438\u0441\u0442\u0440\u0438\u0431\u0443\u0442\u0438\u0432\u044b Linux, macOS, xBSD, Android, Haiku \u0438 \u0442.\u043f.) \u0438 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0440\u043d\u044b\u0445 \u0430\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u0430\u0445 (\u0432\u043a\u043b\u044e\u0447\u0430\u044f x86_64, ARM, PowerPC, MIPS, \u0438 \u0442.\u043f.).\n\n**\u041f\u0420\u0418\u041c\u0415\u0427\u0410\u041d\u0418\u0415:** \u042d\u0442\u043e \u0447\u0438\u0441\u0442\u044b\u0439 \u0438\u0441\u043f\u043e\u043b\u043d\u044f\u0435\u043c\u044b\u0439 \u0434\u0432\u0438\u0436\u043e\u043a, \u0431\u0435\u0437 \u043a\u0430\u043a\u0438\u0445 \u043b\u0438\u0431\u043e \u0438\u0433\u0440\u043e\u0432\u044b\u0445 \u0440\u0435\u0441\u0443\u0440\u0441\u043e\u0432. \u0427\u0442\u043e\u0431\u044b \u043d\u0430 \u043d\u0451\u043c \u0438\u0433\u0440\u0430\u0442\u044c, \u043d\u0443\u0436\u043d\u043e \u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u0442\u044c \u0438 \u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e \u0440\u0430\u0441\u043f\u0430\u043a\u043e\u0432\u044b\u0432\u0430\u0442\u044c \u043f\u0430\u043a\u0435\u0442\u044b \u0438\u0433\u0440\u043e\u0432\u044b\u0445 \u0440\u0435\u0441\u0443\u0440\u0441\u043e\u0432. \u0421\u043b\u0435\u0434\u0443\u0439\u0442\u0435 \u0434\u0430\u043d\u043d\u043e\u0439 \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0438, \u0447\u0442\u043e\u0431\u044b \u0443\u0437\u043d\u0430\u0442\u044c, \u043a\u0430\u043a \u043d\u0430\u0434\u043e \u0443\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0442\u044c \u0438\u0433\u0440\u043e\u0432\u044b\u0435 \u0440\u0435\u0441\u0443\u0440\u0441\u044b \u0438 \u0437\u0430\u043f\u0443\u0441\u0442\u0438\u0442\u044c \u0438\u0433\u0440\u0443:\nhttps://github.com/TheXTech/TheXTech/wiki/Running-game-assets-on-Android\n"
+    },
+    "featureGraphic": {
+      "en-GB": {
+        "name": "/ru.wohlsoft.thextech.fdroid/en-GB/featureGraphic_wEf47cB8JR1XhXigkzvebeUyySPDQneHFH9BZLDjNaA=.png",
+        "sha256": "c047f8edc07c251d578578a0933bde6de532c923c3427787147f4164b0e335a0",
+        "size": 5687
+      },
+      "en-US": {
+        "name": "/ru.wohlsoft.thextech.fdroid/en-US/featureGraphic_wEf47cB8JR1XhXigkzvebeUyySPDQneHFH9BZLDjNaA=.png",
+        "sha256": "c047f8edc07c251d578578a0933bde6de532c923c3427787147f4164b0e335a0",
+        "size": 5687
+      }
+    },
+    "icon": {
+      "en-GB": {
+        "name": "/ru.wohlsoft.thextech.fdroid/en-GB/icon_Jjn03CNVacKqPR1MrMEC8ywq11JMoRv94ZxrLyogKXQ=.png",
+        "sha256": "2639f4dc235569c2aa3d1d4cacc102f32c2ad7524ca11bfde19c6b2f2a202974",
+        "size": 57295
+      },
+      "en-US": {
+        "name": "/ru.wohlsoft.thextech.fdroid/en-US/icon_Jjn03CNVacKqPR1MrMEC8ywq11JMoRv94ZxrLyogKXQ=.png",
+        "sha256": "2639f4dc235569c2aa3d1d4cacc102f32c2ad7524ca11bfde19c6b2f2a202974",
+        "size": 57295
+      }
+    },
+    "issueTracker": "https://github.com/Wohlstand/TheXTech/issues",
+    "lastUpdated": 1766860615000,
+    "license": "GPL-3.0-or-later",
+    "name": {
+      "en-GB": "TheXTech",
+      "en-US": "TheXTech"
+    },
+    "preferredSigner": "167471bd111c86b015a6e19ff7a8526841ee48750fe5ab14e3945c6f69e45a3a",
+    "screenshots": {
+      "phone": {
+        "en-GB": [
+          {
+            "name": "/ru.wohlsoft.thextech.fdroid/en-GB/phoneScreenshots/screencap-game-menu.png",
+            "sha256": "7a62be1d42c3fa73742ff801638ffc5d97007d8ac1dfe12bcb64be80942a1d5c",
+            "size": 62279
+          },
+          {
+            "name": "/ru.wohlsoft.thextech.fdroid/en-GB/phoneScreenshots/screencap-launcher.png",
+            "sha256": "9a5dcaa07e96bba5858bca2e01bf99b419c66e6647ffab0d0403a73049ad07f9",
+            "size": 163450
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/ru.wohlsoft.thextech.fdroid/en-US/phoneScreenshots/screencap-game-menu.png",
+            "sha256": "7a62be1d42c3fa73742ff801638ffc5d97007d8ac1dfe12bcb64be80942a1d5c",
+            "size": 62279
+          },
+          {
+            "name": "/ru.wohlsoft.thextech.fdroid/en-US/phoneScreenshots/screencap-launcher.png",
+            "sha256": "9a5dcaa07e96bba5858bca2e01bf99b419c66e6647ffab0d0403a73049ad07f9",
+            "size": 163450
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/Wohlstand/TheXTech",
+    "summary": {
+      "en-GB": "2D-platformer game engine",
+      "en-US": "2D-platformer game engine",
+      "ru": "\u0418\u0433\u0440\u043e\u0432\u043e\u0439 \u0434\u0432\u0438\u0436\u043e\u043a \u0434\u043b\u044f 2D-\u043f\u043b\u0430\u0442\u0444\u043e\u0440\u043c\u0435\u0440\u043e\u0432"
+    },
+    "translation": "https://hosted.weblate.org/engage/thextech/",
+    "webSite": "https://wohlsoft.ru/projects/TheXTech/"
+  },
+  "version": {
+    "added": 1766860615000,
+    "antiFeatures": {
+      "NonFreeAdd": {
+        "en-US": "The most of available game assets packs, levels and episodes developed for this engine is non-free becasuse of the nature of community-sourced content used in them.",
+        "ru-RU": "\u0411\u043e\u043b\u044c\u0448\u0430\u044f \u0447\u0430\u0441\u0442\u044c \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u044b\u0445 \u043f\u0430\u043a\u0435\u0442\u043e\u0432 \u0438\u0433\u0440\u043e\u0432\u044b\u0445 \u0440\u0435\u0441\u0443\u0440\u0441\u043e\u0432, \u0443\u0440\u043e\u0432\u043d\u0435\u0439 \u0438 \u044d\u043f\u0438\u0437\u043e\u0434\u043e\u0432, \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0430\u043d\u043d\u044b\u0445 \u0434\u043b\u044f \u0434\u0430\u043d\u043d\u043e\u0433\u043e \u0434\u0432\u0438\u0436\u043a\u0430, \u043d\u0435\u0441\u0432\u043e\u0431\u043e\u0434\u043d\u0430 \u0438\u0437-\u0437\u0430 \u043e\u0441\u043e\u0431\u0435\u043d\u043d\u043e\u0441\u0442\u0435\u0439 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u043c\u043e\u0433\u043e \u043a\u043e\u043d\u0442\u0435\u043d\u0442\u0430, \u0441\u043e\u0437\u0434\u0430\u043d\u043d\u043e\u0433\u043e \u0441\u0432\u044f\u0437\u0430\u043d\u043d\u044b\u043c\u0438 \u0441\u043e\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u0430\u043c\u0438."
+      }
+    },
+    "file": {
+      "ipfsCIDv1": "bafybeihsz5bo5qlwoiqpuaak5rzhw25ricktm3zwhilyjvgdwlkbqaz4eu",
+      "name": "/ru.wohlsoft.thextech.fdroid_1030702.apk",
+      "sha256": "7c97ec662e9c020c5cc7c9102c576c969583c46bf4643b828eba63fffa5ca273",
+      "size": 27436396
+    },
+    "manifest": {
+      "nativecode": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86",
+        "x86_64"
+      ],
+      "signer": {
+        "sha256": [
+          "167471bd111c86b015a6e19ff7a8526841ee48750fe5ab14e3945c6f69e45a3a"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.MANAGE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.permission.BLUETOOTH"
+        },
+        {
+          "name": "ru.wohlsoft.thextech.fdroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 16,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 1030702,
+      "versionName": "1.3.7.2"
+    },
+    "src": {
+      "name": "/ru.wohlsoft.thextech.fdroid_1030702_src.tar.gz",
+      "sha256": "bc00d6120caf8c7f869b19c9a34511d26b6793e2435d5e3c2127a22353cab26c",
+      "size": 44667098
+    }
+  }
+}

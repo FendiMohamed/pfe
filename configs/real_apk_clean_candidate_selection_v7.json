@@ -1,0 +1,85 @@
+{
+  "selections": [
+    {
+      "app": "AndStatus",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "social-network",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.andstatus.app",
+      "reason": "No-native social/internet app with a medium APK, target SDK 35, source tarball metadata, and a size profile that may yield richer emitted Maven evidence.",
+      "slug": "andstatus",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Fulguris Web Browser",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "browser",
+        "internet",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "net.slions.fulguris.full.fdroid",
+      "reason": "No-native browser candidate with a medium APK and large source tree; useful for another richer browser/internet clean-candidate pass.",
+      "slug": "fulguris-web-browser",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "I2P",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "security",
+        "vpn-proxy",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "net.i2p.android.router",
+      "reason": "No-native security/networking candidate with a medium APK and large source tree; useful for a richer security-family proof attempt.",
+      "slug": "i2p",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Working Time Account",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "money",
+        "time",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "askanimus.arbeitszeiterfassung2",
+      "reason": "No-native work/time candidate with target SDK 36 and a medium APK/source size; adds a different app family to the clean non-sparse search.",
+      "slug": "working-time-account",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    },
+    {
+      "app": "Mastodon",
+      "classifications": [
+        "clean-candidate",
+        "no-native",
+        "internet",
+        "social-network",
+        "modern-source",
+        "source-linked"
+      ],
+      "package_name": "org.joinmastodon.android",
+      "reason": "No-native modern social app with source tarball metadata and a likely non-trivial AndroidX/Kotlin dependency surface despite a smaller APK.",
+      "slug": "mastodon",
+      "target_layer": "source-validated-real",
+      "validation_level": "L3-report-with-source-link"
+    }
+  ]
+}

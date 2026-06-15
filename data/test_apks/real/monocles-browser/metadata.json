@@ -1,0 +1,62 @@
+{
+  "apk": {
+    "expected_sha256": "a3a2973a78f556b2c4eb855d477da2c2d582b1588f903674cdc2323c8e0fa6a6",
+    "index_size": 14815396,
+    "path": "data/test_apks/real/monocles-browser/monocles-browser.apk",
+    "sha256": "a3a2973a78f556b2c4eb855d477da2c2d582b1588f903674cdc2323c8e0fa6a6",
+    "size": 14815396,
+    "url": "https://f-droid.org/repo/de.monocles.browser_14.apk"
+  },
+  "app": "monocles browser",
+  "categories": [
+    "Browser",
+    "Internet"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "browser",
+    "internet",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/de.monocles.browser/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "de.monocles.browser",
+  "proof_status": "report-generated",
+  "reason": "No-native privacy browser with a large modern source tree and target SDK 36; useful for another high-surface browser-family attempt toward a clean non-sparse row.",
+  "report": {
+    "detected_component_count": 0,
+    "dex_file_count": 1,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v8/report-real-monocles-browser",
+    "error": null,
+    "has_multidex": false,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v8/report-real-monocles-browser/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v8/report-real-monocles-browser/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "Structural evidence is stronger than package-name evidence."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v8/report-real-monocles-browser/sbom.cdx.json",
+    "sbom_component_count": 0,
+    "status": "ok"
+  },
+  "slug": "monocles-browser",
+  "source_repo": "https://codeberg.org/Arne/monocles_browser",
+  "source_tarball": {
+    "sha256": "5b5b4ac0b1003d6ddda9b81f4c989d7c2f0fdca926fdbc18a7c996ec23272d3c",
+    "size": 19229808,
+    "url": "https://f-droid.org/repo/de.monocles.browser_14_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 14,
+  "version_name": "1.9.3"
+}

@@ -1,0 +1,235 @@
+{
+  "metadata": {
+    "added": 1512950400000,
+    "categories": [
+      "Internet",
+      "Multimedia"
+    ],
+    "changelog": "https://gitlab.com/ultrasonic/ultrasonic/-/tags",
+    "description": {
+      "en-US": "Ultrasonic is a Subsonic (and compatible servers) client to Android. You can use Ultrasonic to connect with your server and listen music.\n\nMain features:\n* Small size & fast\n* Material You theme with dark and light variants\n* Multiple server support\n* Download tracks for offline playback\n* Bookmarks\n* Playlists on server\n* Shuffled playback\n* Jukebox mode\n* And much more!!\n\nNote: Ultrasonic uses semantic release versions. Releases with a zero in the last digit introduce new features or significant changes, all other releases focus on fixing bugs.\n\nThe source code is available with GPL license in GitLab: https://gitlab.com/ultrasonic/ultrasonic\nIf you have any issue, please post in: https://gitlab.com/ultrasonic/ultrasonic/issues\nPlay store icon designed by: http://www.flaticon.com/authors/sebastien-gabriel\n",
+      "es-ES": "Ultrasonic es un cliente de Subsonic (y servidores compatibles) para Android. Usa Ultrasonic para conectar con tu servidor y escuchar m\u00fasica.\n\nCaracter\u00edsticas principales:\n* Ligero\n* R\u00e1pido\n* Tema claro y oscuro\n* Soporte de m\u00faltiples servidores\n* Modo fuera de l\u00ednea\n* Marcadores\n* Listas de reproducci\u00f3n en el servidor\n* Modo de reproducci\u00f3n aleatoria\n* Modo Jukebox\n* Chat del servidor\n* Y muchas mas!!!\n\nEl c\u00f3digo esta disponible con licencia GPL en GitLab: https://gitlab.com/ultrasonic/ultrasonic\nSi tienes problemas puedes dejar tu petici\u00f3n en: https://gitlab.com/ultrasonic/ultrasonic/issues\nIcono dise\u00f1ado por Sebastien Gabriel: http://www.flaticon.com/authors/sebastien-gabriel\n"
+    },
+    "featureGraphic": {
+      "en-US": {
+        "name": "/org.moire.ultrasonic/en-US/featureGraphic_x1J6qu3BZ-XXJ9KOrMnDCU30tgw8kBYeJi2R6gQw0Ho=.png",
+        "sha256": "c7527aaaedc167e5d727d28eacc9c3094df4b60c3c90161e262d91ea0430d07a",
+        "size": 816830
+      },
+      "es-ES": {
+        "name": "/org.moire.ultrasonic/es-ES/featureGraphic_x1J6qu3BZ-XXJ9KOrMnDCU30tgw8kBYeJi2R6gQw0Ho=.png",
+        "sha256": "c7527aaaedc167e5d727d28eacc9c3094df4b60c3c90161e262d91ea0430d07a",
+        "size": 816830
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/org.moire.ultrasonic/en-US/icon_n8q1j9UmN_uZnoMyUaZnthdHNjsMfej1Rw8RgQadTOI=.png",
+        "sha256": "9fcab58fd52637fb999e833251a667b61747363b0c7de8f5470f1181069d4ce2",
+        "size": 19437
+      },
+      "es-ES": {
+        "name": "/org.moire.ultrasonic/es-ES/icon_n8q1j9UmN_uZnoMyUaZnthdHNjsMfej1Rw8RgQadTOI=.png",
+        "sha256": "9fcab58fd52637fb999e833251a667b61747363b0c7de8f5470f1181069d4ce2",
+        "size": 19437
+      }
+    },
+    "issueTracker": "https://gitlab.com/ultrasonic/ultrasonic/issues",
+    "lastUpdated": 1773269930193,
+    "license": "GPL-3.0-only",
+    "name": {
+      "en-US": "Ultrasonic",
+      "es-ES": "Ultrasonic"
+    },
+    "preferredSigner": "9e2946660ea036ca4352d9f60e77368138c862aa5637270a58f5f32836aa3bdc",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/org.moire.ultrasonic/en-US/phoneScreenshots/1_en-US.png",
+            "sha256": "34584c0c889042cef4f13b53f97347861ed66fd59680bf2379c09c26354251cc",
+            "size": 1296403
+          },
+          {
+            "name": "/org.moire.ultrasonic/en-US/phoneScreenshots/2_en-US.png",
+            "sha256": "3c1ed0a392948d82ea921b3af9fb49c29b45d320afa58d7c8d4d5ce8d0afc821",
+            "size": 500131
+          },
+          {
+            "name": "/org.moire.ultrasonic/en-US/phoneScreenshots/3_en-US.png",
+            "sha256": "9ac8ad5ba76455237ad52f0556f45d33c37afc29e9ff5718e589fd56f3ce6311",
+            "size": 442314
+          },
+          {
+            "name": "/org.moire.ultrasonic/en-US/phoneScreenshots/4_en-US.png",
+            "sha256": "1e1f719850c07cb695c9de2d1f0ce8ca347b0f25496278f6d8c2c6b0d501348c",
+            "size": 576790
+          },
+          {
+            "name": "/org.moire.ultrasonic/en-US/phoneScreenshots/5_en-US.png",
+            "sha256": "ed9c47e16fc2c2ef2e05558aad048a3cd78e678d16d8d9ff57bb8d125bcbab72",
+            "size": 164365
+          },
+          {
+            "name": "/org.moire.ultrasonic/en-US/phoneScreenshots/6_en-US.png",
+            "sha256": "2add0a748474ea511b0b88d6e8971e7e0b730641fe2e10c6095ff7dc392f4ae4",
+            "size": 146387
+          },
+          {
+            "name": "/org.moire.ultrasonic/en-US/phoneScreenshots/7_en-US.png",
+            "sha256": "3524e8c61380a03dc6426b6e59e93dd6751416e7830ddfc8eb76f01af0bcedd0",
+            "size": 411968
+          },
+          {
+            "name": "/org.moire.ultrasonic/en-US/phoneScreenshots/8_en-US.png",
+            "sha256": "d276fc32f7111bf1945ad83fba0567217290e7d13a526068d3ce04b6155e5d28",
+            "size": 922784
+          }
+        ],
+        "es-ES": [
+          {
+            "name": "/org.moire.ultrasonic/es-ES/phoneScreenshots/1_es-ES.png",
+            "sha256": "463544175958825b708b70590df769fd8079b97f7847117f570702349635d089",
+            "size": 1296353
+          },
+          {
+            "name": "/org.moire.ultrasonic/es-ES/phoneScreenshots/2_es-ES.png",
+            "sha256": "7a423ddb846b238f3670270bd0eb235b09cfbe72a50bf2894bdbf818ea781b85",
+            "size": 441165
+          },
+          {
+            "name": "/org.moire.ultrasonic/es-ES/phoneScreenshots/3_es-ES.png",
+            "sha256": "9915448c6ab4041c9a34720f8d8e9a21dc1a5e1acf7720ae3729543d952aa995",
+            "size": 443628
+          },
+          {
+            "name": "/org.moire.ultrasonic/es-ES/phoneScreenshots/4_es-ES.png",
+            "sha256": "212eaf3a6e745f0326c6e116d9d00f36b53dc0aa694f2405ad55d33e697ce9f9",
+            "size": 583210
+          },
+          {
+            "name": "/org.moire.ultrasonic/es-ES/phoneScreenshots/5_es-ES.png",
+            "sha256": "524f3e7454aca5acd939c6addf8a5a428eb839e3db986447bc686aba16792c55",
+            "size": 193410
+          },
+          {
+            "name": "/org.moire.ultrasonic/es-ES/phoneScreenshots/6_es-ES.png",
+            "sha256": "54cc72852b3d59fc36879de441af1ff9f37147afe370092d85b3b98a789d6cbc",
+            "size": 143816
+          },
+          {
+            "name": "/org.moire.ultrasonic/es-ES/phoneScreenshots/7_es-ES.png",
+            "sha256": "5138104849b253c0eae796539d1c53ddebd3512a10382a26c3f5323bf3f61e57",
+            "size": 414800
+          },
+          {
+            "name": "/org.moire.ultrasonic/es-ES/phoneScreenshots/8_es-ES.png",
+            "sha256": "053af8f50eed3f34eb544ab4b482fe10027a28bc4e028d3b1fe04de135fed42c",
+            "size": 922719
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://gitlab.com/ultrasonic/ultrasonic",
+    "summary": {
+      "ar": "\u0639\u0645\u064a\u0644 \u0628\u062b \u0645\u0648\u0633\u064a\u0642\u0649 \u0644\u062e\u0648\u0627\u062f\u0645 Subsonic",
+      "ba": "Subsonic \u0441\u0435\u0440\u0432\u0435\u0440\u0499\u0430\u0440\u044b \u04e9\u0441\u04e9\u043d \u043c\u0443\u0437\u044b\u043a\u0430 \u0442\u0440\u0430\u043d\u0441\u043b\u044f\u0446\u0438\u044f\u043b\u0430\u0443 \u043a\u043b\u0438\u0435\u043d\u0442\u044b",
+      "ca": "Un client de transmissi\u00f3 de m\u00fasica per a servidors Subsonic",
+      "cs": "Klient pro streamov\u00e1n\u00ed hudby pro servery Subsonic",
+      "de": "Musik-Streaming-Client f\u00fcr Subsonic-Server",
+      "en-US": "A music streaming client for Subsonic servers",
+      "es": "Un cliente de streaming de m\u00fasica para servidores Subsonic",
+      "es-ES": "Cliente de c\u00f3digo abierto para servidores compatibles con la API de Subsonic",
+      "et": "Voogedastusklient Subsonicu serverite jaoks",
+      "fr": "Un client de streaming musical pour les serveurs Subsonic",
+      "ga": "Cliant sruth\u00fa ceoil do fhreastalaithe Subsonic",
+      "he": "\u05dc\u05e7\u05d5\u05d7 \u05d4\u05d6\u05e8\u05de\u05ea \u05de\u05d5\u05d6\u05d9\u05e7\u05d4 \u05dc\u05e9\u05e8\u05ea\u05d9 Subsonic",
+      "id": "Klien streaming musik untuk server Subsonic",
+      "is": "T\u00f3nlistarstreymiforrit fyrir Subsonic-\u00fej\u00f3na",
+      "it": "Un client di streaming musicale per i server Subsonic",
+      "ja": "Subsonic\u30b5\u30fc\u30d0\u30fc\u5411\u3051\u97f3\u697d\u30b9\u30c8\u30ea\u30fc\u30df\u30f3\u30b0\u30fb\u30af\u30e9\u30a4\u30a2\u30f3\u30c8",
+      "pl": "Klient przesy\u0142ania strumieniowego muzyki dla serwer\u00f3w Subsonic",
+      "pt": "Um cliente de streaming de m\u00fasica para servidores Subsonic",
+      "pt-BR": "Um cliente de streaming de m\u00fasica para servidores Subsonic",
+      "pt-PT": "Um cliente de streaming de m\u00fasica para servidores Subsonic",
+      "ro": "Un client de streaming de muzic\u0103 pentru serverele Subsonic",
+      "ru": "\u041a\u043b\u0438\u0435\u043d\u0442 \u043f\u043e\u0442\u043e\u043a\u043e\u0432\u043e\u0439 \u043f\u0435\u0440\u0435\u0434\u0430\u0447\u0438 \u043c\u0443\u0437\u044b\u043a\u0438 \u0434\u043b\u044f \u0441\u0435\u0440\u0432\u0435\u0440\u043e\u0432 Subsonic",
+      "sr": "\u041a\u043b\u0438\u0458\u0435\u043d\u0442 \u0437\u0430 \u0441\u0442\u0440\u0438\u043c\u043e\u0432\u0430\u045a\u0435 \u043c\u0443\u0437\u0438\u043a\u0435 \u0437\u0430 Subsonic \u0441\u0435\u0440\u0432\u0435\u0440\u0435",
+      "sw": "Kiteja cha kutiririsha mziki ya seva za Subsonic",
+      "ta": "\u0b9a\u0baa\u0bcd\u0b9a\u0bcb\u0ba9\u0bbf\u0b95\u0bcd \u0b9a\u0bc7\u0bb5\u0bc8\u0baf\u0b95\u0b99\u0bcd\u0b95\u0bb3\u0bc1\u0b95\u0bcd\u0b95\u0bbe\u0ba9 \u0b87\u0b9a\u0bc8 \u0b9a\u0bcd\u0b9f\u0bcd\u0bb0\u0bc0\u0bae\u0bbf\u0b99\u0bcd \u0bb5\u0bbe\u0b99\u0bcd\u0b95\u0bbf",
+      "tr": "Subsonic sunucular i\u00e7in bir m\u00fczik ak\u0131\u015f\u0131 istemcisi",
+      "uk": "\u041a\u043b\u0456\u0454\u043d\u0442 \u043f\u043e\u0442\u043e\u043a\u043e\u0432\u043e\u0457 \u043f\u0435\u0440\u0435\u0434\u0430\u0447\u0456 \u043c\u0443\u0437\u0438\u043a\u0438 \u0434\u043b\u044f \u0441\u0435\u0440\u0432\u0435\u0440\u0456\u0432 Subsonic",
+      "zh-CN": "Subsonic \u670d\u52a1\u5668\u7684\u97f3\u4e50\u6d41\u5ba2\u6237\u7aef"
+    },
+    "translation": "https://www.transifex.com/ultrasonic/ultrasonic/",
+    "webSite": "https://ultrasonic.gitlab.io/"
+  },
+  "version": {
+    "added": 1773269930193,
+    "file": {
+      "ipfsCIDv1": "bafybeifw7wjeijlpfnuhlrtwe5n4q5jzoliapgbtmukjfwcttzlxtyjeri",
+      "name": "/org.moire.ultrasonic_131.apk",
+      "sha256": "b06e4958e3f6040228e06e270729b2363358d1e2ba8348ad07a7ebc6a0f85daa",
+      "size": 5631434
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "9e2946660ea036ca4352d9f60e77368138c862aa5637270a58f5f32836aa3bdc"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.BLUETOOTH_CONNECT"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.MODIFY_AUDIO_SETTINGS"
+        },
+        {
+          "name": "android.permission.BLUETOOTH"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+        },
+        {
+          "name": "org.moire.ultrasonic.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "name": "android.permission.REORDER_TASKS"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 131,
+      "versionName": "4.9.0"
+    },
+    "src": {
+      "name": "/org.moire.ultrasonic_131_src.tar.gz",
+      "sha256": "afabcc241a0123caef3667c1628e8a019693ba4e6ecb3a088e14850123de2c9a",
+      "size": 11069169
+    },
+    "whatsNew": {
+      "en-US": "### Fixes\n- Can now download albums that end with a period (#1314)\n- Retain playlist view when rotating screen (#1326)\n- Now remembers last song played when playback is resumed outside of the main app (bluetooth, android auto, etc.) (#1303)\n- Handles cover art fetch failure to prevent occasional persistent missing cover art (#1327)\n\n### Features\n- Unify 5-star and heart rating\n- Numerous translation updates\n- Added replaygain support (#1302)\n- Update android target/compile SDK to 36 (Android 16 "
+    }
+  }
+}

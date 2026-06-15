@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "added": 1383609600000,
+    "bitcoin": "1EVWVqpVQFhoFE6gKaqSkfvSNdmLAjcQ9z",
+    "categories": [
+      "Internet",
+      "VPN & Proxy"
+    ],
+    "description": {
+      "en-US": "With the VPNService in Android 4.0+ it is possible to create a VPN that doesn't need root access."
+    },
+    "donate": [
+      "https://www.paypal.com/cgi-bin/webscr?hosted_button_id=R2M6ZP9AF25LS&cmd=_s-xclick"
+    ],
+    "issueTracker": "https://github.com/schwabe/ics-openvpn/issues",
+    "lastUpdated": 1769908620000,
+    "license": "GPL-2.0-only",
+    "name": {
+      "en-US": "OpenVPN for Android"
+    },
+    "preferredSigner": "4cd330fe6593e2e64b1e1fa383f0c6d73892184fc1cd1a909e71d558d862e212",
+    "sourceCode": "https://github.com/schwabe/ics-openvpn",
+    "summary": {
+      "ar": "OpenVPN \u0628\u062f\u0648\u0646 \u062a\u063a\u0639\u064a\u0644 \u062d\u0633\u0627\u0628 \u0627\u0644\u062c\u0630\u0631",
+      "ba": "Root-\u04bb\u044b\u0499 OpenVPN",
+      "ca": "OpenVPN sense superusuari",
+      "cs": "OpenVPN bez rootu",
+      "de": "OpenVPN ohne Root-Rechte",
+      "en-US": "OpenVPN without root",
+      "es": "OpenVPN sin root",
+      "fr": "OpenVPN sans root",
+      "ga": "OpenVPN gan fhr\u00e9amh",
+      "he": "OpenVPN \u05dc\u05dc\u05d0 \u05de\u05e9\u05ea\u05de\u05e9 \u05e2\u05dc (root)",
+      "id": "OpenVPN tanpa akses root",
+      "it": "OpenVPN senza root",
+      "ja": "root\u306a\u3057OpenVPN",
+      "nb": "OpenVPN uten root",
+      "pl": "OpenVPN bez roota",
+      "pt": "OpenVPN sem root",
+      "pt-BR": "OpenVPN sem acesso Root / SuperUsu\u00e1rio",
+      "pt-PT": "OpenVPN sem root",
+      "ro": "OpenVPN f\u0103r\u0103 root",
+      "ru": "OpenVPN \u0431\u0435\u0437 root",
+      "sq": "OpenVPN pa rr\u00ebnj\u00eb",
+      "sr": "OpenVPN \u0431\u0435\u0437 \u0440\u0443\u0442\u0430",
+      "sw": "OpenVPN bila mtumiaji mkuu",
+      "ta": "\u0bb5\u0bc7\u0bb0\u0bcd \u0b87\u0bb2\u0bcd\u0bb2\u0bbe\u0bae\u0bb2\u0bcd OpenVPN",
+      "tr": "K\u00f6k olmadan OpenVPN",
+      "uk": "OpenVPN \u0431\u0435\u0437 root",
+      "zh-CN": "\u4e0d\u9700\u8981 root \u7684 OpenVPN",
+      "zh-TW": "\u7121\u9700 root \u7684 OpenVPN"
+    },
+    "translation": "https://crowdin.com/project/ics-openvpn",
+    "webSite": "https://ics-openvpn.blinkt.de/"
+  },
+  "version": {
+    "added": 1769908620000,
+    "file": {
+      "ipfsCIDv1": "bafybeiewymlsxgnnsmwfi6kmmegtyfqwqkgpyusqsh5ekth22wfvz3c5qe",
+      "name": "/de.blinkt.openvpn_219.apk",
+      "sha256": "8ef31ee086503b5e8377cbeeae246fdc9e936c756fe69985d2358829bb3b3198",
+      "size": 46753643
+    },
+    "manifest": {
+      "nativecode": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86",
+        "x86_64"
+      ],
+      "signer": {
+        "sha256": [
+          "4cd330fe6593e2e64b1e1fa383f0c6d73892184fc1cd1a909e71d558d862e212"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+        },
+        {
+          "name": "android.permission.QUERY_ALL_PACKAGES"
+        },
+        {
+          "name": "de.blinkt.openvpn.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 21,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 219,
+      "versionName": "0.7.64"
+    },
+    "src": {
+      "name": "/de.blinkt.openvpn_219_src.tar.gz",
+      "sha256": "652b7d3b32bcebf65a3c3fbc96d3a92ec2637a43d0d49edeec61ca622aba2a6b",
+      "size": 26717078
+    }
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "metadata": {
+    "added": 1443830400000,
+    "categories": [
+      "Calendar & Agenda",
+      "Time"
+    ],
+    "changelog": "https://github.com/Etar-Group/Etar-Calendar/releases",
+    "description": {
+      "ar-AR": "\u0627\u0644\u0645\u0632\u0627\u064a\u0627:\n- \u064a\u0645\u0643\u0646\u0643 \u0627\u0633\u062a\u0639\u0631\u0627\u0636 \u0627\u0644\u0623\u064a\u0627\u0645 \u0639\u0644\u0649 \u0634\u0643\u0644 \u0634\u0647\u0631\u064a.\n- \u064a\u0645\u0643\u0646\u0643 \u0627\u0633\u062a\u0639\u0631\u0627\u0636 \u0627\u0644\u0623\u064a\u0627\u0645 \u0639\u0644\u0649 \u0634\u0643\u0644 \u0623\u0633\u0628\u0648\u0639\u064a \u0623\u0648 \u064a\u0648\u0645\u064a \u0648 \u0639\u0644\u0649 \u0634\u0643\u0644 \u0623\u062c\u0646\u062f\u0629.\n- \u064a\u0633\u062a\u0639\u0645\u0644 \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0645\u0632\u0627\u0645\u0646\u0629 \u0623\u0646\u062f\u0631\u0648\u064a\u062f \u0644\u0644\u062a\u0642\u0627\u0648\u064a\u0645 \u0648\u0647\u064a \u062a\u0639\u0645\u0644 \u0639\u0644\u0649 Google Calendar \u0648 Exchange \u0625\u0644\u062e...\n- \u062a\u0637\u0628\u064a\u0642 \u0645\u0635\u0645\u0645 \u0639\u0644\u0649 Material design.\n- \u0645\u062c\u0627\u0646\u064a \u0648\u0645\u0641\u062a\u0648\u062d \u0627\u0644\u0645\u0635\u062f\u0631 \u0648\u0628\u062f\u0648\u0646 \u0625\u0639\u0644\u0627\u0646\u0627\u062a.\n- \u0625\u0645\u0643\u0627\u0646\u064a\u0629 \u062a\u0635\u062f\u064a\u0631 \u0648\u062a\u0648\u0631\u064a\u062f \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0640ics.\n\n\u0644\u0644\u0645\u0634\u0627\u0643\u0644 \u0648\u0627\u0644\u0627\u0642\u062a\u0631\u0627\u062d\u0627\u062a:  https://github.com/Etar-Group/Etar-Calendar/issues\n\u0627\u0644\u0634\u0641\u0631\u0629 \u0627\u0644\u0645\u0635\u062f\u0631\u064a\u0629: https://github.com/Etar-Group/Etar-Calendar\n",
+      "cs": "Funkce:\n- Zobrazen\u00ed m\u011bs\u00edce.\n- Zobrazen\u00ed t\u00fddne, dne a formou agendy.\n- Pou\u017e\u00edv\u00e1 \u00falo\u017ei\u0161t\u011b kalend\u00e1\u0159\u016f Android pro zobrazen\u00ed v\u0161ech synchronizovan\u00fdch kalend\u00e1\u0159\u016f.\n- Material Design.\n- Tmav\u00fd a sv\u011btl\u00fd motiv.\n- Podporuje offline kalend\u00e1\u0159e.\n- Widget agendy.\n- Podporuje sd\u00edlen\u00ed kalend\u00e1\u0159\u016f pomoc\u00ed ISC a umo\u017e\u0148uje importovat/exportovat z\u00a0SD karty.\n- V\u00edcejazy\u010dn\u00e9 u\u017eivatelsk\u00e9 prost\u0159ed\u00ed.\n\nChyby a zp\u011btn\u00e1 vazba: https://github.com/Etar-Group/Etar-Calendar/issues\nZdrojov\u00fd k\u00f3d: https://github.com/Etar-Group/Etar-Calendar\n",
+      "de-DE": "Merkmale:\n- Monatsansicht\n- Wochen-, Tages- und Agenda-Ansicht.\n- Verwendet Android-Kalender-Provider und zeigt alle synchronisierten Kalender.\n- Material Design.\n- Dunkles und helles Design.\n- Unterst\u00fctzt Offline-Kalender.\n- Agenda-Widget.\n- Unterst\u00fctzt die Freigabe von Kalendern \u00fcber ICS und die M\u00f6glichkeit, von der SD-Karte zu importieren/exportieren.\n- Mehrsprachige Benutzeroberfl\u00e4che.\n\nBugs und Feedback: https://github.com/Etar-Group/Etar-Calendar/issues\nQuellcode: https://github.com/Etar-Group/Etar-Calendar\n",
+      "en-US": "Features:\n- Month view.\n- Week, day and agenda view.\n- Uses Android calendar storage to show all synchronized calendars.\n- Material Design.\n- Dark and light theme.\n- Support offline calendar.\n- Agenda widget.\n- Support sharing calendars via ICS and the ability to import/export from SD card.\n- Multilingual UI.\n\nBugs and feedback: https://github.com/Etar-Group/Etar-Calendar/issues\nSource code: https://github.com/Etar-Group/Etar-Calendar\n",
+      "es-ES": "Caracter\u00edsticas:\n- Vista de mes.\n- Vista de semana, d\u00eda y agenda.\n- Utiliza la sincronizaci\u00f3n del calendario de Android.\n- Dise\u00f1o de materiales.\n- Tema oscuro y claro.\n- Gratis, de c\u00f3digo abierto y absolutamente sin anuncios.\n- Soporte para compartir calendarios a trav\u00e9s de ICS y la capacidad de importar/exportar desde la tarjeta SD.\n- Interfaz de usuario multiling\u00fce.\n\nErrores y comentarios: https://github.com/Etar-Group/Etar-Calendar/issues\nC\u00f3digo fuente: https://github.com/Etar-Group/Etar-Calendar\n",
+      "eu": "Ezaugarriak:\n- Hilabete, aste, egun eta agenda ikuspegiak.\n- Android egutegi sinkronizazioa.\n- Material Design.\n- Gai ilun eta argiak.\n- Doakoa, kode irekikoa eta iragarkirik gabe.\n- Egutegiak ICS partekatzea onartu eta SD txartel batetik inportatzea/esportatzea ahalbidetzen du.\n- Erabiltzaile interfazea hainbat hizkuntzatan.\n\nBugs eta iradokizunak: https://github.com/Etar-Group/Etar-Calendar/issues\nIturburu kodea: https://github.com/Etar-Group/Etar-Calendar\n",
+      "fi": "Ominaisuudet:\n- Kuukausin\u00e4kym\u00e4.\n- Viikko-, p\u00e4iv\u00e4- ja esityslistan\u00e4kym\u00e4.\n- K\u00e4ytt\u00e4\u00e4 Android-kalenterin tallennustilaa n\u00e4ytt\u00e4\u00e4kseen kaikki synkronoidut kalenterit.\n- Materiaalisuunnittelu.\n- Tumma ja vaalea teema.\n- Tukee ei-verkkokalenteria.\n- Esityslista-vimpain.\n- Tukee kalentereiden jakamista ICS:n kautta ja kyky\u00e4 tuoda / vied\u00e4 SD-kortilta.\n- Monikielinen k\u00e4ytt\u00f6liittym\u00e4.\n\nViat ja palaute: https://github.com/Etar-Group/Etar-Calendar/issues\nL\u00e4hdekoodi: https://github.com/Etar-Group/Etar-Calendar\n",
+      "fr-FR": "Fonctionnalit\u00e9s\u00a0:\n\u2013\u00a0Affichage par mois\u202f;\n\u2013\u00a0Affichages par semaine, par jour et agenda\u202f; \n\u2013\u00a0Utilise la synchronisation Android du calendrier\u202f;\n\u2013\u00a0Material Design; \n\u2013\u00a0Th\u00e8mes sombre et clair\u202f;\n\u2013\u00a0Prise en charge de calendriers hors-ligne\u202f;\n\u2013\u00a0Widget de calendrier\u202f;\n\u2013\u00a0Prend en charge le partage des calendriers via iCalendar (.ics) et l\u2019importation et l\u2019exportation vers une carte SD\u202f;\n\u2013\u00a0Interface utilisateur multilingue.\n\nSignalement de bogues et commentaires\u00a0: https://github.com/Etar-Group/Etar-Calendar/issues\nCode source\u00a0: https://github.com/Etar-Group/Etar-Calendar\n",
+      "he": "\u05d9\u05db\u05d5\u05dc\u05d5\u05ea:\n- \u05ea\u05e6\u05d5\u05d2\u05ea \u05d7\u05d5\u05d3\u05e9.\n- \u05ea\u05e6\u05d5\u05d2\u05d5\u05ea \u05e9\u05d1\u05d5\u05e2, \u05d9\u05d5\u05dd \u05d5\u05e1\u05d3\u05e8 \u05d9\u05d5\u05dd.\n- \u05de\u05e9\u05ea\u05de\u05e9 \u05d1\u05e1\u05e0\u05db\u05e8\u05d5\u05df \u05dc\u05d5\u05d7 \u05d4\u05e9\u05e0\u05d4 \u05e9\u05dc Android.\n- \u05e2\u05d9\u05e6\u05d5\u05d1 Material.\n- \u05e2\u05e8\u05db\u05d5\u05ea \u05e2\u05d9\u05e6\u05d5\u05d1 \u05d1\u05d4\u05d9\u05e8\u05d4 \u05d5\u05db\u05d4\u05d4.\n- \u05d7\u05d9\u05e0\u05de\u05d9, \u05d7\u05d5\u05e4\u05e9\u05d9, \u05d1\u05e7\u05d5\u05d3 \u05e4\u05ea\u05d5\u05d7 \u05d5\u05dc\u05d7\u05dc\u05d5\u05d8\u05d9\u05df \u05dc\u05dc\u05d0 \u05e4\u05e8\u05e1\u05d5\u05de\u05d5\u05ea.\n- \u05ea\u05de\u05d9\u05db\u05d4 \u05d1\u05e9\u05d9\u05ea\u05d5\u05e3 \u05dc\u05d5\u05d7\u05d5\u05ea \u05e9\u05e0\u05d4 \u05e2\u05dd ICS \u05d5\u05d9\u05db\u05d5\u05dc\u05ea \u05dc\u05d9\u05d9\u05d1\u05d0/\u05dc\u05d9\u05d9\u05e6\u05d0 \u05de\u05ea\u05d5\u05da \u05d5\u05d0\u05dc \u05db\u05e8\u05d8\u05d9\u05e1 SD.\n- \u05de\u05e0\u05e9\u05e7 \u05de\u05e9\u05ea\u05de\u05e9 \u05d1\u05de\u05d2\u05d5\u05d5\u05df \u05e9\u05e4\u05d5\u05ea.\n\n\u05ea\u05e7\u05dc\u05d5\u05ea \u05d5\u05de\u05e9\u05d5\u05d1: https://github.com/Etar-Group/Etar-Calendar/issues\n\u05e7\u05d5\u05d3 \u05de\u05e7\u05d5\u05e8: https://github.com/Etar-Group/Etar-Calendar\n",
+      "hr": "Funkcije:\n- Prikaz mjeseca.\n- Prikaz tjedna, dana i agende.\n- Koristi Androidovu sinkronizaciju kalendara.\n- Material dizajn.\n- Tamna i svijetla tema.\n- Podr\u0161ka za neumre\u017eni kalendar.\n- Widget za agendu.\n- Podr\u017eava dijeljenje kalendara putem ICS-a i omogu\u0107uje uvoz/izvoz na SD karticu.\n- Vi\u0161ejezi\u010dno su\u010delje.\n\nGre\u0161ke i povratne informacije: https://github.com/Etar-Group/Etar-Calendar/issues\nIzvorni kod: https://github.com/Etar-Group/Etar-Calendar\n",
+      "id": "Fitur:\n- Tampilan kalender bulanan.\n- Tampilan kalender harian, mingguan, dan agenda\n- Menggunakan penyimpanan kalender Android untuk menampilkan semua kalender yang disinkronkan.\n- Desain Material.\n- Tema terang dan gelap.\n- Mendukung kalender luring.\n- Gawit agenda.\n- Mendukung fitur pembagian kalender melalui ICS serta mampu mengekspor/mengimpor kalender dari kartu SD.\n-Antarmuka mendukung multibahasa.\n\nAda kutu atau saran? Hubungi\nhttps://github.com/Etar-Group/Etar-Calendar/issues\nKode sumber: https://github.com/Etar-Group/Etar-Calendar\n",
+      "it-IT": "Caratteristiche:\n- Vista del mese.\n- Vista della settimana, giorno e agenda.\n- Usa l'archiviazione del calendario Android per mostrare tutti i calendari sincronizzati.\n- Material design.\n- Temi chiaro e scuro.\n- Supporto a calendari offline.\n- Widget per agenda.\n- Supporta la condivisione di calendari via ICS e la possibilit\u00e0 di importare/esportare dalla scheda SD.\n- Interfaccia utente multilingua.\n\nErrori e feedback: https://github.com/Etar-Group/Etar-Calendar/issues\nCodice sorgente: https://github.com/Etar-Group/Etar-Calendar\n",
+      "ja": "\u6a5f\u80fd:\n- \u6708\u8868\u793a\n- \u9031\u9593\u3001\u65e5\u3001\u4e88\u5b9a\u30ea\u30b9\u30c8\u8868\u793a\n- Android \u306e\u30ab\u30ec\u30f3\u30c0\u30fc\u30b9\u30c8\u30ec\u30fc\u30b8\u3092\u4f7f\u7528\u3057\u3066\u540c\u671f\u3055\u308c\u305f\u3059\u3079\u3066\u306e\u30ab\u30ec\u30f3\u30c0\u30fc\u3092\u8868\u793a\n- \u30de\u30c6\u30ea\u30a2\u30eb\u30c7\u30b6\u30a4\u30f3\n- \u30c0\u30fc\u30af\u30c6\u30fc\u30de\u3001\u30e9\u30a4\u30c8\u30c6\u30fc\u30de\n- \u30aa\u30d5\u30e9\u30a4\u30f3\u30ab\u30ec\u30f3\u30c0\u30fc\u306b\u5bfe\u5fdc\n- \u30a6\u30a3\u30b8\u30a7\u30c3\u30c8\n- ICS \u3067\u306e\u30ab\u30ec\u30f3\u30c0\u30fc\u5171\u6709\u306b\u5bfe\u5fdc\u3002SD \u30ab\u30fc\u30c9\u304b\u3089\u306e\u30a4\u30f3\u30dd\u30fc\u30c8/\u30a8\u30af\u30b9\u30dd\u30fc\u30c8\u3082\u53ef\u80fd\n- \u591a\u8a00\u8a9e UI\n\n\u30d0\u30b0\u30fb\u30d5\u30a3\u30fc\u30c9\u30d0\u30c3\u30af: https://github.com/Etar-Group/Etar-Calendar/issues\n\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9: https://github.com/Etar-Group/Etar-Calendar\n",
+      "ko": "\uae30\ub2a5:\n- \uc6d4\ubcc4 \ubcf4\uae30\n- \uc8fc\uac04/\uc77c\uac04 \uc77c\uc815 \ubaa9\ub85d \ubcf4\uae30\n- Android \uce98\ub9b0\ub354\ub97c \uc0ac\uc6a9\ud558\uc5ec \ub3d9\uae30\ud654\ub41c \ubaa8\ub4e0 \uce98\ub9b0\ub354\ub97c \ud45c\uc2dc.\n- \uba38\ud2f0\ub9ac\uc5bc \ub514\uc790\uc778\n- \ub77c\uc774\ud2b8/\ub2e4\ud06c \ud14c\ub9c8\n- \uc624\ud504\ub77c\uc778 \uce98\ub9b0\ub354 \uae30\ub2a5 \uc9c0\uc6d0\n- \uc77c\uc815 \ud45c\uc2dc \uc704\uc82f\n- ICS\ub97c \ud1b5\ud55c \uce98\ub9b0\ub354 \uacf5\uc720 \ubc0f SD\uce74\ub4dc \uac00\uc838\uc624\uae30/\ub0b4\ubcf4\ub0b4\uae30 \uae30\ub2a5 \uc9c0\uc6d0\n- \ub2e4\uad6d\uc5b4 UI\n\n\ubc84\uadf8 \ubcf4\uace0 \ubc0f \ud53c\ub4dc\ubc31: https://github.com/Etar-Group/Etar-Calendar/issues\n\uc18c\uc2a4 \ucf54\ub4dc: https://github.com/Etar-Group/Etar-Calendar\n",
+      "nb-NB": "Egenskaper:\n- M\u00e5neds-, ukes-, dags-, og agenda-oversikt.\n- Bruk av Androids kalendersynkronisering.\n- Gratis, friprog, og uten reklamer.\n\nBugs, feilmeldinger og tilbakemeldinger: https://github.com/xsoh/Etar-Calendar/issues\nKildekode: https://github.com/xsoh/Etar-Calendar\n",
+      "nl": "Features:\n- Maandoverzicht.\n- Week, dag en agendalijst overzicht.\n- Gebruikt Androidkalendersynchronisatie.\n- Material Design.\n- Donker en licht thema.\n- Gratis, open-source en absoluut geen advertenties.\n- Agenda-widget\n- Ondersteunt kalenders delen via ICS en kan im-/exporteren van/naar SD-kaart.\n- Meertalige gebruikersinterface.\n\nBugs en feedback: https://github.com/Etar-Group/Etar-Calendar/issues\nBroncode: https://github.com/Etar-Group/Etar-Calendar\n",
+      "pl": "Funkcje:\n- Widok miesi\u0105ca.\n- Widok tygodnia, dnia i terminarza.\n- Wykorzystuje synchronizacj\u0119 kalendarza systemu Android.\n- Wygl\u0105d Material Design.\n- Ciemny i jasny motyw.\n- Darmowy, o otwartym kodzie \u017ar\u00f3d\u0142owym i absolutnie bez reklam.\n- Obs\u0142uga udost\u0119pniania kalendarzy za po\u015brednictwem ICS i mo\u017cliwo\u015b\u0107 importowania / eksportowania z karty SD.\n- Wieloj\u0119zyczny interfejs u\u017cytkownika.\n\nB\u0142\u0119dy i opinie: https://github.com/Etar-Group/Etar-Calendar/issues\nKod \u017ar\u00f3d\u0142owy: https://github.com/Etar-Group/Etar-Calendar\n",
+      "pt-BR": "Fun\u00e7\u00f5es:\n- Vis\u00e3o do m\u00eas.\n- Vis\u00e3o de semana, dia e agenda.\n- Usa a sincroniza\u00e7\u00e3o do calend\u00e1rio do Android.\n- Material Design.\n- Tema escuro e claro.\n- Gr\u00e1tis, c\u00f3digo aberto e absolutamente nenhum an\u00fancio.\n- Suporta compartilhar calend\u00e1rios via ICS e a habilidade de importar/exportar do cart\u00e3o SD.\n- Interface de usu\u00e1rio multil\u00edngue.\n\nBugs e feedback: https://github.com/Etar-Group/Etar-Calendar/issues\nC\u00f3digo-fonte: https://github.com/Etar-Group/Etar-Calendar\n",
+      "qpv": "-Muaj fal\n-Ujk, dag, au surutumam fal\n-Bruk Android dagtumam pr sejena al kamagdagtumam\n-Material Design wa\n-Kuraj au shiraj fal\n-Deki brukena uten zerjet\n-Surutumam widget wa\n-Deki kamaghar dagtumam met ICS, au ki anta/sada SD made\n-Mangeglossa\nPrabljem au hanupje: https://github.com/Etar-Group/Etar-Calendar/issues\nKompjukaku: https://github.com/Etar-Group/Etar-Calendar\n",
+      "ro-RO": "Caracteristici:\n- Vizualizare lunar\u0103.\n- Vizualizarea s\u0103pt\u0103m\u00e2nii, a zilei \u0219i a agendei.\n- Utilizeaz\u0103 sincronizarea calendarului Android.\n- Material Design.\n- Tem\u0103 \u00eentunecat\u0103 \u0219i u\u0219oar\u0103.\n- Gratuit, open source \u0219i absolut f\u0103r\u0103 reclame.\n- Suport\u0103 partajarea calendarelor prin ICS \u0219i posibilitatea de a importa/exporta de pe cardul SD.\n- UI multilingv\u0103.\n\nBug-uri \u0219i feedback: https://github.com/Etar-Group/Etar-Calendar/issues\nCod surs\u0103: https://github.com/Etar-Group/Etar-Calendar\n",
+      "ru-RU": "\u041e\u0441\u043e\u0431\u0435\u043d\u043d\u043e\u0441\u0442\u0438:\n- \u041e\u0442\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435 \u043c\u0435\u0441\u044f\u0446\u0435\u0432.\n- \u041e\u0442\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435 \u043d\u0435\u0434\u0435\u043b\u044c, \u0434\u043d\u0435\u0439 \u0438 \u043f\u043e\u0432\u0435\u0441\u0442\u043a\u0438 \u0434\u043d\u044f.\n- \u0421\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u044f \u0441 \u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440\u0451\u043c Android.\n- \u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044c\u043d\u044b\u0439 \u0434\u0438\u0437\u0430\u0439\u043d.\n- \u0422\u0451\u043c\u043d\u0430\u044f \u0438 \u0441\u0432\u0435\u0442\u043b\u0430\u044f \u0442\u0435\u043c\u044b.\n- \u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439, \u0441 \u043e\u0442\u043a\u0440\u044b\u0442\u044b\u043c \u0438\u0441\u0445\u043e\u0434\u043d\u044b\u043c \u043a\u043e\u0434\u043e\u043c \u0438 \u0431\u0435\u0437 \u0440\u0435\u043a\u043b\u0430\u043c\u044b.\n- \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 \u043f\u0435\u0440\u0435\u0434\u0430\u0447\u0438 \u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440\u0435\u0439 \u0447\u0435\u0440\u0435\u0437 ICS \u0438 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c \u0438\u043c\u043f\u043e\u0440\u0442\u0430 \u044d\u043a\u0441\u043f\u043e\u0440\u0442\u0430.\n- \u041c\u043d\u043e\u0433\u043e\u044f\u0437\u044b\u0447\u043d\u044b\u0439 \u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441.\n\n\u041e\u0448\u0438\u0431\u043a\u0438 \u0438 \u043e\u0442\u0437\u044b\u0432\u044b: https://github.com/Etar-Group/Etar-Calendar/issues\n\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u043a\u043e\u0434: https://github.com/Etar-Group/Etar-Calendar\n",
+      "sk": "Vlastnosti:\n- mesa\u010dn\u00fd poh\u013ead.\n- T\u00fd\u017edenn\u00fd, denn\u00fd a perspekt\u00edvny poh\u013ead.\n- Pou\u017e\u00edva Android kalend\u00e1r skladovanie uk\u00e1za\u0165 v\u0161etky synchronizovan\u00e9 kalend\u00e1re.\n- Materi\u00e1lov\u00fd dizajn.\n- Tmavo a svetlo t\u00e9mu.\n- Podpora offline kalend\u00e1r.\n- Programov\u00fd widget.\n- Podpora zdie\u013eanie kalend\u00e1rov cez ICS a schopnos\u0165 importova\u0165/export z SD karty.\n- Multilingv\u00e1lne UI.\n\nChyby a sp\u00e4tn\u00fa v\u00e4zbu: https://github.com/Etar-Group/Etar-Calendar/issues\nZdroj k\u00f3d: https://github.com/Etar-Group/Etar-Calendar\n",
+      "sv": "Funktioner:\n- M\u00e5nadsvy.\n- Vecka, dag och agenda-vy.\n- Anv\u00e4nder Android's lagringsplats f\u00f6r kalendern s\u00e5 att alla synkroniserade kalendrar visas.\n- Materialdesign.\n- M\u00f6rkt och ljust tema.\n- St\u00f6d f\u00f6r nedkopplad kalender.\n- Agenda-widget.\n- St\u00f6d f\u00f6r att dela kalendrar via ICS och m\u00f6jligheten att importera/exportera fr\u00e5n SD-kort.\n- Flerspr\u00e5kigt anv\u00e4ndargr\u00e4nssnitt.\n\nBuggar och \u00e5tergivning: https://github.com/Etar-Group/Etar-Calendar/issues\nK\u00e4llkod: https://github.com/Etar-Group/Etar-Calendar\n",
+      "ta-IN": "\u0b85\u0bae\u0bcd\u0b9a\u0b99\u0bcd\u0b95\u0bb3\u0bcd:\n - \u0bae\u0bbe\u0ba4 \u0baa\u0bbe\u0bb0\u0bcd\u0bb5\u0bc8.\n - \u0bb5\u0bbe\u0bb0\u0bae\u0bcd, \u0ba8\u0bbe\u0bb3\u0bcd \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0ba8\u0bbf\u0b95\u0bb4\u0bcd\u0b9a\u0bcd\u0b9a\u0bbf \u0ba8\u0bbf\u0bb0\u0bb2\u0bcd \u0baa\u0bbe\u0bb0\u0bcd\u0bb5\u0bc8.\n - \u0b92\u0ba4\u0bcd\u0ba4\u0bbf\u0b9a\u0bc8\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f \u0b85\u0ba9\u0bc8\u0ba4\u0bcd\u0ba4\u0bc1 \u0b95\u0bbe\u0bb2\u0bc6\u0ba3\u0bcd\u0b9f\u0bb0\u0bcd\u0b95\u0bb3\u0bc8\u0baf\u0bc1\u0bae\u0bcd \u0b95\u0bbe\u0b9f\u0bcd\u0b9f \u0b86\u0ba3\u0bcd\u0b9f\u0bcd\u0bb0\u0bbe\u0baf\u0bcd\u0b9f\u0bc1 \u0b95\u0bbe\u0bb2\u0ba3\u0bcd\u0b9f\u0bb0\u0bcd \u0b9a\u0bc7\u0bae\u0bbf\u0baa\u0bcd\u0baa\u0bbf\u0b9f\u0ba4\u0bcd\u0ba4\u0bc8\u0baa\u0bcd \u0baa\u0baf\u0ba9\u0bcd\u0baa\u0b9f\u0bc1\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bbf\u0bb1\u0ba4\u0bc1.\n - \u0baa\u0bca\u0bb0\u0bc1\u0bb3\u0bcd \u0bb5\u0b9f\u0bbf\u0bb5\u0bae\u0bc8\u0baa\u0bcd\u0baa\u0bc1.\n - \u0b87\u0bb0\u0bc1\u0ba3\u0bcd\u0b9f \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0b92\u0bb3\u0bbf \u0ba4\u0bc0\u0bae\u0bcd.\n - \u0b87\u0ba3\u0bc8\u0baa\u0bcd\u0baa\u0bbf\u0bb2\u0bcd\u0bb2\u0bbe\u0ba4 \u0b95\u0bbe\u0bb2\u0bc6\u0ba3\u0bcd\u0b9f\u0bb0\u0bc8 \u0b86\u0ba4\u0bb0\u0bbf\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd.\n - \u0ba8\u0bbf\u0b95\u0bb4\u0bcd\u0b9a\u0bcd\u0b9a\u0bbf \u0ba8\u0bbf\u0bb0\u0bb2\u0bcd \u0bb5\u0bbf\u0b9f\u0bcd\u0b9a\u0bc6\u0b9f\u0bcd.\n - \u0b90.\u0b9a\u0bbf.\u0b8e\u0b9a\u0bcd \u0bb5\u0bb4\u0bbf\u0baf\u0bbe\u0b95 \u0b95\u0bbe\u0bb2\u0bc6\u0ba3\u0bcd\u0b9f\u0bb0\u0bcd\u0b95\u0bb3\u0bc8\u0baa\u0bcd \u0baa\u0b95\u0bbf\u0bb0\u0bcd\u0bb5\u0ba4\u0bc1 \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0b8e\u0b9a\u0bcd\u0b9f\u0bbf \u0b95\u0bbe\u0bb0\u0bcd\u0b9f\u0bbf\u0bb2\u0bbf\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 \u0b87\u0bb1\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0ba4\u0bbf/\u0b8f\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0ba4\u0bbf \u0b9a\u0bc6\u0baf\u0bcd\u0baf\u0bc1\u0bae\u0bcd \u0ba4\u0bbf\u0bb1\u0ba9\u0bcd \u0b86\u0b95\u0bbf\u0baf\u0bb5\u0bb1\u0bcd\u0bb1\u0bc8 \u0b86\u0ba4\u0bb0\u0bbf\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd.\n - \u0baa\u0ba9\u0bcd\u0bae\u0bca\u0bb4\u0bbf UI.\n\n \u0baa\u0bbf\u0bb4\u0bc8\u0b95\u0bb3\u0bcd \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0baa\u0bbf\u0ba9\u0bcd\u0ba9\u0bc2\u0b9f\u0bcd\u0b9f\u0b99\u0bcd\u0b95\u0bb3\u0bcd: https://github.com/etar-group/etar-calendar/issues\n \u0bae\u0bc2\u0bb2\u0b95\u0bcd \u0b95\u0bc1\u0bb1\u0bbf\u0baf\u0bc0\u0b9f\u0bc1: https://github.com/etar-group/etar-calendar\n",
+      "tr": "\u00d6zellikler:\n- Ayl\u0131k g\u00f6r\u00fcn\u00fcm.\n- Hafta, g\u00fcn ve ajanda g\u00f6r\u00fcn\u00fcm\u00fc.\n- Android takvim e\u015fzamanlamas\u0131n\u0131 kullan\u0131r.\n- Material tasar\u0131m.\n- Koyu ve a\u00e7\u0131k tema.\n- \u00c7evrim d\u0131\u015f\u0131 takvim deste\u011fi.\n- Ajanda widget'\u0131.\n- ICS arac\u0131l\u0131\u011f\u0131yla takvim payla\u015f\u0131m\u0131 ve SD karttan i\u00e7e/d\u0131\u015fa aktarma \u00f6zelli\u011fi.\n- \u00c7ok dilli kullan\u0131c\u0131 aray\u00fcz\u00fc.\n\nHata ve geri bildirimler i\u00e7in: https://github.com/Etar-Group/Etar-Calendar/issues\nKaynak kodu: https://github.com/Etar-Group/Etar-Calendar\n",
+      "uk": "\u041e\u0441\u043e\u0431\u043b\u0438\u0432\u043e\u0441\u0442\u0456:\n- \u041f\u0435\u0440\u0435\u0433\u043b\u044f\u0434 \u043c\u0456\u0441\u044f\u0446\u044f.\n- \u041f\u0435\u0440\u0435\u0433\u043b\u044f\u0434 \u0442\u0438\u0436\u043d\u044f, \u0434\u043d\u044f \u0442\u0430 \u043f\u043e\u0440\u044f\u0434\u043a\u0443 \u0434\u0435\u043d\u043d\u043e\u0433\u043e.\n- \u0412\u0438\u043a\u043e\u0440\u0438\u0441\u0442\u043e\u0432\u0443\u0454 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0456\u0437\u0430\u0446\u0456\u044e \u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440\u044f Android.\n- Material Design.\n- \u0422\u0435\u043c\u043d\u0430 \u0456 \u0441\u0432\u0456\u0442\u043b\u0430 \u0442\u0435\u043c\u0438.\n- \u041f\u0456\u0434\u0442\u0440\u0438\u043c\u043a\u0430 \u043e\u0444\u043b\u0430\u0439\u043d-\u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440\u044f.\n- \u0412\u0456\u0434\u0436\u0435\u0442 \u0440\u043e\u0437\u043a\u043b\u0430\u0434\u0443.\n- \u041f\u0456\u0434\u0442\u0440\u0438\u043c\u043a\u0430 \u0441\u043f\u0456\u043b\u044c\u043d\u043e\u0433\u043e \u0432\u0438\u043a\u043e\u0440\u0438\u0441\u0442\u0430\u043d\u043d\u044f \u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440\u0456\u0432 \u0447\u0435\u0440\u0435\u0437 ICS \u0456 \u043c\u043e\u0436\u043b\u0438\u0432\u0456\u0441\u0442\u044c \u0456\u043c\u043f\u043e\u0440\u0442\u0443/\u0435\u043a\u0441\u043f\u043e\u0440\u0442\u0443 \u0437 SD-\u043a\u0430\u0440\u0442\u0438.\n- \u0411\u0430\u0433\u0430\u0442\u043e\u043c\u043e\u0432\u043d\u0438\u0439 \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u0446\u044c\u043a\u0438\u0439 \u0456\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441.\n\n\u0412\u0430\u0434\u0438 \u0442\u0430 \u0432\u0456\u0434\u0433\u0443\u043a\u0438: https://github.com/Etar-Group/Etar-Calendar/issues\n\u041f\u043e\u0447\u0430\u0442\u043a\u043e\u0432\u0438\u0439 \u043a\u043e\u0434: https://github.com/Etar-Group/Etar-Calendar\n",
+      "vi": "T\u00ednh n\u0103ng:\n- Ki\u1ec3u xem th\u00e1ng.\n- Ki\u1ec3u xem tu\u1ea7n, ng\u00e0y v\u00e0 l\u1ecbch bi\u1ec3u.\n- S\u1eed d\u1ee5ng \u0111\u1ed3ng b\u1ed9 l\u1ecbch Android.\n- Thi\u1ebft k\u1ebf V\u1eadt li\u1ec7u.\n- Ch\u1ee7 \u0111\u1ec1 t\u1ed1i v\u00e0 s\u00e1ng.\n- Mi\u1ec5n ph\u00ed, ngu\u1ed3n m\u1edf v\u00e0 ho\u00e0n to\u00e0n kh\u00f4ng c\u00f3 qu\u1ea3ng c\u00e1o.\n- H\u1ed7 tr\u1ee3 chia s\u1ebb l\u1ecbch qua ICS v\u00e0 kh\u1ea3 n\u0103ng nh\u1eadp/xu\u1ea5t t\u1eeb th\u1ebb SD.\n- Giao di\u1ec7n ng\u01b0\u1eddi d\u00f9ng \u0111a ng\u00f4n ng\u1eef.\n\nL\u1ed7i v\u00e0 ph\u1ea3n h\u1ed3i: https://github.com/Etar-Group/Etar-Calendar/issues\nM\u00e3 ngu\u1ed3n: https://github.com/Etar-Group/Etar-Calendar\n",
+      "zh-CN": "\u7279\u70b9\uff1a\n- \u6708\u89c6\u56fe\n- \u5468\u89c6\u56fe\u3001\u65e5\u89c6\u56fe\u548c\u65e5\u7a0b\u89c6\u56fe\n- \u4f7f\u7528 Android \u65e5\u5386\u540c\u6b65\u663e\u793a\u6240\u6709\u5df2\u540c\u6b65\u7684\u65e5\u5386\n- \u8d28\u611f\u8bbe\u8ba1\n- \u6df1\u8272\u4e3b\u9898\u3001\u6d45\u8272\u4e3b\u9898\n- \u652f\u6301\u79bb\u7ebf\u65e5\u5386\n- \u65e5\u7a0b\u5c0f\u90e8\u4ef6\n- \u652f\u6301\u901a\u8fc7 ics \u6587\u4ef6\u5171\u4eab\u65e5\u5386\u4ee5\u53ca\u4ece SD \u5361\u5bfc\u5165 / \u5bfc\u51fa\n- \u591a\u8bed\u8a00\u652f\u6301\n\n\u9519\u8bef\u548c\u53cd\u9988: https://github.com/Etar-Group/Etar-Calendar/issues\n\u6e90\u4ee3\u7801: https://github.com/Etar-Group/Etar-Calendar\n"
+    },
+    "featureGraphic": {
+      "ar-AR": {
+        "name": "/ws.xsoh.etar/ar-AR/featureGraphic_FihkQc_OH5fHqTp6MIIbCr_kbmr5_FnaeAHAkZkYFQE=.png",
+        "sha256": "16286441cfce1f97c7a93a7a30821b0abfe46e6af9fc59da7801c09199181501",
+        "size": 244009
+      },
+      "en-US": {
+        "name": "/ws.xsoh.etar/en-US/featureGraphic_VR6kqRdJXrz_ZQbHQDDrk39071jRt4_A7LTz7UjYhUA=.png",
+        "sha256": "551ea4a917495ebcff6506c74030eb937f74ef58d1b78fc0ecb4f3ed48d88540",
+        "size": 251216
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/ws.xsoh.etar/en-US/icon_MV5P0hb85YWVJIfobFH46J3yDwLvde2IRXbFLfH133s=.png",
+        "sha256": "315e4fd216fce585952487e86c51f8e89df20f02ef75ed884576c52df1f5df7b",
+        "size": 24782
+      }
+    },
+    "issueTracker": "https://github.com/Etar-Group/Etar-Calendar/issues",
+    "lastUpdated": 1776805218507,
+    "license": "GPL-3.0-only",
+    "name": {
+      "ar-AR": "\u062a\u0642\u0648\u064a\u0645 \u0625\u0650\u064a\u062a\u0627\u0631",
+      "bg": "Etar \u2013 \u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440 \u0441 \u043e\u0442\u0432\u043e\u0440\u0435\u043d \u043a\u043e\u0434",
+      "ca": "Etar - Calendari Codi Obert",
+      "ckb": "\u0626\u06ce\u062a\u0627\u0631 - \u0633\u0627\u06b5\u0646\u0627\u0645\u06d5\u06cc\u06d5\u06a9\u06cc \u0633\u06d5\u0631\u0686\u0627\u0648\u06d5 \u06a9\u0631\u0627\u0648\u06d5\u06cc\u06d5",
+      "cs": "Etar \u2013 open-source kalend\u00e1\u0159",
+      "de-DE": "Etar - OpenSource Kalender",
+      "en-US": "Etar - OpenSource Calendar",
+      "eo": "Etar - Kalendaro malfermafonta",
+      "es-ES": "Etar - OpenSource Calendario",
+      "et": "Etar - Avatud koodiga kalender",
+      "eu": "Etar - Kode irekiko egutegia",
+      "fr-FR": "Etar\u00a0\u2013\u00a0Calendrier libre",
+      "he": "Etar - \u05dc\u05d5\u05d7 \u05e9\u05e0\u05d4 \u05d1\u05e7\u05d5\u05d3 \u05e4\u05ea\u05d5\u05d7",
+      "hr": "Etar \u2013 Kalendar otvorenog koda",
+      "id": "Etar - Kalender Sumber Terbuka",
+      "it-IT": "Etar - Calendario open source",
+      "ja": "Etar - \u30aa\u30fc\u30d7\u30f3\u30bd\u30fc\u30b9\u306e\u30ab\u30ec\u30f3\u30c0\u30fc\u30a2\u30d7\u30ea",
+      "kab": "Etar - Awitay n u\u0263balu yeldin",
+      "ko": "Etar - \uc624\ud508\uc18c\uc2a4 \uce98\ub9b0\ub354",
+      "nb-NB": "Etar - OpenSource Calendar",
+      "nl": "Etar - Open-source agenda",
+      "nn": "Etar - Fri og open kalender",
+      "pl": "Etar - Kalendarz OpenSource",
+      "pt-BR": "Etar - Calend\u00e1rio Open-Source",
+      "qpv": "Etar - OpenSource wa Dagtumam",
+      "ro-RO": "Etar - Calendarul OpenSource",
+      "ru-RU": "Etar \u2014 FOSS-\u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440\u044c",
+      "sk": "Etar - OpenSource Kalend\u00e1r",
+      "sl": "Etar - Odprtokodni koledar",
+      "sv": "Etar - OpenSource-kalender",
+      "ta-IN": "Ater - opensource \u0b95\u0bbe\u0bb2\u0ba3\u0bcd\u0b9f\u0bb0\u0bcd",
+      "tr": "Etar - A\u00e7\u0131k Kaynak Takvim",
+      "uk": "Etar - \u0432\u0456\u043b\u044c\u043d\u0438\u0439 \u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440",
+      "vi": "Etar - L\u1ecbch ngu\u1ed3n m\u1edf",
+      "zgh": "\u2d49\u2d5c\u2d30\u2d54 -\u2d30\u2d59\u2d4e\u2d4d\u2d53\u2d59\u2d59\u2d30 \u2d49\u2d4d\u2d3b\u2d4d\u2d4d\u2d49",
+      "zh-CN": "Etar - \u5f00\u6e90\u65e5\u5386"
+    },
+    "preferredSigner": "3f3176c3ce189c98054ff9e1d32daecf00a41572f4c7bd2b2f80607252ddb06e",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/ws.xsoh.etar/en-US/phoneScreenshots/p1.png",
+            "sha256": "ba0636261cdc1ce6c00164c3318c5a084c8bff84f4f0ef467b99b10bee34b7fc",
+            "size": 147379
+          },
+          {
+            "name": "/ws.xsoh.etar/en-US/phoneScreenshots/p2.png",
+            "sha256": "566c516e5b9d959bc4666bcb9944feb4f204e0eb6a64a8ca448b566c709ee3d8",
+            "size": 83237
+          },
+          {
+            "name": "/ws.xsoh.etar/en-US/phoneScreenshots/p3.png",
+            "sha256": "29887fb80a5b78194cf9eb4313e4929a3f2af6bfb82c2e10f1bedb12e53194be",
+            "size": 133459
+          },
+          {
+            "name": "/ws.xsoh.etar/en-US/phoneScreenshots/p4.png",
+            "sha256": "d98839afd24cadd9c00b5ddb5fd0bc7e142f3679086c8d5ada427bc83af8fd2f",
+            "size": 145107
+          },
+          {
+            "name": "/ws.xsoh.etar/en-US/phoneScreenshots/p5.png",
+            "sha256": "8fc2ed68b235a1dcd18daf36c17e42d9e02cd13d1c90565ccc8a88313774d648",
+            "size": 143396
+          },
+          {
+            "name": "/ws.xsoh.etar/en-US/phoneScreenshots/t1.png",
+            "sha256": "5db40358b8299f63d1cf6869bd56941bbf23bbf0295753d5987cd1c4ab15b54a",
+            "size": 72714
+          },
+          {
+            "name": "/ws.xsoh.etar/en-US/phoneScreenshots/t2.png",
+            "sha256": "4d58d9c236b7758065381db0e32d9b11f532c946b4387abb42518dd90f7c3fd1",
+            "size": 67389
+          },
+          {
+            "name": "/ws.xsoh.etar/en-US/phoneScreenshots/t3.png",
+            "sha256": "41efa5b8592f7b8b7d906aa257a948bc9734c0f5d27dede008982069ab15aef6",
+            "size": 100460
+          },
+          {
+            "name": "/ws.xsoh.etar/en-US/phoneScreenshots/t4.png",
+            "sha256": "c4d16e8eab9928009a622eb3ace6057e62c81c9a722d0442e50b9eb27d394778",
+            "size": 88174
+          },
+          {
+            "name": "/ws.xsoh.etar/en-US/phoneScreenshots/t5.png",
+            "sha256": "eb1fc00ad35c36886484ac01f15012bcb4e430e190db75c9a400ccb88b230f8b",
+            "size": 151891
+          }
+        ]
+      },
+      "tenInch": {
+        "en-US": [
+          {
+            "name": "/ws.xsoh.etar/en-US/tenInchScreenshots/1.png",
+            "sha256": "05d8ff90cd9e99f1a9c8fd3711e31b2172cd7c33d37dbc81df51116d681f241e",
+            "size": 121756
+          },
+          {
+            "name": "/ws.xsoh.etar/en-US/tenInchScreenshots/2.png",
+            "sha256": "9057a72c0e847b14454dbf1e99094ecec8192e53d51ce2ca45141ba55e2c316c",
+            "size": 117885
+          },
+          {
+            "name": "/ws.xsoh.etar/en-US/tenInchScreenshots/3.png",
+            "sha256": "081661d5dde8ed4a44102c24ba3a41889091b3ad7758be1e44e3535800ac8dbe",
+            "size": 168197
+          },
+          {
+            "name": "/ws.xsoh.etar/en-US/tenInchScreenshots/4.png",
+            "sha256": "88c4611de02001ccaf0c1fc620117ae52670998c79d0d4c40ea80cfcf6aa8721",
+            "size": 113209
+          },
+          {
+            "name": "/ws.xsoh.etar/en-US/tenInchScreenshots/5.png",
+            "sha256": "960c12327b7e115b1ff5e0f9e42d12e9c6d0d7e7195e4e4850cd9bd72a2ff50b",
+            "size": 103851
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/Etar-Group/Etar-Calendar",
+    "summary": {
+      "af": "Etar is materiaal ontwerp open source kalender, vir almal!",
+      "am": "Etar \u1241\u1233\u12ca \u1208\u1201\u1209\u121d \u1230\u12cd \u12ad\u134d\u1275 \u121d\u1295\u132d \u12e8\u1240\u1295 \u1218\u1241\u1320\u122a\u12eb \u1273\u1235\u1266 \u12e8\u1270\u12d8\u130b\u1300 \u1290\u12cd!",
+      "ar-AR": "\u0625\u0650\u064a\u0650\u062a\u064e\u0627\u0631\u060c \u062a\u0642\u0648\u064a\u0645 \u0645\u0641\u062a\u0648\u062d \u0627\u0644\u0645\u0635\u062f\u0631 \u0644\u0644\u062c\u0645\u064a\u0639!",
+      "bg": "Etar \u0435 \u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440 \u0437\u0430 \u0432\u0441\u0438\u0447\u043a\u0438 \u0432 \u0441\u0442\u0438\u043b\u0430 \u043d\u0430 material design \u0441 \u043e\u0442\u0432\u043e\u0440\u0435\u043d \u043a\u043e\u0434!",
+      "ca": "Etar \u00e9s el material dissenyat calendari de codi obert, per a tothom!",
+      "cs": "Etar je open-source kalend\u00e1\u0159 s Material Designem, ur\u010den\u00fd pro ka\u017ed\u00e9ho!",
+      "da": "ETAR er materiale designet open source kalender, for alle!",
+      "de-DE": "Etar ist ein im Material Design gestalteter open source Kalender f\u00fcr jedermann!",
+      "el": "Etar \u03b5\u03af\u03bd\u03b1\u03b9 \u03c5\u03bb\u03b9\u03ba\u03cc \u03c3\u03c7\u03b5\u03b4\u03b9\u03b1\u03c3\u03bc\u03ad\u03bd\u03bf \u03b7\u03bc\u03b5\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf \u03b1\u03bd\u03bf\u03b9\u03ba\u03c4\u03bf\u03cd \u03ba\u03ce\u03b4\u03b9\u03ba\u03b1, \u03b3\u03b9\u03b1 \u03cc\u03bb\u03bf\u03c5\u03c2!",
+      "en-US": "Etar is a material designed open source calendar, for everyone!",
+      "eo": "Etar estas kalendaro malfermita-fonta fasonite per Material, por \u0109iu!",
+      "es-ES": "Etar es un calendario en material design, para todos!",
+      "et": "Material Designi kasutav tuletis Androidi lihtsast kalendrist",
+      "eu": "Etar material design erabiltzen duen kode irekiko egutegia da, denontzat!",
+      "fi": "Etar on materiaali suunniteltu avoimen l\u00e4hdekoodin kalenteri, kaikille!",
+      "fr-FR": "Etar est l'agenda Material design et open source pour tous !",
+      "he": "Etar \u05d4\u05d5\u05d0 \u05dc\u05d5\u05d7 \u05e9\u05e0\u05d4 \u05d1\u05e7\u05d5\u05d3 \u05d1\u05e4\u05ea\u05d5\u05d7 \u05d1\u05e2\u05d9\u05e6\u05d5\u05d1 \u05de\u05d8\u05e8\u05d9\u05d0\u05dc, \u05e2\u05d1\u05d5\u05e8 \u05db\u05d5\u05dc\u05dd!",
+      "hi": "Etar \u0938\u093e\u092e\u0917\u094d\u0930\u0940 \u0938\u092d\u0940 \u0915\u0947 \u0932\u093f\u090f \u0916\u0941\u0932\u093e \u0938\u094d\u0930\u094b\u0924 \u0915\u0948\u0932\u0947\u0902\u0921\u0930 \u092c\u0928\u093e\u092f\u093e \u0917\u092f\u093e \u0939\u0948!",
+      "hr": "Etar je kalendar otvorenog koda u material dizajnu, za svakoga!",
+      "hu": "Az alap androidos napt\u00e1r lesz\u00e1rmazottja, Material Design haszn\u00e1lat\u00e1val",
+      "id": "Etar adalah kalender \"material design\" bersumber terbuka untuk semua orang!",
+      "it-IT": "Etar \u00e8 un calendario in material design, per tutti!",
+      "ja": "Etar \u306f\u3059\u3079\u3066\u306e\u4eba\u306e\u305f\u3081\u306e\u3001\u30de\u30c6\u30ea\u30a2\u30eb\u30c7\u30b6\u30a4\u30f3\u306e\u30aa\u30fc\u30d7\u30f3\u30bd\u30fc\u30b9\u306e\u30ab\u30ec\u30f3\u30c0\u30fc\u3067\u3059\uff01",
+      "kab": "Etar d awitay n u\u0263balu yeldin yebnan \u0263ef Material design, i yal yiwen!",
+      "ko": "Etar\ub294 \ubaa8\ub450\ub97c \uc704\ud55c, material design\uc774 \uc801\uc6a9\ub41c \uc624\ud508\uc18c\uc2a4 \uce98\ub9b0\ub354\uc785\ub2c8\ub2e4!",
+      "lt": "Etar yra med\u017eiaga sukurta atviro kodo kalendori\u0173, visiems!",
+      "lv": "ETAR ir materi\u0101ls izstr\u0101d\u0101ta atv\u0113rt\u0101 koda kalend\u0101ru, ikvienam!",
+      "nb-NB": "Etar er en Material Design-kalender som passer for alle!",
+      "nl": "Etar is opensource kalender met Material Design vorm gegeven. Voor iedereen!",
+      "nn": "Etar er ein kalender med open kjeldekode og \u00abMaterial Design\u00bb, laga for alle.",
+      "pl": "Etar jest otwarto\u017ar\u00f3d\u0142owym kalendarzem z wygl\u0105dem Material Design, dla ka\u017cdego!",
+      "pt-BR": "Etar \u00e9 um calend\u00e1rio open-source em Material Design, para todos!",
+      "pt-PT": "Derivativo do calend\u00e1rio b\u00e1sico do Android com design Material",
+      "qpv": "Etar dagtumam per alzhin!",
+      "ro-RO": "Etar este un material proiectat calendar open source, pentru toat\u0103 lumea!",
+      "ru-RU": "Etar - \u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440\u044c \u0432 \u0441\u0442\u0438\u043b\u0435 material designed \u0441 \u043e\u0442\u043a\u0440\u044b\u0442\u044b\u043c \u0438\u0441\u0445\u043e\u0434\u043d\u044b\u043c \u043a\u043e\u0434\u043e\u043c \u0434\u043b\u044f \u0432\u0441\u0435\u0445!",
+      "sk": "Etar je materi\u00e1l navrhnut\u00fd open source kalend\u00e1r, pre ka\u017ed\u00e9ho!",
+      "sl": "ETAR materiala zasnovan odprto koledar vir za vsakogar!",
+      "sv": "Etar \u00e4r material som utformats \u00f6ppen k\u00e4llkod kalender, f\u00f6r alla!",
+      "sw": "Etar ni nyenzo iliyoundwa wazi chanzo kalenda, kwa kila mtu!",
+      "ta-IN": "\u0b8e\u0b9f\u0bcd\u0b9f\u0bbe\u0bb0\u0bcd \u0b8e\u0ba9\u0bcd\u0baa\u0ba4\u0bc1 \u0b85\u0ba9\u0bc8\u0bb5\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd \u0ba4\u0bbf\u0bb1\u0ba8\u0bcd\u0ba4 \u0bae\u0bc2\u0bb2 \u0b95\u0bbe\u0bb2\u0bc6\u0ba3\u0bcd\u0b9f\u0bb0\u0bcd \u0bb5\u0b9f\u0bbf\u0bb5\u0bae\u0bc8\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f \u0baa\u0bca\u0bb0\u0bc1\u0bb3\u0bcd!",
+      "th": "Etar \u0e44\u0e14\u0e49\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e2d\u0e2d\u0e01\u0e41\u0e1a\u0e1a\u0e27\u0e31\u0e2a\u0e14\u0e38\u0e1b\u0e0f\u0e34\u0e17\u0e34\u0e19\u0e21\u0e32\u0e40\u0e1b\u0e34\u0e14\u0e2a\u0e33\u0e2b\u0e23\u0e31\u0e1a\u0e17\u0e38\u0e01\u0e04\u0e19!",
+      "tr": "Etar, herkes i\u00e7in materyal tasar\u0131ml\u0131 a\u00e7\u0131k kaynak bir takvim!",
+      "uk": "Etar - \u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440 \u0437 \u0432\u0456\u0434\u043a\u0440\u0438\u0442\u0438\u043c \u043a\u043e\u0434\u043e\u043c \u0442\u0430 Material design, \u0434\u043b\u044f \u0432\u0441\u0456\u0445!",
+      "vi": "Etar l\u00e0 m\u1ed9t l\u1ecbch ngu\u1ed3n m\u1edf \u0111\u01b0\u1ee3c thi\u1ebft k\u1ebf ki\u1ec3u v\u1eadt li\u1ec7u d\u00e0nh cho t\u1ea5t c\u1ea3 m\u1ecdi ng\u01b0\u1eddi!",
+      "zh-CN": "Etar \u662f\u9075\u5faa\u8d28\u611f\u8bbe\u8ba1\u7684\u5f00\u6e90\u65e5\u5386\uff0c\u9002\u7528\u4e8e\u6240\u6709\u4eba\uff01"
+    },
+    "translation": "https://hosted.weblate.org/projects/etar-calendar/strings/"
+  },
+  "version": {
+    "added": 1776805218507,
+    "file": {
+      "ipfsCIDv1": "bafybeieyps4alzy2oaq2zvyevnrhvjintzwh5y6ljbtvqg323646d5jdfi",
+      "name": "/ws.xsoh.etar_55.apk",
+      "sha256": "507ff8a1a02cfcdbeca1fedcb1d90f162ca315a1fb5fc40d52f3504e1099d73c",
+      "size": 8790751
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "3f3176c3ce189c98054ff9e1d32daecf00a41572f4c7bd2b2f80607252ddb06e"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.GET_ACCOUNTS"
+        },
+        {
+          "name": "android.permission.VIBRATE"
+        },
+        {
+          "name": "android.permission.READ_CONTACTS"
+        },
+        {
+          "name": "android.permission.READ_CALENDAR"
+        },
+        {
+          "name": "android.permission.WRITE_CALENDAR"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.READ_SYNC_SETTINGS"
+        },
+        {
+          "name": "android.permission.WRITE_SYNC_SETTINGS"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED"
+        },
+        {
+          "name": "android.permission.SCHEDULE_EXACT_ALARM"
+        },
+        {
+          "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "ws.xsoh.etar.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 23,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 55,
+      "versionName": "1.0.55"
+    },
+    "src": {
+      "name": "/ws.xsoh.etar_55_src.tar.gz",
+      "sha256": "f17e6f1056edb781580b39f5515518a99ab5cd6a3d92e692ae6f58339f05b782",
+      "size": 3621105
+    },
+    "whatsNew": {
+      "en-US": "- Revert Load events when scrolling in month view\n- Revert Add stacked events\n- Bugfixes\n"
+    }
+  }
+}

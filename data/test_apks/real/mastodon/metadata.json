@@ -1,0 +1,64 @@
+{
+  "apk": {
+    "expected_sha256": "9164339d92315e4b8101ee2c7a6ba9c83cd44bef73b0ddf0c88c663d3a000518",
+    "index_size": 4795738,
+    "path": "data/test_apks/real/mastodon/mastodon.apk",
+    "sha256": "9164339d92315e4b8101ee2c7a6ba9c83cd44bef73b0ddf0c88c663d3a000518",
+    "size": 4795738,
+    "url": "https://f-droid.org/repo/org.joinmastodon.android_182.apk"
+  },
+  "app": "Mastodon",
+  "categories": [
+    "Connectivity",
+    "Internet",
+    "Multimedia",
+    "Social Network"
+  ],
+  "classifications": [
+    "clean-candidate",
+    "no-native",
+    "internet",
+    "social-network",
+    "modern-source",
+    "source-linked"
+  ],
+  "fdroid_package_url": "https://f-droid.org/packages/org.joinmastodon.android/",
+  "license": "GPL-3.0-only",
+  "metric_eligibility": "excluded-from-source-validated-metrics",
+  "native_code": [],
+  "package_name": "org.joinmastodon.android",
+  "proof_status": "report-generated",
+  "reason": "No-native modern social app with source tarball metadata and a likely non-trivial AndroidX/Kotlin dependency surface despite a smaller APK.",
+  "report": {
+    "detected_component_count": 0,
+    "dex_file_count": 2,
+    "dir": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-mastodon",
+    "error": null,
+    "has_multidex": true,
+    "html": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-mastodon/report.html",
+    "json": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-mastodon/report.json",
+    "native_library_count": 0,
+    "obfuscation_risk": {
+      "level": "low",
+      "reasons": [
+        "Structural evidence is stronger than package-name evidence."
+      ],
+      "score": 0.2
+    },
+    "sbom": "data/results/evaluation/clean-real-apk-candidate-sweep-v7/report-real-mastodon/sbom.cdx.json",
+    "sbom_component_count": 0,
+    "status": "ok"
+  },
+  "slug": "mastodon",
+  "source_repo": "https://github.com/mastodon/mastodon-android",
+  "source_tarball": {
+    "sha256": "11717fc26380a8f238ba7d66eaadc9075a6f418c3ede783b9148d88400e4b12a",
+    "size": 13417449,
+    "url": "https://f-droid.org/repo/org.joinmastodon.android_182_src.tar.gz"
+  },
+  "status": "ok",
+  "target_layer": "source-validated-real",
+  "validation_level": "L3-report-with-source-link",
+  "version_code": 182,
+  "version_name": "2.12.3"
+}

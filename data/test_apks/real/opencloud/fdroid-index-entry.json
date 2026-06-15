@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "added": 1758804689000,
+    "categories": [
+      "Cloud Storage & File Sync",
+      "Internet"
+    ],
+    "description": {
+      "en-US": "Excellent file management and collaboration for public authorities, providers and business \u2013 or anyone who values ease of use and digital sovereignty.\n\nFile Sync & Share\nChanges to documents are synchronized in real time, ensuring all team members always have access to the latest version.\n\nWorkspaces\nCreate data rooms that enable access for all team members and promote efficient collaboration. Files and folders can be organized, managed and securely shared in these central areas.\n\nSmart Search\nThe full-text and metadata search allows you to browse through all documents and files, quickly discovering relevant information. Whether you\u2019re searching for specific terms within the text or metadata such as creation date or author, finding what you need is effortless.\n\nWeb Office\nWith OpenCloud's integrated office applications, teams can work on documents in real time \u2013 whether it\u2019s text, spreadsheets, or presentations.\n"
+    },
+    "featureGraphic": {
+      "en-US": {
+        "name": "/eu.opencloud.android/en-US/featureGraphic_ZKyk1zYSJbNy0E1ZxTkFOGpRx_DYGNjZCL-GJ3jGLuE=.png",
+        "sha256": "64aca4d7361225b372d04d59c53905386a51c7f0d818d8d908bf862778c62ee1",
+        "size": 234237
+      }
+    },
+    "icon": {
+      "en-US": {
+        "name": "/eu.opencloud.android/en-US/icon_9hVfaNnBMjxsxzglyZdqkjDYzQJmCM8dCIX5GyBa6mM=.png",
+        "sha256": "f6155f68d9c1323c6cc73825c9976a9230d8cd026608cf1d0885f91b205aea63",
+        "size": 22326
+      }
+    },
+    "issueTracker": "https://github.com/opencloud-eu/android/issues",
+    "lastUpdated": 1779525379559,
+    "license": "GPL-2.0-only",
+    "name": {
+      "en-US": "OpenCloud"
+    },
+    "preferredSigner": "a25a9fe964e9d97a2cb1aed14851988c94457f5c3db3fd93d45a9549b6a59f3c",
+    "screenshots": {
+      "phone": {
+        "en-US": [
+          {
+            "name": "/eu.opencloud.android/en-US/phoneScreenshots/1.png",
+            "sha256": "bcbc6f714703327a35767c80eabfcce8acd72906fbae7efd48cab02f9798af5d",
+            "size": 1702976
+          },
+          {
+            "name": "/eu.opencloud.android/en-US/phoneScreenshots/2.png",
+            "sha256": "d2672e8388733a621f803a5e5fab93c752dd68c7c5186ef46d01351fbec9aa27",
+            "size": 288546
+          },
+          {
+            "name": "/eu.opencloud.android/en-US/phoneScreenshots/3.png",
+            "sha256": "881c736d833d88d8cdfa9bddbc3f1ed65dbf729023aa557d91249ddb737ef008",
+            "size": 257574
+          },
+          {
+            "name": "/eu.opencloud.android/en-US/phoneScreenshots/4.png",
+            "sha256": "7afc48ecf800e1c8dd0506edcd66a08f8882c5424a0f1d3380a6aadd33c9e3d6",
+            "size": 355158
+          },
+          {
+            "name": "/eu.opencloud.android/en-US/phoneScreenshots/5.png",
+            "sha256": "785fd102de48d9aa557501801f78f14e6d831e9379fc5db71a108e33775b2810",
+            "size": 393968
+          },
+          {
+            "name": "/eu.opencloud.android/en-US/phoneScreenshots/6.png",
+            "sha256": "7e0dd9055ca1265a8183b2bd3df2303fd1315cbd7f724594258f8bdf39c2013a",
+            "size": 414272
+          },
+          {
+            "name": "/eu.opencloud.android/en-US/phoneScreenshots/7.png",
+            "sha256": "018f244e0aa42ecf0ea21e20e60181682b2834a5fc4a81d15b95fb52c305f024",
+            "size": 336112
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/opencloud-eu/android",
+    "summary": {
+      "en-US": "File Sync, Workspaces, Smart Search & Web Office"
+    },
+    "webSite": "https://opencloud.eu"
+  },
+  "version": {
+    "added": 1779525379559,
+    "file": {
+      "ipfsCIDv1": "bafybeifkl65q4ghtpnvlsqflvbcl3b7k5tppt6uokky7codhttdabajbsa",
+      "name": "/eu.opencloud.android_9.apk",
+      "sha256": "8e6687fd840ddd5b8d048dfbd1f1fc909e5246ffdaafc3add84645bb41fe8a1f",
+      "size": 12275723
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "a25a9fe964e9d97a2cb1aed14851988c94457f5c3db3fd93d45a9549b6a59f3c"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.READ_SYNC_STATS"
+        },
+        {
+          "name": "android.permission.READ_SYNC_SETTINGS"
+        },
+        {
+          "name": "android.permission.WRITE_SYNC_SETTINGS"
+        },
+        {
+          "name": "android.permission.BROADCAST_STICKY"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+        },
+        {
+          "name": "android.permission.REORDER_TASKS"
+        },
+        {
+          "name": "android.permission.USE_BIOMETRIC"
+        },
+        {
+          "name": "android.permission.USE_FINGERPRINT"
+        },
+        {
+          "name": "eu.opencloud.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        },
+        {
+          "name": "android.permission.READ_EXTERNAL_STORAGE"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 35
+      },
+      "versionCode": 9,
+      "versionName": "1.2.3"
+    },
+    "src": {
+      "name": "/eu.opencloud.android_9_src.tar.gz",
+      "sha256": "d883ccd2b03a2f904a23c1abeb31bfce9a177cac65cd59697307c8f2e1ab25ad",
+      "size": 6691959
+    }
+  }
+}

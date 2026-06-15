@@ -1,0 +1,226 @@
+{
+  "metadata": {
+    "added": 1779353198872,
+    "authorEmail": "website-tutorials@gmx.de",
+    "authorName": "Georg Schierholt",
+    "authorWebSite": "https://github.com/ThothDroid",
+    "categories": [
+      "Reading",
+      "Science & Education",
+      "Writing"
+    ],
+    "changelog": "https://github.com/ThothDroid/Egyptian_Writer/releases",
+    "description": {
+      "de-DE": "Eine einfache Android-App um alt\u00e4gyptische Texte anzuzeigen, zu schreiben und zu exportieren. Diese App unterst\u00fctzt das professionelle Schreiben alt\u00e4gyptischer Texte unter Verwendung von <a href=\"https://en.wikipedia.org/wiki/Manuel_de_Codage\">Manuel-de-Codage</a>-Standards.\nSchreibe antike Texte und st\u00f6bere auf deinem Tablet oder Smartphone durch alle verf\u00fcgbaren Hieroglyphen.\n\nDerzeit werden vier grundlegende Konzepte des MdC-Codes unterst\u00fctzt:\n<ul>\n<li><b>:</b> : Um Zeichen vertikal anzuordnen</li>\n<li><b>*</b> : Um Zeichen horizontal anzuordnen</li>\n<li><b>()</b> : Um Zeichen zu gruppieren</li>\n<li><b>!</b> und <b>!!</b> : Um einen Zeilenumbruch einzuf\u00fcgen</li>\n</ul>",
+      "en-US": "This is a simple Android app for viewing, creating and exporting ancient Egyptian hieroglyphs. This app supports the professional writing of hieroglyphs using the Manuel de Codage.\nWrite ancient texts and browse all the avaible hieroglyphs on your tablet or phone.\n\nCurrently, the app supports four basic MdC code concepts\n<ul>\n<li><b>:</b> : To align signs vertically</li>\n<li><b>*</b> : To align signs horizontally</li>\n<li><b>()</b> : To group signs</li>\n<li><b>!</b> and <b>!!</b> : To do a line break</li>\n</ul>"
+    },
+    "featureGraphic": {
+      "de-DE": {
+        "name": "/com.blueapps.egyptianwriter/de-DE/featureGraphic_rFNiR97sTbWnJzPDuUzxizcjGDyjoHh_-07vg93JCNU=.png",
+        "sha256": "ac536247deec4db5a72733c3b94cf18b3723183ca3a0787ffb4eef83ddc908d5",
+        "size": 540533
+      },
+      "en-US": {
+        "name": "/com.blueapps.egyptianwriter/en-US/featureGraphic_rFNiR97sTbWnJzPDuUzxizcjGDyjoHh_-07vg93JCNU=.png",
+        "sha256": "ac536247deec4db5a72733c3b94cf18b3723183ca3a0787ffb4eef83ddc908d5",
+        "size": 540533
+      }
+    },
+    "icon": {
+      "de-DE": {
+        "name": "/com.blueapps.egyptianwriter/de-DE/icon_LYTAai6CtskJr8PcOtoojvI-cxnOBX-NAbyqYNjRsC8=.png",
+        "sha256": "2d84c06a2e82b6c909afc3dc3ada288ef23e7319ce057f8d01bcaa60d8d1b02f",
+        "size": 714173
+      },
+      "en-US": {
+        "name": "/com.blueapps.egyptianwriter/en-US/icon_LYTAai6CtskJr8PcOtoojvI-cxnOBX-NAbyqYNjRsC8=.png",
+        "sha256": "2d84c06a2e82b6c909afc3dc3ada288ef23e7319ce057f8d01bcaa60d8d1b02f",
+        "size": 714173
+      }
+    },
+    "issueTracker": "https://github.com/ThothDroid/Egyptian_Writer/issues",
+    "lastUpdated": 1779353198872,
+    "license": "GPL-3.0-only",
+    "name": {
+      "de-DE": "Egyptian Writer",
+      "en-US": "Egyptian Writer"
+    },
+    "preferredSigner": "c865a9960ea8cf2bae0ea5ce7594d05727efef760f0cae3b92b24316ebb0dd80",
+    "screenshots": {
+      "phone": {
+        "de-DE": [
+          {
+            "name": "/com.blueapps.egyptianwriter/de-DE/phoneScreenshots/1.png",
+            "sha256": "69f6393ff67fdcbd555ead7ea80a5ef6b03ad38b3dfd81cfe7bed22559ba6519",
+            "size": 77937
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/de-DE/phoneScreenshots/2.png",
+            "sha256": "356548aa9d5abe4350e06483eee3a55a84d95cd1f467261611a10307500149ce",
+            "size": 78793
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/de-DE/phoneScreenshots/3.png",
+            "sha256": "13fbb90de1a7570f9ba765d03f53f5033546aa43ac72cd4a2042db7596f9a183",
+            "size": 246386
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/de-DE/phoneScreenshots/4.png",
+            "sha256": "3450136bbe4fef73abd9c3ebe339b82deea9396d44b9a0093381155e256d69c3",
+            "size": 375826
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/de-DE/phoneScreenshots/5.png",
+            "sha256": "e78e462370ad34093b6f8c0436bfeae8600a850473b8b985135f003b2892cd4f",
+            "size": 493905
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/de-DE/phoneScreenshots/6.png",
+            "sha256": "3f14e2388be801c8fa48d685abcf75a2c3a0fca3acf1f2f91839eaacb66bf7df",
+            "size": 299750
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/com.blueapps.egyptianwriter/en-US/phoneScreenshots/1.png",
+            "sha256": "69f6393ff67fdcbd555ead7ea80a5ef6b03ad38b3dfd81cfe7bed22559ba6519",
+            "size": 77937
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/en-US/phoneScreenshots/2.png",
+            "sha256": "356548aa9d5abe4350e06483eee3a55a84d95cd1f467261611a10307500149ce",
+            "size": 78793
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/en-US/phoneScreenshots/3.png",
+            "sha256": "13fbb90de1a7570f9ba765d03f53f5033546aa43ac72cd4a2042db7596f9a183",
+            "size": 246386
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/en-US/phoneScreenshots/4.png",
+            "sha256": "3450136bbe4fef73abd9c3ebe339b82deea9396d44b9a0093381155e256d69c3",
+            "size": 375826
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/en-US/phoneScreenshots/5.png",
+            "sha256": "e78e462370ad34093b6f8c0436bfeae8600a850473b8b985135f003b2892cd4f",
+            "size": 493905
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/en-US/phoneScreenshots/6.png",
+            "sha256": "3f14e2388be801c8fa48d685abcf75a2c3a0fca3acf1f2f91839eaacb66bf7df",
+            "size": 299750
+          }
+        ]
+      },
+      "tenInch": {
+        "de-DE": [
+          {
+            "name": "/com.blueapps.egyptianwriter/de-DE/tenInchScreenshots/1.png",
+            "sha256": "0a37378655f39fd9898338afec7515e41c3136e3334bd89f30c350069823261d",
+            "size": 67774
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/de-DE/tenInchScreenshots/2.png",
+            "sha256": "ab11f48188a3ac8bc0d89a967d879e100a36d1978e1d56dbceee7320796f0d11",
+            "size": 69594
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/de-DE/tenInchScreenshots/3.png",
+            "sha256": "eb8e45340c03ad60e0e1a505a49a8ace0a2b8fcf60893291ad0765803151e4c4",
+            "size": 215269
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/de-DE/tenInchScreenshots/4.png",
+            "sha256": "796ddc4c6aab6612fa3917a2eff111c29209abe61228838023fe0e8ff5873157",
+            "size": 783983
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/de-DE/tenInchScreenshots/5.png",
+            "sha256": "067001636beecc88ac6da94ebb413d4f01ef45c920817119ae2fe531c03c71cb",
+            "size": 258764
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/de-DE/tenInchScreenshots/6.png",
+            "sha256": "368b36a3753c1c4619e5aa00a8288b2679d05083febfb35b453c6fb292d94dbf",
+            "size": 376020
+          }
+        ],
+        "en-US": [
+          {
+            "name": "/com.blueapps.egyptianwriter/en-US/tenInchScreenshots/1.png",
+            "sha256": "0a37378655f39fd9898338afec7515e41c3136e3334bd89f30c350069823261d",
+            "size": 67774
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/en-US/tenInchScreenshots/2.png",
+            "sha256": "ab11f48188a3ac8bc0d89a967d879e100a36d1978e1d56dbceee7320796f0d11",
+            "size": 69594
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/en-US/tenInchScreenshots/3.png",
+            "sha256": "eb8e45340c03ad60e0e1a505a49a8ace0a2b8fcf60893291ad0765803151e4c4",
+            "size": 215269
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/en-US/tenInchScreenshots/4.png",
+            "sha256": "796ddc4c6aab6612fa3917a2eff111c29209abe61228838023fe0e8ff5873157",
+            "size": 783983
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/en-US/tenInchScreenshots/5.png",
+            "sha256": "067001636beecc88ac6da94ebb413d4f01ef45c920817119ae2fe531c03c71cb",
+            "size": 258764
+          },
+          {
+            "name": "/com.blueapps.egyptianwriter/en-US/tenInchScreenshots/6.png",
+            "sha256": "368b36a3753c1c4619e5aa00a8288b2679d05083febfb35b453c6fb292d94dbf",
+            "size": 376020
+          }
+        ]
+      }
+    },
+    "sourceCode": "https://github.com/ThothDroid/Egyptian_Writer",
+    "summary": {
+      "de-DE": "Alt\u00e4gyptische Texte anzeigen, schreiben und exportieren.",
+      "en-US": "View, write and export ancient Egyptian texts."
+    },
+    "translation": "https://crowdin.com/project/egyptian-writer"
+  },
+  "version": {
+    "added": 1779353198872,
+    "file": {
+      "ipfsCIDv1": "bafybeibt5xglqjsg6bpztocpvs2u3o7z6ahpep2n3yw4hgmrgshsw4gzki",
+      "name": "/com.blueapps.egyptianwriter_10.apk",
+      "sha256": "356f25918cc404f7253492ec7093bfd48cbfe15348b13b25d6630b9dcb5ee589",
+      "size": 27627515
+    },
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "c865a9960ea8cf2bae0ea5ce7594d05727efef760f0cae3b92b24316ebb0dd80"
+        ]
+      },
+      "usesPermission": [
+        {
+          "name": "com.blueapps.egyptianwriter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ],
+      "usesSdk": {
+        "minSdkVersion": 23,
+        "targetSdkVersion": 36
+      },
+      "versionCode": 10,
+      "versionName": "14.05.2026@0.1.0.1"
+    },
+    "src": {
+      "name": "/com.blueapps.egyptianwriter_10_src.tar.gz",
+      "sha256": "525c98d38e5b49d0726ee966217aa2ecda7f6e71e7b143deab2bb80e69aaba24",
+      "size": 28953574
+    },
+    "whatsNew": {
+      "de-DE": "- Seite zum Durchsuchen aller Zeichen hinzugef\u00fcgt\n- \u201e\u00dcber diese App\u201c-Seite wurde hinzugef\u00fcgt.",
+      "en-US": "- Page to browse all signs added\n- The 'About the app' page has been added."
+    }
+  }
+}

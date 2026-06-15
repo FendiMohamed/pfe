@@ -1,0 +1,92 @@
+﻿{
+  "apk_path": "data/test_apks/real/organic-maps/organic-maps.apk",
+  "apk_sha256": "113a61d2c6b7e6a23cb88fcd85687a85558df9410d53fb05d8e39fb9309801f1",
+  "apk_size": 71549340,
+  "dex_files": [
+    "classes.dex",
+    "classes2.dex"
+  ],
+  "forensic_summary": {
+    "extraction_risk": "low",
+    "indicators": [
+      {
+        "code": "large-opaque-assets",
+        "detail": "Large opaque asset files found: assets/icudt78l.dat, assets/packed_polygons.bin",
+        "severity": "info"
+      }
+    ],
+    "native_abis": [
+      "arm64-v8a",
+      "armeabi-v7a",
+      "x86",
+      "x86_64"
+    ],
+    "native_library_count": 4,
+    "nonstandard_dex_files": [],
+    "standard_dex_files": [
+      "classes.dex",
+      "classes2.dex"
+    ],
+    "zip_entries": 2116
+  },
+  "has_multidex": true,
+  "manifest_metadata": {
+    "min_sdk": "21",
+    "package_name": "app.organicmaps",
+    "parse_error": null,
+    "parse_status": "parsed",
+    "permissions": [
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+      "android.permission.FOREGROUND_SERVICE_LOCATION",
+      "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "android.permission.INTERNET",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.WAKE_LOCK",
+      "androidx.car.app.ACCESS_SURFACE",
+      "androidx.car.app.NAVIGATION_TEMPLATES",
+      "app.organicmaps.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "target_sdk": "36",
+    "version_code": "26050804",
+    "version_name": "2026.05.08-4-FDroid"
+  },
+  "manifest_present": true,
+  "native_libraries": [
+    {
+      "abi": "arm64-v8a",
+      "filename": "liborganicmaps.so",
+      "path": "lib/arm64-v8a/liborganicmaps.so",
+      "sha256": "5641204d1b14e0a776b9fdf8c596d24e0540cc2e03660bc11ec37f8fa60465f5",
+      "size": 15575560
+    },
+    {
+      "abi": "armeabi-v7a",
+      "filename": "liborganicmaps.so",
+      "path": "lib/armeabi-v7a/liborganicmaps.so",
+      "sha256": "860ab81aead683e95f0c4e23eec680f3fa65fd7f9bb865194138279933a4dce1",
+      "size": 10852456
+    },
+    {
+      "abi": "x86",
+      "filename": "liborganicmaps.so",
+      "path": "lib/x86/liborganicmaps.so",
+      "sha256": "f1a8b0d93cdd452c1665b716d126abed5d12d31695973270237f4b98fa3a9443",
+      "size": 16582580
+    },
+    {
+      "abi": "x86_64",
+      "filename": "liborganicmaps.so",
+      "path": "lib/x86_64/liborganicmaps.so",
+      "sha256": "8fcf50d0d754f133abc8b7d6fa952ca3316ec07c11eeb754010fcb45a30dbb28",
+      "size": 16182512
+    }
+  ],
+  "resources_arsc_present": true
+}

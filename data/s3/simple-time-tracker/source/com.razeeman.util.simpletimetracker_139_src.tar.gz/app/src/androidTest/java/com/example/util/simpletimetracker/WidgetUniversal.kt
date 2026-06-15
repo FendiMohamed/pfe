@@ -1,0 +1,245 @@
+package com.example.util.simpletimetracker
+
+import androidx.test.core.app.ActivityScenario
+import androidx.test.espresso.Espresso.closeSoftKeyboard
+import androidx.test.espresso.matcher.ViewMatchers.assertThat
+import androidx.test.espresso.matcher.ViewMatchers.hasDescendant
+import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.withText
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.example.util.simpletimetracker.domain.activityFilter.model.ActivityFilter
+import com.example.util.simpletimetracker.feature_widget.universal.view.WidgetUniversalActivity
+import com.example.util.simpletimetracker.utils.BaseUiTest
+import com.example.util.simpletimetracker.utils.Widget
+import com.example.util.simpletimetracker.utils.checkViewDoesNotExist
+import com.example.util.simpletimetracker.utils.checkViewIsDisplayed
+import com.example.util.simpletimetracker.utils.clickOnViewWithText
+import com.example.util.simpletimetracker.utils.tryAction
+import com.example.util.simpletimetracker.utils.typeTextIntoView
+import com.example.util.simpletimetracker.utils.withCardColor
+import dagger.hilt.android.testing.HiltAndroidTest
+import kotlinx.coroutines.runBlocking
+import org.hamcrest.Matchers.allOf
+import org.hamcrest.Matchers.`is`
+import org.junit.Test
+import org.junit.runner.RunWith
+import com.example.util.simpletimetracker.core.R as coreR
+import com.example.util.simpletimetracker.feature_base_adapter.R as baseR
+import com.example.util.simpletimetracker.feature_views.R as viewsR
+
+@HiltAndroidTest
+@Widget
+@RunWith(AndroidJUnit4::class)
+class WidgetUniversal : BaseUiTest() {
+
+    private lateinit var scenarioRule: ActivityScenario<WidgetUniversalActivity>
+
+    override fun after() {
+        super.after()
+        scenarioRule.close()
+    }
+
+    @Test
+    fun widgetUniversalActivities() {
+        val name1 = "TypeName1"
+        val name2 = "TypeName2"
+        val name3 = "TypeName3"
+        val filter = "Filter"
+
+        // Add data
+        testUtils.addActivity(name = name1, color = firstColor)
+        testUtils.addActivity(name = name2, color = lastColor)
+        testUtils.addActivity(name = name3, archived = true)
+        testUtils.addActivityFilter(filter)
+        scenarioRule = ActivityScenario.launch(WidgetUniversalActivity::class.java)
+
+        // Check data
+        checkType(firstColor, name1)
+        checkType(lastColor, name2)
+        checkViewDoesNotExist(withText(name3))
+        checkViewDoesNotExist(withText(filter))
+        checkViewDoesNotExist(withText(coreR.string.running_records_add_filter))
+
+        // Start activity
+        clickOnViewWithText(name1)
+        checkType(viewsR.color.colorFiltered, name1)
+
+        // Stop activity
+        clickOnViewWithText(name1)
+        checkType(firstColor, name1)
+    }
+
+    @Test
+    fun widgetUniversalMultitaskingDisabled() {
+        val name1 = "TypeName1"
+        val name2 = "TypeName2"
+
+        // Add data
+        testUtils.addActivity(name = name1, color = firstColor)
+        testUtils.addActivity(name = name2, color = lastColor)
+        testUtils.addRunningRecord(typeName = name2)
+        scenarioRule = ActivityScenario.launch(WidgetUniversalActivity::class.java)
+
+        // Start timer
+        clickOnViewWithText(name1)
+        checkType(viewsR.color.colorFiltered, name1)
+        checkType(viewsR.color.colorFiltered, name2)
+    }
+
+    @Test
+    fun widgetUniversalMultitaskingEnabled() {
+        val name1 = "TypeName1"
+        val name2 = "TypeName2"
+
+        // Add data
+        testUtils.addActivity(name = name1, color = firstColor)
+        testUtils.addActivity(name = name2, color = lastColor)
+        testUtils.addRunningRecord(typeName = name1)
+        runBlocking { prefsInteractor.setAllowMultitasking(false) }
+        scenarioRule = ActivityScenario.launch(WidgetUniversalActivity::class.java)
+
+        // Start another
+        clickOnViewWithText(name2)
+        checkType(firstColor, name1)
+        checkType(viewsR.color.colorFiltered, name2)
+    }
+
+    @Test
+    fun widgetUniversalTagSelectionDisabled() {
+        val name1 = "TypeName1"
+        val tag1 = "TagName1"
+        val tag2 = "TagName2"
+
+        // Add data
+        testUtils.addActivity(name = name1, color = firstColor)
+        testUtils.addRecordTag(tag1, name1)
+        testUtils.addRecordTag(tag2, name1, archived = true)
+        scenarioRule = ActivityScenario.launch(WidgetUniversalActivity::class.java)
+
+        // Start timer
+        tryAction { clickOnViewWithText(name1) }
+        checkType(viewsR.color.colorFiltered, name1)
+    }
+
+    @Test
+    fun widgetUniversalTagSelectionEnabled() {
+        val name1 = "TypeName1"
+        val tag1 = "TagName1"
+        val tag2 = "TagName2"
+
+        // Add data
+        testUtils.addActivity(name = name1, color = firstColor)
+        testUtils.addRecordTag(tag1, name1)
+        testUtils.addRecordTag(tag2, name1, archived = true)
+        runBlocking { prefsInteractor.setShowRecordTagSelection(true) }
+        scenarioRule = ActivityScenario.launch(WidgetUniversalActivity::class.java)
+
+        // Start timer
+        clickOnViewWithText(name1)
+        tryAction { checkViewIsDisplayed(withText(coreR.string.change_record_untagged)) }
+        checkViewIsDisplayed(withText(tag1))
+        checkViewDoesNotExist(withText(tag2))
+        clickOnViewWithText(tag1)
+        clickOnViewWithText(coreR.string.duration_dialog_save)
+        checkType(viewsR.color.colorFiltered, name1)
+    }
+
+    @Test
+    fun tagValueSelection() {
+        val typeName = "typeName"
+        val tagName = "tagName"
+        val tagValue = "12.3"
+
+        // Add data
+        testUtils.addActivity(typeName)
+        testUtils.addRecordTag(
+            tagName = tagName,
+            typeName = typeName,
+            hasTagValue = true,
+        )
+        runBlocking { prefsInteractor.setShowRecordTagSelection(true) }
+        scenarioRule = ActivityScenario.launch(WidgetUniversalActivity::class.java)
+
+        // Start timer
+        clickOnViewWithText(typeName)
+        checkViewIsDisplayed(withText(tagName))
+        clickOnViewWithText(tagName)
+        checkViewIsDisplayed(allOf(withId(R.id.tvRecordTagValueSelection), withText(tagName)))
+        typeTextIntoView(R.id.etCommentItemField, tagValue)
+        closeSoftKeyboard()
+        clickOnViewWithText(R.string.duration_dialog_save)
+        checkViewIsDisplayed(withText("$tagName ($tagValue)"))
+        clickOnViewWithText(coreR.string.duration_dialog_save)
+        val record = runBlocking { testUtils.getRunningRecords().first() }
+        assertThat(record.tags.first().numericValue, `is`(12.3))
+        checkType(viewsR.color.colorFiltered, typeName)
+    }
+
+    @Test
+    fun widgetUniversalFilters() {
+        val name1 = "TypeName1"
+        val name2 = "TypeName2"
+        val filter = "Filter"
+
+        // Add data
+        runBlocking { prefsInteractor.setShowActivityFilters(true) }
+        testUtils.addActivity(name1)
+        testUtils.addActivity(name2)
+        testUtils.addActivityFilter(
+            name = filter,
+            type = ActivityFilter.Type.Activity,
+            color = firstColor,
+            names = listOf(name1),
+        )
+        scenarioRule = ActivityScenario.launch(WidgetUniversalActivity::class.java)
+
+        // Check filters
+        tryAction { checkViewIsDisplayed(withText(name1)) }
+        checkViewIsDisplayed(withText(name2))
+        checkViewIsDisplayed(allOf(withCardColor(viewsR.color.colorFiltered), hasDescendant(withText(filter))))
+        checkViewDoesNotExist(withText(coreR.string.running_records_add_filter))
+
+        clickOnViewWithText(filter)
+        checkViewIsDisplayed(withText(name1))
+        checkViewDoesNotExist(withText(name2))
+        checkViewIsDisplayed(allOf(withCardColor(firstColor), hasDescendant(withText(filter))))
+
+        clickOnViewWithText(filter)
+        checkViewIsDisplayed(withText(name1))
+        checkViewIsDisplayed(withText(name2))
+        checkViewIsDisplayed(allOf(withCardColor(viewsR.color.colorFiltered), hasDescendant(withText(filter))))
+    }
+
+    @Test
+    fun repeat() {
+        val name = "TypeName"
+
+        // Add data
+        testUtils.addActivity(name)
+        scenarioRule = ActivityScenario.launch(WidgetUniversalActivity::class.java)
+
+        // No records
+        clickOnViewWithText(coreR.string.running_records_repeat)
+        checkViewIsDisplayed(
+            allOf(
+                withText(R.string.running_records_repeat_no_prev_record),
+                withId(com.google.android.material.R.id.snackbar_text),
+            ),
+        )
+
+        // Check
+        testUtils.addRecord(name)
+        clickOnViewWithText(coreR.string.running_records_repeat)
+        checkType(viewsR.color.colorFiltered, name)
+    }
+
+    private fun checkType(color: Int, name: String) {
+        checkViewIsDisplayed(
+            allOf(
+                withId(baseR.id.viewRecordTypeItem),
+                hasDescendant(withCardColor(color)),
+                hasDescendant(withText(name)),
+            ),
+        )
+    }
+}
