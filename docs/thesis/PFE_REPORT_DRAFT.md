@@ -212,16 +212,16 @@ The current evaluation supports the tool as a credible MVP: exact on controlled 
 
 Near-term:
 
-1. Continue real-APK evidence growth with a v15 clean non-sparse or category-balanced sweep.
-2. Convert this markdown draft into the final university report format.
-3. Add figures from the architecture diagram, evaluation tables, and report screenshots.
-4. Prepare a presentation version of the main pipeline and evaluation story.
+1. Convert the assembled report into the final university template.
+2. Add figures from the architecture diagram, evaluation tables, report screenshots, CVE demo, and v2 package table.
+3. Use `docs/thesis/FINAL_REPORT_READINESS_PACKAGE.md` for final wording and figure placement.
+4. Rehearse the defense using `docs/evaluation/FINAL_DEMO_CHECKLIST.md`.
 
 Longer-term:
 
-1. Push from 80 toward 100 source-validated real APKs while continuing to search for a clean non-sparse real APK.
-2. Add more framework families such as Flutter, React Native, Unity, and additional native-heavy apps.
-3. Investigate scoped per-coordinate rerankers for version-band ties.
+1. Improve matcher recall for source-version constrained gaps that already exist in the DB.
+2. Continue bounded reference growth for the remaining missing-reference candidates.
+3. Add more framework families such as Flutter, Unity, and additional protected/native-heavy samples.
 4. Keep optional scanner integration regenerated when scanner versions or selected SBOM targets change.
 
 ## Appendix Pointers

@@ -6,6 +6,8 @@ Hybrid Static Library Version Detection and Vulnerability Lookup for APK-Only An
 
 This is the assembled thesis/report draft. It combines the current report draft, evaluation chapter, traceability matrix, and artifact index into one university-ready structure. Replace the cover-page placeholders with the university template details before final submission.
 
+The final report readiness package is `docs/thesis/FINAL_REPORT_READINESS_PACKAGE.md`. Use it for the cover-page fields, figure/screenshot plan, exact wording guardrails, and final submission checks.
+
 ## Cover Page Placeholders
 
 | Field | Value |
@@ -25,7 +27,7 @@ Software Bills of Materials are increasingly used to identify vulnerable depende
 
 This project implements a static APK-to-SBOM MVP that extracts DEX, manifest, resource, and native-file evidence from compiled Android APKs; compares bytecode features against a Maven reference database; estimates library identities and versions with confidence labels; emits CycloneDX SBOMs; and queries OSV for vulnerability information. The matcher combines package, class, method, opcode, class-dependency-graph, string-literal, Maven metadata, API-reference, and optional opcode-trigram evidence. It deliberately separates library identity confidence from version confidence and reports ambiguous nearby versions instead of forcing exact claims when evidence is weak.
 
-The evaluation is organized by APK family rather than by a single perfect-looking score. The MVP confirms 84/84 expected Maven versions across 72 controlled fixtures, 47/47 emitted Maven versions across 5 clean source-validated real APKs, and 880/1790 emitted Maven versions across 97 harder source-validated real APKs. Overall, the current source-validated real APK set reaches a 927/1837 emitted Maven version confirmation rate. Blocked and limitation cases are kept visible but excluded from accuracy metrics. The result is a practical, paper-backed MVP that produces useful SBOM evidence while making uncertainty explicit.
+The evaluation is organized by APK family rather than by a single perfect-looking score. The MVP confirms 84/84 expected Maven versions across 72 controlled fixtures, 47/47 emitted Maven versions across 5 clean source-validated real APKs, and 880/1790 emitted Maven versions across 97 harder source-validated real APKs. Overall, the current source-validated real APK set reaches a 927/1837 emitted Maven version confirmation rate. A separate final v2 source-version constrained lane checks 6772 emitted rows across 106 source-tree APK cases and confirms all 6772 exactly under known source-version constraints; this is reported as an upper-bound recognition lane, not APK-only production accuracy. Blocked and limitation cases are kept visible but excluded from accuracy metrics. The result is a practical, paper-backed MVP that produces useful SBOM evidence while making uncertainty explicit.
 
 ## Keywords
 
@@ -374,12 +376,12 @@ The current evaluation supports the MVP as credible: exact on controlled and cle
 
 Future work should:
 
-1. Scale the source-validated real APK set toward the planned 50 cases.
-2. Add more framework families such as Flutter, React Native, Unity, and additional native-heavy apps.
-3. Investigate scoped per-coordinate rerankers for AndroidX version-band ties.
-4. Explore stronger multi-scale graph or basic-block fusion inspired by LibMD.
-5. Consider ML-assisted identity detection inspired by LibAttention only as a future layer, not as a replacement for explainable version evidence.
-6. Regenerate external scanner validation when scanner versions or selected SBOM targets change.
+1. Improve matcher recall for the `2281` v2 matcher-recall candidates, starting from the `1425` source-context report-only suggestions but keeping them out of default SBOM output until APK-only controls pass.
+2. Continue bounded reference growth for the `442` remaining v2 missing-reference candidate rows, while keeping no-bytecode, source-only, alias, and unavailable rows explicit.
+3. Build a safer unconstrained large-DB production matcher with stronger shortlist/reranking controls so the large DB can be used without source-version slices.
+4. Add more framework families such as Flutter, Unity, and additional commercial protected samples; React Native is represented by Jitsi but should be expanded.
+5. Investigate native package/version identification beyond the current hash-only `.so` CycloneDX file components.
+6. Explore stronger multi-scale graph or basic-block fusion inspired by LibMD, and consider ML-assisted identity detection inspired by LibAttention only as a future layer, not as a replacement for explainable version evidence.
 
 ## 9. Appendix Pointers
 
@@ -394,6 +396,7 @@ Future work should:
 | `docs/thesis/FINAL_V2_RESULTS_SECTION.md` | Thesis-ready final v2 upper-bound results section and wording guardrails. |
 | `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md` | Final demo flow for the v2 package, transparency export, and CVE/SBOM artifacts. |
 | `docs/evaluation/DEMO_FINAL_V2_PACKAGE.md` | Current index for the v2 source-version constrained package. |
+| `docs/thesis/FINAL_REPORT_READINESS_PACKAGE.md` | Final report assembly checklist, figure/screenshot plan, wording guardrails, and submission checks. |
 | `docs/evaluation/APK_TYPE_EVALUATION.md` | APK family split and case interpretation. |
 | `docs/evaluation/VERSION_BAND_TIE_EVIDENCE.md` | Version ambiguity and unsafe-promotion evidence. |
 | `docs/dev/RUNBOOK.md` | Supervisor demo commands and expected outputs. |

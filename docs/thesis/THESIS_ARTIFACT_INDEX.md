@@ -51,6 +51,7 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Final v2 thesis results section | `docs/thesis/FINAL_V2_RESULTS_SECTION.md` | Use as thesis-ready prose that separates the normal emitted-version metric from the v2 source-known upper-bound lane. |
 | Final v2 demo runbook | `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md` | Use for the final supervisor/defense demo flow, exact opening wording, artifact order, and hard-question answers. |
 | Final demo checklist | `docs/evaluation/FINAL_DEMO_CHECKLIST.md` | Use as the day-of-defense checklist for deck path, opening artifacts, exact numbers, and commands to avoid live. |
+| Final report readiness package | `docs/thesis/FINAL_REPORT_READINESS_PACKAGE.md` | Use for final report assembly, figure placement, screenshot selection, wording guardrails, and submission checks. |
 | Post-100 real APK optimization plan | `docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md` | Use as the research-backed execution roadmap for coverage-first reference DB growth, wrong-version rows, missing-source rows, guarded promotion, and dashboard improvement. |
 | No-Maven-signal audit | `docs/evaluation/NO_MAVEN_SIGNAL_AUDIT.md` | Use to explain why the four no-Maven rows stay outside accuracy metrics and how AndroidX identity misses differ from Mastodon's fork-family boundary. |
 | No-Maven AndroidX report-only experiment | `docs/evaluation/NO_MAVEN_ANDROIDX_REPORT_ONLY_EXPERIMENT.md` | Use as dashboard seed evidence for six source-backed AndroidX report-only candidates with zero SBOM or source-validation metric changes. |
@@ -113,6 +114,8 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Generated report screenshot | `data/results/report-real-f-droid-final-demo-osv/report.html` | Example report showing detected Maven components, confidence, evidence, native files, and OSV result. |
 | Clean and vulnerable OSV examples | `docs/dev/RUNBOOK.md` | Negative OSV result on calibrated F-Droid and positive HIGH advisories on controlled Jackson Databind. |
 | Real APK OSV triage | `docs/evaluation/OSV_SOURCE_VALIDATION_TRIAGE.md` | Real APK OSV findings grouped by source-confirmed, source-version-mismatch, and report-only evidence strength. |
+| Final v2 package table | `docs/evaluation/DEMO_FINAL_V2_PACKAGE.md` | Source-version constrained v2 evaluation metrics and transparent remaining gap categories. |
+| Defense deck contact sheet | `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/preview/contact-sheet.png` | Visual overview of the final 12-slide defense deck. |
 
 ## Per-APK Evidence
 
@@ -245,6 +248,7 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Final v2 results thesis section | `docs/thesis/FINAL_V2_RESULTS_SECTION.md` | Copy-ready thesis wording for the v2 upper-bound lane, with explicit warnings against calling it APK-only accuracy. |
 | Final v2 demo runbook | `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md` | Defense flow that shows APK-to-SBOM, CVE lookup, normal emitted-version metrics, v2 upper-bound results, and transparency gaps. |
 | Final demo checklist | `docs/evaluation/FINAL_DEMO_CHECKLIST.md` | Day-of-defense checklist with the deck path, exact numbers, safe commands, and commands to avoid live. |
+| Final report readiness package | `docs/thesis/FINAL_REPORT_READINESS_PACKAGE.md` | Final report assembly checklist with figure placement, screenshot plan, wording guardrails, and submission checks. |
 
 ## Writing Guardrails
 
@@ -265,3 +269,4 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Evaluation | ready | Use `docs/evaluation/THESIS_EVALUATION_CHAPTER_DRAFT.md` for the normal clean/partial split, then add `docs/thesis/FINAL_V2_RESULTS_SECTION.md` as the final source-known upper-bound addendum. |
 | Limitations | ready | Use `docs/planning/MVP_CONS_IMPROVEMENT_PLAN.md` and keep native-heavy, hidden-DEX, scanner-tool, and K-9 validation-copy caveats visible. |
 | Presentation | editable-deck-ready | Use `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx`, then apply university template details, names, screenshots, and the v2 result wording from `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md`. |
+| Final packaging | ready-for-template | Use `docs/thesis/FINAL_REPORT_READINESS_PACKAGE.md` to fill cover fields, insert figures/screenshots, check wording guardrails, and export the final university document. |

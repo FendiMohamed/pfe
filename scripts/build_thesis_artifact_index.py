@@ -304,6 +304,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the day-of-defense checklist for deck path, opening artifacts, exact numbers, and commands to avoid live.",
         },
         {
+            "table": "Final report readiness package",
+            "source": "docs/thesis/FINAL_REPORT_READINESS_PACKAGE.md",
+            "use": "Use for final report assembly, figure placement, screenshot selection, wording guardrails, and submission checks.",
+        },
+        {
             "table": "Post-100 real APK optimization plan",
             "source": "docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md",
             "use": "Use as the research-backed execution roadmap for coverage-first reference DB growth, wrong-version rows, missing-source rows, guarded promotion, and dashboard improvement.",
@@ -593,6 +598,16 @@ def build_figure_plan() -> list[dict[str, str]]:
             "source": "docs/evaluation/OSV_SOURCE_VALIDATION_TRIAGE.md",
             "caption": "Real APK OSV findings grouped by source-confirmed, source-version-mismatch, and report-only evidence strength.",
         },
+        {
+            "figure": "Final v2 package table",
+            "source": "docs/evaluation/DEMO_FINAL_V2_PACKAGE.md",
+            "caption": "Source-version constrained v2 evaluation metrics and transparent remaining gap categories.",
+        },
+        {
+            "figure": "Defense deck contact sheet",
+            "source": "outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/preview/contact-sheet.png",
+            "caption": "Visual overview of the final 12-slide defense deck.",
+        },
     ]
 
 
@@ -696,6 +711,11 @@ def build_demo_package() -> list[dict[str, str]]:
             "path": "docs/evaluation/FINAL_DEMO_CHECKLIST.md",
             "talking_point": "Day-of-defense checklist with the deck path, exact numbers, safe commands, and commands to avoid live.",
         },
+        {
+            "item": "Final report readiness package",
+            "path": "docs/thesis/FINAL_REPORT_READINESS_PACKAGE.md",
+            "talking_point": "Final report assembly checklist with figure placement, screenshot plan, wording guardrails, and submission checks.",
+        },
     ]
 
 
@@ -730,6 +750,11 @@ def build_final_report_checklist() -> list[dict[str, str]]:
             "section": "Presentation",
             "status": "editable-deck-ready",
             "next_action": "Use `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx`, then apply university template details, names, screenshots, and the v2 result wording from `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md`.",
+        },
+        {
+            "section": "Final packaging",
+            "status": "ready-for-template",
+            "next_action": "Use `docs/thesis/FINAL_REPORT_READINESS_PACKAGE.md` to fill cover fields, insert figures/screenshots, check wording guardrails, and export the final university document.",
         },
     ]
 
