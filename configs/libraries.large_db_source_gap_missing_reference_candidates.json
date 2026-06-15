@@ -1,0 +1,1169 @@
+{
+  "libraries": [
+    {
+      "artifact": "collection-ktx",
+      "group": "androidx.collection",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.4.0",
+        "1.4.2",
+        "1.4.4",
+        "1.4.5",
+        "1.5.0",
+        "1.6.0"
+      ]
+    },
+    {
+      "artifact": "legacy-preference-v14",
+      "group": "androidx.legacy",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "legacy-support-v4",
+      "group": "androidx.legacy",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-common-java8",
+      "group": "androidx.lifecycle",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.5.1",
+        "2.6.1",
+        "2.6.2",
+        "2.7.0",
+        "2.8.2",
+        "2.8.6",
+        "2.8.7",
+        "2.9.1",
+        "2.9.4",
+        "2.10.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-runtime-ktx",
+      "group": "androidx.lifecycle",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.8.2",
+        "2.8.4",
+        "2.8.6",
+        "2.8.7",
+        "2.9.0",
+        "2.9.1",
+        "2.9.3",
+        "2.9.4",
+        "2.10.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-runtime-ktx-android",
+      "group": "androidx.lifecycle",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.8.2",
+        "2.8.4",
+        "2.8.6",
+        "2.8.7",
+        "2.9.0",
+        "2.9.1",
+        "2.9.3",
+        "2.9.4",
+        "2.10.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-viewmodel-ktx",
+      "group": "androidx.lifecycle",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.8.2",
+        "2.8.4",
+        "2.8.6",
+        "2.8.7",
+        "2.9.0",
+        "2.9.1",
+        "2.9.3",
+        "2.9.4",
+        "2.10.0"
+      ]
+    },
+    {
+      "artifact": "navigation-runtime-ktx",
+      "group": "androidx.navigation",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.9.0"
+      ]
+    },
+    {
+      "artifact": "paging-common-ktx",
+      "group": "androidx.paging",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "3.3.6",
+        "3.5.0"
+      ]
+    },
+    {
+      "artifact": "room-ktx",
+      "group": "androidx.room",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.7.1",
+        "2.7.2",
+        "2.8.0",
+        "2.8.4"
+      ]
+    },
+    {
+      "artifact": "savedstate-ktx",
+      "group": "androidx.savedstate",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.3.0",
+        "1.3.1",
+        "1.3.3",
+        "1.4.0"
+      ]
+    },
+    {
+      "artifact": "exifinterface",
+      "group": "com.android.support",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "27.1.0"
+      ]
+    },
+    {
+      "artifact": "recyclerview-v7",
+      "group": "com.android.support",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "22.0.0"
+      ]
+    },
+    {
+      "artifact": "support-compat",
+      "group": "com.android.support",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "24.2.0"
+      ]
+    },
+    {
+      "artifact": "support-core-ui",
+      "group": "com.android.support",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "24.2.0"
+      ]
+    },
+    {
+      "artifact": "support-v4",
+      "group": "com.android.support",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "22.0.0"
+      ]
+    },
+    {
+      "artifact": "dashclock-api",
+      "group": "com.google.android.apps.dashclock",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.0.0"
+      ]
+    },
+    {
+      "artifact": "patternlockview",
+      "group": "com.andrognito.patternlockview",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "pinlockview",
+      "group": "com.andrognito.pinlockview",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.1.0"
+      ]
+    },
+    {
+      "artifact": "sublimepickerlibrary",
+      "group": "com.appeaser.sublimepickerlibrary",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.1.2"
+      ]
+    },
+    {
+      "artifact": "ChipsLayoutManager",
+      "group": "com.beloo.widget",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.3.7"
+      ]
+    },
+    {
+      "artifact": "soloader",
+      "group": "com.facebook.fresco",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "hermes-android",
+      "group": "com.facebook.react",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.77.2"
+      ]
+    },
+    {
+      "artifact": "react-android",
+      "group": "com.facebook.react",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.77.2"
+      ]
+    },
+    {
+      "artifact": "nordpol-android",
+      "group": "com.fidesmo",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.1.22"
+      ]
+    },
+    {
+      "artifact": "jaudiotagger",
+      "group": "com.github.Adonai",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.3.15"
+      ]
+    },
+    {
+      "artifact": "MPAndroidChart",
+      "group": "com.github.PhilJay",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "v2.2.5"
+      ]
+    },
+    {
+      "artifact": "dbflow-core",
+      "group": "com.github.Raizlabs.DBFlow",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "4.2.4"
+      ]
+    },
+    {
+      "artifact": "NewPipeExtractor",
+      "group": "com.github.TeamNewPipe",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "v0.26.1"
+      ]
+    },
+    {
+      "artifact": "nanojson",
+      "group": "com.github.TeamNewPipe",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "e9d656ddb49a412a5a0a5d5ef20ca7ef09549996"
+      ]
+    },
+    {
+      "artifact": "GlyphConverter",
+      "group": "com.github.ThothDroid",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.7.0"
+      ]
+    },
+    {
+      "artifact": "fzf4j",
+      "group": "com.github.aivanovski",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.2.1"
+      ]
+    },
+    {
+      "artifact": "keepass-tree-builder",
+      "group": "com.github.aivanovski",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.4.0"
+      ]
+    },
+    {
+      "artifact": "keepass-tree-diff",
+      "group": "com.github.aivanovski",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.4.0"
+      ]
+    },
+    {
+      "artifact": "dav4jvm",
+      "group": "com.github.bitfireat",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1f2f5a7793"
+      ]
+    },
+    {
+      "artifact": "compose",
+      "group": "com.github.bumptech.glide",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.0.0-beta01"
+      ]
+    },
+    {
+      "artifact": "ktx",
+      "group": "com.github.bumptech.glide",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.0.0-beta01"
+      ]
+    },
+    {
+      "artifact": "Omni-Notes-Commons",
+      "group": "com.github.federicoiosue",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.4.0"
+      ]
+    },
+    {
+      "artifact": "Springpad-Importer",
+      "group": "com.github.federicoiosue",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.0.1"
+      ]
+    },
+    {
+      "artifact": "sensitive-word-data",
+      "group": "com.github.houbb",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "NewPipeExtractor",
+      "group": "com.github.libre-tube",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0c7e95b"
+      ]
+    },
+    {
+      "artifact": "mapsforge-core",
+      "group": "com.github.mapsforge.mapsforge",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map",
+      "group": "com.github.mapsforge.mapsforge",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map-android",
+      "group": "com.github.mapsforge.mapsforge",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map-reader",
+      "group": "com.github.mapsforge.mapsforge",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-themes",
+      "group": "com.github.mapsforge.mapsforge",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "fyydlin",
+      "group": "com.github.mfietz",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "e1d25f347641fe5e26c4c2b9756d4e9001a398dd"
+      ]
+    },
+    {
+      "artifact": "android-library",
+      "group": "com.github.nextcloud",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "cd6ef9c073cd7c23bd36f9712d1f8c1030cc6804"
+      ]
+    },
+    {
+      "artifact": "material-color-utilities",
+      "group": "com.github.nextcloud.android-common",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.33.2"
+      ]
+    },
+    {
+      "artifact": "android-dav",
+      "group": "com.github.opencloud-eu",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "oc_support_2.1.5"
+      ]
+    },
+    {
+      "artifact": "dav4android",
+      "group": "com.github.owncloud",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "oc_support_2.1.5"
+      ]
+    },
+    {
+      "artifact": "totp-kt",
+      "group": "com.github.robinohs",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "v1.0.0"
+      ]
+    },
+    {
+      "artifact": "bottomsheetbuilder",
+      "group": "com.github.rubensousa",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.6.1"
+      ]
+    },
+    {
+      "artifact": "material-popup-menu",
+      "group": "com.github.zawadz88.materialpopupmenu",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "dav4jvm",
+      "group": "com.github.zhanghai",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "c317607"
+      ]
+    },
+    {
+      "artifact": "betterpickers",
+      "group": "com.gitlab.askanimus",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "3.2.7"
+      ]
+    },
+    {
+      "artifact": "accompanist-drawablepainter",
+      "group": "com.google.accompanist",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.36.0",
+        "0.37.3"
+      ]
+    },
+    {
+      "artifact": "accompanist-permissions",
+      "group": "com.google.accompanist",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.37.3"
+      ]
+    },
+    {
+      "artifact": "material-intro",
+      "group": "com.heinrichreimersoftware",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.0.0"
+      ]
+    },
+    {
+      "artifact": "zxing-android-embedded",
+      "group": "com.journeyapps",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "com.mikepenz",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "3.2.6"
+      ]
+    },
+    {
+      "artifact": "library-core",
+      "group": "com.mikepenz",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "3.2.6"
+      ]
+    },
+    {
+      "artifact": "fingerprint-auth",
+      "group": "com.multidots",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.0.1"
+      ]
+    },
+    {
+      "artifact": "materialfilepicker",
+      "group": "com.nbsp",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.9.1"
+      ]
+    },
+    {
+      "artifact": "bottomsheetpickers",
+      "group": "com.philliphsu",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.4.1"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "com.pixplicity.easyprefs",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.9.0"
+      ]
+    },
+    {
+      "artifact": "leakcanary-android",
+      "group": "com.squareup.leakcanary",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.14"
+      ]
+    },
+    {
+      "artifact": "rxpermissions",
+      "group": "com.tbruyelle.rxpermissions",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.4.2"
+      ]
+    },
+    {
+      "artifact": "flexmark-util",
+      "group": "com.vladsch.flexmark",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.64.8"
+      ]
+    },
+    {
+      "artifact": "libsuperuser",
+      "group": "eu.chainfire",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.1.0",
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "flexible-adapter-livedata",
+      "group": "eu.davidea",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.0.0-b2"
+      ]
+    },
+    {
+      "artifact": "flexible-adapter-ui",
+      "group": "eu.davidea",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.0.0-b5"
+      ]
+    },
+    {
+      "artifact": "ktor",
+      "group": "io.ktor",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.3.7"
+      ]
+    },
+    {
+      "artifact": "ktor-jvm",
+      "group": "io.ktor",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.3.7"
+      ]
+    },
+    {
+      "artifact": "netty-transport-native-epoll",
+      "group": "io.netty",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "4.1.101.Final"
+      ]
+    },
+    {
+      "artifact": "netty-transport-native-kqueue",
+      "group": "io.netty",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "4.1.101.Final"
+      ]
+    },
+    {
+      "artifact": "picasso-transformations",
+      "group": "jp.wasabeef",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.3.1"
+      ]
+    },
+    {
+      "artifact": "recyclerview-animators",
+      "group": "jp.wasabeef",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "ui",
+      "group": "legacy",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "base"
+      ]
+    },
+    {
+      "artifact": "protocols",
+      "group": "mail",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "imap"
+      ]
+    },
+    {
+      "artifact": "free_reflection",
+      "group": "me.weishu",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.2.0"
+      ]
+    },
+    {
+      "artifact": "time-duration-picker",
+      "group": "mobi.upod",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.1.3"
+      ]
+    },
+    {
+      "artifact": "download",
+      "group": "net",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "service"
+      ]
+    },
+    {
+      "artifact": "sync",
+      "group": "net",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "gpoddernet"
+      ]
+    },
+    {
+      "artifact": "i2p",
+      "group": "net.i2p",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.11.0-1"
+      ]
+    },
+    {
+      "artifact": "router",
+      "group": "net.i2p",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.11.0-1"
+      ]
+    },
+    {
+      "artifact": "mstreaming",
+      "group": "net.i2p.client",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.11.0-1"
+      ]
+    },
+    {
+      "artifact": "streaming",
+      "group": "net.i2p.client",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.11.0-1"
+      ]
+    },
+    {
+      "artifact": "commons-numbers-parent",
+      "group": "org.apache.commons",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.0"
+      ]
+    },
+    {
+      "artifact": "bcutil-jdk18on",
+      "group": "org.bouncycastle",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.80.2"
+      ]
+    },
+    {
+      "artifact": "lifecycle-runtime",
+      "group": "org.jetbrains.androidx.lifecycle",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.8.4",
+        "2.9.6"
+      ]
+    },
+    {
+      "artifact": "lifecycle-runtime-compose",
+      "group": "org.jetbrains.androidx.lifecycle",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.8.4",
+        "2.9.6"
+      ]
+    },
+    {
+      "artifact": "lifecycle-viewmodel",
+      "group": "org.jetbrains.androidx.lifecycle",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.8.4",
+        "2.9.5",
+        "2.9.6"
+      ]
+    },
+    {
+      "artifact": "lifecycle-viewmodel-compose",
+      "group": "org.jetbrains.androidx.lifecycle",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.9.6"
+      ]
+    },
+    {
+      "artifact": "lifecycle-viewmodel-savedstate",
+      "group": "org.jetbrains.androidx.lifecycle",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.9.5",
+        "2.9.6"
+      ]
+    },
+    {
+      "artifact": "navigation-compose",
+      "group": "org.jetbrains.androidx.navigation",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.9.2"
+      ]
+    },
+    {
+      "artifact": "navigation-runtime",
+      "group": "org.jetbrains.androidx.navigation",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.9.2"
+      ]
+    },
+    {
+      "artifact": "savedstate",
+      "group": "org.jetbrains.androidx.savedstate",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.3.6"
+      ]
+    },
+    {
+      "artifact": "savedstate-compose",
+      "group": "org.jetbrains.androidx.savedstate",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.3.6"
+      ]
+    },
+    {
+      "artifact": "animation",
+      "group": "org.jetbrains.compose.animation",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.8.2",
+        "1.9.3",
+        "1.10.2",
+        "1.10.3"
+      ]
+    },
+    {
+      "artifact": "animation-core",
+      "group": "org.jetbrains.compose.animation",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.8.2",
+        "1.9.3",
+        "1.10.2",
+        "1.10.3"
+      ]
+    },
+    {
+      "artifact": "collection",
+      "group": "org.jetbrains.compose.collection-internal",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.8.2",
+        "1.9.3",
+        "1.10.2",
+        "1.10.3"
+      ]
+    },
+    {
+      "artifact": "foundation",
+      "group": "org.jetbrains.compose.foundation",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.8.2",
+        "1.9.3",
+        "1.10.2",
+        "1.10.3"
+      ]
+    },
+    {
+      "artifact": "foundation-layout",
+      "group": "org.jetbrains.compose.foundation",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.8.2",
+        "1.9.3",
+        "1.10.2",
+        "1.10.3"
+      ]
+    },
+    {
+      "artifact": "material-ripple",
+      "group": "org.jetbrains.compose.material",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.9.0-beta03",
+        "1.9.1"
+      ]
+    },
+    {
+      "artifact": "material3",
+      "group": "org.jetbrains.compose.material3",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.9.0",
+        "1.9.0-beta03"
+      ]
+    },
+    {
+      "artifact": "runtime",
+      "group": "org.jetbrains.compose.runtime",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.8.2",
+        "1.9.3",
+        "1.10.2",
+        "1.10.3"
+      ]
+    },
+    {
+      "artifact": "runtime-saveable",
+      "group": "org.jetbrains.compose.runtime",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.8.2",
+        "1.9.3",
+        "1.10.2",
+        "1.10.3"
+      ]
+    },
+    {
+      "artifact": "ui",
+      "group": "org.jetbrains.compose.ui",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.8.2",
+        "1.9.3",
+        "1.10.2",
+        "1.10.3"
+      ]
+    },
+    {
+      "artifact": "ui-geometry",
+      "group": "org.jetbrains.compose.ui",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.8.2",
+        "1.9.3",
+        "1.10.2",
+        "1.10.3"
+      ]
+    },
+    {
+      "artifact": "ui-graphics",
+      "group": "org.jetbrains.compose.ui",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.8.2",
+        "1.9.3",
+        "1.10.2",
+        "1.10.3"
+      ]
+    },
+    {
+      "artifact": "ui-text",
+      "group": "org.jetbrains.compose.ui",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.8.2",
+        "1.9.3",
+        "1.10.2",
+        "1.10.3"
+      ]
+    },
+    {
+      "artifact": "ui-tooling-preview",
+      "group": "org.jetbrains.compose.ui",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.10.2",
+        "1.10.3"
+      ]
+    },
+    {
+      "artifact": "ui-unit",
+      "group": "org.jetbrains.compose.ui",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.8.2",
+        "1.9.3",
+        "1.10.2",
+        "1.10.3"
+      ]
+    },
+    {
+      "artifact": "ui-util",
+      "group": "org.jetbrains.compose.ui",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.8.2",
+        "1.9.3",
+        "1.10.2",
+        "1.10.3"
+      ]
+    },
+    {
+      "artifact": "android-smsmms",
+      "group": "org.kde.invent.sredman",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "kdeconnect-1-21-0"
+      ]
+    },
+    {
+      "artifact": "html-textview",
+      "group": "org.sufficientlysecure",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "3.1"
+      ]
+    },
+    {
+      "artifact": "remote-access",
+      "group": "org.videolan.android",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.17.0"
+      ]
+    },
+    {
+      "artifact": "openpgp-api-lib",
+      "group": "plugins",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "openpgp-api"
+      ]
+    }
+  ]
+}
