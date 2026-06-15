@@ -249,6 +249,46 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the detailed analysis entry point for per-APK rows, wrong-version rows with correct source versions, source false negatives, false-positive extra emissions, vulnerabilities, and the current large-DB runtime blocker.",
         },
         {
+            "table": "Demo-final fixable reference retry plan",
+            "source": "docs/evaluation/DEMO_FINAL_FIXABLE_REFERENCE_RETRY_PLAN.md",
+            "use": "Use to show how the remaining missing-reference rows were filtered into fixable retry, no-bytecode, and source-boundary slots before growing the DB.",
+        },
+        {
+            "table": "Demo-final fixable reference retry stage 2 plan",
+            "source": "docs/evaluation/DEMO_FINAL_FIXABLE_REFERENCE_RETRY_STAGE2_PLAN.md",
+            "use": "Use to show the bounded alternate-packaging/repository retry for first-stage failed slots and which rows were kept as boundaries.",
+        },
+        {
+            "table": "Demo-final fixable reference growth result",
+            "source": "docs/evaluation/DEMO_FINAL_FIXABLE_REFERENCE_GROWTH_RESULT.md",
+            "use": "Use to show the 24 recovered bytecode-bearing components, the v2 DB component count, the no-bytecode rows, and the attempted-but-unavailable boundary rows.",
+        },
+        {
+            "table": "Demo-final v2 package",
+            "source": "docs/evaluation/DEMO_FINAL_V2_PACKAGE.md",
+            "use": "Use as the current index for the v2 source-version constrained evaluation, gap triage, matcher recall diagnostic, and transparency export.",
+        },
+        {
+            "table": "Demo-final v2 source-version evaluation",
+            "source": "docs/evaluation/DEMO_FINAL_LARGE_V2_SOURCE_VERSION_EVALUATION.md",
+            "use": "Use to report the 106-case v2 rerun with exact emitted rows, zero wrong-version emitted rows, and the remaining source-gap denominator.",
+        },
+        {
+            "table": "Demo-final v2 source-gap triage",
+            "source": "docs/evaluation/DEMO_FINAL_LARGE_V2_SOURCE_GAP_TRIAGE.md",
+            "use": "Use to separate v2 source gaps into metadata/source-only, alias/boundary, missing-reference, and matcher-recall buckets.",
+        },
+        {
+            "table": "Demo-final v2 matcher recall diagnostics",
+            "source": "docs/evaluation/DEMO_FINAL_V2_MATCHER_RECALL_DIAGNOSTICS.md",
+            "use": "Use to show which exact source-version gaps can be surfaced only as report-only source-context suggestions.",
+        },
+        {
+            "table": "Demo-final transparency export",
+            "source": "docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md",
+            "use": "Use as the row-level JSON/CSV export index for dataset roles, source coverage classes, emitted result classes, version mismatch reasons, and vulnerability claim strength.",
+        },
+        {
             "table": "Post-100 real APK optimization plan",
             "source": "docs/planning/RESEARCH_BACKED_REAL_APK_OPTIMIZATION_PLAN.md",
             "use": "Use as the research-backed execution roadmap for coverage-first reference DB growth, wrong-version rows, missing-source rows, guarded promotion, and dashboard improvement.",
@@ -615,6 +655,16 @@ def build_demo_package() -> list[dict[str, str]]:
             "item": "Evaluation tables",
             "path": "docs/evaluation/THESIS_EVALUATION_TABLES.md",
             "talking_point": "Clean/partial/blocked/limitation split and emitted Maven version confirmation rate.",
+        },
+        {
+            "item": "Demo-final v2 package",
+            "path": "docs/evaluation/DEMO_FINAL_V2_PACKAGE.md",
+            "talking_point": "Current v2 source-version constrained package: 106/106 cases, 6772/6772 exact emitted rows, 0 wrong-version emitted rows, and explicit gap/recall transparency.",
+        },
+        {
+            "item": "Demo-final transparency export",
+            "path": "data/results/evaluation/demo-final-transparency-export.json",
+            "talking_point": "Row-level JSON for exporting dataset roles, source coverage classes, emitted result classes, and vulnerability claim strength.",
         },
     ]
 

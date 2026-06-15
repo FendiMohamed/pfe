@@ -26,6 +26,18 @@ Important behavior:
 
 Latest completed checkpoint:
 
+- Demo-final fixable reference DB growth:
+  - `scripts/build_demo_final_fixable_reference_retry.py` generated `configs/libraries.demo_final_fixable_missing_reference_retry.json` from the final source-gap triage.
+  - The plan excludes `115` proven no-bytecode slots and `5` source-pseudo-coordinate boundaries, leaving `87` plausibly fixable retry slots.
+  - `scripts/build_demo_final_second_stage_reference_retry.py` then generated `configs/libraries.demo_final_fixable_missing_reference_retry_stage2.json` to retry first-stage failures with plausible alternate packaging/repositories.
+  - Across both stages, `46` artifacts downloaded, `24` bytecode-bearing components converted/stored, `22` downloaded artifacts were proven no-bytecode, and `41` slots stayed unavailable/source-boundary.
+  - The local ignored demo-final DB `data/reference_db/reference_features_demo_final_large_v2.sqlite` grew from `10493` to `10517` components.
+  - `docs/evaluation/DEMO_FINAL_FIXABLE_REFERENCE_GROWTH_RESULT.md` records `25` source-gap rows now reference-covered, `91` downloaded no-bytecode source-gap rows, and `43` attempted-but-unavailable source-gap rows.
+  - The grown v2 DB was rerun across `106/106` source-tree cases in the source-version constrained lane: `6772` emitted rows, `6772` exact confirmations, `0` wrong-version rows, `0` missing emitted rows, and `5238` source-gap rows.
+  - `docs/evaluation/DEMO_FINAL_LARGE_V2_SOURCE_GAP_TRIAGE.md` explains `2515` boundary/alias rows and leaves `2723` actionable rows (`2281` matcher-recall candidates, `442` missing-reference candidates).
+  - `docs/evaluation/DEMO_FINAL_V2_MATCHER_RECALL_DIAGNOSTICS.md` finds `1425` source-context report-only suggestions across those matcher-recall rows.
+  - `docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md`, `data/results/evaluation/demo-final-transparency-export.json`, and `docs/evaluation/DEMO_FINAL_V2_PACKAGE.md` are the current package/index artifacts for thesis/demo use.
+  - This is still an evaluation-only exact-source-version upper bound; do not report it as APK-only production accuracy.
 - Post-v16 optimization checkpoint:
   - Source-linked blockers remain closed at 0.
   - The no-Maven-signal lane is complete with an audit, AndroidX report-only experiment, and Mastodon fork-family report-only audit.

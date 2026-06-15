@@ -1,0 +1,703 @@
+{
+  "libraries": [
+    {
+      "artifact": "collection-ktx",
+      "group": "androidx.collection",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "1.4.0",
+        "1.4.2",
+        "1.4.4",
+        "1.4.5",
+        "1.5.0",
+        "1.6.0"
+      ]
+    },
+    {
+      "artifact": "lifecycle-common-java8",
+      "group": "androidx.lifecycle",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.5.1",
+        "2.6.1",
+        "2.6.2",
+        "2.7.0",
+        "2.8.2",
+        "2.8.6",
+        "2.8.7",
+        "2.9.1",
+        "2.9.4",
+        "2.10.0"
+      ]
+    },
+    {
+      "artifact": "paging-common-ktx",
+      "group": "androidx.paging",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "3.3.6",
+        "3.5.0"
+      ]
+    },
+    {
+      "artifact": "accompanist-drawablepainter",
+      "group": "com.google.accompanist",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.36.0",
+        "0.37.3"
+      ]
+    },
+    {
+      "artifact": "nanojson",
+      "group": "com.github.TeamNewPipe",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "e9d656ddb49a412a5a0a5d5ef20ca7ef09549996"
+      ]
+    },
+    {
+      "artifact": "libsuperuser",
+      "group": "eu.chainfire",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.1.0",
+        "1.1.1"
+      ]
+    },
+    {
+      "artifact": "material-ripple",
+      "group": "org.jetbrains.compose.material",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.9.0-beta03",
+        "1.9.1"
+      ]
+    },
+    {
+      "artifact": "material3",
+      "group": "org.jetbrains.compose.material3",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.9.0",
+        "1.9.0-beta03"
+      ]
+    },
+    {
+      "artifact": "patternlockview",
+      "group": "com.andrognito.patternlockview",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "artifact": "pinlockview",
+      "group": "com.andrognito.pinlockview",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.1.0"
+      ]
+    },
+    {
+      "artifact": "sublimepickerlibrary",
+      "group": "com.appeaser.sublimepickerlibrary",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.1.2"
+      ]
+    },
+    {
+      "artifact": "ChipsLayoutManager",
+      "group": "com.beloo.widget",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.3.7"
+      ]
+    },
+    {
+      "artifact": "soloader",
+      "group": "com.facebook.fresco",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "hermes-android",
+      "group": "com.facebook.react",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.77.2"
+      ]
+    },
+    {
+      "artifact": "react-android",
+      "group": "com.facebook.react",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.77.2"
+      ]
+    },
+    {
+      "artifact": "nordpol-android",
+      "group": "com.fidesmo",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.1.22"
+      ]
+    },
+    {
+      "artifact": "jaudiotagger",
+      "group": "com.github.Adonai",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "2.3.15"
+      ]
+    },
+    {
+      "artifact": "MPAndroidChart",
+      "group": "com.github.PhilJay",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v2.2.5"
+      ]
+    },
+    {
+      "artifact": "dbflow-core",
+      "group": "com.github.Raizlabs.DBFlow",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "4.2.4"
+      ]
+    },
+    {
+      "artifact": "NewPipeExtractor",
+      "group": "com.github.TeamNewPipe",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v0.26.1"
+      ]
+    },
+    {
+      "artifact": "GlyphConverter",
+      "group": "com.github.ThothDroid",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.7.0"
+      ]
+    },
+    {
+      "artifact": "fzf4j",
+      "group": "com.github.aivanovski",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.2.1"
+      ]
+    },
+    {
+      "artifact": "keepass-tree-builder",
+      "group": "com.github.aivanovski",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.4.0"
+      ]
+    },
+    {
+      "artifact": "keepass-tree-diff",
+      "group": "com.github.aivanovski",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.4.0"
+      ]
+    },
+    {
+      "artifact": "dav4jvm",
+      "group": "com.github.bitfireat",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1f2f5a7793"
+      ]
+    },
+    {
+      "artifact": "Omni-Notes-Commons",
+      "group": "com.github.federicoiosue",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.4.0"
+      ]
+    },
+    {
+      "artifact": "Springpad-Importer",
+      "group": "com.github.federicoiosue",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.0.1"
+      ]
+    },
+    {
+      "artifact": "NewPipeExtractor",
+      "group": "com.github.libre-tube",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0c7e95b"
+      ]
+    },
+    {
+      "artifact": "mapsforge-core",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map-android",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-map-reader",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "mapsforge-themes",
+      "group": "com.github.mapsforge.mapsforge",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.27.0"
+      ]
+    },
+    {
+      "artifact": "fyydlin",
+      "group": "com.github.mfietz",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "e1d25f347641fe5e26c4c2b9756d4e9001a398dd"
+      ]
+    },
+    {
+      "artifact": "android-library",
+      "group": "com.github.nextcloud",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "cd6ef9c073cd7c23bd36f9712d1f8c1030cc6804"
+      ]
+    },
+    {
+      "artifact": "material-color-utilities",
+      "group": "com.github.nextcloud.android-common",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "0.33.2"
+      ]
+    },
+    {
+      "artifact": "android-dav",
+      "group": "com.github.opencloud-eu",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "oc_support_2.1.5"
+      ]
+    },
+    {
+      "artifact": "dav4android",
+      "group": "com.github.owncloud",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "oc_support_2.1.5"
+      ]
+    },
+    {
+      "artifact": "totp-kt",
+      "group": "com.github.robinohs",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "v1.0.0"
+      ]
+    },
+    {
+      "artifact": "bottomsheetbuilder",
+      "group": "com.github.rubensousa",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "1.6.1"
+      ]
+    },
+    {
+      "artifact": "material-popup-menu",
+      "group": "com.github.zawadz88.materialpopupmenu",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "aar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "dav4jvm",
+      "group": "com.github.zhanghai",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://jitpack.io",
+      "versions": [
+        "c317607"
+      ]
+    },
+    {
+      "artifact": "betterpickers",
+      "group": "com.gitlab.askanimus",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "3.2.7"
+      ]
+    },
+    {
+      "artifact": "accompanist-permissions",
+      "group": "com.google.accompanist",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.37.3"
+      ]
+    },
+    {
+      "artifact": "dashclock-api",
+      "group": "com.google.android.apps.dashclock",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.0.0"
+      ]
+    },
+    {
+      "artifact": "material-intro",
+      "group": "com.heinrichreimersoftware",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.0.0"
+      ]
+    },
+    {
+      "artifact": "zxing-android-embedded",
+      "group": "com.journeyapps",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "3.4.0"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "com.mikepenz",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "3.2.6"
+      ]
+    },
+    {
+      "artifact": "library-core",
+      "group": "com.mikepenz",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "3.2.6"
+      ]
+    },
+    {
+      "artifact": "fingerprint-auth",
+      "group": "com.multidots",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.0.1"
+      ]
+    },
+    {
+      "artifact": "materialfilepicker",
+      "group": "com.nbsp",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "aar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.9.1"
+      ]
+    },
+    {
+      "artifact": "bottomsheetpickers",
+      "group": "com.philliphsu",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.4.1"
+      ]
+    },
+    {
+      "artifact": "library",
+      "group": "com.pixplicity.easyprefs",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.9.0"
+      ]
+    },
+    {
+      "artifact": "rxpermissions",
+      "group": "com.tbruyelle.rxpermissions",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.4.2"
+      ]
+    },
+    {
+      "artifact": "flexible-adapter-livedata",
+      "group": "eu.davidea",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.0.0-b2"
+      ]
+    },
+    {
+      "artifact": "flexible-adapter-ui",
+      "group": "eu.davidea",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.0.0-b5"
+      ]
+    },
+    {
+      "artifact": "picasso-transformations",
+      "group": "jp.wasabeef",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.3.1"
+      ]
+    },
+    {
+      "artifact": "recyclerview-animators",
+      "group": "jp.wasabeef",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "3.0.0"
+      ]
+    },
+    {
+      "artifact": "free_reflection",
+      "group": "me.weishu",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.2.0"
+      ]
+    },
+    {
+      "artifact": "time-duration-picker",
+      "group": "mobi.upod",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.1.3"
+      ]
+    },
+    {
+      "artifact": "i2p",
+      "group": "net.i2p",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.11.0-1"
+      ]
+    },
+    {
+      "artifact": "router",
+      "group": "net.i2p",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.11.0-1"
+      ]
+    },
+    {
+      "artifact": "mstreaming",
+      "group": "net.i2p.client",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.11.0-1"
+      ]
+    },
+    {
+      "artifact": "streaming",
+      "group": "net.i2p.client",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "2.11.0-1"
+      ]
+    },
+    {
+      "artifact": "commons-numbers-parent",
+      "group": "org.apache.commons",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "1.0"
+      ]
+    },
+    {
+      "artifact": "android-smsmms",
+      "group": "org.kde.invent.sredman",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "kdeconnect-1-21-0"
+      ]
+    },
+    {
+      "artifact": "html-textview",
+      "group": "org.sufficientlysecure",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "3.1"
+      ]
+    },
+    {
+      "artifact": "remote-access",
+      "group": "org.videolan.android",
+      "notes": "Demo-final fixable missing-reference retry; excludes proven no-bytecode rows.",
+      "packaging": "jar",
+      "repository_url": "https://repo1.maven.org/maven2",
+      "versions": [
+        "0.17.0"
+      ]
+    }
+  ]
+}
