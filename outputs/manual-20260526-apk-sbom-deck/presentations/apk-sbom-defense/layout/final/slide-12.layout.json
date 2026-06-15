@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/cis8wr",
-    "id": "cis8wr",
+    "aid": "sl/zty1tm",
+    "id": "zty1tm",
     "slide": 12,
-    "layoutId": "2732da26-34fc-44d5-8e6b-9926be33f20e",
+    "layoutId": "9b5a485f-0ebd-4537-ab9e-8dd56e257032",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "67b7cda1-f34c-4fd5-8860-62e46611c3dd",
+    "masterLayoutId": "bb418f5b-2560-4361-b666-cde00419d42e",
     "masterLayoutName": "Master",
     "backgroundColor": "#F6F8FB",
     "frame": {
@@ -46,15 +46,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "2732da26-34fc-44d5-8e6b-9926be33f20e",
+      "id": "9b5a485f-0ebd-4537-ab9e-8dd56e257032",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "67b7cda1-f34c-4fd5-8860-62e46611c3dd",
+      "parentLayoutId": "bb418f5b-2560-4361-b666-cde00419d42e",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "67b7cda1-f34c-4fd5-8860-62e46611c3dd",
+      "id": "bb418f5b-2560-4361-b666-cde00419d42e",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -65,7 +65,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/8nqxs72x",
+      "aid": "sh/7qpg3ex0",
       "id": "1",
       "bbox": [
         56,
@@ -86,10 +86,10 @@
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 8,
-          "bottom": 4,
-          "left": 8
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
@@ -119,21 +119,20 @@
               "fontSize": 13,
               "typeface": "Aptos",
               "color": "#1F9D8A",
-              "bold": true
+              "bold": true,
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/j2t83itg",
+      "aid": "sh/0bi9s36h",
       "id": "2",
       "bbox": [
         56,
@@ -154,10 +153,10 @@
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 8,
-          "bottom": 4,
-          "left": 8
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
@@ -191,21 +190,20 @@
               "fontSize": 28,
               "typeface": "Aptos Display",
               "color": "#151922",
-              "bold": true
+              "bold": true,
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/qh0fepkz",
+      "aid": "sh/pwb2hwfy",
       "id": "3",
       "bbox": [
         1168,
@@ -225,10 +223,10 @@
         "alignment": "right",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 8,
-          "bottom": 4,
-          "left": 8
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
@@ -256,21 +254,20 @@
               "text": "12",
               "fontSize": 13,
               "typeface": "Aptos",
-              "color": "#596575"
+              "color": "#596575",
+              "alignment": "right"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/1w7mp0bi",
+      "aid": "sh/ed8v6psf",
       "id": "4",
       "name": "rule",
       "bbox": [
@@ -281,14 +278,13 @@
       ],
       "geometry": "rect",
       "fillColor": "#D6DEE8",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/8bat47y1",
+      "aid": "sh/7y1kre1w",
       "id": "5",
       "bbox": [
         74,
@@ -305,7 +301,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/jqh0fepk",
+      "aid": "sh/wjudg7ad",
       "id": "6",
       "bbox": [
         100,
@@ -326,10 +322,10 @@
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 8,
-          "bottom": 4,
-          "left": 8
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
@@ -359,21 +355,20 @@
               "fontSize": 22,
               "typeface": "Aptos",
               "color": "#C34E5A",
-              "bold": true
+              "bold": true,
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/q5o7qpg3",
+      "aid": "sh/p4r65wju",
       "id": "7",
       "bbox": [
         100,
@@ -382,8 +377,8 @@
         210
       ],
       "geometry": "rect",
-      "text": "- reference DB coverage affects exact versions\n- adjacent AndroidX/Kotlin versions can tie\n- native .so files are hash-only\n- hidden DEX/dynamic loading is risk-labeled\n- K-9 remains source-linked blocked\n- scanner validation blocked by missing tools",
-      "textPreview": "- reference DB coverage affects exact versions | - adjacent AndroidX/Kotlin versions can tie | - native .so files are hash-only | - hidde...",
+      "text": "- normal metric is not full dependency recall\n- v2 lane is not APK-only accuracy\n- adjacent AndroidX/Kotlin versions can tie\n- native .so files are hash-only\n- hidden DEX/dynamic loading is risk-labeled\n- 1425 matcher suggestions stay report-only",
+      "textPreview": "- normal metric is not full dependency recall | - v2 lane is not APK-only accuracy | - adjacent AndroidX/Kotlin versions can tie | - nati...",
       "resolvedFontSize": 15,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -393,10 +388,10 @@
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 6,
-          "bottom": 4,
-          "left": 6
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
@@ -404,34 +399,34 @@
         "lines": [
           {
             "index": 1,
-            "text": "- reference DB coverage affects exact versions"
+            "text": "- normal metric is not full dependency recall"
           },
           {
             "index": 2,
-            "text": "- adjacent AndroidX/Kotlin versions can tie"
+            "text": "- v2 lane is not APK-only accuracy"
           },
           {
             "index": 3,
-            "text": "- native .so files are hash-only"
+            "text": "- adjacent AndroidX/Kotlin versions can tie"
           },
           {
             "index": 4,
-            "text": "- hidden DEX/dynamic loading is risk-labeled"
+            "text": "- native .so files are hash-only"
           },
           {
             "index": 5,
-            "text": "- K-9 remains source-linked blocked"
+            "text": "- hidden DEX/dynamic loading is risk-labeled"
           },
           {
             "index": 6,
-            "text": "- scanner validation blocked by missing tools"
+            "text": "- 1425 matcher suggestions stay report-only"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "- reference DB coverage affects exact versions",
+          "text": "- normal metric is not full dependency recall",
           "resolvedTextStyle": {
             "fontSize": 15,
             "typeface": "Aptos",
@@ -441,16 +436,38 @@
           "runs": [
             {
               "index": 1,
-              "text": "- reference DB coverage affects exact versions",
+              "text": "- normal metric is not full dependency recall",
               "fontSize": 15,
               "typeface": "Aptos",
-              "color": "#151922"
+              "color": "#151922",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         },
         {
           "index": 2,
+          "text": "- v2 lane is not APK-only accuracy",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- v2 lane is not APK-only accuracy",
+              "fontSize": 15,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
           "text": "- adjacent AndroidX/Kotlin versions can tie",
           "resolvedTextStyle": {
             "fontSize": 15,
@@ -464,13 +481,14 @@
               "text": "- adjacent AndroidX/Kotlin versions can tie",
               "fontSize": 15,
               "typeface": "Aptos",
-              "color": "#151922"
+              "color": "#151922",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         },
         {
-          "index": 3,
+          "index": 4,
           "text": "- native .so files are hash-only",
           "resolvedTextStyle": {
             "fontSize": 15,
@@ -484,13 +502,14 @@
               "text": "- native .so files are hash-only",
               "fontSize": 15,
               "typeface": "Aptos",
-              "color": "#151922"
+              "color": "#151922",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         },
         {
-          "index": 4,
+          "index": 5,
           "text": "- hidden DEX/dynamic loading is risk-labeled",
           "resolvedTextStyle": {
             "fontSize": 15,
@@ -504,34 +523,15 @@
               "text": "- hidden DEX/dynamic loading is risk-labeled",
               "fontSize": 15,
               "typeface": "Aptos",
-              "color": "#151922"
-            }
-          ],
-          "marginLeft": 0
-        },
-        {
-          "index": 5,
-          "text": "- K-9 remains source-linked blocked",
-          "resolvedTextStyle": {
-            "fontSize": 15,
-            "typeface": "Aptos",
-            "color": "#151922",
-            "alignment": "left"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "- K-9 remains source-linked blocked",
-              "fontSize": 15,
-              "typeface": "Aptos",
-              "color": "#151922"
+              "color": "#151922",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         },
         {
           "index": 6,
-          "text": "- scanner validation blocked by missing tools",
+          "text": "- 1425 matcher suggestions stay report-only",
           "resolvedTextStyle": {
             "fontSize": 15,
             "typeface": "Aptos",
@@ -541,24 +541,23 @@
           "runs": [
             {
               "index": 1,
-              "text": "- scanner validation blocked by missing tools",
+              "text": "- 1425 matcher suggestions stay report-only",
               "fontSize": 15,
               "typeface": "Aptos",
-              "color": "#151922"
+              "color": "#151922",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/1kre1w7m",
+      "aid": "sh/ih4byhgn",
       "id": "8",
       "bbox": [
         666,
@@ -575,7 +574,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/c3ylc7u5",
+      "aid": "sh/72x4nap4",
       "id": "9",
       "bbox": [
         692,
@@ -596,10 +595,10 @@
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 8,
-          "bottom": 4,
-          "left": 8
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
@@ -629,21 +628,20 @@
               "fontSize": 22,
               "typeface": "Aptos",
               "color": "#356AC3",
-              "bold": true
+              "bold": true,
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/a1gvy90j",
+      "aid": "sh/zqtcj6to",
       "id": "10",
       "bbox": [
         692,
@@ -652,8 +650,8 @@
         188
       ],
       "geometry": "rect",
-      "text": "- scale source-validated real APKs\n- add framework families\n- investigate scoped per-coordinate rerankers\n- explore stronger multi-scale graph fusion\n- add Trivy/Grype validation when available",
-      "textPreview": "- scale source-validated real APKs | - add framework families | - investigate scoped per-coordinate rerankers | - explore stronger multi-...",
+      "text": "- improve matcher recall for 2281 exact-in-DB gaps\n- retry 442 remaining missing-reference candidates\n- add safe pruning/reranking controls\n- expand framework families\n- keep vulnerability confidence labels strict",
+      "textPreview": "- improve matcher recall for 2281 exact-in-DB gaps | - retry 442 remaining missing-reference candidates | - add safe pruning/reranking co...",
       "resolvedFontSize": 15,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -663,10 +661,10 @@
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 6,
-          "bottom": 4,
-          "left": 6
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
@@ -674,30 +672,30 @@
         "lines": [
           {
             "index": 1,
-            "text": "- scale source-validated real APKs"
+            "text": "- improve matcher recall for 2281 exact-in-DB gaps"
           },
           {
             "index": 2,
-            "text": "- add framework families"
+            "text": "- retry 442 remaining missing-reference candidates"
           },
           {
             "index": 3,
-            "text": "- investigate scoped per-coordinate rerankers"
+            "text": "- add safe pruning/reranking controls"
           },
           {
             "index": 4,
-            "text": "- explore stronger multi-scale graph fusion"
+            "text": "- expand framework families"
           },
           {
             "index": 5,
-            "text": "- add Trivy/Grype validation when available"
+            "text": "- keep vulnerability confidence labels strict"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "- scale source-validated real APKs",
+          "text": "- improve matcher recall for 2281 exact-in-DB gaps",
           "resolvedTextStyle": {
             "fontSize": 15,
             "typeface": "Aptos",
@@ -707,17 +705,18 @@
           "runs": [
             {
               "index": 1,
-              "text": "- scale source-validated real APKs",
+              "text": "- improve matcher recall for 2281 exact-in-DB gaps",
               "fontSize": 15,
               "typeface": "Aptos",
-              "color": "#151922"
+              "color": "#151922",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         },
         {
           "index": 2,
-          "text": "- add framework families",
+          "text": "- retry 442 remaining missing-reference candidates",
           "resolvedTextStyle": {
             "fontSize": 15,
             "typeface": "Aptos",
@@ -727,17 +726,18 @@
           "runs": [
             {
               "index": 1,
-              "text": "- add framework families",
+              "text": "- retry 442 remaining missing-reference candidates",
               "fontSize": 15,
               "typeface": "Aptos",
-              "color": "#151922"
+              "color": "#151922",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         },
         {
           "index": 3,
-          "text": "- investigate scoped per-coordinate rerankers",
+          "text": "- add safe pruning/reranking controls",
           "resolvedTextStyle": {
             "fontSize": 15,
             "typeface": "Aptos",
@@ -747,17 +747,18 @@
           "runs": [
             {
               "index": 1,
-              "text": "- investigate scoped per-coordinate rerankers",
+              "text": "- add safe pruning/reranking controls",
               "fontSize": 15,
               "typeface": "Aptos",
-              "color": "#151922"
+              "color": "#151922",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         },
         {
           "index": 4,
-          "text": "- explore stronger multi-scale graph fusion",
+          "text": "- expand framework families",
           "resolvedTextStyle": {
             "fontSize": 15,
             "typeface": "Aptos",
@@ -767,17 +768,18 @@
           "runs": [
             {
               "index": 1,
-              "text": "- explore stronger multi-scale graph fusion",
+              "text": "- expand framework families",
               "fontSize": 15,
               "typeface": "Aptos",
-              "color": "#151922"
+              "color": "#151922",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         },
         {
           "index": 5,
-          "text": "- add Trivy/Grype validation when available",
+          "text": "- keep vulnerability confidence labels strict",
           "resolvedTextStyle": {
             "fontSize": 15,
             "typeface": "Aptos",
@@ -787,24 +789,23 @@
           "runs": [
             {
               "index": 1,
-              "text": "- add Trivy/Grype validation when available",
+              "text": "- keep vulnerability confidence labels strict",
               "fontSize": 15,
               "typeface": "Aptos",
-              "color": "#151922"
+              "color": "#151922",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zidonyd0",
+      "aid": "sh/65wjudg7",
       "id": "11",
       "bbox": [
         128,
@@ -825,10 +826,10 @@
         "alignment": "center",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 8,
-          "bottom": 4,
-          "left": 8
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
@@ -858,31 +859,30 @@
               "fontSize": 20,
               "typeface": "Aptos",
               "color": "#151922",
-              "bold": true
+              "bold": true,
+              "alignment": "center"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/s36hcrmh",
+      "aid": "sh/hwfyxobm",
       "id": "12",
       "bbox": [
         56,
         680,
-        900,
+        1000,
         20
       ],
       "geometry": "rect",
-      "text": "APK-to-SBOM MVP | emitted Maven version confirmation rate, not full dependency recall",
-      "textPreview": "APK-to-SBOM MVP | emitted Maven version confirmation rate, not full dependency recall",
+      "text": "APK-to-SBOM MVP | emitted confirmation != full recall; v2 source-known lane != APK-only accuracy",
+      "textPreview": "APK-to-SBOM MVP | emitted confirmation != full recall; v2 source-known lane != APK-only accuracy",
       "resolvedFontSize": 10,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -892,10 +892,10 @@
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 8,
-          "bottom": 4,
-          "left": 8
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
@@ -903,14 +903,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "APK-to-SBOM MVP | emitted Maven version confirmation rate, not full dependency recall"
+            "text": "APK-to-SBOM MVP | emitted confirmation != full recall; v2 source-known lane != APK-only accuracy"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "APK-to-SBOM MVP | emitted Maven version confirmation rate, not full dependency recall",
+          "text": "APK-to-SBOM MVP | emitted confirmation != full recall; v2 source-known lane != APK-only accuracy",
           "resolvedTextStyle": {
             "fontSize": 10,
             "typeface": "Aptos",
@@ -920,17 +920,16 @@
           "runs": [
             {
               "index": 1,
-              "text": "APK-to-SBOM MVP | emitted Maven version confirmation rate, not full dependency recall",
+              "text": "APK-to-SBOM MVP | emitted confirmation != full recall; v2 source-known lane != APK-only accuracy",
               "fontSize": 10,
               "typeface": "Aptos",
-              "color": "#596575"
+              "color": "#596575",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     }
   ],

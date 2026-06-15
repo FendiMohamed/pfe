@@ -1,8 +1,8 @@
 ﻿Task mode: create
 Primary deck-profile: engineering-platform
 Secondary gates: thesis defense, security evaluation, evidence-led technical narrative
-Required proof objects: architecture pipeline, evidence-signal map, confidence/ambiguity diagram, evaluation split, metric proof table, SBOM/CVE demo, limitations/roadmap
-Source assets: docs/thesis/PRESENTATION_DECK_SCRIPT.md, docs/thesis/PFE_FINAL_REPORT_ASSEMBLED.md, docs/thesis/PAPER_TO_IMPLEMENTATION_TRACEABILITY.md, docs/evaluation/THESIS_EVALUATION_TABLES.md, docs/dev/RUNBOOK.md
+Required proof objects: architecture pipeline, evidence-signal map, confidence/ambiguity diagram, evaluation split, metric proof table, v2 upper-bound lane, transparency export, SBOM/CVE demo, limitations/roadmap
+Source assets: docs/thesis/PRESENTATION_DECK_SCRIPT.md, docs/thesis/PFE_FINAL_REPORT_ASSEMBLED.md, docs/thesis/FINAL_V2_RESULTS_SECTION.md, docs/thesis/PAPER_TO_IMPLEMENTATION_TRACEABILITY.md, docs/evaluation/THESIS_EVALUATION_TABLES.md, docs/evaluation/DEMO_FINAL_V2_PACKAGE.md, docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md, docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md, docs/dev/RUNBOOK.md
 Brand constraints: no external logos or unverifiable brand assets; use native editable shapes and text only
-QA gates: each slide has one claim and one proof object; diagrams are readable; result numbers match thesis tables; partial/blocked/limitation wording stays honest
+QA gates: each slide has one claim and one proof object; diagrams are readable; result numbers match thesis tables and the v2 package; partial/blocked/limitation wording stays honest; v2 is never described as APK-only production accuracy
 Known missing inputs: university template, official cover metadata, supervisor/student names

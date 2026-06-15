@@ -39,6 +39,7 @@ Latest completed checkpoint:
   - `docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md`, `data/results/evaluation/demo-final-transparency-export.json`, and `docs/evaluation/DEMO_FINAL_V2_PACKAGE.md` are the current package/index artifacts for thesis/demo use.
   - `docs/thesis/FINAL_V2_RESULTS_SECTION.md` is the copy-ready thesis addendum that separates the normal `927/1837` emitted Maven version confirmation metric from the v2 `6772/6772` source-known upper-bound lane.
   - `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md` is the final supervisor/demo flow with opening wording, artifact order, CVE/SBOM pointers, transparency numbers, and hard-question answers.
+  - The editable defense deck was regenerated at `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx` with 12 slides, 12 notes slides, current v2 metrics, refreshed previews/layouts/contact sheet, `source-notes.txt`, and QA scorecards. PPTX package validation passed; the artifact runtime still returns non-zero after writing, so keep the documented runtime caveat.
   - This is still an evaluation-only exact-source-version upper bound; do not report it as APK-only production accuracy.
 - Post-v16 optimization checkpoint:
   - Source-linked blockers remain closed at 0.

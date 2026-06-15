@@ -8,6 +8,8 @@ Editable generated deck: `outputs/manual-20260526-apk-sbom-deck/presentations/ap
 
 Rendered QA contact sheet: `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/preview/contact-sheet.png`.
 
+Current deck refresh: regenerated on 2026-06-15 with the final v2 source-known lane, transparency export, updated QA scorecard, and the guardrail that v2 is not APK-only production accuracy.
+
 ## Slide 1: Title
 
 **Slide claim:** This project recovers useful SBOM evidence from compiled Android APKs.

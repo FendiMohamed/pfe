@@ -52,7 +52,7 @@ function header(slide, ctx, title, kicker, slideNo) {
 }
 
 function footer(slide, ctx) {
-  text(slide, ctx, "APK-to-SBOM MVP | emitted Maven version confirmation rate, not full dependency recall", 56, 680, 900, 20, { size: 10, color: C.muted });
+  text(slide, ctx, "APK-to-SBOM MVP | emitted confirmation != full recall; v2 source-known lane != APK-only accuracy", 56, 680, 1000, 20, { size: 10, color: C.muted });
 }
 
 function chip(slide, ctx, label, x, y, w, color = C.teal) {
@@ -106,7 +106,7 @@ function bar(slide, ctx, label, value, max, x, y, w, color) {
   box(slide, ctx, x + 285, y, w, 20, "#E8EDF4", "#E8EDF4");
   const fillW = Math.max(2, Math.round((value / max) * w));
   ctx.addShape(slide, { x: x + 285, y, w: fillW, h: 20, fill: color, line: ctx.line("#00000000", 0) });
-  text(slide, ctx, `${value}/${max}`, x + 300 + w, y - 2, 90, 22, { size: 13, bold: true, color });
+  text(slide, ctx, `${value}/${max}`, x + 300 + w, y - 2, 130, 22, { size: 13, bold: true, color });
 }
 
 function slide01(presentation, ctx) {
@@ -117,11 +117,12 @@ function slide01(presentation, ctx) {
   text(slide, ctx, "from Compiled Android APKs", 70, 145, 720, 48, { size: 32, bold: true, color: "#BFEFE8", face: ctx.fonts.title });
   text(slide, ctx, "Hybrid static library version detection and vulnerability lookup for APK-only analysis", 72, 214, 770, 52, { size: 18, color: "#D6DEE8" });
   pipeline(slide, ctx, ["APK", "Evidence", "Maven candidates", "CycloneDX", "OSV"], 76, 330, 780, C.teal);
-  metric(slide, ctx, "137/173", "source-validated emitted Maven versions confirmed", 930, 92, 245, 116, C.teal);
-  metric(slide, ctx, "35/35", "controlled expected versions confirmed", 930, 238, 245, 116, C.blue);
-  metric(slide, ctx, "12", "source-validated real APKs", 930, 384, 245, 116, C.amber);
+  metric(slide, ctx, "927/1837", "normal source-validated emitted Maven versions confirmed", 930, 72, 245, 112, C.teal);
+  metric(slide, ctx, "84/84", "controlled expected versions confirmed", 930, 210, 245, 112, C.blue);
+  metric(slide, ctx, "6772/6772", "v2 source-known emitted rows exact", 930, 348, 245, 112, C.amber);
+  text(slide, ctx, "v2 is an upper-bound lane, not APK-only accuracy", 930, 486, 245, 42, { size: 13, color: "#F5D38C", bold: true, align: "center" });
   text(slide, ctx, "PFE Defense Deck", 72, 640, 340, 28, { size: 15, color: "#AAB7C7", bold: true });
-  note(slide, "This project starts from a realistic audit situation: we may only have an APK, not the source or Gradle files. The goal is to recover third-party library and version evidence, generate CycloneDX SBOMs, and connect them to vulnerability lookup.");
+  note(slide, "This project starts from a realistic audit situation: we may only have an APK, not the source or Gradle files. The normal metric is 927/1837 emitted Maven versions confirmed across 102 source-validated real APKs. The final v2 source-known lane separately confirms 6772/6772 emitted rows across 106 source-tree cases under exact source-version slices.");
   return slide;
 }
 
@@ -243,11 +244,11 @@ function slide08(presentation, ctx) {
   const slide = presentation.slides.add();
   header(slide, ctx, "Evaluation is by APK family, not by hiding hard cases", "Evaluation design", 8);
   const rows = [
-    ["Controlled APKs", "30", "known ground truth"],
-    ["Clean source-validated real", "3", "strong exact-version evidence"],
-    ["Partial source-validated real", "9", "realistic hard cases"],
-    ["Source-linked blocked", "1", "proof exists, metric excluded"],
-    ["Limitation cases", "3", "native/hidden-code boundaries"]
+    ["Controlled APKs", "72", "known ground truth"],
+    ["Clean source-validated real", "5", "strong exact-version evidence"],
+    ["Partial source-validated real", "97", "realistic hard cases"],
+    ["Source-linked blocked", "0", "none remain after proof gates"],
+    ["Limitation cases", "4", "native/hidden-code/obfuscation boundaries"]
   ];
   rows.forEach((r, i) => {
     const y = 170 + i * 78;
@@ -258,7 +259,7 @@ function slide08(presentation, ctx) {
     text(slide, ctx, r[1], 520, y + 9, 70, 32, { size: 25, bold: true, color });
     text(slide, ctx, r[2], 638, y + 15, 330, 24, { size: 15, color: C.muted });
   });
-  text(slide, ctx, "Blocked and boundary cases are visible but excluded from accuracy metrics.", 160, 592, 930, 28, { size: 18, bold: true, align: "center", color: C.ink });
+  text(slide, ctx, "No rows are hidden: blocked is zero, and boundary cases stay visible but outside exact Maven-version accuracy.", 122, 592, 1030, 28, { size: 17, bold: true, align: "center", color: C.ink });
   footer(slide, ctx);
   note(slide, "This split is a key research contribution. A single global score hides why the tool succeeds or fails across APK families.");
   return slide;
@@ -266,18 +267,27 @@ function slide08(presentation, ctx) {
 
 function slide09(presentation, ctx) {
   const slide = presentation.slides.add();
-  header(slide, ctx, "The MVP is exact on controlled and clean cases, useful but partial on harder APKs", "Main results", 9);
-  bar(slide, ctx, "Controlled APKs", 35, 35, 120, 190, 560, C.green);
-  bar(slide, ctx, "Clean real APKs", 43, 43, 120, 266, 560, C.teal);
-  bar(slide, ctx, "Partial real APKs", 94, 130, 120, 342, 560, C.amber);
-  bar(slide, ctx, "All source-validated real", 137, 173, 120, 418, 560, C.blue);
-  box(slide, ctx, 930, 174, 230, 250, "#FFFFFF", C.blue);
-  text(slide, ctx, "79.2%", 960, 210, 170, 42, { size: 36, bold: true, color: C.blue, align: "center" });
-  text(slide, ctx, "overall emitted Maven version confirmation rate", 958, 272, 175, 76, { size: 16, color: C.ink, align: "center" });
-  text(slide, ctx, "Not full dependency recall", 954, 372, 185, 26, { size: 13, color: C.red, bold: true, align: "center" });
-  text(slide, ctx, "Always report clean and partial rows separately.", 150, 570, 980, 30, { size: 19, bold: true, align: "center" });
+  header(slide, ctx, "Main results: normal APK validation and v2 upper-bound are different lanes", "Main results", 9);
+  bar(slide, ctx, "Controlled APKs", 84, 84, 88, 174, 260, C.green);
+  bar(slide, ctx, "Clean real APKs", 47, 47, 88, 238, 260, C.teal);
+  bar(slide, ctx, "Partial real APKs", 880, 1790, 88, 302, 260, C.amber);
+  bar(slide, ctx, "All source-validated real", 927, 1837, 88, 366, 260, C.blue);
+  box(slide, ctx, 86, 468, 596, 78, "#FFFFFF", C.line);
+  text(slide, ctx, "Normal metric", 110, 486, 180, 24, { size: 16, bold: true, color: C.blue });
+  text(slide, ctx, "927/1837 emitted Maven versions confirmed across 102 source-validated APKs.", 300, 486, 350, 42, { size: 14, color: C.ink });
+
+  box(slide, ctx, 740, 174, 390, 172, "#FFFFFF", C.amber);
+  text(slide, ctx, "V2 source-known lane", 770, 202, 300, 28, { size: 22, bold: true, color: C.amber });
+  text(slide, ctx, "6772/6772", 770, 248, 220, 44, { size: 38, bold: true, color: C.amber });
+  text(slide, ctx, "emitted rows exact across 106 source-tree APK cases", 770, 304, 305, 34, { size: 14, color: C.ink });
+
+  box(slide, ctx, 740, 382, 390, 122, "#FFFFFF", C.red);
+  text(slide, ctx, "Guardrail", 770, 406, 180, 24, { size: 18, bold: true, color: C.red });
+  text(slide, ctx, "This is an upper-bound recognition test under known source versions, not unconstrained APK-only accuracy.", 770, 448, 300, 42, { size: 14, color: C.ink });
+
+  text(slide, ctx, "Always report the normal metric and v2 lane separately.", 150, 580, 980, 30, { size: 19, bold: true, align: "center" });
   footer(slide, ctx);
-  note(slide, "Use the phrase emitted Maven version confirmation rate. Do not call it full dependency recall. The overall number is useful only with the clean and partial split.");
+  note(slide, "Use the phrase emitted Maven version confirmation rate for the normal metric. The v2 source-known lane is separate: 6772 emitted rows, all exact, but only under exact source coordinate-version slices.");
   return slide;
 }
 
@@ -289,8 +299,8 @@ function slide10(presentation, ctx) {
     ["F-Droid, OpenTracks, Tusky", "Clean source-validated evidence; Tusky is clean but sparse"],
     ["NewPipe, AntennaPod, KDE, Wikipedia, Conversations, Aegis, FairEmail, Nextcloud", "Useful partial evidence with AndroidX/Kotlin and version-band ambiguity"],
     ["Markor", "Older-dependency drift; app-specific calibration can regress others"],
-    ["K-9", "Source-linked blocked; not counted until dependency tree exists"],
-    ["Organic Maps, Termux, hidden DEX", "Boundary evidence; native/hash-only and hidden-code limitations"]
+    ["K-9 / Thunderbird Android", "Source-validated partial after validation-only plugin-lite rescue"],
+    ["Organic Maps, Termux, hidden DEX, Simplify", "Boundary evidence; native/hash-only, hidden-code, and obfuscation limitations"]
   ], 70, 170, 1140, 68, [430, 710], { size: 12, headerFill: C.teal });
   text(slide, ctx, "This is why the thesis reports APK families instead of a single polished score.", 132, 610, 1010, 28, { size: 18, bold: true, align: "center" });
   footer(slide, ctx);
@@ -300,18 +310,22 @@ function slide10(presentation, ctx) {
 
 function slide11(presentation, ctx) {
   const slide = presentation.slides.add();
-  header(slide, ctx, "The SBOM workflow is standard, and vulnerability output is confidence-aware", "SBOM and CVE demo", 11);
-  box(slide, ctx, 92, 184, 500, 292, "#FFFFFF", C.green);
-  text(slide, ctx, "Clean real APK demo", 118, 214, 280, 30, { size: 22, bold: true, color: C.green });
-  text(slide, ctx, "F-Droid report", 118, 270, 240, 26, { size: 18, bold: true });
-  bullets(slide, ctx, ["23/23 source-confirmed emitted Maven versions", "CycloneDX JSON with Maven PURLs", "OSV returns 0 vulnerabilities"], 118, 316, 400, 102, { size: 15 });
-  box(slide, ctx, 684, 184, 500, 292, "#FFFFFF", C.red);
-  text(slide, ctx, "Positive vulnerability demo", 710, 214, 320, 30, { size: 22, bold: true, color: C.red });
-  text(slide, ctx, "Jackson Databind fixture", 710, 270, 320, 26, { size: 18, bold: true });
-  bullets(slide, ctx, ["com.fasterxml.jackson.core:jackson-databind@2.9.10.8", "3 confirmed HIGH OSV advisories", "CVE-2020-36518, CVE-2022-42003, CVE-2022-42004"], 710, 316, 420, 112, { size: 15 });
-  text(slide, ctx, "Confidence rule: high-confidence exact versions can support confirmed findings; ambiguous versions stay potential.", 120, 562, 1040, 44, { size: 18, bold: true, align: "center" });
+  header(slide, ctx, "The final demo shows SBOM/CVE output plus row-level transparency", "Demo proof", 11);
+  box(slide, ctx, 74, 166, 350, 270, "#FFFFFF", C.green);
+  text(slide, ctx, "Clean SBOM", 100, 192, 220, 28, { size: 21, bold: true, color: C.green });
+  bullets(slide, ctx, ["F-Droid HTML report", "CycloneDX JSON with Maven PURLs", "23/23 source-confirmed emitted Maven versions", "OSV returns 0 vulnerabilities"], 100, 246, 270, 132, { size: 14 });
+
+  box(slide, ctx, 466, 166, 350, 270, "#FFFFFF", C.red);
+  text(slide, ctx, "Positive CVE", 492, 192, 220, 28, { size: 21, bold: true, color: C.red });
+  bullets(slide, ctx, ["Jackson Databind fixture", "2.9.10.8 detected", "3 confirmed HIGH OSV advisories", "CVE-2020-36518, CVE-2022-42003, CVE-2022-42004"], 492, 246, 275, 142, { size: 14 });
+
+  box(slide, ctx, 858, 166, 350, 270, "#FFFFFF", C.blue);
+  text(slide, ctx, "Transparency export", 884, 192, 260, 28, { size: 21, bold: true, color: C.blue });
+  bullets(slide, ctx, ["12082 source rows", "5238 source-gap rows", "2515 explained/boundary rows", "442 missing-reference candidates", "2281 matcher-recall candidates"], 884, 246, 276, 150, { size: 14 });
+
+  text(slide, ctx, "Vulnerability rows are labeled source-confirmed, potential, report-only, or not queried; weak evidence is not promoted into fake confirmed CVEs.", 118, 538, 1035, 50, { size: 17, bold: true, align: "center" });
   footer(slide, ctx);
-  note(slide, "The SBOM is CycloneDX with PURLs and evidence properties. Vulnerability results are interpreted through version confidence, which reduces false confirmed CVE claims.");
+  note(slide, "Open the clean F-Droid report, the vulnerable Jackson report, and the final transparency export. The important point is that vulnerability and dependency rows are classified instead of collapsed into one overconfident number.");
   return slide;
 }
 
@@ -320,10 +334,10 @@ function slide12(presentation, ctx) {
   header(slide, ctx, "The MVP is credible because it exposes scope boundaries and next improvements", "Limitations and next work", 12);
   box(slide, ctx, 74, 178, 540, 356, "#FFFFFF", C.red);
   text(slide, ctx, "Current limitations", 100, 206, 260, 30, { size: 22, bold: true, color: C.red });
-  bullets(slide, ctx, ["reference DB coverage affects exact versions", "adjacent AndroidX/Kotlin versions can tie", "native .so files are hash-only", "hidden DEX/dynamic loading is risk-labeled", "K-9 remains source-linked blocked", "scanner validation blocked by missing tools"], 100, 258, 420, 210, { size: 15 });
+  bullets(slide, ctx, ["normal metric is not full dependency recall", "v2 lane is not APK-only accuracy", "adjacent AndroidX/Kotlin versions can tie", "native .so files are hash-only", "hidden DEX/dynamic loading is risk-labeled", "1425 matcher suggestions stay report-only"], 100, 258, 420, 210, { size: 15 });
   box(slide, ctx, 666, 178, 540, 356, "#FFFFFF", C.blue);
   text(slide, ctx, "Next work", 692, 206, 220, 30, { size: 22, bold: true, color: C.blue });
-  bullets(slide, ctx, ["scale source-validated real APKs", "add framework families", "investigate scoped per-coordinate rerankers", "explore stronger multi-scale graph fusion", "add Trivy/Grype validation when available"], 692, 258, 420, 188, { size: 15 });
+  bullets(slide, ctx, ["improve matcher recall for 2281 exact-in-DB gaps", "retry 442 remaining missing-reference candidates", "add safe pruning/reranking controls", "expand framework families", "keep vulnerability confidence labels strict"], 692, 258, 420, 188, { size: 15 });
   text(slide, ctx, "Closing: useful, measurable, and transparent beats a perfect-looking score that hides difficult APKs.", 128, 588, 1024, 34, { size: 20, bold: true, align: "center", color: C.ink });
   footer(slide, ctx);
   note(slide, "The conclusion is not that the MVP is perfect. It is that the tool is useful, measurable, and honest about uncertainty, with clear next improvements.");

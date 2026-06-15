@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/ph7ciy",
-    "id": "ph7ciy",
+    "aid": "sl/9dzfb8",
+    "id": "9dzfb8",
     "slide": 11,
-    "layoutId": "2732da26-34fc-44d5-8e6b-9926be33f20e",
+    "layoutId": "9b5a485f-0ebd-4537-ab9e-8dd56e257032",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "67b7cda1-f34c-4fd5-8860-62e46611c3dd",
+    "masterLayoutId": "bb418f5b-2560-4361-b666-cde00419d42e",
     "masterLayoutName": "Master",
     "backgroundColor": "#F6F8FB",
     "frame": {
@@ -46,15 +46,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "2732da26-34fc-44d5-8e6b-9926be33f20e",
+      "id": "9b5a485f-0ebd-4537-ab9e-8dd56e257032",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "67b7cda1-f34c-4fd5-8860-62e46611c3dd",
+      "parentLayoutId": "bb418f5b-2560-4361-b666-cde00419d42e",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "67b7cda1-f34c-4fd5-8860-62e46611c3dd",
+      "id": "bb418f5b-2560-4361-b666-cde00419d42e",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -65,7 +65,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/a9w3m94f",
+      "aid": "sh/3ylc7u54",
       "id": "1",
       "bbox": [
         56,
@@ -74,8 +74,8 @@
         24
       ],
       "geometry": "rect",
-      "text": "SBOM AND CVE DEMO",
-      "textPreview": "SBOM AND CVE DEMO",
+      "text": "DEMO PROOF",
+      "textPreview": "DEMO PROOF",
       "resolvedFontSize": 13,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -86,10 +86,10 @@
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 8,
-          "bottom": 4,
-          "left": 8
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
@@ -97,14 +97,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "SBOM AND CVE DEMO"
+            "text": "DEMO PROOF"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "SBOM AND CVE DEMO",
+          "text": "DEMO PROOF",
           "resolvedTextStyle": {
             "fontSize": 13,
             "typeface": "Aptos",
@@ -115,25 +115,24 @@
           "runs": [
             {
               "index": 1,
-              "text": "SBOM AND CVE DEMO",
+              "text": "DEMO PROOF",
               "fontSize": 13,
               "typeface": "Aptos",
               "color": "#1F9D8A",
-              "bold": true
+              "bold": true,
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/h0fepkzu",
+      "aid": "sh/sji5snel",
       "id": "2",
       "bbox": [
         56,
@@ -142,8 +141,8 @@
         58
       ],
       "geometry": "rect",
-      "text": "The SBOM workflow is standard, and vulnerability output is confidence-aware",
-      "textPreview": "The SBOM workflow is standard, and vulnerability output is confidence-aware",
+      "text": "The final demo shows SBOM/CVE output plus row-level transparency",
+      "textPreview": "The final demo shows SBOM/CVE output plus row-level transparency",
       "resolvedFontSize": 28,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -154,29 +153,25 @@
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 8,
-          "bottom": 4,
-          "left": 8
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
-        "lineCount": 2,
+        "lineCount": 1,
         "lines": [
           {
             "index": 1,
-            "text": "The SBOM workflow is standard, and vulnerability output is"
-          },
-          {
-            "index": 2,
-            "text": "confidence-aware"
+            "text": "The final demo shows SBOM/CVE output plus row-level transparency"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "The SBOM workflow is standard, and vulnerability output is confidence-aware",
+          "text": "The final demo shows SBOM/CVE output plus row-level transparency",
           "resolvedTextStyle": {
             "fontSize": 28,
             "typeface": "Aptos Display",
@@ -187,25 +182,24 @@
           "runs": [
             {
               "index": 1,
-              "text": "The SBOM workflow is standard, and vulnerability output is confidence-aware",
+              "text": "The final demo shows SBOM/CVE output plus row-level transparency",
               "fontSize": 28,
               "typeface": "Aptos Display",
               "color": "#151922",
-              "bold": true
+              "bold": true,
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/sfil0rqd",
+      "aid": "sh/h4byhgn2",
       "id": "3",
       "bbox": [
         1168,
@@ -225,10 +219,10 @@
         "alignment": "right",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 8,
-          "bottom": 4,
-          "left": 8
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
@@ -256,21 +250,20 @@
               "text": "11",
               "fontSize": 13,
               "typeface": "Aptos",
-              "color": "#596575"
+              "color": "#596575",
+              "alignment": "right"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/z61032ls",
+      "aid": "sh/a5gbq1or",
       "id": "4",
       "name": "rule",
       "bbox": [
@@ -281,20 +274,19 @@
       ],
       "geometry": "rect",
       "fillColor": "#D6DEE8",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/al87ed8b",
+      "aid": "sh/3m94fu18",
       "id": "5",
       "bbox": [
-        92,
-        184,
-        500,
-        292
+        74,
+        166,
+        350,
+        270
       ],
       "geometry": "rect",
       "fillColor": "#FFFFFF",
@@ -305,31 +297,31 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/hcrmhk3q",
+      "aid": "sh/s72x4nap",
       "id": "6",
       "bbox": [
-        118,
-        214,
-        280,
-        30
+        100,
+        192,
+        220,
+        28
       ],
       "geometry": "rect",
-      "text": "Clean real APK demo",
-      "textPreview": "Clean real APK demo",
-      "resolvedFontSize": 22,
+      "text": "Clean SBOM",
+      "textPreview": "Clean SBOM",
+      "resolvedFontSize": 21,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 22,
+        "fontSize": 21,
         "typeface": "Aptos",
         "color": "#367C59",
         "bold": true,
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 8,
-          "bottom": 4,
-          "left": 8
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
@@ -337,16 +329,16 @@
         "lines": [
           {
             "index": 1,
-            "text": "Clean real APK demo"
+            "text": "Clean SBOM"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Clean real APK demo",
+          "text": "Clean SBOM",
           "resolvedTextStyle": {
-            "fontSize": 22,
+            "fontSize": 21,
             "typeface": "Aptos",
             "color": "#367C59",
             "bold": true,
@@ -355,124 +347,55 @@
           "runs": [
             {
               "index": 1,
-              "text": "Clean real APK demo",
-              "fontSize": 22,
+              "text": "Clean SBOM",
+              "fontSize": 21,
               "typeface": "Aptos",
               "color": "#367C59",
-              "bold": true
+              "bold": true,
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/orytsvu9",
+      "aid": "sh/lszqtcj6",
       "id": "7",
       "bbox": [
-        118,
+        100,
+        246,
         270,
-        240,
-        26
+        132
       ],
       "geometry": "rect",
-      "text": "F-Droid report",
-      "textPreview": "F-Droid report",
-      "resolvedFontSize": 18,
+      "text": "- F-Droid HTML report\n- CycloneDX JSON with Maven PURLs\n- 23/23 source-confirmed emitted Maven versions\n- OSV returns 0 vulnerabilities",
+      "textPreview": "- F-Droid HTML report | - CycloneDX JSON with Maven PURLs | - 23/23 source-confirmed emitted Maven versions | - OSV returns 0 vulnerabili...",
+      "resolvedFontSize": 14,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "Aptos",
-        "color": "#151922",
-        "bold": true,
-        "alignment": "left",
-        "verticalAlignment": "top",
-        "insets": {
-          "top": 4,
-          "right": 8,
-          "bottom": 4,
-          "left": 8
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "F-Droid report"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "F-Droid report",
-          "resolvedTextStyle": {
-            "fontSize": 18,
-            "typeface": "Aptos",
-            "color": "#151922",
-            "bold": true,
-            "alignment": "left"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "F-Droid report",
-              "fontSize": 18,
-              "typeface": "Aptos",
-              "color": "#151922",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
-      "lineWidth": 0
-    },
-    {
-      "order": 8,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/zed8v6ps",
-      "id": "8",
-      "bbox": [
-        118,
-        316,
-        400,
-        102
-      ],
-      "geometry": "rect",
-      "text": "- 23/23 source-confirmed emitted Maven versions\n- CycloneDX JSON with Maven PURLs\n- OSV returns 0 vulnerabilities",
-      "textPreview": "- 23/23 source-confirmed emitted Maven versions | - CycloneDX JSON with Maven PURLs | - OSV returns 0 vulnerabilities",
-      "resolvedFontSize": 15,
-      "resolvedTextStyle": {
-        "anchor": 1,
-        "fontSize": 15,
+        "fontSize": 14,
         "typeface": "Aptos",
         "color": "#151922",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 6,
-          "bottom": 4,
-          "left": 6
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
-        "lineCount": 3,
+        "lineCount": 5,
         "lines": [
           {
             "index": 1,
-            "text": "- 23/23 source-confirmed emitted Maven versions"
+            "text": "- F-Droid HTML report"
           },
           {
             "index": 2,
@@ -480,6 +403,14 @@
           },
           {
             "index": 3,
+            "text": "- 23/23 source-confirmed emitted Maven"
+          },
+          {
+            "index": 4,
+            "text": "versions"
+          },
+          {
+            "index": 5,
             "text": "- OSV returns 0 vulnerabilities"
           }
         ]
@@ -487,9 +418,9 @@
       "paragraphs": [
         {
           "index": 1,
-          "text": "- 23/23 source-confirmed emitted Maven versions",
+          "text": "- F-Droid HTML report",
           "resolvedTextStyle": {
-            "fontSize": 15,
+            "fontSize": 14,
             "typeface": "Aptos",
             "color": "#151922",
             "alignment": "left"
@@ -497,10 +428,11 @@
           "runs": [
             {
               "index": 1,
-              "text": "- 23/23 source-confirmed emitted Maven versions",
-              "fontSize": 15,
+              "text": "- F-Droid HTML report",
+              "fontSize": 14,
               "typeface": "Aptos",
-              "color": "#151922"
+              "color": "#151922",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
@@ -509,7 +441,7 @@
           "index": 2,
           "text": "- CycloneDX JSON with Maven PURLs",
           "resolvedTextStyle": {
-            "fontSize": 15,
+            "fontSize": 14,
             "typeface": "Aptos",
             "color": "#151922",
             "alignment": "left"
@@ -518,18 +450,40 @@
             {
               "index": 1,
               "text": "- CycloneDX JSON with Maven PURLs",
-              "fontSize": 15,
+              "fontSize": 14,
               "typeface": "Aptos",
-              "color": "#151922"
+              "color": "#151922",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         },
         {
           "index": 3,
+          "text": "- 23/23 source-confirmed emitted Maven versions",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- 23/23 source-confirmed emitted Maven versions",
+              "fontSize": 14,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
           "text": "- OSV returns 0 vulnerabilities",
           "resolvedTextStyle": {
-            "fontSize": 15,
+            "fontSize": 14,
             "typeface": "Aptos",
             "color": "#151922",
             "alignment": "left"
@@ -538,29 +492,28 @@
             {
               "index": 1,
               "text": "- OSV returns 0 vulnerabilities",
-              "fontSize": 15,
+              "fontSize": 14,
               "typeface": "Aptos",
-              "color": "#151922"
+              "color": "#151922",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
-      "order": 9,
+      "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/6xkf6dcb",
-      "id": "9",
+      "aid": "sh/a1gvy90j",
+      "id": "8",
       "bbox": [
-        684,
-        184,
-        500,
-        292
+        466,
+        166,
+        350,
+        270
       ],
       "geometry": "rect",
       "fillColor": "#FFFFFF",
@@ -568,34 +521,34 @@
       "lineWidth": 1
     },
     {
-      "order": 10,
+      "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/8z25kb6x",
-      "id": "10",
+      "aid": "sh/zidonyd0",
+      "id": "9",
       "bbox": [
-        710,
-        214,
-        320,
-        30
+        492,
+        192,
+        220,
+        28
       ],
       "geometry": "rect",
-      "text": "Positive vulnerability demo",
-      "textPreview": "Positive vulnerability demo",
-      "resolvedFontSize": 22,
+      "text": "Positive CVE",
+      "textPreview": "Positive CVE",
+      "resolvedFontSize": 21,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 22,
+        "fontSize": 21,
         "typeface": "Aptos",
         "color": "#C34E5A",
         "bold": true,
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 8,
-          "bottom": 4,
-          "left": 8
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
@@ -603,16 +556,16 @@
         "lines": [
           {
             "index": 1,
-            "text": "Positive vulnerability demo"
+            "text": "Positive CVE"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Positive vulnerability demo",
+          "text": "Positive CVE",
           "resolvedTextStyle": {
-            "fontSize": 22,
+            "fontSize": 21,
             "typeface": "Aptos",
             "color": "#C34E5A",
             "bold": true,
@@ -621,141 +574,80 @@
           "runs": [
             {
               "index": 1,
-              "text": "Positive vulnerability demo",
-              "fontSize": 22,
+              "text": "Positive CVE",
+              "fontSize": 21,
               "typeface": "Aptos",
               "color": "#C34E5A",
-              "bold": true
+              "bold": true,
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
-      "order": 11,
+      "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/1gvy90je",
-      "id": "11",
+      "aid": "sh/re1w7mp0",
+      "id": "10",
       "bbox": [
-        710,
-        270,
-        320,
-        26
+        492,
+        246,
+        275,
+        142
       ],
       "geometry": "rect",
-      "text": "Jackson Databind fixture",
-      "textPreview": "Jackson Databind fixture",
-      "resolvedFontSize": 18,
+      "text": "- Jackson Databind fixture\n- 2.9.10.8 detected\n- 3 confirmed HIGH OSV advisories\n- CVE-2020-36518, CVE-2022-42003, CVE-2022-42004",
+      "textPreview": "- Jackson Databind fixture | - 2.9.10.8 detected | - 3 confirmed HIGH OSV advisories | - CVE-2020-36518, CVE-2022-42003, CVE-2022-42004",
+      "resolvedFontSize": 14,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "Aptos",
-        "color": "#151922",
-        "bold": true,
-        "alignment": "left",
-        "verticalAlignment": "top",
-        "insets": {
-          "top": 4,
-          "right": 8,
-          "bottom": 4,
-          "left": 8
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "Jackson Databind fixture"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "Jackson Databind fixture",
-          "resolvedTextStyle": {
-            "fontSize": 18,
-            "typeface": "Aptos",
-            "color": "#151922",
-            "bold": true,
-            "alignment": "left"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "Jackson Databind fixture",
-              "fontSize": 18,
-              "typeface": "Aptos",
-              "color": "#151922",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
-      "lineWidth": 0
-    },
-    {
-      "order": 12,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/qtcj6tov",
-      "id": "12",
-      "bbox": [
-        710,
-        316,
-        420,
-        112
-      ],
-      "geometry": "rect",
-      "text": "- com.fasterxml.jackson.core:jackson-databind@2.9.10.8\n- 3 confirmed HIGH OSV advisories\n- CVE-2020-36518, CVE-2022-42003, CVE-2022-42004",
-      "textPreview": "- com.fasterxml.jackson.core:jackson-databind@2.9.10.8 | - 3 confirmed HIGH OSV advisories | - CVE-2020-36518, CVE-2022-42003, CVE-2022-4...",
-      "resolvedFontSize": 15,
-      "resolvedTextStyle": {
-        "anchor": 1,
-        "fontSize": 15,
+        "fontSize": 14,
         "typeface": "Aptos",
         "color": "#151922",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 6,
-          "bottom": 4,
-          "left": 6
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
-        "lineCount": 3,
+        "lineCount": 5,
         "lines": [
           {
             "index": 1,
-            "text": "- com.fasterxml.jackson.core:jackson-databind@2.9.10.8"
+            "text": "- Jackson Databind fixture"
           },
           {
             "index": 2,
-            "text": "- 3 confirmed HIGH OSV advisories"
+            "text": "- 2.9.10.8 detected"
           },
           {
             "index": 3,
-            "text": "- CVE-2020-36518, CVE-2022-42003, CVE-2022-42004"
+            "text": "- 3 confirmed HIGH OSV advisories"
+          },
+          {
+            "index": 4,
+            "text": "- CVE-2020-36518, CVE-2022-42003,"
+          },
+          {
+            "index": 5,
+            "text": "CVE-2022-42004"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "- com.fasterxml.jackson.core:jackson-databind@2.9.10.8",
+          "text": "- Jackson Databind fixture",
           "resolvedTextStyle": {
-            "fontSize": 15,
+            "fontSize": 14,
             "typeface": "Aptos",
             "color": "#151922",
             "alignment": "left"
@@ -763,19 +655,41 @@
           "runs": [
             {
               "index": 1,
-              "text": "- com.fasterxml.jackson.core:jackson-databind@2.9.10.8",
-              "fontSize": 15,
+              "text": "- Jackson Databind fixture",
+              "fontSize": 14,
               "typeface": "Aptos",
-              "color": "#151922"
+              "color": "#151922",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         },
         {
           "index": 2,
+          "text": "- 2.9.10.8 detected",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- 2.9.10.8 detected",
+              "fontSize": 14,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
           "text": "- 3 confirmed HIGH OSV advisories",
           "resolvedTextStyle": {
-            "fontSize": 15,
+            "fontSize": 14,
             "typeface": "Aptos",
             "color": "#151922",
             "alignment": "left"
@@ -784,18 +698,19 @@
             {
               "index": 1,
               "text": "- 3 confirmed HIGH OSV advisories",
-              "fontSize": 15,
+              "fontSize": 14,
               "typeface": "Aptos",
-              "color": "#151922"
+              "color": "#151922",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         },
         {
-          "index": 3,
+          "index": 4,
           "text": "- CVE-2020-36518, CVE-2022-42003, CVE-2022-42004",
           "resolvedTextStyle": {
-            "fontSize": 15,
+            "fontSize": 14,
             "typeface": "Aptos",
             "color": "#151922",
             "alignment": "left"
@@ -804,47 +719,63 @@
             {
               "index": 1,
               "text": "- CVE-2020-36518, CVE-2022-42003, CVE-2022-42004",
-              "fontSize": 15,
+              "fontSize": 14,
               "typeface": "Aptos",
-              "color": "#151922"
+              "color": "#151922",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
-      "order": 13,
+      "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/je9cvixc",
-      "id": "13",
+      "aid": "sh/2t83itgf",
+      "id": "11",
       "bbox": [
-        120,
-        562,
-        1040,
-        44
+        858,
+        166,
+        350,
+        270
       ],
       "geometry": "rect",
-      "text": "Confidence rule: high-confidence exact versions can support confirmed findings; ambiguous versions stay potential.",
-      "textPreview": "Confidence rule: high-confidence exact versions can support confirmed findings; ambiguous versions stay potential.",
-      "resolvedFontSize": 18,
+      "fillColor": "#FFFFFF",
+      "lineColor": "#356AC3",
+      "lineWidth": 1
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9knih4by",
+      "id": "12",
+      "bbox": [
+        884,
+        192,
+        260,
+        28
+      ],
+      "geometry": "rect",
+      "text": "Transparency export",
+      "textPreview": "Transparency export",
+      "resolvedFontSize": 21,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
+        "fontSize": 21,
         "typeface": "Aptos",
-        "color": "#151922",
+        "color": "#356AC3",
         "bold": true,
-        "alignment": "center",
+        "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 8,
-          "bottom": 4,
-          "left": 8
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
@@ -852,16 +783,251 @@
         "lines": [
           {
             "index": 1,
-            "text": "Confidence rule: high-confidence exact versions can support confirmed findings; ambiguous versions stay potential."
+            "text": "Transparency export"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Confidence rule: high-confidence exact versions can support confirmed findings; ambiguous versions stay potential.",
+          "text": "Transparency export",
           "resolvedTextStyle": {
-            "fontSize": 18,
+            "fontSize": 21,
+            "typeface": "Aptos",
+            "color": "#356AC3",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Transparency export",
+              "fontSize": 21,
+              "typeface": "Aptos",
+              "color": "#356AC3",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kzupwb2h",
+      "id": "13",
+      "bbox": [
+        884,
+        246,
+        276,
+        150
+      ],
+      "geometry": "rect",
+      "text": "- 12082 source rows\n- 5238 source-gap rows\n- 2515 explained/boundary rows\n- 442 missing-reference candidates\n- 2281 matcher-recall candidates",
+      "textPreview": "- 12082 source rows | - 5238 source-gap rows | - 2515 explained/boundary rows | - 442 missing-reference candidates | - 2281 matcher-recal...",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 14,
+        "typeface": "Aptos",
+        "color": "#151922",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": "- 12082 source rows"
+          },
+          {
+            "index": 2,
+            "text": "- 5238 source-gap rows"
+          },
+          {
+            "index": 3,
+            "text": "- 2515 explained/boundary rows"
+          },
+          {
+            "index": 4,
+            "text": "- 442 missing-reference candidates"
+          },
+          {
+            "index": 5,
+            "text": "- 2281 matcher-recall candidates"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "- 12082 source rows",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- 12082 source rows",
+              "fontSize": 14,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "- 5238 source-gap rows",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- 5238 source-gap rows",
+              "fontSize": 14,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "- 2515 explained/boundary rows",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- 2515 explained/boundary rows",
+              "fontSize": 14,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "- 442 missing-reference candidates",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- 442 missing-reference candidates",
+              "fontSize": 14,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "- 2281 matcher-recall candidates",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos",
+            "color": "#151922",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- 2281 matcher-recall candidates",
+              "fontSize": 14,
+              "typeface": "Aptos",
+              "color": "#151922",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rqd4vmtw",
+      "id": "14",
+      "bbox": [
+        118,
+        538,
+        1035,
+        50
+      ],
+      "geometry": "rect",
+      "text": "Vulnerability rows are labeled source-confirmed, potential, report-only, or not queried; weak evidence is not promoted into fake confirmed CVEs.",
+      "textPreview": "Vulnerability rows are labeled source-confirmed, potential, report-only, or not queried; weak evidence is not promoted into fake confirme...",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "Aptos",
+        "color": "#151922",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Vulnerability rows are labeled source-confirmed, potential, report-only, or not queried; weak evidence is not promoted into fake confirmed"
+          },
+          {
+            "index": 2,
+            "text": "CVEs."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Vulnerability rows are labeled source-confirmed, potential, report-only, or not queried; weak evidence is not promoted into fake confirmed CVEs.",
+          "resolvedTextStyle": {
+            "fontSize": 17,
             "typeface": "Aptos",
             "color": "#151922",
             "bold": true,
@@ -870,35 +1036,34 @@
           "runs": [
             {
               "index": 1,
-              "text": "Confidence rule: high-confidence exact versions can support confirmed findings; ambiguous versions stay potential.",
-              "fontSize": 18,
+              "text": "Vulnerability rows are labeled source-confirmed, potential, report-only, or not queried; weak evidence is not promoted into fake confirmed CVEs.",
+              "fontSize": 17,
               "typeface": "Aptos",
               "color": "#151922",
-              "bold": true
+              "bold": true,
+              "alignment": "center"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     },
     {
-      "order": 14,
+      "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/87ed8bat",
-      "id": "14",
+      "aid": "sh/25kb6xkf",
+      "id": "15",
       "bbox": [
         56,
         680,
-        900,
+        1000,
         20
       ],
       "geometry": "rect",
-      "text": "APK-to-SBOM MVP | emitted Maven version confirmation rate, not full dependency recall",
-      "textPreview": "APK-to-SBOM MVP | emitted Maven version confirmation rate, not full dependency recall",
+      "text": "APK-to-SBOM MVP | emitted confirmation != full recall; v2 source-known lane != APK-only accuracy",
+      "textPreview": "APK-to-SBOM MVP | emitted confirmation != full recall; v2 source-known lane != APK-only accuracy",
       "resolvedFontSize": 10,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -908,10 +1073,10 @@
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
-          "top": 4,
-          "right": 8,
-          "bottom": 4,
-          "left": 8
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
         }
       },
       "textLayout": {
@@ -919,14 +1084,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "APK-to-SBOM MVP | emitted Maven version confirmation rate, not full dependency recall"
+            "text": "APK-to-SBOM MVP | emitted confirmation != full recall; v2 source-known lane != APK-only accuracy"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "APK-to-SBOM MVP | emitted Maven version confirmation rate, not full dependency recall",
+          "text": "APK-to-SBOM MVP | emitted confirmation != full recall; v2 source-known lane != APK-only accuracy",
           "resolvedTextStyle": {
             "fontSize": 10,
             "typeface": "Aptos",
@@ -936,17 +1101,16 @@
           "runs": [
             {
               "index": 1,
-              "text": "APK-to-SBOM MVP | emitted Maven version confirmation rate, not full dependency recall",
+              "text": "APK-to-SBOM MVP | emitted confirmation != full recall; v2 source-known lane != APK-only accuracy",
               "fontSize": 10,
               "typeface": "Aptos",
-              "color": "#596575"
+              "color": "#596575",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
         }
       ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
       "lineWidth": 0
     }
   ],

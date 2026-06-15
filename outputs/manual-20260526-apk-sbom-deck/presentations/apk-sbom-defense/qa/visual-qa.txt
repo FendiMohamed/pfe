@@ -1,0 +1,14 @@
+Final v2 defense deck visual QA
+
+Mode: create, regenerated from editable artifact-tool slide modules.
+Slide count: 12.
+Checked items:
+- Cover metrics now use 927/1837 normal emitted confirmation, 84/84 controlled, and 6772/6772 v2 source-known lane.
+- Main results slide separates normal APK/source-validated metric from v2 upper-bound lane.
+- Demo proof slide includes clean SBOM, positive CVE, and transparency export panels.
+- Footer warns that emitted confirmation is not full recall and v2 is not APK-only accuracy.
+- Contact sheet and per-slide previews were regenerated.
+
+Remaining manual polish:
+- Add university template, names, logos, and date if required by the defense format.
+- Review in PowerPoint before presenting.

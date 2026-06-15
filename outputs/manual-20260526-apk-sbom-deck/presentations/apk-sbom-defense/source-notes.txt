@@ -1,0 +1,27 @@
+Final v2 defense deck source notes
+Generated: 2026-06-15
+
+Deck mode:
+- Create-mode deck regenerated from editable artifact-tool slide modules.
+- Output remains the existing defense deck path: outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx
+
+Sources and facts:
+- docs/evaluation/THESIS_EVALUATION_TABLES.md
+  - Supports normal emitted Maven version confirmation metrics: 84/84 controlled, 47/47 clean real, 880/1790 partial real, 927/1837 all source-validated real.
+- docs/evaluation/DEMO_FINAL_V2_PACKAGE.md
+  - Supports final v2 package headline: 10517 reference DB components, 106/106 source-tree cases, 6772/6772 exact emitted rows, 0 wrong-version emitted rows, 5238 source-gap rows.
+- docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md
+  - Supports transparency slide: 12082 source dependency rows, 5238 source-gap rows, 2515 explained/boundary rows, 442 missing-reference candidates, 2281 matcher-recall candidates.
+- docs/evaluation/DEMO_FINAL_V2_MATCHER_RECALL_DIAGNOSTICS.md
+  - Supports limitation/next-work wording: 1425 source-context report-only matcher suggestions remain report-only.
+- docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md
+  - Supports demo flow and hard-question language: v2 source-known lane is an upper-bound evaluation, not APK-only production accuracy.
+- docs/thesis/PAPER_TO_IMPLEMENTATION_TRACEABILITY.md
+  - Supports state-of-the-art and implementation traceability slide.
+- docs/dev/RUNBOOK.md
+  - Supports clean F-Droid, controlled vulnerable Jackson, and OSV demo artifacts.
+
+Asset policy:
+- No external logos or unverified brand assets are embedded.
+- Slides use editable text, shapes, bars, and tables.
+- Existing report/demo file paths are referenced in speaker notes and docs, not embedded as unverified product screenshots.

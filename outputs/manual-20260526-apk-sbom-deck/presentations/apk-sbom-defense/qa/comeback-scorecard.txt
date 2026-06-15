@@ -1,5 +1,5 @@
 Defense deck QA scorecard
-Generated: 2026-05-26
+Generated: 2026-06-15
 
 Source script:
 - docs/thesis/PRESENTATION_DECK_SCRIPT.md
@@ -11,27 +11,35 @@ Rendered QA:
 - outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/preview/contact-sheet.png
 - outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/preview/slide-01.png through slide-12.png
 - outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/layout/final/slide-01.layout.json through slide-12.layout.json
+- outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/qa/visual-qa.txt
 
 Slide count:
 - 12 slides.
 - 12 speaker-notes slides embedded in the PPTX package.
 
+Final v2 content check:
+- Cover KPIs now use 927/1837 normal source-validated emitted Maven versions, 84/84 controlled expected versions, and 6772/6772 v2 source-known emitted rows.
+- Evaluation design now uses 72 controlled fixtures, 5 clean real APKs, 97 partial real APKs, 0 blocked rows, and 4 limitation/boundary cases.
+- Main results slide separates the normal emitted Maven version confirmation metric from the v2 source-known upper-bound lane.
+- Demo proof slide shows clean SBOM, positive CVE, and transparency export panels.
+- Limitations slide explicitly says the v2 lane is not APK-only accuracy and keeps 1425 matcher suggestions report-only.
+
 Visual QA notes:
 - Contact sheet review passed: every slide has a visible claim and one proof object.
 - Layouts vary across cover, split problem view, research table, output workflow, architecture pipeline, evidence matrix, confidence triad, evaluation ladder, result bars, case interpretation, demo panels, and roadmap.
 - Result wording preserves the required phrase "emitted Maven version confirmation rate" and does not call the metric full dependency recall.
-- Partial, blocked, limitation, native hash-only, and scanner-blocked cases remain visible.
+- V2 wording stays bounded as a source-known upper-bound lane and does not claim APK-only production accuracy.
 
 Technical validation:
 - PPTX zip/package validation passed.
 - Package contains 12 ppt/slides/slide*.xml entries and 12 ppt/notesSlides/notesSlide*.xml entries.
+- Manifest JSON validates at 12 slides and 12 preview paths.
 - Contact sheet and per-slide PNG previews were produced.
 
 Runtime caveat:
-- The artifact-tool build wrote the PPTX, manifest, previews, layouts, and contact sheet, but the bundled Node/artifact runtime returned native exit code -1073740791 after the files were written.
+- The artifact-tool build wrote the PPTX, manifest, previews, layouts, contact sheet, and QA file, but the bundled Node/artifact runtime returned non-zero after writing the files.
 - Treat the generated deck as valid based on the separate PPTX package validation and rendered contact sheet, but rerun rendering after any major visual edits.
 
 Remaining manual polish:
 - Add university template, student/supervisor names, logos, and dates if required.
-- Replace diagram placeholders with screenshots from report.html/SBOM/OSV demo if the defense format prefers real screenshots.
-- Review in PowerPoint or LibreOffice before presenting.
+- Review in PowerPoint before presenting.
