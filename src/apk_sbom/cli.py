@@ -77,6 +77,23 @@ from apk_sbom.no_maven_fork_family_experiment import (
     build_payload as build_no_maven_fork_family_payload,
     write_outputs as write_no_maven_fork_family_outputs,
 )
+from apk_sbom.ai_r8_assistant import (
+    DEFAULT_DIAGNOSTICS_DOC as DEFAULT_AI_R8_DIAGNOSTICS_DOC,
+    DEFAULT_MATCHER_RECALL_DIAGNOSTICS as DEFAULT_AI_R8_MATCHER_RECALL_DIAGNOSTICS,
+    DEFAULT_METRICS_JSON as DEFAULT_AI_R8_METRICS_JSON,
+    DEFAULT_MODEL_PATH as DEFAULT_AI_R8_MODEL_PATH,
+    DEFAULT_PHASE5_DIAGNOSTICS as DEFAULT_AI_R8_PHASE5_DIAGNOSTICS,
+    DEFAULT_R8_OBFUSCATION_DIAGNOSTICS as DEFAULT_AI_R8_OBFUSCATION_DIAGNOSTICS,
+    DEFAULT_SUGGESTIONS_JSON as DEFAULT_AI_R8_SUGGESTIONS_JSON,
+    DEFAULT_TRAINING_DATASET_CSV as DEFAULT_AI_R8_TRAINING_DATASET_CSV,
+    DEFAULT_TRAINING_DATASET_JSON as DEFAULT_AI_R8_TRAINING_DATASET_JSON,
+    DEFAULT_TRANSPARENCY_EXPORT as DEFAULT_AI_R8_TRANSPARENCY_EXPORT,
+    build_ai_r8_suggestions,
+    build_training_dataset as build_ai_r8_training_dataset,
+    train_ai_r8_assistant,
+    write_ai_r8_diagnostics,
+    write_training_dataset as write_ai_r8_training_dataset,
+)
 from apk_sbom.literal_context_diagnostics import (
     DEFAULT_INPUT_JSON as DEFAULT_LITERAL_CONTEXT_INPUT_JSON,
     DEFAULT_OUTPUT_DOC as DEFAULT_LITERAL_CONTEXT_OUTPUT_DOC,
@@ -98,6 +115,7 @@ from apk_sbom.reference_expander import (
     expand_reference_catalog,
 )
 from apk_sbom.report import (
+    DEFAULT_AI_R8_SUGGESTIONS_JSON as DEFAULT_REPORT_AI_R8_SUGGESTIONS_JSON,
     DEFAULT_R8_MINIFIED_CONFIDENCE_POLICY_JSON,
     DEFAULT_R8_PHASE5_EXPERIMENT_JSON,
     DEFAULT_LIFECYCLE_FAMILY_EXPERIMENT_JSON,
@@ -749,6 +767,105 @@ def build_parser() -> argparse.ArgumentParser:
             "--include-r8-minified-confidence-policy is used."
         ),
     )
+    report_parser.add_argument(
+        "--include-ai-r8-suggestions",
+        action="store_true",
+        help=(
+            "Attach opt-in, report-only AI-assisted R8 suggestions. This does not "
+            "change detected components, selected versions, SBOM output, "
+            "vulnerability labels, or source-validation metrics."
+        ),
+    )
+    report_parser.add_argument(
+        "--ai-r8-suggestions-json",
+        default=str(DEFAULT_REPORT_AI_R8_SUGGESTIONS_JSON),
+        help="AI R8 suggestions JSON to attach when --include-ai-r8-suggestions is used.",
+    )
+
+    ai_r8_dataset_parser = subparsers.add_parser(
+        "ai-r8-build-dataset",
+        help="Build the report-only AI R8 assistant training dataset.",
+    )
+    ai_r8_dataset_parser.add_argument(
+        "--matcher-recall-json",
+        default=str(DEFAULT_AI_R8_MATCHER_RECALL_DIAGNOSTICS),
+        help="Matcher-recall diagnostics JSON.",
+    )
+    ai_r8_dataset_parser.add_argument(
+        "--transparency-json",
+        default=str(DEFAULT_AI_R8_TRANSPARENCY_EXPORT),
+        help="Final transparency export JSON.",
+    )
+    ai_r8_dataset_parser.add_argument(
+        "--phase5-json",
+        default=str(DEFAULT_AI_R8_PHASE5_DIAGNOSTICS),
+        help="Phase 5 scoped trigger diagnostics JSON.",
+    )
+    ai_r8_dataset_parser.add_argument(
+        "--r8-obfuscation-json",
+        default=str(DEFAULT_AI_R8_OBFUSCATION_DIAGNOSTICS),
+        help="R8 obfuscation diagnostics JSON.",
+    )
+    ai_r8_dataset_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_AI_R8_TRAINING_DATASET_JSON),
+        help="Output training dataset JSON.",
+    )
+    ai_r8_dataset_parser.add_argument(
+        "--output-csv",
+        default=str(DEFAULT_AI_R8_TRAINING_DATASET_CSV),
+        help="Output training dataset CSV.",
+    )
+
+    ai_r8_train_parser = subparsers.add_parser(
+        "ai-r8-train",
+        help="Train the optional RandomForest AI R8 assistant model.",
+    )
+    ai_r8_train_parser.add_argument(
+        "--dataset-json",
+        default=str(DEFAULT_AI_R8_TRAINING_DATASET_JSON),
+        help="Training dataset JSON.",
+    )
+    ai_r8_train_parser.add_argument(
+        "--model-output",
+        default=str(DEFAULT_AI_R8_MODEL_PATH),
+        help="Output joblib model path.",
+    )
+    ai_r8_train_parser.add_argument(
+        "--metrics-output",
+        default=str(DEFAULT_AI_R8_METRICS_JSON),
+        help="Output metrics JSON path.",
+    )
+
+    ai_r8_suggest_parser = subparsers.add_parser(
+        "ai-r8-suggest",
+        help="Build report-only AI R8 suggestions and diagnostics.",
+    )
+    ai_r8_suggest_parser.add_argument(
+        "--dataset-json",
+        default=str(DEFAULT_AI_R8_TRAINING_DATASET_JSON),
+        help="Training dataset JSON.",
+    )
+    ai_r8_suggest_parser.add_argument(
+        "--model-path",
+        default=str(DEFAULT_AI_R8_MODEL_PATH),
+        help="Optional trained joblib model path.",
+    )
+    ai_r8_suggest_parser.add_argument(
+        "--metrics-json",
+        default=str(DEFAULT_AI_R8_METRICS_JSON),
+        help="Metrics JSON produced by ai-r8-train.",
+    )
+    ai_r8_suggest_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_AI_R8_SUGGESTIONS_JSON),
+        help="Output suggestions JSON.",
+    )
+    ai_r8_suggest_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_AI_R8_DIAGNOSTICS_DOC),
+        help="Output diagnostics Markdown.",
+    )
 
     r8_phase5_parser = subparsers.add_parser(
         "r8-phase5-experiment",
@@ -1253,12 +1370,85 @@ def main(argv: list[str] | None = None) -> int:
                     if args.include_r8_minified_confidence_policy
                     else None
                 ),
+                ai_r8_suggestions_json=(
+                    args.ai_r8_suggestions_json
+                    if args.include_ai_r8_suggestions
+                    else None
+                ),
             )
         except Exception as exc:
             print(f"error: {exc}", file=sys.stderr)
             return 1
 
         print(artifacts.to_json())
+        return 0
+
+    if args.command == "ai-r8-build-dataset":
+        try:
+            payload = build_ai_r8_training_dataset(
+                matcher_recall_json=args.matcher_recall_json,
+                transparency_json=args.transparency_json,
+                phase5_json=args.phase5_json,
+                r8_obfuscation_json=args.r8_obfuscation_json,
+            )
+            result = write_ai_r8_training_dataset(
+                payload,
+                json_path=args.output_json,
+                csv_path=args.output_csv,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "ai-r8-train":
+        try:
+            metrics = train_ai_r8_assistant(
+                dataset_json=args.dataset_json,
+                model_path=args.model_output,
+                metrics_json=args.metrics_output,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(metrics, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "ai-r8-suggest":
+        try:
+            suggestions = build_ai_r8_suggestions(
+                dataset_json=args.dataset_json,
+                model_path=args.model_path,
+                metrics_json=args.metrics_json,
+                output_json=args.output_json,
+            )
+            diagnostics = write_ai_r8_diagnostics(
+                dataset_json=args.dataset_json,
+                metrics_json=args.metrics_json,
+                suggestions_json=args.output_json,
+                output_doc=args.output_doc,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(
+            json.dumps(
+                {
+                    "suggestions_json": args.output_json,
+                    "diagnostics_doc": diagnostics["diagnostics_doc"],
+                    "suggestion_rows": suggestions.get("summary", {}).get(
+                        "suggestion_rows",
+                        0,
+                    ),
+                },
+                indent=2,
+                sort_keys=True,
+            )
+        )
         return 0
 
     if args.command == "r8-phase5-experiment":

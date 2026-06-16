@@ -45,6 +45,13 @@ Latest completed checkpoint:
   - `docs/thesis/FINAL_REPORT_READINESS_PACKAGE.md` is the final report assembly handoff. It lists cover-page fields needing human input, required wording for the normal `927/1837` metric and v2 `6772/6772` lane, figure/screenshot placement, risky phrase checks, and non-blocking future work.
   - `docs/thesis/PFE_FINAL_REPORT_ASSEMBLED.md` now points to the readiness package, includes the v2 upper-bound lane in the abstract, and has updated future-work wording centered on matcher recall, bounded reference growth, safer unconstrained large-DB matching, framework/native expansion, and multi-scale future work.
   - This is still an evaluation-only exact-source-version upper bound; do not report it as APK-only production accuracy.
+- Phase 6 AI-assisted R8 checkpoint:
+  - `docs/research/AI_R8_ASSISTED_METHOD_SELECTION.md` is the research-backed ML/DL method-selection gate.
+  - Phase 6A commands are implemented: `apk-sbom ai-r8-build-dataset`, `apk-sbom ai-r8-train`, and `apk-sbom ai-r8-suggest`.
+  - Generated artifacts live under `data/results/experiments/ai-r8-assistant/`; current dataset: `20523` rows across matcher-recall, emitted-result, boundary, and Phase 5 evidence; current trained-model suggestions: `13736` report-only rows.
+  - The workspace `.venv` has the ML/test dependencies installed, and `ai-r8-train` now trains the actual `RandomForestClassifier`: grouped split `14905` train / `1750` validation / `3868` test rows, test macro-F1 `0.708`, majority baseline test accuracy `0.383`, score-threshold baseline test accuracy `0.165`.
+  - `generate-report --include-ai-r8-suggestions` attaches AI suggestions as report-only evidence only; it must not change selected versions, SBOM output, vulnerability labels, or source-validation metrics.
+  - Phase 6B scaffolds are isolated at `scripts/build_ai_r8_token_corpus.py` and `scripts/train_ai_r8_tiny_transformer.py`; they are not production report wiring.
 - Post-v16 optimization checkpoint:
   - Source-linked blockers remain closed at 0.
   - The no-Maven-signal lane is complete with an audit, AndroidX report-only experiment, and Mastodon fork-family report-only audit.

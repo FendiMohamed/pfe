@@ -1,10 +1,14 @@
 from __future__ import annotations
 
 import json
+from collections import Counter
 from html import escape
 from dataclasses import asdict, dataclass
 from pathlib import Path
 
+from apk_sbom.ai_r8_assistant import (
+    DEFAULT_SUGGESTIONS_JSON as DEFAULT_AI_R8_SUGGESTIONS_JSON,
+)
 from apk_sbom.apk_extractor import ApkInspection, inspect_apk
 from apk_sbom.dex_analyzer import ApkDexAnalysis, analyze_apk_dex
 from apk_sbom.matcher import (
@@ -93,6 +97,7 @@ def generate_final_report(
     version_band_experiment_json: str | Path | None = None,
     lifecycle_family_experiment_json: str | Path | None = None,
     r8_minified_confidence_policy_json: str | Path | None = None,
+    ai_r8_suggestions_json: str | Path | None = None,
 ) -> ReportArtifacts:
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
@@ -142,6 +147,11 @@ def generate_final_report(
         r8_minified_confidence_policy_json,
         apk_path=apk.apk_path,
     )
+    ai_r8_assistance = load_ai_r8_assistance_evidence(
+        ai_r8_suggestions_json,
+        apk_path=apk.apk_path,
+        components=components,
+    )
 
     matches_path = output / "matches.json"
     matches_path.write_text(match_summary.to_json() + "\n", encoding="utf-8")
@@ -190,6 +200,7 @@ def generate_final_report(
         r8_phase5_experiment=r8_phase5_experiment,
         version_band_experiments=version_band_experiments,
         r8_minified_confidence_policy=r8_minified_confidence_policy,
+        ai_r8_assistance=ai_r8_assistance,
     )
     report_json_path.write_text(
         json.dumps(report_payload, indent=2, sort_keys=True) + "\n",
@@ -208,6 +219,7 @@ def generate_final_report(
             r8_phase5_experiment=r8_phase5_experiment,
             version_band_experiments=version_band_experiments,
             r8_minified_confidence_policy=r8_minified_confidence_policy,
+            ai_r8_assistance=ai_r8_assistance,
         ),
         encoding="utf-8",
     )
@@ -224,6 +236,7 @@ def generate_final_report(
             r8_phase5_experiment=r8_phase5_experiment,
             version_band_experiments=version_band_experiments,
             r8_minified_confidence_policy=r8_minified_confidence_policy,
+            ai_r8_assistance=ai_r8_assistance,
         ),
         encoding="utf-8",
     )
@@ -382,6 +395,63 @@ def load_r8_minified_confidence_policy_evidence(
     }
 
 
+def load_ai_r8_assistance_evidence(
+    path: str | Path | None,
+    *,
+    apk_path: str | Path,
+    components: list[DetectedLibrary],
+) -> dict | None:
+    if path is None:
+        return None
+    source_path = Path(path)
+    payload = json.loads(source_path.read_text(encoding="utf-8"))
+    rows = payload.get("suggestions", [])
+    component_coordinates = {component.coordinate for component in components}
+    matching_rows = [
+        row
+        for row in rows
+        if _ai_r8_row_matches_report(row, apk_path, component_coordinates)
+    ]
+    recommendation_counts = Counter(
+        row.get("recommendation") for row in matching_rows if row.get("recommendation")
+    )
+    return {
+        "enabled": True,
+        "report_only": True,
+        "source": str(source_path),
+        "model_type": payload.get("model_type", "RandomForestClassifier"),
+        "model_version": payload.get("model_version", "ai-r8-assistant-v1"),
+        "status": payload.get("status"),
+        "summary": {
+            **payload.get("summary", {}),
+            "matching_rows": len(matching_rows),
+            "matching_recommendation_counts": dict(sorted(recommendation_counts.items())),
+        },
+        "matching_rows": matching_rows[:50],
+        "policy": [
+            "This section is opt-in report-only AI-assisted R8 evidence.",
+            "It does not change detected components, selected versions, SBOM output, vulnerability labels, or source-validation metrics.",
+            "AI rows are triage suggestions for hard R8/minified and matcher-recall analysis, not exact-version authority.",
+        ],
+    }
+
+
+def _ai_r8_row_matches_report(
+    row: dict,
+    apk_path: str | Path,
+    component_coordinates: set[str],
+) -> bool:
+    case = str(row.get("case_id") or row.get("context", {}).get("case") or "")
+    if _experiment_case_matches_apk({"case": case}, apk_path):
+        return True
+    row_apk = _normalized_path(row.get("context", {}).get("apk_path"))
+    apk_text = _normalized_path(apk_path)
+    if row_apk and (row_apk == apk_text or Path(row_apk).name == Path(apk_text).name):
+        return True
+    coordinate = str(row.get("coordinate") or "")
+    return bool(coordinate and coordinate in component_coordinates)
+
+
 def _minified_policy_row_matches_report(row: dict, apk_path: str | Path) -> bool:
     apk_text = _normalized_path(apk_path)
     row_apk = _normalized_path(row.get("apk_path"))
@@ -471,6 +541,7 @@ def build_json_report(
     r8_phase5_experiment: dict | None = None,
     version_band_experiments: dict | None = None,
     r8_minified_confidence_policy: dict | None = None,
+    ai_r8_assistance: dict | None = None,
 ) -> dict:
     diagnostics = obfuscation_diagnostics or build_obfuscation_diagnostics(
         apk,
@@ -497,6 +568,8 @@ def build_json_report(
         payload["version_band_experiments"] = version_band_experiments
     if r8_minified_confidence_policy is not None:
         payload["r8_minified_confidence_policy"] = r8_minified_confidence_policy
+    if ai_r8_assistance is not None:
+        payload["ai_r8_assistance"] = ai_r8_assistance
     return payload
 
 
@@ -510,6 +583,7 @@ def build_markdown_report(
     r8_phase5_experiment: dict | None = None,
     version_band_experiments: dict | None = None,
     r8_minified_confidence_policy: dict | None = None,
+    ai_r8_assistance: dict | None = None,
 ) -> str:
     vulnerability_labels = _vulnerability_labels(osv_summary)
     obfuscation_risk = assess_obfuscation_risk(apk, match_summary, components)
@@ -591,6 +665,7 @@ def build_markdown_report(
     lines.extend(_markdown_r8_phase5_experiment(r8_phase5_experiment))
     lines.extend(_markdown_version_band_experiments(version_band_experiments))
     lines.extend(_markdown_r8_minified_confidence_policy(r8_minified_confidence_policy))
+    lines.extend(_markdown_ai_r8_assistance(ai_r8_assistance))
 
     lines.extend(
         [
@@ -766,6 +841,7 @@ def build_html_report(
     r8_phase5_experiment: dict | None = None,
     version_band_experiments: dict | None = None,
     r8_minified_confidence_policy: dict | None = None,
+    ai_r8_assistance: dict | None = None,
 ) -> str:
     vulnerability_labels = _vulnerability_labels(osv_summary)
     vulnerability_rows = _vulnerability_rows(osv_summary)
@@ -996,6 +1072,8 @@ def build_html_report(
     <h2>Experimental R8 Minified Confidence Policy</h2>
     {_html_r8_minified_confidence_policy(r8_minified_confidence_policy)}
   </section>
+
+  {_html_ai_r8_assistance_section(ai_r8_assistance)}
 
   <section>
     <h2>Detected Components</h2>
@@ -1866,6 +1944,120 @@ def _html_r8_minified_confidence_policy(evidence: dict | None) -> str:
       <thead><tr><th>Case</th><th>Coordinate</th><th>Current</th><th>Diagnostic</th><th>Policy</th><th>Signals</th></tr></thead>
       <tbody>{blocked_rows}</tbody>
     </table>
+    """
+
+
+def _markdown_ai_r8_assistance(evidence: dict | None) -> list[str]:
+    if evidence is None:
+        return []
+    summary = evidence.get("summary", {})
+    lines = [
+        "",
+        "## AI-Assisted R8 Suggestions",
+        "",
+        "- Report-only: true",
+        (
+            "- Note: this opt-in section does not change detected components, selected versions, "
+            "SBOM output, vulnerability labels, or source-validation metrics."
+        ),
+        f"- Source: `{evidence.get('source')}`",
+        f"- Model type: `{evidence.get('model_type')}`",
+        f"- Model version: `{evidence.get('model_version')}`",
+        f"- Status: `{evidence.get('status')}`",
+        f"- Dataset suggestion rows: `{summary.get('suggestion_rows', 0)}`",
+        f"- Rows matching this report: `{summary.get('matching_rows', 0)}`",
+        (
+            f"- Matching recommendation counts: "
+            f"`{json.dumps(summary.get('matching_recommendation_counts', {}), sort_keys=True)}`"
+        ),
+        "",
+    ]
+    rows = evidence.get("matching_rows") or []
+    if rows:
+        lines.extend(
+            [
+                "| Case | Coordinate | Source | Candidate | Recommendation | Confidence |",
+                "|---|---|---:|---:|---|---:|",
+            ]
+        )
+        for row in rows[:20]:
+            lines.append(
+                "| "
+                f"{_markdown_cell(row.get('case_id'))} | "
+                f"`{row.get('coordinate')}` | "
+                f"{_markdown_cell(row.get('source_version'))} | "
+                f"{_markdown_cell(row.get('candidate_version'))} | "
+                f"`{_markdown_cell(row.get('recommendation'))}` | "
+                f"{float(row.get('confidence') or 0.0):.3f} |"
+            )
+        if len(rows) > 20:
+            lines.append(
+                f"| ... |  |  |  | {len(rows) - 20} additional AI rows omitted. |  |"
+            )
+    else:
+        lines.append("No AI-assisted R8 row matched this report.")
+    return lines
+
+
+def _html_ai_r8_assistance(evidence: dict | None) -> str:
+    if evidence is None:
+        return (
+            "<p class=\"subtle\">Not enabled. Run <code>generate-report "
+            "--include-ai-r8-suggestions</code> to attach report-only AI-assisted "
+            "R8 suggestions.</p>"
+        )
+    summary = evidence.get("summary", {})
+    rows = evidence.get("matching_rows") or []
+    row_html = "".join(
+        "<tr>"
+        f"<td>{_html(row.get('case_id'))}</td>"
+        f"<td><code>{_html(row.get('coordinate'))}</code></td>"
+        f"<td>{_html(row.get('source_version'))}</td>"
+        f"<td>{_html(row.get('candidate_version'))}</td>"
+        f"<td>{_status_pill(str(row.get('recommendation')))}</td>"
+        f"<td>{float(row.get('confidence') or 0.0):.3f}</td>"
+        "</tr>"
+        for row in rows[:20]
+    )
+    if len(rows) > 20:
+        row_html += (
+            f"<tr><td colspan=\"6\">{len(rows) - 20} additional AI rows omitted.</td></tr>"
+        )
+    if not row_html:
+        row_html = "<tr><td colspan=\"6\">No AI-assisted R8 row matched this report.</td></tr>"
+    recommendation_counts = json.dumps(
+        summary.get("matching_recommendation_counts", {}),
+        sort_keys=True,
+    )
+    return f"""
+    <p>Report-only: <strong>true</strong></p>
+    <p class="subtle">This opt-in section does not change detected components, selected versions, SBOM output, vulnerability labels, or source-validation metrics.</p>
+    <table>
+      <tbody>
+        <tr><th>Source</th><td><code>{_html(evidence.get("source"))}</code></td></tr>
+        <tr><th>Model type</th><td><code>{_html(evidence.get("model_type"))}</code></td></tr>
+        <tr><th>Model version</th><td><code>{_html(evidence.get("model_version"))}</code></td></tr>
+        <tr><th>Status</th><td><code>{_html(evidence.get("status"))}</code></td></tr>
+        <tr><th>Dataset suggestion rows</th><td>{_html(summary.get("suggestion_rows", 0))}</td></tr>
+        <tr><th>Rows matching this report</th><td>{_html(summary.get("matching_rows", 0))}</td></tr>
+        <tr><th>Matching recommendation counts</th><td><code>{_html(recommendation_counts)}</code></td></tr>
+      </tbody>
+    </table>
+    <table>
+      <thead><tr><th>Case</th><th>Coordinate</th><th>Source</th><th>Candidate</th><th>Recommendation</th><th>Confidence</th></tr></thead>
+      <tbody>{row_html}</tbody>
+    </table>
+    """
+
+
+def _html_ai_r8_assistance_section(evidence: dict | None) -> str:
+    if evidence is None:
+        return ""
+    return f"""
+  <section>
+    <h2>AI-Assisted R8 Suggestions</h2>
+    {_html_ai_r8_assistance(evidence)}
+  </section>
     """
 
 

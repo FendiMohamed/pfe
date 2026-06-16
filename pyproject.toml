@@ -16,6 +16,13 @@ dependencies = [
 dev = [
   "pytest==8.3.4",
 ]
+ml = [
+  "scikit-learn>=1.5,<2",
+  "joblib>=1.4,<2",
+]
+dl = [
+  "torch>=2.4,<3",
+]
 
 [project.scripts]
 apk-sbom = "apk_sbom.cli:main"
@@ -23,4 +30,3 @@ apk-sbom = "apk_sbom.cli:main"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
-

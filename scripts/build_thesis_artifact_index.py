@@ -399,6 +399,21 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the scoring-unchanged diagnostic summary of controlled R8 coverage, real R8/minified partial cases, hidden-code boundaries, and classifier gaps.",
         },
         {
+            "table": "AI-assisted R8 method selection",
+            "source": "docs/research/AI_R8_ASSISTED_METHOD_SELECTION.md",
+            "use": "Use as the Phase 6 research gate explaining why ML/DL assistance is report-only and not exact SBOM/version/CVE authority.",
+        },
+        {
+            "table": "AI R8 assistant diagnostics",
+            "source": "docs/evaluation/AI_R8_ASSISTANT_DIAGNOSTICS.md",
+            "use": "Use as the Phase 6A dataset, model-status, suggestion, and limitation artifact for the classical ML report-only assistant.",
+        },
+        {
+            "table": "AI R8 DL prototype",
+            "source": "docs/evaluation/AI_R8_DL_PROTOTYPE.md",
+            "use": "Use as the Phase 6B LibAttention-inspired Transformer prototype scaffold, isolated from production reports.",
+        },
+        {
             "table": "R8 multi-scale feature diagnostics",
             "source": "docs/evaluation/R8_MULTISCALE_FEATURE_DIAGNOSTICS.md",
             "use": "Use as the Phase 3 proof that call-chain, basic-block, class-neighbor, field-operation, and literal/context features are extracted and reportable while scoring remains unchanged.",
