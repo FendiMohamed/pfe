@@ -68,6 +68,11 @@ Latest completed checkpoint:
   - It uses only baseline APK report alternatives and sibling version-era anchors, then uses source versions only after the decision to label fixes/regressions.
   - Current result: `1522` rows evaluated, `0` APK-only reranker changes, `0` wrong-version fixes, `0` exact-control regressions, and only `44/582` scoped wrong-version rows expose the source version as a baseline alternative.
   - Verdict: `reject-apk-only-reranker-no-safe-fixes`; do not promote it. Next work is independent candidate generation plus stronger version-specific evidence.
+- Version-band candidate expansion v3 checkpoint:
+  - `src/apk_sbom/version_band_candidate_expansion_v3.py`, `scripts/build_version_band_candidate_expansion_v3.py`, and `apk-sbom version-band-candidate-expansion` generate `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md`.
+  - It records the source-known `565` fixable rows, APK-only v2 `0` safe fixes, and a bounded deep same-coordinate expansion probe on Cryptomator Lite `androidx.activity:activity`.
+  - The deep probe rescored `134` same-coordinate references from `reference_features_demo_final_large_v2.sqlite`, but generic similarity selected `1.2.0-alpha01` while source validation expected `1.8.1`.
+  - Verdict: `do-not-promote-candidate-expansion-v3`; candidate expansion alone is insufficient without stronger version-specific evidence. Switch next to R8 structural recall or build version-unique evidence in small batches.
 - Post-v16 optimization checkpoint:
   - Source-linked blockers remain closed at 0.
   - The no-Maven-signal lane is complete with an audit, AndroidX report-only experiment, and Mastodon fork-family report-only audit.

@@ -75,6 +75,14 @@ from apk_sbom.version_band_apk_reranker import (
     build_payload as build_version_band_apk_reranker_payload,
     write_outputs as write_version_band_apk_reranker_outputs,
 )
+from apk_sbom.version_band_candidate_expansion_v3 import (
+    DEFAULT_APK_ONLY_JSON as DEFAULT_VERSION_BAND_CANDIDATE_EXPANSION_APK_ONLY_JSON,
+    DEFAULT_OUTPUT_DOC as DEFAULT_VERSION_BAND_CANDIDATE_EXPANSION_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_VERSION_BAND_CANDIDATE_EXPANSION_OUTPUT_JSON,
+    DEFAULT_SOURCE_KNOWN_JSON as DEFAULT_VERSION_BAND_CANDIDATE_EXPANSION_SOURCE_KNOWN_JSON,
+    build_payload as build_version_band_candidate_expansion_payload,
+    write_outputs as write_version_band_candidate_expansion_outputs,
+)
 from apk_sbom.lifecycle_family_diagnostics import (
     DEFAULT_INPUT_JSON as DEFAULT_LIFECYCLE_FAMILY_INPUT_JSON,
     DEFAULT_OUTPUT_DOC as DEFAULT_LIFECYCLE_FAMILY_OUTPUT_DOC,
@@ -1108,6 +1116,34 @@ def build_parser() -> argparse.ArgumentParser:
         help="Output path for the APK-only version-band reranker Markdown report.",
     )
 
+    version_band_candidate_expansion_parser = subparsers.add_parser(
+        "version-band-candidate-expansion",
+        help=(
+            "Build the version-band candidate expansion v3 promotion gate from "
+            "source-known, APK-only, and deep-probe evidence."
+        ),
+    )
+    version_band_candidate_expansion_parser.add_argument(
+        "--source-known-json",
+        default=str(DEFAULT_VERSION_BAND_CANDIDATE_EXPANSION_SOURCE_KNOWN_JSON),
+        help="Source-known version-band rerank experiment JSON.",
+    )
+    version_band_candidate_expansion_parser.add_argument(
+        "--apk-only-json",
+        default=str(DEFAULT_VERSION_BAND_CANDIDATE_EXPANSION_APK_ONLY_JSON),
+        help="APK-only version-band reranker v2 JSON.",
+    )
+    version_band_candidate_expansion_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_VERSION_BAND_CANDIDATE_EXPANSION_OUTPUT_JSON),
+        help="Output path for the candidate expansion v3 JSON.",
+    )
+    version_band_candidate_expansion_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_VERSION_BAND_CANDIDATE_EXPANSION_OUTPUT_DOC),
+        help="Output path for the candidate expansion v3 Markdown report.",
+    )
+
     lifecycle_family_parser = subparsers.add_parser(
         "lifecycle-family-experiment",
         help=(
@@ -1737,6 +1773,24 @@ def main(argv: list[str] | None = None) -> int:
                 min_sibling_era_anchors=args.min_sibling_era_anchors,
             )
             result = write_version_band_apk_reranker_outputs(
+                payload,
+                output_json=args.output_json,
+                output_doc=args.output_doc,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "version-band-candidate-expansion":
+        try:
+            payload = build_version_band_candidate_expansion_payload(
+                source_known_json=args.source_known_json,
+                apk_only_json=args.apk_only_json,
+            )
+            result = write_version_band_candidate_expansion_outputs(
                 payload,
                 output_json=args.output_json,
                 output_doc=args.output_doc,

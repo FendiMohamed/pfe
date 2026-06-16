@@ -16,6 +16,7 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | 8 | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Report-only matcher-improvement comparison and hybrid strategy router. |
 | 9 | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` | First router-driven source-known rerank experiment and controls. |
 | 10 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` | APK-only reranker prototype showing why source-known fixes are not safely promotable yet. |
+| 11 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` | Promotion gate combining source-known, APK-only, and deep candidate expansion evidence. |
 
 ## Live Demo Artifacts
 
@@ -58,6 +59,7 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | Version-band exact controls | 820, all stay exact |
 | APK-only reranker safe fixes | 0 |
 | APK-only source candidate visibility | 44 / 582 scoped wrong-version rows |
+| Candidate expansion v3 verdict | do-not-promote-candidate-expansion-v3 |
 
 ## Exact Phrases
 
@@ -109,6 +111,12 @@ Use:
 The APK-only reranker prototype explains why it is not promoted yet: the current baseline reports expose the source version as an alternative in only 44 of 582 scoped wrong-version rows, and the strict source-free gate makes zero safe changes.
 ```
 
+Use:
+
+```text
+The deeper candidate-expansion pilot also blocks promotion: expanding one representative Activity row to 134 same-coordinate references still selected an old wrong version, so candidate visibility alone is not enough without stronger version-specific evidence.
+```
+
 Avoid:
 
 ```text
@@ -127,6 +135,7 @@ The tool has 100% real-world APK accuracy.
 | Hybrid matcher router regenerated | 7569 rows, 4766 P1, top profile version-band-rerank |
 | Version-band rerank experiment regenerated | 582 scoped wrong-version rows, 565 source-known fixable, 820 exact controls |
 | APK-only version-band reranker regenerated | 1522 rows, 0 fixes, 0 regressions, 44/582 source candidates visible |
+| Version-band candidate expansion v3 regenerated | do-not-promote, representative deep probe selected wrong old Activity version |
 | Deck package validation | passed earlier: 12 slides, 12 notes slides |
 
 ## Do Not Run Live
@@ -145,4 +154,5 @@ apk-sbom ai-r8-final-eval
 apk-sbom hybrid-matcher-router
 apk-sbom version-band-rerank-experiment
 apk-sbom version-band-apk-reranker
+apk-sbom version-band-candidate-expansion
 ```

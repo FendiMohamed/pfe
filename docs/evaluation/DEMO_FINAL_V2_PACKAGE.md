@@ -44,6 +44,7 @@ This package is the current thesis/demo evidence set for the grown v2 reference 
 | Hybrid matcher router | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` |
 | Version-band rerank experiment | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` |
 | APK-only version-band reranker v2 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` |
+| Version-band candidate expansion v3 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` |
 
 ## How To Present It
 
@@ -119,4 +120,12 @@ Verdict: `reject-apk-only-reranker-no-safe-fixes`. This explains why the source-
 
 ```powershell
 apk-sbom version-band-apk-reranker
+```
+
+The v3 promotion gate is `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md`. It combines the source-known result, APK-only result, and a bounded deep same-coordinate scoring pilot. The pilot expanded `androidx.activity:activity` to `134` same-coordinate references for Cryptomator Lite, but both scoring profiles selected `1.2.0-alpha01` while the source-validation version was `1.8.1`. Verdict: `do-not-promote-candidate-expansion-v3`.
+
+Regenerate it with:
+
+```powershell
+apk-sbom version-band-candidate-expansion
 ```

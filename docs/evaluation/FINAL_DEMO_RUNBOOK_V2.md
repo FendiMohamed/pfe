@@ -254,6 +254,30 @@ Optional regeneration command:
 apk-sbom version-band-apk-reranker
 ```
 
+Then open:
+
+```text
+docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md
+```
+
+Say:
+
+```text
+I also ran a deeper candidate-expansion pilot instead of stopping at the old report alternatives. For a representative Activity wrong-version row, I expanded to 134 same-coordinate references from the v2 large DB. The result still selected an old wrong version, not the source-validated version. That blocks promotion because candidate visibility alone is not enough; we need stronger version-specific evidence.
+```
+
+Then add:
+
+```text
+So the honest conclusion is: version-band reranking is a real opportunity, but not ready as APK-only production logic. The next work is either stronger candidate generation with version-unique evidence, or switching to the router's R8 structural recall lane.
+```
+
+Optional regeneration command:
+
+```powershell
+apk-sbom version-band-candidate-expansion
+```
+
 ## If They Ask Hard Questions
 
 | Question | Short answer |
@@ -268,6 +292,7 @@ apk-sbom version-band-apk-reranker
 | Why not replace the matcher with one research method? | Different APK conditions fail differently. The router keeps the current matcher as the control baseline and chooses scoped experiments per row family, such as version-band rerank for adjacent AndroidX/Kotlin versions or R8 structural recall for strong opcode but weak name evidence. |
 | Did the version-band experiment fix wrong versions? | In the source-known upper-bound slice, 565 scoped wrong-version rows become fixable and 820 exact controls stay exact. It is not promoted because an APK-only full-DB reranker still has to prove it can choose those versions without source constraints. |
 | Did the APK-only reranker work? | No, and that is useful evidence. It made 0 safe fixes because only 44/582 scoped wrong-version rows expose the source version as a baseline alternative. The result blocks promotion and points to candidate-generation and version-specific evidence as the next work. |
+| Can candidate expansion make it promotable? | Not yet. The v3 deep probe expanded a representative Activity row to 134 same-coordinate references, but generic similarity selected an old wrong version. Candidate expansion must be paired with stronger version-specific evidence before promotion. |
 | What is the next technical improvement? | Matcher recall and safe pruning/reranking, not blind DB growth. |
 
 ## Live Commands Only If Needed

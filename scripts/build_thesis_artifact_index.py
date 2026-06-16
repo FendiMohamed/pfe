@@ -444,6 +444,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the promotion-blocking APK-only reranker diagnostic showing source-free candidate visibility and strict sibling-era gating results.",
         },
         {
+            "table": "Version-band candidate expansion v3",
+            "source": "docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md",
+            "use": "Use as the promotion-gate artifact combining source-known opportunity, APK-only rejection, and deep same-coordinate candidate-expansion pilot evidence.",
+        },
+        {
             "table": "R8 multi-scale feature diagnostics",
             "source": "docs/evaluation/R8_MULTISCALE_FEATURE_DIAGNOSTICS.md",
             "use": "Use as the Phase 3 proof that call-chain, basic-block, class-neighbor, field-operation, and literal/context features are extracted and reportable while scoring remains unchanged.",
@@ -770,6 +775,11 @@ def build_demo_package() -> list[dict[str, str]]:
             "item": "APK-only version-band reranker v2",
             "path": "docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md",
             "talking_point": "Source-free reranker prototype that blocks promotion today: 0 safe fixes and only 44/582 scoped wrong-version rows with the source version visible as a baseline alternative.",
+        },
+        {
+            "item": "Version-band candidate expansion v3",
+            "path": "docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md",
+            "talking_point": "Promotion-gate diagnostic showing that even deep same-coordinate candidate expansion selected an old wrong Activity version, so version-band reranking stays unpromoted.",
         },
         {
             "item": "Final report readiness package",
