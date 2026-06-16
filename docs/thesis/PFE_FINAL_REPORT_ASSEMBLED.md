@@ -353,7 +353,9 @@ After the final v2 package, the project added a report-only AI assistance layer 
 
 The Phase 6A dataset is built from existing project evidence: matcher-recall diagnostics, final transparency rows, Phase 5 R8 trigger diagnostics, and R8 obfuscation diagnostics. It contains `20523` labeled rows across `149` case IDs and `1370` coordinates. Labels include exact training rows, mismatch/extra rows, boundary rows, suppress-uncertain rows, risk-only rows, and report-only suggestions.
 
-The implemented model is a `RandomForestClassifier` with grouped train/validation/test split by `case_id`. The current trained model reports test macro-F1 `0.708`, compared with majority-class baseline test accuracy `0.383` and simple score-threshold baseline test accuracy `0.165`. The model produces `13736` report-only suggestions.
+The implemented Phase 6A model is a `RandomForestClassifier` with grouped train/validation/test split by `case_id`. The current trained model reports test macro-F1 `0.708`, compared with majority-class baseline test accuracy `0.383` and simple score-threshold baseline test accuracy `0.165`. The model produces `13736` report-only suggestions. Feature-importance and ablation outputs are included so the model is not presented as a black box.
+
+Phase 6B adds a trained tiny `torch.nn.TransformerEncoder` prototype over structured project-evidence tokens. It reaches structured-token test macro-F1 `0.977`, but this is deliberately framed as a DL workflow proof, not as raw smali pretraining or APK-only exact-version authority.
 
 The important policy is the guardrail: AI can suggest `suggest_report_only`, `suppress_uncertain`, or `risk_only` wording, but it cannot emit confirmed versions, change CycloneDX SBOM components, change selected versions, change OSV/CVE labels, or change source-validation metrics. A controlled report demo confirms this behavior: adding AI suggestions creates the `AI-Assisted R8 Suggestions` report section while keeping detected components and normalized SBOM content unchanged.
 
@@ -362,6 +364,7 @@ The compact evidence files are:
 - `docs/research/AI_R8_ASSISTED_METHOD_SELECTION.md`
 - `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md`
 - `docs/evaluation/AI_R8_ASSISTANT_DIAGNOSTICS.md`
+- `docs/evaluation/AI_R8_FINAL_EVALUATION.md`
 - `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md`
 - `docs/evaluation/AI_R8_DL_PROTOTYPE.md`
 

@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import sys
 import zipfile
+from pathlib import Path
 
 from apk_sbom.maven_downloader import ArtifactRecord
 from apk_sbom.reference_converter import (
@@ -68,8 +69,12 @@ def test_planned_conversion_uses_group_artifact_version_path(tmp_path):
     planned = planned_conversion(record, tmp_path / "dex")
 
     assert planned["coordinate"] == "com.google.code.gson:gson"
-    assert planned["output_dir"].endswith("com/google/code/gson/gson/1.0.0")
-    assert planned["metadata_path"].endswith("com/google/code/gson/gson/1.0.0/conversion.json")
+    assert Path(planned["output_dir"]).as_posix().endswith(
+        "com/google/code/gson/gson/1.0.0"
+    )
+    assert Path(planned["metadata_path"]).as_posix().endswith(
+        "com/google/code/gson/gson/1.0.0/conversion.json"
+    )
 
 
 def test_convert_artifact_to_dex_with_fake_d8(tmp_path):

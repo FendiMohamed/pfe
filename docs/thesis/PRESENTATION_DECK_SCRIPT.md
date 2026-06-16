@@ -284,11 +284,11 @@ Next work:
 - scale source-validated real APKs;
 - add more framework families;
 - investigate scoped per-coordinate rerankers;
-- continue the Phase 6 AI-assisted R8 lane with ablations and stronger labels;
-- explore stronger multi-scale graph fusion and isolated DL token models;
+- continue the Phase 6 AI-assisted R8 lane with raw-code token corpora and stronger independent labels;
+- explore stronger multi-scale graph fusion and DL token models beyond the current structured-token prototype;
 - keep AI report-only until it passes independent APK-only controls.
 
-**AI/ML proof point:** Phase 6A trains a `RandomForestClassifier` on `20523` existing evaluation rows and reaches test macro-F1 `0.708`, producing `13736` report-only suggestions. The report-only demo proves the AI section appears while detected components and normalized SBOM content stay unchanged.
+**AI/ML proof point:** Phase 6A trains a `RandomForestClassifier` on `20523` existing evaluation rows and reaches test macro-F1 `0.708`, producing `13736` report-only suggestions. Phase 6B trains an isolated `torch.nn.TransformerEncoder` over structured project-evidence tokens and reaches test macro-F1 `0.977`. The report-only demo proves the AI section appears while detected components and normalized SBOM content stay unchanged.
 
 **Speaker notes:**
 
@@ -305,7 +305,7 @@ Recommended live or recorded demo:
 5. Open the vulnerable Jackson report and show the three HIGH OSV advisories.
 6. Open the thesis evaluation table and show clean/partial separation.
 7. Open the final v2 package and transparency export to show the source-known upper-bound lane and remaining gap taxonomy.
-8. Optional: open the AI R8 summary and report-only demo to show ML/PhD value without changing SBOM authority.
+8. Optional: open the AI R8 final evaluation and report-only demo to show ML/DL/PhD value without changing SBOM authority.
 
 ## Defense Questions And Short Answers
 

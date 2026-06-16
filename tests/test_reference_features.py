@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+from pathlib import Path
 
 from apk_sbom.dex_analyzer import DexFileFeatures
 from apk_sbom.maven_downloader import MavenPomDependency
@@ -69,7 +70,7 @@ def test_discover_conversion_results_supports_offset(tmp_path):
     results = discover_conversion_results(tmp_path, offset=1, limit=1)
 
     assert len(results) == 1
-    assert results[0].metadata_path.endswith("b/conversion.json")
+    assert Path(results[0].metadata_path).as_posix().endswith("b/conversion.json")
 
 
 def test_extract_reference_features_to_db(monkeypatch, tmp_path):

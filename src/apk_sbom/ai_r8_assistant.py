@@ -200,7 +200,12 @@ def train_ai_r8_assistant(
     # installing optional ML dependencies.
     from joblib import dump
     from sklearn.ensemble import RandomForestClassifier
-    from sklearn.metrics import classification_report, confusion_matrix, f1_score
+    from sklearn.metrics import (
+        accuracy_score,
+        classification_report,
+        confusion_matrix,
+        f1_score,
+    )
 
     split = deterministic_group_split(rows)
     train_rows = [rows[index] for index in split["train_indices"]]
@@ -259,6 +264,14 @@ def train_ai_r8_assistant(
             confusion_matrix,
             f1_score,
         ),
+        "feature_importance": _feature_importance(model),
+        "ablation_study": _ablation_study(
+            train_rows,
+            test_rows,
+            RandomForestClassifier,
+            f1_score,
+            accuracy_score,
+        ),
         "baseline_comparison": baseline,
         "limits": [
             "The model is trained from project diagnostic labels, not independent ground truth for all possible APKs.",
@@ -285,6 +298,92 @@ def train_ai_r8_assistant(
         encoding="utf-8",
     )
     return metrics
+
+
+def _feature_importance(model) -> list[dict]:
+    importances = getattr(model, "feature_importances_", None)
+    if importances is None:
+        return []
+    rows = [
+        {
+            "feature": feature,
+            "importance": float(importance),
+        }
+        for feature, importance in zip(FEATURE_COLUMNS, importances)
+    ]
+    return sorted(rows, key=lambda row: row["importance"], reverse=True)
+
+
+def _ablation_study(
+    train_rows: list[dict],
+    test_rows: list[dict],
+    classifier_cls,
+    f1_score,
+    accuracy_score,
+) -> dict:
+    if not train_rows or not test_rows:
+        return {}
+    groups = {
+        "all_features": FEATURE_COLUMNS,
+        "scores_only": [
+            "best_score",
+            "score_gap_to_best",
+            "source_rank",
+            "identity_confidence",
+            "package_score",
+            "class_score",
+            "method_score",
+            "opcode_score",
+            "literal_score",
+            "dependency_score",
+        ],
+        "overlap_counts_only": [
+            "matched_packages",
+            "matched_classes",
+            "matched_methods",
+        ],
+        "context_flags_only": [
+            "is_r8_or_minified",
+            "is_boundary_or_limitation",
+            "is_clean_real",
+            "is_partial_real",
+        ],
+        "no_context_flags": [
+            feature for feature in FEATURE_COLUMNS if feature not in BOOLEAN_FEATURES
+        ],
+        "no_overlap_counts": [
+            feature
+            for feature in FEATURE_COLUMNS
+            if feature not in {"matched_packages", "matched_classes", "matched_methods"}
+        ],
+    }
+    train_y = [row["label"] for row in train_rows]
+    test_y = [row["label"] for row in test_rows]
+    results = {}
+    for name, columns in groups.items():
+        train_x = [feature_vector_for_columns(row, columns) for row in train_rows]
+        test_x = [feature_vector_for_columns(row, columns) for row in test_rows]
+        model = classifier_cls(
+            n_estimators=200,
+            max_depth=8,
+            class_weight="balanced",
+            random_state=MODEL_RANDOM_STATE,
+        )
+        model.fit(train_x, train_y)
+        pred_y = list(model.predict(test_x))
+        results[name] = {
+            "features": list(columns),
+            "feature_count": len(columns),
+            "test_macro_f1": f1_score(
+                test_y,
+                pred_y,
+                labels=LABELS,
+                average="macro",
+                zero_division=0,
+            ),
+            "test_accuracy": accuracy_score(test_y, pred_y),
+        }
+    return results
 
 
 def build_ai_r8_suggestions(
@@ -433,6 +532,38 @@ def build_ai_r8_diagnostics_markdown(
                 f"- Baselines: `{json.dumps(metrics.get('baseline_comparison', {}), sort_keys=True)}`",
             ]
         )
+        feature_importance = metrics.get("feature_importance", [])[:10]
+        if feature_importance:
+            lines.extend(
+                [
+                    "",
+                    "### Top Feature Importance",
+                    "",
+                    "| Feature | Importance |",
+                    "|---|---:|",
+                ]
+            )
+            for row in feature_importance:
+                lines.append(f"| `{row.get('feature')}` | {row.get('importance')} |")
+        ablation_study = metrics.get("ablation_study", {})
+        if ablation_study:
+            lines.extend(
+                [
+                    "",
+                    "### Ablation Study",
+                    "",
+                    "| Variant | Features | Test macro-F1 | Test accuracy |",
+                    "|---|---:|---:|---:|",
+                ]
+            )
+            for name, row in sorted(ablation_study.items()):
+                lines.append(
+                    "| "
+                    f"`{name}` | "
+                    f"{row.get('feature_count')} | "
+                    f"{row.get('test_macro_f1')} | "
+                    f"{row.get('test_accuracy')} |"
+                )
 
     lines.extend(
         [
@@ -455,9 +586,13 @@ def build_ai_r8_diagnostics_markdown(
 
 
 def feature_vector(row: dict) -> list[float]:
+    return feature_vector_for_columns(row, FEATURE_COLUMNS)
+
+
+def feature_vector_for_columns(row: dict, columns: list[str]) -> list[float]:
     features = row.get("features", {})
     vector = []
-    for name in FEATURE_COLUMNS:
+    for name in columns:
         value = features.get(name, 0)
         if name in BOOLEAN_FEATURES:
             vector.append(1.0 if bool(value) else 0.0)
@@ -1104,4 +1239,3 @@ def _load_json_if_exists(path: str | Path) -> dict:
     if not source.exists():
         return {}
     return _load_json(source)
-

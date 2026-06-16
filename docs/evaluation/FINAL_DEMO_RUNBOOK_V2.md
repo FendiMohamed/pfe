@@ -158,13 +158,14 @@ Open:
 
 ```text
 docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md
+docs/evaluation/AI_R8_FINAL_EVALUATION.md
 docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md
 ```
 
 Say:
 
 ```text
-After the transparent v2 evaluation, I added a report-only AI layer for hard R8 and matcher-recall triage. It trains a RandomForest on 20,523 existing evaluation rows and reaches 0.708 test macro-F1, but it is not allowed to change selected versions, SBOM components, CVE labels, or source-validation metrics.
+After the transparent v2 evaluation, I added a report-only AI layer for hard R8 and matcher-recall triage. Phase 6A trains a RandomForest on 20,523 existing evaluation rows and reaches 0.708 test macro-F1. Phase 6B trains an isolated tiny Transformer over structured project-evidence tokens and reaches 0.977 test macro-F1, but it is not wired into reports and neither AI track can change selected versions, SBOM components, CVE labels, or source-validation metrics.
 ```
 
 Then add:
@@ -183,6 +184,7 @@ The demo proof runs the same APK with and without AI suggestions. The AI report 
 | Why not just add every missing dependency? | Some are metadata-only, source-only, aliases, project modules, or unavailable artifacts. Of the current source gaps, only 442 are remaining missing-reference candidates; 2281 are matcher-recall candidates. |
 | Why not promote the 1425 matcher suggestions into the SBOM? | They are source-context report-only suggestions. They need separate APK-only controls before becoming default SBOM components. |
 | Is the AI model now choosing versions? | No. It is report-only triage. It can suggest wording or review priority, but it cannot change selected versions, SBOM components, vulnerability labels, or metrics. |
+| Is the DL model a production APK detector? | No. It is a trained structured-token Transformer prototype for the PhD/AI workflow. Raw smali/DEX pretraining remains future work. |
 | What is the next technical improvement? | Matcher recall and safe pruning/reranking, not blind DB growth. |
 
 ## Live Commands Only If Needed

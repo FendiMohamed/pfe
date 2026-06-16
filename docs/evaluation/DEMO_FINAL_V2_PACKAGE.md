@@ -38,6 +38,8 @@ This package is the current thesis/demo evidence set for the grown v2 reference 
 | Transparency JSON export | `data/results/evaluation/demo-final-transparency-export.json` |
 | Vulnerability rows | `data/results/evaluation/demo-final-transparency-vulnerability-rows.csv` |
 | AI R8 compact summary | `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` |
+| AI R8 final ML/DL evaluation | `docs/evaluation/AI_R8_FINAL_EVALUATION.md` |
+| AI R8 DL prototype | `docs/evaluation/AI_R8_DL_PROTOTYPE.md` |
 | AI R8 report-only demo | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` |
 
 ## How To Present It
@@ -56,9 +58,11 @@ The honest limitation is still important: the production unconstrained large-DB 
 The v2 package now has an optional AI-assisted R8 triage layer. It is trained from the existing transparency, matcher-recall, and R8 diagnostic artifacts and remains report-only:
 
 - dataset rows: `20523`;
-- model: `RandomForestClassifier`;
-- test macro-F1: `0.708`;
+- Phase 6A model: `RandomForestClassifier`;
+- Phase 6A test macro-F1: `0.708`;
 - report-only suggestions: `13736`;
+- Phase 6B model: `torch.nn.TransformerEncoder`;
+- Phase 6B structured-token test macro-F1: `0.977`;
 - no selected-version, SBOM, vulnerability-label, or source-validation metric changes.
 
-Use `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` for the compact numbers and `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` as the no-change proof.
+Use `docs/evaluation/AI_R8_FINAL_EVALUATION.md` as the single AI/ML/DL evidence entry point, `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` for the compact Phase 6A numbers, and `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` as the no-change proof.

@@ -102,6 +102,8 @@ def build_summary(dataset: dict, metrics: dict, suggestions: dict) -> dict:
                 {},
             ).get("test_accuracy"),
             "split": metrics.get("split", {}),
+            "top_feature_importance": metrics.get("feature_importance", [])[:10],
+            "ablation_study": metrics.get("ablation_study", {}),
         },
         "dataset": dataset.get("summary", {}),
         "suggestions": suggestions.get("summary", {}),
@@ -140,6 +142,33 @@ def build_markdown(summary: dict) -> str:
         f"- Score-threshold baseline test accuracy: `{model.get('score_threshold_baseline_test_accuracy')}`",
         f"- Split: `{json.dumps(model.get('split', {}), sort_keys=True)}`",
         "",
+        "### Top Feature Importance",
+        "",
+        "| Feature | Importance |",
+        "|---|---:|",
+    ]
+    for row in model.get("top_feature_importance", []):
+        lines.append(f"| `{row.get('feature')}` | {row.get('importance')} |")
+    lines.extend(
+        [
+            "",
+            "### Ablation Study",
+            "",
+            "| Variant | Features | Test macro-F1 | Test accuracy |",
+            "|---|---:|---:|---:|",
+        ]
+    )
+    for name, row in sorted(model.get("ablation_study", {}).items()):
+        lines.append(
+            "| "
+            f"`{name}` | "
+            f"{row.get('feature_count')} | "
+            f"{row.get('test_macro_f1')} | "
+            f"{row.get('test_accuracy')} |"
+        )
+    lines.extend(
+        [
+            "",
         "## Dataset",
         "",
         f"- Rows: `{dataset.get('rows', 0)}`",
@@ -148,7 +177,8 @@ def build_markdown(summary: dict) -> str:
         "",
         "| Label | Rows |",
         "|---|---:|",
-    ]
+        ]
+    )
     for label, count in sorted(dataset.get("labels", {}).items()):
         lines.append(f"| `{label}` | {count} |")
     lines.extend(
@@ -175,4 +205,3 @@ def _load_json(path: str | Path) -> dict:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -45,7 +45,8 @@ def test_optimization_aware_diagnostic_keeps_current_artifact_report_only() -> N
         == "keep-optimization-aware-logic-diagnostic-only-and-improve-confidence-policy"
     )
     assert payload["summary"]["phase4_controlled_regression_blockers"] == 6
-    assert payload["summary"]["phase4_real_regression_blockers"] == 30
+    assert payload["summary"]["phase4_real_regression_blockers"] == 121
+    assert payload["summary"]["phase4_total_regression_blockers"] == 127
     assert payload["summary"]["phase5_target_improvements_kept"] == 4
     assert payload["summary"]["report_default_selection_changes"] == 0
     assert payload["summary"]["failed_gates"] == 0

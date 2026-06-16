@@ -1,6 +1,6 @@
 # AI-Assisted R8 Method Selection
 
-Status: Phase 6A classical ML implementation added as report-only infrastructure; Phase 6B DL/Transformer remains isolated research prototype scaffolding.
+Status: Phase 6A classical ML implementation is trained and report-only; Phase 6B DL/Transformer is trained as an isolated structured-token research prototype.
 
 This document explains why the project now uses an AI-assisted R8 layer without allowing AI to become the final SBOM, version, or CVE authority.
 
@@ -8,7 +8,7 @@ This document explains why the project now uses an AI-assisted R8 layer without 
 
 Classical ML uses manually engineered features and relatively small models. In this project, the Phase 6A assistant uses matcher and diagnostic features that already exist in the evaluation artifacts: score gaps, package/class/method/opcode/literal/dependency signals, matched element counts, R8/minified flags, and clean/partial/boundary case classes.
 
-Deep learning learns representations from larger token or graph inputs. The Phase 6B prototype is LibAttention-inspired: it is designed around opcode/DEX token sequences and a small Transformer encoder. That is useful for demonstrating DL knowledge, but it needs more training data, ablation, and independent validation before it can influence reports.
+Deep learning learns representations from larger token or graph inputs. The Phase 6B prototype is LibAttention-inspired and uses a small Transformer encoder. In the current implementation, its corpus is a structured-token view of project evidence rows rather than raw smali pretraining. That is useful for demonstrating the DL workflow, but it still needs raw DEX/smali expansion and independent validation before it can influence reports.
 
 ## Research Basis
 
@@ -24,7 +24,7 @@ The default matcher remains unchanged.
 
 Phase 6A is implemented first because it is explainable, fast, compatible with current artifacts, and easy to evaluate by grouped case splits. It trains a `RandomForestClassifier` when optional dependencies are installed and writes report-only suggestions.
 
-Phase 6B is isolated because a Transformer over opcode/DEX sequences is more research-heavy. It is kept out of `generate-report` until it clearly outperforms Phase 6A and passes controlled, clean-real, partial-real, and boundary controls.
+Phase 6B is isolated because a Transformer path is more research-heavy. The current trained prototype classifies identity-risk labels from structured evidence tokens and is kept out of `generate-report` until a future raw-code model clearly outperforms Phase 6A and passes controlled, clean-real, partial-real, and boundary controls.
 
 ## Authority Boundaries
 
@@ -105,10 +105,11 @@ Output:
 
 ```text
 data/results/experiments/ai-r8-dl-prototype/metrics.json
+data/results/experiments/ai-r8-dl-prototype/token-corpus.json
 docs/evaluation/AI_R8_DL_PROTOTYPE.md
 ```
 
-The model family is `torch.nn.TransformerEncoder`, with the task framed as binary or multiclass identity-risk classification. It is not exact-version authority.
+The model family is `torch.nn.TransformerEncoder`, with the task framed as multiclass identity-risk classification. It is not exact-version authority, and its current structured-token corpus must be presented as a DL workflow proof rather than a raw APK deep detector.
 
 ## PhD Value
 
@@ -120,10 +121,9 @@ This layer supports a PhD application because it shows the complete AI workflow:
 - feature engineering;
 - grouped train/validation/test split by APK case;
 - RandomForest training path;
-- baselines and confusion-matrix reporting;
+- baselines, feature importance, ablation, and confusion-matrix reporting;
 - report-only deployment boundary;
-- isolated DL/Transformer prototype;
+- isolated trained DL/Transformer prototype;
 - limitations and ablation-ready artifacts.
 
 The important claim is not "AI solved R8 exact versioning." The defensible claim is that the project added a transparent AI-assisted triage layer for hard R8 and matcher-recall cases while preserving SBOM and vulnerability honesty.
-

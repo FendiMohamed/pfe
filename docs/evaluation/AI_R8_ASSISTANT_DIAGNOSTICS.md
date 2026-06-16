@@ -28,6 +28,32 @@ This artifact documents the Phase 6A report-only ML assistant. It does not chang
 - Test macro-F1: `0.7076258525770535`
 - Baselines: `{"majority_class": {"label": "risk_only", "test_accuracy": 0.3834022750775595, "validation_accuracy": 0.38342857142857145}, "score_threshold_rule": {"description": "best_score >= 0.75 -> suggest_report_only, boundary flag -> boundary_do_not_suggest, otherwise risk_only", "test_accuracy": 0.1654601861427094, "validation_accuracy": 0.1382857142857143}}`
 
+### Top Feature Importance
+
+| Feature | Importance |
+|---|---:|
+| `identity_confidence` | 0.2307472899555102 |
+| `is_boundary_or_limitation` | 0.2170009783899868 |
+| `best_score` | 0.20627382342013306 |
+| `source_rank` | 0.08553986008275333 |
+| `dependency_score` | 0.06794819326956354 |
+| `opcode_score` | 0.048874761827868214 |
+| `package_score` | 0.031822990032445264 |
+| `literal_score` | 0.02483964916830055 |
+| `matched_packages` | 0.022503849171423656 |
+| `class_score` | 0.015667021569066856 |
+
+### Ablation Study
+
+| Variant | Features | Test macro-F1 | Test accuracy |
+|---|---:|---:|---:|
+| `all_features` | 17 | 0.7076258525770535 | 0.6902792140641159 |
+| `context_flags_only` | 4 | 0.1619135611694605 | 0.17166494312306102 |
+| `no_context_flags` | 13 | 0.5639084111728137 | 0.5633402275077559 |
+| `no_overlap_counts` | 14 | 0.7097939915523016 | 0.6897621509824199 |
+| `overlap_counts_only` | 3 | 0.1764469756653465 | 0.0749741468459152 |
+| `scores_only` | 10 | 0.5579001022034865 | 0.5610134436401241 |
+
 ## Suggestions
 
 - Suggestion rows: `13736`

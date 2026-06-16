@@ -414,6 +414,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the compact thesis/demo export for AI R8 dataset size, model metrics, baselines, suggestions, and guardrails.",
         },
         {
+            "table": "AI R8 final evaluation",
+            "source": "docs/evaluation/AI_R8_FINAL_EVALUATION.md",
+            "use": "Use as the single Phase 6 ML/DL evidence entry point combining RandomForest metrics, ablation, Transformer prototype metrics, and the report-only guardrail proof.",
+        },
+        {
             "table": "AI R8 report-only demo",
             "source": "docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md",
             "use": "Use as the opt-in report proof that AI suggestions add a report section while preserving detected components and normalized SBOM content.",
@@ -421,7 +426,7 @@ def build_table_sources() -> list[dict[str, str]]:
         {
             "table": "AI R8 DL prototype",
             "source": "docs/evaluation/AI_R8_DL_PROTOTYPE.md",
-            "use": "Use as the Phase 6B LibAttention-inspired Transformer prototype scaffold, isolated from production reports.",
+            "use": "Use as the Phase 6B LibAttention-inspired trained Transformer prototype, isolated from production reports.",
         },
         {
             "table": "R8 multi-scale feature diagnostics",

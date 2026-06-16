@@ -5,6 +5,7 @@ import json
 from apk_sbom.ai_r8_assistant import (
     build_ai_r8_suggestions,
     build_training_dataset,
+    feature_vector_for_columns,
     normalize_features,
     optional_ml_status,
     write_training_dataset,
@@ -150,6 +151,25 @@ def test_feature_normalization_converts_blank_numeric_values_to_zero():
     assert features["source_rank"] == 0
     assert features["matched_classes"] == 0
     assert features["is_r8_or_minified"] is True
+
+
+def test_feature_vector_for_columns_supports_ablation_subsets():
+    row = {
+        "features": normalize_features(
+            {
+                "best_score": "0.91",
+                "matched_classes": "5",
+                "is_boundary_or_limitation": True,
+            }
+        )
+    }
+
+    vector = feature_vector_for_columns(
+        row,
+        ["best_score", "matched_classes", "is_boundary_or_limitation"],
+    )
+
+    assert vector == [0.91, 5.0, 1.0]
 
 
 def test_boundary_rows_are_labeled_unsafe(tmp_path):
