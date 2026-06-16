@@ -65,6 +65,16 @@ from apk_sbom.version_band_rerank_experiment import (
     build_payload as build_version_band_rerank_payload,
     write_outputs as write_version_band_rerank_outputs,
 )
+from apk_sbom.version_band_apk_reranker import (
+    DEFAULT_LARGE_ANALYSIS_JSON as DEFAULT_VERSION_BAND_APK_RERANKER_LARGE_ANALYSIS_JSON,
+    DEFAULT_MAX_SCORE_DROP as DEFAULT_VERSION_BAND_APK_RERANKER_MAX_SCORE_DROP,
+    DEFAULT_MIN_SIBLING_ERA_ANCHORS as DEFAULT_VERSION_BAND_APK_RERANKER_MIN_SIBLING_ERA_ANCHORS,
+    DEFAULT_OUTPUT_DOC as DEFAULT_VERSION_BAND_APK_RERANKER_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_VERSION_BAND_APK_RERANKER_OUTPUT_JSON,
+    DEFAULT_ROUTER_JSON as DEFAULT_VERSION_BAND_APK_RERANKER_ROUTER_JSON,
+    build_payload as build_version_band_apk_reranker_payload,
+    write_outputs as write_version_band_apk_reranker_outputs,
+)
 from apk_sbom.lifecycle_family_diagnostics import (
     DEFAULT_INPUT_JSON as DEFAULT_LIFECYCLE_FAMILY_INPUT_JSON,
     DEFAULT_OUTPUT_DOC as DEFAULT_LIFECYCLE_FAMILY_OUTPUT_DOC,
@@ -1058,6 +1068,46 @@ def build_parser() -> argparse.ArgumentParser:
         help="Output path for the version-band rerank experiment Markdown report.",
     )
 
+    version_band_apk_reranker_parser = subparsers.add_parser(
+        "version-band-apk-reranker",
+        help=(
+            "Evaluate an APK-only report-only version-band reranker prototype "
+            "using baseline alternatives and sibling version-era anchors."
+        ),
+    )
+    version_band_apk_reranker_parser.add_argument(
+        "--router-json",
+        default=str(DEFAULT_VERSION_BAND_APK_RERANKER_ROUTER_JSON),
+        help="Hybrid matcher router JSON.",
+    )
+    version_band_apk_reranker_parser.add_argument(
+        "--large-analysis-json",
+        default=str(DEFAULT_VERSION_BAND_APK_RERANKER_LARGE_ANALYSIS_JSON),
+        help="Large combined real-APK analysis JSON with baseline APK-only reports.",
+    )
+    version_band_apk_reranker_parser.add_argument(
+        "--max-score-drop",
+        type=float,
+        default=DEFAULT_VERSION_BAND_APK_RERANKER_MAX_SCORE_DROP,
+        help="Maximum allowed score drop from selected version to alternative.",
+    )
+    version_band_apk_reranker_parser.add_argument(
+        "--min-sibling-era-anchors",
+        type=int,
+        default=DEFAULT_VERSION_BAND_APK_RERANKER_MIN_SIBLING_ERA_ANCHORS,
+        help="Minimum same-family sibling selected-version era anchors.",
+    )
+    version_band_apk_reranker_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_VERSION_BAND_APK_RERANKER_OUTPUT_JSON),
+        help="Output path for the APK-only version-band reranker JSON.",
+    )
+    version_band_apk_reranker_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_VERSION_BAND_APK_RERANKER_OUTPUT_DOC),
+        help="Output path for the APK-only version-band reranker Markdown report.",
+    )
+
     lifecycle_family_parser = subparsers.add_parser(
         "lifecycle-family-experiment",
         help=(
@@ -1667,6 +1717,26 @@ def main(argv: list[str] | None = None) -> int:
                 v2_dashboard_json=args.v2_dashboard_json,
             )
             result = write_version_band_rerank_outputs(
+                payload,
+                output_json=args.output_json,
+                output_doc=args.output_doc,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "version-band-apk-reranker":
+        try:
+            payload = build_version_band_apk_reranker_payload(
+                router_json=args.router_json,
+                large_analysis_json=args.large_analysis_json,
+                max_score_drop=args.max_score_drop,
+                min_sibling_era_anchors=args.min_sibling_era_anchors,
+            )
+            result = write_version_band_apk_reranker_outputs(
                 payload,
                 output_json=args.output_json,
                 output_doc=args.output_doc,

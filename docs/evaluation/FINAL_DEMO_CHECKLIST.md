@@ -15,6 +15,7 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | 7 | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` | Proof that AI suggestions are report-only and do not change SBOM content. |
 | 8 | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Report-only matcher-improvement comparison and hybrid strategy router. |
 | 9 | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` | First router-driven source-known rerank experiment and controls. |
+| 10 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` | APK-only reranker prototype showing why source-known fixes are not safely promotable yet. |
 
 ## Live Demo Artifacts
 
@@ -55,6 +56,8 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | Version-band wrong-version rows in scope | 582 / 636 |
 | Version-band source-known fixable rows | 565 |
 | Version-band exact controls | 820, all stay exact |
+| APK-only reranker safe fixes | 0 |
+| APK-only source candidate visibility | 44 / 582 scoped wrong-version rows |
 
 ## Exact Phrases
 
@@ -100,6 +103,12 @@ Use:
 The first version-band rerank experiment is promising because 565 wrong-version rows become source-known fixable, but it is still an upper-bound experiment, not APK-only production accuracy.
 ```
 
+Use:
+
+```text
+The APK-only reranker prototype explains why it is not promoted yet: the current baseline reports expose the source version as an alternative in only 44 of 582 scoped wrong-version rows, and the strict source-free gate makes zero safe changes.
+```
+
 Avoid:
 
 ```text
@@ -117,6 +126,7 @@ The tool has 100% real-world APK accuracy.
 | Transparency JSON count check | 110 cases, 12082 source rows, 6772 emitted rows, 232 vulnerability rows |
 | Hybrid matcher router regenerated | 7569 rows, 4766 P1, top profile version-band-rerank |
 | Version-band rerank experiment regenerated | 582 scoped wrong-version rows, 565 source-known fixable, 820 exact controls |
+| APK-only version-band reranker regenerated | 1522 rows, 0 fixes, 0 regressions, 44/582 source candidates visible |
 | Deck package validation | passed earlier: 12 slides, 12 notes slides |
 
 ## Do Not Run Live
@@ -134,4 +144,5 @@ python scripts\build_graduation_demo_rehearsal.py
 apk-sbom ai-r8-final-eval
 apk-sbom hybrid-matcher-router
 apk-sbom version-band-rerank-experiment
+apk-sbom version-band-apk-reranker
 ```

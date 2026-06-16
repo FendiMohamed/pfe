@@ -230,6 +230,30 @@ Optional regeneration command:
 apk-sbom version-band-rerank-experiment
 ```
 
+Then open:
+
+```text
+docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md
+```
+
+Say:
+
+```text
+I then tested the stricter APK-only version of the idea. This prototype does not use source versions to choose candidates. It uses only baseline APK report alternatives and sibling version-era anchors. It evaluated 1,522 rows and made zero safe changes: zero fixes, zero exact-control regressions, and zero false-positive-control changes. The key blocker is candidate visibility: only 44 of 582 scoped wrong-version rows expose the source version as a baseline alternative.
+```
+
+Then add:
+
+```text
+That is why I keep the source-known result as an upper-bound opportunity and reject the APK-only reranker for promotion today. The next matcher work must expand independent same-coordinate candidates and add stronger version-specific evidence before retrying.
+```
+
+Optional regeneration command:
+
+```powershell
+apk-sbom version-band-apk-reranker
+```
+
 ## If They Ask Hard Questions
 
 | Question | Short answer |
@@ -243,6 +267,7 @@ apk-sbom version-band-rerank-experiment
 | Is the DL model a production APK detector? | No. It is a trained structured-token Transformer prototype for the PhD/AI workflow. Raw smali/DEX pretraining remains future work. |
 | Why not replace the matcher with one research method? | Different APK conditions fail differently. The router keeps the current matcher as the control baseline and chooses scoped experiments per row family, such as version-band rerank for adjacent AndroidX/Kotlin versions or R8 structural recall for strong opcode but weak name evidence. |
 | Did the version-band experiment fix wrong versions? | In the source-known upper-bound slice, 565 scoped wrong-version rows become fixable and 820 exact controls stay exact. It is not promoted because an APK-only full-DB reranker still has to prove it can choose those versions without source constraints. |
+| Did the APK-only reranker work? | No, and that is useful evidence. It made 0 safe fixes because only 44/582 scoped wrong-version rows expose the source version as a baseline alternative. The result blocks promotion and points to candidate-generation and version-specific evidence as the next work. |
 | What is the next technical improvement? | Matcher recall and safe pruning/reranking, not blind DB growth. |
 
 ## Live Commands Only If Needed

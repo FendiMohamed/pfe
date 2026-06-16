@@ -63,6 +63,11 @@ Latest completed checkpoint:
   - `src/apk_sbom/version_band_rerank_experiment.py`, `scripts/build_version_band_rerank_experiment.py`, and `apk-sbom version-band-rerank-experiment` generate `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md`.
   - Current result: `582/636` normal wrong-version rows are in router version-band coordinates; `565` are source-known fixable in the v2 slice; `17` are blocked by no v2 decision; `820` exact controls stay exact; `120` false-positive extra-emission controls remain visible.
   - This is source-known upper-bound evidence for future matcher improvement, not APK-only production accuracy and not a default matcher promotion.
+- APK-only version-band reranker v2 checkpoint:
+  - `src/apk_sbom/version_band_apk_reranker.py`, `scripts/build_version_band_apk_reranker.py`, and `apk-sbom version-band-apk-reranker` generate `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md`.
+  - It uses only baseline APK report alternatives and sibling version-era anchors, then uses source versions only after the decision to label fixes/regressions.
+  - Current result: `1522` rows evaluated, `0` APK-only reranker changes, `0` wrong-version fixes, `0` exact-control regressions, and only `44/582` scoped wrong-version rows expose the source version as a baseline alternative.
+  - Verdict: `reject-apk-only-reranker-no-safe-fixes`; do not promote it. Next work is independent candidate generation plus stronger version-specific evidence.
 - Post-v16 optimization checkpoint:
   - Source-linked blockers remain closed at 0.
   - The no-Maven-signal lane is complete with an audit, AndroidX report-only experiment, and Mastodon fork-family report-only audit.

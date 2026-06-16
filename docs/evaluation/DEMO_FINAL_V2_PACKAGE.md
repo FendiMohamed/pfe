@@ -43,6 +43,7 @@ This package is the current thesis/demo evidence set for the grown v2 reference 
 | AI R8 report-only demo | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` |
 | Hybrid matcher router | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` |
 | Version-band rerank experiment | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` |
+| APK-only version-band reranker v2 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` |
 
 ## How To Present It
 
@@ -101,4 +102,21 @@ This is promising evidence for the next matcher improvement, but it is not a pro
 
 ```powershell
 apk-sbom version-band-rerank-experiment
+```
+
+The follow-up APK-only reranker prototype is `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md`. It does not use source versions to choose candidates; it uses only baseline APK report alternatives and sibling version-era anchors, then uses source validation only to label the outcome:
+
+- rows evaluated: `1522`;
+- wrong-version rows in scope: `582`;
+- exact controls: `820`;
+- false-positive extra-emission controls: `120`;
+- APK-only reranker changes: `0`;
+- APK-only wrong-version fixes: `0`;
+- exact-control regressions: `0`;
+- source version visible in baseline alternatives: `44/582` wrong-version rows (`7.6%`).
+
+Verdict: `reject-apk-only-reranker-no-safe-fixes`. This explains why the source-known opportunity is real but not yet safely promotable as APK-only matcher logic. Regenerate it with:
+
+```powershell
+apk-sbom version-band-apk-reranker
 ```

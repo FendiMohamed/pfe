@@ -439,6 +439,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the first router-driven report-only rerank experiment: source-known fixability for wrong-version rows, exact controls, and false-positive controls.",
         },
         {
+            "table": "APK-only version-band reranker v2",
+            "source": "docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md",
+            "use": "Use as the promotion-blocking APK-only reranker diagnostic showing source-free candidate visibility and strict sibling-era gating results.",
+        },
+        {
             "table": "R8 multi-scale feature diagnostics",
             "source": "docs/evaluation/R8_MULTISCALE_FEATURE_DIAGNOSTICS.md",
             "use": "Use as the Phase 3 proof that call-chain, basic-block, class-neighbor, field-operation, and literal/context features are extracted and reportable while scoring remains unchanged.",
@@ -760,6 +765,11 @@ def build_demo_package() -> list[dict[str, str]]:
             "item": "Version-band rerank experiment",
             "path": "docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md",
             "talking_point": "First router-driven source-known rerank experiment: 565 scoped wrong-version rows are fixable in the source-known lane while exact and false-positive controls stay visible.",
+        },
+        {
+            "item": "APK-only version-band reranker v2",
+            "path": "docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md",
+            "talking_point": "Source-free reranker prototype that blocks promotion today: 0 safe fixes and only 44/582 scoped wrong-version rows with the source version visible as a baseline alternative.",
         },
         {
             "item": "Final report readiness package",

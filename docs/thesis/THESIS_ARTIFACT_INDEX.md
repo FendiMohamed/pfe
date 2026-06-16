@@ -78,6 +78,7 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | AI R8 DL prototype | `docs/evaluation/AI_R8_DL_PROTOTYPE.md` | Use as the Phase 6B LibAttention-inspired trained Transformer prototype, isolated from production reports. |
 | Hybrid matcher router | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Use as the report-only comparison between the current matcher and research tool-family strategies, with current hard rows routed to safe experiment profiles. |
 | Version-band rerank experiment | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` | Use as the first router-driven report-only rerank experiment: source-known fixability for wrong-version rows, exact controls, and false-positive controls. |
+| APK-only version-band reranker v2 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` | Use as the promotion-blocking APK-only reranker diagnostic showing source-free candidate visibility and strict sibling-era gating results. |
 | R8 multi-scale feature diagnostics | `docs/evaluation/R8_MULTISCALE_FEATURE_DIAGNOSTICS.md` | Use as the Phase 3 proof that call-chain, basic-block, class-neighbor, field-operation, and literal/context features are extracted and reportable while scoring remains unchanged. |
 | R8 Phase 4 scoped experiment diagnostics | `docs/evaluation/R8_PHASE4_SCOPED_EXPERIMENT_DIAGNOSTICS.md` | Use as the Phase 4 proof that the offline multi-scale blend stays diagnostic-only because controlled and real source-validated rows would regress. |
 | R8 Phase 5 scoped trigger diagnostics | `docs/evaluation/R8_PHASE5_SCOPED_TRIGGER_DIAGNOSTICS.md` | Use as the Phase 5 experiment-only proof that a narrow trigger keeps four target improvements without triggered regressions in the current artifact, while default scoring remains unchanged. |
@@ -258,6 +259,7 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Final demo checklist | `docs/evaluation/FINAL_DEMO_CHECKLIST.md` | Day-of-defense checklist with the deck path, exact numbers, safe commands, and commands to avoid live. |
 | Hybrid matcher router | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Report-only comparison of matcher strategies from the literature and row-level routing of current hard cases to scoped experiment profiles. |
 | Version-band rerank experiment | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` | First router-driven source-known rerank experiment: 565 scoped wrong-version rows are fixable in the source-known lane while exact and false-positive controls stay visible. |
+| APK-only version-band reranker v2 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` | Source-free reranker prototype that blocks promotion today: 0 safe fixes and only 44/582 scoped wrong-version rows with the source version visible as a baseline alternative. |
 | Final report readiness package | `docs/thesis/FINAL_REPORT_READINESS_PACKAGE.md` | Final report assembly checklist with figure placement, screenshot plan, wording guardrails, and submission checks. |
 
 ## Writing Guardrails
