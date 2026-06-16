@@ -52,6 +52,7 @@ Commands:
 apk-sbom ai-r8-build-dataset
 apk-sbom ai-r8-train
 apk-sbom ai-r8-suggest
+apk-sbom ai-r8-final-eval
 ```
 
 Default artifacts:
@@ -63,6 +64,7 @@ data/results/experiments/ai-r8-assistant/model.joblib
 data/results/experiments/ai-r8-assistant/metrics.json
 data/results/experiments/ai-r8-assistant/suggestions.json
 docs/evaluation/AI_R8_ASSISTANT_DIAGNOSTICS.md
+docs/evaluation/AI_R8_FINAL_EVALUATION.md
 ```
 
 Optional dependency:
@@ -89,6 +91,14 @@ Report-only: true
 ```
 
 The JSON report adds `ai_r8_assistance` only when the flag is used. Default reports remain unchanged.
+
+The final ML/DL evidence package can be regenerated from the MVP CLI:
+
+```powershell
+apk-sbom ai-r8-final-eval
+```
+
+This command combines the Phase 6A RandomForest metrics, Phase 6B Transformer prototype metrics, and report-only guardrail proof. It still does not change matcher scoring, SBOM output, or vulnerability labels.
 
 ## Phase 6B Prototype
 

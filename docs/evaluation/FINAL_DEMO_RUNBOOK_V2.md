@@ -174,6 +174,12 @@ Then add:
 The demo proof runs the same APK with and without AI suggestions. The AI report section appears, but detected components and normalized SBOM content stay unchanged.
 ```
 
+Optional regeneration command:
+
+```powershell
+apk-sbom ai-r8-final-eval
+```
+
 ## If They Ask Hard Questions
 
 | Question | Short answer |

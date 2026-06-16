@@ -109,4 +109,5 @@ The tool has 100% real-world APK accuracy.
 python scripts\build_demo_final_transparency_export.py
 python scripts\build_thesis_artifact_index.py
 python scripts\build_graduation_demo_rehearsal.py
+apk-sbom ai-r8-final-eval
 ```

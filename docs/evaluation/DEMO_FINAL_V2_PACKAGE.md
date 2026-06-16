@@ -65,4 +65,8 @@ The v2 package now has an optional AI-assisted R8 triage layer. It is trained fr
 - Phase 6B structured-token test macro-F1: `0.977`;
 - no selected-version, SBOM, vulnerability-label, or source-validation metric changes.
 
-Use `docs/evaluation/AI_R8_FINAL_EVALUATION.md` as the single AI/ML/DL evidence entry point, `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` for the compact Phase 6A numbers, and `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` as the no-change proof.
+Use `docs/evaluation/AI_R8_FINAL_EVALUATION.md` as the single AI/ML/DL evidence entry point, `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` for the compact Phase 6A numbers, and `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` as the no-change proof. Regenerate the combined package with:
+
+```powershell
+apk-sbom ai-r8-final-eval
+```

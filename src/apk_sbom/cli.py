@@ -94,6 +94,15 @@ from apk_sbom.ai_r8_assistant import (
     write_ai_r8_diagnostics,
     write_training_dataset as write_ai_r8_training_dataset,
 )
+from apk_sbom.ai_r8_final_evaluation import (
+    DEFAULT_AI_METRICS_JSON as DEFAULT_AI_R8_FINAL_AI_METRICS_JSON,
+    DEFAULT_AI_SUMMARY_JSON as DEFAULT_AI_R8_FINAL_AI_SUMMARY_JSON,
+    DEFAULT_DL_METRICS_JSON as DEFAULT_AI_R8_FINAL_DL_METRICS_JSON,
+    DEFAULT_OUTPUT_DOC as DEFAULT_AI_R8_FINAL_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_AI_R8_FINAL_OUTPUT_JSON,
+    DEFAULT_REPORT_ONLY_DEMO_JSON as DEFAULT_AI_R8_FINAL_REPORT_ONLY_DEMO_JSON,
+    write_final_evaluation as write_ai_r8_final_evaluation,
+)
 from apk_sbom.literal_context_diagnostics import (
     DEFAULT_INPUT_JSON as DEFAULT_LITERAL_CONTEXT_INPUT_JSON,
     DEFAULT_OUTPUT_DOC as DEFAULT_LITERAL_CONTEXT_OUTPUT_DOC,
@@ -867,6 +876,41 @@ def build_parser() -> argparse.ArgumentParser:
         help="Output diagnostics Markdown.",
     )
 
+    ai_r8_final_eval_parser = subparsers.add_parser(
+        "ai-r8-final-eval",
+        help="Build the final report-only AI R8 ML/DL evidence package.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--ai-summary-json",
+        default=str(DEFAULT_AI_R8_FINAL_AI_SUMMARY_JSON),
+        help="Compact AI R8 assistant summary JSON.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--ai-metrics-json",
+        default=str(DEFAULT_AI_R8_FINAL_AI_METRICS_JSON),
+        help="Phase 6A RandomForest metrics JSON.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--dl-metrics-json",
+        default=str(DEFAULT_AI_R8_FINAL_DL_METRICS_JSON),
+        help="Phase 6B Transformer metrics JSON.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--report-only-demo-json",
+        default=str(DEFAULT_AI_R8_FINAL_REPORT_ONLY_DEMO_JSON),
+        help="AI report-only guardrail demo JSON.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_AI_R8_FINAL_OUTPUT_JSON),
+        help="Output final AI/DL evaluation JSON.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_AI_R8_FINAL_OUTPUT_DOC),
+        help="Output final AI/DL evaluation Markdown.",
+    )
+
     r8_phase5_parser = subparsers.add_parser(
         "r8-phase5-experiment",
         help=(
@@ -1449,6 +1493,23 @@ def main(argv: list[str] | None = None) -> int:
                 sort_keys=True,
             )
         )
+        return 0
+
+    if args.command == "ai-r8-final-eval":
+        try:
+            result = write_ai_r8_final_evaluation(
+                ai_summary_json=args.ai_summary_json,
+                ai_metrics_json=args.ai_metrics_json,
+                dl_metrics_json=args.dl_metrics_json,
+                report_only_demo_json=args.report_only_demo_json,
+                output_json=args.output_json,
+                output_doc=args.output_doc,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
         return 0
 
     if args.command == "r8-phase5-experiment":
