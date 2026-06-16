@@ -8,7 +8,7 @@ This is the single thesis/demo entry point for the Phase 6 ML/DL layer. It combi
 
 - AI output is report-only.
 - AI does not change selected versions, detected components, CycloneDX SBOM output, CVE/OSV labels, or source-validation metrics.
-- Phase 6B is not wired into `generate-report`.
+- Phase 6B may be surfaced as status-only evidence by the hybrid/AI report flag, but its production decision wiring remains disabled.
 
 ## Phase 6A: Classical ML
 

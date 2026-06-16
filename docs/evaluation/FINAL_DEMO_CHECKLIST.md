@@ -13,10 +13,11 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | 5 | `docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md` | Row-level dataset/source/emitted/vulnerability classification summary. |
 | 6 | `docs/evaluation/AI_R8_FINAL_EVALUATION.md` | Optional Phase 6 AI/ML/DL evidence for PhD-oriented discussion. |
 | 7 | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` | Proof that AI suggestions are report-only and do not change SBOM content. |
-| 8 | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Report-only matcher-improvement comparison and hybrid strategy router. |
-| 9 | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` | First router-driven source-known rerank experiment and controls. |
-| 10 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` | APK-only reranker prototype showing why source-known fixes are not safely promotable yet. |
-| 11 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` | Promotion gate combining source-known, APK-only, and deep candidate expansion evidence. |
+| 8 | `docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md` | Production `generate-report --include-hybrid-ai-assistance` integration, guarded as report-only. |
+| 9 | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Report-only matcher-improvement comparison and hybrid strategy router. |
+| 10 | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` | First router-driven source-known rerank experiment and controls. |
+| 11 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` | APK-only reranker prototype showing why source-known fixes are not safely promotable yet. |
+| 12 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` | Promotion gate combining source-known, APK-only, and deep candidate expansion evidence. |
 
 ## Live Demo Artifacts
 
@@ -51,6 +52,7 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | AI R8 RandomForest test macro-F1 | 0.708 |
 | AI R8 report-only suggestions | 13736 |
 | AI R8 Transformer structured-token test macro-F1 | 0.977 |
+| Hybrid AI production report status | report-only, matcher authority unchanged |
 | Hybrid matcher router rows | 7569 |
 | Hybrid router P1 rows | 4766 |
 | Hybrid router top profile | version-band-rerank, 2180 rows |
@@ -79,6 +81,12 @@ Use:
 
 ```text
 The remaining denominator is exported row by row: boundary/source-only rows, missing-reference rows, and matcher-recall rows are not hidden.
+```
+
+Use:
+
+```text
+The hybrid and AI layer is now integrated into production reports through --include-hybrid-ai-assistance, but it is report-only: it does not change matcher scoring, selected versions, SBOM components, CVE labels, or source-validation metrics.
 ```
 
 Use:
@@ -130,6 +138,7 @@ The tool has 100% real-world APK accuracy.
 | Transparency export regenerated | passed |
 | Thesis artifact index regenerated | passed |
 | Graduation demo rehearsal regenerated | passed |
+| Hybrid AI production reporting regenerated | report-only production integration, DL production wiring disabled |
 | V2 dashboard JSON count check | 106 cases, 6772 checked, 0 mismatches, 0 missing |
 | Transparency JSON count check | 110 cases, 12082 source rows, 6772 emitted rows, 232 vulnerability rows |
 | Hybrid matcher router regenerated | 7569 rows, 4766 P1, top profile version-band-rerank |
@@ -151,6 +160,7 @@ python scripts\build_demo_final_transparency_export.py
 python scripts\build_thesis_artifact_index.py
 python scripts\build_graduation_demo_rehearsal.py
 apk-sbom ai-r8-final-eval
+python scripts\build_hybrid_ai_production_report_evidence.py
 apk-sbom hybrid-matcher-router
 apk-sbom version-band-rerank-experiment
 apk-sbom version-band-apk-reranker

@@ -29,7 +29,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
             "Build an isolated structured-token corpus for the Phase 6B tiny "
-            "Transformer prototype. This is not wired into production reports."
+            "Transformer prototype. Reports may surface prototype status only; "
+            "production decision wiring remains disabled."
         ),
     )
     parser.add_argument(
@@ -137,7 +138,7 @@ def build_corpus(dataset: dict, *, max_sequence_length: int) -> dict:
         "limitations": [
             "This is a structured-token prototype over project evidence rows, not a large smali pretraining corpus.",
             "It demonstrates DL workflow and identity-risk triage only.",
-            "It is not exact-version authority and is not wired into generate-report.",
+            "It is not exact-version authority; reports may surface status only.",
         ],
         "rows": tokenized,
     }
@@ -222,4 +223,3 @@ def _feature_bucket(value: object) -> str:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

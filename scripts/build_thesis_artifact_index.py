@@ -424,6 +424,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the opt-in report proof that AI suggestions add a report section while preserving detected components and normalized SBOM content.",
         },
         {
+            "table": "Hybrid AI production reporting",
+            "source": "docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md",
+            "use": "Use as the production report-only integration proof for `generate-report --include-hybrid-ai-assistance`, combining router, RandomForest, and Transformer-status evidence without changing matcher/SBOM/CVE outputs.",
+        },
+        {
             "table": "AI R8 DL prototype",
             "source": "docs/evaluation/AI_R8_DL_PROTOTYPE.md",
             "use": "Use as the Phase 6B LibAttention-inspired trained Transformer prototype, isolated from production reports.",
@@ -765,6 +770,11 @@ def build_demo_package() -> list[dict[str, str]]:
             "item": "Hybrid matcher router",
             "path": "docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md",
             "talking_point": "Report-only comparison of matcher strategies from the literature and row-level routing of current hard cases to scoped experiment profiles.",
+        },
+        {
+            "item": "Hybrid AI production reporting",
+            "path": "docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md",
+            "talking_point": "Production `generate-report --include-hybrid-ai-assistance` wiring that surfaces the router, ML suggestions, and DL status as report-only evidence while keeping matcher/SBOM/CVE behavior unchanged.",
         },
         {
             "item": "Version-band rerank experiment",

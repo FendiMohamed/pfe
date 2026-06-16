@@ -160,12 +160,13 @@ Open:
 docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md
 docs/evaluation/AI_R8_FINAL_EVALUATION.md
 docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md
+docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md
 ```
 
 Say:
 
 ```text
-After the transparent v2 evaluation, I added a report-only AI layer for hard R8 and matcher-recall triage. Phase 6A trains a RandomForest on 20,523 existing evaluation rows and reaches 0.708 test macro-F1. Phase 6B trains an isolated tiny Transformer over structured project-evidence tokens and reaches 0.977 test macro-F1, but it is not wired into reports and neither AI track can change selected versions, SBOM components, CVE labels, or source-validation metrics.
+After the transparent v2 evaluation, I added a report-only AI layer for hard R8 and matcher-recall triage. Phase 6A trains a RandomForest on 20,523 existing evaluation rows and reaches 0.708 test macro-F1. Phase 6B trains an isolated tiny Transformer over structured project-evidence tokens and reaches 0.977 test macro-F1. The integrated production report can surface the Transformer status, but production wiring stays disabled and neither AI track can change selected versions, SBOM components, CVE labels, or source-validation metrics.
 ```
 
 Then add:
@@ -174,10 +175,17 @@ Then add:
 The demo proof runs the same APK with and without AI suggestions. The AI report section appears, but detected components and normalized SBOM content stay unchanged.
 ```
 
+Then add:
+
+```text
+The hybrid/AI production flag is --include-hybrid-ai-assistance. It adds the hybrid router, RandomForest suggestions, and Transformer status to report JSON, Markdown, and HTML under hybrid_ai_assistance. This is promoted only as report assistance; the current weighted matcher remains the SBOM authority.
+```
+
 Optional regeneration command:
 
 ```powershell
 apk-sbom ai-r8-final-eval
+python scripts\build_hybrid_ai_production_report_evidence.py
 ```
 
 ### 7. Optional Hybrid Matcher Improvement Plan

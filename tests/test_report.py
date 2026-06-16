@@ -17,6 +17,7 @@ from apk_sbom.report import (
     build_markdown_report,
     build_version_uncertainty_summary,
     generate_final_report,
+    load_hybrid_ai_assistance_evidence,
 )
 from apk_sbom.vulnerability import OsvComponentResult, OsvScanSummary, OsvVulnerability
 
@@ -1202,3 +1203,233 @@ def test_report_only_obfuscation_diagnostics_keep_selected_component_unchanged()
     assert diagnostics["class_method_coverage_loss"]["status"] == "warning"
     assert diagnostics["low_confidence_component_ratio"]["value"] == 1.0
     assert diagnostics["method_inlining_or_class_merging_indicators"]["status"] == "warning"
+
+
+def test_hybrid_ai_assistance_report_section_is_report_only(tmp_path):
+    component = DetectedLibrary(
+        group="androidx.core",
+        artifact="core",
+        version="1.15.0",
+        confidence=0.5,
+        match_type="hybrid-candidate",
+        evidence=[],
+    )
+    router_path = tmp_path / "router.json"
+    router_path.write_text(
+        json.dumps(
+            {
+                "schema_version": "hybrid-matcher-router-v1",
+                "report_only": True,
+                "default_matcher_unchanged": True,
+                "current_matcher": {"summary": "current weighted matcher"},
+                "summary": {
+                    "router_rows": 2,
+                    "unique_cases": 1,
+                    "unique_coordinates": 1,
+                    "top_recommended_profiles": [
+                        {"key": "r8-structural-recall", "rows": 1}
+                    ],
+                },
+                "rows": [
+                    {
+                        "case_id": "sample",
+                        "coordinate": component.coordinate,
+                        "source_version": "1.16.0",
+                        "candidate_version": "1.15.0",
+                        "recommended_profile": "r8-structural-recall",
+                        "priority": "P1",
+                        "row_source": "matcher-recall",
+                        "reason_codes": ["strong-opcode-weak-class-method-signal"],
+                        "report_only": True,
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    ai_path = tmp_path / "suggestions.json"
+    ai_path.write_text(
+        json.dumps(
+            {
+                "enabled": True,
+                "report_only": True,
+                "model_type": "RandomForestClassifier",
+                "model_version": "ai-r8-assistant-v1",
+                "status": "model-predictions",
+                "summary": {"suggestion_rows": 1},
+                "suggestions": [
+                    {
+                        "case_id": "sample",
+                        "coordinate": component.coordinate,
+                        "source_version": "1.16.0",
+                        "candidate_version": "1.16.0",
+                        "recommendation": "suggest_report_only",
+                        "confidence": 0.75,
+                        "report_only": True,
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    dl_path = tmp_path / "dl.json"
+    dl_path.write_text(
+        json.dumps(
+            {
+                "schema_version": "ai-r8-dl-prototype-metrics-v2",
+                "status": "trained",
+                "model_type": "torch.nn.TransformerEncoder",
+                "task": "multiclass identity-risk classification, not exact version authority",
+                "production_wiring": "disabled",
+                "dataset": {"rows": 10},
+                "test": {"accuracy": 0.9, "macro_f1": 0.8},
+                "limits": ["research only"],
+                "report_only": True,
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    evidence = load_hybrid_ai_assistance_evidence(
+        router_path,
+        ai_suggestions_path=ai_path,
+        dl_metrics_path=dl_path,
+        apk_path="sample.apk",
+        components=[component],
+    )
+    default_payload = build_json_report(
+        make_apk(),
+        make_match_summary(),
+        [component],
+        None,
+        make_artifacts(),
+    )
+    payload = build_json_report(
+        make_apk(),
+        make_match_summary(),
+        [component],
+        None,
+        make_artifacts(),
+        hybrid_ai_assistance=evidence,
+    )
+    markdown = build_markdown_report(
+        make_apk(),
+        make_match_summary(),
+        [component],
+        None,
+        make_artifacts(),
+        hybrid_ai_assistance=evidence,
+    )
+    html = build_html_report(
+        make_apk(),
+        make_match_summary(),
+        [component],
+        None,
+        make_artifacts(),
+        hybrid_ai_assistance=evidence,
+    )
+
+    assert "hybrid_ai_assistance" not in default_payload
+    assert payload["detected_components"][0]["version"] == "1.15.0"
+    assert payload["hybrid_ai_assistance"]["report_only"] is True
+    assert payload["hybrid_ai_assistance"]["summary"]["router_matching_rows"] == 1
+    assert payload["hybrid_ai_assistance"]["summary"]["ml_matching_rows"] == 1
+    assert payload["hybrid_ai_assistance"]["summary"]["dl_production_wiring"] == "disabled"
+    assert "Hybrid AI Matcher Assistance" in markdown
+    assert "Current SBOM authority: current weighted matcher" in markdown
+    assert "does not change detected components" in markdown
+    assert "Hybrid AI Matcher Assistance" in html
+
+
+def test_generate_final_report_attaches_hybrid_ai_without_changing_sbom(tmp_path, monkeypatch):
+    component = DetectedLibrary(
+        group="androidx.core",
+        artifact="core",
+        version="1.15.0",
+        confidence=0.5,
+        match_type="hybrid-candidate",
+        evidence=[],
+    )
+    router_path = tmp_path / "router.json"
+    router_path.write_text(
+        json.dumps(
+            {
+                "summary": {"router_rows": 1},
+                "rows": [
+                    {
+                        "case_id": "sample",
+                        "coordinate": component.coordinate,
+                        "source_version": "1.16.0",
+                        "candidate_version": "1.15.0",
+                        "recommended_profile": "r8-structural-recall",
+                        "priority": "P1",
+                        "row_source": "matcher-recall",
+                        "reason_codes": ["strong-opcode-weak-class-method-signal"],
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    ai_path = tmp_path / "suggestions.json"
+    ai_path.write_text(
+        json.dumps(
+            {
+                "model_type": "RandomForestClassifier",
+                "model_version": "ai-r8-assistant-v1",
+                "status": "model-predictions",
+                "summary": {"suggestion_rows": 1},
+                "suggestions": [
+                    {
+                        "case_id": "sample",
+                        "coordinate": component.coordinate,
+                        "source_version": "1.16.0",
+                        "candidate_version": "1.16.0",
+                        "recommendation": "suggest_report_only",
+                        "confidence": 0.75,
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    dl_path = tmp_path / "dl.json"
+    dl_path.write_text(
+        json.dumps(
+            {
+                "status": "trained",
+                "model_type": "torch.nn.TransformerEncoder",
+                "production_wiring": "disabled",
+                "test": {"accuracy": 0.9, "macro_f1": 0.8},
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    monkeypatch.setattr("apk_sbom.report.inspect_apk", lambda apk_path: make_apk())
+    monkeypatch.setattr(
+        "apk_sbom.report.match_apk_to_reference_db",
+        lambda *args, **kwargs: make_match_summary(),
+    )
+    monkeypatch.setattr(
+        "apk_sbom.report.detected_libraries_from_match_summary",
+        lambda *args, **kwargs: [component],
+    )
+
+    generate_final_report(
+        "sample.apk",
+        output_dir=tmp_path / "report",
+        query_osv=False,
+        hybrid_matcher_router_json=router_path,
+        hybrid_ai_r8_suggestions_json=ai_path,
+        hybrid_ai_r8_dl_metrics_json=dl_path,
+    )
+    report = json.loads((tmp_path / "report" / "report.json").read_text(encoding="utf-8"))
+    markdown = (tmp_path / "report" / "report.md").read_text(encoding="utf-8")
+    sbom = json.loads((tmp_path / "report" / "sbom.cdx.json").read_text(encoding="utf-8"))
+
+    assert report["detected_components"][0]["version"] == "1.15.0"
+    assert report["hybrid_ai_assistance"]["report_only"] is True
+    assert report["hybrid_ai_assistance"]["phase6b_dl"]["production_wiring"] == "disabled"
+    assert "Hybrid AI Matcher Assistance" in markdown
+    assert sbom["components"][0]["version"] == "1.15.0"

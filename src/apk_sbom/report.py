@@ -44,6 +44,12 @@ DEFAULT_LIFECYCLE_FAMILY_EXPERIMENT_JSON = Path(
 DEFAULT_R8_MINIFIED_CONFIDENCE_POLICY_JSON = Path(
     "data/results/experiments/r8-minified-confidence-policy-diagnostics.json"
 )
+DEFAULT_HYBRID_MATCHER_ROUTER_JSON = Path(
+    "data/results/evaluation/hybrid-matcher-router-v1.json"
+)
+DEFAULT_AI_R8_DL_METRICS_JSON = Path(
+    "data/results/experiments/ai-r8-dl-prototype/metrics.json"
+)
 
 
 @dataclass(frozen=True)
@@ -98,6 +104,9 @@ def generate_final_report(
     lifecycle_family_experiment_json: str | Path | None = None,
     r8_minified_confidence_policy_json: str | Path | None = None,
     ai_r8_suggestions_json: str | Path | None = None,
+    hybrid_matcher_router_json: str | Path | None = None,
+    hybrid_ai_r8_suggestions_json: str | Path | None = None,
+    hybrid_ai_r8_dl_metrics_json: str | Path | None = None,
 ) -> ReportArtifacts:
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
@@ -152,6 +161,13 @@ def generate_final_report(
         apk_path=apk.apk_path,
         components=components,
     )
+    hybrid_ai_assistance = load_hybrid_ai_assistance_evidence(
+        hybrid_matcher_router_json,
+        ai_suggestions_path=hybrid_ai_r8_suggestions_json,
+        dl_metrics_path=hybrid_ai_r8_dl_metrics_json,
+        apk_path=apk.apk_path,
+        components=components,
+    )
 
     matches_path = output / "matches.json"
     matches_path.write_text(match_summary.to_json() + "\n", encoding="utf-8")
@@ -201,6 +217,7 @@ def generate_final_report(
         version_band_experiments=version_band_experiments,
         r8_minified_confidence_policy=r8_minified_confidence_policy,
         ai_r8_assistance=ai_r8_assistance,
+        hybrid_ai_assistance=hybrid_ai_assistance,
     )
     report_json_path.write_text(
         json.dumps(report_payload, indent=2, sort_keys=True) + "\n",
@@ -220,6 +237,7 @@ def generate_final_report(
             version_band_experiments=version_band_experiments,
             r8_minified_confidence_policy=r8_minified_confidence_policy,
             ai_r8_assistance=ai_r8_assistance,
+            hybrid_ai_assistance=hybrid_ai_assistance,
         ),
         encoding="utf-8",
     )
@@ -237,6 +255,7 @@ def generate_final_report(
             version_band_experiments=version_band_experiments,
             r8_minified_confidence_policy=r8_minified_confidence_policy,
             ai_r8_assistance=ai_r8_assistance,
+            hybrid_ai_assistance=hybrid_ai_assistance,
         ),
         encoding="utf-8",
     )
@@ -436,6 +455,191 @@ def load_ai_r8_assistance_evidence(
     }
 
 
+def load_hybrid_ai_assistance_evidence(
+    router_path: str | Path | None,
+    *,
+    ai_suggestions_path: str | Path | None = None,
+    dl_metrics_path: str | Path | None = None,
+    apk_path: str | Path,
+    components: list[DetectedLibrary],
+) -> dict | None:
+    if router_path is None and ai_suggestions_path is None and dl_metrics_path is None:
+        return None
+    component_coordinates = {component.coordinate for component in components}
+    router = (
+        _load_hybrid_router_report_evidence(
+            router_path,
+            apk_path=apk_path,
+            component_coordinates=component_coordinates,
+        )
+        if router_path is not None
+        else None
+    )
+    ml = (
+        load_ai_r8_assistance_evidence(
+            ai_suggestions_path,
+            apk_path=apk_path,
+            components=components,
+        )
+        if ai_suggestions_path is not None
+        else None
+    )
+    dl = (
+        _load_ai_r8_dl_prototype_status(dl_metrics_path)
+        if dl_metrics_path is not None
+        else None
+    )
+    return {
+        "enabled": True,
+        "report_only": True,
+        "schema_version": "hybrid-ai-report-assistance-v1",
+        "model_version": "hybrid-ai-report-assistance-v1",
+        "summary": {
+            "router_matching_rows": (
+                router.get("summary", {}).get("matching_rows", 0) if router else 0
+            ),
+            "ml_matching_rows": (
+                ml.get("summary", {}).get("matching_rows", 0) if ml else 0
+            ),
+            "dl_production_wiring": (
+                dl.get("production_wiring", "not-attached") if dl else "not-attached"
+            ),
+            "detected_component_coordinates": len(component_coordinates),
+        },
+        "policy": [
+            "This production report section is report-only hybrid and AI assistance.",
+            "The current weighted matcher remains the SBOM authority.",
+            "The router can explain which research-inspired strategy fits hard rows.",
+            "The classical ML assistant can prioritize report wording and investigation.",
+            "The DL prototype is surfaced as research status only and is not wired into decisions.",
+            "No item in this section changes detected components, selected versions, SBOM output, vulnerability labels, or source-validation metrics.",
+        ],
+        "allowed_effects": [
+            "report wording",
+            "triage prioritization",
+            "demo explanation",
+            "future matcher experiment planning",
+        ],
+        "forbidden_effects": [
+            "selected version change",
+            "CycloneDX SBOM component change",
+            "vulnerability label change",
+            "source-validation metric change",
+            "default matcher scoring change",
+        ],
+        "hybrid_router": router,
+        "phase6a_ml": ml,
+        "phase6b_dl": dl,
+    }
+
+
+def _load_hybrid_router_report_evidence(
+    path: str | Path,
+    *,
+    apk_path: str | Path,
+    component_coordinates: set[str],
+) -> dict:
+    source_path = Path(path)
+    payload = json.loads(source_path.read_text(encoding="utf-8"))
+    rows = payload.get("rows", [])
+    matching_rows = [
+        row
+        for row in rows
+        if _hybrid_router_row_matches_report(row, apk_path, component_coordinates)
+    ]
+    matching_rows = sorted(matching_rows, key=_hybrid_router_sort_key)
+    profile_counts = Counter(
+        row.get("recommended_profile") for row in matching_rows if row.get("recommended_profile")
+    )
+    priority_counts = Counter(row.get("priority") for row in matching_rows if row.get("priority"))
+    row_source_counts = Counter(
+        row.get("row_source") for row in matching_rows if row.get("row_source")
+    )
+    source_summary = payload.get("summary", {})
+    return {
+        "enabled": True,
+        "report_only": True,
+        "source": str(source_path),
+        "schema_version": payload.get("schema_version", "hybrid-matcher-router-v1"),
+        "default_matcher_unchanged": payload.get("default_matcher_unchanged", True),
+        "current_matcher": payload.get("current_matcher", {}),
+        "summary": {
+            "router_rows": source_summary.get("router_rows", len(rows)),
+            "unique_cases": source_summary.get("unique_cases", 0),
+            "unique_coordinates": source_summary.get("unique_coordinates", 0),
+            "matching_rows": len(matching_rows),
+            "matching_profile_counts": dict(sorted(profile_counts.items())),
+            "matching_priority_counts": dict(sorted(priority_counts.items())),
+            "matching_row_source_counts": dict(sorted(row_source_counts.items())),
+            "dataset_top_recommended_profiles": source_summary.get(
+                "top_recommended_profiles", []
+            ),
+        },
+        "matching_rows": matching_rows[:50],
+        "matching_row_limit": 50,
+        "policy": payload.get(
+            "policy",
+            [
+                "This router is report-only.",
+                "No router recommendation changes matcher, SBOM, CVE, or source-validation outputs.",
+            ],
+        ),
+    }
+
+
+def _hybrid_router_row_matches_report(
+    row: dict,
+    apk_path: str | Path,
+    component_coordinates: set[str],
+) -> bool:
+    case = str(row.get("case_id") or row.get("app") or "")
+    if _experiment_case_matches_apk({"case_id": case}, apk_path):
+        return True
+    coordinate = str(row.get("coordinate") or "")
+    return bool(coordinate and coordinate in component_coordinates)
+
+
+def _hybrid_router_sort_key(row: dict) -> tuple[int, str, str, str]:
+    priority_rank = {"P1": 0, "P2": 1, "P3": 2}
+    return (
+        priority_rank.get(str(row.get("priority") or ""), 9),
+        str(row.get("recommended_profile") or ""),
+        str(row.get("case_id") or ""),
+        str(row.get("coordinate") or ""),
+    )
+
+
+def _load_ai_r8_dl_prototype_status(path: str | Path) -> dict:
+    source_path = Path(path)
+    payload = json.loads(source_path.read_text(encoding="utf-8"))
+    test_metrics = payload.get("test", {})
+    return {
+        "enabled": True,
+        "report_only": True,
+        "source": str(source_path),
+        "schema_version": payload.get("schema_version"),
+        "status": payload.get("status"),
+        "model_type": payload.get("model_type", "torch.nn.TransformerEncoder"),
+        "task": payload.get(
+            "task",
+            "identity-risk classification, not exact version authority",
+        ),
+        "production_wiring": payload.get("production_wiring", "disabled"),
+        "dataset": payload.get("dataset", {}),
+        "test": {
+            "accuracy": test_metrics.get("accuracy"),
+            "macro_f1": test_metrics.get("macro_f1"),
+        },
+        "limits": payload.get(
+            "limits",
+            [
+                "DL prototype status only.",
+                "It cannot change selected versions, SBOM components, vulnerability labels, or source-validation metrics.",
+            ],
+        ),
+    }
+
+
 def _ai_r8_row_matches_report(
     row: dict,
     apk_path: str | Path,
@@ -542,6 +746,7 @@ def build_json_report(
     version_band_experiments: dict | None = None,
     r8_minified_confidence_policy: dict | None = None,
     ai_r8_assistance: dict | None = None,
+    hybrid_ai_assistance: dict | None = None,
 ) -> dict:
     diagnostics = obfuscation_diagnostics or build_obfuscation_diagnostics(
         apk,
@@ -570,6 +775,8 @@ def build_json_report(
         payload["r8_minified_confidence_policy"] = r8_minified_confidence_policy
     if ai_r8_assistance is not None:
         payload["ai_r8_assistance"] = ai_r8_assistance
+    if hybrid_ai_assistance is not None:
+        payload["hybrid_ai_assistance"] = hybrid_ai_assistance
     return payload
 
 
@@ -584,6 +791,7 @@ def build_markdown_report(
     version_band_experiments: dict | None = None,
     r8_minified_confidence_policy: dict | None = None,
     ai_r8_assistance: dict | None = None,
+    hybrid_ai_assistance: dict | None = None,
 ) -> str:
     vulnerability_labels = _vulnerability_labels(osv_summary)
     obfuscation_risk = assess_obfuscation_risk(apk, match_summary, components)
@@ -665,6 +873,7 @@ def build_markdown_report(
     lines.extend(_markdown_r8_phase5_experiment(r8_phase5_experiment))
     lines.extend(_markdown_version_band_experiments(version_band_experiments))
     lines.extend(_markdown_r8_minified_confidence_policy(r8_minified_confidence_policy))
+    lines.extend(_markdown_hybrid_ai_assistance(hybrid_ai_assistance))
     lines.extend(_markdown_ai_r8_assistance(ai_r8_assistance))
 
     lines.extend(
@@ -842,6 +1051,7 @@ def build_html_report(
     version_band_experiments: dict | None = None,
     r8_minified_confidence_policy: dict | None = None,
     ai_r8_assistance: dict | None = None,
+    hybrid_ai_assistance: dict | None = None,
 ) -> str:
     vulnerability_labels = _vulnerability_labels(osv_summary)
     vulnerability_rows = _vulnerability_rows(osv_summary)
@@ -1072,6 +1282,8 @@ def build_html_report(
     <h2>Experimental R8 Minified Confidence Policy</h2>
     {_html_r8_minified_confidence_policy(r8_minified_confidence_policy)}
   </section>
+
+  {_html_hybrid_ai_assistance_section(hybrid_ai_assistance)}
 
   {_html_ai_r8_assistance_section(ai_r8_assistance)}
 
@@ -1944,6 +2156,237 @@ def _html_r8_minified_confidence_policy(evidence: dict | None) -> str:
       <thead><tr><th>Case</th><th>Coordinate</th><th>Current</th><th>Diagnostic</th><th>Policy</th><th>Signals</th></tr></thead>
       <tbody>{blocked_rows}</tbody>
     </table>
+    """
+
+
+def _markdown_hybrid_ai_assistance(evidence: dict | None) -> list[str]:
+    if evidence is None:
+        return []
+    summary = evidence.get("summary", {})
+    router = evidence.get("hybrid_router") or {}
+    router_summary = router.get("summary", {})
+    ml = evidence.get("phase6a_ml") or {}
+    ml_summary = ml.get("summary", {})
+    dl = evidence.get("phase6b_dl") or {}
+    dl_test = dl.get("test", {})
+    lines = [
+        "",
+        "## Hybrid AI Matcher Assistance",
+        "",
+        "- Report-only: true",
+        (
+            "- Note: this production report section does not change detected components, "
+            "selected versions, SBOM output, vulnerability labels, source-validation metrics, "
+            "or default matcher scoring."
+        ),
+        "- Current SBOM authority: current weighted matcher.",
+        f"- Model version: `{evidence.get('model_version')}`",
+        f"- Router rows matching this report: `{summary.get('router_matching_rows', 0)}`",
+        f"- ML rows matching this report: `{summary.get('ml_matching_rows', 0)}`",
+        f"- DL production wiring: `{summary.get('dl_production_wiring')}`",
+        f"- Router source: `{router.get('source')}`",
+        f"- ML source: `{ml.get('source')}`",
+        f"- DL metrics source: `{dl.get('source')}`",
+        "",
+        "### Hybrid Router",
+        "",
+        f"- Dataset router rows: `{router_summary.get('router_rows', 0)}`",
+        f"- Matching profile counts: `{json.dumps(router_summary.get('matching_profile_counts', {}), sort_keys=True)}`",
+        f"- Matching priority counts: `{json.dumps(router_summary.get('matching_priority_counts', {}), sort_keys=True)}`",
+        "",
+    ]
+    router_rows = router.get("matching_rows") or []
+    if router_rows:
+        lines.extend(
+            [
+                "| Case | Coordinate | Source | Candidate | Profile | Priority | Reason codes |",
+                "|---|---|---:|---:|---|---|---|",
+            ]
+        )
+        for row in router_rows[:20]:
+            lines.append(
+                "| "
+                f"{_markdown_cell(row.get('case_id'))} | "
+                f"`{row.get('coordinate')}` | "
+                f"{_markdown_cell(row.get('source_version'))} | "
+                f"{_markdown_cell(row.get('candidate_version'))} | "
+                f"`{_markdown_cell(row.get('recommended_profile'))}` | "
+                f"`{_markdown_cell(row.get('priority'))}` | "
+                f"{_markdown_cell(_short_signal_list(row.get('reason_codes')))} |"
+            )
+        if len(router_rows) > 20:
+            lines.append(
+                f"| ... |  |  |  |  |  | {len(router_rows) - 20} additional router rows omitted. |"
+            )
+    else:
+        lines.append("No hybrid router row matched this report.")
+    lines.extend(
+        [
+            "",
+            "### Phase 6A Classical ML",
+            "",
+            f"- Model type: `{ml.get('model_type')}`",
+            f"- Model version: `{ml.get('model_version')}`",
+            f"- Status: `{ml.get('status')}`",
+            f"- Dataset suggestion rows: `{ml_summary.get('suggestion_rows', 0)}`",
+            f"- Matching recommendation counts: `{json.dumps(ml_summary.get('matching_recommendation_counts', {}), sort_keys=True)}`",
+            "",
+        ]
+    )
+    ml_rows = ml.get("matching_rows") or []
+    if ml_rows:
+        lines.extend(
+            [
+                "| Case | Coordinate | Source | Candidate | Recommendation | Confidence |",
+                "|---|---|---:|---:|---|---:|",
+            ]
+        )
+        for row in ml_rows[:12]:
+            lines.append(
+                "| "
+                f"{_markdown_cell(row.get('case_id'))} | "
+                f"`{row.get('coordinate')}` | "
+                f"{_markdown_cell(row.get('source_version'))} | "
+                f"{_markdown_cell(row.get('candidate_version'))} | "
+                f"`{_markdown_cell(row.get('recommendation'))}` | "
+                f"{float(row.get('confidence') or 0.0):.3f} |"
+            )
+    else:
+        lines.append("No ML suggestion row matched this report.")
+    lines.extend(
+        [
+            "",
+            "### Phase 6B DL Prototype",
+            "",
+            f"- Model type: `{dl.get('model_type')}`",
+            f"- Status: `{dl.get('status')}`",
+            f"- Task: {dl.get('task')}",
+            f"- Production wiring: `{dl.get('production_wiring')}`",
+            f"- Test accuracy: `{_markdown_value(dl_test.get('accuracy'))}`",
+            f"- Test macro-F1: `{_markdown_value(dl_test.get('macro_f1'))}`",
+            "- DL acceptance rule: research status only unless it later passes independent APK-side controls.",
+        ]
+    )
+    return lines
+
+
+def _html_hybrid_ai_assistance(evidence: dict | None) -> str:
+    if evidence is None:
+        return (
+            "<p class=\"subtle\">Not enabled. Run <code>generate-report "
+            "--include-hybrid-ai-assistance</code> to attach report-only hybrid "
+            "router, ML, and DL status evidence.</p>"
+        )
+    summary = evidence.get("summary", {})
+    router = evidence.get("hybrid_router") or {}
+    router_summary = router.get("summary", {})
+    ml = evidence.get("phase6a_ml") or {}
+    ml_summary = ml.get("summary", {})
+    dl = evidence.get("phase6b_dl") or {}
+    dl_test = dl.get("test", {})
+    router_rows = "".join(
+        "<tr>"
+        f"<td>{_html(row.get('case_id'))}</td>"
+        f"<td><code>{_html(row.get('coordinate'))}</code></td>"
+        f"<td>{_html(row.get('source_version'))}</td>"
+        f"<td>{_html(row.get('candidate_version'))}</td>"
+        f"<td>{_status_pill(str(row.get('recommended_profile')))}</td>"
+        f"<td>{_html(row.get('priority'))}</td>"
+        f"<td>{_html(_short_signal_list(row.get('reason_codes')))}</td>"
+        "</tr>"
+        for row in (router.get("matching_rows") or [])[:20]
+    )
+    if not router_rows:
+        router_rows = "<tr><td colspan=\"7\">No hybrid router row matched this report.</td></tr>"
+    ml_rows = "".join(
+        "<tr>"
+        f"<td>{_html(row.get('case_id'))}</td>"
+        f"<td><code>{_html(row.get('coordinate'))}</code></td>"
+        f"<td>{_html(row.get('source_version'))}</td>"
+        f"<td>{_html(row.get('candidate_version'))}</td>"
+        f"<td>{_status_pill(str(row.get('recommendation')))}</td>"
+        f"<td>{float(row.get('confidence') or 0.0):.3f}</td>"
+        "</tr>"
+        for row in (ml.get("matching_rows") or [])[:12]
+    )
+    if not ml_rows:
+        ml_rows = "<tr><td colspan=\"6\">No ML suggestion row matched this report.</td></tr>"
+    profile_counts = json.dumps(
+        router_summary.get("matching_profile_counts", {}),
+        sort_keys=True,
+    )
+    priority_counts = json.dumps(
+        router_summary.get("matching_priority_counts", {}),
+        sort_keys=True,
+    )
+    recommendation_counts = json.dumps(
+        ml_summary.get("matching_recommendation_counts", {}),
+        sort_keys=True,
+    )
+    return f"""
+    <p>Report-only: <strong>true</strong></p>
+    <p class="subtle">This production report section does not change detected components, selected versions, SBOM output, vulnerability labels, source-validation metrics, or default matcher scoring.</p>
+    <table>
+      <tbody>
+        <tr><th>Current SBOM authority</th><td>Current weighted matcher</td></tr>
+        <tr><th>Model version</th><td><code>{_html(evidence.get("model_version"))}</code></td></tr>
+        <tr><th>Router rows matching this report</th><td>{_html(summary.get("router_matching_rows", 0))}</td></tr>
+        <tr><th>ML rows matching this report</th><td>{_html(summary.get("ml_matching_rows", 0))}</td></tr>
+        <tr><th>DL production wiring</th><td><code>{_html(summary.get("dl_production_wiring"))}</code></td></tr>
+        <tr><th>Router source</th><td><code>{_html(router.get("source"))}</code></td></tr>
+        <tr><th>ML source</th><td><code>{_html(ml.get("source"))}</code></td></tr>
+        <tr><th>DL metrics source</th><td><code>{_html(dl.get("source"))}</code></td></tr>
+      </tbody>
+    </table>
+    <h3>Hybrid Router</h3>
+    <table>
+      <tbody>
+        <tr><th>Dataset router rows</th><td>{_html(router_summary.get("router_rows", 0))}</td></tr>
+        <tr><th>Matching profile counts</th><td><code>{_html(profile_counts)}</code></td></tr>
+        <tr><th>Matching priority counts</th><td><code>{_html(priority_counts)}</code></td></tr>
+      </tbody>
+    </table>
+    <table>
+      <thead><tr><th>Case</th><th>Coordinate</th><th>Source</th><th>Candidate</th><th>Profile</th><th>Priority</th><th>Reasons</th></tr></thead>
+      <tbody>{router_rows}</tbody>
+    </table>
+    <h3>Phase 6A Classical ML</h3>
+    <table>
+      <tbody>
+        <tr><th>Model type</th><td><code>{_html(ml.get("model_type"))}</code></td></tr>
+        <tr><th>Model version</th><td><code>{_html(ml.get("model_version"))}</code></td></tr>
+        <tr><th>Status</th><td><code>{_html(ml.get("status"))}</code></td></tr>
+        <tr><th>Dataset suggestion rows</th><td>{_html(ml_summary.get("suggestion_rows", 0))}</td></tr>
+        <tr><th>Matching recommendation counts</th><td><code>{_html(recommendation_counts)}</code></td></tr>
+      </tbody>
+    </table>
+    <table>
+      <thead><tr><th>Case</th><th>Coordinate</th><th>Source</th><th>Candidate</th><th>Recommendation</th><th>Confidence</th></tr></thead>
+      <tbody>{ml_rows}</tbody>
+    </table>
+    <h3>Phase 6B DL Prototype</h3>
+    <table>
+      <tbody>
+        <tr><th>Model type</th><td><code>{_html(dl.get("model_type"))}</code></td></tr>
+        <tr><th>Status</th><td><code>{_html(dl.get("status"))}</code></td></tr>
+        <tr><th>Task</th><td>{_html(dl.get("task"))}</td></tr>
+        <tr><th>Production wiring</th><td><code>{_html(dl.get("production_wiring"))}</code></td></tr>
+        <tr><th>Test accuracy</th><td>{_html(_markdown_value(dl_test.get("accuracy")))}</td></tr>
+        <tr><th>Test macro-F1</th><td>{_html(_markdown_value(dl_test.get("macro_f1")))}</td></tr>
+      </tbody>
+    </table>
+    <p class="subtle">DL acceptance rule: research status only unless it later passes independent APK-side controls.</p>
+    """
+
+
+def _html_hybrid_ai_assistance_section(evidence: dict | None) -> str:
+    if evidence is None:
+        return ""
+    return f"""
+  <section>
+    <h2>Hybrid AI Matcher Assistance</h2>
+    {_html_hybrid_ai_assistance(evidence)}
+  </section>
     """
 
 

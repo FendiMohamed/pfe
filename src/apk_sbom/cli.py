@@ -162,7 +162,9 @@ from apk_sbom.reference_expander import (
     expand_reference_catalog,
 )
 from apk_sbom.report import (
+    DEFAULT_AI_R8_DL_METRICS_JSON as DEFAULT_REPORT_AI_R8_DL_METRICS_JSON,
     DEFAULT_AI_R8_SUGGESTIONS_JSON as DEFAULT_REPORT_AI_R8_SUGGESTIONS_JSON,
+    DEFAULT_HYBRID_MATCHER_ROUTER_JSON as DEFAULT_REPORT_HYBRID_MATCHER_ROUTER_JSON,
     DEFAULT_R8_MINIFIED_CONFIDENCE_POLICY_JSON,
     DEFAULT_R8_PHASE5_EXPERIMENT_JSON,
     DEFAULT_LIFECYCLE_FAMILY_EXPERIMENT_JSON,
@@ -827,6 +829,32 @@ def build_parser() -> argparse.ArgumentParser:
         "--ai-r8-suggestions-json",
         default=str(DEFAULT_REPORT_AI_R8_SUGGESTIONS_JSON),
         help="AI R8 suggestions JSON to attach when --include-ai-r8-suggestions is used.",
+    )
+    report_parser.add_argument(
+        "--include-hybrid-ai-assistance",
+        action="store_true",
+        help=(
+            "Attach production report-only hybrid matcher router, ML assistant, "
+            "and DL prototype status evidence. This does not change matcher "
+            "scoring, selected versions, SBOM output, vulnerability labels, or "
+            "source-validation metrics."
+        ),
+    )
+    report_parser.add_argument(
+        "--hybrid-matcher-router-json",
+        default=str(DEFAULT_REPORT_HYBRID_MATCHER_ROUTER_JSON),
+        help=(
+            "Hybrid matcher router JSON to attach when "
+            "--include-hybrid-ai-assistance is used."
+        ),
+    )
+    report_parser.add_argument(
+        "--ai-r8-dl-metrics-json",
+        default=str(DEFAULT_REPORT_AI_R8_DL_METRICS_JSON),
+        help=(
+            "AI R8 DL prototype metrics JSON to attach as status-only evidence "
+            "when --include-hybrid-ai-assistance is used."
+        ),
     )
 
     ai_r8_dataset_parser = subparsers.add_parser(
@@ -1599,6 +1627,21 @@ def main(argv: list[str] | None = None) -> int:
                 ai_r8_suggestions_json=(
                     args.ai_r8_suggestions_json
                     if args.include_ai_r8_suggestions
+                    else None
+                ),
+                hybrid_matcher_router_json=(
+                    args.hybrid_matcher_router_json
+                    if args.include_hybrid_ai_assistance
+                    else None
+                ),
+                hybrid_ai_r8_suggestions_json=(
+                    args.ai_r8_suggestions_json
+                    if args.include_hybrid_ai_assistance
+                    else None
+                ),
+                hybrid_ai_r8_dl_metrics_json=(
+                    args.ai_r8_dl_metrics_json
+                    if args.include_hybrid_ai_assistance
                     else None
                 ),
             )

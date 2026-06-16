@@ -123,7 +123,7 @@ The final v2 transparency artifacts also became the training evidence for a repo
 | Phase 6B model | torch.nn.TransformerEncoder |
 | Phase 6B structured-token test macro-F1 | 0.977 |
 
-The Phase 6A model may recommend report-only wording such as `suggest_report_only`, `suppress_uncertain`, or `risk_only`. It may not change selected versions, CycloneDX SBOM output, vulnerability labels, or source-validation metrics. The Phase 6B Transformer is a trained structured-token research prototype, not raw smali pretraining and not production report wiring. The combined evidence file is `docs/evaluation/AI_R8_FINAL_EVALUATION.md`; the dedicated report-only proof is `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md`, which shows that opt-in AI suggestions add an AI section to the report while leaving detected components and normalized SBOM content unchanged.
+The Phase 6A model may recommend report-only wording such as `suggest_report_only`, `suppress_uncertain`, or `risk_only`. It may not change selected versions, CycloneDX SBOM output, vulnerability labels, or source-validation metrics. The Phase 6B Transformer is a trained structured-token research prototype, not raw smali pretraining; the production report may surface its status, but production decision wiring remains disabled. The combined evidence file is `docs/evaluation/AI_R8_FINAL_EVALUATION.md`; the dedicated report-only proof is `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md`, which shows that opt-in AI suggestions add an AI section to the report while leaving detected components and normalized SBOM content unchanged.
 
 ## Vulnerability Claim Transparency
 
