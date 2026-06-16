@@ -103,6 +103,17 @@ from apk_sbom.ai_r8_final_evaluation import (
     DEFAULT_REPORT_ONLY_DEMO_JSON as DEFAULT_AI_R8_FINAL_REPORT_ONLY_DEMO_JSON,
     write_final_evaluation as write_ai_r8_final_evaluation,
 )
+from apk_sbom.hybrid_matcher_router import (
+    DEFAULT_AI_SUGGESTIONS_JSON as DEFAULT_HYBRID_MATCHER_AI_SUGGESTIONS_JSON,
+    DEFAULT_MATCHER_RECALL_JSON as DEFAULT_HYBRID_MATCHER_RECALL_JSON,
+    DEFAULT_OUTPUT_DOC as DEFAULT_HYBRID_MATCHER_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_HYBRID_MATCHER_OUTPUT_JSON,
+    DEFAULT_SOURCE_GAP_JSON as DEFAULT_HYBRID_MATCHER_SOURCE_GAP_JSON,
+    DEFAULT_TRANSPARENCY_JSON as DEFAULT_HYBRID_MATCHER_TRANSPARENCY_JSON,
+    DEFAULT_WRONG_VERSION_JSON as DEFAULT_HYBRID_MATCHER_WRONG_VERSION_JSON,
+    build_payload as build_hybrid_matcher_router_payload,
+    write_outputs as write_hybrid_matcher_router_outputs,
+)
 from apk_sbom.literal_context_diagnostics import (
     DEFAULT_INPUT_JSON as DEFAULT_LITERAL_CONTEXT_INPUT_JSON,
     DEFAULT_OUTPUT_DOC as DEFAULT_LITERAL_CONTEXT_OUTPUT_DOC,
@@ -911,6 +922,49 @@ def build_parser() -> argparse.ArgumentParser:
         help="Output final AI/DL evaluation Markdown.",
     )
 
+    hybrid_matcher_parser = subparsers.add_parser(
+        "hybrid-matcher-router",
+        help=(
+            "Build a report-only hybrid matcher strategy router for the current "
+            "hard rows without changing matcher scoring, SBOM output, or CVE labels."
+        ),
+    )
+    hybrid_matcher_parser.add_argument(
+        "--matcher-recall-json",
+        default=str(DEFAULT_HYBRID_MATCHER_RECALL_JSON),
+        help="Matcher-recall diagnostics JSON.",
+    )
+    hybrid_matcher_parser.add_argument(
+        "--transparency-json",
+        default=str(DEFAULT_HYBRID_MATCHER_TRANSPARENCY_JSON),
+        help="Final transparency export JSON.",
+    )
+    hybrid_matcher_parser.add_argument(
+        "--source-gap-json",
+        default=str(DEFAULT_HYBRID_MATCHER_SOURCE_GAP_JSON),
+        help="Final source-gap triage JSON.",
+    )
+    hybrid_matcher_parser.add_argument(
+        "--wrong-version-json",
+        default=str(DEFAULT_HYBRID_MATCHER_WRONG_VERSION_JSON),
+        help="Wrong-version optimization dashboard JSON.",
+    )
+    hybrid_matcher_parser.add_argument(
+        "--ai-suggestions-json",
+        default=str(DEFAULT_HYBRID_MATCHER_AI_SUGGESTIONS_JSON),
+        help="Optional AI R8 suggestions JSON used as report-only triage evidence.",
+    )
+    hybrid_matcher_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_HYBRID_MATCHER_OUTPUT_JSON),
+        help="Output hybrid matcher router JSON.",
+    )
+    hybrid_matcher_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_HYBRID_MATCHER_OUTPUT_DOC),
+        help="Output hybrid matcher router Markdown report.",
+    )
+
     r8_phase5_parser = subparsers.add_parser(
         "r8-phase5-experiment",
         help=(
@@ -1502,6 +1556,27 @@ def main(argv: list[str] | None = None) -> int:
                 ai_metrics_json=args.ai_metrics_json,
                 dl_metrics_json=args.dl_metrics_json,
                 report_only_demo_json=args.report_only_demo_json,
+                output_json=args.output_json,
+                output_doc=args.output_doc,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "hybrid-matcher-router":
+        try:
+            payload = build_hybrid_matcher_router_payload(
+                matcher_recall_json=args.matcher_recall_json,
+                transparency_json=args.transparency_json,
+                source_gap_json=args.source_gap_json,
+                wrong_version_json=args.wrong_version_json,
+                ai_suggestions_json=args.ai_suggestions_json,
+            )
+            result = write_hybrid_matcher_router_outputs(
+                payload,
                 output_json=args.output_json,
                 output_doc=args.output_doc,
             )

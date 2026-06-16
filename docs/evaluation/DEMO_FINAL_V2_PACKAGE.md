@@ -41,6 +41,7 @@ This package is the current thesis/demo evidence set for the grown v2 reference 
 | AI R8 final ML/DL evaluation | `docs/evaluation/AI_R8_FINAL_EVALUATION.md` |
 | AI R8 DL prototype | `docs/evaluation/AI_R8_DL_PROTOTYPE.md` |
 | AI R8 report-only demo | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` |
+| Hybrid matcher router | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` |
 
 ## How To Present It
 
@@ -69,4 +70,20 @@ Use `docs/evaluation/AI_R8_FINAL_EVALUATION.md` as the single AI/ML/DL evidence 
 
 ```powershell
 apk-sbom ai-r8-final-eval
+```
+
+## Hybrid Matcher Router
+
+`docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` compares the current weighted matcher with LibScout/LibD/LibPecker/SAD/ORLIS/LibHunter/ATVHunter/LibAttention/LibMD-style strategies, then routes the current hard rows to safe experimental profiles.
+
+- router rows: `7569`;
+- unique cases: `105`;
+- unique coordinates: `849`;
+- P1 routed rows: `4766`;
+- largest profiles: `version-band-rerank` (`2180`), `r8-structural-recall` (`1658`), `alias-boundary-map` (`1553`), `boundary-hash-only` (`974`), `coarse-to-fine-recall` (`701`), and `reference-growth-first` (`442`).
+
+This is also report-only. It does not change matcher scoring, selected versions, SBOM components, vulnerability labels, or source-validation metrics. Regenerate it with:
+
+```powershell
+apk-sbom hybrid-matcher-router
 ```

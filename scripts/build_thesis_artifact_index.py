@@ -429,6 +429,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the Phase 6B LibAttention-inspired trained Transformer prototype, isolated from production reports.",
         },
         {
+            "table": "Hybrid matcher router",
+            "source": "docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md",
+            "use": "Use as the report-only comparison between the current matcher and research tool-family strategies, with current hard rows routed to safe experiment profiles.",
+        },
+        {
             "table": "R8 multi-scale feature diagnostics",
             "source": "docs/evaluation/R8_MULTISCALE_FEATURE_DIAGNOSTICS.md",
             "use": "Use as the Phase 3 proof that call-chain, basic-block, class-neighbor, field-operation, and literal/context features are extracted and reportable while scoring remains unchanged.",
@@ -740,6 +745,11 @@ def build_demo_package() -> list[dict[str, str]]:
             "item": "Final demo checklist",
             "path": "docs/evaluation/FINAL_DEMO_CHECKLIST.md",
             "talking_point": "Day-of-defense checklist with the deck path, exact numbers, safe commands, and commands to avoid live.",
+        },
+        {
+            "item": "Hybrid matcher router",
+            "path": "docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md",
+            "talking_point": "Report-only comparison of matcher strategies from the literature and row-level routing of current hard cases to scoped experiment profiles.",
         },
         {
             "item": "Final report readiness package",

@@ -76,6 +76,7 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | AI R8 final evaluation | `docs/evaluation/AI_R8_FINAL_EVALUATION.md` | Use as the single Phase 6 ML/DL evidence entry point combining RandomForest metrics, ablation, Transformer prototype metrics, and the report-only guardrail proof. |
 | AI R8 report-only demo | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` | Use as the opt-in report proof that AI suggestions add a report section while preserving detected components and normalized SBOM content. |
 | AI R8 DL prototype | `docs/evaluation/AI_R8_DL_PROTOTYPE.md` | Use as the Phase 6B LibAttention-inspired trained Transformer prototype, isolated from production reports. |
+| Hybrid matcher router | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Use as the report-only comparison between the current matcher and research tool-family strategies, with current hard rows routed to safe experiment profiles. |
 | R8 multi-scale feature diagnostics | `docs/evaluation/R8_MULTISCALE_FEATURE_DIAGNOSTICS.md` | Use as the Phase 3 proof that call-chain, basic-block, class-neighbor, field-operation, and literal/context features are extracted and reportable while scoring remains unchanged. |
 | R8 Phase 4 scoped experiment diagnostics | `docs/evaluation/R8_PHASE4_SCOPED_EXPERIMENT_DIAGNOSTICS.md` | Use as the Phase 4 proof that the offline multi-scale blend stays diagnostic-only because controlled and real source-validated rows would regress. |
 | R8 Phase 5 scoped trigger diagnostics | `docs/evaluation/R8_PHASE5_SCOPED_TRIGGER_DIAGNOSTICS.md` | Use as the Phase 5 experiment-only proof that a narrow trigger keeps four target improvements without triggered regressions in the current artifact, while default scoring remains unchanged. |
@@ -254,6 +255,7 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Final v2 results thesis section | `docs/thesis/FINAL_V2_RESULTS_SECTION.md` | Copy-ready thesis wording for the v2 upper-bound lane, with explicit warnings against calling it APK-only accuracy. |
 | Final v2 demo runbook | `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md` | Defense flow that shows APK-to-SBOM, CVE lookup, normal emitted-version metrics, v2 upper-bound results, and transparency gaps. |
 | Final demo checklist | `docs/evaluation/FINAL_DEMO_CHECKLIST.md` | Day-of-defense checklist with the deck path, exact numbers, safe commands, and commands to avoid live. |
+| Hybrid matcher router | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Report-only comparison of matcher strategies from the literature and row-level routing of current hard cases to scoped experiment profiles. |
 | Final report readiness package | `docs/thesis/FINAL_REPORT_READINESS_PACKAGE.md` | Final report assembly checklist with figure placement, screenshot plan, wording guardrails, and submission checks. |
 
 ## Writing Guardrails

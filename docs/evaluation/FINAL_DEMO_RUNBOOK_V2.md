@@ -180,6 +180,32 @@ Optional regeneration command:
 apk-sbom ai-r8-final-eval
 ```
 
+### 7. Optional Hybrid Matcher Improvement Plan
+
+Open:
+
+```text
+docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md
+```
+
+Say:
+
+```text
+I compared the current weighted matcher against tool-family strategies from the literature: profile/hash matching, package-independent clustering, structural similarity, CFG/fuzzy hashing, coarse-to-fine matching, vulnerability-oriented review, learned representations, and SBOM/CVE fusion. The result is not a new default matcher yet; it is a report-only router that tells us which safe experiment profile fits each hard row family.
+```
+
+Then add:
+
+```text
+For the current v2 artifacts, the router produced 7,569 rows across 105 cases and 849 coordinates. It prioritizes 4,766 P1 rows, mainly version-band rerank, R8 structural recall, alias/boundary mapping, coarse-to-fine recall, and the 442 remaining reference-growth candidates. It does not change selected versions, SBOM components, CVE labels, or source-validation metrics.
+```
+
+Optional regeneration command:
+
+```powershell
+apk-sbom hybrid-matcher-router
+```
+
 ## If They Ask Hard Questions
 
 | Question | Short answer |
@@ -191,6 +217,7 @@ apk-sbom ai-r8-final-eval
 | Why not promote the 1425 matcher suggestions into the SBOM? | They are source-context report-only suggestions. They need separate APK-only controls before becoming default SBOM components. |
 | Is the AI model now choosing versions? | No. It is report-only triage. It can suggest wording or review priority, but it cannot change selected versions, SBOM components, vulnerability labels, or metrics. |
 | Is the DL model a production APK detector? | No. It is a trained structured-token Transformer prototype for the PhD/AI workflow. Raw smali/DEX pretraining remains future work. |
+| Why not replace the matcher with one research method? | Different APK conditions fail differently. The router keeps the current matcher as the control baseline and chooses scoped experiments per row family, such as version-band rerank for adjacent AndroidX/Kotlin versions or R8 structural recall for strong opcode but weak name evidence. |
 | What is the next technical improvement? | Matcher recall and safe pruning/reranking, not blind DB growth. |
 
 ## Live Commands Only If Needed

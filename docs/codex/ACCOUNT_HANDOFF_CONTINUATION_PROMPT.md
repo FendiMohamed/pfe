@@ -54,6 +54,11 @@ Latest completed checkpoint:
   - `apk-sbom ai-r8-final-eval` regenerates `docs/evaluation/AI_R8_FINAL_EVALUATION.md`, the single ML/DL evidence entry point. `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` is the compact Phase 6A summary, and `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` proves that opt-in AI report wiring adds an AI section while preserving detected components and normalized SBOM content.
   - `generate-report --include-ai-r8-suggestions` attaches AI suggestions as report-only evidence only; it must not change selected versions, SBOM output, vulnerability labels, or source-validation metrics.
   - Phase 6B scripts are isolated at `scripts/build_ai_r8_token_corpus.py` and `scripts/train_ai_r8_tiny_transformer.py`; they are not production report wiring.
+- Hybrid matcher-router checkpoint:
+  - `src/apk_sbom/hybrid_matcher_router.py`, `scripts/build_hybrid_matcher_router.py`, and `apk-sbom hybrid-matcher-router` are implemented as a report-only matcher-improvement planning layer.
+  - `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` compares the current weighted matcher with LibScout/LibD/LibPecker/SAD/ORLIS/LibHunter/ATVHunter/LibAttention/LibMD-style strategies and routes current hard rows to scoped experiment profiles.
+  - Current router output: `7569` rows across `105` cases and `849` coordinates, `4766` P1 rows, and top profiles `version-band-rerank` (`2180`), `r8-structural-recall` (`1658`), `alias-boundary-map` (`1553`), `boundary-hash-only` (`974`), `coarse-to-fine-recall` (`701`), and `reference-growth-first` (`442`).
+  - This is not a matcher promotion. It must not change default matcher scoring, selected versions, SBOM output, vulnerability labels, or source-validation metrics.
 - Post-v16 optimization checkpoint:
   - Source-linked blockers remain closed at 0.
   - The no-Maven-signal lane is complete with an audit, AndroidX report-only experiment, and Mastodon fork-family report-only audit.

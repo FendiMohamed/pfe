@@ -13,6 +13,7 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | 5 | `docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md` | Row-level dataset/source/emitted/vulnerability classification summary. |
 | 6 | `docs/evaluation/AI_R8_FINAL_EVALUATION.md` | Optional Phase 6 AI/ML/DL evidence for PhD-oriented discussion. |
 | 7 | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` | Proof that AI suggestions are report-only and do not change SBOM content. |
+| 8 | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Report-only matcher-improvement comparison and hybrid strategy router. |
 
 ## Live Demo Artifacts
 
@@ -47,6 +48,9 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | AI R8 RandomForest test macro-F1 | 0.708 |
 | AI R8 report-only suggestions | 13736 |
 | AI R8 Transformer structured-token test macro-F1 | 0.977 |
+| Hybrid matcher router rows | 7569 |
+| Hybrid router P1 rows | 4766 |
+| Hybrid router top profile | version-band-rerank, 2180 rows |
 
 ## Exact Phrases
 
@@ -80,6 +84,12 @@ Use:
 The DL prototype is a trained structured-token Transformer workflow, not a production APK detector or raw smali pretraining result.
 ```
 
+Use:
+
+```text
+The hybrid matcher router compares the current matcher to research tool families and routes hard rows to safe experiments, but it is a planning artifact, not a production matcher change.
+```
+
 Avoid:
 
 ```text
@@ -95,6 +105,7 @@ The tool has 100% real-world APK accuracy.
 | Graduation demo rehearsal regenerated | passed |
 | V2 dashboard JSON count check | 106 cases, 6772 checked, 0 mismatches, 0 missing |
 | Transparency JSON count check | 110 cases, 12082 source rows, 6772 emitted rows, 232 vulnerability rows |
+| Hybrid matcher router regenerated | 7569 rows, 4766 P1, top profile version-band-rerank |
 | Deck package validation | passed earlier: 12 slides, 12 notes slides |
 
 ## Do Not Run Live
@@ -110,4 +121,5 @@ python scripts\build_demo_final_transparency_export.py
 python scripts\build_thesis_artifact_index.py
 python scripts\build_graduation_demo_rehearsal.py
 apk-sbom ai-r8-final-eval
+apk-sbom hybrid-matcher-router
 ```
