@@ -18,6 +18,7 @@ from apk_sbom.report import (  # noqa: E402
     DEFAULT_AI_R8_DL_METRICS_JSON,
     DEFAULT_AI_R8_SUGGESTIONS_JSON,
     DEFAULT_HYBRID_MATCHER_ROUTER_JSON,
+    DEFAULT_R8_APK_STRUCTURAL_PROMOTION_GATE_JSON,
     load_hybrid_ai_assistance_evidence,
 )
 
@@ -48,6 +49,11 @@ def main(argv: list[str] | None = None) -> int:
         help="AI R8 DL prototype metrics JSON.",
     )
     parser.add_argument(
+        "--r8-apk-structural-promotion-gate-json",
+        default=str(DEFAULT_R8_APK_STRUCTURAL_PROMOTION_GATE_JSON),
+        help="R8 APK-only structural promotion gate JSON.",
+    )
+    parser.add_argument(
         "--output-json",
         default=str(DEFAULT_OUTPUT_JSON),
         help="Output JSON summary.",
@@ -63,6 +69,7 @@ def main(argv: list[str] | None = None) -> int:
         router_json=Path(args.hybrid_matcher_router_json),
         ai_json=Path(args.ai_r8_suggestions_json),
         dl_json=Path(args.ai_r8_dl_metrics_json),
+        structural_gate_json=Path(args.r8_apk_structural_promotion_gate_json),
     )
     output_json = Path(args.output_json)
     output_doc = Path(args.output_doc)
@@ -85,6 +92,9 @@ def main(argv: list[str] | None = None) -> int:
                 "dl_production_wiring": payload["dataset"]["phase6b_dl"][
                     "production_wiring"
                 ],
+                "structural_gate_promotion_candidates": payload["dataset"][
+                    "r8_apk_structural_gate"
+                ]["promotion_candidates"],
                 "verdict": payload["verdict"],
             },
             indent=2,
@@ -99,10 +109,12 @@ def build_payload(
     router_json: Path,
     ai_json: Path,
     dl_json: Path,
+    structural_gate_json: Path,
 ) -> dict[str, Any]:
     router = _load_json(router_json)
     ai = _load_json(ai_json)
     dl = _load_json(dl_json)
+    structural_gate = _load_json(structural_gate_json) if structural_gate_json.exists() else {}
     router_rows = router.get("rows", [])
     profile_counts = Counter(
         row.get("recommended_profile") for row in router_rows if row.get("recommended_profile")
@@ -113,6 +125,7 @@ def build_payload(
         router_json,
         ai_suggestions_path=ai_json,
         dl_metrics_path=dl_json,
+        structural_gate_path=structural_gate_json if structural_gate_json.exists() else None,
         apk_path=representative_context["apk_path"],
         components=representative_context["components"],
     )
@@ -130,12 +143,16 @@ def build_payload(
         "guardrails": [
             "The current weighted matcher remains the SBOM authority.",
             "Hybrid router rows explain strategy profiles and prioritization only.",
+            "The APK-only structural promotion gate explains why R8 structural recall remains blocked or candidate-only.",
             "RandomForest suggestions can affect report wording and triage only.",
             "The Transformer prototype is surfaced as disabled production status only.",
             "Detected components, selected versions, SBOM output, vulnerability labels, source-validation metrics, and default matcher scoring stay unchanged.",
         ],
         "sources": {
             "hybrid_matcher_router_json": str(router_json),
+            "r8_apk_structural_promotion_gate_json": str(structural_gate_json)
+            if structural_gate
+            else "",
             "ai_r8_suggestions_json": str(ai_json),
             "ai_r8_dl_metrics_json": str(dl_json),
         },
@@ -153,6 +170,34 @@ def build_payload(
                 "top_recommended_profiles": router.get("summary", {}).get(
                     "top_recommended_profiles", []
                 ),
+            },
+            "r8_apk_structural_gate": {
+                "schema_version": structural_gate.get("schema_version"),
+                "verdict": structural_gate.get("verdict"),
+                "gate_pass_rows": structural_gate.get("summary", {}).get(
+                    "gate_pass_rows",
+                    0,
+                ),
+                "gate_pass_coordinates": structural_gate.get("summary", {}).get(
+                    "gate_pass_coordinates",
+                    0,
+                ),
+                "posthoc_source_exact_gate_pass_rows": structural_gate.get(
+                    "summary", {}
+                ).get("posthoc_source_exact_gate_pass_rows", 0),
+                "promotion_candidates": structural_gate.get("summary", {}).get(
+                    "promotion_candidates",
+                    0,
+                ),
+                "blocked_same_coordinate_control_risk": structural_gate.get(
+                    "summary", {}
+                ).get("blocked_same_coordinate_control_risk", 0),
+                "blocked_no_representative_exact_control": structural_gate.get(
+                    "summary", {}
+                ).get("blocked_no_representative_exact_control", 0),
+                "same_coordinate_control_risk_rows": structural_gate.get(
+                    "summary", {}
+                ).get("same_coordinate_control_risk_rows", 0),
             },
             "phase6a_ml": {
                 "model_type": ai.get("model_type"),
@@ -222,6 +267,7 @@ def _load_json(path: Path) -> dict[str, Any]:
 def build_markdown(payload: dict[str, Any]) -> str:
     dataset = payload["dataset"]
     router = dataset["hybrid_router"]
+    structural_gate = dataset["r8_apk_structural_gate"]
     ml = dataset["phase6a_ml"]
     dl = dataset["phase6b_dl"]
     report_context = payload["representative_report_context"]
@@ -230,7 +276,7 @@ def build_markdown(payload: dict[str, Any]) -> str:
         "",
         "Generated by `scripts/build_hybrid_ai_production_report_evidence.py`.",
         "",
-        "This artifact documents the production-facing promotion of the hybrid matcher router plus Phase 6 ML/DL evidence into `generate-report` as a guarded report-only assistance layer.",
+        "This artifact documents the production-facing promotion of the hybrid matcher router, R8 APK-only structural gate summary, and Phase 6 ML/DL evidence into `generate-report` as a guarded report-only assistance layer.",
         "",
         "## Verdict",
         "",
@@ -253,6 +299,10 @@ def build_markdown(payload: dict[str, Any]) -> str:
             f"- Hybrid router unique cases: `{router['unique_cases']}`",
             f"- Hybrid router unique coordinates: `{router['unique_coordinates']}`",
             f"- Hybrid router priority counts: `{json.dumps(router['priority_counts'], sort_keys=True)}`",
+            f"- R8 APK-only structural gate verdict: `{structural_gate['verdict']}`",
+            f"- R8 APK-only gate pass rows: `{structural_gate['gate_pass_rows']}`",
+            f"- R8 APK-only promotion candidates: `{structural_gate['promotion_candidates']}`",
+            f"- R8 APK-only same-coordinate control-risk rows: `{structural_gate['same_coordinate_control_risk_rows']}`",
             f"- ML model: `{ml['model_type']}` / `{ml['model_version']}`",
             f"- ML suggestion rows: `{ml['suggestion_rows']}`",
             f"- ML recommendation counts: `{json.dumps(ml['recommendation_counts'], sort_keys=True)}`",
@@ -277,7 +327,7 @@ def build_markdown(payload: dict[str, Any]) -> str:
             "",
             "## Interpretation",
             "",
-            "The MVP can now show hybrid strategy routing, RandomForest triage, and Transformer prototype status from the normal report path. The report is transparent about the limit: these signals guide analysis and future matcher experiments, but they are not exact-version or CVE authority.",
+            "The MVP can now show hybrid strategy routing, the R8 APK-only structural promotion decision, RandomForest triage, and Transformer prototype status from the normal report path. The report is transparent about the limit: these signals guide analysis and future matcher experiments, but they are not exact-version or CVE authority.",
             "",
         ]
     )

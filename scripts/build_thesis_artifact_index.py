@@ -459,6 +459,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the router-driven hard-R8/matcher-recall lane showing source-context structural recall candidates, same-coordinate controls, and why the result stays report-only.",
         },
         {
+            "table": "R8 APK-only structural promotion gate",
+            "source": "docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md",
+            "use": "Use as the APK-only evidence gate showing that strong structural rows exist, but zero rows satisfy production promotion controls today.",
+        },
+        {
             "table": "R8 multi-scale feature diagnostics",
             "source": "docs/evaluation/R8_MULTISCALE_FEATURE_DIAGNOSTICS.md",
             "use": "Use as the Phase 3 proof that call-chain, basic-block, class-neighbor, field-operation, and literal/context features are extracted and reportable while scoring remains unchanged.",

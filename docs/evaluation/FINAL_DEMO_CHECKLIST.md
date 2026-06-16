@@ -19,6 +19,7 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | 11 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` | APK-only reranker prototype showing why source-known fixes are not safely promotable yet. |
 | 12 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` | Promotion gate combining source-known, APK-only, and deep candidate expansion evidence. |
 | 13 | `docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md` | Next router lane: source-context structural recall candidates, guarded as report-only. |
+| 14 | `docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md` | APK-only structural promotion gate showing why the hybrid R8 lane is not promoted into SBOM emission yet. |
 
 ## Live Demo Artifacts
 
@@ -67,6 +68,9 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | R8 structural report-only candidates | 1000 |
 | R8 structural blocked rows | 658 |
 | R8 structural control-risk rows | 814 |
+| R8 APK-only structural gate pass rows | 219 |
+| R8 APK-only structural promotion candidates | 0 |
+| R8 APK-only structural gate verdict | apk-only-structural-gate-blocked-by-controls |
 
 ## Exact Phrases
 
@@ -133,6 +137,12 @@ The R8 structural recall experiment found 1,000 source-context report-only candi
 Use:
 
 ```text
+The stricter APK-only structural gate passes 219 high-evidence rows, but zero are production-promotable today: 65 are blocked by same-coordinate control risk and 154 have no representative exact emitted control.
+```
+
+Use:
+
+```text
 The deeper candidate-expansion pilot also blocks promotion: expanding one representative Activity row to 134 same-coordinate references still selected an old wrong version, so candidate visibility alone is not enough without stronger version-specific evidence.
 ```
 
@@ -157,6 +167,7 @@ The tool has 100% real-world APK accuracy.
 | APK-only version-band reranker regenerated | 1522 rows, 0 fixes, 0 regressions, 44/582 source candidates visible |
 | Version-band candidate expansion v3 regenerated | do-not-promote, representative deep probe selected wrong old Activity version |
 | R8 structural recall experiment regenerated | 1658 rows, 1000 report-only candidates, 814 control-risk rows |
+| R8 APK-only structural promotion gate regenerated | 219 gate-pass rows, 0 promotion candidates, promotion blocked by controls |
 | Deck package validation | passed earlier: 12 slides, 12 notes slides |
 
 ## Do Not Run Live

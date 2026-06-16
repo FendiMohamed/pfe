@@ -92,6 +92,20 @@ from apk_sbom.r8_structural_recall_experiment import (
     build_payload as build_r8_structural_recall_payload,
     write_outputs as write_r8_structural_recall_outputs,
 )
+from apk_sbom.r8_apk_structural_promotion_gate import (
+    DEFAULT_AI_SUGGESTIONS_JSON as DEFAULT_R8_APK_STRUCTURAL_GATE_AI_SUGGESTIONS_JSON,
+    DEFAULT_LARGE_ANALYSIS_JSON as DEFAULT_R8_APK_STRUCTURAL_GATE_LARGE_ANALYSIS_JSON,
+    DEFAULT_MAX_NAME_SCORE as DEFAULT_R8_APK_STRUCTURAL_GATE_MAX_NAME_SCORE,
+    DEFAULT_MIN_DEPENDENCY_SCORE as DEFAULT_R8_APK_STRUCTURAL_GATE_MIN_DEPENDENCY_SCORE,
+    DEFAULT_MIN_IDENTITY_CONFIDENCE as DEFAULT_R8_APK_STRUCTURAL_GATE_MIN_IDENTITY_CONFIDENCE,
+    DEFAULT_MIN_LITERAL_SCORE as DEFAULT_R8_APK_STRUCTURAL_GATE_MIN_LITERAL_SCORE,
+    DEFAULT_MIN_OPCODE_SCORE as DEFAULT_R8_APK_STRUCTURAL_GATE_MIN_OPCODE_SCORE,
+    DEFAULT_OUTPUT_DOC as DEFAULT_R8_APK_STRUCTURAL_GATE_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_R8_APK_STRUCTURAL_GATE_OUTPUT_JSON,
+    DEFAULT_ROUTER_JSON as DEFAULT_R8_APK_STRUCTURAL_GATE_ROUTER_JSON,
+    build_payload as build_r8_apk_structural_gate_payload,
+    write_outputs as write_r8_apk_structural_gate_outputs,
+)
 from apk_sbom.lifecycle_family_diagnostics import (
     DEFAULT_INPUT_JSON as DEFAULT_LIFECYCLE_FAMILY_INPUT_JSON,
     DEFAULT_OUTPUT_DOC as DEFAULT_LIFECYCLE_FAMILY_OUTPUT_DOC,
@@ -174,6 +188,7 @@ from apk_sbom.report import (
     DEFAULT_AI_R8_DL_METRICS_JSON as DEFAULT_REPORT_AI_R8_DL_METRICS_JSON,
     DEFAULT_AI_R8_SUGGESTIONS_JSON as DEFAULT_REPORT_AI_R8_SUGGESTIONS_JSON,
     DEFAULT_HYBRID_MATCHER_ROUTER_JSON as DEFAULT_REPORT_HYBRID_MATCHER_ROUTER_JSON,
+    DEFAULT_R8_APK_STRUCTURAL_PROMOTION_GATE_JSON as DEFAULT_REPORT_R8_APK_STRUCTURAL_GATE_JSON,
     DEFAULT_R8_MINIFIED_CONFIDENCE_POLICY_JSON,
     DEFAULT_R8_PHASE5_EXPERIMENT_JSON,
     DEFAULT_LIFECYCLE_FAMILY_EXPERIMENT_JSON,
@@ -865,6 +880,14 @@ def build_parser() -> argparse.ArgumentParser:
             "when --include-hybrid-ai-assistance is used."
         ),
     )
+    report_parser.add_argument(
+        "--r8-apk-structural-promotion-gate-json",
+        default=str(DEFAULT_REPORT_R8_APK_STRUCTURAL_GATE_JSON),
+        help=(
+            "R8 APK-only structural promotion gate JSON to attach as report-only "
+            "promotion evidence when --include-hybrid-ai-assistance is used."
+        ),
+    )
 
     ai_r8_dataset_parser = subparsers.add_parser(
         "ai-r8-build-dataset",
@@ -1212,6 +1235,69 @@ def build_parser() -> argparse.ArgumentParser:
         "--output-doc",
         default=str(DEFAULT_R8_STRUCTURAL_RECALL_OUTPUT_DOC),
         help="Output path for the R8 structural recall experiment Markdown report.",
+    )
+
+    r8_apk_structural_gate_parser = subparsers.add_parser(
+        "r8-apk-structural-promotion-gate",
+        help=(
+            "Evaluate an APK-only structural evidence gate for possible R8 "
+            "structural recall promotion without changing matcher output."
+        ),
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--router-json",
+        default=str(DEFAULT_R8_APK_STRUCTURAL_GATE_ROUTER_JSON),
+        help="Hybrid matcher router JSON.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--large-analysis-json",
+        default=str(DEFAULT_R8_APK_STRUCTURAL_GATE_LARGE_ANALYSIS_JSON),
+        help="Large combined real-APK analysis JSON with emitted controls.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--ai-suggestions-json",
+        default=str(DEFAULT_R8_APK_STRUCTURAL_GATE_AI_SUGGESTIONS_JSON),
+        help="AI R8 suggestions JSON.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--min-opcode-score",
+        type=float,
+        default=DEFAULT_R8_APK_STRUCTURAL_GATE_MIN_OPCODE_SCORE,
+        help="Minimum opcode score required to pass the APK-only gate.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--min-literal-score",
+        type=float,
+        default=DEFAULT_R8_APK_STRUCTURAL_GATE_MIN_LITERAL_SCORE,
+        help="Minimum literal score required to pass the APK-only gate.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--min-dependency-score",
+        type=float,
+        default=DEFAULT_R8_APK_STRUCTURAL_GATE_MIN_DEPENDENCY_SCORE,
+        help="Minimum dependency score required to pass the APK-only gate.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--max-name-score",
+        type=float,
+        default=DEFAULT_R8_APK_STRUCTURAL_GATE_MAX_NAME_SCORE,
+        help="Maximum class/method name score for the R8 structural profile.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--min-identity-confidence",
+        type=float,
+        default=DEFAULT_R8_APK_STRUCTURAL_GATE_MIN_IDENTITY_CONFIDENCE,
+        help="Minimum identity confidence floor for the APK-only gate.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_R8_APK_STRUCTURAL_GATE_OUTPUT_JSON),
+        help="Output path for the R8 APK-only structural promotion gate JSON.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_R8_APK_STRUCTURAL_GATE_OUTPUT_DOC),
+        help="Output path for the R8 APK-only structural promotion gate Markdown report.",
     )
 
     lifecycle_family_parser = subparsers.add_parser(
@@ -1686,6 +1772,11 @@ def main(argv: list[str] | None = None) -> int:
                     if args.include_hybrid_ai_assistance
                     else None
                 ),
+                hybrid_ai_structural_gate_json=(
+                    args.r8_apk_structural_promotion_gate_json
+                    if args.include_hybrid_ai_assistance
+                    else None
+                ),
             )
         except Exception as exc:
             print(f"error: {exc}", file=sys.stderr)
@@ -1895,6 +1986,30 @@ def main(argv: list[str] | None = None) -> int:
                 ai_suggestions_json=args.ai_suggestions_json,
             )
             result = write_r8_structural_recall_outputs(
+                payload,
+                output_json=args.output_json,
+                output_doc=args.output_doc,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "r8-apk-structural-promotion-gate":
+        try:
+            payload = build_r8_apk_structural_gate_payload(
+                router_json=args.router_json,
+                large_analysis_json=args.large_analysis_json,
+                ai_suggestions_json=args.ai_suggestions_json,
+                min_opcode_score=args.min_opcode_score,
+                min_literal_score=args.min_literal_score,
+                min_dependency_score=args.min_dependency_score,
+                max_name_score=args.max_name_score,
+                min_identity_confidence=args.min_identity_confidence,
+            )
+            result = write_r8_apk_structural_gate_outputs(
                 payload,
                 output_json=args.output_json,
                 output_doc=args.output_doc,

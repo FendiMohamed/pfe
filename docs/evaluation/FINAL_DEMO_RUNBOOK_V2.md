@@ -312,6 +312,30 @@ Optional regeneration command:
 apk-sbom r8-structural-recall-experiment
 ```
 
+Then open:
+
+```text
+docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md
+```
+
+Say:
+
+```text
+Because the source-context R8 structural recall lane looked useful, I tested a stricter APK-only structural promotion gate. The gate uses source-free APK-side evidence: high opcode similarity, literal support, dependency support, weak class/method names, and AI only as triage. It passes 219 high-evidence rows, and all 219 are posthoc source-exact, but zero rows satisfy the production promotion controls.
+```
+
+Then add:
+
+```text
+The blockers are explicit: 65 gate-pass rows are blocked by same-coordinate wrong-version or false-positive controls, and 154 are blocked because zero-risk coordinates have no representative exact emitted control. So the hybrid R8 lane is useful for reports and prioritization, but not promoted into automatic SBOM emission yet.
+```
+
+Optional regeneration command:
+
+```powershell
+apk-sbom r8-apk-structural-promotion-gate
+```
+
 ## If They Ask Hard Questions
 
 | Question | Short answer |
@@ -328,6 +352,7 @@ apk-sbom r8-structural-recall-experiment
 | Did the APK-only reranker work? | No, and that is useful evidence. It made 0 safe fixes because only 44/582 scoped wrong-version rows expose the source version as a baseline alternative. The result blocks promotion and points to candidate-generation and version-specific evidence as the next work. |
 | Can candidate expansion make it promotable? | Not yet. The v3 deep probe expanded a representative Activity row to 134 same-coordinate references, but generic similarity selected an old wrong version. Candidate expansion must be paired with stronger version-specific evidence before promotion. |
 | Did R8 structural recall work? | It worked as report-only transparency: 1,000 source-context structural recall candidates are visible. It is not SBOM promotion because same-coordinate wrong-version and false-positive controls remain. |
+| Can the R8 structural lane be promoted after the APK-only gate? | Not yet. The APK-only gate passes 219 high-evidence rows, but 65 are blocked by same-coordinate control risk and 154 lack representative exact emitted controls, leaving 0 production promotion candidates. |
 | What is the next technical improvement? | Turn report-only structural recall into APK-only evidence by adding independent structural controls, then rerun exact, wrong-version, false-positive, boundary, and CVE-sensitive gates. |
 
 ## Live Commands Only If Needed

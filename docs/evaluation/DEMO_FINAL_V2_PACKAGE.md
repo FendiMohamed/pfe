@@ -47,6 +47,7 @@ This package is the current thesis/demo evidence set for the grown v2 reference 
 | APK-only version-band reranker v2 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` |
 | Version-band candidate expansion v3 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` |
 | R8 structural recall experiment | `docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md` |
+| R8 APK-only structural promotion gate | `docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md` |
 
 ## How To Present It
 
@@ -77,7 +78,7 @@ Use `docs/evaluation/AI_R8_FINAL_EVALUATION.md` as the single AI/ML/DL evidence 
 apk-sbom ai-r8-final-eval
 ```
 
-`docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md` records the production-facing report integration. `generate-report --include-hybrid-ai-assistance` now attaches a `hybrid_ai_assistance` JSON block plus Markdown/HTML "Hybrid AI Matcher Assistance" section. It combines the hybrid router, Phase 6A RandomForest suggestions, and Phase 6B Transformer status, while keeping the current weighted matcher as the SBOM authority.
+`docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md` records the production-facing report integration. `generate-report --include-hybrid-ai-assistance` now attaches a `hybrid_ai_assistance` JSON block plus Markdown/HTML "Hybrid AI Matcher Assistance" section. It combines the hybrid router, the APK-only structural promotion gate summary when available, Phase 6A RandomForest suggestions, and Phase 6B Transformer status, while keeping the current weighted matcher as the SBOM authority.
 
 ```powershell
 apk-sbom generate-report <apk-path> --include-hybrid-ai-assistance
@@ -157,4 +158,22 @@ This supports transparent hard-R8/matcher-recall reporting and AI-assisted triag
 
 ```powershell
 apk-sbom r8-structural-recall-experiment
+```
+
+`docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md` is the production-promotion control gate for that R8 structural lane. It uses source-free APK-side scores to pass or block rows, then uses source truth only after the decision for grading:
+
+- router R8 structural rows: `1658`;
+- APK-only gate pass rows: `219`;
+- APK-only gate pass coordinates: `110`;
+- posthoc source-exact gate passes: `219`;
+- blocked by same-coordinate control risk: `65`;
+- blocked by no representative exact control: `154`;
+- production promotion candidates: `0`;
+- same-coordinate control-risk rows in scope: `814`;
+- verdict: `apk-only-structural-gate-blocked-by-controls`.
+
+This is the current answer to "can we promote the hybrid R8 structural approach?": not yet. The report-only evidence is useful, but no row satisfies both source-free structural evidence and representative production-control support. Regenerate it with:
+
+```powershell
+apk-sbom r8-apk-structural-promotion-gate
 ```

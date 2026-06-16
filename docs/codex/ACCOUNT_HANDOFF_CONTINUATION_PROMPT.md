@@ -61,7 +61,7 @@ Latest completed checkpoint:
   - This is not a matcher promotion. It must not change default matcher scoring, selected versions, SBOM output, vulnerability labels, or source-validation metrics.
 - Hybrid/AI production report checkpoint:
   - `generate-report --include-hybrid-ai-assistance` is implemented and attaches a `hybrid_ai_assistance` block to report JSON plus Markdown/HTML "Hybrid AI Matcher Assistance" sections.
-  - It combines the hybrid router, Phase 6A RandomForest suggestions, and Phase 6B Transformer status. The Transformer is surfaced as status-only with production wiring `disabled`.
+  - It combines the hybrid router, the R8 APK-only structural promotion gate summary when available, Phase 6A RandomForest suggestions, and Phase 6B Transformer status. The Transformer is surfaced as status-only with production wiring `disabled`.
   - `scripts/build_hybrid_ai_production_report_evidence.py` regenerates `docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md`, currently reporting `7569` router rows, `13736` ML suggestion rows, and verdict `promoted-to-production-report-only-not-matcher-authority`.
   - This is production report wiring only. It must not change matcher scoring, selected versions, SBOM components, vulnerability labels, source-validation metrics, or DL decision wiring.
 - Version-band rerank experiment checkpoint:
@@ -83,6 +83,11 @@ Latest completed checkpoint:
   - Current result: `1658` router R8-structural matcher-recall rows across `462` coordinates, `1000` source-context report-only structural recall candidates, and `658` blocked suppressed/filter rows.
   - Same-coordinate controls remain blocking: `907` exact controls, `581` wrong-version controls, and `233` false-positive controls (`814` control-risk rows).
   - Verdict: `report-only-structural-recall-useful-not-promoted`; use it for transparency and triage only. It must not change matcher scoring, selected versions, SBOM components, vulnerability labels, source-validation metrics, or DL decision wiring.
+- R8 APK-only structural promotion gate checkpoint:
+  - `src/apk_sbom/r8_apk_structural_promotion_gate.py`, `scripts/build_r8_apk_structural_promotion_gate.py`, and `apk-sbom r8-apk-structural-promotion-gate` generate `docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md`.
+  - Current result: `219` APK-side gate-pass rows across `110` coordinates, and all `219` are posthoc source-exact.
+  - Production promotion remains blocked with `0` promotion candidates: `65` gate-pass rows are blocked by same-coordinate control risk, and `154` zero-risk rows have no representative exact emitted control.
+  - `generate-report --include-hybrid-ai-assistance` can surface this gate as report-only evidence. Do not wire it into matcher scoring, SBOM emission, vulnerability labels, source-validation metrics, or DL decisions.
 - Post-v16 optimization checkpoint:
   - Source-linked blockers remain closed at 0.
   - The no-Maven-signal lane is complete with an audit, AndroidX report-only experiment, and Mastodon fork-family report-only audit.

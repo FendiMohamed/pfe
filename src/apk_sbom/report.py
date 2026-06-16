@@ -47,6 +47,9 @@ DEFAULT_R8_MINIFIED_CONFIDENCE_POLICY_JSON = Path(
 DEFAULT_HYBRID_MATCHER_ROUTER_JSON = Path(
     "data/results/evaluation/hybrid-matcher-router-v1.json"
 )
+DEFAULT_R8_APK_STRUCTURAL_PROMOTION_GATE_JSON = Path(
+    "data/results/experiments/r8-apk-structural-promotion-gate.json"
+)
 DEFAULT_AI_R8_DL_METRICS_JSON = Path(
     "data/results/experiments/ai-r8-dl-prototype/metrics.json"
 )
@@ -107,6 +110,7 @@ def generate_final_report(
     hybrid_matcher_router_json: str | Path | None = None,
     hybrid_ai_r8_suggestions_json: str | Path | None = None,
     hybrid_ai_r8_dl_metrics_json: str | Path | None = None,
+    hybrid_ai_structural_gate_json: str | Path | None = None,
 ) -> ReportArtifacts:
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
@@ -165,6 +169,7 @@ def generate_final_report(
         hybrid_matcher_router_json,
         ai_suggestions_path=hybrid_ai_r8_suggestions_json,
         dl_metrics_path=hybrid_ai_r8_dl_metrics_json,
+        structural_gate_path=hybrid_ai_structural_gate_json,
         apk_path=apk.apk_path,
         components=components,
     )
@@ -460,10 +465,16 @@ def load_hybrid_ai_assistance_evidence(
     *,
     ai_suggestions_path: str | Path | None = None,
     dl_metrics_path: str | Path | None = None,
+    structural_gate_path: str | Path | None = None,
     apk_path: str | Path,
     components: list[DetectedLibrary],
 ) -> dict | None:
-    if router_path is None and ai_suggestions_path is None and dl_metrics_path is None:
+    if (
+        router_path is None
+        and ai_suggestions_path is None
+        and dl_metrics_path is None
+        and structural_gate_path is None
+    ):
         return None
     component_coordinates = {component.coordinate for component in components}
     router = (
@@ -489,6 +500,15 @@ def load_hybrid_ai_assistance_evidence(
         if dl_metrics_path is not None
         else None
     )
+    structural_gate = (
+        _load_r8_structural_gate_report_evidence(
+            structural_gate_path,
+            apk_path=apk_path,
+            component_coordinates=component_coordinates,
+        )
+        if structural_gate_path is not None and Path(structural_gate_path).exists()
+        else None
+    )
     return {
         "enabled": True,
         "report_only": True,
@@ -504,12 +524,28 @@ def load_hybrid_ai_assistance_evidence(
             "dl_production_wiring": (
                 dl.get("production_wiring", "not-attached") if dl else "not-attached"
             ),
+            "structural_gate_matching_rows": (
+                structural_gate.get("summary", {}).get("matching_rows", 0)
+                if structural_gate
+                else 0
+            ),
+            "structural_gate_promotion_candidates": (
+                structural_gate.get("summary", {}).get("promotion_candidates", 0)
+                if structural_gate
+                else 0
+            ),
+            "structural_gate_verdict": (
+                structural_gate.get("verdict", "not-attached")
+                if structural_gate
+                else "not-attached"
+            ),
             "detected_component_coordinates": len(component_coordinates),
         },
         "policy": [
             "This production report section is report-only hybrid and AI assistance.",
             "The current weighted matcher remains the SBOM authority.",
             "The router can explain which research-inspired strategy fits hard rows.",
+            "The APK-only structural gate can explain why R8 structural recall remains blocked or promotion-candidate-only.",
             "The classical ML assistant can prioritize report wording and investigation.",
             "The DL prototype is surfaced as research status only and is not wired into decisions.",
             "No item in this section changes detected components, selected versions, SBOM output, vulnerability labels, or source-validation metrics.",
@@ -528,9 +564,85 @@ def load_hybrid_ai_assistance_evidence(
             "default matcher scoring change",
         ],
         "hybrid_router": router,
+        "r8_apk_structural_promotion_gate": structural_gate,
         "phase6a_ml": ml,
         "phase6b_dl": dl,
     }
+
+
+def _load_r8_structural_gate_report_evidence(
+    path: str | Path,
+    *,
+    apk_path: str | Path,
+    component_coordinates: set[str],
+) -> dict:
+    source_path = Path(path)
+    payload = json.loads(source_path.read_text(encoding="utf-8"))
+    rows = payload.get("rows", [])
+    matching_rows = [
+        row
+        for row in rows
+        if _r8_structural_gate_row_matches_report(row, apk_path, component_coordinates)
+    ]
+    matching_rows = sorted(matching_rows, key=_r8_structural_gate_sort_key)
+    classifications = Counter(
+        row.get("classification") for row in matching_rows if row.get("classification")
+    )
+    source_summary = payload.get("summary", {})
+    return {
+        "enabled": True,
+        "report_only": True,
+        "source": str(source_path),
+        "schema_version": payload.get(
+            "schema_version",
+            "r8-apk-structural-promotion-gate-v1",
+        ),
+        "verdict": payload.get("verdict"),
+        "default_matcher_unchanged": payload.get("default_matcher_unchanged", True),
+        "summary": {
+            "router_r8_structural_rows": source_summary.get(
+                "router_r8_structural_rows",
+                len(rows),
+            ),
+            "gate_pass_rows": source_summary.get("gate_pass_rows", 0),
+            "promotion_candidates": source_summary.get("promotion_candidates", 0),
+            "same_coordinate_control_risk_rows": source_summary.get(
+                "same_coordinate_control_risk_rows",
+                0,
+            ),
+            "matching_rows": len(matching_rows),
+            "matching_classification_counts": dict(sorted(classifications.items())),
+        },
+        "policy": payload.get("policy", []),
+        "matching_rows": matching_rows[:50],
+        "matching_row_limit": 50,
+    }
+
+
+def _r8_structural_gate_row_matches_report(
+    row: dict,
+    apk_path: str | Path,
+    component_coordinates: set[str],
+) -> bool:
+    if _experiment_case_matches_apk(row, apk_path):
+        return True
+    coordinate = str(row.get("coordinate") or "")
+    return bool(coordinate and coordinate in component_coordinates)
+
+
+def _r8_structural_gate_sort_key(row: dict) -> tuple[int, str, str]:
+    classification_rank = {
+        "promotion-candidate-needs-live-default-test": 0,
+        "blocked-same-coordinate-control-risk": 1,
+        "blocked-no-representative-exact-control": 2,
+        "blocked-posthoc-source-mismatch": 3,
+        "blocked-apk-only-evidence": 4,
+    }
+    return (
+        classification_rank.get(str(row.get("classification") or ""), 9),
+        str(row.get("case_id") or ""),
+        str(row.get("coordinate") or ""),
+    )
 
 
 def _load_hybrid_router_report_evidence(
@@ -2165,6 +2277,8 @@ def _markdown_hybrid_ai_assistance(evidence: dict | None) -> list[str]:
     summary = evidence.get("summary", {})
     router = evidence.get("hybrid_router") or {}
     router_summary = router.get("summary", {})
+    structural_gate = evidence.get("r8_apk_structural_promotion_gate") or {}
+    structural_gate_summary = structural_gate.get("summary", {})
     ml = evidence.get("phase6a_ml") or {}
     ml_summary = ml.get("summary", {})
     dl = evidence.get("phase6b_dl") or {}
@@ -2182,9 +2296,12 @@ def _markdown_hybrid_ai_assistance(evidence: dict | None) -> list[str]:
         "- Current SBOM authority: current weighted matcher.",
         f"- Model version: `{evidence.get('model_version')}`",
         f"- Router rows matching this report: `{summary.get('router_matching_rows', 0)}`",
+        f"- R8 structural gate rows matching this report: `{summary.get('structural_gate_matching_rows', 0)}`",
+        f"- R8 structural gate promotion candidates: `{summary.get('structural_gate_promotion_candidates', 0)}`",
         f"- ML rows matching this report: `{summary.get('ml_matching_rows', 0)}`",
         f"- DL production wiring: `{summary.get('dl_production_wiring')}`",
         f"- Router source: `{router.get('source')}`",
+        f"- R8 structural gate source: `{structural_gate.get('source')}`",
         f"- ML source: `{ml.get('source')}`",
         f"- DL metrics source: `{dl.get('source')}`",
         "",
@@ -2220,6 +2337,42 @@ def _markdown_hybrid_ai_assistance(evidence: dict | None) -> list[str]:
             )
     else:
         lines.append("No hybrid router row matched this report.")
+    lines.extend(
+        [
+            "",
+            "### APK-Only Structural Promotion Gate",
+            "",
+            f"- Verdict: `{structural_gate.get('verdict', 'not-attached')}`",
+            f"- Dataset R8 structural rows: `{structural_gate_summary.get('router_r8_structural_rows', 0)}`",
+            f"- Dataset APK-only gate pass rows: `{structural_gate_summary.get('gate_pass_rows', 0)}`",
+            f"- Dataset production promotion candidates: `{structural_gate_summary.get('promotion_candidates', 0)}`",
+            f"- Same-coordinate control-risk rows: `{structural_gate_summary.get('same_coordinate_control_risk_rows', 0)}`",
+            f"- Matching classification counts: `{json.dumps(structural_gate_summary.get('matching_classification_counts', {}), sort_keys=True)}`",
+            "- Gate status: report-only evidence; no component or version is emitted by this section.",
+            "",
+        ]
+    )
+    gate_rows = structural_gate.get("matching_rows") or []
+    if gate_rows:
+        lines.extend(
+            [
+                "| Case | Coordinate | Candidate | Classification | Gate | Reason |",
+                "|---|---|---:|---|---|---|",
+            ]
+        )
+        for row in gate_rows[:12]:
+            gate = row.get("apk_only_gate") or {}
+            lines.append(
+                "| "
+                f"{_markdown_cell(row.get('case_id'))} | "
+                f"`{row.get('coordinate')}` | "
+                f"{_markdown_cell(row.get('candidate_version'))} | "
+                f"`{_markdown_cell(row.get('classification'))}` | "
+                f"`{_markdown_cell(gate.get('decision'))}` | "
+                f"{_markdown_cell(row.get('classification_reason'))} |"
+            )
+    else:
+        lines.append("No R8 structural promotion gate row matched this report.")
     lines.extend(
         [
             "",
@@ -2280,6 +2433,8 @@ def _html_hybrid_ai_assistance(evidence: dict | None) -> str:
     summary = evidence.get("summary", {})
     router = evidence.get("hybrid_router") or {}
     router_summary = router.get("summary", {})
+    structural_gate = evidence.get("r8_apk_structural_promotion_gate") or {}
+    structural_gate_summary = structural_gate.get("summary", {})
     ml = evidence.get("phase6a_ml") or {}
     ml_summary = ml.get("summary", {})
     dl = evidence.get("phase6b_dl") or {}
@@ -2311,6 +2466,21 @@ def _html_hybrid_ai_assistance(evidence: dict | None) -> str:
     )
     if not ml_rows:
         ml_rows = "<tr><td colspan=\"6\">No ML suggestion row matched this report.</td></tr>"
+    gate_rows = "".join(
+        "<tr>"
+        f"<td>{_html(row.get('case_id'))}</td>"
+        f"<td><code>{_html(row.get('coordinate'))}</code></td>"
+        f"<td>{_html(row.get('candidate_version'))}</td>"
+        f"<td>{_status_pill(str(row.get('classification')))}</td>"
+        f"<td><code>{_html((row.get('apk_only_gate') or {}).get('decision'))}</code></td>"
+        f"<td>{_html(row.get('classification_reason'))}</td>"
+        "</tr>"
+        for row in (structural_gate.get("matching_rows") or [])[:12]
+    )
+    if not gate_rows:
+        gate_rows = (
+            "<tr><td colspan=\"6\">No R8 structural promotion gate row matched this report.</td></tr>"
+        )
     profile_counts = json.dumps(
         router_summary.get("matching_profile_counts", {}),
         sort_keys=True,
@@ -2323,6 +2493,10 @@ def _html_hybrid_ai_assistance(evidence: dict | None) -> str:
         ml_summary.get("matching_recommendation_counts", {}),
         sort_keys=True,
     )
+    gate_classification_counts = json.dumps(
+        structural_gate_summary.get("matching_classification_counts", {}),
+        sort_keys=True,
+    )
     return f"""
     <p>Report-only: <strong>true</strong></p>
     <p class="subtle">This production report section does not change detected components, selected versions, SBOM output, vulnerability labels, source-validation metrics, or default matcher scoring.</p>
@@ -2331,9 +2505,12 @@ def _html_hybrid_ai_assistance(evidence: dict | None) -> str:
         <tr><th>Current SBOM authority</th><td>Current weighted matcher</td></tr>
         <tr><th>Model version</th><td><code>{_html(evidence.get("model_version"))}</code></td></tr>
         <tr><th>Router rows matching this report</th><td>{_html(summary.get("router_matching_rows", 0))}</td></tr>
+        <tr><th>R8 structural gate rows matching this report</th><td>{_html(summary.get("structural_gate_matching_rows", 0))}</td></tr>
+        <tr><th>R8 structural gate promotion candidates</th><td>{_html(summary.get("structural_gate_promotion_candidates", 0))}</td></tr>
         <tr><th>ML rows matching this report</th><td>{_html(summary.get("ml_matching_rows", 0))}</td></tr>
         <tr><th>DL production wiring</th><td><code>{_html(summary.get("dl_production_wiring"))}</code></td></tr>
         <tr><th>Router source</th><td><code>{_html(router.get("source"))}</code></td></tr>
+        <tr><th>R8 structural gate source</th><td><code>{_html(structural_gate.get("source"))}</code></td></tr>
         <tr><th>ML source</th><td><code>{_html(ml.get("source"))}</code></td></tr>
         <tr><th>DL metrics source</th><td><code>{_html(dl.get("source"))}</code></td></tr>
       </tbody>
@@ -2349,6 +2526,22 @@ def _html_hybrid_ai_assistance(evidence: dict | None) -> str:
     <table>
       <thead><tr><th>Case</th><th>Coordinate</th><th>Source</th><th>Candidate</th><th>Profile</th><th>Priority</th><th>Reasons</th></tr></thead>
       <tbody>{router_rows}</tbody>
+    </table>
+    <h3>APK-Only Structural Promotion Gate</h3>
+    <table>
+      <tbody>
+        <tr><th>Verdict</th><td><code>{_html(structural_gate.get("verdict", "not-attached"))}</code></td></tr>
+        <tr><th>Dataset R8 structural rows</th><td>{_html(structural_gate_summary.get("router_r8_structural_rows", 0))}</td></tr>
+        <tr><th>Dataset APK-only gate pass rows</th><td>{_html(structural_gate_summary.get("gate_pass_rows", 0))}</td></tr>
+        <tr><th>Dataset production promotion candidates</th><td>{_html(structural_gate_summary.get("promotion_candidates", 0))}</td></tr>
+        <tr><th>Same-coordinate control-risk rows</th><td>{_html(structural_gate_summary.get("same_coordinate_control_risk_rows", 0))}</td></tr>
+        <tr><th>Matching classification counts</th><td><code>{_html(gate_classification_counts)}</code></td></tr>
+      </tbody>
+    </table>
+    <p class="subtle">Gate status: report-only evidence; no component or version is emitted by this section.</p>
+    <table>
+      <thead><tr><th>Case</th><th>Coordinate</th><th>Candidate</th><th>Classification</th><th>Gate</th><th>Reason</th></tr></thead>
+      <tbody>{gate_rows}</tbody>
     </table>
     <h3>Phase 6A Classical ML</h3>
     <table>

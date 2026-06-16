@@ -1289,11 +1289,45 @@ def test_hybrid_ai_assistance_report_section_is_report_only(tmp_path):
         ),
         encoding="utf-8",
     )
+    structural_gate_path = tmp_path / "structural-gate.json"
+    structural_gate_path.write_text(
+        json.dumps(
+            {
+                "schema_version": "r8-apk-structural-promotion-gate-v1",
+                "report_only": True,
+                "default_matcher_unchanged": True,
+                "verdict": "apk-only-structural-gate-blocked-by-controls",
+                "summary": {
+                    "router_r8_structural_rows": 2,
+                    "gate_pass_rows": 1,
+                    "promotion_candidates": 0,
+                    "same_coordinate_control_risk_rows": 2,
+                },
+                "rows": [
+                    {
+                        "case_id": "sample",
+                        "coordinate": component.coordinate,
+                        "candidate_version": "1.16.0",
+                        "classification": "blocked-same-coordinate-control-risk",
+                        "classification_reason": "control risk remains",
+                        "apk_only_gate": {
+                            "passes": True,
+                            "decision": "pass-apk-only-structural-gate",
+                        },
+                        "report_only": True,
+                        "production_promotion": False,
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
 
     evidence = load_hybrid_ai_assistance_evidence(
         router_path,
         ai_suggestions_path=ai_path,
         dl_metrics_path=dl_path,
+        structural_gate_path=structural_gate_path,
         apk_path="sample.apk",
         components=[component],
     )
@@ -1335,10 +1369,14 @@ def test_hybrid_ai_assistance_report_section_is_report_only(tmp_path):
     assert payload["hybrid_ai_assistance"]["summary"]["router_matching_rows"] == 1
     assert payload["hybrid_ai_assistance"]["summary"]["ml_matching_rows"] == 1
     assert payload["hybrid_ai_assistance"]["summary"]["dl_production_wiring"] == "disabled"
+    assert payload["hybrid_ai_assistance"]["summary"]["structural_gate_matching_rows"] == 1
+    assert payload["hybrid_ai_assistance"]["summary"]["structural_gate_promotion_candidates"] == 0
     assert "Hybrid AI Matcher Assistance" in markdown
+    assert "APK-Only Structural Promotion Gate" in markdown
     assert "Current SBOM authority: current weighted matcher" in markdown
     assert "does not change detected components" in markdown
     assert "Hybrid AI Matcher Assistance" in html
+    assert "APK-Only Structural Promotion Gate" in html
 
 
 def test_generate_final_report_attaches_hybrid_ai_without_changing_sbom(tmp_path, monkeypatch):
