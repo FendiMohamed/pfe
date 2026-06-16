@@ -18,6 +18,7 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | 10 | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` | First router-driven source-known rerank experiment and controls. |
 | 11 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` | APK-only reranker prototype showing why source-known fixes are not safely promotable yet. |
 | 12 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` | Promotion gate combining source-known, APK-only, and deep candidate expansion evidence. |
+| 13 | `docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md` | Next router lane: source-context structural recall candidates, guarded as report-only. |
 
 ## Live Demo Artifacts
 
@@ -62,6 +63,10 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | APK-only reranker safe fixes | 0 |
 | APK-only source candidate visibility | 44 / 582 scoped wrong-version rows |
 | Candidate expansion v3 verdict | do-not-promote-candidate-expansion-v3 |
+| R8 structural recall router rows | 1658 |
+| R8 structural report-only candidates | 1000 |
+| R8 structural blocked rows | 658 |
+| R8 structural control-risk rows | 814 |
 
 ## Exact Phrases
 
@@ -122,6 +127,12 @@ The APK-only reranker prototype explains why it is not promoted yet: the current
 Use:
 
 ```text
+The R8 structural recall experiment found 1,000 source-context report-only candidates, but it is not automatic SBOM emission because 581 wrong-version controls and 233 false-positive controls remain in the same coordinate space.
+```
+
+Use:
+
+```text
 The deeper candidate-expansion pilot also blocks promotion: expanding one representative Activity row to 134 same-coordinate references still selected an old wrong version, so candidate visibility alone is not enough without stronger version-specific evidence.
 ```
 
@@ -145,6 +156,7 @@ The tool has 100% real-world APK accuracy.
 | Version-band rerank experiment regenerated | 582 scoped wrong-version rows, 565 source-known fixable, 820 exact controls |
 | APK-only version-band reranker regenerated | 1522 rows, 0 fixes, 0 regressions, 44/582 source candidates visible |
 | Version-band candidate expansion v3 regenerated | do-not-promote, representative deep probe selected wrong old Activity version |
+| R8 structural recall experiment regenerated | 1658 rows, 1000 report-only candidates, 814 control-risk rows |
 | Deck package validation | passed earlier: 12 slides, 12 notes slides |
 
 ## Do Not Run Live
@@ -165,4 +177,5 @@ apk-sbom hybrid-matcher-router
 apk-sbom version-band-rerank-experiment
 apk-sbom version-band-apk-reranker
 apk-sbom version-band-candidate-expansion
+apk-sbom r8-structural-recall-experiment
 ```

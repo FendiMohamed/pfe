@@ -78,6 +78,11 @@ Latest completed checkpoint:
   - It records the source-known `565` fixable rows, APK-only v2 `0` safe fixes, and a bounded deep same-coordinate expansion probe on Cryptomator Lite `androidx.activity:activity`.
   - The deep probe rescored `134` same-coordinate references from `reference_features_demo_final_large_v2.sqlite`, but generic similarity selected `1.2.0-alpha01` while source validation expected `1.8.1`.
   - Verdict: `do-not-promote-candidate-expansion-v3`; candidate expansion alone is insufficient without stronger version-specific evidence. Switch next to R8 structural recall or build version-unique evidence in small batches.
+- R8 structural recall experiment checkpoint:
+  - `src/apk_sbom/r8_structural_recall_experiment.py`, `scripts/build_r8_structural_recall_experiment.py`, and `apk-sbom r8-structural-recall-experiment` generate `docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md`.
+  - Current result: `1658` router R8-structural matcher-recall rows across `462` coordinates, `1000` source-context report-only structural recall candidates, and `658` blocked suppressed/filter rows.
+  - Same-coordinate controls remain blocking: `907` exact controls, `581` wrong-version controls, and `233` false-positive controls (`814` control-risk rows).
+  - Verdict: `report-only-structural-recall-useful-not-promoted`; use it for transparency and triage only. It must not change matcher scoring, selected versions, SBOM components, vulnerability labels, source-validation metrics, or DL decision wiring.
 - Post-v16 optimization checkpoint:
   - Source-linked blockers remain closed at 0.
   - The no-Maven-signal lane is complete with an audit, AndroidX report-only experiment, and Mastodon fork-family report-only audit.

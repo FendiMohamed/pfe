@@ -125,6 +125,8 @@ The final v2 transparency artifacts also became the training evidence for a repo
 
 The Phase 6A model may recommend report-only wording such as `suggest_report_only`, `suppress_uncertain`, or `risk_only`. It may not change selected versions, CycloneDX SBOM output, vulnerability labels, or source-validation metrics. The Phase 6B Transformer is a trained structured-token research prototype, not raw smali pretraining; the production report may surface its status, but production decision wiring remains disabled. The combined evidence file is `docs/evaluation/AI_R8_FINAL_EVALUATION.md`; the dedicated report-only proof is `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md`, which shows that opt-in AI suggestions add an AI section to the report while leaving detected components and normalized SBOM content unchanged.
 
+The follow-up R8 structural recall experiment reports `1000` source-context structural recall candidates from `1658` router rows, but keeps them report-only because same-coordinate wrong-version and false-positive controls remain in scope. This supports transparent hard-R8 triage without converting source-context evidence into APK-only SBOM authority.
+
 ## Vulnerability Claim Transparency
 
 The final transparency export also classifies vulnerability rows:

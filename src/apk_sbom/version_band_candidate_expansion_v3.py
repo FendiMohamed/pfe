@@ -144,7 +144,7 @@ def build_payload(
             "Improve source-free candidate generation before reranking: keep more same-coordinate versions visible in APK-only reports.",
             "Add stronger version-specific independent features before retrying: version-unique literals/context, dependency-era coherence, and structural similarity.",
             "Run deep rescoring in small batches because one APK+coordinate pilot took about three minutes on this machine.",
-            "If the next source-free candidate expansion still yields no safe fixes, switch effort to the router's r8-structural-recall lane.",
+            "The follow-up router r8-structural-recall lane is evaluated separately as report-only matcher-recall transparency, not SBOM emission.",
         ],
     }
 

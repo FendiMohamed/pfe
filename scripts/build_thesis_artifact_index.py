@@ -454,6 +454,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the promotion-gate artifact combining source-known opportunity, APK-only rejection, and deep same-coordinate candidate-expansion pilot evidence.",
         },
         {
+            "table": "R8 structural recall experiment",
+            "source": "docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md",
+            "use": "Use as the router-driven hard-R8/matcher-recall lane showing source-context structural recall candidates, same-coordinate controls, and why the result stays report-only.",
+        },
+        {
             "table": "R8 multi-scale feature diagnostics",
             "source": "docs/evaluation/R8_MULTISCALE_FEATURE_DIAGNOSTICS.md",
             "use": "Use as the Phase 3 proof that call-chain, basic-block, class-neighbor, field-operation, and literal/context features are extracted and reportable while scoring remains unchanged.",
@@ -790,6 +795,11 @@ def build_demo_package() -> list[dict[str, str]]:
             "item": "Version-band candidate expansion v3",
             "path": "docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md",
             "talking_point": "Promotion-gate diagnostic showing that even deep same-coordinate candidate expansion selected an old wrong Activity version, so version-band reranking stays unpromoted.",
+        },
+        {
+            "item": "R8 structural recall experiment",
+            "path": "docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md",
+            "talking_point": "Router-driven R8 structural recall lane: 1,000 source-context report-only candidates are useful for transparency, while 814 same-coordinate control-risk rows block automatic SBOM promotion.",
         },
         {
             "item": "Final report readiness package",

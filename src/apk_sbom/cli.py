@@ -83,6 +83,15 @@ from apk_sbom.version_band_candidate_expansion_v3 import (
     build_payload as build_version_band_candidate_expansion_payload,
     write_outputs as write_version_band_candidate_expansion_outputs,
 )
+from apk_sbom.r8_structural_recall_experiment import (
+    DEFAULT_AI_SUGGESTIONS_JSON as DEFAULT_R8_STRUCTURAL_RECALL_AI_SUGGESTIONS_JSON,
+    DEFAULT_LARGE_ANALYSIS_JSON as DEFAULT_R8_STRUCTURAL_RECALL_LARGE_ANALYSIS_JSON,
+    DEFAULT_OUTPUT_DOC as DEFAULT_R8_STRUCTURAL_RECALL_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_R8_STRUCTURAL_RECALL_OUTPUT_JSON,
+    DEFAULT_ROUTER_JSON as DEFAULT_R8_STRUCTURAL_RECALL_ROUTER_JSON,
+    build_payload as build_r8_structural_recall_payload,
+    write_outputs as write_r8_structural_recall_outputs,
+)
 from apk_sbom.lifecycle_family_diagnostics import (
     DEFAULT_INPUT_JSON as DEFAULT_LIFECYCLE_FAMILY_INPUT_JSON,
     DEFAULT_OUTPUT_DOC as DEFAULT_LIFECYCLE_FAMILY_OUTPUT_DOC,
@@ -1172,6 +1181,39 @@ def build_parser() -> argparse.ArgumentParser:
         help="Output path for the candidate expansion v3 Markdown report.",
     )
 
+    r8_structural_recall_parser = subparsers.add_parser(
+        "r8-structural-recall-experiment",
+        help=(
+            "Evaluate the report-only R8 structural recall queue from the "
+            "Hybrid Matcher Router without changing matcher output."
+        ),
+    )
+    r8_structural_recall_parser.add_argument(
+        "--router-json",
+        default=str(DEFAULT_R8_STRUCTURAL_RECALL_ROUTER_JSON),
+        help="Hybrid matcher router JSON.",
+    )
+    r8_structural_recall_parser.add_argument(
+        "--large-analysis-json",
+        default=str(DEFAULT_R8_STRUCTURAL_RECALL_LARGE_ANALYSIS_JSON),
+        help="Large combined real-APK analysis JSON with normal baseline controls.",
+    )
+    r8_structural_recall_parser.add_argument(
+        "--ai-suggestions-json",
+        default=str(DEFAULT_R8_STRUCTURAL_RECALL_AI_SUGGESTIONS_JSON),
+        help="AI R8 suggestions JSON.",
+    )
+    r8_structural_recall_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_R8_STRUCTURAL_RECALL_OUTPUT_JSON),
+        help="Output path for the R8 structural recall experiment JSON.",
+    )
+    r8_structural_recall_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_R8_STRUCTURAL_RECALL_OUTPUT_DOC),
+        help="Output path for the R8 structural recall experiment Markdown report.",
+    )
+
     lifecycle_family_parser = subparsers.add_parser(
         "lifecycle-family-experiment",
         help=(
@@ -1834,6 +1876,25 @@ def main(argv: list[str] | None = None) -> int:
                 apk_only_json=args.apk_only_json,
             )
             result = write_version_band_candidate_expansion_outputs(
+                payload,
+                output_json=args.output_json,
+                output_doc=args.output_doc,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "r8-structural-recall-experiment":
+        try:
+            payload = build_r8_structural_recall_payload(
+                router_json=args.router_json,
+                large_analysis_json=args.large_analysis_json,
+                ai_suggestions_json=args.ai_suggestions_json,
+            )
+            result = write_r8_structural_recall_outputs(
                 payload,
                 output_json=args.output_json,
                 output_doc=args.output_doc,

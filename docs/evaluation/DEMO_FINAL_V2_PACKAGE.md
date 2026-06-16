@@ -46,6 +46,7 @@ This package is the current thesis/demo evidence set for the grown v2 reference 
 | Version-band rerank experiment | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` |
 | APK-only version-band reranker v2 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` |
 | Version-band candidate expansion v3 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` |
+| R8 structural recall experiment | `docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md` |
 
 ## How To Present It
 
@@ -137,4 +138,23 @@ Regenerate it with:
 
 ```powershell
 apk-sbom version-band-candidate-expansion
+```
+
+## R8 Structural Recall Experiment
+
+`docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md` is the next router-driven lane after the version-band promotion gate. It focuses on matcher-recall rows where structural evidence is strong but class/method names are weak:
+
+- router R8 structural rows: `1658`;
+- router R8 structural coordinates: `462`;
+- report-only structural recall candidates: `1000`;
+- blocked suppressed/filter rows: `658`;
+- exact controls in the same coordinates: `907`;
+- wrong-version controls in the same coordinates: `581`;
+- false-positive extra-emission controls in the same coordinates: `233`;
+- verdict: `report-only-structural-recall-useful-not-promoted`.
+
+This supports transparent hard-R8/matcher-recall reporting and AI-assisted triage, but it is not automatic SBOM emission. Regenerate it with:
+
+```powershell
+apk-sbom r8-structural-recall-experiment
 ```

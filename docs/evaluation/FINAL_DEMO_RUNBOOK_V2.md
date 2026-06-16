@@ -277,13 +277,39 @@ I also ran a deeper candidate-expansion pilot instead of stopping at the old rep
 Then add:
 
 ```text
-So the honest conclusion is: version-band reranking is a real opportunity, but not ready as APK-only production logic. The next work is either stronger candidate generation with version-unique evidence, or switching to the router's R8 structural recall lane.
+So the honest conclusion is: version-band reranking is a real opportunity, but not ready as APK-only production logic. That is why I then evaluated the router's R8 structural recall lane separately as report-only matcher-recall transparency.
 ```
 
 Optional regeneration command:
 
 ```powershell
 apk-sbom version-band-candidate-expansion
+```
+
+### 8. Optional R8 Structural Recall Lane
+
+Open:
+
+```text
+docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md
+```
+
+Say:
+
+```text
+After the version-band promotion gate blocked automatic reranking, I evaluated the router's R8 structural recall lane. It focuses on rows where opcode and structural evidence are strong while class and method names are weak. It found 1,000 source-context report-only candidates from 1,658 router rows, but it is not promoted into SBOM emission because the same coordinate space still has 581 wrong-version controls and 233 false-positive controls.
+```
+
+Then add:
+
+```text
+This is the right kind of AI/hybrid use for the MVP: it improves transparency and prioritization for hard R8 rows without pretending source-context suggestions are APK-only version authority.
+```
+
+Optional regeneration command:
+
+```powershell
+apk-sbom r8-structural-recall-experiment
 ```
 
 ## If They Ask Hard Questions
@@ -301,7 +327,8 @@ apk-sbom version-band-candidate-expansion
 | Did the version-band experiment fix wrong versions? | In the source-known upper-bound slice, 565 scoped wrong-version rows become fixable and 820 exact controls stay exact. It is not promoted because an APK-only full-DB reranker still has to prove it can choose those versions without source constraints. |
 | Did the APK-only reranker work? | No, and that is useful evidence. It made 0 safe fixes because only 44/582 scoped wrong-version rows expose the source version as a baseline alternative. The result blocks promotion and points to candidate-generation and version-specific evidence as the next work. |
 | Can candidate expansion make it promotable? | Not yet. The v3 deep probe expanded a representative Activity row to 134 same-coordinate references, but generic similarity selected an old wrong version. Candidate expansion must be paired with stronger version-specific evidence before promotion. |
-| What is the next technical improvement? | Matcher recall and safe pruning/reranking, not blind DB growth. |
+| Did R8 structural recall work? | It worked as report-only transparency: 1,000 source-context structural recall candidates are visible. It is not SBOM promotion because same-coordinate wrong-version and false-positive controls remain. |
+| What is the next technical improvement? | Turn report-only structural recall into APK-only evidence by adding independent structural controls, then rerun exact, wrong-version, false-positive, boundary, and CVE-sensitive gates. |
 
 ## Live Commands Only If Needed
 
