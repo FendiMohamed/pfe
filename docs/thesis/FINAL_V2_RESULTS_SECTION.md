@@ -108,6 +108,21 @@ The important point is that the remaining work is no longer just "add more versi
 
 The matcher-recall result is especially important for future work. The diagnostic found `1425` source-context report-only suggestions across `46` cases and `552` coordinates. These should be used for analysis and dashboards, not promoted into default SBOM components without a separate APK-only control run.
 
+## Phase 6 AI-Assisted R8 Triage
+
+The final v2 transparency artifacts also became the training evidence for a report-only AI assistance layer. This is not a replacement for the matcher and it is not a source of confirmed SBOM versions. It is a supervised triage layer for hard R8/minified and matcher-recall rows.
+
+| Metric | Value |
+|---|---:|
+| Training rows | 20523 |
+| Case IDs | 149 |
+| Coordinates | 1370 |
+| Model | RandomForestClassifier |
+| Test macro-F1 | 0.708 |
+| Report-only suggestions | 13736 |
+
+The model may recommend report-only wording such as `suggest_report_only`, `suppress_uncertain`, or `risk_only`. It may not change selected versions, CycloneDX SBOM output, vulnerability labels, or source-validation metrics. The dedicated proof is `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md`, which shows that opt-in AI suggestions add an AI section to the report while leaving detected components and normalized SBOM content unchanged.
+
 ## Vulnerability Claim Transparency
 
 The final transparency export also classifies vulnerability rows:

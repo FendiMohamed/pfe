@@ -37,6 +37,8 @@ This package is the current thesis/demo evidence set for the grown v2 reference 
 | Transparency report | `docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md` |
 | Transparency JSON export | `data/results/evaluation/demo-final-transparency-export.json` |
 | Vulnerability rows | `data/results/evaluation/demo-final-transparency-vulnerability-rows.csv` |
+| AI R8 compact summary | `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` |
+| AI R8 report-only demo | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` |
 
 ## How To Present It
 
@@ -48,3 +50,15 @@ Use the v2 result as a transparent upper-bound lane:
 4. Vulnerability rows remain tagged as source-confirmed, potential, report-only, or not queried; do not collapse them into one CVE count.
 
 The honest limitation is still important: the production unconstrained large-DB matcher needs stronger recall/pruning before these source-known suggestions can become default SBOM components.
+
+## Phase 6 AI Assistance
+
+The v2 package now has an optional AI-assisted R8 triage layer. It is trained from the existing transparency, matcher-recall, and R8 diagnostic artifacts and remains report-only:
+
+- dataset rows: `20523`;
+- model: `RandomForestClassifier`;
+- test macro-F1: `0.708`;
+- report-only suggestions: `13736`;
+- no selected-version, SBOM, vulnerability-label, or source-validation metric changes.
+
+Use `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` for the compact numbers and `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` as the no-change proof.

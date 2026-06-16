@@ -11,6 +11,8 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | 3 | `docs/evaluation/DEMO_FINAL_V2_PACKAGE.md` | Current v2 package index and headline numbers. |
 | 4 | `docs/thesis/FINAL_V2_RESULTS_SECTION.md` | Thesis-ready wording that separates normal metrics from the v2 upper-bound lane. |
 | 5 | `docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md` | Row-level dataset/source/emitted/vulnerability classification summary. |
+| 6 | `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` | Optional Phase 6 AI/ML summary for PhD-oriented discussion. |
+| 7 | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` | Proof that AI suggestions are report-only and do not change SBOM content. |
 
 ## Live Demo Artifacts
 
@@ -41,6 +43,9 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | Missing-reference candidate rows | 442 |
 | Matcher-recall candidate rows | 2281 |
 | Matcher report-only suggestions | 1425 |
+| AI R8 training rows | 20523 |
+| AI R8 test macro-F1 | 0.708 |
+| AI R8 report-only suggestions | 13736 |
 
 ## Exact Phrases
 
@@ -60,6 +65,12 @@ Use:
 
 ```text
 The remaining denominator is exported row by row: boundary/source-only rows, missing-reference rows, and matcher-recall rows are not hidden.
+```
+
+Use:
+
+```text
+The AI layer is report-only triage. It demonstrates ML workflow and helps prioritize hard R8/matcher-recall rows, but it does not change SBOM components, selected versions, or CVE labels.
 ```
 
 Avoid:

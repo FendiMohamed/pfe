@@ -409,6 +409,16 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the Phase 6A dataset, model-status, suggestion, and limitation artifact for the classical ML report-only assistant.",
         },
         {
+            "table": "AI R8 assistant compact summary",
+            "source": "docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md",
+            "use": "Use as the compact thesis/demo export for AI R8 dataset size, model metrics, baselines, suggestions, and guardrails.",
+        },
+        {
+            "table": "AI R8 report-only demo",
+            "source": "docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md",
+            "use": "Use as the opt-in report proof that AI suggestions add a report section while preserving detected components and normalized SBOM content.",
+        },
+        {
             "table": "AI R8 DL prototype",
             "source": "docs/evaluation/AI_R8_DL_PROTOTYPE.md",
             "use": "Use as the Phase 6B LibAttention-inspired Transformer prototype scaffold, isolated from production reports.",
