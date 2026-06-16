@@ -59,6 +59,10 @@ Latest completed checkpoint:
   - `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` compares the current weighted matcher with LibScout/LibD/LibPecker/SAD/ORLIS/LibHunter/ATVHunter/LibAttention/LibMD-style strategies and routes current hard rows to scoped experiment profiles.
   - Current router output: `7569` rows across `105` cases and `849` coordinates, `4766` P1 rows, and top profiles `version-band-rerank` (`2180`), `r8-structural-recall` (`1658`), `alias-boundary-map` (`1553`), `boundary-hash-only` (`974`), `coarse-to-fine-recall` (`701`), and `reference-growth-first` (`442`).
   - This is not a matcher promotion. It must not change default matcher scoring, selected versions, SBOM output, vulnerability labels, or source-validation metrics.
+- Version-band rerank experiment checkpoint:
+  - `src/apk_sbom/version_band_rerank_experiment.py`, `scripts/build_version_band_rerank_experiment.py`, and `apk-sbom version-band-rerank-experiment` generate `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md`.
+  - Current result: `582/636` normal wrong-version rows are in router version-band coordinates; `565` are source-known fixable in the v2 slice; `17` are blocked by no v2 decision; `820` exact controls stay exact; `120` false-positive extra-emission controls remain visible.
+  - This is source-known upper-bound evidence for future matcher improvement, not APK-only production accuracy and not a default matcher promotion.
 - Post-v16 optimization checkpoint:
   - Source-linked blockers remain closed at 0.
   - The no-Maven-signal lane is complete with an audit, AndroidX report-only experiment, and Mastodon fork-family report-only audit.

@@ -206,6 +206,30 @@ Optional regeneration command:
 apk-sbom hybrid-matcher-router
 ```
 
+Then open:
+
+```text
+docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md
+```
+
+Say:
+
+```text
+The first router-driven experiment is the version-band rerank lane. It covers 582 of the current 636 normal wrong-version rows, and 565 of those become source-known fixable when the v2 source-known slice selects the source version. The controls are visible too: 820 exact rows stay exact, and 120 false-positive extra emissions remain blocking controls because a version reranker cannot create source evidence.
+```
+
+Then add:
+
+```text
+This is promising evidence for matcher improvement, but it is still an upper-bound source-known experiment. It is not APK-only production accuracy and it is not promoted into default matcher scoring.
+```
+
+Optional regeneration command:
+
+```powershell
+apk-sbom version-band-rerank-experiment
+```
+
 ## If They Ask Hard Questions
 
 | Question | Short answer |
@@ -218,6 +242,7 @@ apk-sbom hybrid-matcher-router
 | Is the AI model now choosing versions? | No. It is report-only triage. It can suggest wording or review priority, but it cannot change selected versions, SBOM components, vulnerability labels, or metrics. |
 | Is the DL model a production APK detector? | No. It is a trained structured-token Transformer prototype for the PhD/AI workflow. Raw smali/DEX pretraining remains future work. |
 | Why not replace the matcher with one research method? | Different APK conditions fail differently. The router keeps the current matcher as the control baseline and chooses scoped experiments per row family, such as version-band rerank for adjacent AndroidX/Kotlin versions or R8 structural recall for strong opcode but weak name evidence. |
+| Did the version-band experiment fix wrong versions? | In the source-known upper-bound slice, 565 scoped wrong-version rows become fixable and 820 exact controls stay exact. It is not promoted because an APK-only full-DB reranker still has to prove it can choose those versions without source constraints. |
 | What is the next technical improvement? | Matcher recall and safe pruning/reranking, not blind DB growth. |
 
 ## Live Commands Only If Needed

@@ -434,6 +434,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the report-only comparison between the current matcher and research tool-family strategies, with current hard rows routed to safe experiment profiles.",
         },
         {
+            "table": "Version-band rerank experiment",
+            "source": "docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md",
+            "use": "Use as the first router-driven report-only rerank experiment: source-known fixability for wrong-version rows, exact controls, and false-positive controls.",
+        },
+        {
             "table": "R8 multi-scale feature diagnostics",
             "source": "docs/evaluation/R8_MULTISCALE_FEATURE_DIAGNOSTICS.md",
             "use": "Use as the Phase 3 proof that call-chain, basic-block, class-neighbor, field-operation, and literal/context features are extracted and reportable while scoring remains unchanged.",
@@ -750,6 +755,11 @@ def build_demo_package() -> list[dict[str, str]]:
             "item": "Hybrid matcher router",
             "path": "docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md",
             "talking_point": "Report-only comparison of matcher strategies from the literature and row-level routing of current hard cases to scoped experiment profiles.",
+        },
+        {
+            "item": "Version-band rerank experiment",
+            "path": "docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md",
+            "talking_point": "First router-driven source-known rerank experiment: 565 scoped wrong-version rows are fixable in the source-known lane while exact and false-positive controls stay visible.",
         },
         {
             "item": "Final report readiness package",

@@ -14,6 +14,7 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | 6 | `docs/evaluation/AI_R8_FINAL_EVALUATION.md` | Optional Phase 6 AI/ML/DL evidence for PhD-oriented discussion. |
 | 7 | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` | Proof that AI suggestions are report-only and do not change SBOM content. |
 | 8 | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Report-only matcher-improvement comparison and hybrid strategy router. |
+| 9 | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` | First router-driven source-known rerank experiment and controls. |
 
 ## Live Demo Artifacts
 
@@ -51,6 +52,9 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | Hybrid matcher router rows | 7569 |
 | Hybrid router P1 rows | 4766 |
 | Hybrid router top profile | version-band-rerank, 2180 rows |
+| Version-band wrong-version rows in scope | 582 / 636 |
+| Version-band source-known fixable rows | 565 |
+| Version-band exact controls | 820, all stay exact |
 
 ## Exact Phrases
 
@@ -90,6 +94,12 @@ Use:
 The hybrid matcher router compares the current matcher to research tool families and routes hard rows to safe experiments, but it is a planning artifact, not a production matcher change.
 ```
 
+Use:
+
+```text
+The first version-band rerank experiment is promising because 565 wrong-version rows become source-known fixable, but it is still an upper-bound experiment, not APK-only production accuracy.
+```
+
 Avoid:
 
 ```text
@@ -106,6 +116,7 @@ The tool has 100% real-world APK accuracy.
 | V2 dashboard JSON count check | 106 cases, 6772 checked, 0 mismatches, 0 missing |
 | Transparency JSON count check | 110 cases, 12082 source rows, 6772 emitted rows, 232 vulnerability rows |
 | Hybrid matcher router regenerated | 7569 rows, 4766 P1, top profile version-band-rerank |
+| Version-band rerank experiment regenerated | 582 scoped wrong-version rows, 565 source-known fixable, 820 exact controls |
 | Deck package validation | passed earlier: 12 slides, 12 notes slides |
 
 ## Do Not Run Live
@@ -122,4 +133,5 @@ python scripts\build_thesis_artifact_index.py
 python scripts\build_graduation_demo_rehearsal.py
 apk-sbom ai-r8-final-eval
 apk-sbom hybrid-matcher-router
+apk-sbom version-band-rerank-experiment
 ```

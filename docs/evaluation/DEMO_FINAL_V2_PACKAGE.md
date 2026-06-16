@@ -42,6 +42,7 @@ This package is the current thesis/demo evidence set for the grown v2 reference 
 | AI R8 DL prototype | `docs/evaluation/AI_R8_DL_PROTOTYPE.md` |
 | AI R8 report-only demo | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` |
 | Hybrid matcher router | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` |
+| Version-band rerank experiment | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` |
 
 ## How To Present It
 
@@ -86,4 +87,18 @@ This is also report-only. It does not change matcher scoring, selected versions,
 
 ```powershell
 apk-sbom hybrid-matcher-router
+```
+
+The first router-driven experiment is `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md`. It uses the router's version-band profile and the v2 source-known lane to measure an upper-bound rerank opportunity:
+
+- baseline wrong-version rows in scope: `582` / `636`;
+- source-known fixable wrong-version rows: `565`;
+- blocked scoped wrong-version rows: `17`;
+- exact control rows in scope: `820`, all staying exact in the source-known slice;
+- false-positive extra-emission controls in scope: `120`.
+
+This is promising evidence for the next matcher improvement, but it is not a production matcher result. Regenerate it with:
+
+```powershell
+apk-sbom version-band-rerank-experiment
 ```
