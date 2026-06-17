@@ -7,27 +7,28 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | Order | Artifact | Purpose |
 |---:|---|---|
 | 1 | `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx` | Current editable defense deck with the final v2 story. |
-| 2 | `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md` | Exact opening wording, file order, and hard-question answers. |
-| 3 | `docs/evaluation/DEMO_FINAL_V2_PACKAGE.md` | Current v2 package index and headline numbers. |
-| 4 | `docs/thesis/FINAL_V2_RESULTS_SECTION.md` | Thesis-ready wording that separates normal metrics from the v2 upper-bound lane. |
-| 5 | `docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md` | Row-level dataset/source/emitted/vulnerability classification summary. |
-| 6 | `docs/evaluation/AI_R8_FINAL_EVALUATION.md` | Optional Phase 6 AI/ML/DL evidence for PhD-oriented discussion. |
-| 7 | `docs/evaluation/AI_R8_MVP_INTEGRATION_GATE.md` | Final answer for whether AI can be integrated into the MVP: report-only yes, matcher/SBOM authority no. |
-| 8 | `docs/evaluation/AI_R8_DL_PROTOTYPE_MVP_SAFE.md` | Source-free structured-token Transformer run used by the MVP gate. |
-| 9 | `docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md` | Larger project-heldout AI/R8 corpus manifest with training vs heldout partitions. |
-| 10 | `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` | Raw DEX/opcode method-sequence corpus prototype for the future Transformer lane. |
-| 11 | `docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md` | Case-heldout raw-opcode Transformer result and baseline comparison, kept research-only. |
-| 12 | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` | Proof that AI suggestions are report-only and do not change SBOM content. |
-| 13 | `docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md` | Production `generate-report --include-hybrid-ai-assistance` integration, guarded as report-only. |
-| 14 | `docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md` | Final real-APK smoke proving the hybrid-AI section is visible while default report outputs stay unchanged. |
-| 15 | `docs/evaluation/FINAL_AI_DEFENSE_DEMO.md` | One-command clean/CVE/R8/AI defense verdict and guardrail checks. |
-| 16 | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Report-only matcher-improvement comparison and hybrid strategy router. |
-| 17 | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` | First router-driven source-known rerank experiment and controls. |
-| 18 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` | APK-only reranker prototype showing why source-known fixes are not safely promotable yet. |
-| 19 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` | Promotion gate combining source-known, APK-only, and deep candidate expansion evidence. |
-| 20 | `docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md` | Next router lane: source-context structural recall candidates, guarded as report-only. |
-| 21 | `docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md` | APK-only structural promotion gate showing why the hybrid R8 lane is not promoted into SBOM emission yet. |
-| 22 | `docs/evaluation/R8_STRICT_APK_PROMOTION_GATE_MATRIX.md` | Stricter multi-profile APK-only promotion matrix: 0 production candidates today. |
+| 2 | `docs/thesis/DEFENSE_PRESENTATION_GUIDE.md` | Slide-by-slide speaking guide, required facts, demo plan, and expected jury questions. |
+| 3 | `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md` | Exact opening wording, file order, and hard-question answers. |
+| 4 | `docs/evaluation/DEMO_FINAL_V2_PACKAGE.md` | Current v2 package index and headline numbers. |
+| 5 | `docs/thesis/FINAL_V2_RESULTS_SECTION.md` | Thesis-ready wording that separates normal metrics from the v2 upper-bound lane. |
+| 6 | `docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md` | Row-level dataset/source/emitted/vulnerability classification summary. |
+| 7 | `docs/evaluation/AI_R8_FINAL_EVALUATION.md` | Optional Phase 6 AI/ML/DL evidence for PhD-oriented discussion. |
+| 8 | `docs/evaluation/AI_R8_MVP_INTEGRATION_GATE.md` | Final answer for whether AI can be integrated into the MVP: report-only yes, matcher/SBOM authority no. |
+| 9 | `docs/evaluation/AI_R8_DL_PROTOTYPE_MVP_SAFE.md` | Source-free structured-token Transformer run used by the MVP gate. |
+| 10 | `docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md` | Larger project-heldout AI/R8 corpus manifest with training vs heldout partitions. |
+| 11 | `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` | Raw DEX/opcode method-sequence corpus prototype for the future Transformer lane. |
+| 12 | `docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md` | Case-heldout raw-opcode Transformer result and baseline comparison, kept research-only. |
+| 13 | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` | Proof that AI suggestions are report-only and do not change SBOM content. |
+| 14 | `docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md` | Production `generate-report --include-hybrid-ai-assistance` integration, guarded as report-only. |
+| 15 | `docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md` | Final real-APK smoke proving the hybrid-AI section is visible while default report outputs stay unchanged. |
+| 16 | `docs/evaluation/FINAL_AI_DEFENSE_DEMO.md` | One-command clean/CVE/R8/AI defense verdict and guardrail checks. |
+| 17 | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Report-only matcher-improvement comparison and hybrid strategy router. |
+| 18 | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` | First router-driven source-known rerank experiment and controls. |
+| 19 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` | APK-only reranker prototype showing why source-known fixes are not safely promotable yet. |
+| 20 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` | Promotion gate combining source-known, APK-only, and deep candidate expansion evidence. |
+| 21 | `docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md` | Next router lane: source-context structural recall candidates, guarded as report-only. |
+| 22 | `docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md` | APK-only structural promotion gate showing why the hybrid R8 lane is not promoted into SBOM emission yet. |
+| 23 | `docs/evaluation/R8_STRICT_APK_PROMOTION_GATE_MATRIX.md` | Stricter multi-profile APK-only promotion matrix: 0 production candidates today. |
 
 ## Live Demo Artifacts
 

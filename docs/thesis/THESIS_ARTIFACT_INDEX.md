@@ -122,7 +122,8 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Class-correspondence pruning diagnostics | `docs/evaluation/CLASS_CORRESPONDENCE_PRUNING_DIAGNOSTICS.md` | Use as diagnostic-only evidence that class/package/method correspondence does not add a safer or stronger pruning lane beyond the promoted composite shortlist. |
 | Assembled final report draft | `docs/thesis/PFE_FINAL_REPORT_ASSEMBLED.md` | Use as the main university-report starting point before applying the final template. |
 | Presentation deck script | `docs/thesis/PRESENTATION_DECK_SCRIPT.md` | Use as the slide-by-slide defense script with claims, proof objects, and speaker notes. |
-| Editable defense deck | `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx` | Use as the current editable PPTX defense deck before applying any university template. |
+| Defense presentation guide | `docs/thesis/DEFENSE_PRESENTATION_GUIDE.md` | Use as the current 13-slide speaking guide, timing plan, demo fallback, required facts, and expected-jury-question reference. |
+| Editable defense deck | `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx` | Use as the modernized 13-slide editable PPTX defense deck before applying university identity details. |
 | Defense deck QA scorecard | `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/qa/comeback-scorecard.txt` | Keep the rendered-deck QA notes and runtime caveat with the generated deck artifact. |
 
 ## Figure Plan
@@ -135,7 +136,7 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Clean and vulnerable OSV examples | `docs/dev/RUNBOOK.md` | Negative OSV result on calibrated F-Droid and positive HIGH advisories on controlled Jackson Databind. |
 | Real APK OSV triage | `docs/evaluation/OSV_SOURCE_VALIDATION_TRIAGE.md` | Real APK OSV findings grouped by source-confirmed, source-version-mismatch, and report-only evidence strength. |
 | Final v2 package table | `docs/evaluation/DEMO_FINAL_V2_PACKAGE.md` | Source-version constrained v2 evaluation metrics and transparent remaining gap categories. |
-| Defense deck contact sheet | `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/preview/contact-sheet.png` | Visual overview of the final 12-slide defense deck. |
+| Defense deck contact sheet | `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/preview/contact-sheet.png` | Visual overview of the modernized 13-slide defense deck. |
 
 ## Per-APK Evidence
 
@@ -301,5 +302,5 @@ This file maps thesis claims to concrete project artifacts. Use it while writing
 | Architecture and implementation | ready | Use `docs/architecture/MVP_ARCHITECTURE.md`, the implementation map in `docs/thesis/PFE_REPORT_DRAFT.md`, and the traceability matrix. |
 | Evaluation | ready | Use `docs/evaluation/THESIS_EVALUATION_CHAPTER_DRAFT.md` for the normal clean/partial split, then add `docs/thesis/FINAL_V2_RESULTS_SECTION.md` as the final source-known upper-bound addendum. |
 | Limitations | ready | Use `docs/planning/MVP_CONS_IMPROVEMENT_PLAN.md` and keep native-heavy, hidden-DEX, scanner-tool, and K-9 validation-copy caveats visible. |
-| Presentation | editable-deck-ready | Use `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx`, then apply university template details, names, screenshots, and the v2 result wording from `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md`. |
+| Presentation | editable-deck-ready | Use the modernized deck at `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx` together with `docs/thesis/DEFENSE_PRESENTATION_GUIDE.md`, then add required university identity details. |
 | Final packaging | ready-for-template | Use `docs/thesis/FINAL_REPORT_READINESS_PACKAGE.md` to fill cover fields, insert figures/screenshots, check wording guardrails, and export the final university document. |
