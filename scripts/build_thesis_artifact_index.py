@@ -449,6 +449,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the bounded raw DEX/opcode method-sequence corpus prototype for future Transformer training, with production wiring disabled.",
         },
         {
+            "table": "AI R8 raw opcode Transformer",
+            "source": "docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md",
+            "use": "Use as the first case-heldout raw-opcode Transformer training result, including the opcode-count baseline comparison and research-only verdict.",
+        },
+        {
             "table": "Hybrid matcher router",
             "source": "docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md",
             "use": "Use as the report-only comparison between the current matcher and research tool-family strategies, with current hard rows routed to safe experiment profiles.",
@@ -820,6 +825,11 @@ def build_demo_package() -> list[dict[str, str]]:
             "item": "AI R8 raw opcode corpus",
             "path": "docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md",
             "talking_point": "Raw DEX/opcode corpus prototype with bounded method-level opcode sequences for future Transformer training, kept outside production decisions.",
+        },
+        {
+            "item": "AI R8 raw opcode Transformer",
+            "path": "docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md",
+            "talking_point": "Case-heldout raw-opcode Transformer training run: implemented and evaluated, but research-only because it does not beat the opcode-count baseline.",
         },
         {
             "item": "Version-band rerank experiment",

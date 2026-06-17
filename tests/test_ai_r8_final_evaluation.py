@@ -57,6 +57,17 @@ def test_final_evaluation_combines_ml_dl_and_report_only_guardrail():
                 },
             },
         },
+        raw_opcode_transformer_metrics={
+            "status": "trained",
+            "model_type": "torch.nn.TransformerEncoder",
+            "baseline_comparison": {
+                "best_baseline": "opcode_count_logistic_regression",
+                "best_baseline_test_macro_f1": 0.12,
+                "delta_vs_best_baseline": -0.01,
+                "verdict": "raw-opcode-transformer-research-only-not-promotable",
+            },
+            "test": {"macro_f1": 0.11, "accuracy": 0.14},
+        },
         report_only_demo={
             "ai_report": {
                 "report_only": True,
@@ -78,8 +89,13 @@ def test_final_evaluation_combines_ml_dl_and_report_only_guardrail():
     assert payload["report_only_proof"]["guardrail_passed"] is True
     assert payload["phase6a_ml"]["test_macro_f1"] == 0.7
     assert payload["phase6b_dl"]["test_macro_f1"] == 0.9
+    assert (
+        payload["follow_up_corpora"]["raw_opcode_transformer"]["verdict"]
+        == "raw-opcode-transformer-research-only-not-promotable"
+    )
     assert "Phase 6A: Classical ML" in markdown
     assert "Phase 6B: DL Prototype" in markdown
+    assert "Raw DEX/opcode Transformer" in markdown
     assert "Guardrail passed" in markdown
 
 
@@ -87,6 +103,7 @@ def test_cli_writes_final_ai_r8_evaluation(tmp_path, capsys):
     ai_summary = tmp_path / "ai-summary.json"
     ai_metrics = tmp_path / "ai-metrics.json"
     dl_metrics = tmp_path / "dl-metrics.json"
+    raw_opcode_metrics = tmp_path / "raw-opcode-metrics.json"
     report_only_demo = tmp_path / "report-only-demo.json"
     output_json = tmp_path / "final.json"
     output_doc = tmp_path / "final.md"
@@ -124,6 +141,20 @@ def test_cli_writes_final_ai_r8_evaluation(tmp_path, capsys):
         },
     )
     write_json(
+        raw_opcode_metrics,
+        {
+            "status": "trained",
+            "model_type": "torch.nn.TransformerEncoder",
+            "baseline_comparison": {
+                "best_baseline": "opcode_count_logistic_regression",
+                "best_baseline_test_macro_f1": 0.12,
+                "delta_vs_best_baseline": -0.01,
+                "verdict": "raw-opcode-transformer-research-only-not-promotable",
+            },
+            "test": {"macro_f1": 0.11, "accuracy": 0.14},
+        },
+    )
+    write_json(
         report_only_demo,
         {
             "ai_report": {"report_only": True, "ai_section_present": True},
@@ -146,6 +177,8 @@ def test_cli_writes_final_ai_r8_evaluation(tmp_path, capsys):
             str(dl_metrics),
             "--report-only-demo-json",
             str(report_only_demo),
+            "--raw-opcode-transformer-metrics-json",
+            str(raw_opcode_metrics),
             "--output-json",
             str(output_json),
             "--output-doc",
@@ -158,6 +191,10 @@ def test_cli_writes_final_ai_r8_evaluation(tmp_path, capsys):
     assert exit_code == 0
     assert stdout["report_only_guardrail_passed"] is True
     assert payload["phase6b_dl"]["test_macro_f1"] == 0.9
+    assert (
+        payload["follow_up_corpora"]["raw_opcode_transformer"]["test_macro_f1"]
+        == 0.11
+    )
     assert "AI R8 Final Evaluation" in output_doc.read_text(encoding="utf-8")
 
 

@@ -65,10 +65,11 @@ The DL prototype uses structured project-evidence tokens from the current evalua
 
 ## Follow-Up AI Corpora
 
-| Corpus | Status | Key rows | Secondary rows | Notes |
+| Corpus | Status | Primary value | Secondary value | Notes |
 |---|---|---:|---:|---|
 | Independent project-heldout manifest | `generated` | 31589 | 11066 | Training rows remain separated from heldout/report-only lanes. |
 | Raw DEX/opcode method corpus | `generated` | 1680 | 14 | Bounded opcode sequences for future Transformer training; production wiring disabled. |
+| Raw DEX/opcode Transformer | `trained` | 0.10984528445824122 | 0.12812809971782863 | `raw-opcode-transformer-research-only-not-promotable` |
 
 ### DL Per-Class Metrics
 
@@ -102,7 +103,7 @@ The DL prototype uses structured project-evidence tokens from the current evalua
 - Phase 6A is a trained, explainable RandomForest report-only assistant.
 - Phase 6A improves over simple baselines on a grouped case split and exposes feature-importance plus ablation evidence.
 - Phase 6B is a trained tiny Transformer over structured project-evidence tokens, useful as a DL workflow proof but not as raw APK pretraining.
-- The follow-up corpus artifacts make the next AI step concrete: a larger project-heldout manifest and a bounded raw DEX/opcode sequence corpus, both report-only.
+- The follow-up corpus artifacts make the next AI step concrete: a larger project-heldout manifest, a bounded raw DEX/opcode sequence corpus, and an honest raw-opcode Transformer training run.
 - Neither AI track changes selected versions, CycloneDX SBOM components, vulnerability labels, or source-validation metrics.
 
 ## Source Artifacts
@@ -112,4 +113,5 @@ The DL prototype uses structured project-evidence tokens from the current evalua
 - `dl_metrics_json`: `data/results/experiments/ai-r8-dl-prototype/metrics.json`
 - `independent_corpus_json`: `data/results/experiments/ai-r8-independent-corpus/independent-corpus.json`
 - `raw_opcode_corpus_json`: `data/results/experiments/ai-r8-raw-opcode-prototype/raw-opcode-corpus.json`
+- `raw_opcode_transformer_metrics_json`: `data/results/experiments/ai-r8-raw-opcode-prototype/metrics.json`
 - `report_only_demo_json`: `data/results/evaluation/ai-r8-report-only-demo.json`

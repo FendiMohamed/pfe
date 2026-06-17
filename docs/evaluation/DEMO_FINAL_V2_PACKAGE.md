@@ -42,6 +42,7 @@ This package is the current thesis/demo evidence set for the grown v2 reference 
 | AI R8 DL prototype | `docs/evaluation/AI_R8_DL_PROTOTYPE.md` |
 | AI R8 independent corpus | `docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md` |
 | AI R8 raw opcode corpus | `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` |
+| AI R8 raw opcode Transformer | `docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md` |
 | AI R8 report-only demo | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` |
 | Hybrid AI production reporting | `docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md` |
 | Final hybrid AI demo smoke | `docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md` |
@@ -76,9 +77,10 @@ The v2 package now has an optional AI-assisted R8 triage layer. It is trained fr
 - Phase 6B structured-token test macro-F1: `0.977`;
 - larger project-heldout AI/R8 corpus rows: `31589` (`20523` training-eligible, `11066` heldout/report-only);
 - raw DEX/opcode prototype corpus: `1680` method-level opcode sequences from `14` APKs, `0` skipped;
+- raw DEX/opcode Transformer test macro-F1: `0.110`, below the opcode-count baseline `0.128`, so verdict `raw-opcode-transformer-research-only-not-promotable`;
 - no selected-version, SBOM, vulnerability-label, or source-validation metric changes.
 
-Use `docs/evaluation/AI_R8_FINAL_EVALUATION.md` as the single AI/ML/DL evidence entry point, `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` for the compact Phase 6A numbers, `docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md` for the larger heldout-corpus manifest, `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` for the raw DEX/opcode Transformer prototype corpus, and `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` as the no-change proof. Regenerate the combined package with:
+Use `docs/evaluation/AI_R8_FINAL_EVALUATION.md` as the single AI/ML/DL evidence entry point, `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` for the compact Phase 6A numbers, `docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md` for the larger heldout-corpus manifest, `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` for the raw DEX/opcode corpus, `docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md` for the case-heldout raw-opcode Transformer result, and `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` as the no-change proof. Regenerate the combined package with:
 
 ```powershell
 apk-sbom ai-r8-final-eval

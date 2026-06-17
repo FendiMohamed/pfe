@@ -14,6 +14,9 @@ DEFAULT_INDEPENDENT_CORPUS_JSON = Path(
 DEFAULT_RAW_OPCODE_CORPUS_JSON = Path(
     "data/results/experiments/ai-r8-raw-opcode-prototype/raw-opcode-corpus.json"
 )
+DEFAULT_RAW_OPCODE_TRANSFORMER_METRICS_JSON = Path(
+    "data/results/experiments/ai-r8-raw-opcode-prototype/metrics.json"
+)
 DEFAULT_OUTPUT_JSON = Path("data/results/evaluation/ai-r8-final-evaluation.json")
 DEFAULT_OUTPUT_DOC = Path("docs/evaluation/AI_R8_FINAL_EVALUATION.md")
 
@@ -26,6 +29,9 @@ def write_final_evaluation(
     report_only_demo_json: str | Path = DEFAULT_REPORT_ONLY_DEMO_JSON,
     independent_corpus_json: str | Path = DEFAULT_INDEPENDENT_CORPUS_JSON,
     raw_opcode_corpus_json: str | Path = DEFAULT_RAW_OPCODE_CORPUS_JSON,
+    raw_opcode_transformer_metrics_json: str | Path = (
+        DEFAULT_RAW_OPCODE_TRANSFORMER_METRICS_JSON
+    ),
     output_json: str | Path = DEFAULT_OUTPUT_JSON,
     output_doc: str | Path = DEFAULT_OUTPUT_DOC,
 ) -> dict:
@@ -35,6 +41,7 @@ def write_final_evaluation(
     report_only_demo = _load_json(report_only_demo_json)
     independent_corpus = _load_json(independent_corpus_json)
     raw_opcode_corpus = _load_json(raw_opcode_corpus_json)
+    raw_opcode_transformer_metrics = _load_json(raw_opcode_transformer_metrics_json)
     payload = build_final_evaluation(
         ai_summary=ai_summary,
         ai_metrics=ai_metrics,
@@ -42,6 +49,7 @@ def write_final_evaluation(
         report_only_demo=report_only_demo,
         independent_corpus=independent_corpus,
         raw_opcode_corpus=raw_opcode_corpus,
+        raw_opcode_transformer_metrics=raw_opcode_transformer_metrics,
         sources={
             "ai_summary_json": _normalize_path(ai_summary_json),
             "ai_metrics_json": _normalize_path(ai_metrics_json),
@@ -49,6 +57,9 @@ def write_final_evaluation(
             "report_only_demo_json": _normalize_path(report_only_demo_json),
             "independent_corpus_json": _normalize_path(independent_corpus_json),
             "raw_opcode_corpus_json": _normalize_path(raw_opcode_corpus_json),
+            "raw_opcode_transformer_metrics_json": _normalize_path(
+                raw_opcode_transformer_metrics_json
+            ),
         },
     )
 
@@ -80,6 +91,7 @@ def build_final_evaluation(
     report_only_demo: dict,
     independent_corpus: dict | None = None,
     raw_opcode_corpus: dict | None = None,
+    raw_opcode_transformer_metrics: dict | None = None,
     sources: dict | None = None,
 ) -> dict:
     ai_model = ai_summary.get("model", {})
@@ -92,6 +104,10 @@ def build_final_evaluation(
     demo_comparison = report_only_demo.get("comparison", {})
     independent_summary = (independent_corpus or {}).get("summary", {})
     raw_opcode_summary = (raw_opcode_corpus or {}).get("summary", {})
+    raw_opcode_transformer_test = (raw_opcode_transformer_metrics or {}).get("test", {})
+    raw_opcode_transformer_comparison = (
+        raw_opcode_transformer_metrics or {}
+    ).get("baseline_comparison", {})
     report_only_guardrail_passed = all(
         [
             demo_comparison.get("detected_components_unchanged") is True,
@@ -168,6 +184,23 @@ def build_final_evaluation(
                 ),
                 "vocab_size": raw_opcode_summary.get("vocab_size"),
             },
+            "raw_opcode_transformer": {
+                "status": (raw_opcode_transformer_metrics or {}).get("status")
+                or "missing",
+                "model_type": (raw_opcode_transformer_metrics or {}).get("model_type"),
+                "test_macro_f1": raw_opcode_transformer_test.get("macro_f1"),
+                "test_accuracy": raw_opcode_transformer_test.get("accuracy"),
+                "best_baseline": raw_opcode_transformer_comparison.get(
+                    "best_baseline"
+                ),
+                "best_baseline_test_macro_f1": raw_opcode_transformer_comparison.get(
+                    "best_baseline_test_macro_f1"
+                ),
+                "delta_vs_best_baseline": raw_opcode_transformer_comparison.get(
+                    "delta_vs_best_baseline"
+                ),
+                "verdict": raw_opcode_transformer_comparison.get("verdict"),
+            },
             "production_wiring": "disabled",
         },
         "report_only_proof": {
@@ -187,7 +220,7 @@ def build_final_evaluation(
             "Phase 6A is a trained, explainable RandomForest report-only assistant.",
             "Phase 6A improves over simple baselines on a grouped case split and exposes feature-importance plus ablation evidence.",
             "Phase 6B is a trained tiny Transformer over structured project-evidence tokens, useful as a DL workflow proof but not as raw APK pretraining.",
-            "The follow-up corpus artifacts make the next AI step concrete: a larger project-heldout manifest and a bounded raw DEX/opcode sequence corpus, both report-only.",
+            "The follow-up corpus artifacts make the next AI step concrete: a larger project-heldout manifest, a bounded raw DEX/opcode sequence corpus, and an honest raw-opcode Transformer training run.",
             "Neither AI track changes selected versions, CycloneDX SBOM components, vulnerability labels, or source-validation metrics.",
         ],
         "sources": sources or {},
@@ -268,7 +301,7 @@ def build_markdown(payload: dict) -> str:
             "",
             "## Follow-Up AI Corpora",
             "",
-            "| Corpus | Status | Key rows | Secondary rows | Notes |",
+            "| Corpus | Status | Primary value | Secondary value | Notes |",
             "|---|---|---:|---:|---|",
             "| Independent project-heldout manifest | "
             f"`{corpora.get('independent_corpus', {}).get('status')}` | "
@@ -280,6 +313,11 @@ def build_markdown(payload: dict) -> str:
             f"{corpora.get('raw_opcode_corpus', {}).get('method_sequence_rows')} | "
             f"{corpora.get('raw_opcode_corpus', {}).get('apks_analyzed')} | "
             "Bounded opcode sequences for future Transformer training; production wiring disabled. |",
+            "| Raw DEX/opcode Transformer | "
+            f"`{corpora.get('raw_opcode_transformer', {}).get('status')}` | "
+            f"{corpora.get('raw_opcode_transformer', {}).get('test_macro_f1')} | "
+            f"{corpora.get('raw_opcode_transformer', {}).get('best_baseline_test_macro_f1')} | "
+            f"`{corpora.get('raw_opcode_transformer', {}).get('verdict')}` |",
             "",
             "### DL Per-Class Metrics",
             "",

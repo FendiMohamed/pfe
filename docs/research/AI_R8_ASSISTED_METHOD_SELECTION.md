@@ -1,6 +1,6 @@
 # AI-Assisted R8 Method Selection
 
-Status: Phase 6A classical ML implementation is trained and report-only; Phase 6B DL/Transformer is trained as an isolated structured-token research prototype; follow-up corpus artifacts now include a larger project-heldout manifest and a bounded raw DEX/opcode method-sequence corpus.
+Status: Phase 6A classical ML implementation is trained and report-only; Phase 6B DL/Transformer is trained as an isolated structured-token research prototype; follow-up corpus artifacts now include a larger project-heldout manifest, a bounded raw DEX/opcode method-sequence corpus, and an honest case-heldout raw-opcode Transformer run.
 
 This document explains why the project now uses an AI-assisted R8 layer without allowing AI to become the final SBOM, version, or CVE authority.
 
@@ -8,7 +8,7 @@ This document explains why the project now uses an AI-assisted R8 layer without 
 
 Classical ML uses manually engineered features and relatively small models. In this project, the Phase 6A assistant uses matcher and diagnostic features that already exist in the evaluation artifacts: score gaps, package/class/method/opcode/literal/dependency signals, matched element counts, R8/minified flags, and clean/partial/boundary case classes.
 
-Deep learning learns representations from larger token or graph inputs. The Phase 6B prototype is LibAttention-inspired and uses a small Transformer encoder. In the current implementation, its trained model uses a structured-token view of project evidence rows rather than raw smali pretraining. A bounded raw DEX/opcode corpus now exists for the next Transformer step, but it still needs larger independent collection, model training, and validation before it can influence reports.
+Deep learning learns representations from larger token or graph inputs. The Phase 6B prototype is LibAttention-inspired and uses a small Transformer encoder. In the current implementation, its main trained model uses a structured-token view of project evidence rows rather than raw smali pretraining. A bounded raw DEX/opcode corpus and raw-opcode Transformer run now exist, but the case-heldout result does not beat the opcode-count baseline. It therefore needs larger independent collection, richer context, model iteration, and validation before it can influence reports.
 
 ## Research Basis
 
@@ -24,7 +24,7 @@ The default matcher remains unchanged.
 
 Phase 6A is implemented first because it is explainable, fast, compatible with current artifacts, and easy to evaluate by grouped case splits. It trains a `RandomForestClassifier` when optional dependencies are installed and writes report-only suggestions.
 
-Phase 6B is isolated because a Transformer path is more research-heavy. The current trained prototype classifies identity-risk labels from structured evidence tokens, and `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` now provides raw opcode sequences for future training. It remains kept out of `generate-report` until a future raw-code model clearly outperforms Phase 6A and passes controlled, clean-real, partial-real, and boundary controls.
+Phase 6B is isolated because a Transformer path is more research-heavy. The current trained prototype classifies identity-risk labels from structured evidence tokens, `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` provides raw opcode sequences, and `docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md` records the first case-heldout raw-opcode training run. It remains kept out of `generate-report` because the raw-opcode Transformer is currently research-only and not promotable; a future raw-code model would need to outperform simple baselines and pass controlled, clean-real, partial-real, and boundary controls.
 
 ## Authority Boundaries
 

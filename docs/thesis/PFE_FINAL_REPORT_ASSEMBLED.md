@@ -355,7 +355,7 @@ The Phase 6A dataset is built from existing project evidence: matcher-recall dia
 
 The implemented Phase 6A model is a `RandomForestClassifier` with grouped train/validation/test split by `case_id`. The current trained model reports test macro-F1 `0.708`, compared with majority-class baseline test accuracy `0.383` and simple score-threshold baseline test accuracy `0.165`. The model produces `13736` report-only suggestions. Feature-importance and ablation outputs are included so the model is not presented as a black box.
 
-Phase 6B adds a trained tiny `torch.nn.TransformerEncoder` prototype over structured project-evidence tokens. It reaches structured-token test macro-F1 `0.977`, but this is deliberately framed as a DL workflow proof, not as APK-only exact-version authority. The follow-up corpus artifacts make the next AI step concrete: a `31589`-row project-heldout AI/R8 manifest and `1680` bounded raw DEX/opcode method sequences from `14` APKs, both kept outside production decisions.
+Phase 6B adds a trained tiny `torch.nn.TransformerEncoder` prototype over structured project-evidence tokens. It reaches structured-token test macro-F1 `0.977`, but this is deliberately framed as a DL workflow proof, not as APK-only exact-version authority. The follow-up corpus artifacts make the next AI step concrete: a `31589`-row project-heldout AI/R8 manifest and `1680` bounded raw DEX/opcode method sequences from `14` APKs, both kept outside production decisions. A case-heldout raw-opcode Transformer is also trained; it reaches test macro-F1 `0.110`, below the opcode-count baseline `0.128`, so it is documented as research-only negative evidence rather than promoted.
 
 The important policy is the guardrail: AI can suggest `suggest_report_only`, `suppress_uncertain`, or `risk_only` wording, but it cannot emit confirmed versions, change CycloneDX SBOM components, change selected versions, change OSV/CVE labels, or change source-validation metrics. A controlled report demo confirms this behavior: adding AI suggestions creates the `AI-Assisted R8 Suggestions` report section while keeping detected components and normalized SBOM content unchanged.
 
@@ -402,7 +402,7 @@ Future work should:
 3. Build a safer unconstrained large-DB production matcher with stronger shortlist/reranking controls so the large DB can be used without source-version slices.
 4. Add more framework families such as Flutter, Unity, and additional commercial protected samples; React Native is represented by Jitsi but should be expanded.
 5. Investigate native package/version identification beyond the current hash-only `.so` CycloneDX file components.
-6. Continue the AI-assisted R8 lane with ablation studies, stronger labels, a larger external controlled/real R8 corpus, and full raw-opcode Transformer training, while keeping AI report-only until it passes independent APK-only controls.
+6. Continue the AI-assisted R8 lane with ablation studies, stronger labels, a larger external controlled/real R8 corpus, richer raw-opcode/class-context Transformer inputs, and APK-level aggregation, while keeping AI report-only until it passes independent APK-only controls.
 7. Explore stronger multi-scale graph or basic-block fusion inspired by LibMD, and evaluate whether DL token/Transformer models improve identity-risk triage without becoming exact-version authority.
 
 ## 9. Appendix Pointers
