@@ -56,6 +56,56 @@ from apk_sbom.version_band_trigger_diagnostics import (
     build_payload as build_version_band_payload,
     write_outputs as write_version_band_outputs,
 )
+from apk_sbom.version_band_rerank_experiment import (
+    DEFAULT_LARGE_ANALYSIS_JSON as DEFAULT_VERSION_BAND_RERANK_LARGE_ANALYSIS_JSON,
+    DEFAULT_OUTPUT_DOC as DEFAULT_VERSION_BAND_RERANK_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_VERSION_BAND_RERANK_OUTPUT_JSON,
+    DEFAULT_ROUTER_JSON as DEFAULT_VERSION_BAND_RERANK_ROUTER_JSON,
+    DEFAULT_V2_DASHBOARD_JSON as DEFAULT_VERSION_BAND_RERANK_V2_DASHBOARD_JSON,
+    build_payload as build_version_band_rerank_payload,
+    write_outputs as write_version_band_rerank_outputs,
+)
+from apk_sbom.version_band_apk_reranker import (
+    DEFAULT_LARGE_ANALYSIS_JSON as DEFAULT_VERSION_BAND_APK_RERANKER_LARGE_ANALYSIS_JSON,
+    DEFAULT_MAX_SCORE_DROP as DEFAULT_VERSION_BAND_APK_RERANKER_MAX_SCORE_DROP,
+    DEFAULT_MIN_SIBLING_ERA_ANCHORS as DEFAULT_VERSION_BAND_APK_RERANKER_MIN_SIBLING_ERA_ANCHORS,
+    DEFAULT_OUTPUT_DOC as DEFAULT_VERSION_BAND_APK_RERANKER_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_VERSION_BAND_APK_RERANKER_OUTPUT_JSON,
+    DEFAULT_ROUTER_JSON as DEFAULT_VERSION_BAND_APK_RERANKER_ROUTER_JSON,
+    build_payload as build_version_band_apk_reranker_payload,
+    write_outputs as write_version_band_apk_reranker_outputs,
+)
+from apk_sbom.version_band_candidate_expansion_v3 import (
+    DEFAULT_APK_ONLY_JSON as DEFAULT_VERSION_BAND_CANDIDATE_EXPANSION_APK_ONLY_JSON,
+    DEFAULT_OUTPUT_DOC as DEFAULT_VERSION_BAND_CANDIDATE_EXPANSION_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_VERSION_BAND_CANDIDATE_EXPANSION_OUTPUT_JSON,
+    DEFAULT_SOURCE_KNOWN_JSON as DEFAULT_VERSION_BAND_CANDIDATE_EXPANSION_SOURCE_KNOWN_JSON,
+    build_payload as build_version_band_candidate_expansion_payload,
+    write_outputs as write_version_band_candidate_expansion_outputs,
+)
+from apk_sbom.r8_structural_recall_experiment import (
+    DEFAULT_AI_SUGGESTIONS_JSON as DEFAULT_R8_STRUCTURAL_RECALL_AI_SUGGESTIONS_JSON,
+    DEFAULT_LARGE_ANALYSIS_JSON as DEFAULT_R8_STRUCTURAL_RECALL_LARGE_ANALYSIS_JSON,
+    DEFAULT_OUTPUT_DOC as DEFAULT_R8_STRUCTURAL_RECALL_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_R8_STRUCTURAL_RECALL_OUTPUT_JSON,
+    DEFAULT_ROUTER_JSON as DEFAULT_R8_STRUCTURAL_RECALL_ROUTER_JSON,
+    build_payload as build_r8_structural_recall_payload,
+    write_outputs as write_r8_structural_recall_outputs,
+)
+from apk_sbom.r8_apk_structural_promotion_gate import (
+    DEFAULT_AI_SUGGESTIONS_JSON as DEFAULT_R8_APK_STRUCTURAL_GATE_AI_SUGGESTIONS_JSON,
+    DEFAULT_LARGE_ANALYSIS_JSON as DEFAULT_R8_APK_STRUCTURAL_GATE_LARGE_ANALYSIS_JSON,
+    DEFAULT_MAX_NAME_SCORE as DEFAULT_R8_APK_STRUCTURAL_GATE_MAX_NAME_SCORE,
+    DEFAULT_MIN_DEPENDENCY_SCORE as DEFAULT_R8_APK_STRUCTURAL_GATE_MIN_DEPENDENCY_SCORE,
+    DEFAULT_MIN_IDENTITY_CONFIDENCE as DEFAULT_R8_APK_STRUCTURAL_GATE_MIN_IDENTITY_CONFIDENCE,
+    DEFAULT_MIN_LITERAL_SCORE as DEFAULT_R8_APK_STRUCTURAL_GATE_MIN_LITERAL_SCORE,
+    DEFAULT_MIN_OPCODE_SCORE as DEFAULT_R8_APK_STRUCTURAL_GATE_MIN_OPCODE_SCORE,
+    DEFAULT_OUTPUT_DOC as DEFAULT_R8_APK_STRUCTURAL_GATE_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_R8_APK_STRUCTURAL_GATE_OUTPUT_JSON,
+    DEFAULT_ROUTER_JSON as DEFAULT_R8_APK_STRUCTURAL_GATE_ROUTER_JSON,
+    build_payload as build_r8_apk_structural_gate_payload,
+    write_outputs as write_r8_apk_structural_gate_outputs,
+)
 from apk_sbom.lifecycle_family_diagnostics import (
     DEFAULT_INPUT_JSON as DEFAULT_LIFECYCLE_FAMILY_INPUT_JSON,
     DEFAULT_OUTPUT_DOC as DEFAULT_LIFECYCLE_FAMILY_OUTPUT_DOC,
@@ -76,6 +126,46 @@ from apk_sbom.no_maven_fork_family_experiment import (
     DEFAULT_OUTPUT_JSON as DEFAULT_NO_MAVEN_FORK_FAMILY_OUTPUT_JSON,
     build_payload as build_no_maven_fork_family_payload,
     write_outputs as write_no_maven_fork_family_outputs,
+)
+from apk_sbom.ai_r8_assistant import (
+    DEFAULT_DIAGNOSTICS_DOC as DEFAULT_AI_R8_DIAGNOSTICS_DOC,
+    DEFAULT_MATCHER_RECALL_DIAGNOSTICS as DEFAULT_AI_R8_MATCHER_RECALL_DIAGNOSTICS,
+    DEFAULT_METRICS_JSON as DEFAULT_AI_R8_METRICS_JSON,
+    DEFAULT_MODEL_PATH as DEFAULT_AI_R8_MODEL_PATH,
+    DEFAULT_PHASE5_DIAGNOSTICS as DEFAULT_AI_R8_PHASE5_DIAGNOSTICS,
+    DEFAULT_R8_OBFUSCATION_DIAGNOSTICS as DEFAULT_AI_R8_OBFUSCATION_DIAGNOSTICS,
+    DEFAULT_SUGGESTIONS_JSON as DEFAULT_AI_R8_SUGGESTIONS_JSON,
+    DEFAULT_TRAINING_DATASET_CSV as DEFAULT_AI_R8_TRAINING_DATASET_CSV,
+    DEFAULT_TRAINING_DATASET_JSON as DEFAULT_AI_R8_TRAINING_DATASET_JSON,
+    DEFAULT_TRANSPARENCY_EXPORT as DEFAULT_AI_R8_TRANSPARENCY_EXPORT,
+    build_ai_r8_suggestions,
+    build_training_dataset as build_ai_r8_training_dataset,
+    train_ai_r8_assistant,
+    write_ai_r8_diagnostics,
+    write_training_dataset as write_ai_r8_training_dataset,
+)
+from apk_sbom.ai_r8_final_evaluation import (
+    DEFAULT_AI_METRICS_JSON as DEFAULT_AI_R8_FINAL_AI_METRICS_JSON,
+    DEFAULT_AI_SUMMARY_JSON as DEFAULT_AI_R8_FINAL_AI_SUMMARY_JSON,
+    DEFAULT_DL_METRICS_JSON as DEFAULT_AI_R8_FINAL_DL_METRICS_JSON,
+    DEFAULT_INDEPENDENT_CORPUS_JSON as DEFAULT_AI_R8_FINAL_INDEPENDENT_CORPUS_JSON,
+    DEFAULT_OUTPUT_DOC as DEFAULT_AI_R8_FINAL_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_AI_R8_FINAL_OUTPUT_JSON,
+    DEFAULT_RAW_OPCODE_CORPUS_JSON as DEFAULT_AI_R8_FINAL_RAW_OPCODE_CORPUS_JSON,
+    DEFAULT_RAW_OPCODE_TRANSFORMER_METRICS_JSON as DEFAULT_AI_R8_FINAL_RAW_OPCODE_TRANSFORMER_JSON,
+    DEFAULT_REPORT_ONLY_DEMO_JSON as DEFAULT_AI_R8_FINAL_REPORT_ONLY_DEMO_JSON,
+    write_final_evaluation as write_ai_r8_final_evaluation,
+)
+from apk_sbom.hybrid_matcher_router import (
+    DEFAULT_AI_SUGGESTIONS_JSON as DEFAULT_HYBRID_MATCHER_AI_SUGGESTIONS_JSON,
+    DEFAULT_MATCHER_RECALL_JSON as DEFAULT_HYBRID_MATCHER_RECALL_JSON,
+    DEFAULT_OUTPUT_DOC as DEFAULT_HYBRID_MATCHER_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_HYBRID_MATCHER_OUTPUT_JSON,
+    DEFAULT_SOURCE_GAP_JSON as DEFAULT_HYBRID_MATCHER_SOURCE_GAP_JSON,
+    DEFAULT_TRANSPARENCY_JSON as DEFAULT_HYBRID_MATCHER_TRANSPARENCY_JSON,
+    DEFAULT_WRONG_VERSION_JSON as DEFAULT_HYBRID_MATCHER_WRONG_VERSION_JSON,
+    build_payload as build_hybrid_matcher_router_payload,
+    write_outputs as write_hybrid_matcher_router_outputs,
 )
 from apk_sbom.literal_context_diagnostics import (
     DEFAULT_INPUT_JSON as DEFAULT_LITERAL_CONTEXT_INPUT_JSON,
@@ -98,6 +188,10 @@ from apk_sbom.reference_expander import (
     expand_reference_catalog,
 )
 from apk_sbom.report import (
+    DEFAULT_AI_R8_DL_METRICS_JSON as DEFAULT_REPORT_AI_R8_DL_METRICS_JSON,
+    DEFAULT_AI_R8_SUGGESTIONS_JSON as DEFAULT_REPORT_AI_R8_SUGGESTIONS_JSON,
+    DEFAULT_HYBRID_MATCHER_ROUTER_JSON as DEFAULT_REPORT_HYBRID_MATCHER_ROUTER_JSON,
+    DEFAULT_R8_APK_STRUCTURAL_PROMOTION_GATE_JSON as DEFAULT_REPORT_R8_APK_STRUCTURAL_GATE_JSON,
     DEFAULT_R8_MINIFIED_CONFIDENCE_POLICY_JSON,
     DEFAULT_R8_PHASE5_EXPERIMENT_JSON,
     DEFAULT_LIFECYCLE_FAMILY_EXPERIMENT_JSON,
@@ -749,6 +843,232 @@ def build_parser() -> argparse.ArgumentParser:
             "--include-r8-minified-confidence-policy is used."
         ),
     )
+    report_parser.add_argument(
+        "--include-ai-r8-suggestions",
+        action="store_true",
+        help=(
+            "Attach opt-in, report-only AI-assisted R8 suggestions. This does not "
+            "change detected components, selected versions, SBOM output, "
+            "vulnerability labels, or source-validation metrics."
+        ),
+    )
+    report_parser.add_argument(
+        "--ai-r8-suggestions-json",
+        default=str(DEFAULT_REPORT_AI_R8_SUGGESTIONS_JSON),
+        help="AI R8 suggestions JSON to attach when --include-ai-r8-suggestions is used.",
+    )
+    report_parser.add_argument(
+        "--include-hybrid-ai-assistance",
+        action="store_true",
+        help=(
+            "Attach production report-only hybrid matcher router, ML assistant, "
+            "and DL prototype status evidence. This does not change matcher "
+            "scoring, selected versions, SBOM output, vulnerability labels, or "
+            "source-validation metrics."
+        ),
+    )
+    report_parser.add_argument(
+        "--hybrid-matcher-router-json",
+        default=str(DEFAULT_REPORT_HYBRID_MATCHER_ROUTER_JSON),
+        help=(
+            "Hybrid matcher router JSON to attach when "
+            "--include-hybrid-ai-assistance is used."
+        ),
+    )
+    report_parser.add_argument(
+        "--ai-r8-dl-metrics-json",
+        default=str(DEFAULT_REPORT_AI_R8_DL_METRICS_JSON),
+        help=(
+            "AI R8 DL prototype metrics JSON to attach as status-only evidence "
+            "when --include-hybrid-ai-assistance is used."
+        ),
+    )
+    report_parser.add_argument(
+        "--r8-apk-structural-promotion-gate-json",
+        default=str(DEFAULT_REPORT_R8_APK_STRUCTURAL_GATE_JSON),
+        help=(
+            "R8 APK-only structural promotion gate JSON to attach as report-only "
+            "promotion evidence when --include-hybrid-ai-assistance is used."
+        ),
+    )
+
+    ai_r8_dataset_parser = subparsers.add_parser(
+        "ai-r8-build-dataset",
+        help="Build the report-only AI R8 assistant training dataset.",
+    )
+    ai_r8_dataset_parser.add_argument(
+        "--matcher-recall-json",
+        default=str(DEFAULT_AI_R8_MATCHER_RECALL_DIAGNOSTICS),
+        help="Matcher-recall diagnostics JSON.",
+    )
+    ai_r8_dataset_parser.add_argument(
+        "--transparency-json",
+        default=str(DEFAULT_AI_R8_TRANSPARENCY_EXPORT),
+        help="Final transparency export JSON.",
+    )
+    ai_r8_dataset_parser.add_argument(
+        "--phase5-json",
+        default=str(DEFAULT_AI_R8_PHASE5_DIAGNOSTICS),
+        help="Phase 5 scoped trigger diagnostics JSON.",
+    )
+    ai_r8_dataset_parser.add_argument(
+        "--r8-obfuscation-json",
+        default=str(DEFAULT_AI_R8_OBFUSCATION_DIAGNOSTICS),
+        help="R8 obfuscation diagnostics JSON.",
+    )
+    ai_r8_dataset_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_AI_R8_TRAINING_DATASET_JSON),
+        help="Output training dataset JSON.",
+    )
+    ai_r8_dataset_parser.add_argument(
+        "--output-csv",
+        default=str(DEFAULT_AI_R8_TRAINING_DATASET_CSV),
+        help="Output training dataset CSV.",
+    )
+
+    ai_r8_train_parser = subparsers.add_parser(
+        "ai-r8-train",
+        help="Train the optional RandomForest AI R8 assistant model.",
+    )
+    ai_r8_train_parser.add_argument(
+        "--dataset-json",
+        default=str(DEFAULT_AI_R8_TRAINING_DATASET_JSON),
+        help="Training dataset JSON.",
+    )
+    ai_r8_train_parser.add_argument(
+        "--model-output",
+        default=str(DEFAULT_AI_R8_MODEL_PATH),
+        help="Output joblib model path.",
+    )
+    ai_r8_train_parser.add_argument(
+        "--metrics-output",
+        default=str(DEFAULT_AI_R8_METRICS_JSON),
+        help="Output metrics JSON path.",
+    )
+
+    ai_r8_suggest_parser = subparsers.add_parser(
+        "ai-r8-suggest",
+        help="Build report-only AI R8 suggestions and diagnostics.",
+    )
+    ai_r8_suggest_parser.add_argument(
+        "--dataset-json",
+        default=str(DEFAULT_AI_R8_TRAINING_DATASET_JSON),
+        help="Training dataset JSON.",
+    )
+    ai_r8_suggest_parser.add_argument(
+        "--model-path",
+        default=str(DEFAULT_AI_R8_MODEL_PATH),
+        help="Optional trained joblib model path.",
+    )
+    ai_r8_suggest_parser.add_argument(
+        "--metrics-json",
+        default=str(DEFAULT_AI_R8_METRICS_JSON),
+        help="Metrics JSON produced by ai-r8-train.",
+    )
+    ai_r8_suggest_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_AI_R8_SUGGESTIONS_JSON),
+        help="Output suggestions JSON.",
+    )
+    ai_r8_suggest_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_AI_R8_DIAGNOSTICS_DOC),
+        help="Output diagnostics Markdown.",
+    )
+
+    ai_r8_final_eval_parser = subparsers.add_parser(
+        "ai-r8-final-eval",
+        help="Build the final report-only AI R8 ML/DL evidence package.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--ai-summary-json",
+        default=str(DEFAULT_AI_R8_FINAL_AI_SUMMARY_JSON),
+        help="Compact AI R8 assistant summary JSON.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--ai-metrics-json",
+        default=str(DEFAULT_AI_R8_FINAL_AI_METRICS_JSON),
+        help="Phase 6A RandomForest metrics JSON.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--dl-metrics-json",
+        default=str(DEFAULT_AI_R8_FINAL_DL_METRICS_JSON),
+        help="Phase 6B Transformer metrics JSON.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--report-only-demo-json",
+        default=str(DEFAULT_AI_R8_FINAL_REPORT_ONLY_DEMO_JSON),
+        help="AI report-only guardrail demo JSON.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--independent-corpus-json",
+        default=str(DEFAULT_AI_R8_FINAL_INDEPENDENT_CORPUS_JSON),
+        help="AI/R8 independent corpus manifest JSON.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--raw-opcode-corpus-json",
+        default=str(DEFAULT_AI_R8_FINAL_RAW_OPCODE_CORPUS_JSON),
+        help="AI/R8 raw DEX opcode corpus JSON.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--raw-opcode-transformer-metrics-json",
+        default=str(DEFAULT_AI_R8_FINAL_RAW_OPCODE_TRANSFORMER_JSON),
+        help="AI/R8 raw DEX opcode Transformer metrics JSON.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_AI_R8_FINAL_OUTPUT_JSON),
+        help="Output final AI/DL evaluation JSON.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_AI_R8_FINAL_OUTPUT_DOC),
+        help="Output final AI/DL evaluation Markdown.",
+    )
+
+    hybrid_matcher_parser = subparsers.add_parser(
+        "hybrid-matcher-router",
+        help=(
+            "Build a report-only hybrid matcher strategy router for the current "
+            "hard rows without changing matcher scoring, SBOM output, or CVE labels."
+        ),
+    )
+    hybrid_matcher_parser.add_argument(
+        "--matcher-recall-json",
+        default=str(DEFAULT_HYBRID_MATCHER_RECALL_JSON),
+        help="Matcher-recall diagnostics JSON.",
+    )
+    hybrid_matcher_parser.add_argument(
+        "--transparency-json",
+        default=str(DEFAULT_HYBRID_MATCHER_TRANSPARENCY_JSON),
+        help="Final transparency export JSON.",
+    )
+    hybrid_matcher_parser.add_argument(
+        "--source-gap-json",
+        default=str(DEFAULT_HYBRID_MATCHER_SOURCE_GAP_JSON),
+        help="Final source-gap triage JSON.",
+    )
+    hybrid_matcher_parser.add_argument(
+        "--wrong-version-json",
+        default=str(DEFAULT_HYBRID_MATCHER_WRONG_VERSION_JSON),
+        help="Wrong-version optimization dashboard JSON.",
+    )
+    hybrid_matcher_parser.add_argument(
+        "--ai-suggestions-json",
+        default=str(DEFAULT_HYBRID_MATCHER_AI_SUGGESTIONS_JSON),
+        help="Optional AI R8 suggestions JSON used as report-only triage evidence.",
+    )
+    hybrid_matcher_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_HYBRID_MATCHER_OUTPUT_JSON),
+        help="Output hybrid matcher router JSON.",
+    )
+    hybrid_matcher_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_HYBRID_MATCHER_OUTPUT_DOC),
+        help="Output hybrid matcher router Markdown report.",
+    )
 
     r8_phase5_parser = subparsers.add_parser(
         "r8-phase5-experiment",
@@ -799,6 +1119,203 @@ def build_parser() -> argparse.ArgumentParser:
         "--output-doc",
         default=str(DEFAULT_VERSION_BAND_OUTPUT_DOC),
         help="Output path for the scoped version-band experiment Markdown report.",
+    )
+
+    version_band_rerank_parser = subparsers.add_parser(
+        "version-band-rerank-experiment",
+        help=(
+            "Evaluate the report-only source-known version-band rerank queue "
+            "from the Hybrid Matcher Router without changing matcher output."
+        ),
+    )
+    version_band_rerank_parser.add_argument(
+        "--router-json",
+        default=str(DEFAULT_VERSION_BAND_RERANK_ROUTER_JSON),
+        help="Hybrid matcher router JSON.",
+    )
+    version_band_rerank_parser.add_argument(
+        "--large-analysis-json",
+        default=str(DEFAULT_VERSION_BAND_RERANK_LARGE_ANALYSIS_JSON),
+        help="Large combined real-APK analysis JSON with normal baseline rows.",
+    )
+    version_band_rerank_parser.add_argument(
+        "--v2-dashboard-json",
+        default=str(DEFAULT_VERSION_BAND_RERANK_V2_DASHBOARD_JSON),
+        help="Demo-final v2 source-version constrained dashboard JSON.",
+    )
+    version_band_rerank_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_VERSION_BAND_RERANK_OUTPUT_JSON),
+        help="Output path for the version-band rerank experiment JSON.",
+    )
+    version_band_rerank_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_VERSION_BAND_RERANK_OUTPUT_DOC),
+        help="Output path for the version-band rerank experiment Markdown report.",
+    )
+
+    version_band_apk_reranker_parser = subparsers.add_parser(
+        "version-band-apk-reranker",
+        help=(
+            "Evaluate an APK-only report-only version-band reranker prototype "
+            "using baseline alternatives and sibling version-era anchors."
+        ),
+    )
+    version_band_apk_reranker_parser.add_argument(
+        "--router-json",
+        default=str(DEFAULT_VERSION_BAND_APK_RERANKER_ROUTER_JSON),
+        help="Hybrid matcher router JSON.",
+    )
+    version_band_apk_reranker_parser.add_argument(
+        "--large-analysis-json",
+        default=str(DEFAULT_VERSION_BAND_APK_RERANKER_LARGE_ANALYSIS_JSON),
+        help="Large combined real-APK analysis JSON with baseline APK-only reports.",
+    )
+    version_band_apk_reranker_parser.add_argument(
+        "--max-score-drop",
+        type=float,
+        default=DEFAULT_VERSION_BAND_APK_RERANKER_MAX_SCORE_DROP,
+        help="Maximum allowed score drop from selected version to alternative.",
+    )
+    version_band_apk_reranker_parser.add_argument(
+        "--min-sibling-era-anchors",
+        type=int,
+        default=DEFAULT_VERSION_BAND_APK_RERANKER_MIN_SIBLING_ERA_ANCHORS,
+        help="Minimum same-family sibling selected-version era anchors.",
+    )
+    version_band_apk_reranker_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_VERSION_BAND_APK_RERANKER_OUTPUT_JSON),
+        help="Output path for the APK-only version-band reranker JSON.",
+    )
+    version_band_apk_reranker_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_VERSION_BAND_APK_RERANKER_OUTPUT_DOC),
+        help="Output path for the APK-only version-band reranker Markdown report.",
+    )
+
+    version_band_candidate_expansion_parser = subparsers.add_parser(
+        "version-band-candidate-expansion",
+        help=(
+            "Build the version-band candidate expansion v3 promotion gate from "
+            "source-known, APK-only, and deep-probe evidence."
+        ),
+    )
+    version_band_candidate_expansion_parser.add_argument(
+        "--source-known-json",
+        default=str(DEFAULT_VERSION_BAND_CANDIDATE_EXPANSION_SOURCE_KNOWN_JSON),
+        help="Source-known version-band rerank experiment JSON.",
+    )
+    version_band_candidate_expansion_parser.add_argument(
+        "--apk-only-json",
+        default=str(DEFAULT_VERSION_BAND_CANDIDATE_EXPANSION_APK_ONLY_JSON),
+        help="APK-only version-band reranker v2 JSON.",
+    )
+    version_band_candidate_expansion_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_VERSION_BAND_CANDIDATE_EXPANSION_OUTPUT_JSON),
+        help="Output path for the candidate expansion v3 JSON.",
+    )
+    version_band_candidate_expansion_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_VERSION_BAND_CANDIDATE_EXPANSION_OUTPUT_DOC),
+        help="Output path for the candidate expansion v3 Markdown report.",
+    )
+
+    r8_structural_recall_parser = subparsers.add_parser(
+        "r8-structural-recall-experiment",
+        help=(
+            "Evaluate the report-only R8 structural recall queue from the "
+            "Hybrid Matcher Router without changing matcher output."
+        ),
+    )
+    r8_structural_recall_parser.add_argument(
+        "--router-json",
+        default=str(DEFAULT_R8_STRUCTURAL_RECALL_ROUTER_JSON),
+        help="Hybrid matcher router JSON.",
+    )
+    r8_structural_recall_parser.add_argument(
+        "--large-analysis-json",
+        default=str(DEFAULT_R8_STRUCTURAL_RECALL_LARGE_ANALYSIS_JSON),
+        help="Large combined real-APK analysis JSON with normal baseline controls.",
+    )
+    r8_structural_recall_parser.add_argument(
+        "--ai-suggestions-json",
+        default=str(DEFAULT_R8_STRUCTURAL_RECALL_AI_SUGGESTIONS_JSON),
+        help="AI R8 suggestions JSON.",
+    )
+    r8_structural_recall_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_R8_STRUCTURAL_RECALL_OUTPUT_JSON),
+        help="Output path for the R8 structural recall experiment JSON.",
+    )
+    r8_structural_recall_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_R8_STRUCTURAL_RECALL_OUTPUT_DOC),
+        help="Output path for the R8 structural recall experiment Markdown report.",
+    )
+
+    r8_apk_structural_gate_parser = subparsers.add_parser(
+        "r8-apk-structural-promotion-gate",
+        help=(
+            "Evaluate an APK-only structural evidence gate for possible R8 "
+            "structural recall promotion without changing matcher output."
+        ),
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--router-json",
+        default=str(DEFAULT_R8_APK_STRUCTURAL_GATE_ROUTER_JSON),
+        help="Hybrid matcher router JSON.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--large-analysis-json",
+        default=str(DEFAULT_R8_APK_STRUCTURAL_GATE_LARGE_ANALYSIS_JSON),
+        help="Large combined real-APK analysis JSON with emitted controls.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--ai-suggestions-json",
+        default=str(DEFAULT_R8_APK_STRUCTURAL_GATE_AI_SUGGESTIONS_JSON),
+        help="AI R8 suggestions JSON.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--min-opcode-score",
+        type=float,
+        default=DEFAULT_R8_APK_STRUCTURAL_GATE_MIN_OPCODE_SCORE,
+        help="Minimum opcode score required to pass the APK-only gate.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--min-literal-score",
+        type=float,
+        default=DEFAULT_R8_APK_STRUCTURAL_GATE_MIN_LITERAL_SCORE,
+        help="Minimum literal score required to pass the APK-only gate.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--min-dependency-score",
+        type=float,
+        default=DEFAULT_R8_APK_STRUCTURAL_GATE_MIN_DEPENDENCY_SCORE,
+        help="Minimum dependency score required to pass the APK-only gate.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--max-name-score",
+        type=float,
+        default=DEFAULT_R8_APK_STRUCTURAL_GATE_MAX_NAME_SCORE,
+        help="Maximum class/method name score for the R8 structural profile.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--min-identity-confidence",
+        type=float,
+        default=DEFAULT_R8_APK_STRUCTURAL_GATE_MIN_IDENTITY_CONFIDENCE,
+        help="Minimum identity confidence floor for the APK-only gate.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_R8_APK_STRUCTURAL_GATE_OUTPUT_JSON),
+        help="Output path for the R8 APK-only structural promotion gate JSON.",
+    )
+    r8_apk_structural_gate_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_R8_APK_STRUCTURAL_GATE_OUTPUT_DOC),
+        help="Output path for the R8 APK-only structural promotion gate Markdown report.",
     )
 
     lifecycle_family_parser = subparsers.add_parser(
@@ -1253,12 +1770,146 @@ def main(argv: list[str] | None = None) -> int:
                     if args.include_r8_minified_confidence_policy
                     else None
                 ),
+                ai_r8_suggestions_json=(
+                    args.ai_r8_suggestions_json
+                    if args.include_ai_r8_suggestions
+                    else None
+                ),
+                hybrid_matcher_router_json=(
+                    args.hybrid_matcher_router_json
+                    if args.include_hybrid_ai_assistance
+                    else None
+                ),
+                hybrid_ai_r8_suggestions_json=(
+                    args.ai_r8_suggestions_json
+                    if args.include_hybrid_ai_assistance
+                    else None
+                ),
+                hybrid_ai_r8_dl_metrics_json=(
+                    args.ai_r8_dl_metrics_json
+                    if args.include_hybrid_ai_assistance
+                    else None
+                ),
+                hybrid_ai_structural_gate_json=(
+                    args.r8_apk_structural_promotion_gate_json
+                    if args.include_hybrid_ai_assistance
+                    else None
+                ),
             )
         except Exception as exc:
             print(f"error: {exc}", file=sys.stderr)
             return 1
 
         print(artifacts.to_json())
+        return 0
+
+    if args.command == "ai-r8-build-dataset":
+        try:
+            payload = build_ai_r8_training_dataset(
+                matcher_recall_json=args.matcher_recall_json,
+                transparency_json=args.transparency_json,
+                phase5_json=args.phase5_json,
+                r8_obfuscation_json=args.r8_obfuscation_json,
+            )
+            result = write_ai_r8_training_dataset(
+                payload,
+                json_path=args.output_json,
+                csv_path=args.output_csv,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "ai-r8-train":
+        try:
+            metrics = train_ai_r8_assistant(
+                dataset_json=args.dataset_json,
+                model_path=args.model_output,
+                metrics_json=args.metrics_output,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(metrics, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "ai-r8-suggest":
+        try:
+            suggestions = build_ai_r8_suggestions(
+                dataset_json=args.dataset_json,
+                model_path=args.model_path,
+                metrics_json=args.metrics_json,
+                output_json=args.output_json,
+            )
+            diagnostics = write_ai_r8_diagnostics(
+                dataset_json=args.dataset_json,
+                metrics_json=args.metrics_json,
+                suggestions_json=args.output_json,
+                output_doc=args.output_doc,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(
+            json.dumps(
+                {
+                    "suggestions_json": args.output_json,
+                    "diagnostics_doc": diagnostics["diagnostics_doc"],
+                    "suggestion_rows": suggestions.get("summary", {}).get(
+                        "suggestion_rows",
+                        0,
+                    ),
+                },
+                indent=2,
+                sort_keys=True,
+            )
+        )
+        return 0
+
+    if args.command == "ai-r8-final-eval":
+        try:
+            result = write_ai_r8_final_evaluation(
+                ai_summary_json=args.ai_summary_json,
+                ai_metrics_json=args.ai_metrics_json,
+                dl_metrics_json=args.dl_metrics_json,
+                report_only_demo_json=args.report_only_demo_json,
+                independent_corpus_json=args.independent_corpus_json,
+                raw_opcode_corpus_json=args.raw_opcode_corpus_json,
+                raw_opcode_transformer_metrics_json=args.raw_opcode_transformer_metrics_json,
+                output_json=args.output_json,
+                output_doc=args.output_doc,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "hybrid-matcher-router":
+        try:
+            payload = build_hybrid_matcher_router_payload(
+                matcher_recall_json=args.matcher_recall_json,
+                transparency_json=args.transparency_json,
+                source_gap_json=args.source_gap_json,
+                wrong_version_json=args.wrong_version_json,
+                ai_suggestions_json=args.ai_suggestions_json,
+            )
+            result = write_hybrid_matcher_router_outputs(
+                payload,
+                output_json=args.output_json,
+                output_doc=args.output_doc,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
         return 0
 
     if args.command == "r8-phase5-experiment":
@@ -1283,6 +1934,106 @@ def main(argv: list[str] | None = None) -> int:
                 payload,
                 output_json=Path(args.output_json),
                 output_doc=Path(args.output_doc),
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "version-band-rerank-experiment":
+        try:
+            payload = build_version_band_rerank_payload(
+                router_json=args.router_json,
+                large_analysis_json=args.large_analysis_json,
+                v2_dashboard_json=args.v2_dashboard_json,
+            )
+            result = write_version_band_rerank_outputs(
+                payload,
+                output_json=args.output_json,
+                output_doc=args.output_doc,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "version-band-apk-reranker":
+        try:
+            payload = build_version_band_apk_reranker_payload(
+                router_json=args.router_json,
+                large_analysis_json=args.large_analysis_json,
+                max_score_drop=args.max_score_drop,
+                min_sibling_era_anchors=args.min_sibling_era_anchors,
+            )
+            result = write_version_band_apk_reranker_outputs(
+                payload,
+                output_json=args.output_json,
+                output_doc=args.output_doc,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "version-band-candidate-expansion":
+        try:
+            payload = build_version_band_candidate_expansion_payload(
+                source_known_json=args.source_known_json,
+                apk_only_json=args.apk_only_json,
+            )
+            result = write_version_band_candidate_expansion_outputs(
+                payload,
+                output_json=args.output_json,
+                output_doc=args.output_doc,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "r8-structural-recall-experiment":
+        try:
+            payload = build_r8_structural_recall_payload(
+                router_json=args.router_json,
+                large_analysis_json=args.large_analysis_json,
+                ai_suggestions_json=args.ai_suggestions_json,
+            )
+            result = write_r8_structural_recall_outputs(
+                payload,
+                output_json=args.output_json,
+                output_doc=args.output_doc,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "r8-apk-structural-promotion-gate":
+        try:
+            payload = build_r8_apk_structural_gate_payload(
+                router_json=args.router_json,
+                large_analysis_json=args.large_analysis_json,
+                ai_suggestions_json=args.ai_suggestions_json,
+                min_opcode_score=args.min_opcode_score,
+                min_literal_score=args.min_literal_score,
+                min_dependency_score=args.min_dependency_score,
+                max_name_score=args.max_name_score,
+                min_identity_confidence=args.min_identity_confidence,
+            )
+            result = write_r8_apk_structural_gate_outputs(
+                payload,
+                output_json=args.output_json,
+                output_doc=args.output_doc,
             )
         except Exception as exc:
             print(f"error: {exc}", file=sys.stderr)

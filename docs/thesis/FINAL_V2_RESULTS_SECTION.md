@@ -108,6 +108,32 @@ The important point is that the remaining work is no longer just "add more versi
 
 The matcher-recall result is especially important for future work. The diagnostic found `1425` source-context report-only suggestions across `46` cases and `552` coordinates. These should be used for analysis and dashboards, not promoted into default SBOM components without a separate APK-only control run.
 
+## Phase 6 AI-Assisted R8 Triage
+
+The final v2 transparency artifacts also became the training evidence for a report-only AI assistance layer. This is not a replacement for the matcher and it is not a source of confirmed SBOM versions. It is a supervised triage layer for hard R8/minified and matcher-recall rows.
+
+| Metric | Value |
+|---|---:|
+| Training rows | 20523 |
+| Case IDs | 149 |
+| Coordinates | 1370 |
+| Phase 6A model | RandomForestClassifier |
+| Phase 6A test macro-F1 | 0.708 |
+| Report-only suggestions | 13736 |
+| Phase 6B model | torch.nn.TransformerEncoder |
+| Phase 6B structured-token test macro-F1 | 0.977 |
+| Project-heldout AI/R8 corpus rows | 31589 |
+| Heldout/report-only corpus rows | 11066 |
+| Raw DEX/opcode method-sequence rows | 1680 |
+| Raw DEX/opcode APKs analyzed | 14 |
+| Raw DEX/opcode Transformer test macro-F1 | 0.110 |
+| Raw opcode-count baseline test macro-F1 | 0.128 |
+| Raw DEX/opcode Transformer verdict | raw-opcode-transformer-research-only-not-promotable |
+
+The Phase 6A model may recommend report-only wording such as `suggest_report_only`, `suppress_uncertain`, or `risk_only`. It may not change selected versions, CycloneDX SBOM output, vulnerability labels, or source-validation metrics. The Phase 6B Transformer is a trained structured-token research prototype. The follow-up raw DEX/opcode corpus provides bounded method-level opcode sequences, and the raw-opcode Transformer training run shows an honest early negative result: it does not beat a simple opcode-count baseline under the case-heldout split. The combined evidence file is `docs/evaluation/AI_R8_FINAL_EVALUATION.md`; the dedicated report-only proof is `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md`, which shows that opt-in AI suggestions add an AI section to the report while leaving detected components and normalized SBOM content unchanged. The larger corpus manifest is `docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md`, the raw opcode corpus is `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md`, and the raw-opcode Transformer report is `docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md`.
+
+The follow-up R8 structural recall experiment reports `1000` source-context structural recall candidates from `1658` router rows, but keeps them report-only because same-coordinate wrong-version and false-positive controls remain in scope. A stricter APK-only structural promotion gate then tests whether any of those rows can safely move toward production emission using source-free scores before source grading. The gate passes `219` high-evidence rows and all `219` are posthoc source-exact, but `65` are blocked by same-coordinate control risk and `154` lack representative exact emitted controls, leaving `0` production promotion candidates. A five-profile strict promotion matrix confirms the same decision: `0` rows are eligible after stricter APK-only thresholds and control requirements. This supports transparent hard-R8 triage without converting source-context evidence into APK-only SBOM authority.
+
 ## Vulnerability Claim Transparency
 
 The final transparency export also classifies vulnerability rows:

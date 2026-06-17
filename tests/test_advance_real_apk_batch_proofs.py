@@ -84,7 +84,9 @@ def test_missing_gradle_command_is_blocker_not_script_failure(tmp_path: Path) ->
     module = load_module()
     root = tmp_path / "source"
     root.mkdir()
-    module.gradle_command = lambda _root: ["definitely-not-a-gradle-command-codex-test"]
+    module.gradle_command = lambda _root, _slug=None: [
+        "definitely-not-a-gradle-command-codex-test"
+    ]
 
     result = module.attempt_dependency_tree(
         slug="shelter",
@@ -103,7 +105,9 @@ def test_unknown_slug_tries_app_dependency_task_first(tmp_path: Path) -> None:
     module = load_module()
     root = tmp_path / "source"
     root.mkdir()
-    module.gradle_command = lambda _root: ["definitely-not-a-gradle-command-codex-test"]
+    module.gradle_command = lambda _root, _slug=None: [
+        "definitely-not-a-gradle-command-codex-test"
+    ]
 
     result = module.attempt_dependency_tree(
         slug="new-low-risk-app",

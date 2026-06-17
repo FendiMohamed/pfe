@@ -28,8 +28,12 @@ def test_maven_artifact_url_and_paths():
     assert artifact.url == (
         "https://repo1.maven.org/maven2/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar"
     )
-    assert str(artifact.artifact_path("root")).endswith("com/google/code/gson/gson/2.8.9/gson-2.8.9.jar")
-    assert str(artifact.metadata_path("root")).endswith("com/google/code/gson/gson/2.8.9/metadata.json")
+    assert artifact.artifact_path("root").as_posix().endswith(
+        "com/google/code/gson/gson/2.8.9/gson-2.8.9.jar"
+    )
+    assert artifact.metadata_path("root").as_posix().endswith(
+        "com/google/code/gson/gson/2.8.9/metadata.json"
+    )
 
 
 def test_artifacts_from_libraries_filter_and_limit():

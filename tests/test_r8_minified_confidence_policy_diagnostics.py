@@ -46,14 +46,14 @@ def test_minified_confidence_policy_keeps_current_artifact_report_only() -> None
         payload["recommendation"]
         == "document-minified-confidence-labels-without-changing-default-selection"
     )
-    assert payload["summary"]["rows_classified"] == 286
-    assert payload["summary"]["regression_rows_blocked"] == 36
+    assert payload["summary"]["rows_classified"] == 1117
+    assert payload["summary"]["regression_rows_blocked"] == 127
     assert payload["summary"]["phase5_report_only_suggestions"] == 4
     assert payload["summary"]["source_backed_report_only_suggestions"] == 4
     assert payload["summary"]["report_default_selection_changes"] == 0
     assert payload["summary"]["failed_gates"] == 0
     assert payload["summary"]["policy_action_counts"]["surface-report-only-suggestion"] == 4
-    assert payload["summary"]["policy_action_counts"]["do-not-change-selected-version"] == 36
+    assert payload["summary"]["policy_action_counts"]["do-not-change-selected-version"] == 127
     assert all(gate["status"] == "pass" for gate in payload["gates"])
 
 

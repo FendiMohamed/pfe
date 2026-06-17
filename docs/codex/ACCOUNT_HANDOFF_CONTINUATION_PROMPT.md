@@ -45,6 +45,50 @@ Latest completed checkpoint:
   - `docs/thesis/FINAL_REPORT_READINESS_PACKAGE.md` is the final report assembly handoff. It lists cover-page fields needing human input, required wording for the normal `927/1837` metric and v2 `6772/6772` lane, figure/screenshot placement, risky phrase checks, and non-blocking future work.
   - `docs/thesis/PFE_FINAL_REPORT_ASSEMBLED.md` now points to the readiness package, includes the v2 upper-bound lane in the abstract, and has updated future-work wording centered on matcher recall, bounded reference growth, safer unconstrained large-DB matching, framework/native expansion, and multi-scale future work.
   - This is still an evaluation-only exact-source-version upper bound; do not report it as APK-only production accuracy.
+- Phase 6 AI-assisted R8 checkpoint:
+  - `docs/research/AI_R8_ASSISTED_METHOD_SELECTION.md` is the research-backed ML/DL method-selection gate.
+  - Phase 6A commands are implemented: `apk-sbom ai-r8-build-dataset`, `apk-sbom ai-r8-train`, and `apk-sbom ai-r8-suggest`.
+  - Generated artifacts live under `data/results/experiments/ai-r8-assistant/`; current dataset: `20523` rows across matcher-recall, emitted-result, boundary, and Phase 5 evidence; current trained-model suggestions: `13736` report-only rows.
+  - The workspace `.venv` has the ML/test dependencies installed, and `ai-r8-train` now trains the actual `RandomForestClassifier`: grouped split `14905` train / `1750` validation / `3868` test rows, test macro-F1 `0.708`, majority baseline test accuracy `0.383`, score-threshold baseline test accuracy `0.165`, plus feature-importance and ablation outputs.
+  - Phase 6B now trains an isolated `torch.nn.TransformerEncoder` over structured project-evidence tokens: corpus `20523` rows, vocabulary `5097`, test macro-F1 `0.977`, test accuracy `0.992`. Follow-up future-work artifacts are also concrete: `docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md` records a `31589`-row project-heldout AI/R8 corpus manifest (`20523` training-eligible, `11066` heldout/report-only), `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` records a bounded raw DEX/opcode corpus with `1680` method sequences from `14` APKs, and `docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md` records the first case-heldout raw-opcode Transformer run (`0.110` test macro-F1 versus `0.128` opcode-count baseline, verdict `raw-opcode-transformer-research-only-not-promotable`). Reports may surface AI/DL status only while production decision wiring remains disabled.
+  - `apk-sbom ai-r8-final-eval` regenerates `docs/evaluation/AI_R8_FINAL_EVALUATION.md`, the single ML/DL evidence entry point. `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` is the compact Phase 6A summary, and `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` proves that opt-in AI report wiring adds an AI section while preserving detected components and normalized SBOM content.
+  - `generate-report --include-ai-r8-suggestions` attaches AI suggestions as report-only evidence only; it must not change selected versions, SBOM output, vulnerability labels, or source-validation metrics.
+  - Phase 6B scripts are isolated at `scripts/build_ai_r8_token_corpus.py` and `scripts/train_ai_r8_tiny_transformer.py`; their trained output is status-only report evidence, not production decision wiring.
+- Hybrid matcher-router checkpoint:
+  - `src/apk_sbom/hybrid_matcher_router.py`, `scripts/build_hybrid_matcher_router.py`, and `apk-sbom hybrid-matcher-router` are implemented as a report-only matcher-improvement planning layer.
+  - `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` compares the current weighted matcher with LibScout/LibD/LibPecker/SAD/ORLIS/LibHunter/ATVHunter/LibAttention/LibMD-style strategies and routes current hard rows to scoped experiment profiles.
+  - Current router output: `7569` rows across `105` cases and `849` coordinates, `4766` P1 rows, and top profiles `version-band-rerank` (`2180`), `r8-structural-recall` (`1658`), `alias-boundary-map` (`1553`), `boundary-hash-only` (`974`), `coarse-to-fine-recall` (`701`), and `reference-growth-first` (`442`).
+  - This is not a matcher promotion. It must not change default matcher scoring, selected versions, SBOM output, vulnerability labels, or source-validation metrics.
+- Hybrid/AI production report checkpoint:
+  - `generate-report --include-hybrid-ai-assistance` is implemented and attaches a `hybrid_ai_assistance` block to report JSON plus Markdown/HTML "Hybrid AI Matcher Assistance" sections.
+  - It combines the hybrid router, the R8 APK-only structural promotion gate summary when available, Phase 6A RandomForest suggestions, and Phase 6B Transformer status. The Transformer is surfaced as status-only with production wiring `disabled`.
+  - `scripts/build_hybrid_ai_production_report_evidence.py` regenerates `docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md`, currently reporting `7569` router rows, `13736` ML suggestion rows, and verdict `promoted-to-production-report-only-not-matcher-authority`.
+  - This is production report wiring only. It must not change matcher scoring, selected versions, SBOM components, vulnerability labels, source-validation metrics, or DL decision wiring.
+- Version-band rerank experiment checkpoint:
+  - `src/apk_sbom/version_band_rerank_experiment.py`, `scripts/build_version_band_rerank_experiment.py`, and `apk-sbom version-band-rerank-experiment` generate `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md`.
+  - Current result: `582/636` normal wrong-version rows are in router version-band coordinates; `565` are source-known fixable in the v2 slice; `17` are blocked by no v2 decision; `820` exact controls stay exact; `120` false-positive extra-emission controls remain visible.
+  - This is source-known upper-bound evidence for future matcher improvement, not APK-only production accuracy and not a default matcher promotion.
+- APK-only version-band reranker v2 checkpoint:
+  - `src/apk_sbom/version_band_apk_reranker.py`, `scripts/build_version_band_apk_reranker.py`, and `apk-sbom version-band-apk-reranker` generate `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md`.
+  - It uses only baseline APK report alternatives and sibling version-era anchors, then uses source versions only after the decision to label fixes/regressions.
+  - Current result: `1522` rows evaluated, `0` APK-only reranker changes, `0` wrong-version fixes, `0` exact-control regressions, and only `44/582` scoped wrong-version rows expose the source version as a baseline alternative.
+  - Verdict: `reject-apk-only-reranker-no-safe-fixes`; do not promote it. Next work is independent candidate generation plus stronger version-specific evidence.
+- Version-band candidate expansion v3 checkpoint:
+  - `src/apk_sbom/version_band_candidate_expansion_v3.py`, `scripts/build_version_band_candidate_expansion_v3.py`, and `apk-sbom version-band-candidate-expansion` generate `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md`.
+  - It records the source-known `565` fixable rows, APK-only v2 `0` safe fixes, and a bounded deep same-coordinate expansion probe on Cryptomator Lite `androidx.activity:activity`.
+  - The deep probe rescored `134` same-coordinate references from `reference_features_demo_final_large_v2.sqlite`, but generic similarity selected `1.2.0-alpha01` while source validation expected `1.8.1`.
+  - Verdict: `do-not-promote-candidate-expansion-v3`; candidate expansion alone is insufficient without stronger version-specific evidence. Switch next to R8 structural recall or build version-unique evidence in small batches.
+- R8 structural recall experiment checkpoint:
+  - `src/apk_sbom/r8_structural_recall_experiment.py`, `scripts/build_r8_structural_recall_experiment.py`, and `apk-sbom r8-structural-recall-experiment` generate `docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md`.
+  - Current result: `1658` router R8-structural matcher-recall rows across `462` coordinates, `1000` source-context report-only structural recall candidates, and `658` blocked suppressed/filter rows.
+  - Same-coordinate controls remain blocking: `907` exact controls, `581` wrong-version controls, and `233` false-positive controls (`814` control-risk rows).
+  - Verdict: `report-only-structural-recall-useful-not-promoted`; use it for transparency and triage only. It must not change matcher scoring, selected versions, SBOM components, vulnerability labels, source-validation metrics, or DL decision wiring.
+- R8 APK-only structural promotion gate checkpoint:
+  - `src/apk_sbom/r8_apk_structural_promotion_gate.py`, `scripts/build_r8_apk_structural_promotion_gate.py`, and `apk-sbom r8-apk-structural-promotion-gate` generate `docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md`.
+  - Current result: `219` APK-side gate-pass rows across `110` coordinates, and all `219` are posthoc source-exact.
+  - Production promotion remains blocked with `0` promotion candidates: `65` gate-pass rows are blocked by same-coordinate control risk, and `154` zero-risk rows have no representative exact emitted control.
+  - `scripts/build_r8_strict_apk_promotion_gate_matrix.py` now generates `docs/evaluation/R8_STRICT_APK_PROMOTION_GATE_MATRIX.md`; five stricter APK-only profiles still leave `0` production candidates, verdict `do-not-promote-strict-apk-gates-have-zero-candidates`.
+  - `generate-report --include-hybrid-ai-assistance` can surface this gate as report-only evidence. Do not wire it into matcher scoring, SBOM emission, vulnerability labels, source-validation metrics, or DL decisions.
 - Post-v16 optimization checkpoint:
   - Source-linked blockers remain closed at 0.
   - The no-Maven-signal lane is complete with an audit, AndroidX report-only experiment, and Mastodon fork-family report-only audit.

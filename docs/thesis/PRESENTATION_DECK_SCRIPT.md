@@ -284,8 +284,11 @@ Next work:
 - scale source-validated real APKs;
 - add more framework families;
 - investigate scoped per-coordinate rerankers;
-- explore stronger multi-scale graph fusion;
-- add Trivy/Grype validation when available.
+- continue the Phase 6 AI-assisted R8 lane with raw-code token corpora and stronger independent labels;
+- explore stronger multi-scale graph fusion and DL token models beyond the current structured-token prototype;
+- keep AI report-only until it passes independent APK-only controls.
+
+**AI/ML proof point:** Phase 6A trains a `RandomForestClassifier` on `20523` existing evaluation rows and reaches test macro-F1 `0.708`, producing `13736` report-only suggestions. Phase 6B trains an isolated `torch.nn.TransformerEncoder` over structured project-evidence tokens and reaches test macro-F1 `0.977`. The follow-up AI corpus work adds a `31589`-row project-heldout manifest plus `1680` raw DEX/opcode method sequences from `14` APKs. A raw-opcode Transformer was trained too, but under a stricter case-heldout split it reaches test macro-F1 `0.110`, below the opcode-count baseline `0.128`; that is why it stays research-only. The report-only demo proves the AI section appears while detected components and normalized SBOM content stay unchanged.
 
 **Speaker notes:**
 
@@ -302,7 +305,7 @@ Recommended live or recorded demo:
 5. Open the vulnerable Jackson report and show the three HIGH OSV advisories.
 6. Open the thesis evaluation table and show clean/partial separation.
 7. Open the final v2 package and transparency export to show the source-known upper-bound lane and remaining gap taxonomy.
-8. Optional: open version-band evidence to show ambiguity reporting.
+8. Optional: open the AI R8 final evaluation and report-only demo to show ML/DL/PhD value without changing SBOM authority.
 
 ## Defense Questions And Short Answers
 
@@ -313,6 +316,7 @@ Recommended live or recorded demo:
 | Why use emitted Maven version confirmation rate? | It validates whether emitted SBOM components are confirmed by source evidence without pretending to measure full dependency recall. |
 | Why not force the source version in near ties? | Generic near-tie and newer-version rules caused regressions in other APKs. |
 | Why keep API/opcode tri-gram signals disabled? | They were implemented and tested, but global weights did not improve metrics and opcode tri-grams regressed some controls. |
+| Is the AI model choosing final versions? | No. It is report-only R8/matcher-recall triage. It demonstrates dataset construction, model training, evaluation, and limitations, but cannot change SBOM/CVE outputs. |
 | Why is K-9 excluded? | It has APK/source/report proof, but the resolved dependency tree is still blocked, so it is not a source-validated accuracy case. |
 | How is this based on the papers? | The traceability matrix maps every main MVP feature to state-of-the-art tools and papers plus implementation and evaluation artifacts. |
 

@@ -399,6 +399,96 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the scoring-unchanged diagnostic summary of controlled R8 coverage, real R8/minified partial cases, hidden-code boundaries, and classifier gaps.",
         },
         {
+            "table": "AI-assisted R8 method selection",
+            "source": "docs/research/AI_R8_ASSISTED_METHOD_SELECTION.md",
+            "use": "Use as the Phase 6 research gate explaining why ML/DL assistance is report-only and not exact SBOM/version/CVE authority.",
+        },
+        {
+            "table": "AI R8 assistant diagnostics",
+            "source": "docs/evaluation/AI_R8_ASSISTANT_DIAGNOSTICS.md",
+            "use": "Use as the Phase 6A dataset, model-status, suggestion, and limitation artifact for the classical ML report-only assistant.",
+        },
+        {
+            "table": "AI R8 assistant compact summary",
+            "source": "docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md",
+            "use": "Use as the compact thesis/demo export for AI R8 dataset size, model metrics, baselines, suggestions, and guardrails.",
+        },
+        {
+            "table": "AI R8 final evaluation",
+            "source": "docs/evaluation/AI_R8_FINAL_EVALUATION.md",
+            "use": "Use as the single Phase 6 ML/DL evidence entry point combining RandomForest metrics, ablation, Transformer prototype metrics, and the report-only guardrail proof.",
+        },
+        {
+            "table": "AI R8 report-only demo",
+            "source": "docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md",
+            "use": "Use as the opt-in report proof that AI suggestions add a report section while preserving detected components and normalized SBOM content.",
+        },
+        {
+            "table": "Hybrid AI production reporting",
+            "source": "docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md",
+            "use": "Use as the production report-only integration proof for `generate-report --include-hybrid-ai-assistance`, combining router, RandomForest, and Transformer-status evidence without changing matcher/SBOM/CVE outputs.",
+        },
+        {
+            "table": "Final hybrid AI demo smoke",
+            "source": "docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md",
+            "use": "Use as the final real-APK smoke proof that default and hybrid-AI reports keep components, selected versions, SBOM components, and vulnerability output unchanged while the opt-in section is visible.",
+        },
+        {
+            "table": "AI R8 DL prototype",
+            "source": "docs/evaluation/AI_R8_DL_PROTOTYPE.md",
+            "use": "Use as the Phase 6B LibAttention-inspired trained Transformer prototype, isolated from production reports.",
+        },
+        {
+            "table": "AI R8 independent corpus",
+            "source": "docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md",
+            "use": "Use as the larger project-heldout AI/R8 corpus manifest separating training-eligible rows from heldout/report-only evidence lanes.",
+        },
+        {
+            "table": "AI R8 raw opcode corpus",
+            "source": "docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md",
+            "use": "Use as the bounded raw DEX/opcode method-sequence corpus prototype for future Transformer training, with production wiring disabled.",
+        },
+        {
+            "table": "AI R8 raw opcode Transformer",
+            "source": "docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md",
+            "use": "Use as the first case-heldout raw-opcode Transformer training result, including the opcode-count baseline comparison and research-only verdict.",
+        },
+        {
+            "table": "Hybrid matcher router",
+            "source": "docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md",
+            "use": "Use as the report-only comparison between the current matcher and research tool-family strategies, with current hard rows routed to safe experiment profiles.",
+        },
+        {
+            "table": "Version-band rerank experiment",
+            "source": "docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md",
+            "use": "Use as the first router-driven report-only rerank experiment: source-known fixability for wrong-version rows, exact controls, and false-positive controls.",
+        },
+        {
+            "table": "APK-only version-band reranker v2",
+            "source": "docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md",
+            "use": "Use as the promotion-blocking APK-only reranker diagnostic showing source-free candidate visibility and strict sibling-era gating results.",
+        },
+        {
+            "table": "Version-band candidate expansion v3",
+            "source": "docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md",
+            "use": "Use as the promotion-gate artifact combining source-known opportunity, APK-only rejection, and deep same-coordinate candidate-expansion pilot evidence.",
+        },
+        {
+            "table": "R8 structural recall experiment",
+            "source": "docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md",
+            "use": "Use as the router-driven hard-R8/matcher-recall lane showing source-context structural recall candidates, same-coordinate controls, and why the result stays report-only.",
+        },
+        {
+            "table": "R8 APK-only structural promotion gate",
+            "source": "docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md",
+            "use": "Use as the APK-only evidence gate showing that strong structural rows exist, but zero rows satisfy production promotion controls today.",
+        },
+        {
+            "table": "R8 strict APK promotion gate matrix",
+            "source": "docs/evaluation/R8_STRICT_APK_PROMOTION_GATE_MATRIX.md",
+            "use": "Use as the stricter multi-profile APK-only control matrix confirming that the hybrid R8 structural lane still has zero production promotion candidates.",
+        },
+        {
             "table": "R8 multi-scale feature diagnostics",
             "source": "docs/evaluation/R8_MULTISCALE_FEATURE_DIAGNOSTICS.md",
             "use": "Use as the Phase 3 proof that call-chain, basic-block, class-neighbor, field-operation, and literal/context features are extracted and reportable while scoring remains unchanged.",
@@ -710,6 +800,61 @@ def build_demo_package() -> list[dict[str, str]]:
             "item": "Final demo checklist",
             "path": "docs/evaluation/FINAL_DEMO_CHECKLIST.md",
             "talking_point": "Day-of-defense checklist with the deck path, exact numbers, safe commands, and commands to avoid live.",
+        },
+        {
+            "item": "Hybrid matcher router",
+            "path": "docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md",
+            "talking_point": "Report-only comparison of matcher strategies from the literature and row-level routing of current hard cases to scoped experiment profiles.",
+        },
+        {
+            "item": "Hybrid AI production reporting",
+            "path": "docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md",
+            "talking_point": "Production `generate-report --include-hybrid-ai-assistance` wiring that surfaces the router, ML suggestions, and DL status as report-only evidence while keeping matcher/SBOM/CVE behavior unchanged.",
+        },
+        {
+            "item": "Final hybrid AI demo smoke",
+            "path": "docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md",
+            "talking_point": "Two real APK report smokes prove the hybrid-AI section is visible while components, selected versions, SBOM components, and vulnerability output remain unchanged.",
+        },
+        {
+            "item": "AI R8 independent corpus",
+            "path": "docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md",
+            "talking_point": "Larger project-heldout AI/R8 corpus manifest with 31,589 rows and explicit training versus heldout/report-only partitions.",
+        },
+        {
+            "item": "AI R8 raw opcode corpus",
+            "path": "docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md",
+            "talking_point": "Raw DEX/opcode corpus prototype with bounded method-level opcode sequences for future Transformer training, kept outside production decisions.",
+        },
+        {
+            "item": "AI R8 raw opcode Transformer",
+            "path": "docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md",
+            "talking_point": "Case-heldout raw-opcode Transformer training run: implemented and evaluated, but research-only because it does not beat the opcode-count baseline.",
+        },
+        {
+            "item": "Version-band rerank experiment",
+            "path": "docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md",
+            "talking_point": "First router-driven source-known rerank experiment: 565 scoped wrong-version rows are fixable in the source-known lane while exact and false-positive controls stay visible.",
+        },
+        {
+            "item": "APK-only version-band reranker v2",
+            "path": "docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md",
+            "talking_point": "Source-free reranker prototype that blocks promotion today: 0 safe fixes and only 44/582 scoped wrong-version rows with the source version visible as a baseline alternative.",
+        },
+        {
+            "item": "Version-band candidate expansion v3",
+            "path": "docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md",
+            "talking_point": "Promotion-gate diagnostic showing that even deep same-coordinate candidate expansion selected an old wrong Activity version, so version-band reranking stays unpromoted.",
+        },
+        {
+            "item": "R8 structural recall experiment",
+            "path": "docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md",
+            "talking_point": "Router-driven R8 structural recall lane: 1,000 source-context report-only candidates are useful for transparency, while 814 same-coordinate control-risk rows block automatic SBOM promotion.",
+        },
+        {
+            "item": "R8 strict APK promotion gate matrix",
+            "path": "docs/evaluation/R8_STRICT_APK_PROMOTION_GATE_MATRIX.md",
+            "talking_point": "Five stricter APK-only promotion profiles confirm the structural R8 lane remains report-only with zero production candidates.",
         },
         {
             "item": "Final report readiness package",

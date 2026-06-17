@@ -1,6 +1,6 @@
 # R8 Obfuscation Con Execution Plan
 
-Status: Phase 1 report-only classifier, Phase 2 controlled matrix expansion, Phase 3 inert multi-scale feature extraction, expanded Phase 4 layered generated+real diagnostics, the Phase 5 scoped trigger diagnostic, and Phase 5 trigger control validation are complete without a default scoring change; Phase 6 is pending and no R8 behavior is justified as global/default behavior.
+Status: Phase 1 report-only classifier, Phase 2 controlled matrix expansion, Phase 3 inert multi-scale feature extraction, expanded Phase 4 layered generated+real diagnostics, the Phase 5 scoped trigger diagnostic, and Phase 5 trigger control validation are complete without a default scoring change; Phase 6A now adds a report-only classical ML assistant and Phase 6B now has isolated DL prototype scaffolding. No R8 behavior is justified as global/default behavior.
 
 This con is based on a deep review of the project literature notes and the current diagnostic artifacts, not on a single intuition. The decision is to build a best-of-tools R8 layer: combine the strongest ideas from LibAttention, LibHunter, SAD, ATVHunter, LibID/LibScan, and LibMD, but integrate them in guarded stages so the tool stays honest about exact-version confidence.
 
@@ -190,18 +190,46 @@ Current result:
 - Keep it diagnostic-only. Any future production scorer wiring needs its own fresh regression tests.
 - Do not enable it by default.
 
-## Phase 6 - Optional ML Layer
+## Phase 6 - AI-Assisted R8 Layer
 
-Goal: consider LibAttention-style support after explainable layers exist.
+Goal: add AI knowledge for hard R8/minified and matcher-recall analysis while preserving the thesis honesty rules.
+
+### Phase 6A - Classical ML Report-Only Assistant
+
+Implemented first because it is explainable, fast, and trainable from current project evidence.
+
+Commands:
+
+- `apk-sbom ai-r8-build-dataset`
+- `apk-sbom ai-r8-train`
+- `apk-sbom ai-r8-suggest`
+
+Artifacts:
+
+- `data/results/experiments/ai-r8-assistant/training-dataset.json`
+- `data/results/experiments/ai-r8-assistant/training-dataset.csv`
+- `data/results/experiments/ai-r8-assistant/model.joblib`
+- `data/results/experiments/ai-r8-assistant/metrics.json`
+- `data/results/experiments/ai-r8-assistant/suggestions.json`
+- `docs/evaluation/AI_R8_ASSISTANT_DIAGNOSTICS.md`
 
 Use ML only as:
 
 - identity hint,
 - obfuscation/risk classifier,
 - candidate generator,
-- or future research extension.
+- or report-only triage support.
 
-Do not use ML as the sole exact-version or CVE authority.
+Do not use ML as the sole exact-version or CVE authority. The AI assistant must not change matcher scoring, selected versions, SBOM output, vulnerability labels, or source-validation metrics.
+
+### Phase 6B - Isolated DL/Transformer Prototype
+
+Implemented only as research scaffolding:
+
+- `scripts/build_ai_r8_token_corpus.py`
+- `scripts/train_ai_r8_tiny_transformer.py`
+
+This is LibAttention-inspired future work over opcode/DEX token sequences. It is not wired into `generate-report` and must stay separate unless it clearly outperforms Phase 6A and passes controls.
 
 ## What Counts As Done
 
@@ -212,6 +240,7 @@ This con is not done when one report looks better. It is done only when:
 - multi-scale features are extracted inertly;
 - scoped experiments show no control regressions;
 - any scoring change is narrowly promoted and documented;
+- AI output remains report-only unless a separate future validation proves otherwise;
 - docs, thesis artifacts, and tasks are regenerated;
 - verification passes.
 
@@ -219,4 +248,4 @@ This con is not done when one report looks better. It is done only when:
 
 Current next step:
 
-Do not promote the multi-scale diagnostic blend globally. Keep the opt-in `r8-phase5-experiment` command diagnostic-only unless a production scorer is justified and verified separately; default matcher scoring and SBOM selection remain unchanged.
+Do not promote the multi-scale diagnostic blend globally. Use Phase 6A AI only as opt-in report-only assistance and keep the Phase 6B Transformer prototype isolated. Default matcher scoring and SBOM selection remain unchanged.
