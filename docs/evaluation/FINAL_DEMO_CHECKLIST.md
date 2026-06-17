@@ -14,12 +14,13 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | 6 | `docs/evaluation/AI_R8_FINAL_EVALUATION.md` | Optional Phase 6 AI/ML/DL evidence for PhD-oriented discussion. |
 | 7 | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` | Proof that AI suggestions are report-only and do not change SBOM content. |
 | 8 | `docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md` | Production `generate-report --include-hybrid-ai-assistance` integration, guarded as report-only. |
-| 9 | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Report-only matcher-improvement comparison and hybrid strategy router. |
-| 10 | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` | First router-driven source-known rerank experiment and controls. |
-| 11 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` | APK-only reranker prototype showing why source-known fixes are not safely promotable yet. |
-| 12 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` | Promotion gate combining source-known, APK-only, and deep candidate expansion evidence. |
-| 13 | `docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md` | Next router lane: source-context structural recall candidates, guarded as report-only. |
-| 14 | `docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md` | APK-only structural promotion gate showing why the hybrid R8 lane is not promoted into SBOM emission yet. |
+| 9 | `docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md` | Final real-APK smoke proving the hybrid-AI section is visible while default report outputs stay unchanged. |
+| 10 | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Report-only matcher-improvement comparison and hybrid strategy router. |
+| 11 | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` | First router-driven source-known rerank experiment and controls. |
+| 12 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` | APK-only reranker prototype showing why source-known fixes are not safely promotable yet. |
+| 13 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` | Promotion gate combining source-known, APK-only, and deep candidate expansion evidence. |
+| 14 | `docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md` | Next router lane: source-context structural recall candidates, guarded as report-only. |
+| 15 | `docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md` | APK-only structural promotion gate showing why the hybrid R8 lane is not promoted into SBOM emission yet. |
 
 ## Live Demo Artifacts
 
@@ -55,6 +56,9 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | AI R8 report-only suggestions | 13736 |
 | AI R8 Transformer structured-token test macro-F1 | 0.977 |
 | Hybrid AI production report status | report-only, matcher authority unchanged |
+| Final hybrid AI smoke targets | 2 real APKs |
+| Final hybrid AI smoke output comparison | unchanged components, versions, SBOM, vulnerability output |
+| Final hybrid AI smoke section visibility | visible in JSON, Markdown, and HTML |
 | Hybrid matcher router rows | 7569 |
 | Hybrid router P1 rows | 4766 |
 | Hybrid router top profile | version-band-rerank, 2180 rows |
@@ -160,6 +164,7 @@ The tool has 100% real-world APK accuracy.
 | Thesis artifact index regenerated | passed |
 | Graduation demo rehearsal regenerated | passed |
 | Hybrid AI production reporting regenerated | report-only production integration, DL production wiring disabled |
+| Final hybrid AI demo smoke regenerated | 2 targets, outputs unchanged, hybrid sections visible |
 | V2 dashboard JSON count check | 106 cases, 6772 checked, 0 mismatches, 0 missing |
 | Transparency JSON count check | 110 cases, 12082 source rows, 6772 emitted rows, 232 vulnerability rows |
 | Hybrid matcher router regenerated | 7569 rows, 4766 P1, top profile version-band-rerank |

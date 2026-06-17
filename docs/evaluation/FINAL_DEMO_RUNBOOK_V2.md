@@ -161,6 +161,7 @@ docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md
 docs/evaluation/AI_R8_FINAL_EVALUATION.md
 docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md
 docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md
+docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md
 ```
 
 Say:
@@ -181,11 +182,18 @@ Then add:
 The hybrid/AI production flag is --include-hybrid-ai-assistance. It adds the hybrid router, RandomForest suggestions, and Transformer status to report JSON, Markdown, and HTML under hybrid_ai_assistance. This is promoted only as report assistance; the current weighted matcher remains the SBOM authority.
 ```
 
+Then add:
+
+```text
+The final real-APK smoke compares default and hybrid-AI reports for F-Droid and Aegis Authenticator. In both cases, detected components, selected versions, CycloneDX components, and vulnerability output remain unchanged, while the hybrid assistance section is visible in JSON, Markdown, and HTML.
+```
+
 Optional regeneration command:
 
 ```powershell
 apk-sbom ai-r8-final-eval
 python scripts\build_hybrid_ai_production_report_evidence.py
+python scripts\build_final_hybrid_ai_demo_smoke.py
 ```
 
 ### 7. Optional Hybrid Matcher Improvement Plan

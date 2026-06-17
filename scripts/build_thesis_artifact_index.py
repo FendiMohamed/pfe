@@ -429,6 +429,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the production report-only integration proof for `generate-report --include-hybrid-ai-assistance`, combining router, RandomForest, and Transformer-status evidence without changing matcher/SBOM/CVE outputs.",
         },
         {
+            "table": "Final hybrid AI demo smoke",
+            "source": "docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md",
+            "use": "Use as the final real-APK smoke proof that default and hybrid-AI reports keep components, selected versions, SBOM components, and vulnerability output unchanged while the opt-in section is visible.",
+        },
+        {
             "table": "AI R8 DL prototype",
             "source": "docs/evaluation/AI_R8_DL_PROTOTYPE.md",
             "use": "Use as the Phase 6B LibAttention-inspired trained Transformer prototype, isolated from production reports.",
@@ -785,6 +790,11 @@ def build_demo_package() -> list[dict[str, str]]:
             "item": "Hybrid AI production reporting",
             "path": "docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md",
             "talking_point": "Production `generate-report --include-hybrid-ai-assistance` wiring that surfaces the router, ML suggestions, and DL status as report-only evidence while keeping matcher/SBOM/CVE behavior unchanged.",
+        },
+        {
+            "item": "Final hybrid AI demo smoke",
+            "path": "docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md",
+            "talking_point": "Two real APK report smokes prove the hybrid-AI section is visible while components, selected versions, SBOM components, and vulnerability output remain unchanged.",
         },
         {
             "item": "Version-band rerank experiment",

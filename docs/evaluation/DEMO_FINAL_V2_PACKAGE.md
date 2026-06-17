@@ -42,6 +42,7 @@ This package is the current thesis/demo evidence set for the grown v2 reference 
 | AI R8 DL prototype | `docs/evaluation/AI_R8_DL_PROTOTYPE.md` |
 | AI R8 report-only demo | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` |
 | Hybrid AI production reporting | `docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md` |
+| Final hybrid AI demo smoke | `docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md` |
 | Hybrid matcher router | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` |
 | Version-band rerank experiment | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` |
 | APK-only version-band reranker v2 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` |
@@ -85,6 +86,20 @@ apk-sbom generate-report <apk-path> --include-hybrid-ai-assistance
 ```
 
 This is promoted only as report-only production assistance. It does not change matcher scoring, selected versions, SBOM components, vulnerability labels, source-validation metrics, or the disabled DL production-wiring status.
+
+`docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md` is the final real-APK smoke for that surface. It compares default and hybrid-AI reports for F-Droid and Aegis Authenticator:
+
+- targets: `2`;
+- default vs hybrid outputs unchanged: `true`;
+- hybrid sections visible in JSON/Markdown/HTML: `true`;
+- F-Droid: `23` components, `891` matching router rows, `300` matching structural gate rows, `0` structural promotion candidates;
+- Aegis Authenticator: `7` components, `334` matching router rows, `112` matching structural gate rows, `0` structural promotion candidates.
+
+Regenerate it with:
+
+```powershell
+python scripts\build_final_hybrid_ai_demo_smoke.py
+```
 
 ## Hybrid Matcher Router
 
