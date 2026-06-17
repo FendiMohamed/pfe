@@ -188,12 +188,21 @@ The hybrid/AI production flag is --include-hybrid-ai-assistance. It adds the hyb
 Then add:
 
 ```text
+I also trained a stricter MVP-safe Transformer profile on the same 20,523-row local AI/R8 dataset. It removes source-version tokens, raw candidate-version tokens, source-rank features, source-validation-only flags, and diagnostic context labels. It reaches test macro-F1 0.882, so the integration gate allows AI as report-only risk triage, but still blocks matcher/SBOM/CVE authority.
+```
+
+Then add:
+
+```text
 The final real-APK smoke compares default and hybrid-AI reports for F-Droid and Aegis Authenticator. In both cases, detected components, selected versions, CycloneDX components, and vulnerability output remain unchanged, while the hybrid assistance section is visible in JSON, Markdown, and HTML.
 ```
 
 Optional regeneration command:
 
 ```powershell
+python scripts\build_ai_r8_token_corpus.py --profile mvp-safe --output-json data\results\experiments\ai-r8-dl-prototype\token-corpus-mvp-safe.json
+python scripts\train_ai_r8_tiny_transformer.py --corpus-json data\results\experiments\ai-r8-dl-prototype\token-corpus-mvp-safe.json --metrics-output data\results\experiments\ai-r8-dl-prototype\metrics-mvp-safe.json --model-output data\results\experiments\ai-r8-dl-prototype\tiny-transformer-mvp-safe.pt --output-doc docs\evaluation\AI_R8_DL_PROTOTYPE_MVP_SAFE.md --epochs 5 --batch-size 128
+apk-sbom ai-r8-integration-gate
 apk-sbom ai-r8-final-eval
 python scripts\build_hybrid_ai_production_report_evidence.py
 python scripts\build_final_hybrid_ai_demo_smoke.py
@@ -369,7 +378,8 @@ python scripts\build_r8_strict_apk_promotion_gate_matrix.py
 | Why not just add every missing dependency? | Some are metadata-only, source-only, aliases, project modules, or unavailable artifacts. Of the current source gaps, only 442 are remaining missing-reference candidates; 2281 are matcher-recall candidates. |
 | Why not promote the 1425 matcher suggestions into the SBOM? | They are source-context report-only suggestions. They need separate APK-only controls before becoming default SBOM components. |
 | Is the AI model now choosing versions? | No. It is report-only triage. It can suggest wording or review priority, but it cannot change selected versions, SBOM components, vulnerability labels, or metrics. |
-| Is the DL model a production APK detector? | No. The structured-token Transformer is a PhD/AI workflow proof, and the raw-opcode Transformer is an early case-heldout experiment that does not beat the opcode-count baseline. Both stay report-only. |
+| Is the DL model a production APK detector? | No. The full structured-token Transformer is a PhD/AI workflow proof. The stricter MVP-safe Transformer removes source shortcuts and reaches 0.882 macro-F1, so it supports report-only risk triage. The raw-opcode Transformer is an early case-heldout experiment that does not beat the opcode-count baseline. |
+| Can AI be integrated in the MVP? | Yes, as production report-only assistance through the existing hybrid-AI report flag and the integration gate. No, not as matcher/SBOM/CVE authority. |
 | Why not replace the matcher with one research method? | Different APK conditions fail differently. The router keeps the current matcher as the control baseline and chooses scoped experiments per row family, such as version-band rerank for adjacent AndroidX/Kotlin versions or R8 structural recall for strong opcode but weak name evidence. |
 | Did the version-band experiment fix wrong versions? | In the source-known upper-bound slice, 565 scoped wrong-version rows become fixable and 820 exact controls stay exact. It is not promoted because an APK-only full-DB reranker still has to prove it can choose those versions without source constraints. |
 | Did the APK-only reranker work? | No, and that is useful evidence. It made 0 safe fixes because only 44/582 scoped wrong-version rows expose the source version as a baseline alternative. The result blocks promotion and points to candidate-generation and version-specific evidence as the next work. |

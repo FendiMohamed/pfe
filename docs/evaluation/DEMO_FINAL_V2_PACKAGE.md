@@ -40,6 +40,8 @@ This package is the current thesis/demo evidence set for the grown v2 reference 
 | AI R8 compact summary | `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` |
 | AI R8 final ML/DL evaluation | `docs/evaluation/AI_R8_FINAL_EVALUATION.md` |
 | AI R8 DL prototype | `docs/evaluation/AI_R8_DL_PROTOTYPE.md` |
+| AI R8 MVP-safe DL prototype | `docs/evaluation/AI_R8_DL_PROTOTYPE_MVP_SAFE.md` |
+| AI R8 MVP integration gate | `docs/evaluation/AI_R8_MVP_INTEGRATION_GATE.md` |
 | AI R8 independent corpus | `docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md` |
 | AI R8 raw opcode corpus | `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` |
 | AI R8 raw opcode Transformer | `docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md` |
@@ -75,14 +77,19 @@ The v2 package now has an optional AI-assisted R8 triage layer. It is trained fr
 - report-only suggestions: `13736`;
 - Phase 6B model: `torch.nn.TransformerEncoder`;
 - Phase 6B structured-token test macro-F1: `0.977`;
+- Phase 6B MVP-safe/source-free structured-token test macro-F1: `0.882` and accuracy `0.907`;
 - larger project-heldout AI/R8 corpus rows: `31589` (`20523` training-eligible, `11066` heldout/report-only);
 - raw DEX/opcode prototype corpus: `1680` method-level opcode sequences from `14` APKs, `0` skipped;
 - raw DEX/opcode Transformer test macro-F1: `0.110`, below the opcode-count baseline `0.128`, so verdict `raw-opcode-transformer-research-only-not-promotable`;
+- MVP integration gate: report-only AI assistance ready, matcher/SBOM/CVE authority not ready;
 - no selected-version, SBOM, vulnerability-label, or source-validation metric changes.
 
-Use `docs/evaluation/AI_R8_FINAL_EVALUATION.md` as the single AI/ML/DL evidence entry point, `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` for the compact Phase 6A numbers, `docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md` for the larger heldout-corpus manifest, `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` for the raw DEX/opcode corpus, `docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md` for the case-heldout raw-opcode Transformer result, and `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` as the no-change proof. Regenerate the combined package with:
+Use `docs/evaluation/AI_R8_FINAL_EVALUATION.md` as the single AI/ML/DL evidence entry point, `docs/evaluation/AI_R8_MVP_INTEGRATION_GATE.md` for the MVP authority decision, `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` for the compact Phase 6A numbers, `docs/evaluation/AI_R8_DL_PROTOTYPE_MVP_SAFE.md` for the stricter source-free Transformer run, `docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md` for the larger heldout-corpus manifest, `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` for the raw DEX/opcode corpus, `docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md` for the case-heldout raw-opcode Transformer result, and `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` as the no-change proof. Regenerate the combined package with:
 
 ```powershell
+python scripts\build_ai_r8_token_corpus.py --profile mvp-safe --output-json data\results\experiments\ai-r8-dl-prototype\token-corpus-mvp-safe.json
+python scripts\train_ai_r8_tiny_transformer.py --corpus-json data\results\experiments\ai-r8-dl-prototype\token-corpus-mvp-safe.json --metrics-output data\results\experiments\ai-r8-dl-prototype\metrics-mvp-safe.json --model-output data\results\experiments\ai-r8-dl-prototype\tiny-transformer-mvp-safe.pt --output-doc docs\evaluation\AI_R8_DL_PROTOTYPE_MVP_SAFE.md --epochs 5 --batch-size 128
+apk-sbom ai-r8-integration-gate
 apk-sbom ai-r8-final-eval
 ```
 

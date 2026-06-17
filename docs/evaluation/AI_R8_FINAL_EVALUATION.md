@@ -71,6 +71,33 @@ The DL prototype uses structured project-evidence tokens from the current evalua
 | Raw DEX/opcode method corpus | `generated` | 1680 | 14 | Bounded opcode sequences for future Transformer training; production wiring disabled. |
 | Raw DEX/opcode Transformer | `trained` | 0.10984528445824122 | 0.12812809971782863 | `raw-opcode-transformer-research-only-not-promotable` |
 
+## MVP Integration Gate
+
+| Field | Value |
+|---|---:|
+| Status | `generated` |
+| Report-only ready | `True` |
+| Matcher authority ready | `False` |
+| Current integration level | `production-report-only-ai-assistance` |
+| Recommended next step | `ship-report-only-ai-in-mvp-and-present-authority-boundary` |
+
+### Integration Decisions
+
+| Lane | Decision |
+|---|---|
+| `matcher_or_sbom_authority` | `blocked-keep-deterministic-matcher-authority` |
+| `phase6a_random_forest` | `keep-integrated-report-only` |
+| `phase6b_mvp_safe_transformer` | `candidate-for-report-only-risk-triage` |
+| `phase6b_structured_transformer` | `keep-as-research-status-only` |
+| `raw_opcode_transformer` | `research-only-needs-larger-corpus` |
+
+### MVP-Safe Transformer
+
+- Test macro-F1: `0.8821651724351584`
+- Test accuracy: `0.9069286452947259`
+- Production wiring: `disabled`
+
+
 ### DL Per-Class Metrics
 
 | Label | Precision | Recall | F1 | Support |
@@ -104,6 +131,7 @@ The DL prototype uses structured project-evidence tokens from the current evalua
 - Phase 6A improves over simple baselines on a grouped case split and exposes feature-importance plus ablation evidence.
 - Phase 6B is a trained tiny Transformer over structured project-evidence tokens, useful as a DL workflow proof but not as raw APK pretraining.
 - The follow-up corpus artifacts make the next AI step concrete: a larger project-heldout manifest, a bounded raw DEX/opcode sequence corpus, and an honest raw-opcode Transformer training run.
+- The MVP integration gate tests the largest local AI/R8 evidence package and keeps AI integrated only as report-only assistance.
 - Neither AI track changes selected versions, CycloneDX SBOM components, vulnerability labels, or source-validation metrics.
 
 ## Source Artifacts
@@ -112,6 +140,7 @@ The DL prototype uses structured project-evidence tokens from the current evalua
 - `ai_summary_json`: `data/results/evaluation/ai-r8-assistant-summary.json`
 - `dl_metrics_json`: `data/results/experiments/ai-r8-dl-prototype/metrics.json`
 - `independent_corpus_json`: `data/results/experiments/ai-r8-independent-corpus/independent-corpus.json`
+- `mvp_integration_gate_json`: `data/results/evaluation/ai-r8-mvp-integration-gate.json`
 - `raw_opcode_corpus_json`: `data/results/experiments/ai-r8-raw-opcode-prototype/raw-opcode-corpus.json`
 - `raw_opcode_transformer_metrics_json`: `data/results/experiments/ai-r8-raw-opcode-prototype/metrics.json`
 - `report_only_demo_json`: `data/results/evaluation/ai-r8-report-only-demo.json`

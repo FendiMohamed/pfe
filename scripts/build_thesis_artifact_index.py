@@ -416,7 +416,12 @@ def build_table_sources() -> list[dict[str, str]]:
         {
             "table": "AI R8 final evaluation",
             "source": "docs/evaluation/AI_R8_FINAL_EVALUATION.md",
-            "use": "Use as the single Phase 6 ML/DL evidence entry point combining RandomForest metrics, ablation, Transformer prototype metrics, and the report-only guardrail proof.",
+            "use": "Use as the single Phase 6 ML/DL evidence entry point combining RandomForest metrics, ablation, Transformer prototype metrics, MVP integration gate status, and the report-only guardrail proof.",
+        },
+        {
+            "table": "AI R8 MVP integration gate",
+            "source": "docs/evaluation/AI_R8_MVP_INTEGRATION_GATE.md",
+            "use": "Use as the explicit MVP decision artifact: AI is ready as production report-only assistance, but not as matcher/SBOM/CVE authority.",
         },
         {
             "table": "AI R8 report-only demo",
@@ -437,6 +442,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "table": "AI R8 DL prototype",
             "source": "docs/evaluation/AI_R8_DL_PROTOTYPE.md",
             "use": "Use as the Phase 6B LibAttention-inspired trained Transformer prototype, isolated from production reports.",
+        },
+        {
+            "table": "AI R8 MVP-safe DL prototype",
+            "source": "docs/evaluation/AI_R8_DL_PROTOTYPE_MVP_SAFE.md",
+            "use": "Use as the stricter source-free structured-token Transformer run for the MVP integration gate.",
         },
         {
             "table": "AI R8 independent corpus",
@@ -815,6 +825,16 @@ def build_demo_package() -> list[dict[str, str]]:
             "item": "Final hybrid AI demo smoke",
             "path": "docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md",
             "talking_point": "Two real APK report smokes prove the hybrid-AI section is visible while components, selected versions, SBOM components, and vulnerability output remain unchanged.",
+        },
+        {
+            "item": "AI R8 MVP integration gate",
+            "path": "docs/evaluation/AI_R8_MVP_INTEGRATION_GATE.md",
+            "talking_point": "Final ML/DL authority decision: report-only AI assistance is ready for the MVP, while matcher/SBOM/CVE authority remains blocked.",
+        },
+        {
+            "item": "AI R8 MVP-safe Transformer",
+            "path": "docs/evaluation/AI_R8_DL_PROTOTYPE_MVP_SAFE.md",
+            "talking_point": "Source-free structured-token Transformer trained on 20,523 rows, useful for report-only risk triage evidence.",
         },
         {
             "item": "AI R8 independent corpus",
