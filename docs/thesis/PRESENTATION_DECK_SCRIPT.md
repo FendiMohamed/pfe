@@ -288,7 +288,7 @@ Next work:
 - explore stronger multi-scale graph fusion and DL token models beyond the current structured-token prototype;
 - keep AI report-only until it passes independent APK-only controls.
 
-**AI/ML proof point:** Phase 6A trains a `RandomForestClassifier` on `20523` existing evaluation rows and reaches test macro-F1 `0.708`, producing `13736` report-only suggestions. Phase 6B trains an isolated `torch.nn.TransformerEncoder` over structured project-evidence tokens and reaches test macro-F1 `0.977`. The report-only demo proves the AI section appears while detected components and normalized SBOM content stay unchanged.
+**AI/ML proof point:** Phase 6A trains a `RandomForestClassifier` on `20523` existing evaluation rows and reaches test macro-F1 `0.708`, producing `13736` report-only suggestions. Phase 6B trains an isolated `torch.nn.TransformerEncoder` over structured project-evidence tokens and reaches test macro-F1 `0.977`. The follow-up AI corpus work adds a `31589`-row project-heldout manifest plus `1680` raw DEX/opcode method sequences from `14` APKs for future Transformer training. The report-only demo proves the AI section appears while detected components and normalized SBOM content stay unchanged.
 
 **Speaker notes:**
 

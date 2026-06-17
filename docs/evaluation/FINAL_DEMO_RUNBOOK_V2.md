@@ -159,6 +159,8 @@ Open:
 ```text
 docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md
 docs/evaluation/AI_R8_FINAL_EVALUATION.md
+docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md
+docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md
 docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md
 docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md
 docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md
@@ -167,7 +169,7 @@ docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md
 Say:
 
 ```text
-After the transparent v2 evaluation, I added a report-only AI layer for hard R8 and matcher-recall triage. Phase 6A trains a RandomForest on 20,523 existing evaluation rows and reaches 0.708 test macro-F1. Phase 6B trains an isolated tiny Transformer over structured project-evidence tokens and reaches 0.977 test macro-F1. The integrated production report can surface the Transformer status, but production wiring stays disabled and neither AI track can change selected versions, SBOM components, CVE labels, or source-validation metrics.
+After the transparent v2 evaluation, I added a report-only AI layer for hard R8 and matcher-recall triage. Phase 6A trains a RandomForest on 20,523 existing evaluation rows and reaches 0.708 test macro-F1. Phase 6B trains an isolated tiny Transformer over structured project-evidence tokens and reaches 0.977 test macro-F1. I also built a larger 31,589-row project-heldout corpus manifest and a raw DEX/opcode prototype corpus with 1,680 method-level opcode sequences from 14 APKs. The integrated production report can surface the Transformer status, but production wiring stays disabled and neither AI track can change selected versions, SBOM components, CVE labels, or source-validation metrics.
 ```
 
 Then add:
@@ -344,6 +346,18 @@ Optional regeneration command:
 apk-sbom r8-apk-structural-promotion-gate
 ```
 
+Then add:
+
+```text
+The stricter promotion matrix tests five APK-only profiles. The baseline profile reproduces 219 gate-pass rows, but strict control requirements leave zero eligible production rows; higher-confidence profiles pass zero rows. This is why the hybrid R8 lane is useful evidence but not promoted as SBOM authority today.
+```
+
+Optional regeneration command:
+
+```powershell
+python scripts\build_r8_strict_apk_promotion_gate_matrix.py
+```
+
 ## If They Ask Hard Questions
 
 | Question | Short answer |
@@ -354,13 +368,13 @@ apk-sbom r8-apk-structural-promotion-gate
 | Why not just add every missing dependency? | Some are metadata-only, source-only, aliases, project modules, or unavailable artifacts. Of the current source gaps, only 442 are remaining missing-reference candidates; 2281 are matcher-recall candidates. |
 | Why not promote the 1425 matcher suggestions into the SBOM? | They are source-context report-only suggestions. They need separate APK-only controls before becoming default SBOM components. |
 | Is the AI model now choosing versions? | No. It is report-only triage. It can suggest wording or review priority, but it cannot change selected versions, SBOM components, vulnerability labels, or metrics. |
-| Is the DL model a production APK detector? | No. It is a trained structured-token Transformer prototype for the PhD/AI workflow. Raw smali/DEX pretraining remains future work. |
+| Is the DL model a production APK detector? | No. It is a trained structured-token Transformer prototype for the PhD/AI workflow. A bounded raw DEX/opcode corpus now exists, but full raw-code pretraining and production wiring remain future work. |
 | Why not replace the matcher with one research method? | Different APK conditions fail differently. The router keeps the current matcher as the control baseline and chooses scoped experiments per row family, such as version-band rerank for adjacent AndroidX/Kotlin versions or R8 structural recall for strong opcode but weak name evidence. |
 | Did the version-band experiment fix wrong versions? | In the source-known upper-bound slice, 565 scoped wrong-version rows become fixable and 820 exact controls stay exact. It is not promoted because an APK-only full-DB reranker still has to prove it can choose those versions without source constraints. |
 | Did the APK-only reranker work? | No, and that is useful evidence. It made 0 safe fixes because only 44/582 scoped wrong-version rows expose the source version as a baseline alternative. The result blocks promotion and points to candidate-generation and version-specific evidence as the next work. |
 | Can candidate expansion make it promotable? | Not yet. The v3 deep probe expanded a representative Activity row to 134 same-coordinate references, but generic similarity selected an old wrong version. Candidate expansion must be paired with stronger version-specific evidence before promotion. |
 | Did R8 structural recall work? | It worked as report-only transparency: 1,000 source-context structural recall candidates are visible. It is not SBOM promotion because same-coordinate wrong-version and false-positive controls remain. |
-| Can the R8 structural lane be promoted after the APK-only gate? | Not yet. The APK-only gate passes 219 high-evidence rows, but 65 are blocked by same-coordinate control risk and 154 lack representative exact emitted controls, leaving 0 production promotion candidates. |
+| Can the R8 structural lane be promoted after the APK-only gate? | Not yet. The APK-only gate passes 219 high-evidence rows, but 65 are blocked by same-coordinate control risk and 154 lack representative exact emitted controls, leaving 0 production promotion candidates. The stricter five-profile matrix also leaves 0 production candidates. |
 | What is the next technical improvement? | Turn report-only structural recall into APK-only evidence by adding independent structural controls, then rerun exact, wrong-version, false-positive, boundary, and CVE-sensitive gates. |
 
 ## Live Commands Only If Needed

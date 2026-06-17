@@ -439,6 +439,16 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the Phase 6B LibAttention-inspired trained Transformer prototype, isolated from production reports.",
         },
         {
+            "table": "AI R8 independent corpus",
+            "source": "docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md",
+            "use": "Use as the larger project-heldout AI/R8 corpus manifest separating training-eligible rows from heldout/report-only evidence lanes.",
+        },
+        {
+            "table": "AI R8 raw opcode corpus",
+            "source": "docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md",
+            "use": "Use as the bounded raw DEX/opcode method-sequence corpus prototype for future Transformer training, with production wiring disabled.",
+        },
+        {
             "table": "Hybrid matcher router",
             "source": "docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md",
             "use": "Use as the report-only comparison between the current matcher and research tool-family strategies, with current hard rows routed to safe experiment profiles.",
@@ -467,6 +477,11 @@ def build_table_sources() -> list[dict[str, str]]:
             "table": "R8 APK-only structural promotion gate",
             "source": "docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md",
             "use": "Use as the APK-only evidence gate showing that strong structural rows exist, but zero rows satisfy production promotion controls today.",
+        },
+        {
+            "table": "R8 strict APK promotion gate matrix",
+            "source": "docs/evaluation/R8_STRICT_APK_PROMOTION_GATE_MATRIX.md",
+            "use": "Use as the stricter multi-profile APK-only control matrix confirming that the hybrid R8 structural lane still has zero production promotion candidates.",
         },
         {
             "table": "R8 multi-scale feature diagnostics",
@@ -797,6 +812,16 @@ def build_demo_package() -> list[dict[str, str]]:
             "talking_point": "Two real APK report smokes prove the hybrid-AI section is visible while components, selected versions, SBOM components, and vulnerability output remain unchanged.",
         },
         {
+            "item": "AI R8 independent corpus",
+            "path": "docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md",
+            "talking_point": "Larger project-heldout AI/R8 corpus manifest with 31,589 rows and explicit training versus heldout/report-only partitions.",
+        },
+        {
+            "item": "AI R8 raw opcode corpus",
+            "path": "docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md",
+            "talking_point": "Raw DEX/opcode corpus prototype with bounded method-level opcode sequences for future Transformer training, kept outside production decisions.",
+        },
+        {
             "item": "Version-band rerank experiment",
             "path": "docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md",
             "talking_point": "First router-driven source-known rerank experiment: 565 scoped wrong-version rows are fixable in the source-known lane while exact and false-positive controls stay visible.",
@@ -815,6 +840,11 @@ def build_demo_package() -> list[dict[str, str]]:
             "item": "R8 structural recall experiment",
             "path": "docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md",
             "talking_point": "Router-driven R8 structural recall lane: 1,000 source-context report-only candidates are useful for transparency, while 814 same-coordinate control-risk rows block automatic SBOM promotion.",
+        },
+        {
+            "item": "R8 strict APK promotion gate matrix",
+            "path": "docs/evaluation/R8_STRICT_APK_PROMOTION_GATE_MATRIX.md",
+            "talking_point": "Five stricter APK-only promotion profiles confirm the structural R8 lane remains report-only with zero production candidates.",
         },
         {
             "item": "Final report readiness package",

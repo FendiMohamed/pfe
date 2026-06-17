@@ -8,6 +8,12 @@ DEFAULT_AI_SUMMARY_JSON = Path("data/results/evaluation/ai-r8-assistant-summary.
 DEFAULT_AI_METRICS_JSON = Path("data/results/experiments/ai-r8-assistant/metrics.json")
 DEFAULT_DL_METRICS_JSON = Path("data/results/experiments/ai-r8-dl-prototype/metrics.json")
 DEFAULT_REPORT_ONLY_DEMO_JSON = Path("data/results/evaluation/ai-r8-report-only-demo.json")
+DEFAULT_INDEPENDENT_CORPUS_JSON = Path(
+    "data/results/experiments/ai-r8-independent-corpus/independent-corpus.json"
+)
+DEFAULT_RAW_OPCODE_CORPUS_JSON = Path(
+    "data/results/experiments/ai-r8-raw-opcode-prototype/raw-opcode-corpus.json"
+)
 DEFAULT_OUTPUT_JSON = Path("data/results/evaluation/ai-r8-final-evaluation.json")
 DEFAULT_OUTPUT_DOC = Path("docs/evaluation/AI_R8_FINAL_EVALUATION.md")
 
@@ -18,6 +24,8 @@ def write_final_evaluation(
     ai_metrics_json: str | Path = DEFAULT_AI_METRICS_JSON,
     dl_metrics_json: str | Path = DEFAULT_DL_METRICS_JSON,
     report_only_demo_json: str | Path = DEFAULT_REPORT_ONLY_DEMO_JSON,
+    independent_corpus_json: str | Path = DEFAULT_INDEPENDENT_CORPUS_JSON,
+    raw_opcode_corpus_json: str | Path = DEFAULT_RAW_OPCODE_CORPUS_JSON,
     output_json: str | Path = DEFAULT_OUTPUT_JSON,
     output_doc: str | Path = DEFAULT_OUTPUT_DOC,
 ) -> dict:
@@ -25,16 +33,22 @@ def write_final_evaluation(
     ai_metrics = _load_json(ai_metrics_json)
     dl_metrics = _load_json(dl_metrics_json)
     report_only_demo = _load_json(report_only_demo_json)
+    independent_corpus = _load_json(independent_corpus_json)
+    raw_opcode_corpus = _load_json(raw_opcode_corpus_json)
     payload = build_final_evaluation(
         ai_summary=ai_summary,
         ai_metrics=ai_metrics,
         dl_metrics=dl_metrics,
         report_only_demo=report_only_demo,
+        independent_corpus=independent_corpus,
+        raw_opcode_corpus=raw_opcode_corpus,
         sources={
-            "ai_summary_json": str(ai_summary_json),
-            "ai_metrics_json": str(ai_metrics_json),
-            "dl_metrics_json": str(dl_metrics_json),
-            "report_only_demo_json": str(report_only_demo_json),
+            "ai_summary_json": _normalize_path(ai_summary_json),
+            "ai_metrics_json": _normalize_path(ai_metrics_json),
+            "dl_metrics_json": _normalize_path(dl_metrics_json),
+            "report_only_demo_json": _normalize_path(report_only_demo_json),
+            "independent_corpus_json": _normalize_path(independent_corpus_json),
+            "raw_opcode_corpus_json": _normalize_path(raw_opcode_corpus_json),
         },
     )
 
@@ -64,7 +78,9 @@ def build_final_evaluation(
     ai_metrics: dict,
     dl_metrics: dict,
     report_only_demo: dict,
-    sources: dict,
+    independent_corpus: dict | None = None,
+    raw_opcode_corpus: dict | None = None,
+    sources: dict | None = None,
 ) -> dict:
     ai_model = ai_summary.get("model", {})
     ai_dataset = ai_summary.get("dataset", {})
@@ -74,6 +90,8 @@ def build_final_evaluation(
     dl_test = dl_metrics.get("test", {})
     dl_dataset = dl_metrics.get("dataset", {})
     demo_comparison = report_only_demo.get("comparison", {})
+    independent_summary = (independent_corpus or {}).get("summary", {})
+    raw_opcode_summary = (raw_opcode_corpus or {}).get("summary", {})
     report_only_guardrail_passed = all(
         [
             demo_comparison.get("detected_components_unchanged") is True,
@@ -127,6 +145,31 @@ def build_final_evaluation(
             "history": dl_metrics.get("history", []),
             "limitations": dl_metrics.get("limits", []),
         },
+        "follow_up_corpora": {
+            "independent_corpus": {
+                "status": "generated" if independent_summary else "missing",
+                "rows": independent_summary.get("rows"),
+                "training_eligible_rows": independent_summary.get(
+                    "training_eligible_rows"
+                ),
+                "heldout_or_report_only_rows": independent_summary.get(
+                    "heldout_or_report_only_rows"
+                ),
+                "unique_case_ids": independent_summary.get("unique_case_ids"),
+                "unique_coordinates": independent_summary.get("unique_coordinates"),
+                "external_corpus": independent_summary.get("external_corpus"),
+            },
+            "raw_opcode_corpus": {
+                "status": "generated" if raw_opcode_summary else "missing",
+                "apks_analyzed": raw_opcode_summary.get("apks_analyzed"),
+                "apks_skipped": raw_opcode_summary.get("apks_skipped"),
+                "method_sequence_rows": raw_opcode_summary.get(
+                    "method_sequence_rows"
+                ),
+                "vocab_size": raw_opcode_summary.get("vocab_size"),
+            },
+            "production_wiring": "disabled",
+        },
         "report_only_proof": {
             "guardrail_passed": report_only_guardrail_passed,
             "ai_section_present": report_only_demo.get("ai_report", {}).get(
@@ -144,22 +187,24 @@ def build_final_evaluation(
             "Phase 6A is a trained, explainable RandomForest report-only assistant.",
             "Phase 6A improves over simple baselines on a grouped case split and exposes feature-importance plus ablation evidence.",
             "Phase 6B is a trained tiny Transformer over structured project-evidence tokens, useful as a DL workflow proof but not as raw APK pretraining.",
+            "The follow-up corpus artifacts make the next AI step concrete: a larger project-heldout manifest and a bounded raw DEX/opcode sequence corpus, both report-only.",
             "Neither AI track changes selected versions, CycloneDX SBOM components, vulnerability labels, or source-validation metrics.",
         ],
-        "sources": sources,
+        "sources": sources or {},
     }
 
 
 def build_markdown(payload: dict) -> str:
     ml = payload["phase6a_ml"]
     dl = payload["phase6b_dl"]
+    corpora = payload.get("follow_up_corpora", {})
     proof = payload["report_only_proof"]
     lines = [
         "# AI R8 Final Evaluation",
         "",
         "Generated by `apk-sbom ai-r8-final-eval` or `scripts/build_ai_r8_final_evaluation.py`.",
         "",
-        "This is the single thesis/demo entry point for the Phase 6 ML/DL layer. It combines the trained Phase 6A RandomForest assistant, the isolated Phase 6B Transformer prototype, and the report-only guardrail proof.",
+        "This is the single thesis/demo entry point for the Phase 6 ML/DL layer. It combines the trained Phase 6A RandomForest assistant, the isolated Phase 6B Transformer prototype, the follow-up corpus artifacts, and the report-only guardrail proof.",
         "",
         "## Non-Negotiable Boundary",
         "",
@@ -219,7 +264,22 @@ def build_markdown(payload: dict) -> str:
             f"| Test macro-F1 | `{dl.get('test_macro_f1')}` |",
             f"| Test accuracy | `{dl.get('test_accuracy')}` |",
             "",
-            "The DL prototype uses structured project-evidence tokens from the current evaluation rows. It is a complete Transformer training/evaluation workflow, but it is not a raw smali pretraining corpus and it is not APK-only exact-version authority.",
+            "The DL prototype uses structured project-evidence tokens from the current evaluation rows. It is a complete Transformer training/evaluation workflow, but it is not APK-only exact-version authority.",
+            "",
+            "## Follow-Up AI Corpora",
+            "",
+            "| Corpus | Status | Key rows | Secondary rows | Notes |",
+            "|---|---|---:|---:|---|",
+            "| Independent project-heldout manifest | "
+            f"`{corpora.get('independent_corpus', {}).get('status')}` | "
+            f"{corpora.get('independent_corpus', {}).get('rows')} | "
+            f"{corpora.get('independent_corpus', {}).get('heldout_or_report_only_rows')} | "
+            "Training rows remain separated from heldout/report-only lanes. |",
+            "| Raw DEX/opcode method corpus | "
+            f"`{corpora.get('raw_opcode_corpus', {}).get('status')}` | "
+            f"{corpora.get('raw_opcode_corpus', {}).get('method_sequence_rows')} | "
+            f"{corpora.get('raw_opcode_corpus', {}).get('apks_analyzed')} | "
+            "Bounded opcode sequences for future Transformer training; production wiring disabled. |",
             "",
             "### DL Per-Class Metrics",
             "",
@@ -278,3 +338,7 @@ def _load_json(path: str | Path) -> dict:
     if not file_path.exists():
         return {}
     return json.loads(file_path.read_text(encoding="utf-8"))
+
+
+def _normalize_path(path: str | Path) -> str:
+    return Path(path).as_posix()

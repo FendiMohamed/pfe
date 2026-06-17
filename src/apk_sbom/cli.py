@@ -148,8 +148,10 @@ from apk_sbom.ai_r8_final_evaluation import (
     DEFAULT_AI_METRICS_JSON as DEFAULT_AI_R8_FINAL_AI_METRICS_JSON,
     DEFAULT_AI_SUMMARY_JSON as DEFAULT_AI_R8_FINAL_AI_SUMMARY_JSON,
     DEFAULT_DL_METRICS_JSON as DEFAULT_AI_R8_FINAL_DL_METRICS_JSON,
+    DEFAULT_INDEPENDENT_CORPUS_JSON as DEFAULT_AI_R8_FINAL_INDEPENDENT_CORPUS_JSON,
     DEFAULT_OUTPUT_DOC as DEFAULT_AI_R8_FINAL_OUTPUT_DOC,
     DEFAULT_OUTPUT_JSON as DEFAULT_AI_R8_FINAL_OUTPUT_JSON,
+    DEFAULT_RAW_OPCODE_CORPUS_JSON as DEFAULT_AI_R8_FINAL_RAW_OPCODE_CORPUS_JSON,
     DEFAULT_REPORT_ONLY_DEMO_JSON as DEFAULT_AI_R8_FINAL_REPORT_ONLY_DEMO_JSON,
     write_final_evaluation as write_ai_r8_final_evaluation,
 )
@@ -997,6 +999,16 @@ def build_parser() -> argparse.ArgumentParser:
         "--report-only-demo-json",
         default=str(DEFAULT_AI_R8_FINAL_REPORT_ONLY_DEMO_JSON),
         help="AI report-only guardrail demo JSON.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--independent-corpus-json",
+        default=str(DEFAULT_AI_R8_FINAL_INDEPENDENT_CORPUS_JSON),
+        help="AI/R8 independent corpus manifest JSON.",
+    )
+    ai_r8_final_eval_parser.add_argument(
+        "--raw-opcode-corpus-json",
+        default=str(DEFAULT_AI_R8_FINAL_RAW_OPCODE_CORPUS_JSON),
+        help="AI/R8 raw DEX opcode corpus JSON.",
     )
     ai_r8_final_eval_parser.add_argument(
         "--output-json",
@@ -1860,6 +1872,8 @@ def main(argv: list[str] | None = None) -> int:
                 ai_metrics_json=args.ai_metrics_json,
                 dl_metrics_json=args.dl_metrics_json,
                 report_only_demo_json=args.report_only_demo_json,
+                independent_corpus_json=args.independent_corpus_json,
+                raw_opcode_corpus_json=args.raw_opcode_corpus_json,
                 output_json=args.output_json,
                 output_doc=args.output_doc,
             )

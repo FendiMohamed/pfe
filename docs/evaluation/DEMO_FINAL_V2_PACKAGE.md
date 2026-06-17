@@ -40,6 +40,8 @@ This package is the current thesis/demo evidence set for the grown v2 reference 
 | AI R8 compact summary | `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` |
 | AI R8 final ML/DL evaluation | `docs/evaluation/AI_R8_FINAL_EVALUATION.md` |
 | AI R8 DL prototype | `docs/evaluation/AI_R8_DL_PROTOTYPE.md` |
+| AI R8 independent corpus | `docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md` |
+| AI R8 raw opcode corpus | `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` |
 | AI R8 report-only demo | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` |
 | Hybrid AI production reporting | `docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md` |
 | Final hybrid AI demo smoke | `docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md` |
@@ -49,6 +51,7 @@ This package is the current thesis/demo evidence set for the grown v2 reference 
 | Version-band candidate expansion v3 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` |
 | R8 structural recall experiment | `docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md` |
 | R8 APK-only structural promotion gate | `docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md` |
+| R8 strict APK promotion gate matrix | `docs/evaluation/R8_STRICT_APK_PROMOTION_GATE_MATRIX.md` |
 
 ## How To Present It
 
@@ -71,9 +74,11 @@ The v2 package now has an optional AI-assisted R8 triage layer. It is trained fr
 - report-only suggestions: `13736`;
 - Phase 6B model: `torch.nn.TransformerEncoder`;
 - Phase 6B structured-token test macro-F1: `0.977`;
+- larger project-heldout AI/R8 corpus rows: `31589` (`20523` training-eligible, `11066` heldout/report-only);
+- raw DEX/opcode prototype corpus: `1680` method-level opcode sequences from `14` APKs, `0` skipped;
 - no selected-version, SBOM, vulnerability-label, or source-validation metric changes.
 
-Use `docs/evaluation/AI_R8_FINAL_EVALUATION.md` as the single AI/ML/DL evidence entry point, `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` for the compact Phase 6A numbers, and `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` as the no-change proof. Regenerate the combined package with:
+Use `docs/evaluation/AI_R8_FINAL_EVALUATION.md` as the single AI/ML/DL evidence entry point, `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md` for the compact Phase 6A numbers, `docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md` for the larger heldout-corpus manifest, `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` for the raw DEX/opcode Transformer prototype corpus, and `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` as the no-change proof. Regenerate the combined package with:
 
 ```powershell
 apk-sbom ai-r8-final-eval
@@ -192,3 +197,5 @@ This is the current answer to "can we promote the hybrid R8 structural approach?
 ```powershell
 apk-sbom r8-apk-structural-promotion-gate
 ```
+
+`docs/evaluation/R8_STRICT_APK_PROMOTION_GATE_MATRIX.md` makes the promotion bar stricter by evaluating five APK-only profiles. The baseline profile reproduces the `219` gate-pass rows but strict control requirements still leave `0` eligible production rows; the four higher-confidence profiles leave `0` gate-pass rows. Verdict: `do-not-promote-strict-apk-gates-have-zero-candidates`.
