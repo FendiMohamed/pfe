@@ -113,7 +113,7 @@ async function build() {
   const ctx = makeContext();
 
   const slideResults = [];
-  for (let i = 1; i <= 12; i += 1) {
+  for (let i = 1; i <= 13; i += 1) {
     const slide = await drawSlide(presentation, ctx, i);
     const stem = `slide-${String(i).padStart(2, "0")}`;
     const previewPath = path.join(PREVIEW_DIR, `${stem}.png`);
@@ -164,13 +164,14 @@ async function build() {
       "Final v2 defense deck visual QA",
       "",
       "Mode: create, regenerated from editable artifact-tool slide modules.",
-      "Slide count: 12.",
+      "Slide count: 13.",
       "Checked items:",
       "- Cover metrics now use 927/1837 normal emitted confirmation, 84/84 controlled, and 6772/6772 v2 source-known lane.",
       "- Main results slide separates normal APK/source-validated metric from v2 upper-bound lane.",
       "- Demo proof slide includes clean SBOM, positive CVE, and transparency export panels.",
       "- Footer warns that emitted confirmation is not full recall and v2 is not APK-only accuracy.",
       "- Contact sheet and per-slide previews were regenerated.",
+      "- AI integration gate slide reports RF 0.708, MVP-safe Transformer 0.882, raw-opcode Transformer 0.110, and the report-only authority boundary.",
       "",
       "Remaining manual polish:",
       "- Add university template, names, logos, and date if required by the defense format.",

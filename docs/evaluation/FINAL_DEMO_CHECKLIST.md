@@ -20,13 +20,14 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | 12 | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` | Proof that AI suggestions are report-only and do not change SBOM content. |
 | 13 | `docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md` | Production `generate-report --include-hybrid-ai-assistance` integration, guarded as report-only. |
 | 14 | `docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md` | Final real-APK smoke proving the hybrid-AI section is visible while default report outputs stay unchanged. |
-| 15 | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Report-only matcher-improvement comparison and hybrid strategy router. |
-| 16 | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` | First router-driven source-known rerank experiment and controls. |
-| 17 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` | APK-only reranker prototype showing why source-known fixes are not safely promotable yet. |
-| 18 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` | Promotion gate combining source-known, APK-only, and deep candidate expansion evidence. |
-| 19 | `docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md` | Next router lane: source-context structural recall candidates, guarded as report-only. |
-| 20 | `docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md` | APK-only structural promotion gate showing why the hybrid R8 lane is not promoted into SBOM emission yet. |
-| 21 | `docs/evaluation/R8_STRICT_APK_PROMOTION_GATE_MATRIX.md` | Stricter multi-profile APK-only promotion matrix: 0 production candidates today. |
+| 15 | `docs/evaluation/FINAL_AI_DEFENSE_DEMO.md` | One-command clean/CVE/R8/AI defense verdict and guardrail checks. |
+| 16 | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Report-only matcher-improvement comparison and hybrid strategy router. |
+| 17 | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` | First router-driven source-known rerank experiment and controls. |
+| 18 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` | APK-only reranker prototype showing why source-known fixes are not safely promotable yet. |
+| 19 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` | Promotion gate combining source-known, APK-only, and deep candidate expansion evidence. |
+| 20 | `docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md` | Next router lane: source-context structural recall candidates, guarded as report-only. |
+| 21 | `docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md` | APK-only structural promotion gate showing why the hybrid R8 lane is not promoted into SBOM emission yet. |
+| 22 | `docs/evaluation/R8_STRICT_APK_PROMOTION_GATE_MATRIX.md` | Stricter multi-profile APK-only promotion matrix: 0 production candidates today. |
 
 ## Live Demo Artifacts
 
@@ -204,7 +205,7 @@ The tool has 100% real-world APK accuracy.
 | R8 structural recall experiment regenerated | 1658 rows, 1000 report-only candidates, 814 control-risk rows |
 | R8 APK-only structural promotion gate regenerated | 219 gate-pass rows, 0 promotion candidates, promotion blocked by controls |
 | R8 strict APK promotion gate matrix regenerated | 5 profiles, 0 production candidates |
-| Deck package validation | passed earlier: 12 slides, 12 notes slides |
+| Deck package validation | current editable deck: 13 slides, including the AI integration gate |
 
 ## Do Not Run Live
 
@@ -218,6 +219,7 @@ The tool has 100% real-world APK accuracy.
 python scripts\build_demo_final_transparency_export.py
 python scripts\build_thesis_artifact_index.py
 python scripts\build_graduation_demo_rehearsal.py
+python scripts\run_final_ai_defense_demo.py --refresh
 apk-sbom ai-r8-final-eval
 python scripts\build_hybrid_ai_production_report_evidence.py
 apk-sbom hybrid-matcher-router

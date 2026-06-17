@@ -344,7 +344,29 @@ function slide12(presentation, ctx) {
   return slide;
 }
 
-const slides = [slide01, slide02, slide03, slide04, slide05, slide06, slide07, slide08, slide09, slide10, slide11, slide12];
+function slide13(presentation, ctx) {
+  const slide = presentation.slides.add();
+  header(slide, ctx, "AI is integrated as an assistant, with deterministic SBOM authority preserved", "AI integration gate", 13);
+  metric(slide, ctx, "0.708", "RandomForest test macro-F1 on 20,523 grouped evidence rows", 76, 166, 250, 112, C.blue);
+  metric(slide, ctx, "0.882", "MVP-safe Transformer test macro-F1 without source shortcuts", 358, 166, 250, 112, C.teal);
+  metric(slide, ctx, "0.110", "raw-opcode Transformer macro-F1; below 0.128 baseline", 640, 166, 250, 112, C.red);
+  metric(slide, ctx, "31,589", "largest local AI/R8 evidence package rows", 922, 166, 250, 112, C.amber);
+
+  box(slide, ctx, 76, 324, 510, 208, "#FFFFFF", C.green);
+  text(slide, ctx, "Ready in the MVP", 102, 350, 260, 30, { size: 22, bold: true, color: C.green });
+  bullets(slide, ctx, ["report-only R8 and matcher-recall suggestions", "hybrid router and model status in JSON/HTML/Markdown", "clean and hard APK smoke outputs unchanged", "risk triage without changing CVE labels"], 102, 400, 420, 110, { size: 14 });
+
+  box(slide, ctx, 634, 324, 538, 208, "#FFFFFF", C.red);
+  text(slide, ctx, "Deliberately blocked", 660, 350, 280, 30, { size: 22, bold: true, color: C.red });
+  bullets(slide, ctx, ["AI-selected exact Maven versions", "AI changes to CycloneDX components", "AI-confirmed vulnerability labels", "raw-opcode production authority"], 660, 400, 430, 110, { size: 14 });
+
+  text(slide, ctx, "Promotion verdict: report-only ready; matcher/SBOM authority not ready because strict APK controls yield 0 eligible candidates.", 112, 574, 1056, 48, { size: 18, bold: true, align: "center", color: C.ink });
+  footer(slide, ctx);
+  note(slide, "Present the AI layer as a guarded research contribution. The RandomForest is integrated for report-only suggestions. The MVP-safe Transformer is a stronger report-only risk-triage candidate. The raw-opcode negative result is retained honestly. Across the final clean and hard APK smoke, the AI section appears while selected versions, SBOM components, and vulnerability output remain unchanged.");
+  return slide;
+}
+
+const slides = [slide01, slide02, slide03, slide04, slide05, slide06, slide07, slide08, slide09, slide10, slide11, slide12, slide13];
 
 export async function drawSlide(presentation, ctx, number) {
   return slides[number - 1](presentation, ctx);
