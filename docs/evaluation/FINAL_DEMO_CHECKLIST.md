@@ -12,19 +12,21 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | 4 | `docs/thesis/FINAL_V2_RESULTS_SECTION.md` | Thesis-ready wording that separates normal metrics from the v2 upper-bound lane. |
 | 5 | `docs/evaluation/DEMO_FINAL_TRANSPARENCY_REPORT.md` | Row-level dataset/source/emitted/vulnerability classification summary. |
 | 6 | `docs/evaluation/AI_R8_FINAL_EVALUATION.md` | Optional Phase 6 AI/ML/DL evidence for PhD-oriented discussion. |
-| 7 | `docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md` | Larger project-heldout AI/R8 corpus manifest with training vs heldout partitions. |
-| 8 | `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` | Raw DEX/opcode method-sequence corpus prototype for the future Transformer lane. |
-| 9 | `docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md` | Case-heldout raw-opcode Transformer result and baseline comparison, kept research-only. |
-| 10 | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` | Proof that AI suggestions are report-only and do not change SBOM content. |
-| 11 | `docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md` | Production `generate-report --include-hybrid-ai-assistance` integration, guarded as report-only. |
-| 12 | `docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md` | Final real-APK smoke proving the hybrid-AI section is visible while default report outputs stay unchanged. |
-| 13 | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Report-only matcher-improvement comparison and hybrid strategy router. |
-| 14 | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` | First router-driven source-known rerank experiment and controls. |
-| 15 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` | APK-only reranker prototype showing why source-known fixes are not safely promotable yet. |
-| 16 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` | Promotion gate combining source-known, APK-only, and deep candidate expansion evidence. |
-| 17 | `docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md` | Next router lane: source-context structural recall candidates, guarded as report-only. |
-| 18 | `docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md` | APK-only structural promotion gate showing why the hybrid R8 lane is not promoted into SBOM emission yet. |
-| 19 | `docs/evaluation/R8_STRICT_APK_PROMOTION_GATE_MATRIX.md` | Stricter multi-profile APK-only promotion matrix: 0 production candidates today. |
+| 7 | `docs/evaluation/AI_R8_MVP_INTEGRATION_GATE.md` | Final answer for whether AI can be integrated into the MVP: report-only yes, matcher/SBOM authority no. |
+| 8 | `docs/evaluation/AI_R8_DL_PROTOTYPE_MVP_SAFE.md` | Source-free structured-token Transformer run used by the MVP gate. |
+| 9 | `docs/evaluation/AI_R8_INDEPENDENT_CORPUS.md` | Larger project-heldout AI/R8 corpus manifest with training vs heldout partitions. |
+| 10 | `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` | Raw DEX/opcode method-sequence corpus prototype for the future Transformer lane. |
+| 11 | `docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md` | Case-heldout raw-opcode Transformer result and baseline comparison, kept research-only. |
+| 12 | `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md` | Proof that AI suggestions are report-only and do not change SBOM content. |
+| 13 | `docs/evaluation/HYBRID_AI_PRODUCTION_REPORTING.md` | Production `generate-report --include-hybrid-ai-assistance` integration, guarded as report-only. |
+| 14 | `docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md` | Final real-APK smoke proving the hybrid-AI section is visible while default report outputs stay unchanged. |
+| 15 | `docs/evaluation/HYBRID_MATCHER_ROUTER_V1.md` | Report-only matcher-improvement comparison and hybrid strategy router. |
+| 16 | `docs/evaluation/VERSION_BAND_RERANK_EXPERIMENT.md` | First router-driven source-known rerank experiment and controls. |
+| 17 | `docs/evaluation/VERSION_BAND_APK_RERANKER_V2.md` | APK-only reranker prototype showing why source-known fixes are not safely promotable yet. |
+| 18 | `docs/evaluation/VERSION_BAND_CANDIDATE_EXPANSION_V3.md` | Promotion gate combining source-known, APK-only, and deep candidate expansion evidence. |
+| 19 | `docs/evaluation/R8_STRUCTURAL_RECALL_EXPERIMENT.md` | Next router lane: source-context structural recall candidates, guarded as report-only. |
+| 20 | `docs/evaluation/R8_APK_STRUCTURAL_PROMOTION_GATE.md` | APK-only structural promotion gate showing why the hybrid R8 lane is not promoted into SBOM emission yet. |
+| 21 | `docs/evaluation/R8_STRICT_APK_PROMOTION_GATE_MATRIX.md` | Stricter multi-profile APK-only promotion matrix: 0 production candidates today. |
 
 ## Live Demo Artifacts
 
@@ -59,6 +61,9 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 | AI R8 RandomForest test macro-F1 | 0.708 |
 | AI R8 report-only suggestions | 13736 |
 | AI R8 Transformer structured-token test macro-F1 | 0.977 |
+| AI R8 MVP-safe Transformer test macro-F1 | 0.882 |
+| AI R8 MVP-safe Transformer test accuracy | 0.907 |
+| AI R8 MVP integration gate | report-only ready; matcher/SBOM/CVE authority blocked |
 | AI R8 independent corpus rows | 31589 |
 | AI R8 independent heldout/report-only rows | 11066 |
 | AI R8 raw opcode method-sequence rows | 1680 |
@@ -124,6 +129,12 @@ The AI layer is report-only triage. It demonstrates ML workflow and helps priori
 Use:
 
 ```text
+The stricter MVP-safe Transformer removes source-version and source-validation shortcut tokens; it still reaches 0.882 test macro-F1, so it supports report-only risk triage, not automatic matcher authority.
+```
+
+Use:
+
+```text
 The DL prototype is a trained structured-token Transformer workflow, not a production APK detector or raw smali pretraining result.
 ```
 
@@ -178,7 +189,9 @@ The tool has 100% real-world APK accuracy.
 | Graduation demo rehearsal regenerated | passed |
 | Hybrid AI production reporting regenerated | report-only production integration, DL production wiring disabled |
 | Final hybrid AI demo smoke regenerated | 2 targets, outputs unchanged, hybrid sections visible |
-| AI R8 final evaluation regenerated | includes Phase 6A, Phase 6B, independent corpus, raw opcode corpus, raw opcode Transformer, and report-only proof |
+| AI R8 final evaluation regenerated | includes Phase 6A, Phase 6B, MVP-safe Transformer, independent corpus, raw opcode corpus, raw opcode Transformer, integration gate, and report-only proof |
+| AI R8 MVP-safe Transformer trained | test macro-F1 0.882, test accuracy 0.907, source-free structured-token profile |
+| AI R8 MVP integration gate regenerated | report-only ready, matcher/SBOM/CVE authority blocked |
 | AI R8 independent corpus regenerated | 31589 rows, 20523 training-eligible, 11066 heldout/report-only |
 | AI R8 raw opcode corpus regenerated | 14 APKs analyzed, 1680 method sequences, 0 skipped |
 | AI R8 raw opcode Transformer trained | test macro-F1 0.110, below opcode-count baseline 0.128, research-only |

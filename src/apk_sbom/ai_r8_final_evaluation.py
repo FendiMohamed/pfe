@@ -17,6 +17,9 @@ DEFAULT_RAW_OPCODE_CORPUS_JSON = Path(
 DEFAULT_RAW_OPCODE_TRANSFORMER_METRICS_JSON = Path(
     "data/results/experiments/ai-r8-raw-opcode-prototype/metrics.json"
 )
+DEFAULT_MVP_INTEGRATION_GATE_JSON = Path(
+    "data/results/evaluation/ai-r8-mvp-integration-gate.json"
+)
 DEFAULT_OUTPUT_JSON = Path("data/results/evaluation/ai-r8-final-evaluation.json")
 DEFAULT_OUTPUT_DOC = Path("docs/evaluation/AI_R8_FINAL_EVALUATION.md")
 
@@ -32,6 +35,7 @@ def write_final_evaluation(
     raw_opcode_transformer_metrics_json: str | Path = (
         DEFAULT_RAW_OPCODE_TRANSFORMER_METRICS_JSON
     ),
+    mvp_integration_gate_json: str | Path = DEFAULT_MVP_INTEGRATION_GATE_JSON,
     output_json: str | Path = DEFAULT_OUTPUT_JSON,
     output_doc: str | Path = DEFAULT_OUTPUT_DOC,
 ) -> dict:
@@ -42,6 +46,7 @@ def write_final_evaluation(
     independent_corpus = _load_json(independent_corpus_json)
     raw_opcode_corpus = _load_json(raw_opcode_corpus_json)
     raw_opcode_transformer_metrics = _load_json(raw_opcode_transformer_metrics_json)
+    mvp_integration_gate = _load_json(mvp_integration_gate_json)
     payload = build_final_evaluation(
         ai_summary=ai_summary,
         ai_metrics=ai_metrics,
@@ -50,6 +55,7 @@ def write_final_evaluation(
         independent_corpus=independent_corpus,
         raw_opcode_corpus=raw_opcode_corpus,
         raw_opcode_transformer_metrics=raw_opcode_transformer_metrics,
+        mvp_integration_gate=mvp_integration_gate,
         sources={
             "ai_summary_json": _normalize_path(ai_summary_json),
             "ai_metrics_json": _normalize_path(ai_metrics_json),
@@ -60,6 +66,7 @@ def write_final_evaluation(
             "raw_opcode_transformer_metrics_json": _normalize_path(
                 raw_opcode_transformer_metrics_json
             ),
+            "mvp_integration_gate_json": _normalize_path(mvp_integration_gate_json),
         },
     )
 
@@ -92,6 +99,7 @@ def build_final_evaluation(
     independent_corpus: dict | None = None,
     raw_opcode_corpus: dict | None = None,
     raw_opcode_transformer_metrics: dict | None = None,
+    mvp_integration_gate: dict | None = None,
     sources: dict | None = None,
 ) -> dict:
     ai_model = ai_summary.get("model", {})
@@ -108,6 +116,7 @@ def build_final_evaluation(
     raw_opcode_transformer_comparison = (
         raw_opcode_transformer_metrics or {}
     ).get("baseline_comparison", {})
+    mvp_gate = mvp_integration_gate or {}
     report_only_guardrail_passed = all(
         [
             demo_comparison.get("detected_components_unchanged") is True,
@@ -203,6 +212,29 @@ def build_final_evaluation(
             },
             "production_wiring": "disabled",
         },
+        "mvp_integration_gate": {
+            "status": "generated" if mvp_gate else "missing",
+            "report_only_ready": mvp_gate.get("mvp_integration", {}).get(
+                "report_only_ready"
+            ),
+            "matcher_authority_ready": mvp_gate.get("mvp_integration", {}).get(
+                "matcher_authority_ready"
+            ),
+            "current_mvp_integration_level": mvp_gate.get("mvp_integration", {}).get(
+                "current_mvp_integration_level"
+            ),
+            "recommended_next_step": mvp_gate.get("mvp_integration", {}).get(
+                "recommended_next_step"
+            ),
+            "mvp_safe_transformer": mvp_gate.get("models", {}).get(
+                "phase6b_mvp_safe_transformer",
+                {},
+            ),
+            "decision_summary": {
+                key: value.get("decision")
+                for key, value in mvp_gate.get("model_decisions", {}).items()
+            },
+        },
         "report_only_proof": {
             "guardrail_passed": report_only_guardrail_passed,
             "ai_section_present": report_only_demo.get("ai_report", {}).get(
@@ -221,6 +253,7 @@ def build_final_evaluation(
             "Phase 6A improves over simple baselines on a grouped case split and exposes feature-importance plus ablation evidence.",
             "Phase 6B is a trained tiny Transformer over structured project-evidence tokens, useful as a DL workflow proof but not as raw APK pretraining.",
             "The follow-up corpus artifacts make the next AI step concrete: a larger project-heldout manifest, a bounded raw DEX/opcode sequence corpus, and an honest raw-opcode Transformer training run.",
+            "The MVP integration gate tests the largest local AI/R8 evidence package and keeps AI integrated only as report-only assistance.",
             "Neither AI track changes selected versions, CycloneDX SBOM components, vulnerability labels, or source-validation metrics.",
         ],
         "sources": sources or {},
@@ -231,6 +264,7 @@ def build_markdown(payload: dict) -> str:
     ml = payload["phase6a_ml"]
     dl = payload["phase6b_dl"]
     corpora = payload.get("follow_up_corpora", {})
+    integration_gate = payload.get("mvp_integration_gate", {})
     proof = payload["report_only_proof"]
     lines = [
         "# AI R8 Final Evaluation",
@@ -318,6 +352,40 @@ def build_markdown(payload: dict) -> str:
             f"{corpora.get('raw_opcode_transformer', {}).get('test_macro_f1')} | "
             f"{corpora.get('raw_opcode_transformer', {}).get('best_baseline_test_macro_f1')} | "
             f"`{corpora.get('raw_opcode_transformer', {}).get('verdict')}` |",
+            "",
+            "## MVP Integration Gate",
+            "",
+            "| Field | Value |",
+            "|---|---:|",
+            f"| Status | `{integration_gate.get('status')}` |",
+            f"| Report-only ready | `{integration_gate.get('report_only_ready')}` |",
+            f"| Matcher authority ready | `{integration_gate.get('matcher_authority_ready')}` |",
+            f"| Current integration level | `{integration_gate.get('current_mvp_integration_level')}` |",
+            f"| Recommended next step | `{integration_gate.get('recommended_next_step')}` |",
+            "",
+            "### Integration Decisions",
+            "",
+            "| Lane | Decision |",
+            "|---|---|",
+        ]
+    )
+    for key, value in sorted(integration_gate.get("decision_summary", {}).items()):
+        lines.append(f"| `{key}` | `{value}` |")
+    mvp_safe = integration_gate.get("mvp_safe_transformer", {})
+    if mvp_safe:
+        lines.extend(
+            [
+                "",
+                "### MVP-Safe Transformer",
+                "",
+                f"- Test macro-F1: `{mvp_safe.get('test_macro_f1')}`",
+                f"- Test accuracy: `{mvp_safe.get('test_accuracy')}`",
+                f"- Production wiring: `{mvp_safe.get('production_wiring')}`",
+                "",
+            ]
+        )
+    lines.extend(
+        [
             "",
             "### DL Per-Class Metrics",
             "",

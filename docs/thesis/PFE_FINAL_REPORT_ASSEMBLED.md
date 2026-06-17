@@ -355,9 +355,9 @@ The Phase 6A dataset is built from existing project evidence: matcher-recall dia
 
 The implemented Phase 6A model is a `RandomForestClassifier` with grouped train/validation/test split by `case_id`. The current trained model reports test macro-F1 `0.708`, compared with majority-class baseline test accuracy `0.383` and simple score-threshold baseline test accuracy `0.165`. The model produces `13736` report-only suggestions. Feature-importance and ablation outputs are included so the model is not presented as a black box.
 
-Phase 6B adds a trained tiny `torch.nn.TransformerEncoder` prototype over structured project-evidence tokens. It reaches structured-token test macro-F1 `0.977`, but this is deliberately framed as a DL workflow proof, not as APK-only exact-version authority. The follow-up corpus artifacts make the next AI step concrete: a `31589`-row project-heldout AI/R8 manifest and `1680` bounded raw DEX/opcode method sequences from `14` APKs, both kept outside production decisions. A case-heldout raw-opcode Transformer is also trained; it reaches test macro-F1 `0.110`, below the opcode-count baseline `0.128`, so it is documented as research-only negative evidence rather than promoted.
+Phase 6B adds a trained tiny `torch.nn.TransformerEncoder` prototype over structured project-evidence tokens. It reaches structured-token test macro-F1 `0.977`, but this is deliberately framed as a DL workflow proof, not as APK-only exact-version authority. A stricter MVP-safe/source-free Transformer profile removes source-version, raw candidate-version, source-rank, source-validation-role, and diagnostic-context shortcut tokens; it still reaches test macro-F1 `0.882` and test accuracy `0.907`. The follow-up corpus artifacts make the next AI step concrete: a `31589`-row project-heldout AI/R8 manifest and `1680` bounded raw DEX/opcode method sequences from `14` APKs, both kept outside production decisions. A case-heldout raw-opcode Transformer is also trained; it reaches test macro-F1 `0.110`, below the opcode-count baseline `0.128`, so it is documented as research-only negative evidence rather than promoted.
 
-The important policy is the guardrail: AI can suggest `suggest_report_only`, `suppress_uncertain`, or `risk_only` wording, but it cannot emit confirmed versions, change CycloneDX SBOM components, change selected versions, change OSV/CVE labels, or change source-validation metrics. A controlled report demo confirms this behavior: adding AI suggestions creates the `AI-Assisted R8 Suggestions` report section while keeping detected components and normalized SBOM content unchanged.
+The important policy is the guardrail: AI can suggest `suggest_report_only`, `suppress_uncertain`, or `risk_only` wording, but it cannot emit confirmed versions, change CycloneDX SBOM components, change selected versions, change OSV/CVE labels, or change source-validation metrics. The MVP integration gate now states this as an explicit decision: report-only AI assistance is ready for the MVP, but matcher/SBOM/CVE authority remains blocked because strict APK-only promotion candidates are still `0` and raw-opcode DL is below baseline. A controlled report demo confirms this behavior: adding AI suggestions creates the `AI-Assisted R8 Suggestions` report section while keeping detected components and normalized SBOM content unchanged.
 
 The compact evidence files are:
 
@@ -365,8 +365,10 @@ The compact evidence files are:
 - `docs/evaluation/AI_R8_ASSISTANT_SUMMARY.md`
 - `docs/evaluation/AI_R8_ASSISTANT_DIAGNOSTICS.md`
 - `docs/evaluation/AI_R8_FINAL_EVALUATION.md`
+- `docs/evaluation/AI_R8_MVP_INTEGRATION_GATE.md`
 - `docs/evaluation/AI_R8_REPORT_ONLY_DEMO.md`
 - `docs/evaluation/AI_R8_DL_PROTOTYPE.md`
+- `docs/evaluation/AI_R8_DL_PROTOTYPE_MVP_SAFE.md`
 
 ## 7. Limitations and Threats to Validity
 

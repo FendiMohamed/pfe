@@ -13,6 +13,7 @@ from apk_sbom.ai_r8_final_evaluation import (  # noqa: E402
     DEFAULT_AI_SUMMARY_JSON,
     DEFAULT_DL_METRICS_JSON,
     DEFAULT_INDEPENDENT_CORPUS_JSON,
+    DEFAULT_MVP_INTEGRATION_GATE_JSON,
     DEFAULT_OUTPUT_DOC,
     DEFAULT_OUTPUT_JSON,
     DEFAULT_RAW_OPCODE_CORPUS_JSON,
@@ -50,6 +51,10 @@ def build_parser() -> argparse.ArgumentParser:
         "--raw-opcode-transformer-metrics-json",
         default=str(DEFAULT_RAW_OPCODE_TRANSFORMER_METRICS_JSON),
     )
+    parser.add_argument(
+        "--mvp-integration-gate-json",
+        default=str(DEFAULT_MVP_INTEGRATION_GATE_JSON),
+    )
     parser.add_argument("--output-json", default=str(DEFAULT_OUTPUT_JSON))
     parser.add_argument("--output-doc", default=str(DEFAULT_OUTPUT_DOC))
     return parser
@@ -65,6 +70,7 @@ def main() -> int:
         independent_corpus_json=args.independent_corpus_json,
         raw_opcode_corpus_json=args.raw_opcode_corpus_json,
         raw_opcode_transformer_metrics_json=args.raw_opcode_transformer_metrics_json,
+        mvp_integration_gate_json=args.mvp_integration_gate_json,
         output_json=args.output_json,
         output_doc=args.output_doc,
     )

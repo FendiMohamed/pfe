@@ -1,6 +1,6 @@
 # AI-Assisted R8 Method Selection
 
-Status: Phase 6A classical ML implementation is trained and report-only; Phase 6B DL/Transformer is trained as an isolated structured-token research prototype; follow-up corpus artifacts now include a larger project-heldout manifest, a bounded raw DEX/opcode method-sequence corpus, and an honest case-heldout raw-opcode Transformer run.
+Status: Phase 6A classical ML implementation is trained and report-only; Phase 6B DL/Transformer is trained as an isolated structured-token research prototype; a stricter MVP-safe/source-free Transformer run now exists; follow-up corpus artifacts include a larger project-heldout manifest, a bounded raw DEX/opcode method-sequence corpus, and an honest case-heldout raw-opcode Transformer run.
 
 This document explains why the project now uses an AI-assisted R8 layer without allowing AI to become the final SBOM, version, or CVE authority.
 
@@ -8,7 +8,7 @@ This document explains why the project now uses an AI-assisted R8 layer without 
 
 Classical ML uses manually engineered features and relatively small models. In this project, the Phase 6A assistant uses matcher and diagnostic features that already exist in the evaluation artifacts: score gaps, package/class/method/opcode/literal/dependency signals, matched element counts, R8/minified flags, and clean/partial/boundary case classes.
 
-Deep learning learns representations from larger token or graph inputs. The Phase 6B prototype is LibAttention-inspired and uses a small Transformer encoder. In the current implementation, its main trained model uses a structured-token view of project evidence rows rather than raw smali pretraining. A bounded raw DEX/opcode corpus and raw-opcode Transformer run now exist, but the case-heldout result does not beat the opcode-count baseline. It therefore needs larger independent collection, richer context, model iteration, and validation before it can influence reports.
+Deep learning learns representations from larger token or graph inputs. The Phase 6B prototype is LibAttention-inspired and uses a small Transformer encoder. In the current implementation, its main trained model uses a structured-token view of project evidence rows rather than raw smali pretraining. A stricter MVP-safe profile removes source-version tokens, raw candidate-version tokens, source-validation-only flags, source-rank features, and diagnostic context labels; it still reaches test macro-F1 `0.882` on the 20,523-row local dataset, so it is useful as report-only risk-triage evidence. A bounded raw DEX/opcode corpus and raw-opcode Transformer run also exist, but the case-heldout raw-opcode result does not beat the opcode-count baseline. It therefore needs larger independent collection, richer context, model iteration, and validation before it can influence reports.
 
 ## Research Basis
 
@@ -24,7 +24,7 @@ The default matcher remains unchanged.
 
 Phase 6A is implemented first because it is explainable, fast, compatible with current artifacts, and easy to evaluate by grouped case splits. It trains a `RandomForestClassifier` when optional dependencies are installed and writes report-only suggestions.
 
-Phase 6B is isolated because a Transformer path is more research-heavy. The current trained prototype classifies identity-risk labels from structured evidence tokens, `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` provides raw opcode sequences, and `docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md` records the first case-heldout raw-opcode training run. It remains kept out of `generate-report` because the raw-opcode Transformer is currently research-only and not promotable; a future raw-code model would need to outperform simple baselines and pass controlled, clean-real, partial-real, and boundary controls.
+Phase 6B is isolated because a Transformer path is more research-heavy. The current trained prototype classifies identity-risk labels from structured evidence tokens, `docs/evaluation/AI_R8_DL_PROTOTYPE_MVP_SAFE.md` records the stricter source-free structured-token run, `docs/evaluation/AI_R8_RAW_OPCODE_CORPUS.md` provides raw opcode sequences, and `docs/evaluation/AI_R8_RAW_OPCODE_TRANSFORMER.md` records the first case-heldout raw-opcode training run. It remains kept out of matcher/SBOM authority because the integration gate only approves report-only assistance; a future raw-code model would need to outperform simple baselines and pass controlled, clean-real, partial-real, and boundary controls.
 
 ## Authority Boundaries
 
@@ -53,6 +53,7 @@ apk-sbom ai-r8-build-dataset
 apk-sbom ai-r8-train
 apk-sbom ai-r8-suggest
 apk-sbom ai-r8-final-eval
+apk-sbom ai-r8-integration-gate
 ```
 
 Default artifacts:
@@ -65,6 +66,7 @@ data/results/experiments/ai-r8-assistant/metrics.json
 data/results/experiments/ai-r8-assistant/suggestions.json
 docs/evaluation/AI_R8_ASSISTANT_DIAGNOSTICS.md
 docs/evaluation/AI_R8_FINAL_EVALUATION.md
+docs/evaluation/AI_R8_MVP_INTEGRATION_GATE.md
 ```
 
 Optional dependency:
@@ -98,7 +100,7 @@ The final ML/DL evidence package can be regenerated from the MVP CLI:
 apk-sbom ai-r8-final-eval
 ```
 
-This command combines the Phase 6A RandomForest metrics, Phase 6B Transformer prototype metrics, and report-only guardrail proof. It still does not change matcher scoring, SBOM output, or vulnerability labels.
+This command combines the Phase 6A RandomForest metrics, Phase 6B Transformer prototype metrics, follow-up corpus evidence, and report-only guardrail proof. `apk-sbom ai-r8-integration-gate` then answers the MVP question directly: report-only AI assistance is ready, but matcher/SBOM/CVE authority is not. These commands still do not change matcher scoring, SBOM output, or vulnerability labels.
 
 ## Phase 6B Prototype
 
@@ -115,11 +117,14 @@ Output:
 
 ```text
 data/results/experiments/ai-r8-dl-prototype/metrics.json
+data/results/experiments/ai-r8-dl-prototype/metrics-mvp-safe.json
 data/results/experiments/ai-r8-dl-prototype/token-corpus.json
+data/results/experiments/ai-r8-dl-prototype/token-corpus-mvp-safe.json
 docs/evaluation/AI_R8_DL_PROTOTYPE.md
+docs/evaluation/AI_R8_DL_PROTOTYPE_MVP_SAFE.md
 ```
 
-The model family is `torch.nn.TransformerEncoder`, with the task framed as multiclass identity-risk classification. It is not exact-version authority. The current trained model must be presented as a DL workflow proof, while the raw DEX/opcode corpus should be presented as a future-training dataset prototype rather than a production APK deep detector.
+The model family is `torch.nn.TransformerEncoder`, with the task framed as multiclass identity-risk classification. It is not exact-version authority. The full structured-token model reaches test macro-F1 `0.977`; the MVP-safe/source-free structured-token model reaches test macro-F1 `0.882`; the raw-opcode Transformer reaches only `0.110`, below its opcode-count baseline `0.128`. Therefore the current MVP can present DL as report-only AI assistance and PhD-ready experimentation, while raw DEX/opcode DL remains future work rather than a production APK detector.
 
 ## PhD Value
 

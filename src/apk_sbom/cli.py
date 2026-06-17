@@ -156,6 +156,20 @@ from apk_sbom.ai_r8_final_evaluation import (
     DEFAULT_REPORT_ONLY_DEMO_JSON as DEFAULT_AI_R8_FINAL_REPORT_ONLY_DEMO_JSON,
     write_final_evaluation as write_ai_r8_final_evaluation,
 )
+from apk_sbom.ai_r8_mvp_integration_gate import (
+    DEFAULT_AI_METRICS_JSON as DEFAULT_AI_R8_GATE_AI_METRICS_JSON,
+    DEFAULT_AI_SUGGESTIONS_JSON as DEFAULT_AI_R8_GATE_AI_SUGGESTIONS_JSON,
+    DEFAULT_FINAL_SMOKE_JSON as DEFAULT_AI_R8_GATE_FINAL_SMOKE_JSON,
+    DEFAULT_HYBRID_PRODUCTION_JSON as DEFAULT_AI_R8_GATE_HYBRID_PRODUCTION_JSON,
+    DEFAULT_INDEPENDENT_CORPUS_JSON as DEFAULT_AI_R8_GATE_INDEPENDENT_CORPUS_JSON,
+    DEFAULT_MVP_SAFE_DL_METRICS_JSON as DEFAULT_AI_R8_GATE_MVP_SAFE_DL_METRICS_JSON,
+    DEFAULT_OUTPUT_DOC as DEFAULT_AI_R8_GATE_OUTPUT_DOC,
+    DEFAULT_OUTPUT_JSON as DEFAULT_AI_R8_GATE_OUTPUT_JSON,
+    DEFAULT_RAW_OPCODE_DL_METRICS_JSON as DEFAULT_AI_R8_GATE_RAW_OPCODE_DL_METRICS_JSON,
+    DEFAULT_STRICT_GATE_MATRIX_JSON as DEFAULT_AI_R8_GATE_STRICT_GATE_MATRIX_JSON,
+    DEFAULT_STRUCTURED_DL_METRICS_JSON as DEFAULT_AI_R8_GATE_STRUCTURED_DL_METRICS_JSON,
+    write_integration_gate as write_ai_r8_integration_gate,
+)
 from apk_sbom.hybrid_matcher_router import (
     DEFAULT_AI_SUGGESTIONS_JSON as DEFAULT_HYBRID_MATCHER_AI_SUGGESTIONS_JSON,
     DEFAULT_MATCHER_RECALL_JSON as DEFAULT_HYBRID_MATCHER_RECALL_JSON,
@@ -1017,6 +1031,11 @@ def build_parser() -> argparse.ArgumentParser:
         help="AI/R8 raw DEX opcode Transformer metrics JSON.",
     )
     ai_r8_final_eval_parser.add_argument(
+        "--mvp-integration-gate-json",
+        default=str(DEFAULT_AI_R8_GATE_OUTPUT_JSON),
+        help="AI/R8 MVP integration gate JSON.",
+    )
+    ai_r8_final_eval_parser.add_argument(
         "--output-json",
         default=str(DEFAULT_AI_R8_FINAL_OUTPUT_JSON),
         help="Output final AI/DL evaluation JSON.",
@@ -1025,6 +1044,66 @@ def build_parser() -> argparse.ArgumentParser:
         "--output-doc",
         default=str(DEFAULT_AI_R8_FINAL_OUTPUT_DOC),
         help="Output final AI/DL evaluation Markdown.",
+    )
+
+    ai_r8_gate_parser = subparsers.add_parser(
+        "ai-r8-integration-gate",
+        help="Build the AI R8 MVP integration readiness gate.",
+    )
+    ai_r8_gate_parser.add_argument(
+        "--ai-metrics-json",
+        default=str(DEFAULT_AI_R8_GATE_AI_METRICS_JSON),
+        help="Phase 6A RandomForest metrics JSON.",
+    )
+    ai_r8_gate_parser.add_argument(
+        "--ai-suggestions-json",
+        default=str(DEFAULT_AI_R8_GATE_AI_SUGGESTIONS_JSON),
+        help="Phase 6A report-only suggestions JSON.",
+    )
+    ai_r8_gate_parser.add_argument(
+        "--structured-dl-metrics-json",
+        default=str(DEFAULT_AI_R8_GATE_STRUCTURED_DL_METRICS_JSON),
+        help="Full structured-token Transformer metrics JSON.",
+    )
+    ai_r8_gate_parser.add_argument(
+        "--mvp-safe-dl-metrics-json",
+        default=str(DEFAULT_AI_R8_GATE_MVP_SAFE_DL_METRICS_JSON),
+        help="Source-free MVP-safe structured-token Transformer metrics JSON.",
+    )
+    ai_r8_gate_parser.add_argument(
+        "--raw-opcode-dl-metrics-json",
+        default=str(DEFAULT_AI_R8_GATE_RAW_OPCODE_DL_METRICS_JSON),
+        help="Raw opcode Transformer metrics JSON.",
+    )
+    ai_r8_gate_parser.add_argument(
+        "--independent-corpus-json",
+        default=str(DEFAULT_AI_R8_GATE_INDEPENDENT_CORPUS_JSON),
+        help="Largest local AI/R8 corpus manifest JSON.",
+    )
+    ai_r8_gate_parser.add_argument(
+        "--hybrid-production-json",
+        default=str(DEFAULT_AI_R8_GATE_HYBRID_PRODUCTION_JSON),
+        help="Hybrid/AI production report-only evidence JSON.",
+    )
+    ai_r8_gate_parser.add_argument(
+        "--final-smoke-json",
+        default=str(DEFAULT_AI_R8_GATE_FINAL_SMOKE_JSON),
+        help="Final hybrid/AI smoke evidence JSON.",
+    )
+    ai_r8_gate_parser.add_argument(
+        "--strict-gate-matrix-json",
+        default=str(DEFAULT_AI_R8_GATE_STRICT_GATE_MATRIX_JSON),
+        help="Strict APK-only promotion gate matrix JSON.",
+    )
+    ai_r8_gate_parser.add_argument(
+        "--output-json",
+        default=str(DEFAULT_AI_R8_GATE_OUTPUT_JSON),
+        help="Output AI/R8 MVP integration gate JSON.",
+    )
+    ai_r8_gate_parser.add_argument(
+        "--output-doc",
+        default=str(DEFAULT_AI_R8_GATE_OUTPUT_DOC),
+        help="Output AI/R8 MVP integration gate Markdown.",
     )
 
     hybrid_matcher_parser = subparsers.add_parser(
@@ -1881,6 +1960,29 @@ def main(argv: list[str] | None = None) -> int:
                 independent_corpus_json=args.independent_corpus_json,
                 raw_opcode_corpus_json=args.raw_opcode_corpus_json,
                 raw_opcode_transformer_metrics_json=args.raw_opcode_transformer_metrics_json,
+                mvp_integration_gate_json=args.mvp_integration_gate_json,
+                output_json=args.output_json,
+                output_doc=args.output_doc,
+            )
+        except Exception as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 1
+
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "ai-r8-integration-gate":
+        try:
+            result = write_ai_r8_integration_gate(
+                ai_metrics_json=args.ai_metrics_json,
+                ai_suggestions_json=args.ai_suggestions_json,
+                structured_dl_metrics_json=args.structured_dl_metrics_json,
+                mvp_safe_dl_metrics_json=args.mvp_safe_dl_metrics_json,
+                raw_opcode_dl_metrics_json=args.raw_opcode_dl_metrics_json,
+                independent_corpus_json=args.independent_corpus_json,
+                hybrid_production_json=args.hybrid_production_json,
+                final_smoke_json=args.final_smoke_json,
+                strict_gate_matrix_json=args.strict_gate_matrix_json,
                 output_json=args.output_json,
                 output_doc=args.output_doc,
             )
