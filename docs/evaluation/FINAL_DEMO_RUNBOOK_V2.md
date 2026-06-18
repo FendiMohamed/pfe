@@ -197,6 +197,16 @@ Then add:
 The final real-APK smoke compares default and hybrid-AI reports for F-Droid and Aegis Authenticator. In both cases, detected components, selected versions, CycloneDX components, and vulnerability output remain unchanged, while the hybrid assistance section is visible in JSON, Markdown, and HTML.
 ```
 
+Single-command defense verification:
+
+```powershell
+python scripts\run_final_ai_defense_demo.py --refresh
+```
+
+Open `docs/evaluation/FINAL_AI_DEFENSE_DEMO.md`. The command refreshes the
+clean/hard APK hybrid smoke and AI gate, checks the controlled positive-CVE
+artifact, and exits nonzero unless all defense guardrails pass.
+
 Optional regeneration command:
 
 ```powershell

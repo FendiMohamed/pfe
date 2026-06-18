@@ -659,9 +659,14 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the slide-by-slide defense script with claims, proof objects, and speaker notes.",
         },
         {
+            "table": "Defense presentation guide",
+            "source": "docs/thesis/DEFENSE_PRESENTATION_GUIDE.md",
+            "use": "Use as the current 13-slide speaking guide, timing plan, demo fallback, required facts, and expected-jury-question reference.",
+        },
+        {
             "table": "Editable defense deck",
             "source": "outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx",
-            "use": "Use as the current editable PPTX defense deck before applying any university template.",
+            "use": "Use as the modernized 13-slide editable PPTX defense deck before applying university identity details.",
         },
         {
             "table": "Defense deck QA scorecard",
@@ -706,7 +711,7 @@ def build_figure_plan() -> list[dict[str, str]]:
         {
             "figure": "Defense deck contact sheet",
             "source": "outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/preview/contact-sheet.png",
-            "caption": "Visual overview of the final 12-slide defense deck.",
+            "caption": "Visual overview of the modernized 13-slide defense deck.",
         },
     ]
 
@@ -914,7 +919,7 @@ def build_final_report_checklist() -> list[dict[str, str]]:
         {
             "section": "Presentation",
             "status": "editable-deck-ready",
-            "next_action": "Use `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx`, then apply university template details, names, screenshots, and the v2 result wording from `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md`.",
+            "next_action": "Use the modernized deck at `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx` together with `docs/thesis/DEFENSE_PRESENTATION_GUIDE.md`, then add required university identity details.",
         },
         {
             "section": "Final packaging",

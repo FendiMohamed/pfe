@@ -113,7 +113,7 @@ async function build() {
   const ctx = makeContext();
 
   const slideResults = [];
-  for (let i = 1; i <= 12; i += 1) {
+  for (let i = 1; i <= 13; i += 1) {
     const slide = await drawSlide(presentation, ctx, i);
     const stem = `slide-${String(i).padStart(2, "0")}`;
     const previewPath = path.join(PREVIEW_DIR, `${stem}.png`);
@@ -161,16 +161,18 @@ async function build() {
   await fs.writeFile(
     path.join(QA_DIR, "visual-qa.txt"),
     [
-      "Final v2 defense deck visual QA",
+      "Modern defense deck visual QA",
       "",
       "Mode: create, regenerated from editable artifact-tool slide modules.",
-      "Slide count: 12.",
+      "Slide count: 13.",
       "Checked items:",
-      "- Cover metrics now use 927/1837 normal emitted confirmation, 84/84 controlled, and 6772/6772 v2 source-known lane.",
-      "- Main results slide separates normal APK/source-validated metric from v2 upper-bound lane.",
-      "- Demo proof slide includes clean SBOM, positive CVE, and transparency export panels.",
-      "- Footer warns that emitted confirmation is not full recall and v2 is not APK-only accuracy.",
-      "- Contact sheet and per-slide previews were regenerated.",
+      "- All 13 slides were redesigned with alternating night/paper canvases and native editable objects.",
+      "- Dense tables were replaced by evidence maps, pipelines, result lanes, APK-family panels, and demo windows.",
+      "- Main results slide separates the 927/1837 normal metric from the 6772/6772 source-known upper bound.",
+      "- Demo proof slide includes clean SBOM, positive CVE, and transparency-export evidence.",
+      "- AI slide reports RF 0.708, MVP-safe Transformer 0.882, raw-opcode Transformer 0.110, and the blocked authority boundary.",
+      "- The deck now ends with a contribution-led conclusion and explicit next research steps.",
+      "- Contact sheet and all per-slide previews were regenerated and visually reviewed.",
       "",
       "Remaining manual polish:",
       "- Add university template, names, logos, and date if required by the defense format.",

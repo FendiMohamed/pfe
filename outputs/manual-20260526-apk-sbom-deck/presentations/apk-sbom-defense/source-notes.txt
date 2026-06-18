@@ -1,9 +1,10 @@
 Final v2 defense deck source notes
-Generated: 2026-06-15
+Generated: 2026-06-18
 
 Deck mode:
 - Create-mode deck regenerated from editable artifact-tool slide modules.
 - Output remains the existing defense deck path: outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx
+- Visual refresh replaces table-first layouts with alternating dark/light research-defense scenes, evidence diagrams, two-lane result framing, demo windows, and a contribution-led conclusion.
 
 Sources and facts:
 - docs/evaluation/THESIS_EVALUATION_TABLES.md
@@ -20,6 +21,10 @@ Sources and facts:
   - Supports state-of-the-art and implementation traceability slide.
 - docs/dev/RUNBOOK.md
   - Supports clean F-Droid, controlled vulnerable Jackson, and OSV demo artifacts.
+- docs/evaluation/AI_R8_MVP_INTEGRATION_GATE.md
+  - Supports the AI integration slide: RandomForest macro-F1 0.708, MVP-safe Transformer macro-F1 0.882, raw-opcode Transformer macro-F1 0.110 versus 0.128 baseline, 31,589 local evidence rows, report-only readiness, and blocked matcher/SBOM authority.
+- docs/evaluation/FINAL_HYBRID_AI_DEMO_SMOKE.md
+  - Supports the unchanged-output claim across clean F-Droid and hard Aegis report pairs.
 
 Asset policy:
 - No external logos or unverified brand assets are embedded.
