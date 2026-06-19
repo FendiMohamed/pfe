@@ -32,6 +32,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--output-dashboard-json", default=str(DEFAULT_OUTPUT_DASHBOARD_JSON))
     parser.add_argument("--offset", type=int, default=0)
     parser.add_argument("--limit", type=int)
+    parser.add_argument(
+        "--case",
+        action="append",
+        help="Run only this case id. Can be repeated.",
+    )
     parser.add_argument("--force", action="store_true")
     parser.add_argument(
         "--min-score",
@@ -77,6 +82,17 @@ def main() -> int:
 
     dashboard = read_json(source_dashboard_path)
     cases = runnable_cases(dashboard)
+    if args.case:
+        selected_case_ids = set(args.case)
+        cases = [case for case in cases if str(case.get("case_id")) in selected_case_ids]
+        missing_case_ids = selected_case_ids - {
+            str(case.get("case_id")) for case in cases
+        }
+        if missing_case_ids:
+            raise SystemExit(
+                "unknown or unrunnable selected case id(s): "
+                + ", ".join(sorted(missing_case_ids))
+            )
     selected = cases[args.offset :]
     if args.limit is not None:
         selected = selected[: args.limit]
