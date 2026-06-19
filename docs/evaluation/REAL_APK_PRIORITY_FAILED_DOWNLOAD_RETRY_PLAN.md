@@ -93,6 +93,38 @@ Conversion status counts by retry root:
 
 The retry pass keeps the remaining unrecovered/source-boundary rows explicit instead of silently counting them as covered.
 
+## Lightweight Recovery Follow-on
+
+The bounded follow-on reused complete feature rows before attempting more
+downloads:
+
+- `29` exact coordinate-version rows were already converted and stored in
+  `reference_features_demo_final_large_v2.sqlite`; they were copied into the
+  priority DB with their child feature tables.
+- A 30-slot lightweight network pass then tried small archived JCenter and
+  Google Maven candidates. Archived JCenter returned 404 for all 25 AAR and
+  JAR candidates. Google Maven recovered
+  `com.android.support:exifinterface@28.0.0`, which converted and stored
+  successfully; four Accompanist/DashClock rows remained 404.
+- A follow-up mirror pass recovered `18/25` archived JCenter AARs from
+  `https://maven.aliyun.com/repository/jcenter`; all 18 converted and stored.
+- The exact-source I2P follow-on built, converted, and stored `4` additional
+  modules at version `2.11.0-1`.
+- The exact-tag MaterialPopupMenu follow-on built, converted, and stored
+  `com.github.zawadz88.materialpopupmenu:material-popup-menu@3.4.0`.
+- The priority DB now contains `2477` components / `1164` coordinates.
+- Remaining unresolved/boundary slots: `39`, including `15` repeated and `24`
+  single-observed rows.
+- Exact source-row coverage is now `9657/12082` (`79.9%`) and coordinate
+  coverage is `10767/12082` (`89.1%`).
+
+The remaining repeated rows are predominantly alias-style versions or
+metadata-only `kotlin-stdlib-common` rows. They are not honest DEX conversion
+targets. Heavy React rows, two exhausted JitPack rows, failed archived JCenter
+artifacts, and source/module aliases remain explicit. The four I2P rows were
+removed from this boundary set after their exact-source Gradle build passed;
+MaterialPopupMenu was removed after its exact-tag validation-copy build passed.
+
 ## Next Step
 
 Use the recovered priority DB for the source-validation/report rerun, and inspect the remaining unrecovered rows only through explicit alias/repository evidence. Do not treat the remaining source/module aliases as covered until that evidence exists.

@@ -409,7 +409,12 @@ Current feature extraction counts:
 
 ## Next Batch
 
-The source-observed catalog is exhausted, so the next useful work is documentation reconciliation and the follow-on all-versions expansion lane. Keep `com.github.houbb:heaven@0.13.0` documented as extraction-blocked unless surrogate-safe string handling is added, and keep the open-gap note for the eight current conversion misses until a separate reconciliation pass resolves them or explicitly records why they cannot be converted.
+The source-observed catalog is exhausted and the eight conversion gaps were
+cleared in the reconciliation pass recorded below. Keep
+`com.github.houbb:heaven@0.13.0` documented as extraction-blocked unless
+surrogate-safe string handling is added. Further reference growth belongs in
+the separate all-versions or real-APK-priority lanes rather than the shared
+calibrated DB.
 
 ## Failed Download Retry 001
 
@@ -490,3 +495,55 @@ Current post-retry feature extraction counts:
 This cleanup pass recovered the remaining `androidx.annotation:annotation` alias rows as JARs, but four were no-bytecode annotation artifacts and the three bytecode-bearing rows were already represented in the evaluation DB. The component count therefore remains `1924`.
 
 After retry passes 001-003, `500` of the original `698` failed source-observed keys were recovered as artifacts in at least one retry root. `198` original failed keys remain unrecovered: `84` source-module aliases, `43` manual repository or unavailable rows, `27` still-failing JitPack candidates, `25` bad source-version-string rows, `10` Kotlin/toolchain-boundary rows, `5` legacy support aliases, and `4` Google alternate-packaging rows. These remaining rows should stay explicit as unavailable or normalization-required evidence unless a source-specific repository or coordinate rewrite is proven.
+
+## Conversion Gap Reconciliation
+
+The final accounting comparison used exact `(coordinate, version)` keys from
+`2649` artifact `metadata.json` records and `2641` conversion records. It found
+the following eight unattempted rows:
+
+| Coordinate | Version | Packaging | Result |
+|---|---|---|---|
+| `io.coil-kt:coil-base` | `2.7.0` | AAR | converted and stored |
+| `org.jetbrains:annotations` | `13.0` | JAR | converted and stored |
+| `org.jetbrains:annotations` | `16.0.1` | JAR | converted and stored |
+| `org.jetbrains:annotations` | `20.1.0` | JAR | converted and stored |
+| `org.jetbrains:annotations` | `23.0.0` | JAR | converted and stored |
+| `org.jetbrains:annotations` | `24.0.1` | JAR | converted and stored |
+| `org.jetbrains:annotations` | `26.0.2-1` | JAR | converted and stored |
+| `org.jetbrains:annotations` | `26.1.0` | JAR | converted and stored |
+
+All eight converted without failure and all eight feature rows were stored.
+The main source-observed ledger now has `2649/2649` conversion records:
+`1435` with status `converted`, `515` with status `existing`, and `699`
+no-bytecode `skipped` rows.
+
+The first Coil extraction attempt used artifact-ledger offset `1815` against
+the extractor's non-skipped conversion ordering. It therefore stored the
+previously missing `org.jetbrains.kotlinx:kotlinx-datetime-jvm@0.8.0` row
+instead of Coil. The subsequent coordinate-filtered extraction stored
+`io.coil-kt:coil-base@2.7.0` correctly. The evaluation-only source-observed DB
+therefore increased from `1924` to `1933` unique components: the eight intended
+reconciliation rows plus one independently valid extraction-lag row. The
+eight-gap accounting issue is closed; the separate
+`com.github.houbb:heaven@0.13.0` surrogate-text extraction blocker remains
+explicit.
+
+## Reconciled Eight Scoped Impact
+
+`scripts/evaluate_reconciled_reference_eight.py` compares the real-APK priority
+DB with and without exactly the eight reconciled rows. It uses one
+source-observed representative APK per row and scores only the affected
+coordinate, avoiding a full 106-case or whole-SBOM rerun.
+
+The result at `docs/evaluation/RECONCILED_EIGHT_REFERENCE_IMPACT.md` is:
+
+- `3/8` expected versions selected exactly: Coil `2.7.0`, annotations `13.0`,
+  and annotations `16.0.1`.
+- `1/8` has strong library identity but ambiguous exact version:
+  annotations `26.0.2-1` in ImapNotes3.
+- `4/8` remain weak or uncertain exact-version rows.
+- The later JetBrains annotations versions are bytecode-near-equivalent and
+  generally collapse toward `16.0.1`; they must not be promoted as exact
+  source versions from APK-only evidence.
+- The shared calibrated DB remains unchanged.

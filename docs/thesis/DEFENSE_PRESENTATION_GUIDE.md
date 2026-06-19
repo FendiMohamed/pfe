@@ -1,5 +1,12 @@
 # Defense Presentation Guide
 
+> The current expanded 39-slide deck has a dedicated companion at
+> `docs/thesis/EXPANDED_DEFENSE_PRESENTER_COMPANION.md`. It includes the
+> component-by-component evolution, design rationale, matcher algorithm,
+> implementation paths, all 31 main slides, and all 8 backup slides.
+>
+> This file remains the shorter 13-slide rehearsal script.
+
 Use this file with the editable deck:
 
 `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx`

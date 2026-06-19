@@ -3,8 +3,10 @@ Generated: 2026-06-18
 
 Deck mode:
 - Create-mode deck regenerated from editable artifact-tool slide modules.
-- Output remains the existing defense deck path: outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx
-- Visual refresh replaces table-first layouts with alternating dark/light research-defense scenes, evidence diagrams, two-lane result framing, demo windows, and a contribution-led conclusion.
+- Final academic output: outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-academic-deck.pptx
+- Slide count: 39 total, comprising 31 main-defense slides and 8 backup slides.
+- Visual revision uses a restrained university-defense style with warm white, charcoal, navy, muted teal, limited warning red, square frames, and less decorative color.
+- Slides 5 and 6 explicitly cover the architecture decisions, rejected alternatives, and the complete MVP diagram with separate APK and Maven-reference pipelines.
 
 Sources and facts:
 - docs/evaluation/THESIS_EVALUATION_TABLES.md
@@ -28,5 +30,17 @@ Sources and facts:
 
 Asset policy:
 - No external logos or unverified brand assets are embedded.
-- Slides use editable text, shapes, bars, and tables.
-- Existing report/demo file paths are referenced in speaker notes and docs, not embedded as unverified product screenshots.
+- Slides use editable text, shapes, bars, tables, and three screenshots captured from project-generated local HTML reports.
+- Screenshot assets:
+  - assets/clean-report.png from data/results/report-real-f-droid-final-demo-osv/report.html; supports the clean real-APK summary.
+  - assets/vulnerable-report-top.png from data/results/demo-osv-vulnerable-jackson-databind/report.html; supports the controlled positive-CVE summary.
+  - assets/ai-report-top.png from data/results/evaluation/final-hybrid-ai-demo-smoke/aegis-authenticator/hybrid-ai/report.html; supports the hard real-APK report lane.
+- Dockerfile, docker-compose.yml, and .dockerignore support the Docker toolchain, /app bind mount, input/reference/output flow, and excluded large-data directories.
+- Fresh commands run on 2026-06-18:
+  - .\.venv\Scripts\python.exe scripts\run_final_ai_defense_demo.py --refresh -> ready true, 10/10 checks.
+  - .\.venv\Scripts\python.exe scripts\train_ai_r8_assistant.py -> test macro-F1 0.7076258526.
+  - .\.venv\Scripts\python.exe scripts\train_ai_r8_tiny_transformer.py --corpus-json data\results\experiments\ai-r8-dl-prototype\token-corpus-mvp-safe.json --metrics-output data\results\experiments\ai-r8-dl-prototype\metrics-mvp-safe.json --model-output data\results\experiments\ai-r8-dl-prototype\tiny-transformer-mvp-safe.pt --output-doc docs\evaluation\AI_R8_DL_MVP_SAFE_PROTOTYPE.md --epochs 5 -> test macro-F1 0.8821651724.
+  - .\.venv\Scripts\python.exe scripts\train_ai_r8_raw_opcode_transformer.py -> test macro-F1 0.1098452845, below 0.1281280997 baseline.
+- Concrete demo classifications:
+  - data/results/source-validation/fdroid-final-demo-osv/source-validation.json supports source-confirmed okhttp 4.12.0, coroutines-android 1.7.3, and activity 1.10.1, plus the okio 2.8.0 candidate versus source 3.7.0 mismatch.
+  - data/results/evaluation/demo-final-large-v2-source-gap-triage.json supports activity-compose 1.10.1 as matcher-recall-candidate and collection-ktx 1.4.4 as missing-reference-candidate.

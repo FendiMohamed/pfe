@@ -1,7 +1,7 @@
 {
-  "output": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\output\\apk-sbom-defense-deck.pptx",
-  "outputBytes": 77566,
-  "slideCount": 13,
+  "output": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\output\\apk-sbom-defense-academic-deck.pptx",
+  "outputBytes": 346730,
+  "slideCount": 39,
   "slideSize": {
     "width": 1280,
     "height": 720
@@ -20,7 +20,33 @@
     "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-10.png",
     "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-11.png",
     "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-12.png",
-    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-13.png"
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-13.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-14.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-15.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-16.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-17.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-18.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-19.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-20.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-21.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-22.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-23.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-24.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-25.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-26.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-27.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-28.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-29.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-30.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-31.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-32.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-33.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-34.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-35.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-36.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-37.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-38.png",
+    "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\slide-39.png"
   ],
   "layoutDir": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final",
   "layoutResults": [
@@ -62,6 +88,84 @@
     },
     {
       "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-13.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-14.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-15.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-16.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-17.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-18.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-19.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-20.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-21.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-22.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-23.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-24.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-25.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-26.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-27.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-28.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-29.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-30.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-31.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-32.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-33.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-34.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-35.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-36.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-37.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-38.layout.json"
+    },
+    {
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\layout\\final\\slide-39.layout.json"
     }
   ],
   "contactSheet": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\preview\\contact-sheet.png",
@@ -69,80 +173,236 @@
     {
       "index": 1,
       "requestedSlideNumber": 1,
-      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\slide-01.mjs",
-      "exportName": "slide01"
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(1)"
     },
     {
       "index": 2,
       "requestedSlideNumber": 2,
-      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\slide-02.mjs",
-      "exportName": "slide02"
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(2)"
     },
     {
       "index": 3,
       "requestedSlideNumber": 3,
-      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\slide-03.mjs",
-      "exportName": "slide03"
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(3)"
     },
     {
       "index": 4,
       "requestedSlideNumber": 4,
-      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\slide-04.mjs",
-      "exportName": "slide04"
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(4)"
     },
     {
       "index": 5,
       "requestedSlideNumber": 5,
-      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\slide-05.mjs",
-      "exportName": "slide05"
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(5)"
     },
     {
       "index": 6,
       "requestedSlideNumber": 6,
-      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\slide-06.mjs",
-      "exportName": "slide06"
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(6)"
     },
     {
       "index": 7,
       "requestedSlideNumber": 7,
-      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\slide-07.mjs",
-      "exportName": "slide07"
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(7)"
     },
     {
       "index": 8,
       "requestedSlideNumber": 8,
-      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\slide-08.mjs",
-      "exportName": "slide08"
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(8)"
     },
     {
       "index": 9,
       "requestedSlideNumber": 9,
-      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\slide-09.mjs",
-      "exportName": "slide09"
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(9)"
     },
     {
       "index": 10,
       "requestedSlideNumber": 10,
-      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\slide-10.mjs",
-      "exportName": "slide10"
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(10)"
     },
     {
       "index": 11,
       "requestedSlideNumber": 11,
-      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\slide-11.mjs",
-      "exportName": "slide11"
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(11)"
     },
     {
       "index": 12,
       "requestedSlideNumber": 12,
-      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\slide-12.mjs",
-      "exportName": "slide12"
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(12)"
     },
     {
       "index": 13,
       "requestedSlideNumber": 13,
-      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\slide-13.mjs",
-      "exportName": "slide13"
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(13)"
+    },
+    {
+      "index": 14,
+      "requestedSlideNumber": 14,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(14)"
+    },
+    {
+      "index": 15,
+      "requestedSlideNumber": 15,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(15)"
+    },
+    {
+      "index": 16,
+      "requestedSlideNumber": 16,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(16)"
+    },
+    {
+      "index": 17,
+      "requestedSlideNumber": 17,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(17)"
+    },
+    {
+      "index": 18,
+      "requestedSlideNumber": 18,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(18)"
+    },
+    {
+      "index": 19,
+      "requestedSlideNumber": 19,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(19)"
+    },
+    {
+      "index": 20,
+      "requestedSlideNumber": 20,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(20)"
+    },
+    {
+      "index": 21,
+      "requestedSlideNumber": 21,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(21)"
+    },
+    {
+      "index": 22,
+      "requestedSlideNumber": 22,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(22)"
+    },
+    {
+      "index": 23,
+      "requestedSlideNumber": 23,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(23)"
+    },
+    {
+      "index": 24,
+      "requestedSlideNumber": 24,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(24)"
+    },
+    {
+      "index": 25,
+      "requestedSlideNumber": 25,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(25)"
+    },
+    {
+      "index": 26,
+      "requestedSlideNumber": 26,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(26)"
+    },
+    {
+      "index": 27,
+      "requestedSlideNumber": 27,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(27)"
+    },
+    {
+      "index": 28,
+      "requestedSlideNumber": 28,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(28)"
+    },
+    {
+      "index": 29,
+      "requestedSlideNumber": 29,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(29)"
+    },
+    {
+      "index": 30,
+      "requestedSlideNumber": 30,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(30)"
+    },
+    {
+      "index": 31,
+      "requestedSlideNumber": 31,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(31)"
+    },
+    {
+      "index": 32,
+      "requestedSlideNumber": 32,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(32)"
+    },
+    {
+      "index": 33,
+      "requestedSlideNumber": 33,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(33)"
+    },
+    {
+      "index": 34,
+      "requestedSlideNumber": 34,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(34)"
+    },
+    {
+      "index": 35,
+      "requestedSlideNumber": 35,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(35)"
+    },
+    {
+      "index": 36,
+      "requestedSlideNumber": 36,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(36)"
+    },
+    {
+      "index": 37,
+      "requestedSlideNumber": 37,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(37)"
+    },
+    {
+      "index": 38,
+      "requestedSlideNumber": 38,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(38)"
+    },
+    {
+      "index": 39,
+      "requestedSlideNumber": 39,
+      "modulePath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\manual-20260526-apk-sbom-deck\\presentations\\apk-sbom-defense\\slides\\common.mjs",
+      "exportName": "drawSlide(39)"
     }
   ]
 }

@@ -6,8 +6,8 @@ Use this as the fast day-of-defense checklist. It points to already-generated ar
 
 | Order | Artifact | Purpose |
 |---:|---|---|
-| 1 | `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx` | Current editable defense deck with the final v2 story. |
-| 2 | `docs/thesis/DEFENSE_PRESENTATION_GUIDE.md` | Slide-by-slide speaking guide, required facts, demo plan, and expected jury questions. |
+| 1 | `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-academic-deck.pptx` | Current restrained academic 39-slide defense deck: 31 main slides and 8 backup slides. Slides 5-6 explain the architecture decisions and complete MVP diagram. |
+| 2 | `docs/thesis/EXPANDED_DEFENSE_PRESENTER_COMPANION.md` | Full slide-by-slide speaking guide, component evolution, matcher logic, implementation paths, backup-slide cues, demo plan, and jury questions. |
 | 3 | `docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md` | Exact opening wording, file order, and hard-question answers. |
 | 4 | `docs/evaluation/DEMO_FINAL_V2_PACKAGE.md` | Current v2 package index and headline numbers. |
 | 5 | `docs/thesis/FINAL_V2_RESULTS_SECTION.md` | Thesis-ready wording that separates normal metrics from the v2 upper-bound lane. |
@@ -206,7 +206,7 @@ The tool has 100% real-world APK accuracy.
 | R8 structural recall experiment regenerated | 1658 rows, 1000 report-only candidates, 814 control-risk rows |
 | R8 APK-only structural promotion gate regenerated | 219 gate-pass rows, 0 promotion candidates, promotion blocked by controls |
 | R8 strict APK promotion gate matrix regenerated | 5 profiles, 0 production candidates |
-| Deck package validation | current editable deck: 13 slides, including the AI integration gate |
+| Deck package validation | current expanded editable deck: 39 slides and 39 notes slides, including 8 backup slides |
 
 ## Do Not Run Live
 

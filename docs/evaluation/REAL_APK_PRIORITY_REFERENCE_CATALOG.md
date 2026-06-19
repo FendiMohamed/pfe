@@ -47,11 +47,23 @@ Current state after the retry pass:
 
 - Additional recovered priority artifact metadata records: `539`
 - Additional bytecode-bearing rows converted and extracted: `512`
-- Priority DB stored components after retry extraction: `2424`
+- Lightweight recovery follow-on: `29` already-converted exact rows imported from
+  the later demo-v2 evaluation DB,
+  `com.android.support:exifinterface@28.0.0` downloaded from Google Maven,
+  and `18` legacy Android AARs recovered through the Aliyun JCenter archive
+  mirror. All `19` downloaded follow-on artifacts converted and stored. A final
+  exact-source pass built, converted, and stored `4` I2P JARs plus the exact-tag
+  MaterialPopupMenu `3.4.0` AAR.
+- Priority DB stored components after lightweight recovery: `2477`
+- Priority DB stored coordinates after lightweight recovery: `1164`
 - Recovered priority artifact metadata across base and retry roots: `3149/3241`
-- Remaining unrecovered priority slots: `92`
-- Remaining repeated unrecovered slots: `17`
-- Remaining single-observed unrecovered slots: `75`
+- Remaining unresolved/boundary priority slots: `39`
+- Remaining repeated unresolved slots: `15`
+- Remaining single-observed unresolved slots: `24`
+
+The full priority catalog now reconciles exactly as `2477` stored bytecode
+components + `725` downloaded no-bytecode/skipped rows + `39`
+unresolved/boundary rows = `3241` slots.
 
 The remaining unrecovered set stays explicit rather than silently counted as covered. It is dominated by legacy support aliases, Kotlin/toolchain boundary rows, repository-specific rows, and source/module aliases that need proven coordinate normalization or source-specific repositories before they can be added honestly.
 

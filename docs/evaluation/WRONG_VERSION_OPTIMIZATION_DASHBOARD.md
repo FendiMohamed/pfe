@@ -37,6 +37,8 @@ The wrong-version backlog is concentrated enough to attack with guarded family l
 | Experiment | Candidate | Target result | Control regressions | Verdict | Decision |
 |---|---|---|---:|---|---|
 | `wrong-version-p1-coroutines-android-1.6.4` | `org.jetbrains.kotlinx:kotlinx-coroutines-android@1.6.4` | 20/20 target fixed; 20 improved | 3 | `wrong-version-p1-experiment-rejected-regressions` | Keep experiment-only; control regressions block shared DB promotion. |
+| `wrong-version-p1-coroutines-pair-1.6.4-preflight` | Android/core-jvm `1.6.4` pair | 2/2 sampled targets fixed | 4/5 sampled controls | `wrong-version-p1-experiment-rejected-regressions` | Fail-fast rejection: pairwise POM coherence and current literal/context evidence do not safely separate exact coroutines versions. Keep any `1.6.x` interpretation report-only without independent version evidence. |
+| `wrong-version-p1-fragment-1.6.2-preflight` | `androidx.fragment:fragment@1.6.2` | 10/10 affected rows select 1.6.2; 2/2 sampled full reports improve | 0/4 sampled controls | `scoped-preflight-passed-experiment-only` | Keep experiment-only despite the clean sampled controls: all selections remain candidate-level 1.6.1/1.6.2 near ties without matched version-unique APK evidence. Do not promote to the shared calibrated DB. |
 
 ## Priority Lanes
 
@@ -113,7 +115,7 @@ The wrong-version backlog is concentrated enough to attack with guarded family l
 | `androidx.appcompat:appcompat` | `1.6.1` | 11 | 11 | `1.7.0` (11) | Keep as queued coordinate-specific diagnostic until repeated evidence justifies a scoped experiment. |
 | `androidx.core:core` | `1.17.0` | 10 | 10 | `1.18.0` (10) | Run per-coordinate AndroidX version-band diagnostics; reject global newer-version tie rules. |
 | `androidx.core:core-ktx` | `1.16.0` | 10 | 10 | `1.18.0` (10) | Run per-coordinate AndroidX version-band diagnostics; reject global newer-version tie rules. |
-| `androidx.fragment:fragment` | `1.6.2` | 10 | 10 | `1.6.1` (10) | Run per-coordinate AndroidX version-band diagnostics; reject global newer-version tie rules. |
+| `androidx.fragment:fragment` | `1.6.2` | 10 | 10 | `1.6.1` (10) | Scoped preflight completed: 10/10 select 1.6.2 and sampled controls stay clean, but microscopic candidate-level gaps provide no robust exact-version separation. Keep experiment-only; do not promote the shared DB. |
 | `androidx.lifecycle:lifecycle-viewmodel` | `2.5.1` | 10 | 10 | `2.6.2` (10) | Run Lifecycle public-vs-target artifact-family and source-version controls before promotion. |
 | `androidx.recyclerview:recyclerview` | `1.1.0` | 10 | 10 | `1.2.1` (10) | Keep as queued coordinate-specific diagnostic until repeated evidence justifies a scoped experiment. |
 | `androidx.core:core-ktx` | `1.17.0` | 9 | 9 | `1.18.0` (9) | Run per-coordinate AndroidX version-band diagnostics; reject global newer-version tie rules. |

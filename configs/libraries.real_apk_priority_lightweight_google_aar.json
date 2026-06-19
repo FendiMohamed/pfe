@@ -1,0 +1,45 @@
+{
+  "libraries": [
+    {
+      "artifact": "accompanist-drawablepainter",
+      "group": "com.google.accompanist",
+      "notes": "Bounded lightweight real-APK priority recovery; heavy and non-bytecode boundaries excluded.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "0.36.0",
+        "0.37.3"
+      ]
+    },
+    {
+      "artifact": "exifinterface",
+      "group": "com.android.support",
+      "notes": "Bounded lightweight real-APK priority recovery; heavy and non-bytecode boundaries excluded.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "28.0.0"
+      ]
+    },
+    {
+      "artifact": "accompanist-permissions",
+      "group": "com.google.accompanist",
+      "notes": "Bounded lightweight real-APK priority recovery; heavy and non-bytecode boundaries excluded.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "0.37.3"
+      ]
+    },
+    {
+      "artifact": "dashclock-api",
+      "group": "com.google.android.apps.dashclock",
+      "notes": "Bounded lightweight real-APK priority recovery; heavy and non-bytecode boundaries excluded.",
+      "packaging": "aar",
+      "repository_url": "https://dl.google.com/dl/android/maven2",
+      "versions": [
+        "2.0.0"
+      ]
+    }
+  ]
+}
