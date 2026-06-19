@@ -2,15 +2,15 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/p4nu30",
-    "id": "p4nu30",
+    "aid": "sl/r1ypxo",
+    "id": "r1ypxo",
     "slide": 1,
-    "layoutId": "0b923412-a402-43bb-9e88-5c3f0e71cf49",
+    "layoutId": "16759d32-fa31-4cc0-8a5c-45243b1c5915",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "5a0ec679-8e23-49fc-88e5-bb532355c1da",
+    "masterLayoutId": "55bc42e3-9f5a-4482-9d1a-3e061128ff1a",
     "masterLayoutName": "Master",
-    "backgroundColor": "#0B1220",
+    "backgroundColor": "#17212B",
     "frame": {
       "left": 0,
       "top": 0,
@@ -46,15 +46,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "0b923412-a402-43bb-9e88-5c3f0e71cf49",
+      "id": "16759d32-fa31-4cc0-8a5c-45243b1c5915",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "5a0ec679-8e23-49fc-88e5-bb532355c1da",
+      "parentLayoutId": "55bc42e3-9f5a-4482-9d1a-3e061128ff1a",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "5a0ec679-8e23-49fc-88e5-bb532355c1da",
+      "id": "55bc42e3-9f5a-4482-9d1a-3e061128ff1a",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -65,7 +65,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/gvy90je9",
+      "aid": "sh/hcrmhk3q",
       "id": "1",
       "bbox": [
         0,
@@ -74,14 +74,14 @@
         720
       ],
       "geometry": "rect",
-      "fillColor": "#0B1220",
+      "fillColor": "#17212B",
       "lineWidth": 0
     },
     {
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ra5gbq1o",
+      "aid": "sh/al87ed8b",
       "id": "2",
       "bbox": [
         0,
@@ -90,14 +90,14 @@
         720
       ],
       "geometry": "rect",
-      "fillColor": "#24BFAE",
+      "fillColor": "#4F7D76",
       "lineWidth": 0
     },
     {
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/2p8nqxs7",
+      "aid": "sh/z61032ls",
       "id": "3",
       "bbox": [
         72,
@@ -113,7 +113,7 @@
         "anchor": 1,
         "fontSize": 12,
         "typeface": "Aptos",
-        "color": "#24BFAE",
+        "color": "#4F7D76",
         "bold": true,
         "alignment": "left",
         "verticalAlignment": "top",
@@ -140,7 +140,7 @@
           "resolvedTextStyle": {
             "fontSize": 12,
             "typeface": "Aptos",
-            "color": "#24BFAE",
+            "color": "#4F7D76",
             "bold": true,
             "alignment": "left"
           },
@@ -150,7 +150,7 @@
               "text": "PFE DEFENSE  /  JUNE 2026",
               "fontSize": 12,
               "typeface": "Aptos",
-              "color": "#24BFAE",
+              "color": "#4F7D76",
               "bold": true,
               "alignment": "left"
             }
@@ -164,7 +164,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/94fu18jq",
+      "aid": "sh/sfil0rqd",
       "id": "4",
       "bbox": [
         72,
@@ -231,7 +231,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kjm1cfa9",
+      "aid": "sh/h0fepkzu",
       "id": "5",
       "bbox": [
         72,
@@ -298,7 +298,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/r2p8nqxs",
+      "aid": "sh/a9w3m94f",
       "id": "6",
       "bbox": [
         74,
@@ -365,7 +365,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/2hwfyxob",
+      "aid": "sh/zupwb2hw",
       "id": "7",
       "bbox": [
         74,
@@ -433,7 +433,7 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/9w3m94fu",
+      "aid": "sh/obm58z25",
       "id": "8",
       "bbox": [
         732,
@@ -442,15 +442,15 @@
         96
       ],
       "geometry": "ellipse",
-      "fillColor": "#111B2E",
-      "lineColor": "#4F7CFF",
+      "fillColor": "#22303C",
+      "lineColor": "#365F7D",
       "lineWidth": 1
     },
     {
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kb6xkf6d",
+      "aid": "sh/hwfyxobm",
       "id": "9",
       "bbox": [
         732,
@@ -517,7 +517,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/2p8nqxs7",
+      "aid": "sh/t83itgfm",
       "id": "10",
       "bbox": [
         930,
@@ -526,15 +526,15 @@
         96
       ],
       "geometry": "ellipse",
-      "fillColor": "#111B2E",
-      "lineColor": "#806FE8",
+      "fillColor": "#22303C",
+      "lineColor": "#655F73",
       "lineWidth": 1
     },
     {
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ra5gbq1o",
+      "aid": "sh/4nap4r65",
       "id": "11",
       "bbox": [
         930,
@@ -601,7 +601,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/gvy90je9",
+      "aid": "sh/b2hwfyxo",
       "id": "12",
       "bbox": [
         1034,
@@ -610,15 +610,15 @@
         126
       ],
       "geometry": "ellipse",
-      "fillColor": "#24BFAE",
-      "lineColor": "#24BFAE",
+      "fillColor": "#4F7D76",
+      "lineColor": "#4F7D76",
       "lineWidth": 1
     },
     {
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/9gr2p8nq",
+      "aid": "sh/mhk3q5o7",
       "id": "13",
       "bbox": [
         1034,
@@ -685,7 +685,7 @@
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/2hwfyxob",
+      "aid": "sh/twra5gbq",
       "id": "14",
       "bbox": [
         914,
@@ -694,15 +694,15 @@
         96
       ],
       "geometry": "ellipse",
-      "fillColor": "#111B2E",
-      "lineColor": "#9DCC3B",
+      "fillColor": "#22303C",
+      "lineColor": "#6F7C61",
       "lineWidth": 1
     },
     {
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/r2p8nqxs",
+      "aid": "sh/4byhgn29",
       "id": "15",
       "bbox": [
         914,
@@ -769,7 +769,7 @@
       "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kjm1cfa9",
+      "aid": "sh/bq1oryts",
       "id": "16",
       "bbox": [
         710,
@@ -778,15 +778,15 @@
         96
       ],
       "geometry": "ellipse",
-      "fillColor": "#111B2E",
-      "lineColor": "#F06464",
+      "fillColor": "#22303C",
+      "lineColor": "#A65C55",
       "lineWidth": 1
     },
     {
       "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/94fu18jq",
+      "aid": "sh/m58z25kb",
       "id": "17",
       "bbox": [
         710,
@@ -853,7 +853,7 @@
       "order": 18,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/25kb6xkf",
+      "aid": "sh/tsvu9kni",
       "id": "18",
       "name": "rule",
       "bbox": [
@@ -863,14 +863,14 @@
         2
       ],
       "geometry": "rect",
-      "fillColor": "#4F7CFF",
+      "fillColor": "#365F7D",
       "lineWidth": 0
     },
     {
       "order": 19,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/rqd4vmtw",
+      "aid": "sh/47y1kre1",
       "id": "19",
       "name": "rule",
       "bbox": [
@@ -880,14 +880,14 @@
         2
       ],
       "geometry": "rect",
-      "fillColor": "#806FE8",
+      "fillColor": "#655F73",
       "lineWidth": 0
     },
     {
       "order": 20,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/jm1cfa9w",
+      "aid": "sh/g3ex0nux",
       "id": "20",
       "name": "rule",
       "bbox": [
@@ -897,14 +897,14 @@
         2
       ],
       "geometry": "rect",
-      "fillColor": "#24BFAE",
+      "fillColor": "#4F7D76",
       "lineWidth": 0
     },
     {
       "order": 21,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/u18jqh0f",
+      "aid": "sh/5o7qpg3e",
       "id": "21",
       "name": "rule",
       "bbox": [
@@ -914,14 +914,14 @@
         2
       ],
       "geometry": "rect",
-      "fillColor": "#9DCC3B",
+      "fillColor": "#6F7C61",
       "lineWidth": 0
     },
     {
       "order": 22,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/1orytsvu",
+      "aid": "sh/yxobm58z",
       "id": "22",
       "name": "rule",
       "bbox": [
@@ -931,14 +931,14 @@
         78
       ],
       "geometry": "rect",
-      "fillColor": "#F06464",
+      "fillColor": "#A65C55",
       "lineWidth": 0
     },
     {
       "order": 23,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/c7u54zid",
+      "aid": "sh/nih4byhg",
       "id": "23",
       "bbox": [
         70,
@@ -947,14 +947,14 @@
         1
       ],
       "geometry": "rect",
-      "fillColor": "#26344D",
+      "fillColor": "#3B4853",
       "lineWidth": 0
     },
     {
       "order": 24,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/judg7ads",
+      "aid": "sh/gr2p8nqx",
       "id": "24",
       "bbox": [
         74,
@@ -970,7 +970,7 @@
         "anchor": 1,
         "fontSize": 32,
         "typeface": "Aptos Display",
-        "color": "#24BFAE",
+        "color": "#4F7D76",
         "bold": true,
         "alignment": "left",
         "verticalAlignment": "top",
@@ -997,7 +997,7 @@
           "resolvedTextStyle": {
             "fontSize": 32,
             "typeface": "Aptos Display",
-            "color": "#24BFAE",
+            "color": "#4F7D76",
             "bold": true,
             "alignment": "left"
           },
@@ -1007,7 +1007,7 @@
               "text": "927 / 1837",
               "fontSize": 32,
               "typeface": "Aptos Display",
-              "color": "#24BFAE",
+              "color": "#4F7D76",
               "bold": true,
               "alignment": "left"
             }
@@ -1021,7 +1021,7 @@
       "order": 25,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/u9knih4b",
+      "aid": "sh/9cvixcze",
       "id": "25",
       "bbox": [
         74,
@@ -1085,7 +1085,7 @@
       "order": 26,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/1032lszq",
+      "aid": "sh/ylc7u54z",
       "id": "26",
       "bbox": [
         438,
@@ -1101,7 +1101,7 @@
         "anchor": 1,
         "fontSize": 32,
         "typeface": "Aptos Display",
-        "color": "#9DCC3B",
+        "color": "#6F7C61",
         "bold": true,
         "alignment": "left",
         "verticalAlignment": "top",
@@ -1128,7 +1128,7 @@
           "resolvedTextStyle": {
             "fontSize": 32,
             "typeface": "Aptos Display",
-            "color": "#9DCC3B",
+            "color": "#6F7C61",
             "bold": true,
             "alignment": "left"
           },
@@ -1138,7 +1138,7 @@
               "text": "84 / 84",
               "fontSize": 32,
               "typeface": "Aptos Display",
-              "color": "#9DCC3B",
+              "color": "#6F7C61",
               "bold": true,
               "alignment": "left"
             }
@@ -1152,7 +1152,7 @@
       "order": 27,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/cfa9w3m9",
+      "aid": "sh/r65wjudg",
       "id": "27",
       "bbox": [
         438,
@@ -1216,7 +1216,7 @@
       "order": 28,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/nyd0z610",
+      "aid": "sh/gfmlkjm1",
       "id": "28",
       "bbox": [
         744,
@@ -1232,7 +1232,7 @@
         "anchor": 1,
         "fontSize": 32,
         "typeface": "Aptos Display",
-        "color": "#E8AA3B",
+        "color": "#8D754D",
         "bold": true,
         "alignment": "left",
         "verticalAlignment": "top",
@@ -1259,7 +1259,7 @@
           "resolvedTextStyle": {
             "fontSize": 32,
             "typeface": "Aptos Display",
-            "color": "#E8AA3B",
+            "color": "#8D754D",
             "bold": true,
             "alignment": "left"
           },
@@ -1269,7 +1269,7 @@
               "text": "6772 / 6772",
               "fontSize": 32,
               "typeface": "Aptos Display",
-              "color": "#E8AA3B",
+              "color": "#8D754D",
               "bold": true,
               "alignment": "left"
             }
@@ -1283,7 +1283,7 @@
       "order": 29,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/udg7adsj",
+      "aid": "sh/90je9cvi",
       "id": "29",
       "bbox": [
         744,

@@ -10,7 +10,8 @@ Use this file as the final thesis/report assembly checklist. It assumes the MVP 
 | Final v2 addendum | ready | `docs/thesis/FINAL_V2_RESULTS_SECTION.md` |
 | Thesis artifact index | regenerated | `docs/thesis/THESIS_ARTIFACT_INDEX.md` |
 | Final demo checklist | ready | `docs/evaluation/FINAL_DEMO_CHECKLIST.md` |
-| Defense deck | ready/editable | `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx` |
+| Defense deck | ready/editable | `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-academic-deck.pptx` |
+| Presenter companion | ready | `docs/thesis/EXPANDED_DEFENSE_PRESENTER_COMPANION.md` |
 | Graduation rehearsal | regenerated | `docs/evaluation/GRADUATION_DEMO_REHEARSAL.md` |
 
 The remaining report work is human/template work: fill the university cover page, insert screenshots/figures, apply required formatting, and export the final PDF/Word file.

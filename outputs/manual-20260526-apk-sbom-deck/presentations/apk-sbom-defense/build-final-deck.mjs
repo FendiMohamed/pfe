@@ -10,7 +10,8 @@ const OUTPUT_DIR = path.join(ROOT, "output");
 const PREVIEW_DIR = path.join(ROOT, "preview");
 const LAYOUT_DIR = path.join(ROOT, "layout", "final");
 const QA_DIR = path.join(ROOT, "qa");
-const FINAL_PPTX = path.join(OUTPUT_DIR, "apk-sbom-defense-deck.pptx");
+const ASSET_DIR = path.join(ROOT, "assets");
+const FINAL_PPTX = path.join(OUTPUT_DIR, "apk-sbom-defense-academic-deck.pptx");
 
 async function writeBlob(filePath, blob) {
   await fs.writeFile(filePath, new Uint8Array(await blob.arrayBuffer()));
@@ -111,9 +112,14 @@ async function build() {
     slideSize: { width: 1280, height: 720 },
   });
   const ctx = makeContext();
+  ctx.assets = {
+    cleanReport: await fs.readFile(path.join(ASSET_DIR, "clean-report.png")),
+    vulnerableReport: await fs.readFile(path.join(ASSET_DIR, "vulnerable-report-top.png")),
+    aiReport: await fs.readFile(path.join(ASSET_DIR, "ai-report-top.png")),
+  };
 
   const slideResults = [];
-  for (let i = 1; i <= 13; i += 1) {
+  for (let i = 1; i <= 39; i += 1) {
     const slide = await drawSlide(presentation, ctx, i);
     const stem = `slide-${String(i).padStart(2, "0")}`;
     const previewPath = path.join(PREVIEW_DIR, `${stem}.png`);
@@ -123,8 +129,8 @@ async function build() {
     slideResults.push({
       index: i,
       requestedSlideNumber: i,
-      modulePath: path.join(ROOT, "slides", `${stem}.mjs`),
-      exportName: `slide${String(i).padStart(2, "0")}`,
+      modulePath: path.join(ROOT, "slides", "common.mjs"),
+      exportName: `drawSlide(${i})`,
       previewPath,
       layoutPath,
     });
@@ -161,18 +167,27 @@ async function build() {
   await fs.writeFile(
     path.join(QA_DIR, "visual-qa.txt"),
     [
-      "Modern defense deck visual QA",
+      "Academic defense deck visual QA",
       "",
       "Mode: create, regenerated from editable artifact-tool slide modules.",
-      "Slide count: 13.",
+      "Slide count: 39 (31 main + 8 backup).",
       "Checked items:",
-      "- All 13 slides were redesigned with alternating night/paper canvases and native editable objects.",
-      "- Dense tables were replaced by evidence maps, pipelines, result lanes, APK-family panels, and demo windows.",
+      "- The deck uses a restrained academic visual system: warm white, charcoal, navy, muted teal, and limited warning red.",
+      "- Rounded dashboard-style cards and rainbow accents were replaced by square frames, table-like structures, and quieter hierarchy.",
+      "- Slides 5 and 6 now explain the architecture decisions and show the complete MVP architecture with the APK and Maven reference pipelines.",
+      "- Main deck covers context, architecture, every core component, dataset, results, failed experiments, ML/DL, demo, and conclusion.",
+      "- Eight backup slides cover module paths, matcher weights, reference DB scale, APK families, source-gap taxonomy, regressions, and model detail.",
+      "- Component slides show evolution, observed weakness, chosen design, rationale, and implementation path.",
       "- Main results slide separates the 927/1837 normal metric from the 6772/6772 source-known upper bound.",
-      "- Demo proof slide includes clean SBOM, positive CVE, and transparency-export evidence.",
+      "- Demo proof slide embeds real generated HTML-report screenshots for the clean and positive-CVE cases.",
+      "- The result-classification slide separates correct emitted versions, a scoring/version-candidate miss, matcher recall, and a missing-reference DB case.",
       "- AI slide reports RF 0.708, MVP-safe Transformer 0.882, raw-opcode Transformer 0.110, and the blocked authority boundary.",
-      "- The deck now ends with a contribution-led conclusion and explicit next research steps.",
+      "- The live-demo slide records the exact project-venv command, fresh 10/10 verdict, model rerun commands, and a real hard-APK report screenshot.",
+      "- Backup slides map the complete repository structure and Dockerized toolchain, bind mount, reference DB, datasets, and output artifacts.",
+      "- The deck ends with a contribution-led conclusion and explicit next research steps.",
       "- Contact sheet and all per-slide previews were regenerated and visually reviewed.",
+      "- Programmatic layout bounds check reports zero out-of-slide objects across all 39 slide layouts.",
+      "- PPTX package verification confirms 39 slides, 39 notes slides, and Aptos/Aptos Display/Cascadia Mono typefaces.",
       "",
       "Remaining manual polish:",
       "- Add university template, names, logos, and date if required by the defense format.",

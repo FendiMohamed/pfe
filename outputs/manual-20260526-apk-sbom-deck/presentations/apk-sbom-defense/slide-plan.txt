@@ -1,0 +1,64 @@
+APK-to-SBOM defense deck slide plan
+Generated: 2026-06-18
+
+Mode:
+- Create mode using editable @oai/artifact-tool shapes, text, bars, and tables.
+- Final output: output/apk-sbom-defense-academic-deck.pptx
+- 39 slides: 31 main slides plus 8 backup slides.
+
+Visual system:
+- 16:9, 1280 x 720.
+- Restrained academic canvases: warm paper-white for explanation slides and charcoal for a limited set of emphasis slides.
+- Aptos Display headings, Aptos body text, Cascadia Mono file/path labels.
+- Dominant charcoal/warm-white palette with navy and muted teal; restrained red is reserved for risks or rejected choices.
+- Square frames and table-like evidence structures replace dashboard-style rounded cards and rainbow accents.
+- One primary claim and one proof object per slide; no gradient or bitmap-only slides.
+
+Main defense sequence:
+01 title and headline metrics
+02 APK compilation evidence loss
+03 literature evolution and research gap
+04 project objective and guarded output
+05 architecture choices, reasons, and rejected alternatives
+06 complete MVP architecture diagram with APK and Maven reference pipelines
+07 APK extraction evolution
+08 DEX multi-scale analysis
+09 reproducible reference database
+10 candidate generation and matching
+11 confidence and ambiguity model
+12 CycloneDX SBOM generation
+13 vulnerability lookup and confidence policy
+14 transparency reporting
+15 layered dataset design
+16 real-APK proof bundle
+17 evaluation evidence buckets
+18 dataset composition
+19 evaluation methodology
+20 normal APK-only result versus v2 upper bound
+21 source-known v2 evaluation lane
+22 real generated report screenshots: clean SBOM and positive CVEs
+23 concrete correct/scoring-miss/matcher-recall/reference-gap interpretation
+24 failed experiments and regression gates
+25 report-only AI problem formulation
+26 RandomForest evidence
+27 structured versus raw-opcode Transformer evidence
+28 AI integration gate
+29 exact live-demo command, fresh verdict, model reruns, and hard-APK screenshot
+30 limitations and next work
+31 contribution-led conclusion
+
+Backup sequence:
+32 complete pfe-final repository structure and implementation flow
+33 matcher signals and guarded weights
+34 Dockerized toolchain, bind mount, reference database, inputs, and outputs
+35 APK-family classification
+36 source-gap taxonomy
+37 failed-experiment regression matrix
+38 RandomForest confusion and ablation evidence
+39 Transformer corpus, split, and per-class results
+
+Traceability and QA:
+- Claims and metrics are sourced in source-notes.txt.
+- Every slide is rendered to preview/ and exported to layout/final/.
+- preview/contact-sheet.png is the visual review surface.
+- qa/visual-qa.txt records final checks and remaining cover-metadata caveats.

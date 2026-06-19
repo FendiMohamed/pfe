@@ -659,14 +659,19 @@ def build_table_sources() -> list[dict[str, str]]:
             "use": "Use as the slide-by-slide defense script with claims, proof objects, and speaker notes.",
         },
         {
-            "table": "Defense presentation guide",
-            "source": "docs/thesis/DEFENSE_PRESENTATION_GUIDE.md",
-            "use": "Use as the current 13-slide speaking guide, timing plan, demo fallback, required facts, and expected-jury-question reference.",
+            "table": "Expanded defense presenter companion",
+            "source": "docs/thesis/EXPANDED_DEFENSE_PRESENTER_COMPANION.md",
+            "use": "Use with the 39-slide deck for component evolution, design rationale, matcher logic, code/document paths, backup-slide cues, demo preparation, and expected jury questions.",
         },
         {
-            "table": "Editable defense deck",
-            "source": "outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx",
-            "use": "Use as the modernized 13-slide editable PPTX defense deck before applying university identity details.",
+            "table": "Short defense presentation guide",
+            "source": "docs/thesis/DEFENSE_PRESENTATION_GUIDE.md",
+            "use": "Use as the legacy compact 13-slide rehearsal script.",
+        },
+        {
+            "table": "Editable academic defense deck",
+            "source": "outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-academic-deck.pptx",
+            "use": "Current restrained academic 39-slide editable PPTX: 31 main slides, 8 backup slides, and explicit architecture decision and system-diagram slides.",
         },
         {
             "table": "Defense deck QA scorecard",
@@ -711,7 +716,7 @@ def build_figure_plan() -> list[dict[str, str]]:
         {
             "figure": "Defense deck contact sheet",
             "source": "outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/preview/contact-sheet.png",
-            "caption": "Visual overview of the modernized 13-slide defense deck.",
+            "caption": "Visual overview of the restrained academic 39-slide defense deck.",
         },
     ]
 
@@ -919,7 +924,7 @@ def build_final_report_checklist() -> list[dict[str, str]]:
         {
             "section": "Presentation",
             "status": "editable-deck-ready",
-            "next_action": "Use the modernized deck at `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-deck.pptx` together with `docs/thesis/DEFENSE_PRESENTATION_GUIDE.md`, then add required university identity details.",
+            "next_action": "Use the restrained academic deck at `outputs/manual-20260526-apk-sbom-deck/presentations/apk-sbom-defense/output/apk-sbom-defense-academic-deck.pptx` together with `docs/thesis/EXPANDED_DEFENSE_PRESENTER_COMPANION.md`, then add required university identity details.",
         },
         {
             "section": "Final packaging",
