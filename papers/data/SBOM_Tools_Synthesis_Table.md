@@ -73,14 +73,14 @@
 
 | Criterion | Value |
 |-----------|-------|
-| **Detection method** | Two-stage: sdhash app-filter → ssdeep CFG class matching. Jaccard similarity. |
+| **Detection method** | Two-stage: sdhash filtering over interprocedural features → ssdeep class digests with injective class mapping. |
 | **Library-level F1** | ~62-67% (P=71%, R=63%) |
-| **Version-level F1** | ◐ Not reported as metric (CFG fine-grained but unlabeled) |
+| **Version-level F1** | ✗ Not reported as an exact-version metric |
 | **R8 resilience** | ◐ Best Gen-1 obfusc. resilience; not tested on R8 |
 | **Speed** | ~1,438s/app ✗ **Slowest** — crashes on 16GB+ apps |
 | **Obfuscation coverage** | RN, PF, CFR — SE, MI untested |
-| **Module decoupling** | CFG structure roots — no CDG |
-| **Partial lib handling** | ✓ Jaccard score for partial libs |
+| **Module decoupling** | ◐ Class correspondence over call-graph/class-hierarchy-derived features; no CDG |
+| **Partial lib handling** | ✓ Injective class mapping can expose partial inclusion |
 | **SBOM output** | ✗ Class-level mapping only |
 | **CVE mapping** | ✗ |
 | **Transitive deps** | ✗ |

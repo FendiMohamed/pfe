@@ -1,0 +1,720 @@
+\chapter{Proposed Solution and System Design}
+\label{ch:pfe-design}
+
+\section{Introduction}
+
+The proposed solution is a static, evidence-gated pipeline that transforms a
+compiled Android APK into a CycloneDX SBOM and a confidence-aware
+vulnerability report. The design separates extraction, reference construction,
+matching, version selection, and downstream security interpretation so that
+each claim can be traced to its supporting evidence.
+
+\section{Functional and Non-Functional Requirements}
+
+The main functional requirements are APK inspection, component candidate
+generation, exact or ambiguous version estimation, CycloneDX generation,
+vulnerability lookup, and human-readable reporting. The main non-functional
+requirements are explainability, reproducibility, conservative claims,
+bounded experimental isolation, and traceable evidence.
+
+\section{General Architecture}
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  core/.style={
+    rectangle,
+    rounded corners,
+    draw=schoolblue,
+    thick,
+    fill=blue!5,
+    align=center,
+    text width=31mm,
+    minimum height=11mm,
+    font=\small
+  },
+  store/.style={
+    cylinder,
+    shape border rotate=90,
+    aspect=0.28,
+    draw=schoolblue,
+    thick,
+    fill=cyan!7,
+    align=center,
+    text width=30mm,
+    minimum height=13mm,
+    font=\small
+  },
+  output/.style={
+    core,
+    draw=evidencegreen,
+    fill=green!6
+  },
+  research/.style={
+    rectangle,
+    rounded corners,
+    draw=warningorange,
+    dashed,
+    thick,
+    fill=orange!6,
+    align=center,
+    text width=32mm,
+    minimum height=11mm,
+    font=\small
+  },
+  arrow/.style={-{Latex[length=2.2mm]},thick,draw=schoolblue},
+  outarrow/.style={-{Latex[length=2.2mm]},thick,draw=evidencegreen},
+  researcharrow/.style={-{Latex[length=2.2mm]},thick,dashed,
+    draw=warningorange}
+]
+\node[core] (apk) at (0,4.8) {Compiled Android APK};
+\node[core] (inspect) at (4.3,4.8) {Archive and manifest inspection\\DEX and native discovery};
+\node[core] (features) at (8.6,4.8) {DEX evidence extraction\\classes, methods, opcodes, APIs, literals, graphs};
+
+\node[core] (maven) at (0,2.1) {Maven JAR/AAR\\coordinates and versions};
+\node[core] (reference) at (4.3,2.1) {Download, D8 conversion,\\reference feature extraction};
+\node[store] (db) at (8.6,2.1) {Versioned SQLite\\reference-feature DB};
+
+\node[core] (candidates) at (12.9,4.8) {Candidate generation and\\multi-feature scoring};
+\node[core] (decision) at (12.9,2.1) {Identity and version decisions\\confidence, ambiguity, abstention};
+\node[output] (sbom) at (17.2,4.8) {CycloneDX 1.5 SBOM\\PURLs, evidence, native hashes};
+\node[output] (osv) at (17.2,2.1) {OSV vulnerability lookup\\certainty-aware findings};
+\node[output] (report) at (17.2,0.0) {JSON, Markdown, and HTML\\evidence report};
+\coordinate (authorityright) at (19.4,2.4);
+
+\node[research] (r8) at (4.3,-2.5) {R8 and multi-scale diagnostics\\basic blocks, call chains, structural gates};
+\node[research] (ml) at (8.6,-2.5) {ML/DL assistance\\Random Forest and Transformer experiments};
+\node[research] (router) at (12.9,-2.5) {Hybrid router and version-band\\report-only recommendations};
+
+\node[
+  draw=schoolblue,
+  rounded corners,
+  inner sep=4mm,
+  fit=(apk)(inspect)(features)(maven)(reference)(db)(candidates)(decision)
+      (sbom)(osv)(report)(authorityright),
+  label={[schoolblue,font=\bfseries]above:Authoritative APK-to-SBOM path}
+] {};
+\node[
+  draw=warningorange,
+  dashed,
+  rounded corners,
+  inner sep=4mm,
+  fit=(r8)(ml)(router),
+  label={[warningorange,font=\bfseries]below:Report-only research and diagnostic layer}
+] {};
+
+\draw[arrow] (apk) -- (inspect);
+\draw[arrow] (inspect) -- (features);
+\draw[arrow] (features) -- (candidates);
+\draw[arrow] (maven) -- (reference);
+\draw[arrow] (reference) -- (db);
+\draw[arrow] (db) -- (decision);
+\draw[arrow] (candidates) -- (decision);
+\draw[outarrow] (decision) -- (sbom);
+\draw[outarrow] (decision) -- (osv);
+\draw[outarrow] (sbom.east) -- (authorityright |- sbom.east) |- (report.east);
+\draw[outarrow] (osv) -- (report);
+
+\draw[researcharrow] (decision.south) -- ++(0,-8mm) -| (r8.north);
+\draw[researcharrow] (r8) -- (ml);
+\draw[researcharrow] (ml) -- (router);
+\draw[researcharrow] (router.north) -- ++(0,5mm) -| (report.south);
+\end{tikzpicture}
+}
+\caption{Detailed architecture of the implemented APK-to-SBOM system,
+including the authoritative analysis and reference-building paths and the
+non-authoritative ML/DL/R8 assistance layer.}
+\label{fig:pfe-high-level-architecture}
+\end{figure}
+
+The architecture has two authoritative input paths. The upper path extracts
+archive, manifest, DEX, native, and forensic evidence from the target APK. The
+middle path converts versioned Maven artifacts into the same DEX-oriented
+feature representation and stores them in SQLite. These paths meet at
+candidate scoring and the separate identity/version decision stage. Accepted
+decisions feed CycloneDX, OSV, and human-readable reports. The dashed orange
+layer contains R8 diagnostics, multi-scale structural features, Random Forest
+and Transformer experiments, and the hybrid router. It may annotate a report,
+but it cannot change selected versions, SBOM components, vulnerability labels,
+or source-validation metrics.
+
+\section{APK Extraction and DEX Analysis}
+
+The extraction layer discovers standard and nonstandard DEX files, parses
+application metadata, records resource and asset inventory, and inventories
+native files. The DEX analysis layer derives classes, methods, opcode
+statistics, API references, string literals, and dependency structures used
+during matching.
+
+\section{Reference Database Design}
+
+Reference features are built from versioned Maven JAR and AAR artifacts. Each
+artifact is downloaded, converted to a comparable DEX representation when
+necessary, analyzed, and stored in SQLite. Shared calibrated databases are
+kept separate from evaluation-only and experiment-only databases.
+
+\section{Evidence Model}
+
+The matcher combines several evidence families:
+
+\begin{table}[H]
+\centering
+\caption{Evidence families used by the component-attribution pipeline.}
+\label{tab:pfe-evidence-families}
+\begin{tabularx}{\textwidth}{L{0.27\textwidth}X}
+\toprule
+\textbf{Evidence family} & \textbf{Design role}\\
+\midrule
+Packages, classes, methods & Candidate generation and identity support\\
+Opcode features & Bytecode similarity under partial identifier changes\\
+Class dependency graph & Structural evidence across related classes\\
+Literals and unique features & Discrimination between nearby versions\\
+API/member references & Optional contextual signal\\
+POM/dependency context & Conservative coherence support\\
+Application context & Ambiguity explanation and risk reporting\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Candidate Generation and Version Selection}
+
+The system first narrows the reference search space and then evaluates
+candidate coordinates and versions using multiple evidence families. Library
+identity and exact-version confidence are distinct decisions. When adjacent
+versions remain inseparable, the system records an ambiguous version set
+instead of silently converting a near-tie into an exact fact.
+
+\section{CycloneDX and Vulnerability Design}
+
+Selected components are serialized as CycloneDX components with Package URLs
+and evidence properties. Native libraries are represented as file components
+with hashes. Vulnerability findings are constrained by component and version
+evidence: an uncertain version may support a potential investigation hint, but
+not an unqualified confirmed-vulnerability claim.
+
+\section{Experimental Isolation and Fail-Fast Controls}
+
+Alternative reference databases, AI suggestions, R8 diagnostics, and scoring
+experiments are isolated from the shared calibrated path. A target improvement
+is insufficient for promotion if controlled, clean, partial, no-Maven, or
+boundary controls regress.
+
+\section{Use Cases and Behavioral Diagrams}
+
+The following views refine the high-level architecture into actor
+responsibilities, runtime behavior, reference construction, deployment
+boundaries, and persistent data. Solid blue elements belong to the
+authoritative MVP path. Dashed orange elements are optional research or
+experiment paths and cannot alter a production decision unless they pass the
+promotion gates described previously.
+
+\subsection{Actors and Use Cases}
+
+The principal user is an analyst or auditor who supplies an APK and consumes
+the generated evidence. A reference-database maintainer prepares reproducible
+Maven examples, while a researcher evaluates changes in isolated databases.
+OSV is an external service rather than an internal source of component
+identity.
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  actor/.style={
+    rectangle,
+    rounded corners,
+    draw=schoolblue,
+    thick,
+    fill=blue!5,
+    align=center,
+    minimum width=31mm,
+    minimum height=10mm
+  },
+  usecase/.style={
+    ellipse,
+    draw=schoolblue,
+    thick,
+    fill=white,
+    align=center,
+    text width=38mm,
+    minimum width=45mm,
+    minimum height=11mm
+  },
+  experiment/.style={
+    usecase,
+    draw=warningorange,
+    dashed,
+    fill=orange!5
+  },
+  link/.style={thick,draw=schoolblue},
+  explink/.style={thick,dashed,draw=warningorange}
+]
+\node[actor] (analyst) at (-1.4,4.8) {Analyst / Auditor};
+\node[actor] (maintainer) at (-1.4,0.5) {Reference-Database\\Maintainer};
+\node[actor] (researcher) at (-1.4,-3.5) {Researcher};
+\node[actor] (osv) at (16.0,2.2) {External OSV\\Service};
+
+\node[usecase] (inspect) at (4.6,4.8) {Inspect APK and\\recover evidence};
+\node[usecase] (match) at (10.6,4.8) {Match components and\\estimate versions};
+\node[usecase] (report) at (10.6,2.2) {Generate CycloneDX\\and reports};
+\node[usecase] (builddb) at (4.6,0.5) {Build or update a\\reference database};
+\node[usecase] (validate) at (10.2,-0.3) {Validate emitted rows\\against source};
+\node[experiment] (experiment) at (4.9,-3.5) {Run isolated target and\\control experiments};
+\node[experiment] (promote) at (11.0,-3.5) {Review promotion gates};
+
+\node[
+  draw=schoolblue,
+  rounded corners,
+  inner sep=7mm,
+  fit=(inspect)(match)(report)(builddb)(validate)(experiment)(promote),
+  label={[schoolblue]above:\textbf{APK-to-SBOM system}}
+] (system) {};
+
+\draw[link] (analyst) -- (inspect);
+\draw[link] (inspect) -- (match);
+\draw[link] (match) -- (report);
+\draw[link] (maintainer) -- (builddb);
+\draw[link] (builddb) -- (match);
+\draw[link] (report) -- (validate);
+\draw[link] (report) -- (osv);
+\draw[explink] (researcher.east) -- (experiment.west);
+\draw[explink] (builddb) -- (experiment);
+\draw[explink] (experiment) -- (promote);
+\end{tikzpicture}%
+}
+\caption{Actors and use cases, with experiment-only actions shown as dashed
+orange elements.}
+\label{fig:pfe-use-cases}
+\end{figure}
+
+Figure~\ref{fig:pfe-use-cases} separates ordinary analysis from system
+maintenance and research. In particular, building an experimental database is
+not equivalent to promoting it: promotion requires an explicit review after
+target and control results have been checked.
+
+\subsection{APK-to-Report Activity}
+
+The runtime activity in Figure~\ref{fig:pfe-activity} shows two conservative
+branches. A weak or ambiguous match is retained as uncertainty rather than
+forced into an exact version, and vulnerability lookup is optional so that
+offline runs remain reproducible.
+
+\begin{figure}[H]
+\centering
+\resizebox{!}{0.68\textheight}{%
+\begin{tikzpicture}[
+  node distance=5.5mm and 15mm,
+  process/.style={
+    rectangle,
+    rounded corners,
+    draw=schoolblue,
+    thick,
+    fill=blue!5,
+    align=center,
+    text width=48mm,
+    minimum height=9mm
+  },
+  decision/.style={
+    diamond,
+    draw=schoolblue,
+    thick,
+    fill=blue!3,
+    aspect=2.3,
+    align=center,
+    inner sep=1.2mm,
+    text width=31mm
+  },
+  terminal/.style={
+    ellipse,
+    draw=schoolblue,
+    thick,
+    fill=evidencegreen!10,
+    align=center,
+    minimum width=32mm,
+    minimum height=8mm
+  },
+  arrow/.style={-{Latex[length=2mm]},thick,draw=schoolblue},
+  branch/.style={font=\scriptsize,fill=white,inner sep=1pt}
+]
+\node[terminal] (start) {Input APK};
+\node[process,below=of start] (inspect) {Inspect archive, manifest, DEX entries,
+native files, and forensic indicators};
+\node[process,below=of inspect] (analyze) {Parse every recoverable DEX and build
+package, class, method, opcode, literal, API, and graph features};
+\node[process,below=of analyze] (load) {Load candidate coordinate/version
+profiles from the selected SQLite reference database};
+\node[process,below=of load] (score) {Compute normalized evidence scores and
+rank candidates within each coordinate};
+\node[decision,below=8mm of score] (accept) {Identity and version evidence
+sufficient?};
+\node[process,below left=9mm and 14mm of accept] (uncertain) {Record alternatives,
+ambiguity, or abstention; exclude uncertain rows by default};
+\node[process,below right=9mm and 14mm of accept] (accepted) {Create accepted
+Maven detections with PURLs, confidence, and evidence};
+\node[process,below=18mm of accept] (sbom) {Add hash-backed native file
+observations and emit CycloneDX 1.5};
+\node[decision,below=8mm of sbom] (query) {OSV lookup enabled?};
+\node[process,below left=9mm and 14mm of query] (offline) {Continue without
+network vulnerability data};
+\node[process,below right=9mm and 14mm of query] (osvlookup) {Query OSV for
+accepted Maven coordinates and versions};
+\node[process,below=18mm of query] (render) {Write matches, SBOM, vulnerability
+JSON, and JSON / Markdown / HTML reports};
+\node[terminal,below=of render] (end) {Evidence package};
+
+\draw[arrow] (start) -- (inspect);
+\draw[arrow] (inspect) -- (analyze);
+\draw[arrow] (analyze) -- (load);
+\draw[arrow] (load) -- (score);
+\draw[arrow] (score) -- (accept);
+\draw[arrow] (accept) -| node[branch,near start] {no} (uncertain);
+\draw[arrow] (accept) -| node[branch,near start] {yes} (accepted);
+\draw[arrow] (uncertain) |- (sbom);
+\draw[arrow] (accepted) |- (sbom);
+\draw[arrow] (sbom) -- (query);
+\draw[arrow] (query) -| node[branch,near start] {no} (offline);
+\draw[arrow] (query) -| node[branch,near start] {yes} (osvlookup);
+\draw[arrow] (offline) |- (render);
+\draw[arrow] (osvlookup) |- (render);
+\draw[arrow] (render) -- (end);
+\end{tikzpicture}
+}
+\caption{Activity flow from APK input to the final evidence package.}
+\label{fig:pfe-activity}
+\end{figure}
+
+\subsection{APK-to-Report Interaction Sequence}
+
+Figure~\ref{fig:pfe-apk-sequence} identifies the runtime ownership of each
+operation. The report orchestrator invokes archive inspection and matching;
+the matcher itself performs DEX analysis and reads the reference database.
+Only accepted decisions are passed to CycloneDX and OSV generation.
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  participant/.style={
+    rectangle,
+    draw=schoolblue,
+    thick,
+    fill=blue!5,
+    align=center,
+    minimum width=27mm,
+    minimum height=9mm
+  },
+  life/.style={draw=gray!65,dashed},
+  call/.style={-{Latex[length=1.8mm]},thick,draw=schoolblue},
+  ret/.style={-{Latex[length=1.8mm]},thick,dashed,draw=evidencegreen}
+]
+\node[participant] (user) at (0,0) {Analyst};
+\node[participant] (cli) at (3.2,0) {CLI / Report\\Orchestrator};
+\node[participant] (extractor) at (6.4,0) {APK Extractor};
+\node[participant] (matcher) at (9.6,0) {DEX Analyzer\\and Matcher};
+\node[participant] (db) at (12.8,0) {Reference\\SQLite DB};
+\node[participant] (output) at (16.0,0) {CycloneDX, OSV,\\Report Writers};
+
+\foreach \p in {user,cli,extractor,matcher,db,output}
+  \draw[life] (\p.south) -- ++(0,-82mm);
+
+\draw[call] ($(user.south)+(0,-6mm)$) -- node[above,font=\scriptsize]
+  {generate-report(APK, options)} ($(cli.south)+(0,-6mm)$);
+\draw[call] ($(cli.south)+(0,-15mm)$) -- node[above,font=\scriptsize]
+  {inspect\_apk()} ($(extractor.south)+(0,-15mm)$);
+\draw[ret] ($(extractor.south)+(0,-23mm)$) -- node[above,font=\scriptsize]
+  {metadata, hashes, native files} ($(cli.south)+(0,-23mm)$);
+\draw[call] ($(cli.south)+(0,-32mm)$) -- node[above,font=\scriptsize]
+  {match\_apk\_to\_reference\_db()} ($(matcher.south)+(0,-32mm)$);
+\draw[call] ($(matcher.south)+(0,-40mm)$) -- node[above,font=\scriptsize]
+  {load component feature profiles} ($(db.south)+(0,-40mm)$);
+\draw[ret] ($(db.south)+(0,-48mm)$) -- node[above,font=\scriptsize]
+  {candidate versions and features} ($(matcher.south)+(0,-48mm)$);
+\draw[ret] ($(matcher.south)+(0,-56mm)$) -- node[above,font=\scriptsize]
+  {rankings, decisions, ambiguity} ($(cli.south)+(0,-56mm)$);
+\draw[call] ($(cli.south)+(0,-64mm)$) -- node[above,font=\scriptsize]
+  {accepted detections and APK evidence} ($(output.south)+(0,-64mm)$);
+\draw[ret] ($(output.south)+(0,-72mm)$) -- node[above,font=\scriptsize]
+  {SBOM and report artifact paths} ($(cli.south)+(0,-72mm)$);
+\draw[ret] ($(cli.south)+(0,-80mm)$) -- node[above,font=\scriptsize]
+  {evidence package} ($(user.south)+(0,-80mm)$);
+\end{tikzpicture}%
+}
+\caption{Sequence of interactions during an APK-to-report execution.}
+\label{fig:pfe-apk-sequence}
+\end{figure}
+
+\subsection{Reference-Database Construction Sequence}
+
+The second sequence, Figure~\ref{fig:pfe-reference-sequence}, uses the same DEX
+feature representation as APK analysis. This avoids comparing source-level
+library descriptions directly with compiled APK bytecode. Conversion records
+also preserve skipped and failed artifacts instead of silently treating them
+as valid empty libraries.
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  participant/.style={
+    rectangle,
+    draw=schoolblue,
+    thick,
+    fill=blue!5,
+    align=center,
+    minimum width=27mm,
+    minimum height=9mm
+  },
+  life/.style={draw=gray!65,dashed},
+  call/.style={-{Latex[length=1.8mm]},thick,draw=schoolblue},
+  ret/.style={-{Latex[length=1.8mm]},thick,dashed,draw=evidencegreen}
+]
+\node[participant] (maintainer) at (0,0) {Database\\Maintainer};
+\node[participant] (config) at (3.2,0) {Reference CLI\\and Catalog};
+\node[participant] (maven) at (6.4,0) {Maven\\Repository};
+\node[participant] (store) at (9.6,0) {Artifact and\\Metadata Store};
+\node[participant] (convert) at (12.8,0) {D8 Converter\\and DEX Analyzer};
+\node[participant] (sqlite) at (16.0,0) {Selected\\SQLite DB};
+
+\foreach \p in {maintainer,config,maven,store,convert,sqlite}
+  \draw[life] (\p.south) -- ++(0,-82mm);
+
+\draw[call] ($(maintainer.south)+(0,-6mm)$) -- node[above,font=\scriptsize]
+  {select coordinates and versions} ($(config.south)+(0,-6mm)$);
+\draw[call] ($(config.south)+(0,-15mm)$) -- node[above,font=\scriptsize]
+  {resolve metadata / download JAR or AAR} ($(maven.south)+(0,-15mm)$);
+\draw[ret] ($(maven.south)+(0,-23mm)$) -- node[above,font=\scriptsize]
+  {artifact, POM, checksums} ($(config.south)+(0,-23mm)$);
+\draw[call] ($(config.south)+(0,-32mm)$) -- node[above,font=\scriptsize]
+  {persist bytes and provenance} ($(store.south)+(0,-32mm)$);
+\draw[call] ($(store.south)+(0,-40mm)$) -- node[above,font=\scriptsize]
+  {convert artifact to comparable DEX} ($(convert.south)+(0,-40mm)$);
+\draw[ret] ($(convert.south)+(0,-48mm)$) -- node[above,font=\scriptsize]
+  {DEX or explicit skipped / failed record} ($(store.south)+(0,-48mm)$);
+\draw[call] ($(store.south)+(0,-56mm)$) -- node[above,font=\scriptsize]
+  {extract DEX and POM feature families} ($(convert.south)+(0,-56mm)$);
+\draw[call] ($(convert.south)+(0,-64mm)$) -- node[above,font=\scriptsize]
+  {transactional component upsert} ($(sqlite.south)+(0,-64mm)$);
+\draw[ret] ($(sqlite.south)+(0,-72mm)$) -- node[above,font=\scriptsize]
+  {row counts and extraction status} ($(config.south)+(0,-72mm)$);
+\draw[ret] ($(config.south)+(0,-80mm)$) -- node[above,font=\scriptsize]
+  {auditable build summary} ($(maintainer.south)+(0,-80mm)$);
+\end{tikzpicture}%
+}
+\caption{Sequence used to construct a versioned Maven reference database.}
+\label{fig:pfe-reference-sequence}
+\end{figure}
+
+\subsection{Component and Deployment View}
+
+The implementation can run through the command-line interface directly or in
+the project Docker environment. APKs, selected SQLite databases, and generated
+artifacts remain filesystem resources. Network access is required for Maven
+acquisition and OSV lookup, but not for deterministic matching with an
+existing database. Figure~\ref{fig:pfe-deployment} also makes the authority
+boundary explicit: report-only AI and R8 diagnostics may annotate a report but
+cannot feed the matcher, CycloneDX component set, or vulnerability labels.
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  component/.style={
+    rectangle,
+    rounded corners,
+    draw=schoolblue,
+    thick,
+    fill=blue!5,
+    align=center,
+    minimum width=31mm,
+    minimum height=10mm
+  },
+  storage/.style={
+    cylinder,
+    shape border rotate=90,
+    aspect=0.28,
+    draw=schoolblue,
+    thick,
+    fill=cyan!6,
+    align=center,
+    minimum width=29mm,
+    minimum height=13mm
+  },
+  external/.style={
+    rectangle,
+    rounded corners,
+    draw=evidencegreen,
+    thick,
+    fill=green!5,
+    align=center,
+    minimum width=30mm,
+    minimum height=10mm
+  },
+  experiment/.style={
+    rectangle,
+    rounded corners,
+    draw=warningorange,
+    dashed,
+    thick,
+    fill=orange!5,
+    align=center,
+    minimum width=34mm,
+    minimum height=10mm
+  },
+  arrow/.style={-{Latex[length=2mm]},thick,draw=schoolblue},
+  extarrow/.style={-{Latex[length=2mm]},thick,draw=evidencegreen},
+  exparrow/.style={-{Latex[length=2mm]},thick,dashed,draw=warningorange}
+]
+\node[component] (user) at (0,3.0) {Analyst / Auditor};
+\node[component] (cli) at (4.0,3.0) {CLI and Report\\Orchestrator};
+\node[component] (extract) at (8.1,4.5) {APK Extractor and\\DEX Analyzer};
+\node[component] (matcher) at (8.1,1.5) {Matcher and\\Version Decisions};
+\node[component] (writers) at (12.3,3.0) {CycloneDX, OSV, and\\Report Components};
+
+\node[storage] (apkstore) at (4.0,0.0) {APK and Output\\Filesystem};
+\node[storage] (shareddb) at (12.3,0.0) {Shared Calibrated\\Reference DB};
+\node[external] (mavenrepo) at (16.3,4.5) {Maven\\Repositories};
+\node[external] (osvservice) at (16.3,2.2) {OSV API};
+\node[experiment] (refbuilder) at (12.3,-3.0) {Reference Builder and\\Isolated DB Experiments};
+\node[experiment] (ai) at (5.0,-3.0) {ML/DL, R8, and Version-Band\\Report-Only Diagnostics};
+
+\node[
+  draw=schoolblue,
+  rounded corners,
+  inner sep=5mm,
+  fit=(cli)(extract)(matcher)(writers),
+  label={[schoolblue]above:\textbf{Local or Docker analysis environment}}
+] (runtime) {};
+
+\draw[arrow] (user) -- (cli);
+\draw[arrow] (apkstore.north) -- (cli.south);
+\draw[arrow] (cli) -- (extract);
+\draw[arrow] (extract) -- (matcher);
+\draw[arrow] (shareddb.west) -- (matcher.east);
+\draw[arrow] (matcher) -- (writers);
+\draw[extarrow] (writers) -- (osvservice);
+\draw[extarrow] (mavenrepo.east) -- ++(7mm,0) |- (refbuilder.east);
+\draw[exparrow] (refbuilder) -- node[right,font=\scriptsize,align=left]
+  {promotion only\\after gates} (shareddb);
+\draw[exparrow] (ai.west) -- ++(-12mm,0) |- node[near start,left,
+  font=\scriptsize,align=left] {annotations\\only} (cli.south);
+\end{tikzpicture}%
+}
+\caption{Component and deployment view with authoritative and report-only
+paths separated.}
+\label{fig:pfe-deployment}
+\end{figure}
+
+\subsection{Reference-Database Data Model}
+
+The physical SQLite schema is centered on one row per Maven coordinate and
+version in the \texttt{components} table. Every feature table refers to that
+row through \texttt{component\_id}. Figure~\ref{fig:pfe-reference-schema}
+groups tables by role to keep the model readable; the labels are the actual
+table names used by the implementation.
+
+\begin{figure}[H]
+\centering
+\resizebox{0.98\textwidth}{!}{%
+\begin{tikzpicture}[
+  entity/.style={
+    rectangle,
+    draw=schoolblue,
+    thick,
+    fill=blue!5,
+    align=left,
+    text width=49mm,
+    inner sep=3mm,
+    font=\small
+  },
+  group/.style={
+    rectangle,
+    rounded corners,
+    draw=evidencegreen,
+    thick,
+    fill=green!4,
+    align=left,
+    text width=55mm,
+    inner sep=3mm,
+    font=\small
+  },
+  diagnostic/.style={
+    group,
+    draw=warningorange,
+    dashed,
+    fill=orange!4,
+    text width=61mm,
+    font=\footnotesize
+  },
+  relation/.style={-{Latex[length=1.8mm]},thick,draw=schoolblue}
+]
+\node[entity] (components) at (0,0) {
+  \textbf{components}\\
+  \texttt{id} (PK)\\
+  \texttt{coordinate}, \texttt{group\_id}, \texttt{artifact\_id}\\
+  \texttt{version}, \texttt{purl}, \texttt{packaging}\\
+  conversion paths, status, and summary counts\\
+  \textit{UNIQUE(coordinate, version)}
+};
+
+\node[group] (dex) at (-6.7,3.4) {
+  \textbf{Artifact inventory}\\
+  \texttt{dex\_files}\\
+  path, SHA-256, size, class/method counts
+};
+\node[group] (identity) at (0,4.0) {
+  \textbf{Identity features}\\
+  \texttt{packages}\\
+  \texttt{classes}\\
+  \texttt{methods}
+};
+\node[group] (numeric) at (6.7,3.4) {
+  \textbf{Count and shape features}\\
+  \texttt{opcodes}\\
+  \texttt{opcode\_ngrams}\\
+  \texttt{dependency\_shapes}
+};
+\node[group] (context) at (-6.7,-3.5) {
+  \textbf{Relations and context}\\
+  \texttt{class\_dependencies}\\
+  \texttt{string\_literals}\\
+  \texttt{api\_references}
+};
+\node[group] (pom) at (0,-4.1) {
+  \textbf{Declared dependency context}\\
+  \texttt{maven\_dependencies}\\
+  coordinate, version, scope, optional, type,
+  classifier
+};
+\node[diagnostic] (multi) at (6.7,-3.5) {
+  \textbf{Multi-scale diagnostic features}\\
+  \texttt{basic\_block\_opcode\_fingerprints}\\
+  \texttt{call\_chain\_opcode\_fingerprints}\\
+  \texttt{class\_neighbor\_summaries}\\
+  \texttt{field\_operation\_sequences}\\
+  \texttt{literal\_context\_features}
+};
+
+\draw[relation] (components) -- (dex);
+\draw[relation] (components) -- (identity);
+\draw[relation] (components) -- (numeric);
+\draw[relation] (components) -- (context);
+\draw[relation] (components) -- (pom);
+\draw[relation] (components) -- (multi);
+\end{tikzpicture}%
+}
+\caption{Simplified physical schema of the SQLite reference-feature database;
+each arrow represents a \texttt{component\_id} foreign-key relation.}
+\label{fig:pfe-reference-schema}
+\end{figure}
+
+This one-to-many organization permits transactional replacement of a
+component's feature rows while preserving a stable coordinate/version
+identity. It also allows new diagnostic feature families to be stored without
+changing the meaning of the calibrated production weights.
+
+\section{Conclusion}
+
+The architecture turns APK observations into explicitly bounded SBOM claims.
+The following chapter explains how these components were implemented and how
+their behavior was evaluated.

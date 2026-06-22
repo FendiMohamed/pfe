@@ -1,0 +1,60 @@
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage{french}
+\setotherlanguage{arabic}
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}
+\providecommand{\UseMathForPositioningText}{}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{etoolbox}
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{tocbibind}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,calc,fit,backgrounds,shapes.geometric}
+\usepackage{pgf-umlsd}
+\usepackage{xspace}
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\DeclareLanguageMapping{arabic}{english}
+
+\numberwithin{algorithm}{chapter}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\tabularxcolumn}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\arraystretch}{1.14}
+\AtBeginEnvironment{tabularx}{\rowcolors{2}{white}{gray!5}}
+\newcommand{\tablerowrule}{%
+  \arrayrulecolor{gray!38}%
+  \specialrule{0.25pt}{1.2pt}{1.2pt}%
+  \arrayrulecolor{black}%
+}
+\geometry{a4paper,margin=2.5cm,headheight=15pt}
+\graphicspath{{figures/}}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=blue!60!black,
+  urlcolor=blue!60!black,
+  pdftitle={Evidence-Based SBOM Recovery from Compiled Android APKs},
+  pdfsubject={PFE Thesis},
+}

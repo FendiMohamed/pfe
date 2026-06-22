@@ -1,0 +1,435 @@
+\chapter{General Introduction}
+\label{ch:pfe-introduction}
+
+\section{Context}
+
+Modern software is rarely developed as an isolated body of source code.
+Applications combine first-party logic with operating-system services,
+open-source libraries, commercial components, build plug-ins, package
+registries, and automated delivery infrastructure. This network of producers,
+tools, services, and artifacts forms a software supply chain. A weakness or
+compromise at any point in that chain can affect the delivered application,
+which is why supply-chain risk management must cover the complete software
+life cycle \cite{nist2022csc}.
+
+Third-party components are especially important in mobile development. They
+provide networking, cryptography, database access, user-interface widgets,
+media handling, dependency injection, analytics, and many other capabilities.
+Reuse accelerates development, but it also transfers maintenance,
+licensing, and security risk into every application that embeds the component.
+When a vulnerability is disclosed, an organization must determine which
+applications contain the affected package and version before it can prioritize
+remediation.
+
+A Software Bill of Materials (\SBOM) supports this need by representing
+software components, identifiers, versions, hashes, and relationships in a
+structured form. The NTIA describes an \SBOM as a nested inventory for
+software and positions it as a foundation for software transparency
+\cite{ntiaSbom}. Standards such as \SPDX and \CycloneDX make this inventory
+machine-readable and interoperable with governance and vulnerability tools
+\cite{spdxSpecification,cyclonedxSpecification}.
+
+The Android ecosystem creates a difficult setting for this transparency.
+Applications are commonly written in Kotlin or Java, assembled with Gradle,
+and distributed as compiled Android packages. External JAR and AAR artifacts
+are resolved, transformed, merged with application code, converted to DEX,
+combined with resources and native libraries, and signed. The resulting
+\APK is the artifact installed or audited; it does not contain the original
+dependency declaration in a form equivalent to the resolved build graph.
+
+Figure~\ref{fig:pfe-intro-supply-chain} summarizes the motivating situation.
+The same dependency that enables application functionality can also become a
+source of inherited vulnerability or provenance risk. The security analyst
+may receive only the delivered binary, after the original supply-chain
+metadata has been transformed or removed.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=8mm and 9mm,
+  stage/.style={draw, rounded corners, align=center, text width=0.18\textwidth,
+    minimum height=12mm, fill=blue!5},
+  dependency/.style={draw, rounded corners, align=center,
+    text width=0.20\textwidth, minimum height=12mm, fill=warningorange!13},
+  analyst/.style={draw, rounded corners, align=center,
+    text width=0.19\textwidth, minimum height=12mm, fill=evidencegreen!11},
+  arrow/.style={-{Latex[length=2.5mm]}, thick, shorten >=1.5pt,
+    shorten <=1.5pt},
+  risk/.style={-{Latex[length=2.5mm]}, dashed, thick, red!65!black,
+    shorten >=1.5pt, shorten <=1.5pt}
+]
+\node[stage] (source) {Application source\\and build configuration};
+\node[dependency, right=of source] (deps) {Third-party and\\transitive dependencies};
+\node[stage, right=of deps] (build) {Build, D8/\Reight,\\merge, package, sign};
+\node[stage, right=of build] (apk) {Delivered\\compiled APK};
+\node[analyst, below=15mm of apk] (analyst) {Auditor or security team\\needs components and versions};
+\node[dependency, below=15mm of deps] (advisory) {Vulnerability and\\provenance information};
+
+\draw[arrow] (source) -- (deps);
+\draw[arrow] (deps) -- (build);
+\draw[arrow] (build) -- (apk);
+\draw[arrow] (apk.south) -- (analyst.north);
+\draw[risk] (advisory) -- (deps);
+\draw[arrow] (advisory.east) -- (analyst.west);
+\end{tikzpicture}
+\caption{Android software-supply-chain context: dependencies enter before the
+build, while the auditor may observe only the compiled APK.}
+\label{fig:pfe-intro-supply-chain}
+\end{figure}
+
+\section{Problem Statement}
+
+\subsection{The Source-to-Binary Information Gap}
+
+Conventional \SBOM generation is most reliable when it runs inside a trusted
+build environment. Package-manager metadata, lock files, dependency-resolution
+results, source modules, and compiler information can be collected before
+they disappear into the final binary. This information makes it possible to
+name direct and transitive dependencies and to preserve their declared
+coordinates.
+
+That assumption does not hold in every audit scenario. A security analyst,
+application store, incident-response team, customer, or third-party assessor
+may possess only an \APK. The source repository may be unavailable,
+incomplete, private, outdated, or inconsistent with the distributed binary.
+In this case, the \SBOM must be recovered from evidence that survived inside
+the compiled artifact.
+
+The source and binary views are not equivalent. A source dependency graph may
+contain build-time, metadata-only, optional, or unused dependencies that
+contribute no executable code. Conversely, the \APK may include shaded,
+vendored, generated, repackaged, or native code that does not correspond to a
+simple direct dependency declaration. The objective is therefore not to
+recreate an imaginary perfect Gradle file. It is to identify which claims can
+be supported by the delivered binary and to state where the reconstruction is
+incomplete.
+
+\subsection{Loss and Transformation of Component Evidence}
+
+During Android compilation, classes from the application and its dependencies
+are converted to DEX and commonly merged into shared files. Original JAR and
+AAR boundaries disappear. Large applications may use several DEX files, while
+variant-aware dependency resolution can select Android-, JVM-, Kotlin-, or
+other target-specific artifacts whose physical names differ from the public
+dependency coordinate.
+
+\Reight further combines shrinking, optimization, obfuscation, and bytecode
+rewriting \cite{androidShrinkCode}. It may:
+
+\begin{itemize}
+  \item rename packages, classes, methods, and fields;
+  \item remove unused component code;
+  \item inline methods into application or library callers;
+  \item merge classes or change package organization;
+  \item simplify instructions and constants; and
+  \item eliminate the few methods or literals that distinguish adjacent
+  library versions.
+\end{itemize}
+
+These transformations affect evidence families differently. Names may vanish
+while opcode or dependency patterns remain. Structural evidence may survive
+renaming but change under inlining or class merging. A component identity may
+be recognizable even when its exact version is not. Android
+third-party-library research consequently distinguishes library detection
+from the more difficult version-identification problem
+\cite{backes2016libscout,zhan2021atvhunter,zhou2025sad}.
+
+Recent common-benchmark evidence also shows why results from selected
+libraries or convenient datasets cannot be treated as universal deployment
+accuracy. Detector behavior changes with partial inclusion, optimization,
+reference coverage, version similarity, and dataset construction
+\cite{zhan2021systematic,gu2025tplbenchmark}.
+
+\subsection{The Vulnerability-Authority Problem}
+
+Vulnerability databases generally associate an advisory with a package
+identity and an affected version range. The inference chain is:
+
+\[
+\text{APK evidence}
+\rightarrow
+\text{component coordinate}
+\rightarrow
+\text{exact version}
+\rightarrow
+\text{affected range}.
+\]
+
+A wrong coordinate can retrieve unrelated advisories. A wrong version can
+create a false alarm or hide an affected release. Even a correct
+package/version mapping does not prove runtime exploitability, because
+configuration, reachability, platform behavior, and mitigations may matter.
+
+The central problem addressed by this thesis can therefore be stated as
+follows:
+
+\begin{quote}
+How can a system recover an auditable and standards-based software-component
+inventory from a compiled Android APK, estimate component identities and exact
+versions from incomplete or transformed evidence, and support vulnerability
+analysis without converting ambiguity into false precision?
+\end{quote}
+
+Figure~\ref{fig:pfe-intro-source-binary} contrasts the two generation
+conditions. The source-based path can use declared and resolved build
+metadata. The APK-only path must reconstruct bounded claims from static
+observations and known references.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=7mm and 11mm,
+  source/.style={draw, rounded corners, align=center, text width=0.23\textwidth,
+    minimum height=11mm, fill=evidencegreen!10},
+  binary/.style={draw, rounded corners, align=center, text width=0.23\textwidth,
+    minimum height=11mm, fill=warningorange!12},
+  output/.style={draw, rounded corners, align=center, text width=0.24\textwidth,
+    minimum height=11mm, fill=schoolblue!13},
+  arrow/.style={-{Latex[length=2.5mm]}, thick},
+  uncertain/.style={-{Latex[length=2.5mm]}, dashed, thick}
+]
+\node[source] (manifest) {Source and build view\\manifests, lock files, resolved graph};
+\node[output, right=of manifest] (sourcebom) {Build-generated SBOM\\declared and resolved metadata};
+\node[binary, below=14mm of manifest] (apk) {Binary-only view\\APK, DEX, manifest, resources, native files};
+\node[binary, right=of apk] (recovery) {Evidence recovery\\reference comparison, confidence, ambiguity};
+\node[output, right=of recovery] (recovered) {Recovered SBOM\\observed and explicitly bounded claims};
+
+\draw[arrow] (manifest) -- (sourcebom);
+\draw[arrow] (apk) -- (recovery);
+\draw[arrow] (recovery) -- (recovered);
+\draw[uncertain] (sourcebom) -- node[right, font=\scriptsize, align=left]
+  {related views,\\not identical} (recovered);
+\end{tikzpicture}
+\caption{Source-based SBOM generation and binary-only SBOM recovery answer
+related but non-identical composition questions.}
+\label{fig:pfe-intro-source-binary}
+\end{figure}
+
+\section{Motivation}
+
+\subsection{Security Auditing without Source Access}
+
+Organizations often need to inspect software they did not build. Acquired
+applications, legacy products, third-party mobile clients, incident artifacts,
+and app-store packages may lack a reproducible source environment. Static
+\APK analysis offers a way to recover useful evidence without executing the
+application or trusting vendor-provided metadata.
+
+A practical APK-to-\SBOM tool can help an analyst:
+
+\begin{itemize}
+  \item inventory recognizable third-party JVM/Maven components;
+  \item identify strong exact-version evidence and adjacent-version
+  ambiguity;
+  \item obtain a standard document consumable by other tools;
+  \item prioritize vulnerability investigation;
+  \item compare binary observations with source dependency evidence when
+  source is available; and
+  \item recognize native-heavy, hidden-code, or missing-reference boundaries
+  that require another analysis method.
+\end{itemize}
+
+\subsection{Transparency rather than Forced Completeness}
+
+The usefulness of an \SBOM depends on the reliability of its identifiers.
+Emitting a large inventory with unsupported exact versions may be more
+dangerous than emitting a smaller inventory with clear evidence and
+limitations. The project is therefore motivated by \emph{evidence quality},
+not by maximizing the number of rows at any cost.
+
+This principle has three consequences. First, library identity and exact
+version are treated as separate decisions. Second, ambiguous alternatives and
+reference-coverage gaps are preserved instead of hidden. Third,
+vulnerability findings inherit the confidence and validation status of the
+underlying component.
+
+\subsection{An End-to-End Engineering Gap}
+
+Existing Android library-identification research contributes important
+techniques based on package signatures, class dependencies, opcodes, call
+structure, optimization simulation, and learned representations. However,
+detector output alone does not complete the operational workflow. A usable
+system also needs:
+
+\begin{itemize}
+  \item a reproducible versioned reference database;
+  \item an explicit identity/version decision policy;
+  \item standard \SBOM serialization;
+  \item vulnerability lookup with uncertainty propagation;
+  \item source-backed validation where possible;
+  \item report formats for both machines and analysts; and
+  \item regression gates that preserve negative experiments and prevent
+  unsafe global promotions.
+\end{itemize}
+
+The project addresses this integration gap with a working MVP whose claims are
+limited by its observed evidence.
+
+\section{Research Questions}
+
+The thesis evaluates the following four research questions. They are phrased
+to match the evidence layers and answers reported in
+Chapter~\ref{ch:pfe-evaluation}.
+
+\begin{enumerate}[label=\textbf{RQ\arabic*:}]
+  \item Can the pipeline recover exact Maven versions when ground truth and
+  adequate reference evidence are available?
+  \item How does emitted-version quality change between clean and difficult
+  real APK families?
+  \item How much of the full source dependency denominator is represented by
+  the reference database and emitted by the matcher?
+  \item Can SBOM, vulnerability, and AI assistance preserve uncertainty and
+  authority boundaries?
+\end{enumerate}
+
+These questions separate capability from coverage. RQ1 tests the mechanics
+under favorable evidence. RQ2 examines realistic variation across application
+families. RQ3 distinguishes reference coverage from matcher recall. RQ4
+evaluates whether downstream outputs remain honest when the analysis is
+uncertain.
+
+\section{Objectives}
+
+\subsection{General Objective}
+
+The general objective is to design, implement, and evaluate a static
+evidence-based system that recovers a bounded \CycloneDX \SBOM from a compiled
+Android \APK and supports confidence-aware vulnerability analysis.
+
+\subsection{Specific Objectives}
+
+The specific objectives are:
+
+\begin{enumerate}
+  \item inspect an \APK and recover manifest, DEX, resource, native-file, and
+  forensic metadata without installing or executing the application;
+  \item extract comparable packages, classes, methods, instructions, literals,
+  API references, and dependency structures from all successfully parsed DEX
+  files;
+  \item acquire selected Maven JAR/AAR releases, convert their bytecode to DEX,
+  and construct a versioned SQLite reference-feature database;
+  \item combine several static evidence families to rank component and version
+  candidates;
+  \item distinguish component identity from exact-version confidence and
+  expose ambiguity or abstention when evidence is insufficient;
+  \item emit accepted components in \CycloneDX JSON using Package URL
+  identifiers and evidence properties;
+  \item query ecosystem-aware vulnerability information while preserving
+  component and version uncertainty;
+  \item validate emitted Maven rows against source dependency trees where
+  auditable source is available; and
+  \item evaluate controlled, clean, partial, source-known, report-only,
+  failed, and limitation evidence without merging them into one misleading
+  score.
+\end{enumerate}
+
+\section{Methodology Overview}
+
+The project followed an iterative research-and-engineering methodology. It did
+not begin by selecting a single detector and treating its score as a complete
+\SBOM. The work progressed through the following stages:
+
+\begin{enumerate}
+  \item \textbf{literature and standard review}: analyze Android
+  third-party-library detection, obfuscation resilience, realistic
+  benchmarking, \SBOM standards, and vulnerability identifiers;
+  \item \textbf{scope and architecture}: define a static JVM/Maven MVP,
+  choose \CycloneDX and OSV, and establish native, dynamic-code, and
+  heavy-obfuscation boundaries;
+  \item \textbf{reference construction}: download known Maven releases,
+  convert JAR/AAR bytecode to DEX, extract comparable features, and store
+  coordinate/version profiles;
+  \item \textbf{APK analysis and matching}: inspect the package, aggregate
+  multidex evidence, generate candidates, rank references, and separate
+  identity from version confidence;
+  \item \textbf{reporting and validation}: generate \SBOM, JSON, Markdown, and
+  HTML outputs, query vulnerabilities, and compare emitted rows with source
+  dependency trees;
+  \item \textbf{controlled and real evaluation}: test clear, multidex,
+  \Reight, clean real, partial real, native-heavy, and hidden-code cases in
+  separate evidence lanes; and
+  \item \textbf{guarded improvement}: evaluate reference growth, advanced
+  feature weights, rerankers, and AI assistance with target/control gates;
+  promote only changes that improve the target without regressing controls.
+\end{enumerate}
+
+Figure~\ref{fig:pfe-intro-methodology} shows the evidence-gated loop used
+during implementation and optimization.
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  node distance=7mm and 8mm,
+  stage/.style={draw, rounded corners, align=center, text width=0.18\textwidth,
+    minimum height=11mm, fill=blue!5},
+  gate/.style={draw, diamond, aspect=2.1, align=center, inner sep=1.5mm,
+    fill=warningorange!14},
+  outcome/.style={draw, rounded corners, align=center, text width=0.18\textwidth,
+    minimum height=11mm, fill=evidencegreen!10},
+  reject/.style={draw, rounded corners, align=center, text width=0.19\textwidth,
+    minimum height=11mm, fill=red!7},
+  arrow/.style={-{Latex[length=2.5mm]}, thick}
+]
+\node[stage] (idea) {Paper-backed idea\\or observed failure};
+\node[stage, right=of idea] (experiment) {Isolated implementation\\and experiment};
+\node[gate, right=of experiment] (gate) {Target improves\\and controls pass?};
+\node[outcome, above right=8mm and 11mm of gate] (promote)
+  {Promote to calibrated\\default behavior};
+\node[reject, below right=8mm and 11mm of gate] (retain)
+  {Keep diagnostic,\\experiment-only, or reject};
+\node[stage, right=of promote] (evidence) {Record evidence,\\decision, and limitation};
+
+\draw[arrow] (idea) -- (experiment);
+\draw[arrow] (experiment) -- (gate);
+\draw[arrow] (gate) -- node[above left, font=\scriptsize] {yes} (promote);
+\draw[arrow] (gate) -- node[below left, font=\scriptsize] {no} (retain);
+\draw[arrow] (promote) -- (evidence);
+\draw[arrow] (retain) -| (evidence);
+\end{tikzpicture}
+}
+\caption{Fail-fast, target/control methodology used to promote or reject
+matcher, reference-database, R8, and AI experiments.}
+\label{fig:pfe-intro-methodology}
+\end{figure}
+
+This methodology treats failed experiments as evidence. An improvement that
+fixes one target but causes false versions or components in controls is not a
+successful system improvement.
+
+\section{Thesis Organization}
+
+The remainder of the thesis is organized as follows:
+
+\begin{itemize}
+  \item \textbf{Chapter~\ref{ch:pfe-background} -- Technical Background}
+  introduces software supply-chain security, \SBOM standards, vulnerability
+  terminology, Android packaging and compilation, DEX evidence, reverse
+  engineering, component identification, and evidence-based recovery.
+
+  \item \textbf{Chapter~\ref{ch:pfe-ai} -- Artificial Intelligence for
+  Component Identification} presents only the ML/DL methods implemented in
+  the project: the structured Random Forest, full and MVP-safe Transformers,
+  the raw-opcode negative result, evaluation metrics, shortcut risks, and the
+  report-only authority boundary.
+
+  \item \textbf{Chapter~\ref{ch:pfe-sota} -- State of the Art} reviews Android
+  third-party-library and version-identification approaches by technique,
+  compares their capabilities and limitations, and derives the research gap
+  addressed by the MVP.
+
+  \item \textbf{Chapter~\ref{ch:pfe-design} -- Proposed Solution and System
+  Design} defines requirements, architecture, actors, use cases, activities,
+  sequences, evidence families, version decisions, components, deployment,
+  and the reference-database model.
+
+  \item \textbf{Chapter~\ref{ch:pfe-evaluation} -- Implementation, Evaluation,
+  and Discussion} describes the implemented modules and commands, defines the
+  evidence layers and metrics, reports controlled and real-APK results,
+  preserves failed experiments, answers the research questions, and discusses
+  validity threats.
+
+  \item \textbf{Chapter~\ref{ch:pfe-conclusion} -- General Conclusion and
+  Perspectives} synthesizes the contributions and limitations and presents
+  the most defensible directions for future work.
+\end{itemize}

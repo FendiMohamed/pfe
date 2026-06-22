@@ -1,0 +1,299 @@
+\chapter{General Conclusion and Perspectives}
+\label{ch:pfe-conclusion}
+
+\section{General Conclusion}
+
+This thesis investigated whether a useful Software Bill of Materials can be
+recovered when the available Android artifact is a compiled \APK rather than a
+source repository or reproducible build environment. The problem is difficult
+because dependency archives are merged into DEX, source-level coordinates and
+versions are not preserved as a complete manifest, and \Reight may rename,
+remove, inline, merge, or reorganize the evidence needed for component
+attribution. Vulnerability analysis adds a further requirement: an advisory
+mapping is only as trustworthy as the component identity and exact-version
+evidence on which it depends.
+
+The project addressed this problem through a static, evidence-gated
+APK-to-\SBOM pipeline. The implemented MVP:
+
+\begin{itemize}
+  \item inspects APK archives, manifests, DEX files, resource and asset
+  inventories, native libraries, and extraction-risk indicators;
+  \item extracts packages, classes, methods, opcodes, literals, API
+  references, dependencies, and structural features from all successfully
+  parsed DEX files;
+  \item constructs versioned Maven reference profiles by acquiring JAR/AAR
+  releases and converting their bytecode to a comparable DEX representation;
+  \item ranks component and version candidates through explainable
+  multi-feature evidence;
+  \item separates component-identity confidence from exact-version confidence
+  and retains ambiguous alternatives;
+  \item emits accepted evidence as \CycloneDX JSON with Package URLs;
+  \item queries OSV while preserving confirmed, potential, and report-only
+  vulnerability interpretations;
+  \item validates emitted Maven rows against source dependency trees when
+  auditable source evidence is available; and
+  \item produces JSON, Markdown, and HTML reports that expose evidence,
+  decisions, uncertainty, and limitations.
+\end{itemize}
+
+The contribution is therefore broader than a similarity score. It combines
+binary evidence extraction, reference construction, component attribution,
+standard serialization, vulnerability interpretation, source validation, and
+experiment governance in one reproducible workflow. The project also records
+why apparently promising changes were not promoted. Global opcode weighting,
+broad API weighting, recency-based version selection, global multi-scale
+fusion, broad priority-database shortlisting, and raw-opcode deep learning
+were rejected, disabled, or isolated when their controls did not justify
+production authority.
+
+\subsection{Evaluation Synthesis}
+
+The controlled evaluation confirms that the implemented mechanics work when
+the expected components and reference evidence are known: 84 of 84 expected
+Maven versions were recovered across 72 controlled fixtures. The clean
+source-validated real slice confirms 47 of 47 emitted Maven versions. These
+results demonstrate that static APK evidence can support exact
+component/version claims under favorable conditions.
+
+The broader real-APK evaluation gives a more realistic boundary. Across the
+102 source-validated APKs that emitted Maven components, 927 of 1,837 emitted
+versions were confirmed, corresponding to a 50.5\% \emph{emitted Maven
+version confirmation rate}. This metric describes correctness among emitted
+Maven rows; it is not full dependency recall. Four additional source-validated
+APKs emitted no Maven components and remain separate matcher-recall and
+emission-threshold controls.
+
+Against the complete source dependency denominator, the system emitted 927
+exact coordinate/version rows from 12,082 resolved source rows, or 7.7\%.
+The shared reference database contained the exact source version for 1,231 of
+those rows, or 10.2\%. The difference between controlled success, emitted-row
+confirmation, reference coverage, and full-denominator recall is one of the
+principal findings of the thesis. A matcher cannot identify a missing
+reference, and a large reference catalog is not sufficient if candidate
+generation introduces false emissions.
+
+The source-known v2 lane confirmed 6,772 of 6,772 emitted rows when each APK's
+candidate space was constrained to exact source-known coordinate/version
+references. This result demonstrates recognition under a favorable
+upper-bound condition. It does not measure unconstrained APK-only accuracy and
+does not remove the remaining 5,238 source-gap rows.
+
+The vulnerability demonstrations confirm the same authority rule. Exact and
+source-consistent package/version evidence can support a confirmed advisory
+mapping. A source-version mismatch must remain potential even when the
+external vulnerability service correctly returns an advisory for the selected
+version.
+
+The ML/DL work supports report triage rather than component authority. The
+MVP-safe structured-token Transformer provides promising report-only triage
+evidence, while its production decision wiring remains disabled. The
+raw-opcode Transformer failed to beat its simpler logistic-regression
+baseline. The integration smoke tests show that AI sections can be visible
+without changing selected components, versions, \CycloneDX content, or
+vulnerability output.
+
+\subsection{Practical Significance}
+
+The MVP is useful when interpreted as an evidence-recovery and audit tool, not
+as a replacement for a trusted build-generated \SBOM. It can recover strong
+component claims, reveal version ambiguity, produce interoperable output,
+guide vulnerability investigation, and identify unsupported regions such as
+native-heavy or hidden-code applications.
+
+Its practical value comes from making partial knowledge explicit. A report can
+distinguish:
+
+\begin{itemize}
+  \item a source-confirmed exact Maven component;
+  \item a strong component identity with an ambiguous version band;
+  \item a report-only candidate requiring analyst review;
+  \item a missing-reference or matcher-recall gap;
+  \item a hash-backed native file observation; and
+  \item a protected or dynamically loaded boundary outside static coverage.
+\end{itemize}
+
+This distinction is safer than emitting one precise-looking dependency list in
+which supported and unsupported claims are indistinguishable.
+
+\section{Answers to the Research Questions}
+
+Table~\ref{tab:pfe-conclusion-rq-answers} summarizes the answers established by
+the evaluation. The wording preserves the evidence classes and denominators
+defined in Chapter~\ref{ch:pfe-evaluation}.
+
+\begin{table}[H]
+\centering
+\caption{Answers to the research questions and their evidence boundaries.}
+\label{tab:pfe-conclusion-rq-answers}
+\begin{tabularx}{\textwidth}{L{0.08\textwidth}L{0.25\textwidth}X}
+\toprule
+\textbf{RQ} & \textbf{Answer} & \textbf{Established boundary}\\
+\midrule
+RQ1 & Exact Maven versions can be recovered under bounded conditions. &
+Controlled fixtures recover 84/84 expected versions, and the clean real slice
+confirms 47/47 emitted versions. Partial and full-denominator evidence shows
+that this capability depends on reference availability, surviving bytecode,
+and version separability.\\
+RQ2 & Emitted-version quality varies substantially across APK families. &
+Clean, well-covered APKs support strong exact claims. Partial, minified,
+AndroidX/Kotlin-era, and large-tree cases expose more wrong-version, missing,
+or ambiguous rows. Native-heavy and hidden-code cases expose unsupported
+analysis boundaries and remain separate from Maven-version accuracy.\\
+RQ3 & Reference coverage and matcher recall both constrain complete recovery.
+& The shared database exactly covers 1,231/12,082 source rows, while the full
+pipeline emits 927/12,082 exact rows. The source-known v2 lane demonstrates
+that broader exact references enable recognition, but its constrained
+candidate space is an upper bound rather than production accuracy.\\
+RQ4 & Downstream outputs can preserve uncertainty and authority boundaries. &
+\CycloneDX components carry confidence and ambiguity evidence; OSV findings
+inherit component/source-validation status; native files remain hash-backed
+observations; and AI assistance is report-only and cannot alter protected
+outputs.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The combined answer is conditional rather than absolute. Static APK analysis
+can produce a useful and auditable \SBOM, but trustworthy exact-version
+recovery requires adequate references, separable compiled evidence, cautious
+candidate generation, and downstream systems that preserve uncertainty.
+
+\section{Future Perspectives}
+
+Future work should extend the evidence base in an order that reduces false
+claims before increasing output volume. Table~\ref{tab:pfe-future-priorities}
+summarizes the recommended priorities and their promotion conditions.
+
+\begin{table}[H]
+\centering
+\caption{Prioritized future work and the evidence required for promotion.}
+\label{tab:pfe-future-priorities}
+\begin{tabularx}{\textwidth}{L{0.09\textwidth}L{0.25\textwidth}X}
+\toprule
+\textbf{Priority} & \textbf{Direction} & \textbf{Required evidence}\\
+\midrule
+P1 & Safer large-catalog candidate retrieval & Improve identity recall and
+reference coverage without reproducing priority-database false emissions;
+pass clean, partial, controlled, and same-coordinate controls.\\
+P1 & Exact-version separability and calibrated abstention & Use
+version-distinctive evidence and calibrated margins; demonstrate fewer wrong
+versions without hiding unresolved cases.\\
+P2 & Broader source-observed reference coverage & Add bytecode-bearing
+source-used releases through reproducible acquisition and isolated promotion
+gates; keep metadata-only and unsupported artifacts explicit.\\
+P2 & Scoped multi-scale R8 evidence & Evaluate class, call-chain, basic-block,
+field-operation, and literal-context evidence per risk profile; prohibit
+global promotion when any protected control regresses.\\
+P3 & Native component provenance & Build a separate native reference corpus
+and evaluation protocol for ABI-specific shared libraries, stripping, and
+static linking.\\
+P3 & Dynamic and protected-code observation & Combine static risk indicators
+with sandboxed runtime collection, integrity checking, and explicit
+provenance for loaded payloads.\\
+P4 & External benchmarks and reproducibility & Evaluate on independently
+curated APKs, additional ecosystems and build eras, and compatible public
+benchmarks with published denominator definitions.\\
+P4 & Calibrated report-only learning & Train on external, independently
+reviewed labels and APK-only inputs; require calibration and strict output
+equivalence before considering any authority expansion.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Safer Candidate Retrieval}
+
+The highest-value near-term improvement is a stronger APK-only shortlist for
+large reference catalogs. Possible mechanisms include inverted indexes over
+rare classes and methods, coordinate-family retrieval, approximate nearest
+neighbor search over structural summaries, and multi-stage coarse-to-fine
+verification. The critical gate is not shortlist recall alone. A successful
+method must recover intended candidates while preventing the extra emissions
+observed in broad package-overlap experiments.
+
+\subsection{Calibrated Evidence and Version Abstention}
+
+Current scores rank candidates but are not formal probabilities. Future work
+can calibrate identity confidence, exact-version confidence, and abstention
+thresholds using held-out source-validated cases. Calibration should be
+coordinate- and family-aware because score distributions differ across
+libraries, build eras, and optimization profiles.
+
+Version-set prediction may be more honest than single-version selection for
+feature-equivalent releases. A future calibrated set-valued method could
+produce candidate sets with explicitly evaluated coverage, provided its
+assumptions and validation population are stated.
+
+\subsection{Reference and Provenance Knowledge Graph}
+
+The current SQLite schema stores component features and declared Maven
+dependencies. A provenance-aware knowledge graph could connect:
+
+\begin{itemize}
+  \item public coordinates, target variants, aliases, and relocated
+  artifacts;
+  \item release chronology and version families;
+  \item Maven dependency relationships;
+  \item source-observed usage;
+  \item binary fingerprints and evidence occurrences;
+  \item vulnerability affected ranges; and
+  \item the decisions and controls that justified or rejected a claim.
+\end{itemize}
+
+Such a graph could improve artifact-family reasoning and explain why a
+candidate was considered. It must remain secondary to observed APK evidence;
+graph coherence should not become a new form of metadata-only certainty.
+
+\subsection{Native and Dynamic Components}
+
+Native recovery should be developed as a separate module with its own
+features, references, and metrics. Useful evidence may include exported and
+imported symbols, function fingerprints, strings, section structure, build
+identifiers, compiler signatures, and architecture-normalized code features.
+
+Dynamic-code work should record when and where a payload was obtained, its
+hash, signature, loading mechanism, and execution context. Runtime collection
+must not be merged silently with the original \APK inventory; provenance
+should distinguish packaged, unpacked, and downloaded components.
+
+\subsection{Larger and More Independent Evaluation}
+
+Future evaluation should increase application diversity by family rather than
+by convenience. Priority categories include:
+
+\begin{itemize}
+  \item modern AndroidX and Kotlin multiplatform applications;
+  \item legacy Maven and JCenter-era builds;
+  \item commercial or protected applications for which analysis is legally
+  authorized;
+  \item games and cross-platform frameworks;
+  \item native-heavy and dynamically extensible applications; and
+  \item multiple releases of the same application to measure temporal drift.
+\end{itemize}
+
+An independent corpus should separate dataset construction, label review, and
+tool development. It should publish both emitted-row quality and full source
+or binary-ground-truth denominators so that coverage and matcher precision are
+not collapsed.
+
+\subsection{AI as a Guarded Research Direction}
+
+Learned representations remain promising for complex \Reight evidence, but
+the next step should not be a larger model on the same shortcuts. A stronger
+AI study requires:
+
+\begin{itemize}
+  \item more independent APK cases per class;
+  \item labels reviewed independently of the features used for prediction;
+  \item APK-only inputs available at deployment time;
+  \item hierarchical aggregation from methods to classes, libraries, and
+  applications;
+  \item calibration and out-of-distribution detection;
+  \item simple and strong baselines; and
+  \item a proof that authoritative outputs remain unchanged until promotion
+  gates pass.
+\end{itemize}
+
+The appropriate near-term role remains analyst assistance: identify unusual
+evidence patterns, prioritize review, and recommend which deterministic
+diagnostic should run next.

@@ -1,0 +1,331 @@
+\chapter{Reproducibility and Evidence Index}
+\label{app:pfe-reproducibility}
+
+This appendix records the environment, command sequences, evidence classes,
+and generated artifacts needed to reproduce or audit the principal results of
+this thesis. It complements the conceptual and implementation descriptions in
+Chapters~\ref{ch:pfe-design} and~\ref{ch:pfe-evaluation}.
+The commands are written for the repository layout used during the final
+evidence freeze of 20 June 2026. The corresponding Git base revision was
+\texttt{2983d54}; thesis sources and generated documentation created after
+that revision were present as an uncommitted working-tree layer.
+
+\section{Build and Runtime Environment}
+
+\subsection{Recommended Docker Environment}
+
+Docker Compose is the preferred execution path because it standardizes the
+Python, Android, Java, and Gradle toolchains used by the project. The main
+environment is summarized in Table~\ref{tab:appendix-runtime}. Exact
+bit-for-bit rebuilds still depend on mutable package repositories and
+unpinned upstream scanner installers, so the dated generated artifacts remain
+the authoritative evidence snapshot.
+
+\begin{table}[H]
+\centering
+\caption{Reproduction environment used by the project.}
+\label{tab:appendix-runtime}
+\begin{tabularx}{\textwidth}{L{0.28\textwidth}X}
+\toprule
+\textbf{Element} & \textbf{Configuration}\\
+\midrule
+Python & Python 3.12 or newer; the frozen project environment used Python
+3.12.0.\\
+Core libraries & Androguard 4.1.3, NetworkX 3.4.2, Requests 2.32.3,
+Packaging 24.2, Pydantic 2.10.6, and Rich 13.9.4.\\
+Android conversion & Android command-line tools and D8 from Build Tools
+36.0.0; legacy Build Tools 29.0.3 are also installed.\\
+Build compatibility & Default JDK plus JDK 11, Gradle 9.5.0, and compatibility
+installations for Gradle 8.14.3, 8.13, 6.1.1, 5.1.1, and 4.6.\\
+Feature storage & SQLite reference databases containing versioned Maven
+profiles and extracted evidence.\\
+Output standards & CycloneDX JSON with Package URLs; OSV is used for online
+vulnerability lookup.\\
+Optional AI & Scikit-learn 1.5--1.x and PyTorch 2.4--2.x; these dependencies
+support report-only experiments and are not required for deterministic
+matching.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+From the repository root, the container and test suite can be verified with:
+
+\begin{lstlisting}[style=thesiscode,
+caption={Docker build and verification sequence.}]
+docker compose build
+docker compose run --rm apk-sbom python scripts/check_toolchain.py
+docker compose run --rm apk-sbom python -m apk_sbom.cli --help
+docker compose run --rm apk-sbom pytest -q
+\end{lstlisting}
+
+The final local regression run reported 275 passing tests. This count is a
+dated project-state observation, not a guarantee that a future checkout will
+retain the same number of tests.
+
+\subsection{Host-Python Alternative}
+
+The deterministic Python commands can also run in a Python 3.12 virtual
+environment:
+
+\begin{lstlisting}[style=thesiscode,
+caption={Host-Python setup and test sequence.}]
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -e ".[dev]"
+python -m apk_sbom.cli --help
+pytest -q
+\end{lstlisting}
+
+Reference conversion on the host additionally requires a working D8/Android
+SDK installation. The optional extras \texttt{.[ml]} and \texttt{.[dl]} are
+needed only to reproduce the machine-learning experiments discussed in
+Chapter~\ref{ch:pfe-ai}.
+
+\section{Core APK-to-SBOM Command Sequence}
+
+\subsection{Stage-Level Inspection}
+
+The following sequence separates archive inspection, DEX analysis, component
+matching, and complete report generation. PowerShell variables are used only
+to keep paths readable.
+
+\begin{lstlisting}[style=thesiscode,
+caption={Deterministic APK analysis and report workflow.}]
+$apk = "data/test_apks/real/F-Droid.apk"
+$db = "data/reference_db/reference_features_calibrated_combined.sqlite"
+$out = "data/results/reproduction-fdroid"
+
+docker compose run --rm apk-sbom python -m apk_sbom.cli inspect-apk $apk
+docker compose run --rm apk-sbom python -m apk_sbom.cli analyze-dex $apk
+docker compose run --rm apk-sbom python -m apk_sbom.cli match-apk $apk `
+  --db-path $db --top 10 --min-score 0.05
+docker compose run --rm apk-sbom python -m apk_sbom.cli generate-report $apk `
+  --output-dir $out --db-path $db --top 30 --skip-osv
+\end{lstlisting}
+
+The stable shared database used by the ordinary lane is
+\path{data/reference_db/reference_features_calibrated_combined.sqlite}.
+The \texttt{--skip-osv} flag makes the run independent of the availability of
+the OSV service. It does not disable extraction, matching, SBOM generation, or
+the local report.
+
+\subsection{Expected Output Package}
+
+A successful \texttt{generate-report} run normally writes the files listed in
+Table~\ref{tab:appendix-report-files}.
+
+\begin{table}[H]
+\centering
+\caption{Principal generated report artifacts.}
+\label{tab:appendix-report-files}
+\begin{tabularx}{\textwidth}{L{0.30\textwidth}X}
+\toprule
+\textbf{Artifact} & \textbf{Purpose}\\
+\midrule
+\path{matches.json} & Ranked component candidates, evidence scores,
+confidence, selected versions, and ambiguity information.\\
+\path{sbom.cdx.json} & CycloneDX SBOM containing accepted Maven components,
+Package URLs, evidence properties, and hash-based native file components.\\
+\path{osv-vulnerabilities.json} & OSV responses and normalized vulnerability
+findings when online scanning is enabled.\\
+\path{report.json} & Combined machine-readable report used by evaluation and
+dashboard scripts.\\
+\path{report.md} & Human-readable Markdown summary.\\
+\path{report.html} & Browser-oriented report and the principal demonstration
+surface.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The narrower CLI commands are useful when a stage fails: \texttt{inspect-apk}
+checks archive and manifest evidence; \texttt{analyze-dex} checks parsed
+bytecode features; \texttt{match-apk} checks candidate ranking;
+\texttt{generate-sbom} writes the SBOM without the full report; and
+\texttt{scan-sbom-osv} performs vulnerability enrichment separately.
+
+\section{Reference-Database Construction}
+
+\subsection{Isolated Build Sequence}
+
+Reference artifacts must be built in isolated paths unless a later promotion
+gate explicitly authorizes their inclusion in the shared calibrated database.
+A minimal isolated build is:
+
+\begin{lstlisting}[style=thesiscode,
+caption={Isolated reference-database construction.}]
+$config = "configs/libraries.json"
+$artifacts = "data/reference_db/artifacts_reproduction"
+$dex = "data/reference_db/dex_reproduction"
+$db = "data/reference_db/reference_features_reproduction.sqlite"
+
+docker compose run --rm apk-sbom python -m apk_sbom.cli download-maven `
+  --config $config --output-root $artifacts --dry-run
+docker compose run --rm apk-sbom python -m apk_sbom.cli download-maven `
+  --config $config --output-root $artifacts --quiet
+docker compose run --rm apk-sbom python -m apk_sbom.cli convert-reference-dex `
+  --artifact-root $artifacts --output-root $dex --quiet
+docker compose run --rm apk-sbom python -m apk_sbom.cli `
+  extract-reference-features --dex-root $dex --db-path $db --reset --quiet
+\end{lstlisting}
+
+The dry run exposes the planned Maven requests before network or disk work.
+JAR files are converted directly; AAR files are unpacked and their bytecode is
+converted to a common DEX representation. Feature extraction then writes
+package, class, method, opcode, API-reference, graph, literal, and contextual
+evidence to SQLite.
+
+\subsection{Reset and Promotion Safety}
+
+The \texttt{--reset} flag is destructive for the database path supplied to
+the command. It is therefore valid only for a new or explicitly rebuildable
+experiment database. Incremental batches omit \texttt{--reset}. An experiment
+is not promoted merely because target rows improve: at least two affected
+targets and clean, partial, no-Maven-signal, and boundary controls are checked
+first. Any regression fails the promotion gate. This policy is why several
+useful version and R8 experiments remain report-only or experiment-only.
+
+\section{Source Validation and Vulnerability Enrichment}
+
+OSV scanning can be run after an offline report:
+
+\begin{lstlisting}[style=thesiscode,
+caption={OSV enrichment and source validation.}]
+docker compose run --rm apk-sbom python -m apk_sbom.cli scan-sbom-osv `
+  "$out/sbom.cdx.json" --output "$out/osv-vulnerabilities.json"
+
+docker compose run --rm apk-sbom python -m apk_sbom.cli validate-source-deps `
+  --sbom "$out/sbom.cdx.json" `
+  --dependency-tree "path/to/runtimeClasspath.txt" `
+  --output-dir "$out/source-validation"
+\end{lstlisting}
+
+Source validation is an evaluation operation. It compares emitted Maven
+coordinates and versions with a resolved Gradle dependency tree when source
+is available. The dependency tree is not an input to normal APK matching.
+Similarly, OSV can determine whether a supplied package version appears in an
+affected range, but it cannot repair an uncertain or incorrect component
+version. The report therefore preserves confirmed, potential, mismatch, and
+report-only vulnerability classes.
+
+\section{Dataset and Evidence Inventory}
+
+\begin{table}[H]
+\centering
+\caption{Evidence classes and their permitted interpretation.}
+\label{tab:appendix-evidence-classes}
+\begin{tabularx}{\textwidth}{L{0.24\textwidth}L{0.28\textwidth}X}
+\toprule
+\textbf{Class} & \textbf{Role} & \textbf{Permitted claim}\\
+\midrule
+Controlled fixtures & Generated APKs with known embedded versions &
+Exact-version recovery under the represented clear, R8, multidex, and
+multi-library transformations.\\
+Clean source-validated & Real APKs whose emitted Maven versions all match the
+resolved source evidence & Clean emitted-version confirmation, reported
+separately from harder applications.\\
+Partial source-validated & Real APKs containing both confirmed and unresolved
+or wrong-version rows & Useful partial recovery; not a total success or total
+failure.\\
+Source-validated no-Maven signal & Real APKs with resolved runtime dependency
+trees but zero emitted Maven components & Matcher-recall and emission-threshold
+controls; excluded from the emitted-version rate but included in the full
+source denominator.\\
+Full source denominator & All resolved source coordinate--version rows &
+End-to-end recall, including dependencies that the matcher never emits.\\
+Source-known upper bound & Candidate selection constrained by source versions
+& Recognition capacity under exact source-version constraints; not APK-only
+accuracy.\\
+Report-only/experimental & AI, R8, reranking, and scoped database lanes &
+Diagnostic assistance or promotion evidence only; no change to official
+components, versions, SBOMs, CVEs, or source-validation metrics.\\
+Boundary/limitation & Native-heavy, hidden-code, heavily transformed, or
+no-Maven-signal cases & Demonstrated system boundary; excluded from Maven
+exact-version accuracy when no valid denominator exists.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The authoritative row-level and aggregate index is generated at
+\path{docs/thesis/THESIS_ARTIFACT_INDEX.md}. The principal frozen evidence
+snapshots used for the final chapters are
+\path{docs/thesis/PFE_CHAPTER6_EVIDENCE_SNAPSHOT_2026-06-20.md} and
+\path{docs/thesis/PFE_CHAPTER3_AI_EVIDENCE_SNAPSHOT_2026-06-20.md}.
+
+\section{Claim-to-Artifact Traceability}
+
+Table~\ref{tab:appendix-claim-traceability} provides a compact audit map. The
+Markdown and JSON artifacts remain the authoritative detailed sources; the
+table does not replace their denominators, exclusions, and row-level data.
+
+\begin{longtable}{L{0.25\textwidth}L{0.22\textwidth}L{0.43\textwidth}}
+\caption{Principal thesis claims and reproducibility artifacts.}
+\label{tab:appendix-claim-traceability}\\
+\toprule
+\textbf{Claim or result} & \textbf{Frozen value} & \textbf{Primary artifact}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Claim or result} & \textbf{Frozen value} & \textbf{Primary artifact}\\
+\midrule
+\endhead
+Controlled exact-version recovery & 84/84 expected versions across 72
+fixtures & \path{data/results/evaluation/thesis-evaluation-tables.json};
+\path{docs/evaluation/THESIS_EVALUATION_TABLES.md}\\
+\addlinespace
+Clean real-APK confirmation & 47/47 emitted Maven versions across five APKs &
+\path{docs/evaluation/THESIS_EVALUATION_TABLES.md}\\
+\addlinespace
+Partial real-APK confirmation & 880/1,790 emitted Maven versions across 97
+APKs & \path{docs/evaluation/THESIS_EVALUATION_TABLES.md}\\
+\addlinespace
+Source-validated APKs with emitted Maven rows & 927/1,837 emitted Maven
+versions across 102 APKs, or 50.5\% &
+\path{data/results/evaluation/thesis-evaluation-tables.json}\\
+\addlinespace
+Source-validated no-Maven-signal controls & Four APKs with resolved runtime
+dependency trees and zero emitted Maven rows &
+\path{docs/evaluation/NO_MAVEN_SIGNAL_AUDIT.md}\\
+\addlinespace
+Full source dependency denominator & 927/12,082 exact rows emitted, or 7.7\%;
+shared-DB exact-version coverage 1,231/12,082, or 10.2\% &
+\path{data/results/evaluation/reference-db-coverage-first-dashboard.json};
+\path{docs/evaluation/REFERENCE_DB_COVERAGE_FIRST_DASHBOARD.md}\\
+\addlinespace
+Source-known upper bound & 6,772/6,772 emitted rows under exact source-version
+constraints & \path{docs/evaluation/DEMO_FINAL_LARGE_V2_SOURCE_VERSION_EVALUATION.md};
+\path{docs/evaluation/DEMO_FINAL_LARGE_V2_SOURCE_GAP_TRIAGE.md}\\
+\addlinespace
+AI authority decision & MVP-safe structured Transformer macro-F1 0.882;
+raw-opcode Transformer 0.110 below the 0.128 baseline; report-only &
+\path{data/results/evaluation/ai-r8-final-evaluation.json};
+\path{data/results/evaluation/ai-r8-mvp-integration-gate.json}\\
+\addlinespace
+Accepted and rejected experiments & Promotion status, controls, failure
+reason, and next evidence requirement & \path{docs/thesis/EXPERIMENT_DECISION_LEDGER.md}\\
+\addlinespace
+Defense/demo package & Rehearsed artifact order and safe demonstration
+commands & \path{docs/evaluation/FINAL_DEMO_RUNBOOK_V2.md};
+\path{docs/evaluation/FINAL_DEMO_CHECKLIST.md}\\
+\bottomrule
+\end{longtable}
+
+\section{Reproduction Constraints}
+
+Some operations depend on mutable external infrastructure. Maven downloads
+can fail because an artifact moved, a legacy repository disappeared, or
+Gradle metadata no longer resolves under a modern toolchain. OSV lookup
+requires network access and can change as advisories are updated. Large
+reference databases also make unconstrained matching materially slower than a
+small demonstration database. For these reasons, generated JSON, source
+dependency trees, proof bundles, decision ledgers, and dated evidence
+snapshots are retained alongside commands.
+
+Reproduction must also preserve the distinction between rerunning an existing
+frozen artifact and recomputing it with current remote services. A different
+OSV response, Maven repository state, or dependency-resolution result does not
+retroactively change the thesis result; it creates a new dated observation
+that must be reported separately. Finally, successful command execution does
+not by itself authorize promotion. Shared-database, matcher, AI, and
+vulnerability decisions remain subject to the target/control and evidence
+boundaries defined in this thesis.

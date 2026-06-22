@@ -1,0 +1,54 @@
+\chapter*{Résumé}
+\addcontentsline{toc}{chapter}{Résumé}
+
+\begin{otherlanguage}{french}
+Les nomenclatures logicielles soutiennent la transparence de la chaîne
+d'approvisionnement logicielle et la gestion des vulnérabilités. Cependant,
+la plupart des méthodes de génération reposent sur le code source, les
+manifestes de construction ou les métadonnées d'un gestionnaire de paquets.
+Dans un contexte d'audit Android, le seul artefact disponible peut être une
+\APK compilée, dans laquelle les composants tiers sont fusionnés au bytecode
+\DEX puis transformés par la réduction, l'optimisation et l'obfuscation.
+
+Ce mémoire d'ingénieur présente une chaîne statique, fondée sur des preuves et
+contrôlée par des seuils, qui transforme une \APK en \SBOM. Elle extrait les
+preuves provenant de l'archive, du manifeste, du bytecode, des ressources et
+des fichiers natifs; compare les caractéristiques de l'APK à des profils de
+référence Maven versionnés; sépare l'identité d'un composant de la confiance
+dans sa version exacte; conserve les alternatives ambiguës; produit un fichier
+CycloneDX JSON muni d'identifiants Package URL; et interroge OSV en tenant
+compte du niveau de confiance. Les arbres de dépendances du code source servent
+à l'évaluation lorsqu'ils sont disponibles, tandis que l'apprentissage
+automatique et l'assistance liée à R8 restent limités au rapport.
+
+L'évaluation distingue les applications contrôlées, les APK réelles validées
+par le code source et classées comme propres ou partielles, les contrôles sans
+composant Maven émis, la couverture du dénominateur source complet, la
+reconnaissance majorée avec versions source connues, les expériences rejetées
+et les cas limites. Le système retrouve 84/84 versions attendues dans les
+applications contrôlées. Pour les 102 APK réelles validées par le code source
+qui ont émis des composants Maven, 927/1\,837 versions émises sont confirmées,
+soit un taux de confirmation des versions émises de 50,5\%, et non un rappel
+de toutes les dépendances. Quatre APK supplémentaires validées par le code
+source n'émettent aucun composant Maven et restent des contrôles de rappel.
+Par rapport aux 12\,082 lignes de dépendances résolues depuis le code source,
+927 lignes exactes sont émises de bout en bout. Une voie distincte, contrainte
+par les versions source, confirme 6\,772/6\,772 lignes émises et n'est
+présentée que comme une borne supérieure.
+
+Le MVP obtenu démontre la faisabilité pratique d'une reconstruction de SBOM à
+partir d'un binaire, tout en exposant ses limites concernant la couverture de
+la base de référence, le rappel du moteur de correspondance, les versions
+voisines, les familles d'artefacts, le code natif, le code dissimulé, le
+passage à l'échelle et l'autorité de l'IA. Son principe central consiste à
+préférer une connaissance partielle, vérifiable et accompagnée d'une
+abstention explicite à une certitude non justifiée sur la version exacte.
+\end{otherlanguage}
+
+\vspace{0.5cm}
+\noindent\textbf{Mots-clés ---}
+\begin{otherlanguage}{french}
+sécurité Android, analyse d'APK, nomenclature logicielle, détection de
+bibliothèques tierces, attribution de composants, CycloneDX, gestion des
+vulnérabilités, R8.
+\end{otherlanguage}
