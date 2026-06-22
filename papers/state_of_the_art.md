@@ -83,9 +83,9 @@ A 2025 study of 500K+ Google Play APKs found a **13% increase in obfuscation fro
 
 #### ORLIS — Wang et al. (MOBILESoft 2018)
 
-**Method**: Two-stage: sdhash app-level filter → ssdeep CFG class matching + Jaccard similarity.
+**Method**: Two-stage: sdhash filtering over interprocedural call-graph/class-hierarchy-derived features → ssdeep class digests with injective class mapping.
 
-**Results**: ~90% precision against Allatori/ProGuard. ~62-67% library-level F1. **1,438s/app** (slowest). Crashes on 16GB+ apps.
+**Results**: On the paper's FDroidData class-mapping evaluation, average precision = **0.71**, recall = **0.63**, and F1 = **0.67**. Later tool assessments report high analysis cost and difficult deployment.
 
 **Limitations**: Extremely slow. Hard to install (Soot env). No version metrics. Not tested on R8.
 

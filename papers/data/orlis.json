@@ -1,38 +1,38 @@
 {
   "title": "ORLIS: Obfuscation-Resilient Library Detection for Android",
-  "authors": ["Haoyu Wang", "Yao Guo", "Zhongjie Wu", "Atanas Rountev"],
+  "authors": ["Yan Wang", "Haowei Wu", "Hailong Zhang", "Atanas Rountev"],
   "year": 2018,
   "venue": "IEEE/ACM International Conference on Mobile Software Engineering and Systems (MOBILESoft)",
   "tool_name": "ORLIS",
   "category": "similarity-based",
-  "detection_method": "Two-stage approach: (1) coarse sdhash app-level filtering to narrow candidate libraries; (2) fine-grained ssdeep CFG hashing + Jaccard similarity for class-level matching",
+  "detection_method": "Two-stage approach: (1) sdhash over interprocedural method/class features to narrow candidate libraries; (2) ssdeep class digests and injective app-class to library-class mapping",
   "module_decoupling": "None explicit — operates on decompiled app classes matched against library class profiles; no separate module decoupling phase",
   "features_used": [
-    "sdhash (context-triggered piecewise hash) for app-level filtering",
-    "ssdeep (fuzzy hash) of CFG structures for class-level matching",
-    "Jaccard similarity coefficient for partial class matches"
+    "interprocedural call-graph and class-hierarchy-derived method/class features",
+    "sdhash similarity digests for app-to-library candidate filtering",
+    "ssdeep class digests for injective class correspondence"
   ],
-  "matching_algorithm": "Two-stage: Stage 1 computes sdhash of full app to filter candidate libraries; Stage 2 computes ssdeep CFG hashes per class and compares via Jaccard similarity against library class profiles",
-  "obfuscation_handling": "Uses structural CFG features that survive identifier renaming, package flattening, and control-flow modifications; ssdeep fuzzy hashing tolerates minor structural variations",
+  "matching_algorithm": "Stage 1 compares application and library digests to produce a small candidate set. Stage 2 sorts class-pair similarities and greedily constructs an injective mapping, so at most one application class maps to a library class.",
+  "obfuscation_handling": "Replaces obfuscation-sensitive identifiers and uses interprocedural call relationships and class hierarchy information expected to survive common renaming-oriented obfuscation.",
   "r8_resilience": "Not tested (pre-R8 era; tested on Allatori and ProGuard obfuscation)",
   "lib_level_f1": "~62-67% library-level F1 (lowest among Gen-1 tools)",
   "version_level_f1": "Not reported — no version-level detection metrics",
   "class_level_f1": "Not explicitly reported",
-  "precision": "~90% against Allatori and ProGuard obfuscation",
-  "recall": "Not explicitly reported (F1 of ~62-67% with ~90% precision implies recall of ~48-53%)",
+  "precision": "0.71 average class-mapping precision on FDroidData",
+  "recall": "0.63 average class-mapping recall on FDroidData",
   "speed": "~1,438s per app (slowest among all evaluated tools)",
-  "dataset_size": "Not explicitly quantified in available data; evaluated on obfuscated apps with Allatori and ProGuard",
-  "partial_lib_handling": "Yes — Jaccard similarity naturally handles partial library inclusion via set-based overlap scoring",
+  "dataset_size": "FDroidData contains 659 obfuscated app builds derived from 282 source projects and 453 unique library jars; LibDetectData uses 7,519 available library jars from the prior benchmark.",
+  "partial_lib_handling": "Yes — class-level similarity and injective mapping can report the subset of library classes matched in an application.",
   "sbom_output": "No — no SBOM output capability",
   "open_source": "Not confirmed publicly available; requires Soot environment (difficult installation)",
   "cve_mapping": "No — no CVE mapping capability",
   "transitive_deps": "No — does not handle transitive dependencies",
   "strengths": [
-    "Pioneered CFG-based matching for obfuscation resilience",
-    "~90% precision against Allatori and ProGuard obfuscation",
-    "Jaccard similarity provides natural partial library inclusion handling",
+    "Uses interprocedural structural features for obfuscation resilience",
+    "Reports 0.71 precision, 0.63 recall, and 0.67 F1 on FDroidData",
+    "Injective class mapping supports partial-inclusion analysis",
     "Two-stage architecture (fast filter + deep check) is a reusable design pattern",
-    "Structural CFG features survive renaming, package flattening, and control-flow modifications"
+    "Evaluates both source-grounded F-Droid builds and a prior closed-source benchmark"
   ],
   "weaknesses": [
     "Extremely slow (~1,438s/app) — prohibitive for large-scale analysis",
@@ -43,5 +43,5 @@
     "Crashes on apps requiring 16GB+ RAM",
     "Not tested on R8 obfuscation"
   ],
-  "impact_on_project": "ORLIS demonstrates that CFG-based structural matching is viable for obfuscation resilience but the speed cost is prohibitive. The two-stage architecture (sdhash coarse filter + ssdeep fine match) is a useful design pattern that could be adapted with more efficient hashing. Jaccard similarity for partial library inclusion is a technique worth adopting. However, the ~1,438s/app processing time means ORLIS itself is not usable for production SBOM extraction — any adopted approach must be orders of magnitude faster. The 62-67% F1 also sets a low bar that must be exceeded."
+  "impact_on_project": "ORLIS demonstrates that call-graph-derived features and class correspondence can support obfuscation-resilient partial inclusion, but the analysis cost is high. Its reusable lesson is the two-stage architecture: sdhash candidate filtering followed by ssdeep-based injective class mapping. It does not provide exact-version or standard SBOM authority, so its output should be treated as structural identity evidence rather than a final package/version claim."
 }
