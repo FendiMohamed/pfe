@@ -1,0 +1,370 @@
+\chapter{Artificial Intelligence for Component Identification}
+\label{ch:pfe-ai}
+
+\section{Introduction}
+
+Artificial intelligence can assist software-composition analysis when the
+available evidence is incomplete, noisy, or too large to inspect manually. In
+Android APK analysis, a model may help classify evidence, rank suspicious
+cases, identify patterns linked to obfuscation, or support report triage. It
+does not replace the need for explicit static evidence, reference databases,
+and conservative security interpretation.
+
+This chapter introduces the AI concepts used to understand such assistance.
+It presents machine learning as a supervised classification problem, explains
+feature representations for APK and DEX evidence, defines common evaluation
+metrics, and describes deep-learning and Transformer models at a high level.
+The chapter also clarifies the authority boundary of AI in an SBOM workflow:
+models can help analysts interpret risk, but they should not silently change
+component coordinates, versions, CycloneDX rows, or vulnerability labels.
+
+\section{Machine Learning Concepts}
+
+\subsection{Learning from Labeled Examples}
+
+Machine learning is a family of methods that infer a decision rule from data
+instead of relying only on manually written rules. In supervised learning, the
+training set contains examples \(x_i\) and labels \(y_i\). The objective is to
+learn a function \(f\) that predicts a label for a new example:
+
+\begin{equation}
+\label{eq:pfe-ai-supervised-learning}
+\hat{y}=f(x).
+\end{equation}
+
+For component-identification support, an example may represent a candidate
+match, a feature vector extracted from DEX evidence, or a row in an analysis
+report. The label may indicate whether the candidate is strong, ambiguous,
+unsupported, or suitable only for report-only investigation. The prediction is
+useful only when the input features and labels are well defined.
+
+\subsection{Classification}
+
+Classification assigns each example to one class among a finite set of
+possible labels. Binary classification uses two labels, such as positive and
+negative. Multiclass classification uses more than two labels, such as
+\texttt{accepted}, \texttt{ambiguous}, \texttt{risk-only}, and
+\texttt{unsupported}. Figure~\ref{fig:pfe-ai-classification-flow} illustrates
+the general supervised classification loop.
+
+\begin{figure}[H]
+\centering
+\resizebox{0.92\textwidth}{!}{%
+\begin{tikzpicture}[
+  node distance=8mm and 9mm,
+  box/.style={draw, rounded corners, align=center, text width=0.21\textwidth,
+    minimum height=11mm, fill=blue!5},
+  model/.style={draw, rounded corners, align=center, text width=0.20\textwidth,
+    minimum height=11mm, fill=warningorange!14},
+  outputnode/.style={draw, rounded corners, align=center, text width=0.21\textwidth,
+    minimum height=11mm, fill=evidencegreen!10},
+  arrow/.style={-{Latex[length=2.5mm]}, thick}
+]
+\node[box] (data) {Labeled examples};
+\node[box, right=of data] (features) {Feature representation};
+\node[model, right=of features] (train) {Learning algorithm};
+\node[outputnode, right=of train] (model) {Trained classifier};
+\node[box, below=of features] (new) {New APK/report evidence};
+\node[outputnode, below=of model] (pred) {Predicted class};
+
+\draw[arrow] (data) -- (features);
+\draw[arrow] (features) -- (train);
+\draw[arrow] (train) -- (model);
+\draw[arrow] (new) -- (pred);
+\draw[arrow] (model) -- (pred);
+\end{tikzpicture}
+}
+\caption{General supervised classification workflow for APK evidence analysis.}
+\label{fig:pfe-ai-classification-flow}
+\end{figure}
+
+The prediction is not automatically a security fact. It is a model output that
+must be interpreted together with evidence provenance, validation data, error
+rates, and the cost of incorrect decisions.
+
+\subsection{Training, Validation, and Test Sets}
+
+A dataset is usually separated into training, validation, and test sets. The
+training set fits the model parameters. The validation set helps choose
+hyperparameters and compare candidate configurations. The test set is kept
+aside until the final evaluation so that the reported score better estimates
+generalization to unseen data.
+
+For APK-related evidence, splitting must avoid leakage. Examples derived from
+the same application, component family, or near-duplicate report can be very
+similar. If related rows appear in both training and test sets, the model may
+memorize local patterns instead of learning a useful rule. Grouped splits are
+therefore preferable when several rows come from the same application or
+experiment.
+
+\subsection{Class Imbalance}
+
+Software-security datasets are often imbalanced. A common class may contain
+many examples, while rare but important classes contain few. The class
+distribution is imbalanced when the largest class dominates the smallest
+class. For example, a dataset may contain 7,811 rows in its largest class and
+594 rows in its smallest class. This imbalance motivates balanced class
+weights during training and macro-averaged evaluation metrics during
+assessment.
+
+If imbalance is ignored, a classifier can obtain a high global accuracy by
+favoring the majority class. Security analysis usually cares about minority
+classes too, because rare unsupported, ambiguous, or risky cases may be the
+ones that require analyst attention.
+
+\section{Feature Representations}
+
+\subsection{Structured Features}
+
+Structured features convert an analysis object into numerical or categorical
+values. In APK evidence analysis, such features may include match scores,
+score margins, package overlap, class overlap, method overlap, literal
+matches, API-reference evidence, version distance, source-validation status,
+obfuscation indicators, or report labels. Table~\ref{tab:pfe-ai-feature-types}
+summarizes common feature families.
+
+\begin{table}[H]
+\centering
+\caption{Feature families used in AI-assisted APK evidence analysis.}
+\label{tab:pfe-ai-feature-types}
+\begin{tabularx}{\textwidth}{L{0.24\textwidth}X}
+\toprule
+\textbf{Feature family} & \textbf{Interpretation}\\
+\midrule
+Score features & Similarity values, confidence values, and margins between
+top candidates.\\
+Structural features & Class, method, dependency, call, and inheritance
+patterns extracted from DEX evidence.\\
+Lexical features & Package names, descriptors, literals, resource names, and
+tokens preserved in the APK.\\
+Context features & Application family, reference coverage, source-validation
+status, transformation indicators, and experiment lane.\\
+Report features & Existing report labels, uncertainty notes, risk flags, and
+human-readable evidence summaries.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Structured features are interpretable and compatible with classical machine
+learning models. Their limitation is that important information may be lost
+when complex code evidence is reduced to a fixed set of columns.
+
+\subsection{Token and Sequence Features}
+
+Some evidence is naturally sequential. Smali tokens, opcode streams, method
+descriptors, call chains, and textual report rows contain ordered symbols.
+Tokenization converts these symbols into a vocabulary, and the model learns
+from their order and co-occurrence. Figure~\ref{fig:pfe-ai-feature-pipeline}
+shows the difference between structured and sequence representations.
+
+\begin{figure}[H]
+\centering
+\resizebox{0.94\textwidth}{!}{%
+\begin{tikzpicture}[
+  node distance=8mm and 8mm,
+  box/.style={draw, rounded corners, align=center, text width=0.22\textwidth,
+    minimum height=11mm, fill=blue!5},
+  model/.style={draw, rounded corners, align=center, text width=0.22\textwidth,
+    minimum height=11mm, fill=warningorange!13},
+  arrow/.style={-{Latex[length=2.5mm]}, thick}
+]
+\node[box] (apk) {APK or report evidence};
+\node[box, right=of apk] (structured) {Structured vector};
+\node[model, right=of structured] (classical) {Classical ML};
+\node[box, below=of structured] (tokens) {Token sequence};
+\node[model, right=of tokens] (deep) {Deep model};
+\node[box, right=of classical] (decision) {Report-only prediction};
+
+\draw[arrow] (apk) -- (structured);
+\draw[arrow] (structured) -- (classical);
+\draw[arrow] (apk) |- (tokens);
+\draw[arrow] (tokens) -- (deep);
+\draw[arrow] (classical) -- (decision);
+\draw[arrow] (deep) -- (decision);
+\end{tikzpicture}
+}
+\caption{Structured and sequence feature paths for AI-assisted evidence analysis.}
+\label{fig:pfe-ai-feature-pipeline}
+\end{figure}
+
+Sequence models can capture patterns that are difficult to express manually,
+but they require more data and are often harder to explain. In security
+reporting, explainability matters because analysts need to know why a warning
+or recommendation was produced.
+
+\section{Classical Machine Learning}
+
+\subsection{Decision Trees and Random Forests}
+
+A decision tree predicts a label by applying a sequence of feature tests. It
+is easy to inspect but can overfit training data. A Random Forest reduces this
+risk by training many decision trees on different samples and feature subsets,
+then combining their votes. If \(T_j(x)\) is the prediction of tree \(j\), a
+forest with \(m\) trees predicts the majority vote:
+
+\begin{equation}
+\label{eq:pfe-ai-random-forest-vote}
+\hat{y}=\operatorname*{mode}_{j=1}^{m} T_j(x).
+\end{equation}
+
+Random Forests are useful for tabular evidence because they handle mixed
+feature types, nonlinear interactions, and feature importance analysis. Their
+main limitation is that a high feature importance does not prove causality:
+the model may rely on shortcuts that correlate with a label in one dataset but
+do not generalize.
+
+\subsection{Baselines}
+
+A baseline is a simple method used as a comparison point. Common baselines
+include majority-class prediction, simple threshold rules, or deterministic
+heuristics. A complex model should be preferred only when it improves over
+these baselines on held-out data and when the improvement is meaningful for
+the intended decision.
+
+\section{Deep Learning and Transformers}
+
+\subsection{Neural Representations}
+
+Deep learning models transform inputs through several layers of learned
+representations. Instead of using only manually selected columns, they can
+learn patterns from tokens, sequences, or embeddings. For APK analysis, this
+can be useful when relevant evidence is distributed across many methods,
+opcodes, or textual report fragments.
+
+However, deep models usually need larger datasets than classical models. They
+can also learn shortcuts, such as project-specific vocabulary or report
+formatting artifacts. Validation must therefore check whether the model learns
+the intended evidence relation rather than an accidental correlation.
+
+\subsection{Transformer Encoders}
+
+Transformers are neural sequence models based on attention. Attention allows
+the model to compare tokens with other tokens in the same sequence and learn
+which relations are useful for prediction. In simplified form, attention
+computes a weighted combination of value vectors:
+
+\begin{equation}
+\label{eq:pfe-ai-attention}
+\operatorname{Attention}(Q,K,V)=
+\operatorname{softmax}\left(\frac{QK^{T}}{\sqrt{d_k}}\right)V.
+\end{equation}
+
+Here, \(Q\), \(K\), and \(V\) are query, key, and value matrices, and \(d_k\)
+is the key dimension. In software-analysis tasks, tokens may represent
+opcodes, descriptors, API calls, or structured report fields.
+
+Figure~\ref{fig:pfe-ai-transformer-boundary} summarizes a conservative
+Transformer use case. The model can recommend report-only actions, but the
+authoritative SBOM path remains controlled by explicit evidence and
+deterministic validation rules.
+
+\begin{figure}[H]
+\centering
+\resizebox{0.82\textwidth}{!}{%
+\begin{tikzpicture}[
+  node distance=7mm,
+  box/.style={draw, rounded corners, align=center, text width=0.64\textwidth,
+    minimum height=9mm, fill=blue!5},
+  ai/.style={draw, rounded corners, align=center, text width=0.64\textwidth,
+    minimum height=9mm, fill=warningorange!14},
+  safe/.style={draw, rounded corners, align=center, text width=0.64\textwidth,
+    minimum height=9mm, fill=evidencegreen!10},
+  arrow/.style={-{Latex[length=2.5mm]}, thick}
+]
+\node[box] (evidence) {Observed APK evidence and generated report rows};
+\node[ai, below=of evidence] (model) {AI model suggests report-only triage};
+\node[safe, below=of model] (guard) {Guardrail: no coordinate, version, SBOM, or CVE mutation};
+\node[box, below=of guard] (analyst) {Analyst reviews recommendation with evidence};
+
+\draw[arrow] (evidence) -- (model);
+\draw[arrow] (model) -- (guard);
+\draw[arrow] (guard) -- (analyst);
+\end{tikzpicture}
+}
+\caption{Conservative authority boundary for Transformer-assisted report triage.}
+\label{fig:pfe-ai-transformer-boundary}
+\end{figure}
+
+\section{Evaluation Metrics}
+
+\subsection{Confusion Terms}
+
+Classification performance is commonly described with true positives,
+false positives, true negatives, and false negatives. For one class, precision
+measures how many predicted positives are correct, while recall measures how
+many true positives were recovered:
+
+\begin{equation}
+\label{eq:pfe-ai-precision}
+\operatorname{Precision}=\frac{TP}{TP+FP}.
+\end{equation}
+
+\begin{equation}
+\label{eq:pfe-ai-recall}
+\operatorname{Recall}=\frac{TP}{TP+FN}.
+\end{equation}
+
+The \(F_1\) score combines precision and recall:
+
+\begin{equation}
+\label{eq:pfe-ai-f1}
+F_1 = 2 \cdot \frac{\operatorname{Precision}\cdot\operatorname{Recall}}
+{\operatorname{Precision}+\operatorname{Recall}}.
+\end{equation}
+
+Accuracy measures the proportion of all correct predictions:
+
+\begin{equation}
+\label{eq:pfe-ai-accuracy}
+\operatorname{Accuracy}=\frac{TP+TN}{TP+TN+FP+FN}.
+\end{equation}
+
+\subsection{Macro and Weighted Averages}
+
+In multiclass settings, metrics can be averaged in several ways. Macro
+averaging computes the metric independently for each class and then averages
+the class scores. It gives rare classes the same importance as common
+classes. Weighted averaging also computes per-class scores but weights them
+by class frequency. Accuracy can be misleading when the dataset is imbalanced,
+so macro \(F_1\) is often more informative for security triage labels.
+
+\section{Allowed and Forbidden AI Actions}
+
+AI assistance in an SBOM workflow must have a restricted authority boundary.
+The trained assistant may support three report actions:
+
+\begin{itemize}
+  \item suggest a report-only investigation path;
+  \item suppress or weaken unsupported wording; and
+  \item mark a row as risk-only for analyst attention.
+\end{itemize}
+
+It may not:
+
+\begin{itemize}
+  \item change the selected coordinate or version;
+  \item add, remove, or modify CycloneDX components;
+  \item change vulnerability identifiers or affected-version decisions; or
+  \item promote report-only evidence into authoritative evaluation metrics.
+\end{itemize}
+
+This restriction is essential because model predictions are statistical
+recommendations, not direct observations from the APK. A safe workflow keeps
+AI outputs outside the authoritative component, version, SBOM, and CVE path
+unless a separate validated process explicitly promotes them.
+
+\section{Conclusion}
+
+Artificial intelligence can support Android APK-to-SBOM analysis by learning
+patterns in structured evidence, token sequences, and report rows. Classical
+models such as Random Forests are suitable for interpretable tabular features,
+while Transformer encoders can model ordered tokens and longer context.
+However, both families require careful splitting, imbalance-aware metrics,
+and validation against shortcut learning.
+
+The most important principle is authority separation. AI can help prioritize
+investigation, weaken unsupported language, or mark risk-only evidence for
+review, but it should not silently alter coordinates, versions, SBOM
+components, or vulnerability labels. The following chapter uses the state of
+the art to position Android library-detection methods against these evidence
+and authority requirements.

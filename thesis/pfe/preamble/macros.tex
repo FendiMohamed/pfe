@@ -1,0 +1,28 @@
+\definecolor{schoolblue}{RGB}{20,63,114}
+\definecolor{evidencegreen}{RGB}{35,120,82}
+\definecolor{warningorange}{RGB}{192,105,23}
+
+\newcommand{\thesisplaceholder}[1]{\textcolor{red!70!black}{\textbf{[PLACEHOLDER: #1]}}}
+\newcommand{\APK}{\textsc{APK}\xspace}
+\newcommand{\SBOM}{\textsc{SBOM}\xspace}
+\newcommand{\CVE}{\textsc{CVE}\xspace}
+\newcommand{\DEX}{\textsc{DEX}\xspace}
+\newcommand{\Reight}{R8\xspace}
+\newcommand{\PURL}{\textsc{PURL}\xspace}
+\newcommand{\OSV}{\textsc{OSV}\xspace}
+\newcommand{\SPDX}{\textsc{SPDX}\xspace}
+\newcommand{\CycloneDX}{CycloneDX\xspace}
+\newcommand{\Maven}{Maven\xspace}
+\newcommand{\Gradle}{Gradle\xspace}
+\newcommand{\Android}{Android\xspace}
+
+\lstdefinestyle{thesiscode}{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  backgroundcolor=\color{gray!7},
+  columns=fullflexible,
+}
+
+\newcommand{\evidenceclass}[1]{\textbf{\textcolor{evidencegreen}{#1}}}
+\newcommand{\limitation}[1]{\textbf{\textcolor{warningorange}{#1}}}

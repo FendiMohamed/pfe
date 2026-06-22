@@ -1,0 +1,534 @@
+\chapter{State of the Art}
+\label{ch:pfe-sota}
+
+\section{Introduction and Review Scope}
+
+Recovering an SBOM from a compiled Android APK intersects several research
+areas: third-party library identification, exact-version detection,
+obfuscation-resilient similarity, software composition analysis, and
+vulnerability mapping. This chapter reviews the approaches most directly
+related to those tasks and identifies the gap addressed by the proposed
+system.
+
+The review corpus was assembled from the project paper collection and then
+audited against accessible primary PDFs, publisher records, arXiv records, and
+public artifacts. The comparison focuses on:
+
+\begin{itemize}
+  \item library-level and version-level identification;
+  \item the representation used to compare APK and reference code;
+  \item resistance to renaming, shrinking, repackaging, and optimization;
+  \item partial-library and multidex behavior;
+  \item dataset realism and metric interpretation;
+  \item runtime, availability, and reproducibility;
+  \item standard SBOM output and vulnerability mapping.
+\end{itemize}
+
+Reported percentages are not treated as a universal ranking. The reviewed
+papers use different datasets, obfuscators, reference libraries, thresholds,
+and definitions of a correct match. Original-paper results are therefore
+presented as evidence about a method under its own evaluation conditions,
+while the later common-benchmark results are used to discuss realistic
+generalization.
+
+\section{Evolution of Android Third-Party Library Detection}
+
+Android third-party library detection evolved from fast package and frequency
+signatures toward structural correspondence, optimization-aware matching, and
+learned representations. Figure~\ref{fig:pfe-sota-evolution} summarizes this
+progression. The generations overlap: later tools often retain efficient
+signatures as a coarse stage and add deeper evidence only for shortlisted
+candidates.
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  era/.style={
+    rectangle,
+    rounded corners,
+    draw=schoolblue,
+    thick,
+    fill=blue!5,
+    align=center,
+    text width=42mm,
+    minimum height=28mm
+  },
+  arrow/.style={-{Latex[length=2.5mm]},thick,draw=schoolblue},
+  note/.style={font=\scriptsize,align=center,text width=39mm}
+]
+\node[era] (g1) at (0,0) {
+  \textbf{Package and reference signatures}\\
+  LibScout, LibRadar, LibD, ORLIS\\[1mm]
+  \scriptsize Packages, API frequencies, hashes, CFGs
+};
+\node[era] (g2) at (5.2,0) {
+  \textbf{Dependency and class structure}\\
+  LibPecker, LibID, ATVHunter\\[1mm]
+  \scriptsize Class dependencies, candidate correspondence, fine opcode checks
+};
+\node[era] (g3) at (10.4,0) {
+  \textbf{Optimization-aware matching}\\
+  LibScan, LibHunter, SAD\\[1mm]
+  \scriptsize Call chains, optimization simulation, structural version evidence
+};
+\node[era] (g4) at (15.6,0) {
+  \textbf{Learned and SBOM-oriented systems}\\
+  LibAttention, UniBOM, this work\\[1mm]
+  \scriptsize Learned representations, standard SBOMs, evidence governance
+};
+
+\draw[arrow] (g1) -- (g2);
+\draw[arrow] (g2) -- (g3);
+\draw[arrow] (g3) -- (g4);
+\end{tikzpicture}%
+}
+\caption{Evolution from fragile package signatures toward structural,
+optimization-aware, learned, and SBOM-oriented analysis.}
+\label{fig:pfe-sota-evolution}
+\end{figure}
+
+\subsection{Package, Frequency, and Reference Profiles}
+
+Early approaches sought compact signatures that could be generated and
+compared at scale. LibRadar, for example, used Android API frequencies and
+package clustering to discover reused code quickly. Its design favored speed,
+but clustering did not provide reliable exact-version labels and remained
+dependent on package organization. Later systematic evaluations found that
+package-structure-based candidate construction is error-prone and that
+multidex, partial imports, and library dependencies create additional blind
+spots \cite{zhan2020assessment,zhan2021systematic}.
+
+LibScout established a reference-profile model for identifying known
+libraries and versions. It represents packages, classes, and methods in a
+Merkle-style hierarchy and replaces application-specific types in method
+descriptors with placeholders. This improves resilience to identifier
+renaming and permits similarity-based partial matching. Its longitudinal
+study also demonstrated the security value of exact library-version
+attribution \cite{backes2016libscout}. The main limitation is structural:
+package and class hierarchies can change under flattening, shrinking, and
+optimization.
+
+LibD moved from names toward internal dependencies and opcode-derived hashes.
+Its homogeny graph uses inclusion, inheritance, and call relations to recover
+candidate components before feature hashing. The approach was evaluated at
+market scale and demonstrated that structural relations can be more robust
+than package labels, but it focused on discovering recurring libraries rather
+than resolving exact versions \cite{li2017libd}.
+
+ORLIS used a two-stage design: similarity digests first reduced the candidate
+space, after which class-level CFG evidence and Jaccard similarity supported a
+finer comparison. The work is important because it combined a coarse filter
+with partial-library similarity and explicitly studied obfuscation
+\cite{wang2018orlis}. Its principal trade-off was computational cost, showing
+that structural resilience must be balanced with scalable candidate
+reduction.
+
+\subsection{Class Dependencies and Version-Aware Detection}
+
+LibPecker computes strict class signatures from internal class dependencies,
+then introduces adaptive class thresholds and weighted similarity to tolerate
+customization and eliminated dead code. Its original evaluation reported
+98.1\% precision and 91\% recall \cite{zhang2018libpecker}. These results are
+methodologically useful, but later common-benchmark evidence shows why
+original-paper performance should not be generalized without preserving the
+dataset and protocol.
+
+LibID formulates library identification as a constrained correspondence
+problem and uses binary integer programming to select consistent matches. It
+also uses synthetic applications to tune thresholds and F-Droid applications
+as source-backed ground truth. The method identifies specific versions and is
+designed to survive code shrinking and package modification
+\cite{zhang2019libid}. Its optimization formulation improves global
+consistency but increases implementation and runtime complexity.
+
+ATVHUNTER addresses version and vulnerability identification through a
+coarse-to-fine pipeline. CFG evidence retrieves potential references, then
+opcodes inside basic blocks distinguish candidate versions. The work reports
+90.55\% precision and 88.79\% recall and connects detected versions with a
+vulnerability database \cite{zhan2021atvhunter}. This is one of the closest
+pre-SBOM pipelines to the current project because it links compiled-code
+attribution, exact versions, and security consequences. However, its output is
+not a standard SBOM, and its evaluation does not fully represent modern R8
+method inlining.
+
+\section{Optimization-Aware and Structural Matching}
+
+LibScan builds potential class correspondences and refines them through method
+opcode and call-chain opcode similarity. Early-stop rules and reuse of
+intermediate results reduce the cost of the deeper comparison. This design
+addresses repackaging, dead-code removal, and control-flow changes more
+directly than package-only methods \cite{wu2023libscan}.
+
+LibHunter studies a narrower but important question: how compiler
+optimizations affect library and version detectors. It explicitly models
+inlining and call-site optimization and reports improvements over earlier
+tools on optimized, obfuscated, and shrunk applications
+\cite{xie2024libhunter}. Its contribution is methodological as well as
+algorithmic: optimization must be evaluated separately from identifier
+renaming because it can remove or merge the very units used by a matcher.
+
+SAD targets version-level false positives through class structural
+correspondence. It first retrieves candidate app classes from class dependency
+graphs, compares class summaries, and finally evaluates the structural
+similarity of the matched subgraphs. On its obfuscated datasets, SAD reports
+97.64\% library-level F1, 84.82\% version-level F1, and 94.12\% class-level F1
+\cite{zhou2025sad}. These are strong reported results, but they belong to the
+paper's three evaluation datasets and should not be compared directly with a
+different real-APK denominator.
+
+The public LibScope artifact represents another direction: replacing
+independent local matches with iterative global matching over compact Bloom
+filter features \cite{libscopeArtifact}. Global consistency is relevant when
+several classes have individually plausible correspondences. At the time of
+this review, the accessible artifact was anonymized, so it is included as an
+emerging matching direction rather than as a source of quantitative claims.
+
+\section{Learned Representations}
+
+LibAttention replaces hand-written correspondence rules with a feature
+language model. APK and library code are converted to Smali, transformed into
+an obfuscation-resistant vocabulary, encoded by a Transformer, and compressed
+for downstream classification. The paper reports an F1 improvement exceeding
+30 percentage points over rule-based methods on its Android R8 dataset
+\cite{pan2025libattention}.
+
+The learned approach is valuable because R8 transformations evolve and may not
+preserve the exact features expected by a manually designed detector.
+Nevertheless, LibAttention performs library-presence classification rather
+than exact-version identification. It therefore cannot independently provide
+the version evidence required for reliable vulnerability mapping or a
+versioned SBOM. Learned representations are better understood here as
+assistance for hard identity or risk cases than as automatic version
+authority.
+
+\section{SBOM-Oriented Approaches}
+
+Most Android TPL detectors output library names, candidate versions, or class
+correspondences rather than a standard SBOM. That difference matters because
+an operational SBOM also requires package identifiers, evidence provenance,
+component relationships, uncertainty handling, and an interoperable format.
+
+UniBOM is not Android-specific, but it demonstrates a broader SBOM-analysis
+architecture that combines multiple evidence sources and supports
+\CycloneDX and \SPDX representations \cite{safronov2025unibom}. Its relevance
+to this project is architectural: binary recovery should be connected to
+standard output, visualization, and vulnerability analysis rather than
+stopping at a detector-specific list.
+
+The Android-specific gap remains significant. ATVHUNTER connects versions to
+vulnerabilities, and LibScout studies vulnerable library histories, but
+neither provides the evidence-qualified \CycloneDX workflow required by this
+project. Standard SBOM generation must also avoid converting a top similarity
+candidate into an unsupported exact version.
+
+\section{Benchmark and Assessment Evidence}
+
+The 2020 empirical assessment and its extended systematic study compared
+publicly available tools under common criteria. They found that no single
+method dominated all dimensions: LibScout was strong in effectiveness,
+LibRadar in efficiency and usability, and LibPecker in the evaluated
+obfuscation settings. More importantly, the studies identified module
+decoupling, partial imports, multidex, AAR preprocessing, and tool
+complementarity as recurring problems \cite{zhan2020assessment,zhan2021systematic}.
+
+TPL-Benchmark revisits the field with 6,055 applications, 5,756 unique
+libraries, 15,274 versions, and 62,218 app-library mappings. Under its unified
+protocol, the highest library-level F1 among the ten evaluated tools is
+60.15\%, achieved by LibPecker, despite substantially higher values reported
+in several original papers \cite{gu2025tplbenchmark}. This does not prove that
+the original experiments were incorrect. It demonstrates that performance is
+highly sensitive to dataset construction, ground truth, reference coverage,
+partial inclusion, and modern compiler transformations.
+
+The benchmark also separates library-level from version-level results and
+shows that stronger identity recall does not automatically imply reliable
+version selection. This observation directly motivates separate identity and
+version confidence in the proposed system.
+
+\section{Method-by-Method Synthesis}
+
+Before comparing the tools in tabular form, this section summarizes the main
+idea of each representative approach. The objective is to make clear which
+evidence family each method uses and why its result does or does not directly
+support an APK-derived SBOM claim.
+
+\textbf{LibScout} builds profiles for known Android libraries and compares an
+application against those profiles using package, class, and method
+information \cite{backes2016libscout}. Its strength is the explicit reference
+model: if the right library version is present in the database and the APK
+preserves enough method structure, the match can support a version claim. Its
+weakness is that package organization, removed methods, and incomplete
+references can reduce the authority of the result.
+
+\textbf{LibD} uses graph-based homogeny relations to identify library code in
+large Android application collections \cite{li2017libd}. It is important
+because it moves beyond simple package names and uses structural relations
+such as inheritance, calls, and inclusion. However, its main role is library
+discovery and boundary recovery rather than exact Maven-version reporting.
+
+\textbf{ORLIS} combines coarse and fine matching for obfuscation-resilient
+library detection \cite{wang2018orlis}. It first filters candidates using
+call-graph-derived features and then verifies class correspondences with fuzzy
+signatures. This makes it useful for partial inclusion and obfuscated code,
+but the class-mapping result still needs additional evidence before it becomes
+a precise SBOM version claim.
+
+\textbf{LibPecker} focuses on class-dependency relations and adaptive
+similarity \cite{zhang2018libpecker}. The method is valuable because class
+dependencies survive some renaming and package reorganization. Its limitation
+is that similarity thresholds and reference coverage still determine whether
+the output is a strong identity claim or only a candidate.
+
+\textbf{LibID} formulates library identification as a class-correspondence
+problem and uses optimization to find consistent mappings
+\cite{zhang2019libid}. This supports version-oriented reasoning better than
+package-only methods, especially when code is modified or shrunk. It still
+depends on the available reference set and on the transformations represented
+in its evaluation.
+
+\textbf{ATVHUNTER} connects version identification to vulnerability analysis
+\cite{zhan2021atvhunter}. It decouples candidate library code with class
+dependencies, filters with control-flow evidence, and uses opcode-level
+matching for version decisions. This makes it directly relevant to security
+use cases, but the vulnerability conclusion remains valid only if the
+component and version evidence is strong.
+
+\textbf{LibScan} improves fine-grained matching by using class
+correspondence, method opcode similarity, and call-chain evidence
+\cite{wu2023libscan}. It shows that method-level and call-context evidence
+can improve precision, while also showing why a detector must report the
+evidence behind each decision instead of exposing only a final label.
+
+\textbf{LibHunter} treats optimization as a first-class problem
+\cite{xie2024libhunter}. Its call-site-optimization and cross-inlining
+features address transformations that can break simpler method-boundary
+assumptions. This is especially relevant for modern Android builds where R8
+may inline or rewrite the exact code fragments needed for version
+discrimination.
+
+\textbf{SAD} separates stateful and stateless classes and uses different
+class-structural evidence for each category \cite{zhou2025sad}. It is one of
+the strongest examples of version-level reasoning because it uses field
+operations, opcode similarity, class dependencies, and literals. Its
+remaining sensitivity to aggressive inlining confirms that version-level
+claims still need transformation-aware limits.
+
+\textbf{LibAttention} uses a Transformer model over Smali-oriented
+representations for library presence detection \cite{pan2025libattention}.
+It demonstrates that learned features can help under obfuscation, but its
+output is a presence signal rather than a complete exact-version SBOM entry.
+For this project, it is best interpreted as evidence for AI-assisted
+candidate support, not as authority to rewrite component versions.
+
+\textbf{UniBOM} is not an Android TPL detector, but it is relevant because it
+places binary and source evidence inside an SBOM-oriented workflow
+\cite{safronov2025unibom}. It shows the value of combining extraction,
+analysis, SBOM generation, and vulnerability visualization. Its limitation
+for this thesis is that firmware and source-code SBOM generation do not solve
+APK-side Maven exact-version attribution under Android transformations.
+
+\section{Comparative Analysis}
+
+Table~\ref{tab:pfe-sota-comparison} below summarizes the representative tools
+using common capability dimensions. Quantitative results remain in the
+preceding text so that each number stays attached to its evaluation context.
+
+\begin{landscape}
+\thispagestyle{empty}
+\noindent
+{\small Chapter 4.\quad State of the Art\hfill \thepage\par}
+\vspace{1mm}
+\hrule
+\vspace{5mm}
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Capability-oriented comparison of representative Android TPL and
+SBOM approaches.}
+\label{tab:pfe-sota-comparison}
+\begin{tabularx}{\linewidth}{
+  p{0.11\linewidth}
+  p{0.17\linewidth}
+  p{0.20\linewidth}
+  p{0.11\linewidth}
+  p{0.15\linewidth}
+  X
+}
+\toprule
+\textbf{Approach} & \textbf{Primary goal} & \textbf{Main evidence} &
+\textbf{Version level} & \textbf{Optimization focus} & \textbf{Output}\\
+\midrule
+LibScout & Known library/version matching & Fuzzy method descriptors and
+hierarchical hashes & Yes & Renaming; limited structural change &
+Detector-specific library/version list\\
+LibD & Market-scale library discovery & Dependency relations and opcode
+hashing & No & Name obfuscation & Discovered library clusters\\
+ORLIS & Obfuscation-resilient matching & CFG structure, sdhash, ssdeep,
+Jaccard & Limited & Classical obfuscators & Class/library mappings\\
+LibPecker & Precise partial-library matching & Class dependencies, adaptive
+thresholds, weighted similarity & Limited & Customization and dead-code
+removal & Detector-specific matches\\
+LibID & Consistent known-library matching & Class/member features and integer
+programming & Yes & Shrinking and package modification &
+Library/version identifications\\
+ATVHUNTER & Version and vulnerability identification & CFG shortlist and
+basic-block opcode evidence & Yes & Obfuscation and dead-code removal &
+Version and vulnerability records\\
+LibScan & Fine class correspondence & Method and call-chain opcode similarity
+& Yes & Repackaging and advanced obfuscation & Detector-specific matches\\
+LibHunter & Optimization-aware detection & Inlining and call-site
+optimization simulation & Yes & Explicit compiler optimization &
+Library/version matches\\
+SAD & Version-level structural matching & CDG candidates, class summaries,
+matched subgraphs & Yes & Obfuscated applications & Version and class
+correspondences\\
+LibAttention & Learned library presence & Smali feature language model and
+Transformer & No & Android R8 & Binary library presence\\
+UniBOM & Unified SBOM analysis & Binary, filesystem, and source evidence &
+Depends on input analyzers & Not Android-specific & \CycloneDX and \SPDX\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\end{landscape}
+
+The table exposes a recurring trade-off. Fast approaches reduce search cost
+but provide less reliable version evidence. Structural and optimization-aware
+approaches improve robustness but are more expensive and remain dependent on
+reference coverage. Learned methods adapt to transformations but do not
+automatically provide explainable version attribution. SBOM-oriented systems
+provide interoperable output but need trustworthy component evidence from
+upstream analyzers.
+
+\section{Limitations of Existing Approaches}
+
+\subsection{Dataset and Metric Fragmentation}
+
+Original papers frequently evaluate curated libraries or generated
+obfuscation variants, while later benchmarks include broader real
+applications. Precision, recall, F1, version accuracy, and class
+correspondence may also use different units. A value reported for one dataset
+cannot be treated as a universal ceiling or directly compared with another
+paper's percentage.
+
+\subsection{Package and Reference Dependence}
+
+Package-based segmentation is fragile under renaming and flattening.
+Reference-based systems avoid clustering ambiguity but cannot detect a
+coordinate or version that is absent from the database. Adding many versions
+also increases candidate pressure and can create false near-ties. Reference
+coverage and matcher performance must therefore be measured separately.
+
+\subsection{Incomplete R8 and Optimization Coverage}
+
+Renaming is the easiest transformation because much of the bytecode structure
+survives. Shrinking removes library code, while optimization and inlining
+rewrite method boundaries and call relations. The progression from LibScout
+through LibScan, LibHunter, SAD, and LibAttention shows increasing attention
+to these transformations, but no reviewed approach establishes universal
+exact-version recovery under all modern R8 behaviors.
+
+\subsection{Weak Standard Output and Provenance}
+
+Most detectors stop at tool-specific matches. They do not emit a standard
+SBOM, distinguish application files from Maven packages, preserve ambiguous
+version sets, or attach the evidence required to audit a claim. Vulnerability
+mapping is particularly sensitive to this omission because the same
+coordinate at two adjacent versions may produce different advisory results.
+
+\subsection{Limited Uncertainty and Failure Reporting}
+
+A top candidate is not necessarily a confirmed component. Several reviewed
+approaches expose similarity scores, but few make identity uncertainty,
+version uncertainty, reference absence, and unsupported native or hidden code
+first-class output categories. Realistic deployment requires abstention and
+bounded claims, not only improved ranking.
+
+\section{Impact on the Proposed MVP}
+
+The project did not copy one detector. It adopted, adapted, or rejected ideas
+according to implementation feasibility and target/control evidence.
+Table~\ref{tab:pfe-sota-decisions} summarizes the principal decisions.
+
+\begin{table}[H]
+\centering
+\caption{State-of-the-art ideas and their disposition in the proposed MVP.}
+\label{tab:pfe-sota-decisions}
+\begin{tabularx}{\textwidth}{L{0.24\textwidth}L{0.15\textwidth}X}
+\toprule
+\textbf{Research idea} & \textbf{Decision} & \textbf{Project implementation or
+rationale}\\
+\midrule
+Known versioned reference profiles & Adopted & Maven JAR/AAR artifacts are
+converted to DEX and stored as coordinate/version feature profiles.\\
+Package-only module boundaries & Rejected & Package evidence remains one
+signal, but structural, opcode, literal, and dependency evidence are required.\\
+Coarse-to-fine candidate verification & Adapted & Candidate reduction and
+weighted evidence ranking follow the multi-stage pattern, with fail-fast
+controls for unsafe shortlists.\\
+Class dependency and call-chain evidence & Adopted diagnostically and
+partially in production & Class dependencies contribute to the matcher;
+multi-scale features are extractable but remain inert or report-only when
+global scoring regresses controls.\\
+Generic newest-version tie breaking & Rejected & Recency is not independent
+APK evidence and caused target/control conflicts.\\
+Learned R8 assistance & Adapted as report-only & Random Forest and Transformer
+experiments support risk triage but cannot change selected versions, SBOM
+components, or vulnerability labels.\\
+Standard SBOM and package identifiers & Adopted & Accepted detections are
+serialized as \CycloneDX components with Package URLs and evidence
+properties.\\
+Single aggregate benchmark score & Rejected & Controlled, clean, partial,
+source-known, experiment-only, and limitation lanes are reported separately.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+This decision process is as important as feature selection. Opcode n-grams,
+API references, multi-scale R8 blends, broad priority databases, and
+source-known rerankers were implemented or evaluated, but they remained
+disabled, diagnostic, or experiment-only when controls did not justify
+promotion.
+
+\section{Research Gap and Positioning}
+
+The reviewed literature leaves five connected gaps:
+
+\begin{enumerate}
+  \item exact-version evidence degrades more severely than library identity
+  under shrinking and optimization;
+  \item reference coverage and matcher recall are often mixed into one score;
+  \item standard SBOM generation is rarely integrated with Android binary
+  attribution;
+  \item vulnerability claims frequently inherit unexamined version
+  uncertainty;
+  \item negative experiments, abstentions, and boundary cases are not always
+  visible in the final result.
+\end{enumerate}
+
+The proposed contribution is positioned as an end-to-end,
+evidence-gated APK-to-\CycloneDX pipeline. It combines research-backed static
+features with versioned Maven references, separates identity from exact
+version confidence, validates emitted rows against source when available, and
+keeps native, hidden-code, AI, and experimental evidence outside unsupported
+production authority.
+
+The objective is not to claim a universally superior detector from
+incompatible percentages. It is to provide a working and auditable system in
+which each SBOM and vulnerability claim remains connected to its evidence,
+denominator, and limitation.
+
+\section{Conclusion}
+
+Android TPL research progressed from fast package and hash signatures to class
+dependencies, global correspondence, optimization-aware simulation, and
+learned representations. These advances improve robustness, but benchmark
+evidence shows that realistic library and version recovery remains difficult,
+particularly when reference coverage, partial inclusion, R8 optimization, and
+adjacent-version similarity interact.
+
+The literature also reveals a systems gap: accurate detection alone does not
+produce a trustworthy SBOM. Standard output, evidence provenance, ambiguity,
+source validation, and vulnerability-claim boundaries must be designed
+together. Chapter~\ref{ch:pfe-design} answers this gap by presenting the
+architecture of the proposed evidence-gated APK-to-SBOM system.

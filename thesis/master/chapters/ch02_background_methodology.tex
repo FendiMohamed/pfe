@@ -1,0 +1,352 @@
+\chapter[Background and Research Methodology]{Background and Research\\ Methodology}
+\label{ch:master-background}
+
+\section{Introduction}
+
+This chapter establishes the concepts and review method used to reason about
+trustworthy recovery of software components from compiled Android
+applications. The thesis treats a recovered \SBOM as a set of evidence-backed
+claims rather than as a simple list of names and versions. This distinction
+requires a common vocabulary for component identity, provenance, uncertainty,
+and transformation risk, followed by a transparent method for selecting and
+comparing prior research.
+
+\section{Software Supply Chains and SBOMs}
+
+Modern applications assemble code, resources, native binaries, generated
+artifacts, and transitive dependencies from many independently maintained
+projects. An \SBOM records these components so that operators can reason about
+inventory, licensing, provenance, and known vulnerabilities. Standards define
+how such information is represented, but a representation format does not
+establish that the recorded component is actually present or that its exact
+version is known. This distinction is consistent with supply-chain guidance
+that treats component transparency as one control within a broader risk
+management process, and with empirical SBOM research showing persistent
+generation, consistency, and consumption challenges
+\cite{ntia2021minimum,nist2022scrm,xia2023sbom}.
+
+This thesis considers both SPDX and CycloneDX, while using Package URL as a
+standard package-identity model
+\cite{spdxSpecification,cyclonedxSpecification,packageUrlSpecification}.
+These standards therefore define the target vocabulary and exchange
+structures, while the literature synthesis defines the evidential conditions
+under which individual fields may be populated responsibly.
+
+\subsection{Authoritative and Reconstructed SBOMs}
+
+An authoritative build-time \SBOM can use dependency resolution metadata,
+lockfiles, build graphs, and package-manager records. By contrast, an
+artifact-reconstructed \SBOM begins after those authoritative records have
+been removed or made unavailable. It must infer a component from observable
+residue in an \APK, compare that residue with references, and preserve the
+uncertainty introduced by compilation and incomplete coverage.
+
+The distinction is central to this thesis. A reconstructed component identity
+may be credible even when its exact version is unresolved. Similarly, a
+syntactically valid CycloneDX or SPDX document may contain semantically weak
+claims. Trustworthiness is consequently a property of each claim and its
+evidence trail, not of the file format alone.
+
+\section{Trust, Evidence, Provenance, and Uncertainty}
+
+\subsection{Evidence and Claims}
+
+An evidence item is an observable fact used to support or challenge a
+component claim. Examples include a package fragment, an opcode fingerprint, a
+class-dependency relation, a resource marker, a native-library name, or a
+source-validated expected dependency. A claim is the interpretation built
+from one or more such items, for example that a library family is present or
+that a particular version is the best-supported candidate.
+
+\subsection{Provenance and Independence}
+
+Provenance records where evidence came from, how it was extracted, and which
+transformations may have affected it. Two matching fields are not independent
+when they are derived from the same underlying artifact feature. Confidence
+must therefore not be increased merely by counting correlated signals as
+separate confirmations. The framework adopts the W3C PROV distinction between
+entities, activities, and agents as a general provenance vocabulary, while
+specializing it for APK observations, reference profiles, validation
+artifacts, and analysis steps \cite{moreau2013prov}.
+
+\subsection{Uncertainty and Abstention}
+
+Uncertainty can arise from missing evidence, conflicting evidence, incomplete
+reference coverage, adjacent versions with near-identical code, partial
+library inclusion, or destructive optimization. The framework allows
+ambiguity sets and abstention because an explicit unresolved result is more
+auditable than a forced exact version. Reject-option research provides the
+general decision-theoretic precedent for withholding a classification when
+the expected error cost is too high \cite{chow1970reject}. This policy also limits downstream
+vulnerability authority: a vulnerability finding cannot be stronger than the
+identity and version evidence on which it depends.
+
+\section{Android Compiled-Artifact Context}
+
+Android compilation and R8 transformations directly affect the stability and
+interpretability of recovered evidence \cite{androidShrinkCode}.
+
+Java or Kotlin source is compiled and transformed into \DEX bytecode, while
+resources and manifests are packaged into an \APK. Dependency boundaries that
+were explicit during the build may disappear when classes are merged into one
+or more DEX files. R8 can rename identifiers, remove unused code, rewrite
+control flow, merge classes, inline methods, and change call sites. Packaging
+may also introduce multidex layouts, shaded or relocated code, native
+libraries, generated classes, and dynamically loaded components.
+
+These transformations do not affect all evidence equally. Names and package
+trees are inexpensive but fragile. Opcode, control-flow, call, and dependency
+structures can survive renaming, yet they are still altered by shrinking and
+optimization. Resources and metadata can provide independent support, but they
+may identify only a family rather than an exact version. The state-of-the-art
+taxonomy in \cref{ch:master-sota} therefore classifies both evidence sources
+and the transformations that threaten them.
+
+Figure~\ref{fig:master-android-build-evidence} illustrates why binary
+recovery is weaker than build-time inventory generation. The dependency graph
+is visible before compilation, but the audit target is often the transformed
+APK after boundaries, names, and unused code have changed.
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  node distance=7mm and 8mm,
+  stage/.style={draw, rounded corners, align=center, text width=0.20\textwidth,
+    minimum height=11mm, fill=blue!5},
+  transform/.style={draw, rounded corners, align=center, text width=0.19\textwidth,
+    minimum height=11mm, fill=warningorange!14},
+  evidence/.style={draw, rounded corners, align=center, text width=0.22\textwidth,
+    minimum height=11mm, fill=evidencegreen!10},
+  arrow/.style={-{Latex[length=2.5mm]}, thick}
+]
+\node[stage] (source) {Source project\\and dependency graph};
+\node[stage, right=of source] (resolved) {Resolved JAR/AAR\\artifacts};
+\node[transform, right=of resolved] (compile) {D8/R8 conversion,\\shrinking, obfuscation};
+\node[stage, right=of compile] (apk) {Signed APK\\DEX, resources, native files};
+\node[evidence, below=of source] (buildsbom) {Build-time SBOM\\declared/resolved metadata};
+\node[evidence, below=of apk] (recovered) {Recovered SBOM\\observed bounded claims};
+
+\draw[arrow] (source) -- (resolved);
+\draw[arrow] (resolved) -- (compile);
+\draw[arrow] (compile) -- (apk);
+\draw[arrow] (source) -- (buildsbom);
+\draw[arrow] (apk) -- (recovered);
+\draw[arrow, dashed] (buildsbom) -- node[below, font=\scriptsize, align=center]
+  {related but\\not identical} (recovered);
+\end{tikzpicture}
+}
+\caption{Android build and evidence-loss path from resolved dependencies to a recovered SBOM claim.}
+\label{fig:master-android-build-evidence}
+\end{figure}
+
+\section{Software Component Attribution}
+
+\subsection{Identity, Version, and Security Authority}
+
+Component attribution contains at least three distinct decisions:
+
+\begin{enumerate}
+  \item \textbf{identity attribution}: whether a component family or
+    coordinate is present;
+  \item \textbf{version attribution}: which exact version or bounded version
+    set is supported; and
+  \item \textbf{security interpretation}: which vulnerability statements are
+    permitted by the preceding evidence.
+\end{enumerate}
+
+A method that performs well at library-family detection does not
+automatically provide exact-version authority. Likewise, a vulnerability
+database match is not confirmation that the affected version is present.
+Keeping these decisions separate prevents a plausible identity match from
+being silently promoted into an exact and security-critical statement.
+
+Figure~\ref{fig:master-claim-authority-chain} shows the authority chain. Each
+step depends on the previous one: vulnerability interpretation is meaningful
+only when component identity and version evidence are strong enough for the
+affected-range query being made.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=8mm,
+  box/.style={draw, rounded corners, align=center, text width=0.78\textwidth,
+    minimum height=9mm, fill=blue!5},
+  warn/.style={draw, rounded corners, align=center, text width=0.78\textwidth,
+    minimum height=9mm, fill=warningorange!13},
+  arrow/.style={-{Latex[length=2.5mm]}, thick}
+]
+\node[box] (evidence) {APK evidence: DEX, manifest, resources, native files, references};
+\node[box, below=of evidence] (identity) {Component identity claim};
+\node[box, below=of identity] (version) {Exact version or bounded version-set claim};
+\node[box, below=of version] (range) {Affected-range query in vulnerability data};
+\node[warn, below=of range] (authority) {Permitted security interpretation};
+
+\draw[arrow] (evidence) -- (identity);
+\draw[arrow] (identity) -- (version);
+\draw[arrow] (version) -- (range);
+\draw[arrow] (range) -- (authority);
+\end{tikzpicture}
+\caption{Authority chain linking APK evidence to vulnerability interpretation.}
+\label{fig:master-claim-authority-chain}
+\end{figure}
+
+\subsection{Reference Dependence}
+
+Many attribution methods compare an application with profiles extracted from
+known library releases. Such a method can recognize only what its reference
+corpus represents. Failure may therefore result from the matcher, the
+extractor, or a missing reference rather than from absence of the component.
+Reference coverage is treated as a first-class validity condition throughout
+the thesis.
+
+\section{Evidence Sources in APKs}
+
+The review extracts evidence into recurring families:
+
+\begin{itemize}
+  \item lexical and namespace evidence, including package and class names;
+  \item bytecode and semantic evidence, including opcodes, API references,
+    literals, and method descriptors;
+  \item structural evidence, including control-flow, call, inheritance, and
+    class-dependency graphs;
+  \item resource and packaging evidence, including manifests, resource names,
+    assets, and native-library files;
+  \item external reference and metadata evidence, including library profiles,
+    Maven coordinates, dependency relations, and release chronology;
+  \item learned representations derived from bytecode or structural features;
+  \item validation evidence, including controlled builds, source manifests,
+    and source-based observations.
+\end{itemize}
+
+No family is assumed to be universally authoritative. The framework evaluates
+its origin, transformation resilience, version specificity, independence,
+coverage, and validation status.
+
+\section{Structured Literature Review Methodology}
+
+The literature study follows a frozen structured mapping protocol adapted from
+software-engineering systematic-review guidance
+\cite{kitchenham2007guidelines}. It is not presented as a completed exhaustive
+systematic literature review because the initial corpus was assembled
+iteratively before the protocol freeze. Instead, the protocol makes the
+existing corpus auditable and governs all future search refreshes, screening,
+extraction, and synthesis.
+
+\subsection{Review Questions and Search Strategy}
+
+The review asks which evidence sources and attribution techniques are used,
+which Android transformations threaten them, how identity and version results
+are evaluated, how uncertainty and provenance are represented, and which gaps
+prevent trustworthy \SBOM claims. Searches combine four concept blocks:
+Android artifacts; third-party components or SBOMs; detection or attribution
+tasks; and obfuscation, optimization, version, or vulnerability terms.
+
+Primary search sources include ACM Digital Library, IEEE Xplore, SpringerLink,
+ScienceDirect, USENIX, and arXiv. Google Scholar is restricted to discovery
+and citation chaining. The date scope begins in 2015 and continues through the
+recorded search date. The canonical query and the recording requirements for
+future database-specific adaptations are preserved in
+\cref{app:master-review-protocol}. Because the seed corpus predates the
+protocol freeze, the original database-specific query executions and result
+counts cannot be reconstructed retrospectively.
+
+\subsection{Eligibility and Screening}
+
+Eligible studies propose or evaluate Android binary component attribution,
+version identification, relevant benchmarks, empirical assessments, or
+SBOM-oriented recovery frameworks. Studies based only on authoritative source
+manifests, unrelated malware classification, product pages, duplicates, and
+records without extractable methodology are excluded.
+
+Records are deduplicated and screened by title and abstract. Full-text
+eligibility assessment and structured extraction are completed for Tier A;
+records without a verified local full text remain Tier B pending that stage.
+Related conference and journal publications are treated as one study family
+unless the later publication contributes distinct methods, datasets, or
+results.
+
+\subsection{Evidence Tiers}
+
+The frozen seed corpus contains 20 publication units. Fifteen have locally
+inspected full texts and form \emph{Tier A}. Five are \emph{Tier B}
+supplementary records whose metadata or structured notes are available but
+whose local full texts have not yet been verified. Tier B records may inform
+search coverage and provisional gap mapping, but they cannot independently
+support precise quantitative conclusions. Standards and official platform
+documentation form contextual \emph{Tier C} and are not counted as primary
+studies.
+
+\section{Analysis Dimensions}
+
+Each included study is extracted across common dimensions: task granularity,
+input assumptions, segmentation, evidence families, matching or learning
+method, transformation coverage, ground truth, dataset composition, metrics,
+confidence and ambiguity behavior, reference dependence, artifact
+availability, SBOM output, vulnerability mapping, and stated limitations.
+
+Tier A studies are additionally assessed against eight reporting-quality
+questions covering objective clarity, reproducibility, ground truth, metric
+definition, transformation conditions, identity/version separation, artifact
+availability, and threats to validity. Quality affects the weight of a study
+in synthesis but does not automatically erase historically important work.
+
+Synthesis is narrative and taxonomy-based. Metrics are compared only when
+their task unit, dataset, ground truth, and transformation conditions are
+compatible. Original-paper results remain separate from later independent
+benchmarks, and library-level, class-level, and version-level results are
+never merged into a single ranking.
+
+\section{Threats to the Review}
+
+\subsection{Search and Selection Bias}
+
+The pre-protocol corpus was built iteratively and may overrepresent well-known
+Android security venues or studies connected through citation chains. The
+frozen search blocks, multiple publisher databases, and explicit refresh log
+reduce but do not eliminate this risk. The original database-specific queries,
+raw result counts, and deduplicated flow were not retained before the freeze,
+so the protocol cannot retroactively establish an exhaustive or PRISMA-style
+selection history for the seed corpus. Those fields are mandatory for every
+future refresh.
+
+\subsection{Availability and Recency}
+
+Several recent or emerging studies currently exist only as supplementary
+records. Treating them as Tier B prevents incomplete metadata from acquiring
+the same authority as inspected full text. TPL-Benchmark and UniBOM were
+promoted after local full-text, bibliographic, extraction, and quality checks;
+the remaining classifications may change only after the same checks, and all
+such changes must be logged.
+
+\subsection{Heterogeneous Evaluation}
+
+Reported accuracy values often refer to different task definitions, datasets,
+library versions, obfuscators, and ground-truth procedures. Direct numerical
+ranking can therefore be misleading. The review preserves these conditions
+and prefers qualified comparison over pooled scores.
+
+\subsection{Reviewer and Extraction Bias}
+
+The current review is primarily maintained by one researcher. A fixed
+extraction schema, explicit \texttt{NR} values for unreported information,
+source citations, and retained structured records provide an audit trail. A
+later independent screening sample would further strengthen reliability.
+
+\section{Conclusion}
+
+This chapter separated a valid SBOM representation from the evidential
+strength of its contents and defined component attribution as a sequence of
+identity, version, and security-authority decisions. It also froze a
+structured mapping protocol that prevents unavailable full texts, incompatible
+metrics, and correlated signals from being silently promoted into strong
+claims.
+
+These background concepts explain why Android APK-to-SBOM recovery cannot be
+evaluated through a single accuracy value. The same output may be trustworthy
+as a library-family hint, weak as an exact-version assertion, and unsafe as a
+vulnerability conclusion. A reliable review must therefore preserve the
+evidence source, transformation setting, reference coverage, denominator, and
+validation context attached to each reported result. The next chapter applies
+these rules to classify the state of the art and identify the remaining
+research gaps.

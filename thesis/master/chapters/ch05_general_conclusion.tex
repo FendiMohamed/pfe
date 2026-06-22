@@ -1,0 +1,185 @@
+\chapter[General Conclusion and Perspectives]{General Conclusion and\\ Perspectives}
+\label{ch:master-conclusion}
+
+\section{General Conclusion}
+
+Recovering a Software Bill of Materials from a compiled Android application is
+not only a detection problem. It is a problem of deciding what can be claimed
+from incomplete, transformed, and sometimes conflicting evidence. A component
+name or exact version may look precise while depending on weak namespace
+overlap, an incomplete reference collection, a feature-equivalent adjacent
+release, or source information that does not prove binary presence. Trust
+therefore depends on how evidence is qualified and bounded, not merely on
+whether a tool returns an answer.
+
+This thesis studied that problem as a research question in Android
+third-party-library detection and binary \SBOM reconstruction. The first
+chapter introduced the context, motivation, research questions, and scope of
+the work. Chapter~\ref{ch:master-background} then established the technical
+background needed to understand software supply chains, \SBOM standards,
+vulnerability identifiers, Android compilation, APK evidence, and the
+methodological constraints of a structured literature review. It showed why a
+compiled APK cannot be treated as a transparent dependency manifest and why
+binary evidence must be interpreted with provenance and uncertainty.
+
+Chapter~\ref{ch:master-sota} organized the state of the art by recovery role,
+evidence source, transformation exposure, version capability, validation
+practice, and trust implication. The reviewed literature provides many useful
+signals: package and class profiles, structural graphs, fuzzy signatures,
+opcode and literal features, API references, learned representations,
+optimization-aware matching, and benchmark-driven assessment. However, the
+synthesis also showed recurring limitations. Exact-version identification is
+fragile under shrinking and optimization; reported scores are often tied to
+selected datasets; source-known dependencies are not always equivalent to
+binary presence; and most approaches stop before producing standard,
+provenance-aware \SBOM output.
+
+The central conclusion is therefore conditional. Android APK evidence can
+support useful reconstructed component claims, but only when the claim remains
+as precise as the evidence allows. Library identity and exact version must be
+distinguished. Missing reference coverage, near-tie versions, transformed
+code, native payloads, and dynamic loading must be visible rather than hidden.
+Vulnerability interpretation must inherit the confidence of the component and
+version evidence instead of bypassing it. In this view, abstention and bounded
+claims are not failures; they are necessary protections against false
+precision.
+
+\section{Answers to the Research Questions}
+
+Table~\ref{tab:master-rq-answers} summarizes the answers to the supporting
+research questions introduced in Chapter~\ref{ch:master-introduction}. The
+table is retained because it gives a compact link between the literature
+review and the final synthesis.
+
+\begingroup
+\small
+\setlength{\LTpre}{0.5em}
+\setlength{\LTpost}{0.5em}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}}
+\caption{Answers to the supporting research questions.}
+\label{tab:master-rq-answers}\\
+\toprule
+\textbf{RQ} & \textbf{Question focus} & \textbf{Answer}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{RQ} & \textbf{Question focus} & \textbf{Answer}\\
+\midrule
+\endhead
+RQ1 & Evidence sources available in compiled Android applications &
+Recoverable evidence includes archive metadata, manifest information, DEX
+packages and classes, methods, opcodes, literals, API references, dependency
+and call relations, resources, native-file observations, reference artifacts,
+and external validation sources. These sources differ in directness, version
+specificity, resilience, and authority.\\
+
+RQ2 & How existing approaches combine evidence & Existing approaches range
+from namespace and class-set matching to structural graphs, opcode and
+semantic features, fuzzy signatures, learned representations, metadata
+coherence, and multi-stage reference matching. The literature supports
+multi-source reasoning, but no combination is universally reliable under
+shrinking, optimization, repackaging, feature-equivalent releases, and
+incomplete references.\\
+
+RQ3 & Factors that determine identity and version strength & Evidence strength
+depends on directness, uniqueness, independence, transformation resilience,
+version specificity, provenance reliability, reference coverage, and
+reproducibility. Identity and exact-version support must be assessed
+separately because a signal can identify a library family while remaining
+unable to distinguish adjacent releases.\\
+
+RQ4 & Representation of conflict, absence, transformation, and source
+dependence & These conditions should be represented through competing
+candidates, bounded version sets, conflict records, coverage limits,
+transformation exposure, report-only outcomes, and abstention. Missing
+evidence should not be interpreted as component absence, and source-known
+dependencies should not automatically be treated as proof of APK-side
+presence.\\
+
+RQ5 & Information required for an auditable and security-relevant claim & A
+claim should identify the subject APK, candidate component and artifact family,
+claim type and granularity, version or version set, supporting and opposing
+evidence, provenance, coverage, transformation exposure, confidence class,
+ambiguity, validation context, and permitted downstream use. Vulnerability
+interpretation must inherit these boundaries.\\
+
+RQ6 & Evaluation without overstating accuracy & Evaluation should separate
+controlled fixtures, clean source-validated cases, partial source-validated
+cases, source-known upper bounds, diagnostics, report-only experiments, and
+unsupported limitations. It should publish denominators, distinguish emitted
+row correctness from full dependency recall, retain negative experiments and
+abstentions, and avoid promoting signals without control evidence.\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+Together, these answers shift evaluation from the question ``Did the detector
+emit a version?'' to the stronger question ``What evidence supports this
+claim, what could invalidate it, and how may it safely be used?''
+
+\section{Future Works and Perspectives}
+
+\begingroup
+\small
+\setlength{\LTpre}{0.5em}
+\setlength{\LTpost}{0.5em}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.35\textwidth}>{\raggedright\arraybackslash}p{0.28\textwidth}}
+\caption{Priority perspectives for future Android APK-to-SBOM research.}
+\label{tab:master-future-directions}\\
+\toprule
+\textbf{Direction} & \textbf{Research objective} & \textbf{Required evidence}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Direction} & \textbf{Research objective} & \textbf{Required evidence}\\
+\midrule
+\endhead
+Empirical calibration & Calibrate identity, exact-version, ambiguity, and
+abstention classes by component family and transformation profile & Held-out
+ground truth, reliability analysis, and error-sensitive calibration metrics.\\
+Independent validation & Apply recovery and reporting rules to other tools,
+analysts, and datasets & External tools, blinded case review, and inter-rater
+agreement on claim classes.\\
+Public benchmark design & Measure exactness, coverage, abstention,
+provenance, and vulnerability-authority correctness together & Reproducible
+APKs, complete denominators, transformation labels, and
+version-discriminating ground truth.\\
+Provenance-aware \SBOM profiles & Standardize how reconstructed claims expose
+evidence, ambiguity, and validation context & Interoperable CycloneDX or
+related profiles tested across producers and consumers.\\
+Native and dynamic attribution & Extend analysis to shared libraries,
+protected payloads, and downloaded code & Separate corpora,
+architecture-aware fingerprints, runtime provenance, and scope-specific
+metrics.\\
+Human factors and explainability & Determine whether analysts understand and
+act appropriately on claim classes, conflicts, and abstentions & User studies,
+decision-quality measures, and explanation comparisons.\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+Future work should first improve benchmark design. A useful benchmark should
+not only ask whether a detector found a name. It should record exact
+versions, transformed variants, reference coverage, native and dynamic
+boundaries, and the denominator used for each metric. Such a benchmark would
+make it possible to compare tools without confusing emitted-row precision
+with full dependency recall.
+
+A second perspective is calibrated uncertainty. Instead of returning one
+forced exact version, future systems should support bounded version sets,
+confidence classes, and abstention policies whose empirical behavior is
+measured on independent data. This is especially important for adjacent
+versions, optimized code, and incomplete reference catalogs.
+
+A third direction is interoperability. Reconstructed \SBOM producers need a
+shared vocabulary for observed binary evidence, inferred identity, candidate
+version sets, external validation, and unsupported regions. CycloneDX
+extensions or profiles could preserve these distinctions while remaining
+usable by vulnerability-management tools.
+
+Finally, Android research should expand beyond Maven bytecode. Native
+libraries, dynamically loaded code, protected payloads, and generated
+artifacts require their own evidence models and validation protocols. Treating
+them as ordinary Maven components would create false certainty. Treating them
+as explicit future research domains keeps the boundary honest while opening
+the path toward broader mobile software transparency.

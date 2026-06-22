@@ -1,0 +1,189 @@
+\chapter{General Introduction}
+\label{ch:master-introduction}
+
+\section{Context}
+
+Software supply chains depend on large ecosystems of reusable components.
+SBOMs improve transparency by recording these components, but many audit
+scenarios provide only compiled software artifacts. In such cases, an SBOM is
+reconstructed from indirect and transformed evidence rather than generated
+from authoritative dependency metadata.
+
+The Android ecosystem makes this problem especially visible. Applications are
+distributed as APK files after Gradle dependency resolution, D8 conversion,
+resource processing, signing, and often R8 shrinking or obfuscation. The final
+artifact may contain code from direct and transitive libraries, generated
+classes, bundled resources, native objects, and optimized fragments of
+dependencies whose original archive boundaries have disappeared. A build-time
+SBOM can observe declared coordinates before these transformations, while a
+binary-only recovery process must infer component identity and version from
+what remains.
+
+This context links software composition analysis to vulnerability management.
+Public vulnerability records usually describe affected packages and version
+ranges. If the recovered coordinate is wrong, the advisory lookup is
+misdirected. If the recovered version is wrong or unsupported, an apparently
+precise CVE result can become a false alarm or a missed exposure. Android
+SBOM recovery must therefore be studied not only as a pattern-matching task,
+but also as an evidence-quality problem involving provenance, uncertainty,
+reference coverage, and transformation resilience.
+
+\section{Problem Statement}
+
+A recovered component name or version is not trustworthy merely because a
+tool emitted it. Trust depends on the origin, independence, transformation
+resilience, version specificity, and validation status of its evidence.
+Existing Android detection research provides strong technical signals, but
+lacks a unified model connecting those signals to claim provenance,
+uncertainty, and permitted vulnerability interpretation.
+
+\section{Motivation}
+
+Software transparency is most useful when an inventory can be inspected,
+challenged, and updated. Build-generated dependency metadata can often provide
+direct package coordinates and resolved versions, but auditors, incident
+responders, application stores, and downstream consumers may receive only a
+compiled artifact. In that setting, reconstructing an \SBOM is necessary, yet
+the result is an inference from residual binary evidence rather than a direct
+export of the original build graph.
+
+This distinction matters for vulnerability management. A package name may be
+sufficient to guide an investigation while remaining insufficient for an
+exact-version or affected-range decision. Conversely, an exact-looking version
+can be unsafe when the true release is absent from the reference base, when
+adjacent releases are feature-equivalent, or when optimization has removed the
+few discriminating features. If these conditions are hidden, a syntactically
+valid \SBOM can encourage unsupported remediation priorities or false
+assurance.
+
+The research reviewed in this thesis provides many useful signals for
+component recovery, including names, class and method structure, opcodes,
+literals, dependency relations, graphs, metadata, and learned
+representations. However, technical evidence and evaluation results answer
+different questions. Library identity, exact-version attribution, reference
+coverage, matcher recall, source validation, and vulnerability authority must
+not be collapsed into one confidence value or success rate.
+
+The academic motivation is therefore to formalize how recovered evidence
+becomes an auditable claim. In this thesis, a reconstructed claim is
+\emph{trustworthy} when its identity and version strength, supporting and
+opposing evidence, provenance, transformation exposure, unresolved
+uncertainty, validation context, and permitted downstream use are visible and
+mutually consistent. This definition allows partial knowledge and abstention
+to remain useful outcomes rather than forcing every analysis into an
+unsupported exact answer.
+
+\section{Research Questions}
+
+The central research question is:
+
+\begin{quote}
+\emph{How can heterogeneous evidence extracted from compiled and obfuscated
+Android applications be combined to produce trustworthy SBOM component and
+version claims with explicit provenance, confidence, uncertainty, and
+validation boundaries?}
+\end{quote}
+
+This question is developed through six supporting questions:
+
+\begin{enumerate}
+  \item Which evidence sources are available for recovering software
+    components from compiled Android applications?
+  \item How have existing Android library-detection and binary
+    component-recovery approaches combined these sources?
+  \item Which factors determine evidence strength for identity and
+    exact-version attribution?
+  \item How should conflicting, missing, transformed, or source-dependent
+    evidence be represented?
+  \item What information must accompany a reconstructed \SBOM claim for it to
+    be auditable and useful in vulnerability management?
+  \item How can such a framework be evaluated without overstating accuracy?
+\end{enumerate}
+
+\section{Objectives}
+
+The objective is to connect Android binary component-recovery techniques to a
+clear model of claim trust. The thesis reviews and classifies prior work,
+identifies the conditions that strengthen or weaken identity and version
+evidence, and derives directions for further research on trustworthy
+APK-to-\SBOM reconstruction.
+
+The resulting research objectives are:
+
+\begin{enumerate}
+  \item a recovery-oriented taxonomy of techniques, evidence sources,
+  transformation threats, and evaluation practices;
+  \item operational trust requirements based on provenance, evidence
+  visibility, identity/version separation, uncertainty, validation context,
+  vulnerability authority, and explicit denominators;
+  \item a synthesis of how recovered-claim models should distinguish
+  identity, version, relationships, boundary observations, and downstream
+  interpretation;
+  \item a synthesis of evidence hierarchy, fusion, conflict handling,
+  confidence caps, bounded ambiguity, and abstention; and
+  \item a research agenda for broader calibration, validation,
+  interoperability, and component domains.
+\end{enumerate}
+
+These are research-synthesis objectives. The thesis does not present an
+implemented detector or a separate proposed system; it studies the evidence
+conditions that any future Android APK-to-\SBOM recovery method should expose.
+
+\section{Scope}
+
+The primary domain is static reconstruction of software-component claims from
+compiled Android APKs. The analysis focuses on DEX-observable JVM/Maven
+components, versioned reference artifacts, and the implications of recovered
+identity and version claims for \SBOM production and vulnerability
+management. Android is used as a demanding case because compilation,
+shrinking, optimization, obfuscation, multidex packaging, artifact variants,
+and incomplete references can all change the evidence available after build
+time.
+
+The thesis covers:
+
+\begin{itemize}
+  \item structured review and taxonomy construction for Android third-party
+  library and binary component-recovery research;
+  \item evidence quality, provenance, transformation exposure, ambiguity, and
+  validation boundaries for recovered claims;
+  \item claim classes for exact, bounded, identity-only, report-only,
+  abstained, and boundary outcomes;
+  \item constraints on component-to-vulnerability interpretation; and
+  \item research gaps that prevent detector outputs from becoming auditable
+  SBOM claims.
+\end{itemize}
+
+The thesis does not propose a second APK detector, repeat a complete system
+implementation description, or evaluate a new tool. It does not claim
+universal probabilistic calibration, complete dependency recovery, or general
+native package/version attribution. Native shared objects, runtime-loaded
+code, encrypted payloads, commercial protectors, and other unsupported
+component domains are represented as boundary categories and future-research
+problems.
+
+\section{Thesis Organization}
+
+The remainder of the thesis is organized as follows.
+
+\textbf{Chapter~\ref{ch:master-background} -- Background and Research
+Methodology} establishes the conceptual and
+methodological foundation. It distinguishes authoritative and reconstructed
+\SBOM{}s, defines evidence, provenance, uncertainty, and software-component
+attribution, describes the Android compiled-artifact context, and records the
+structured literature-review method. Appendix~\ref{app:master-review-protocol}
+contains the detailed review protocol, selection rules, extraction schema,
+quality assessment, and audit controls.
+
+\textbf{Chapter~\ref{ch:master-sota} -- State of the Art and Taxonomy} applies
+that method to the selected literature. It
+constructs taxonomies of recovery techniques, evidence sources,
+transformation threats, and evaluation practices, compares representative
+approaches without treating incompatible reported scores as one leaderboard,
+and derives the research gap addressed by the thesis.
+
+\textbf{Chapter~\ref{ch:master-conclusion} -- General Conclusion and
+Perspectives} answers the research questions, summarizes the review's main
+synthesis, and develops future directions including
+empirical calibration, independent validation, provenance-aware exchange,
+native and dynamic attribution, and human-centered evaluation.

@@ -1,0 +1,49 @@
+\chapter*{Résumé}
+\addcontentsline{toc}{chapter}{Résumé}
+
+\begin{otherlanguage}{french}
+Les nomenclatures logicielles, ou SBOM, sont de plus en plus utilisées pour
+renforcer la transparence de la chaîne d'approvisionnement logicielle et la
+gestion des vulnérabilités. Toutefois, une SBOM syntaxiquement valide n'est
+pas automatiquement digne de confiance, en particulier lorsqu'elle est
+reconstruite à partir d'une application Android compilée, sans accès au code
+source ni aux manifestes de dépendances. La compilation, l'optimisation,
+l'obfuscation, les alias de familles d'artefacts, les lacunes des bases de
+références et la similarité entre versions peuvent affaiblir ou contredire les
+preuves qui soutiennent une déclaration de composant.
+
+Ce mémoire étudie la reconstruction fiable de SBOM comme un problème
+d'attribution de composants logiciels fondé sur les preuves. Il organise les
+travaux existants sur la détection de bibliothèques tierces Android et la
+récupération de composants binaires selon des taxonomies de techniques, de
+sources de preuves, de menaces de transformation et de pratiques
+d'évaluation. À partir des lacunes ainsi mises en évidence, il propose un
+cadre conceptuel dans lequel chaque déclaration reconstruite conserve
+l'identité du composant, la version ou l'ensemble de versions, la provenance
+des preuves, leur qualité, le risque de transformation, le niveau de
+confiance, l'ambiguïté, la classe de validation et l'interprétation de
+sécurité autorisée en aval.
+
+Le système PFE d'analyse APK-vers-SBOM sert d'étude de cas délimitée. Ses
+preuves contrôlées, propres et partielles validées par les sources, ses bornes
+supérieures connues par les sources, ainsi que ses résultats expérimentaux,
+indicatifs et limites, montrent pourquoi l'identité de bibliothèque, la
+version exacte, la couverture des références, le rappel du moteur de
+correspondance et l'autorité des vulnérabilités doivent rester séparés. Le
+cadre est évalué par l'étude de cas : il préserve ces catégories de preuves et
+empêche toute augmentation d'autorité lorsqu'une modification apparemment
+bénéfique échoue aux critères d'ambiguïté, de contrôle ou de promotion. Le
+cadre proposé privilégie donc une connaissance partielle auditable et
+l'abstention explicite plutôt qu'une certitude non étayée, et définit un
+programme de recherche pour la fusion calibrée des preuves, les SBOM sensibles
+à la provenance, les bancs d'essai réalistes et la récupération de composants
+natifs ou chargés dynamiquement.
+\end{otherlanguage}
+
+\vspace{0.5cm}
+\noindent\textbf{Mots-clés ---}
+\begin{otherlanguage}{french}
+nomenclature logicielle, chaîne d'approvisionnement logicielle, Android,
+attribution de composants, provenance, fusion de preuves, confiance,
+incertitude, gestion des vulnérabilités.
+\end{otherlanguage}

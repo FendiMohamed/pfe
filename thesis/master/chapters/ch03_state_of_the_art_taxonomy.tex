@@ -1,0 +1,729 @@
+\chapter{State of the Art and Taxonomy}
+\label{ch:master-sota}
+
+\section{Introduction}
+
+This chapter applies the structured mapping protocol defined in
+\cref{ch:master-background} and \cref{app:master-review-protocol} to the
+Android third-party library detection literature. Its purpose is not to
+produce a numerical leaderboard. The reviewed studies use different datasets,
+task units, obfuscation settings, and ground-truth procedures, so a direct
+ranking would hide the very uncertainty that this thesis aims to expose.
+Instead, the chapter organizes prior work by technique, evidence source,
+transformation threat, and evaluation practice.
+
+The analysis is centered on the 15 Tier A studies whose full texts are
+available locally. Tier B records are useful for search coverage and for
+identifying emerging directions, especially SBOM-oriented recovery and recent
+benchmarking, but they are not used here as independent authority for precise
+quantitative claims. This boundary keeps the review consistent with the
+protocol and prevents unverified metadata from receiving the same weight as
+inspected studies. Fields not reported by a Tier A publication are treated as
+not reported rather than inferred, and original-paper claims are kept
+separate from later cross-tool observations.
+
+The chapter uses the term \emph{component recovery} broadly. A study may
+recover a library family, a package cluster, a class set, an exact version, a
+vulnerability-related version list, or only a presence signal. For trustworthy
+\SBOM reconstruction, these outputs are not equivalent. A method that detects
+the presence of a library family does not necessarily justify an exact Maven
+version, and an exact-version candidate does not automatically justify a
+\CVE claim unless the evidence, reference coverage, and validation context are
+visible.
+
+\section{Taxonomy of Component-Recovery Techniques}
+
+The reviewed approaches can be grouped into seven recurring technique
+families. The categories are not mutually exclusive: most mature tools combine
+several families, for example by using a fast coarse filter followed by a
+slower structural match. The taxonomy therefore describes the role each
+family plays in a recovered component claim.
+
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{p{0.20\textwidth}p{0.22\textwidth}p{0.28\textwidth}p{0.18\textwidth}}
+\caption{Technique taxonomy for Android component recovery.}
+\label{tab:master-technique-taxonomy}\\
+\toprule
+\textbf{Technique family} & \textbf{Typical evidence} & \textbf{Trust role} & \textbf{Tier A examples}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Technique family} & \textbf{Typical evidence} & \textbf{Trust role} & \textbf{Tier A examples}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Namespace and metadata heuristics &
+Package trees, class names, library naming conventions &
+Cheap candidate generation, but weak authority when names are renamed,
+flattened, relocated, or shaded. &
+Assessed in \cite{zhan2020assessment,zhan2021systematic}\\
+
+Profile, hash, and signature matching &
+Method descriptors, Merkle trees, fuzzy hashes, class or method signatures &
+Can support identity and, when references are complete, version claims. Its
+authority is bounded by reference coverage and by the stability of the hashed
+features under optimization. &
+LibScout \cite{backes2016libscout}, ORLIS \cite{wang2018orlis}, LibID
+\cite{zhang2019libid}\\
+
+Structural graph segmentation &
+Call, inheritance, containment, and class-dependency relations &
+Improves module boundary recovery when package structure is unreliable.
+Supports stronger identity evidence, but does not by itself solve exact
+version attribution. &
+LibD \cite{li2017libd}, LibPecker \cite{zhang2018libpecker}, assessment
+studies \cite{zhan2020assessment,zhan2021systematic}\\
+
+Coarse-to-fine matching &
+Fast filtering followed by detailed opcode, CFG, or structural comparison &
+Balances scalability and precision. Trust depends on both stages: a missed
+coarse candidate can cap recall, while an over-permissive fine stage can
+inflate false positives. &
+ORLIS \cite{wang2018orlis}, ATVHUNTER \cite{zhan2021atvhunter}, LibScan
+\cite{wu2023libscan}\\
+
+Version-discriminating semantic features &
+Opcode sequences, basic-block features, call chains, field-operation
+patterns, literals, and class summaries &
+Provides the main route from library identity to exact-version authority.
+Adjacent versions and optimized builds remain difficult because many versions
+share most code. &
+ATVHUNTER \cite{zhan2021atvhunter}, LibScan \cite{wu2023libscan}, LibHunter
+\cite{xie2024libhunter}, SAD \cite{zhou2025sad}\\
+
+Learned representations &
+Smali token sequences, structural vocabularies, neural embeddings &
+Can learn obfuscation-resilient presence signals, but the reviewed Tier A
+learning approach does not provide exact-version or boundary authority on its
+own. &
+LibAttention \cite{pan2025libattention}\\
+
+Empirical assessment and benchmarking &
+Shared datasets, patched tools, source-known applications, evaluation
+criteria &
+Does not directly recover components, but defines which claims are comparable
+and exposes tool failure modes, missing denominators, and reproducibility
+limits. &
+Tool assessments \cite{zhan2020assessment,zhan2021systematic}, Ramirez
+thesis \cite{ramirez2024empirical}\\
+\end{longtable}
+\endgroup
+
+The movement across these families is historically important. Early methods
+made library profiles and package structure usable at scale, but later
+studies increasingly treat package names as unreliable evidence. Graph-based
+and version-aware methods improve the situation by using relations, opcode
+content, and class behavior. The newest verified Tier A work adds learned
+representations and finer class-level summaries. Even so, the taxonomy shows
+that standard SBOM emission remains outside the main output model of the
+verified Android TPL literature: most studies output names, clusters,
+versions, class mappings, or vulnerability-linked lists rather than a
+provenance-rich CycloneDX or SPDX document.
+
+\section{Taxonomy of Evidence Sources}
+
+An evidence source is useful for trustworthy \SBOM recovery only when its
+origin, stability, version specificity, and provenance are understood. The
+same signal may be strong for identity and weak for exact version. Conversely,
+a highly version-specific literal may be too fragile to survive resource
+removal or string encryption. \Cref{tab:master-evidence-taxonomy} summarizes
+the recurring evidence families extracted from the Tier A studies.
+
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{p{0.18\textwidth}p{0.23\textwidth}p{0.21\textwidth}p{0.28\textwidth}}
+\caption{Evidence-source taxonomy for reconstructed Android component claims.}
+\label{tab:master-evidence-taxonomy}\\
+\toprule
+\textbf{Evidence family} & \textbf{Examples} & \textbf{Typical stability} & \textbf{Trust implication}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Evidence family} & \textbf{Examples} & \textbf{Typical stability} & \textbf{Trust implication}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Names and namespaces &
+Package prefixes, class names, manifest names &
+Weak under renaming, package flattening, relocation, and shading &
+Useful for fast hints and human inspection, but insufficient for exact SBOM
+claims without corroboration.\\
+
+Descriptors and API surfaces &
+Method signatures, fuzzy type descriptors, Android API usage &
+More stable than names under identifier renaming; weaker under dead-code
+removal and inlining &
+Supports identity and coarse version discrimination when combined with
+reference profiles.\\
+
+Opcode and instruction sequences &
+Basic-block opcodes, method opcode chains, call-chain opcodes &
+Resilient to naming changes; threatened by optimization, inlining, and
+control-flow rewriting &
+Provides version-discriminating evidence, especially when compared against
+known library releases.\\
+
+Control-flow and dependency structures &
+CFGs, call graphs, inheritance graphs, class-dependency graphs &
+Stable against simple renaming and often against package restructuring;
+affected by optimization and partial inclusion &
+Improves module boundary recovery and reduces dependence on package layout.\\
+
+Literals, constants, and resources &
+Strings, constants, resource identifiers, assets &
+Potentially version-specific, but fragile under stripping, string encryption,
+and resource rewriting &
+Best used as tie-breakers or independent corroboration, not as sole authority.\\
+
+Reference corpus and release metadata &
+Library profiles, Maven coordinates, release chronology, known vulnerable
+version ranges &
+External to the \APK; stable only if the corpus is complete and correctly
+constructed &
+Defines the ceiling for recognizable identities and versions. Missing
+references must not be interpreted as component absence.\\
+
+Learned representations &
+Transformer embeddings over Smali tokens, structural vocabularies &
+Can absorb complex obfuscation patterns, but may be hard to audit feature by
+feature &
+Promising for presence screening and robustness, but provenance and exact
+version authority require additional explanation.\\
+
+Validation evidence &
+Controlled builds, source manifests, F-Droid dependency data, source-known
+ground truth &
+Strong within the validation context; not automatically generalizable &
+Can upgrade a claim's evaluation status, but must remain separate from
+APK-only inference.\\
+\end{longtable}
+\endgroup
+
+The trust implication of this taxonomy is that evidence fusion should prefer
+independent and complementary evidence over repeated variants of the same
+feature. For example, several hash matches derived from the same method body
+are less independent than a method-level match corroborated by a
+class-dependency relation and a version-specific literal. This distinction
+supports the thesis synthesis: independence, provenance, and reference
+coverage must be treated as first-class quality dimensions whenever detector
+outputs are interpreted as SBOM claims.
+
+\section{Taxonomy of Transformation Threats}
+
+Android component recovery is difficult because compilation and packaging can
+remove the very boundaries that build-time dependency tools rely on. R8 and
+related obfuscators may rename identifiers, flatten packages, remove unused
+code, rewrite control flow, and inline methods \cite{androidShrinkCode}.
+The reviewed literature shows that no single evidence family remains stable
+under all transformations.
+
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{p{0.18\textwidth}p{0.25\textwidth}p{0.22\textwidth}p{0.25\textwidth}}
+\caption{Transformation-threat taxonomy for Android component recovery.}
+\label{tab:master-transformation-taxonomy}\\
+\toprule
+\textbf{Threat} & \textbf{Evidence most affected} & \textbf{More resilient evidence} & \textbf{Trust consequence}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Threat} & \textbf{Evidence most affected} & \textbf{More resilient evidence} & \textbf{Trust consequence}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Identifier renaming &
+Class, method, field, and package names &
+Fuzzy descriptors, opcode features, structural relations &
+Name matches cannot be treated as independent authority unless corroborated.\\
+
+Package flattening and relocation &
+Package-subtree segmentation and namespace heuristics &
+Class-dependency graphs, call relations, profile matching independent of
+package roots &
+Package-based module boundaries become unreliable; graph segmentation becomes
+more important.\\
+
+Control-flow rewriting &
+CFG shape, branch structure, fuzzy CFG hashes &
+Higher-level dependency relations, method descriptors, class summaries &
+CFG-only methods may overstate robustness when control-flow transformations
+are not in the evaluation.\\
+
+Dead-code removal and shrinking &
+Presence of optional classes, methods, API calls, literals &
+Partial-match scoring, class-level confidence, source-known validation &
+Absence of a feature may indicate transformation rather than absence of the
+library.\\
+
+Method inlining and outlining &
+Method boundaries, call-chain evidence, version-specific method bodies &
+Multi-scale evidence, class-level summaries, literals, residual dependency
+structure &
+Exact-version authority must be capped when inlining changes the features
+used for version discrimination.\\
+
+Multidex and split packaging &
+Single-file DEX assumptions and incomplete scanners &
+Whole-APK extraction over all DEX files and split artifacts &
+Evaluation denominators must state whether all executable artifacts were
+analyzed.\\
+
+Partial library inclusion &
+Binary present/absent decisions and complete-profile matching &
+Similarity scores, per-class evidence, explicit ambiguity classes &
+A partial match should not automatically become a full component/version
+claim.\\
+
+Nested or transitive dependencies &
+Flat library lists and one-library-one-package assumptions &
+Dependency graphs, source-assisted validation, relationship-aware SBOM
+models &
+A recovered component may be direct, transitive, bundled, shaded, or copied;
+the relationship must remain uncertain unless evidenced.\\
+
+Native and dynamic code &
+DEX-only static features &
+Native file hashes, load-site evidence, dynamic analysis, source validation &
+Out-of-scope code must be represented as a boundary, not silently ignored.\\
+\end{longtable}
+\endgroup
+
+The most consequential threats for exact-version claims are shrinking,
+partial inclusion, and method inlining. Identifier renaming is comparatively
+well handled by modern structural or opcode-based approaches, but version
+evidence often depends on small differences between adjacent releases.
+Optimizations that delete, merge, or inline exactly those differences can turn
+an apparently confident match into a version-band ambiguity.
+
+\section{Representative Android TPL Approaches}
+
+\subsection{From Profile Matching to Structural Boundaries}
+
+LibScout established a reference-profile model for matching compiled Android
+applications against known library releases. Its three-layer profile structure
+and fuzzy method descriptors made identifier renaming less damaging, and its
+similarity scores provided a graded alternative to exact profile equality
+\cite{backes2016libscout}. From the viewpoint of trustworthy \SBOM recovery,
+the important lesson is dual: reference profiles can support version claims,
+but those claims inherit the assumptions of the profile structure and the
+reference corpus. When package layout or method boundaries are transformed,
+the confidence of the resulting claim must be reduced rather than silently
+preserved.
+
+LibD moved away from pure package-layout dependence by recovering library
+instances through a homogeny graph over inclusion, inheritance, and call
+relations, combined with opcode-derived fingerprints \cite{li2017libd}.
+This made large-scale library discovery more resilient to naming changes, but
+the output remained a clustering-oriented library identification result
+rather than an exact-version or SBOM result. For the taxonomy, LibD is
+therefore strong evidence for graph-based boundary recovery and weak evidence
+for version authority.
+
+ORLIS introduced a two-stage obfuscation-resilient design. Its first stage
+uses interprocedural call-graph-derived features and \texttt{sdhash} to remove
+unlikely library candidates. Its second stage applies \texttt{ssdeep} class
+signatures and an injective class mapping to verify whether a library is
+included in the application \cite{wang2018orlis}. The design is valuable
+because it separates scalable filtering from detailed confirmation and can
+represent partial inclusion without relying on package names. Its limitations
+are equally important for the proposed framework: a class mapping is not
+automatically an exact-version claim, and computational cost affects whether a
+method can be used as routine SBOM evidence.
+
+LibPecker and LibID further illustrate the shift from names to structural and
+class-level evidence. LibPecker emphasizes class dependency and adaptive
+similarity. LibID formulates consistent class correspondence with binary
+integer programming and identifies specific library versions under code
+shrinking and package modification
+\cite{zhang2018libpecker,zhang2019libid}. Together with the later assessment
+studies, they support the review's central classification: package structure
+is a fragile feature family, while class relationships, signatures, and
+opcode-derived evidence are more suitable as identity support under
+obfuscation.
+
+\subsection{Version-Aware and Vulnerability-Oriented Pipelines}
+
+ATVHUNTER combines class-dependency based decoupling, coarse CFG filtering,
+fine-grained opcode matching, and a vulnerability database to identify
+vulnerable library versions \cite{zhan2021atvhunter}. It is one of the most
+important verified studies for this thesis because it connects version
+identification to security interpretation. However, its output remains a
+version and vulnerability list rather than a standard \SBOM with explicit
+provenance, uncertainty, and claim boundaries. The study therefore motivates
+the framework's rule that vulnerability authority cannot exceed the strength
+of the underlying version evidence.
+
+LibScan and LibHunter extend the version-aware family by using richer opcode,
+class-correspondence, call-chain, and optimization-aware evidence
+\cite{wu2023libscan,xie2024libhunter}. Their relevance is not only that they
+improve matching. They also show that code optimization itself is an
+evaluation dimension. In particular, LibHunter augments reference features to
+model call-site optimization and performs cross-inlining method matching. A
+method evaluated only on clear or lightly obfuscated applications has not
+demonstrated the same authority as a method evaluated under inlining and
+shrinking.
+
+SAD provides the most detailed Tier A example of class-structural
+version-level reasoning. It splits classes into stateful and stateless
+categories, applies field-operation sequences or opcode similarity
+accordingly, and uses literals to break ties between adjacent versions
+\cite{zhou2025sad}. This design supports the thesis claim that exact-version
+attribution requires evidence at a finer granularity than library presence.
+At the same time, its remaining sensitivity to method inlining confirms that
+strong reported version-level performance does not eliminate transformation
+risk.
+
+\subsection{Learning-Based Presence Detection}
+
+LibAttention represents a different family: instead of comparing explicit
+profiles, it learns representations from large Smali corpora and predicts
+library presence with a Transformer-based model
+\cite{pan2025libattention}. This is important because learned features can
+capture patterns that rule-based signatures miss under aggressive
+obfuscation. For \SBOM reconstruction, however, the reviewed Tier A result is
+bounded: it predicts presence rather than exact version, does not expose an
+explicit class or library-boundary mapping, and does not provide standard SBOM
+output. In the taxonomy, learned presence detection is therefore a potentially
+useful candidate-generation signal but not sufficient version or vulnerability
+authority by itself.
+
+\subsection{Empirical Assessments and Cross-Tool Studies}
+
+The ASE 2020 assessment and the later systematic assessment are not merely
+background surveys; they define several trust requirements for any recovered
+\SBOM pipeline \cite{zhan2020assessment,zhan2021systematic}. They show that
+tool results depend on module decoupling, multidex handling, AAR processing,
+obfuscation setting, version-identification capability, efficiency, and ease
+of reproduction. These studies are a warning against reporting a single
+accuracy value without denominators, exclusions, and task levels.
+
+The Ramirez thesis provides a cross-platform empirical comparison of Android
+and iOS library-detection tools \cite{ramirez2024empirical}. Its Android study
+reuses 75 APKs from the ORLIS dataset, 75 from the LIBLOOM dataset, and 50
+manually selected Google Play applications. It is therefore useful for
+cross-tool execution and dataset-reuse lessons, but it is not a source-known
+or F-Droid validation study and it does not independently establish standard
+SBOM output.
+
+TPL-Benchmark strengthens the benchmark perspective with a large,
+version-annotated Android dataset and a standardized reevaluation of ten
+detection methods \cite{gu2025tplbenchmark}. Its compatible tool-evaluation
+slice shows that the best library-level F1 score was 60.15\%, while LibHunter
+obtained the highest reported version-level recall at 76.48\%. These results
+are not a universal ceiling, but they demonstrate that realistic shared
+ground truth can produce substantially weaker and more heterogeneous outcomes
+than isolated original evaluations.
+
+UniBOM is an adjacent rather than Android-specific study. It combines firmware
+extraction, filesystem scanning, source-code analysis, SBOM generation, and
+vulnerability visualization, and evaluates the workflow on 258 wireless
+gateway firmware images and four IoT operating-system codebases
+\cite{safronov2025unibom}. It confirms that binary, metadata, and source
+evidence can coexist in one SBOM workflow. It does not, however, solve
+APK-side Maven exact-version attribution or provide ground truth for Android
+TPL detection.
+
+\section{Evaluation Practices and Ground Truth}
+
+The reviewed studies evaluate different questions even when they use similar
+words such as detection, identification, precision, recall, or version
+accuracy. A trustworthy synthesis must therefore classify evaluation practice
+before interpreting the metric.
+
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{p{0.22\textwidth}p{0.27\textwidth}p{0.39\textwidth}}
+\caption{Evaluation-practice taxonomy in the Android TPL literature.}
+\label{tab:master-evaluation-taxonomy}\\
+\toprule
+\textbf{Evaluation practice} & \textbf{What it can show} & \textbf{Boundary for SBOM trust}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Evaluation practice} & \textbf{What it can show} & \textbf{Boundary for SBOM trust}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Controlled library or reference corpus &
+Whether a matcher can distinguish known library profiles or versions under
+specified transformations &
+Results depend on reference completeness and may overstate performance on
+diverse real applications.\\
+
+Synthetic or tool-based obfuscation tests &
+Whether selected transformations damage a feature family &
+Only covers the transformations and configurations tested; R8 inlining and
+shrinking require explicit treatment.\\
+
+Market-scale discovery &
+Whether a detector scales and finds plausible library families in many apps &
+Without source ground truth, discovery volume is not the same as correctness
+or exact-version authority.\\
+
+Open-source or source-known validation &
+Whether recovered outputs match dependency evidence available outside the APK &
+Strong for audited cases, but it is a validation lane, not proof that the
+same APK-only method is generally correct.\\
+
+Cross-tool benchmark or assessment &
+Which tools fail under shared criteria and where methodology is inconsistent &
+Useful for gap analysis, but metrics remain bounded by the benchmark's
+dataset and task definitions.\\
+
+Security or vulnerability mapping &
+Whether detected versions can be connected to vulnerability data &
+The vulnerability conclusion is valid only as far as the component identity,
+exact version, and vulnerability database mapping are valid.\\
+\end{longtable}
+\endgroup
+
+This taxonomy explains why the chapter does not pool reported performance
+numbers. LibScout's profile precision, ORLIS's obfuscation precision, LibD's
+market-scale discovery volume, ATVHUNTER's version-level results,
+LibAttention's R8-resilient presence detection, SAD's class-structural
+version scores, and TPL-Benchmark's cross-tool results answer different
+questions
+\cite{backes2016libscout,li2017libd,wang2018orlis,zhan2021atvhunter,pan2025libattention,zhou2025sad,gu2025tplbenchmark}.
+For a reconstructed \SBOM, the evaluation question must be restated as:
+\emph{which claim type is being validated, against which denominator, and
+under which transformations?}
+
+\section{Comparative Analysis}
+
+\Cref{tab:master-tier-a-comparison} applies the chapter taxonomy to the Tier
+A seed corpus. The final column states the trust interpretation rather than a
+simple score. This is deliberate: the same study can be strong evidence for
+one claim type and weak evidence for another. The table records only supported
+roles and limitations; missing study fields are not filled by inference.
+
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{p{0.18\textwidth}p{0.18\textwidth}p{0.26\textwidth}p{0.26\textwidth}}
+\caption{Tier A studies classified by recovery role and trust implication.}
+\label{tab:master-tier-a-comparison}\\
+\toprule
+\textbf{Study} & \textbf{Primary role} & \textbf{Main evidence and technique} & \textbf{SBOM-trust implication}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Study} & \textbf{Primary role} & \textbf{Main evidence and technique} & \textbf{SBOM-trust implication}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+LibScout \cite{backes2016libscout} &
+Reference-profile identity and version matching &
+Fuzzy method descriptors, package-class-method profile hierarchy, similarity
+score &
+Supports the idea of version profiles, but package and method-structure
+assumptions must be exposed as evidence limits.\\
+
+LibD \cite{li2017libd} &
+Scalable library discovery and boundary recovery &
+Homogeny graph, call/inheritance/inclusion relations, opcode-derived
+fingerprints &
+Strengthens identity evidence under name obfuscation, but does not provide
+exact-version or SBOM authority.\\
+
+LibPecker \cite{zhang2018libpecker} &
+Class-dependency based detection &
+Class dependency hashing, adaptive similarity, weighted class matching &
+Shows that structural class relations are useful, while similarity still
+needs explicit thresholds and uncertainty handling.\\
+
+ORLIS \cite{wang2018orlis} &
+Obfuscation-resilient structural matching &
+Call-graph-derived coarse features with \texttt{sdhash}, followed by
+\texttt{ssdeep} class signatures and injective class mapping &
+Provides partial-inclusion evidence, but high cost and missing exact-version
+authority limit direct SBOM use.\\
+
+LibID \cite{zhang2019libid} &
+Obfuscated library and version identification &
+Consistent class correspondence through binary integer programming, with
+source-backed threshold evaluation &
+Supports specific-version claims under its tested transformations; downstream
+security authority still depends on reference and vulnerability evidence.\\
+
+ASE 2020 assessment \cite{zhan2020assessment} &
+Cross-tool failure analysis &
+Unified criteria, tool patches, multidex and AAR observations &
+Defines required evaluation dimensions and warns that engineering blind spots
+can dominate measured accuracy.\\
+
+Systematic assessment \cite{zhan2021systematic} &
+Broader comparative methodology &
+Six evaluation criteria, module-decoupling comparison, tool availability and
+limitations &
+Supports taxonomy-based synthesis and shows that CDG-style evidence is
+preferable to package-only evidence.\\
+
+ATVHUNTER \cite{zhan2021atvhunter} &
+Version and vulnerability-oriented detection &
+CDG decoupling, CFG coarse filter, opcode fuzzy matching, vulnerability DB &
+Strongly connects version evidence to security use, but still lacks standard
+SBOM provenance and full R8-inlining coverage.\\
+
+LibScan \cite{wu2023libscan} &
+Precise TPL identification &
+Class correspondence, method opcode similarity, call-chain evidence &
+Improves fine-grained matching evidence; claim strength remains tied to
+reference coverage and transformation conditions.\\
+
+Ramirez thesis \cite{ramirez2024empirical} &
+Cross-platform tool comparison &
+ORLIS and LIBLOOM Android datasets, manually selected Google Play apps, and
+Android/iOS contrast &
+Supports cross-tool and dataset-reuse analysis, but does not provide
+source-known Android ground truth or standard SBOM validation.\\
+
+LibHunter \cite{xie2024libhunter} &
+Optimization-aware detection &
+Call-site-optimization feature enhancement and cross-inlining method matching &
+Makes optimization a first-class validity condition for exact-version claims.\\
+
+LibAttention \cite{pan2025libattention} &
+Learning-based presence detection &
+Transformer over Smali tokens and SDK structural vocabulary &
+Promising for obfuscation-resilient identity hints, but insufficient alone
+for exact versions, provenance, or CVE authority.\\
+
+SAD \cite{zhou2025sad} &
+Class-structural version-level detection &
+CDG neighbor aggregation, stateful/stateless split, field-operation sequence,
+literal tie-breakers &
+Provides strong version-discriminating evidence, while remaining sensitive to
+method inlining and lacking standard SBOM output.\\
+
+TPL-Benchmark \cite{gu2025tplbenchmark} &
+Ground-truth benchmark and cross-tool reassessment &
+Version-annotated real applications, dependency extraction, and standardized
+evaluation of ten detectors &
+Provides realistic comparative evidence and exposes low or uneven
+generalization; it diagnoses detector limits rather than supplying a detector.\\
+
+UniBOM \cite{safronov2025unibom} &
+Adjacent SBOM generation and analysis workflow &
+Firmware extraction, filesystem and source scanning, SBOM generation, CVE
+analysis, and visualization &
+Shows end-to-end SBOM integration outside Android TPL attribution, but cannot
+justify APK Maven identity or exact-version claims.\\
+\end{longtable}
+\endgroup
+
+Three patterns emerge from this comparison. First, the strongest exact-version
+approaches are multi-evidence approaches: they do not rely on names alone but
+combine structural, opcode, class, and literal information. Second,
+evaluation authority is not the same as detection authority. Assessment
+studies and source-known validation do not identify libraries by themselves,
+but they determine whether a result can be interpreted safely. Third,
+standard SBOM trust requirements are largely external to the detector output:
+provenance, ambiguity, validation class, relationship type, and vulnerability
+authority are rarely represented as first-class fields.
+
+\section{Limitations of Existing Research}
+
+The taxonomy exposes limitations that recur across the verified literature:
+
+\begin{enumerate}
+  \item \textbf{Library identity and exact version are often conflated.}
+  Presence detection, class-set matching, and exact-version attribution are
+  different claims, but tool outputs do not always preserve the distinction.
+
+  \item \textbf{Reference coverage is rarely treated as part of the result.}
+  A missed match can result from absent references, extraction failure, or a
+  weak matcher. Without coverage metadata, the user cannot tell which failure
+  occurred.
+
+  \item \textbf{Transformation coverage is incomplete.}
+  Identifier renaming is widely considered, but shrinking, partial inclusion,
+  package flattening, and method inlining remain unevenly evaluated
+  \cite{xie2024libhunter,pan2025libattention,zhou2025sad}.
+
+  \item \textbf{Confidence is usually a threshold outcome, not an auditable
+  explanation.}
+  Many methods compute similarities or classifier scores, but few expose why
+  a claim should be trusted, which signals conflicted, or why the method did
+  not abstain.
+
+  \item \textbf{Partial libraries and dependency relationships are not fully
+  represented.}
+  Similarity scores can detect partial inclusion, but a standard SBOM also
+  needs relationship semantics: direct, transitive, bundled, shaded, copied,
+  or uncertain.
+
+  \item \textbf{Vulnerability interpretation is stronger than the underlying
+  evidence in many pipelines.}
+  A detected library name is not enough for a version-specific \CVE claim.
+  Even a plausible version candidate requires reference, transformation, and
+  validation context.
+
+  \item \textbf{Reproducibility remains uneven.}
+  Tool availability, installation difficulty, dataset access, and benchmark
+  construction vary across studies, limiting independent confirmation of
+  reported results.
+
+  \item \textbf{Standard SBOM output is not the dominant research artifact.}
+  The verified studies mostly produce detector outputs rather than complete
+  CycloneDX or SPDX statements with evidence, provenance, and uncertainty
+  fields.
+\end{enumerate}
+
+These limitations do not make the existing work weak. Rather, they show that
+the literature has mostly optimized detection performance, while trustworthy
+\SBOM recovery requires an additional layer that explains what each recovered
+claim means and how it may be used.
+
+\section{Research Gap}
+
+The state of the art provides valuable techniques for recognizing Android
+third-party libraries from compiled artifacts. Reference profiles, fuzzy
+descriptors, dependency graphs, opcode features, call-chain evidence,
+stateful/stateless class summaries, learned Smali representations, and
+source-known validation all contribute useful evidence. Within the reviewed
+Android TPL literature and adjacent binary-SBOM studies, however, no verified
+study provides a unified model that connects these signals to a reconstructed
+\SBOM claim while preserving all of the trust dimensions used in this thesis.
+
+The research gap can therefore be stated as follows:
+
+\begin{quote}
+Existing Android component detectors provide useful identification and
+version-discrimination techniques, but they do not consistently attach each
+recovered SBOM claim to its evidence provenance, reference coverage,
+transformation risk, confidence boundary, ambiguity, validation class, and
+permitted vulnerability interpretation.
+\end{quote}
+
+This gap is not only a formatting problem. A syntactically valid SBOM can
+still be untrustworthy if it hides uncertainty, promotes identity evidence
+into exact-version authority, or turns an ambiguous version set into a
+definitive \CVE finding. Conversely, a detector that abstains or reports a
+bounded version set may be more useful for security decision-making than a
+pipeline that always emits a single version without explaining the evidence.
+
+\section{Conclusion}
+
+This chapter classified Android component-recovery research by technique,
+evidence source, transformation threat, and evaluation practice. The synthesis
+shows a clear technical progression from package and profile matching toward
+graph-based, version-aware, optimization-aware, and learning-based methods.
+It also shows a persistent trust gap: detector outputs rarely preserve enough
+provenance, uncertainty, validation context, and security authority to become
+auditable reconstructed \SBOM claims on their own.
+
+The general conclusion returns to this gap through the research questions and
+future perspectives. The key lesson is that the reviewed techniques should not
+be judged only by whether they emit a name or version. They should also be
+judged by whether their outputs communicate why the recovered component entry
+should be believed, where its evidence stops, and how safely it may be used.

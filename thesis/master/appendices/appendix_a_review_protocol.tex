@@ -1,0 +1,328 @@
+\chapter{Literature Review Protocol}
+\label{app:master-review-protocol}
+
+This appendix records version 1.0 of the structured literature mapping
+protocol, frozen on 21 June 2026. It is the operational companion to the
+methodology summarized in \cref{ch:master-background}. The review follows the
+planning, selection, quality-assessment, extraction, and synthesis principles
+of software-engineering review guidance \cite{kitchenham2007guidelines}, while
+explicitly acknowledging that the seed corpus was assembled iteratively before
+the protocol was frozen.
+
+\section{Research Questions}
+
+\begin{description}
+  \item[RQ-R1] Which evidence sources are used to identify Android
+    third-party components from compiled applications?
+  \item[RQ-R2] Which techniques support library identity, exact-version
+    attribution, or both?
+  \item[RQ-R3] Which compilation, optimization, obfuscation, packaging, and
+    dependency transformations threaten each evidence source?
+  \item[RQ-R4] How do studies construct ground truth and evaluate
+    library-level, version-level, and vulnerability-related claims?
+  \item[RQ-R5] How do studies represent confidence, ambiguity, provenance,
+    abstention, partial inclusion, and conflicting evidence?
+  \item[RQ-R6] Which research gaps prevent recovered component claims from
+    becoming trustworthy and auditable \SBOM statements?
+\end{description}
+
+\section{Search Strategy}
+
+\subsection{Sources and Scope}
+
+The primary search sources are ACM Digital Library, IEEE Xplore, SpringerLink,
+ScienceDirect, USENIX, and arXiv. Google Scholar is used for discovery and
+backward or forward citation chaining rather than as the sole bibliographic
+authority. The publication window begins in 2015 and ends on the date recorded
+for each search refresh. English full text is preferred; English title and
+abstract are mandatory for screening.
+
+\subsection{Concept Blocks}
+
+\begin{table}[H]
+  \centering
+  \caption{Search concept blocks}
+  \label{tab:review-search-blocks}
+  \begin{tabularx}{\textwidth}{p{0.18\textwidth}X}
+    \toprule
+    Block & Terms \\
+    \midrule
+    Platform & Android, APK, DEX, Dalvik \\
+    Component & third-party library, TPL, software component, dependency,
+      SBOM, software bill of materials \\
+    Task & detect*, identif*, recogn*, recover*, attribut*, fingerprint*,
+      match* \\
+    Threat or specificity & obfuscat*, R8, ProGuard, optim*, shrink*, inlin*,
+      version*, vulnerab* \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+The canonical query is:
+
+\begin{quote}\footnotesize\ttfamily
+(Android OR APK OR DEX OR Dalvik)\\
+AND ("third-party library" OR TPL OR "software component" OR dependency\\
+\hspace*{1.5em}OR SBOM OR "software bill of materials")\\
+AND (detect* OR identif* OR recogn* OR recover* OR attribut*\\
+\hspace*{1.5em}OR fingerprint* OR match*)\\
+AND (obfuscat* OR R8 OR ProGuard OR optim* OR shrink* OR inlin*\\
+\hspace*{1.5em}OR version* OR vulnerab*)
+\end{quote}
+
+Database-specific syntax may change, but a refresh must preserve the four
+concept blocks and record the exact executed query, date, raw result count,
+deduplicated count, and selection decisions.
+
+The frozen seed corpus predates this audit requirement. Its original
+database-specific query executions, raw result counts, and deduplicated flow
+are therefore not claimed as retrospectively available.
+
+\section{Inclusion and Exclusion Criteria}
+
+\subsection{Inclusion}
+
+A publication is included when it:
+
+\begin{enumerate}
+  \item addresses component, library, package, or version recovery from Android
+    binaries or evaluates tools that do;
+  \item studies evidence obtainable from compiled artifacts, reference
+    libraries, package metadata, or related dependency knowledge;
+  \item contributes a method, benchmark, empirical assessment, taxonomy, or
+    SBOM-oriented framework relevant to compiled-artifact attribution;
+  \item permits extraction of at least the task, evidence source, evaluation
+    basis, and limitations; and
+  \item has an accessible English title and abstract.
+\end{enumerate}
+
+\subsection{Exclusion}
+
+A publication is excluded when it:
+
+\begin{enumerate}
+  \item relies only on source dependency manifests and does not study binary
+    recovery;
+  \item concerns malware classification, clone detection, or vulnerability
+    scanning without a component-attribution contribution;
+  \item is a tutorial, slide deck, blog post, product page, or duplicate;
+  \item reports no separable Android result;
+  \item lacks enough information to identify its method or evaluation basis;
+    or
+  \item is a shorter version of an included extended study and contributes no
+    distinct method, dataset, or result.
+\end{enumerate}
+
+\subsection{Screening and Evidence Tiers}
+
+Records are deduplicated and screened by title and abstract. Full-text
+eligibility screening and structured extraction are completed for Tier A.
+Records without a verified local full text remain Tier B pending that stage.
+The evidence tiers are:
+
+\begin{description}
+  \item[Tier A --- full-text verified] A local full text has been inspected
+    and the publication may support structured and quantitative extraction.
+  \item[Tier B --- supplementary record] Metadata or a structured note exists,
+    but the local full text has not yet been verified. The record may guide
+    search and provisional gap mapping, but not precise quantitative claims.
+  \item[Tier C --- contextual authority] Standards, official documentation,
+    and project artifacts used for definitions or framework design. They are
+    not counted as primary studies.
+  \item[Excluded] The reason for exclusion is recorded and the item is not
+    used in synthesis.
+\end{description}
+
+\section{Data Extraction Schema}
+
+\begin{longtable}{p{0.24\textwidth}p{0.68\textwidth}}
+  \caption{Structured extraction fields}
+  \label{tab:review-extraction-schema}\\
+  \toprule
+  Dimension & Extracted information \\
+  \midrule
+  \endfirsthead
+  \toprule
+  Dimension & Extracted information \\
+  \midrule
+  \endhead
+  Bibliographic identity & Title, authors, year, venue, DOI or stable URL,
+    publication type, study family, evidence tier. \\
+  Objective and task & Research objective; family, library, class, version,
+    SBOM, or vulnerability granularity. \\
+  Inputs and assumptions & Required APK artifacts, reference corpus,
+    metadata, training data, and coverage assumptions. \\
+  Segmentation & Package boundaries, class hierarchy, dependency graph,
+    clustering, or other module-decoupling method. \\
+  Evidence & Names, APIs, opcodes, control flow, call/dependency graphs,
+    literals, resources, native code, metadata, learned representations, and
+    cross-component relations. \\
+  Decision method & Hashing, similarity, graph matching, ranking,
+    classification, probability, learned model, or evidence fusion. \\
+  Uncertainty behavior & Threshold, confidence, competing versions,
+    abstention, partial matching, provenance, and conflict handling. \\
+  Transformations & Renaming, package flattening, shrinking, optimization,
+    control-flow rewriting, method inlining, repackaging, multidex, partial
+    inclusion, native code, and dynamic loading. \\
+  Evaluation & Dataset, ground truth, evaluation unit, metrics, baselines,
+    obfuscation setting, and independent benchmark results. \\
+  Operational support & Artifact availability, runtime, scalability, SBOM
+    format, vulnerability mapping, and transitive-dependency handling. \\
+  Limitations and relevance & Threats to validity, negative findings, and
+    adoption, adaptation, or rejection relevance to the framework. \\
+  \bottomrule
+\end{longtable}
+
+Unreported information is recorded as \texttt{NR}; it is not inferred from
+neighboring fields or from another publication in the study family.
+
+\section{Quality Assessment}
+
+Tier A publications receive a score of 1, 0.5, or 0 for each question:
+
+\begin{enumerate}
+  \item Is the research objective clear?
+  \item Is the method described well enough to understand or reproduce?
+  \item Are the dataset and ground truth described?
+  \item Are the task unit and metrics explicit?
+  \item Are transformation or obfuscation conditions stated?
+  \item Are identity and exact-version claims separated?
+  \item Is an implementation, dataset, or artifact available?
+  \item Are limitations or threats to validity acknowledged?
+\end{enumerate}
+
+The score controls synthesis weight rather than automatic inclusion.
+Historically important studies may remain in the map with an explicit
+reporting-quality limitation.
+
+\subsection{Completed Quality Assessment}
+
+\Cref{tab:review-quality-scores} records the completed assessment for the
+15 current Tier A studies. The vector lists Q1--Q8 in the order defined above;
+totals are out of eight. Scores reflect reporting and reproducibility in the
+inspected publication, not the scientific importance of the work.
+
+\begingroup
+\scriptsize
+\setlength{\LTpre}{0.5em}
+\setlength{\LTpost}{0.5em}
+\begin{longtable}{p{0.07\textwidth}p{0.33\textwidth}p{0.37\textwidth}p{0.10\textwidth}}
+  \caption{Reporting-quality assessment for current Tier A studies}
+  \label{tab:review-quality-scores}\\
+  \toprule
+  ID & Study & Q1--Q8 score vector & Total \\
+  \midrule
+  \endfirsthead
+  \toprule
+  ID & Study & Q1--Q8 score vector & Total \\
+  \midrule
+  \endhead
+  S01 & LibScout & 1, 1, 1, 1, 1, 1, 1, 1 & 8.0 \\
+  S02 & LibD & 1, 1, 0.5, 1, 0.5, 0.5, 0.5, 1 & 6.0 \\
+  S03 & LibPecker & 1, 1, 1, 1, 1, 0.5, 0.5, 1 & 7.0 \\
+  S04 & ORLIS & 1, 1, 1, 1, 1, 0.5, 0.5, 1 & 7.0 \\
+  S05 & LibID & 1, 1, 1, 1, 1, 1, 0.5, 1 & 7.5 \\
+  S06 & ASE 2020 assessment & 1, 1, 1, 1, 1, 1, 1, 1 & 8.0 \\
+  S07 & Systematic assessment & 1, 1, 1, 1, 1, 1, 0.5, 1 & 7.5 \\
+  S08 & ATVHUNTER & 1, 1, 1, 1, 1, 1, 0.5, 1 & 7.5 \\
+  S09 & LibScan & 1, 1, 1, 1, 1, 1, 0.5, 1 & 7.5 \\
+  S10 & Ramirez thesis & 1, 1, 1, 1, 0.5, 1, 0.5, 1 & 7.0 \\
+  S11 & LibHunter & 1, 1, 1, 1, 1, 1, 0.5, 1 & 7.5 \\
+  S12 & LibAttention & 1, 1, 1, 1, 1, 1, 0.5, 1 & 7.5 \\
+  S13 & SAD & 1, 1, 1, 1, 1, 1, 0.5, 1 & 7.5 \\
+  S17 & TPL-Benchmark & 1, 1, 1, 1, 1, 1, 1, 1 & 8.0 \\
+  S18 & UniBOM & 1, 1, 0.5, 0.5, 0.5, 0.5, 1, 0.5 & 5.5 \\
+  \bottomrule
+\end{longtable}
+\endgroup
+
+\section{Synthesis Rules}
+
+\begin{itemize}
+  \item Narrative and taxonomy-based synthesis is the default.
+  \item Incompatible datasets and metrics are not pooled into a common
+    leaderboard.
+  \item Library-level, class-level, and version-level results remain separate.
+  \item Original-paper results remain separate from independent benchmark
+    results.
+  \item Obfuscation and optimization conditions must accompany performance
+    claims.
+  \item Artifact availability is assessed independently of reported accuracy.
+  \item Tier B records cannot independently support precise numerical claims.
+  \item Identity authority, version authority, and vulnerability authority are
+    separate.
+  \item Explicit ambiguity or abstention is preferred to unsupported exactness.
+\end{itemize}
+
+\section{Selected Studies}
+
+\begin{longtable}{p{0.07\textwidth}p{0.55\textwidth}p{0.10\textwidth}p{0.18\textwidth}}
+  \caption{Frozen seed corpus and current evidence status}
+  \label{tab:review-seed-corpus}\\
+  \toprule
+  ID & Publication or study label & Year & Status \\
+  \midrule
+  \endfirsthead
+  \toprule
+  ID & Publication or study label & Year & Status \\
+  \midrule
+  \endhead
+  S01 & LibScout \cite{backes2016libscout} & 2016 & Tier A \\
+  S02 & LibD \cite{li2017libd} & 2017 & Tier A \\
+  S03 & LibPecker \cite{zhang2018libpecker} & 2018 & Tier A \\
+  S04 & ORLIS \cite{wang2018orlis} & 2018 & Tier A \\
+  S05 & LibID \cite{zhang2019libid} & 2019 & Tier A \\
+  S06 & Automated Third-Party Library Detection: Are We There Yet?
+    \cite{zhan2020assessment} & 2020 & Tier A \\
+  S07 & Systematic Assessment of Android TPL Detection Tools
+    \cite{zhan2021systematic} & 2021 & Tier A \\
+  S08 & ATVHUNTER \cite{zhan2021atvhunter} & 2021 & Tier A \\
+  S09 & LibScan \cite{wu2023libscan} & 2023 & Tier A \\
+  S10 & Empirical Study of TPL Detection in iOS and Android
+    \cite{ramirez2024empirical} & 2024 & Tier A \\
+  S11 & LibHunter / Code-Optimization Impact Study
+    \cite{xie2024libhunter} & 2024 & Tier A \\
+  S12 & LibAttention \cite{pan2025libattention} & 2025 & Tier A \\
+  S13 & SAD \cite{zhou2025sad} & 2025 & Tier A \\
+  S14 & LibRadar & 2016 & Tier B \\
+  S15 & Libra & 2023 & Tier B \\
+  S16 & LibMD & 2025 & Tier B \\
+  S17 & TPL-Benchmark / Revisiting TPL Detection
+    \cite{gu2025tplbenchmark} & 2025 & Tier A \\
+  S18 & UniBOM \cite{safronov2025unibom} & 2025 & Tier A \\
+  S19 & LibScope / Towards Global Matches & 2026 & Tier B \\
+  S20 & ObfDetector / Advanced-Obfuscation Robustness Study & 2026 & Tier B \\
+  \bottomrule
+\end{longtable}
+
+The seed corpus contains 20 publication units: 15 Tier A full texts and five
+Tier B supplementary records. This count is a protocol checkpoint, not a claim
+that all 20 have equal evidential authority. A Tier B record is promoted only
+after full-text verification, bibliographic checking, structured extraction,
+and quality assessment.
+
+\section{Audit and Change Control}
+
+The current extraction records are maintained under
+\texttt{papers/data/}. Each search refresh must append the date, sources,
+query variants, raw and deduplicated result counts, inclusion and exclusion
+decisions, tier changes, and taxonomy effects to the master-thesis session log.
+Eligibility, evidence tiers, and synthesis rules may be amended only through a
+dated protocol change note; silent changes are prohibited.
+
+\section{Protocol Change Notes}
+
+\subsection{Version 1.0a --- Screening Clarification}
+
+The full-text screening stage is complete only for records with a locally
+verified full text. The frozen seed corpus predates the protocol, so its
+original database-specific query counts cannot be reconstructed as an
+exhaustive selection flow.
+
+\subsection{Version 1.0b --- Full-Text Promotions}
+
+On 21 June 2026, TPL-Benchmark and UniBOM were inspected locally, checked
+bibliographically, extracted under the protocol schema, and quality-scored.
+They were promoted from Tier B to Tier A. TPL-Benchmark supplies direct
+Android benchmark evidence; UniBOM supplies adjacent binary/SBOM workflow
+evidence and is not used to support Android Maven exact-version claims.

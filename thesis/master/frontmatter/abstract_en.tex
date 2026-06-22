@@ -1,0 +1,38 @@
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+Software Bills of Materials are increasingly used to support software
+supply-chain transparency and vulnerability management. However, a
+syntactically valid SBOM is not automatically trustworthy, particularly when
+it is reconstructed
+from a compiled Android application without source code or dependency
+manifests. Compilation, optimization, obfuscation, artifact-family aliases,
+reference-database gaps, and version similarity can weaken or contradict the
+evidence supporting a component claim.
+
+This thesis studies trustworthy SBOM recovery as an evidence-based software
+component attribution problem. It organizes existing Android third-party
+library and binary component-recovery research into taxonomies of techniques,
+evidence sources, transformation threats, and evaluation practices. Building
+on the resulting research gaps, it proposes a conceptual framework in which
+each recovered claim records component identity, version or version set,
+evidence provenance, evidence quality, transformation risk, confidence,
+ambiguity, validation class, and permitted downstream security interpretation.
+
+The implemented APK-to-SBOM PFE system is used as a bounded case study. Its
+controlled, clean and partial source-validated, source-known upper-bound,
+experiment-only, report-only, and boundary evidence demonstrates why library
+identity, exact version, reference coverage, matcher recall, and vulnerability
+authority must remain separate. A case-study evaluation confirms that the
+framework preserves these evidence lanes and blocks authority increases when
+apparently beneficial changes fail ambiguity, control, or promotion gates.
+The proposed framework therefore favors
+auditable partial knowledge and explicit abstention over unsupported
+certainty, and defines a research agenda for calibrated evidence fusion,
+provenance-aware SBOMs, realistic benchmarks, and native or dynamically loaded
+component recovery.
+
+\vspace{0.5cm}
+\noindent\textbf{Keywords ---} software bill of materials, software supply
+chain, Android, component attribution, provenance, evidence fusion,
+trustworthiness, uncertainty, vulnerability management.

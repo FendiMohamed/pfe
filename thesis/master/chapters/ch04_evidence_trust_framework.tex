@@ -1,0 +1,804 @@
+\chapter[Proposed Evidence-Based Trust Framework]{Proposed Evidence-Based\\ Trust Framework}
+\label{ch:master-framework}
+
+\section{Introduction}
+
+The previous chapter showed that Android third-party library detection has
+advanced from package-name heuristics toward structural, graph-based,
+optimization-aware, and learning-assisted methods. These techniques are
+valuable, but they do not by themselves answer the trust question required by
+an \SBOM: when a compiled \APK yields a component name, a candidate version,
+or a vulnerability warning, what exactly has been proven, what remains
+uncertain, and how safely may the result be used?
+
+This chapter proposes an evidence-based trust framework for reconstructed
+\SBOM claims. The framework is not a replacement for existing detection
+methods such as dependency-graph matching, opcode similarity, learned Smali
+features, or source-known validation \cite{zhan2021systematic,zhan2021atvhunter,pan2025libattention,zhou2025sad}.
+Instead, it defines a layer above those methods. That layer converts detector
+outputs into explicit claims with evidence, provenance, confidence boundaries,
+ambiguity, and permitted downstream interpretation.
+
+The central idea is simple: every recovered component entry should be treated
+as a claim, not as an unqualified fact. A claim may be exact, bounded,
+identity-only, report-only, or out-of-scope. It may be supported by direct
+bytecode evidence, by independent structural evidence, by source validation,
+or only by contextual hints. It may also be limited by missing references,
+partial inclusion, R8 optimization, dependency shading, native code, or hidden
+runtime loading. The framework makes these distinctions visible so that an
+\SBOM user can understand not only what was emitted, but why it was emitted
+and what it is allowed to mean.
+
+\section{Framework Design Principles}
+
+The framework is built around ten design principles. They are intentionally
+conservative because reconstructed \SBOM{}s are often used for security
+decisions, compliance checks, and vulnerability triage.
+
+\begin{enumerate}[label=\textbf{P\arabic*.},leftmargin=2.2cm]
+  \item \textbf{Claim explicitness.}
+  Every emitted component, version, relationship, or vulnerability finding is
+  represented as a claim with an identifier, a claim type, supporting evidence,
+  and a current state. The pipeline does not silently transform a similarity
+  score into a fact.
+
+  \item \textbf{Identity-version separation.}
+  Component identity and exact version are separate claims. Evidence that
+  supports the presence of \texttt{okhttp} or \texttt{androidx.core} does not
+  automatically support a specific version. This separation is essential for
+  \CVE interpretation because most advisories are version-dependent.
+
+  \item \textbf{Evidence provenance.}
+  Each signal records where it came from: \APK-side bytecode, manifest
+  metadata, resource evidence, reference database profiles, source-assisted
+  validation, external package metadata, vulnerability databases, or
+  report-only model output.
+
+  \item \textbf{Reference coverage awareness.}
+  A negative or weak result is interpreted in relation to the available
+  reference database. Missing coordinates, missing versions, failed feature
+  extraction, and incomplete profile families are treated as coverage risks,
+  not as proof that a component is absent.
+
+  \item \textbf{Transformation-bounded confidence.}
+  Confidence is capped when the analyzed artifact is affected by transformations
+  that the evidence cannot reliably handle, including package renaming, code
+  shrinking, partial inclusion, repackaging, multidex splitting, class merging,
+  and method inlining \cite{androidShrinkCode,xie2024libhunter}.
+
+  \item \textbf{Conflict preservation.}
+  Competing versions, adjacent library families, or disagreeing evidence
+  sources remain visible. The framework prefers a bounded ambiguity set or an
+  abstention over a false sense of exactness.
+
+  \item \textbf{Validation-lane separation.}
+  Controlled fixtures, clean source-validated real applications, partial
+  source-validated applications, source-known upper bounds, diagnostic
+  experiments, and limitation cases are separate lanes. Scores from one lane
+  must not be used as if they prove another lane.
+
+  \item \textbf{Authority monotonicity.}
+  Downstream authority cannot exceed upstream evidence. A vulnerability claim
+  cannot be stronger than the component and version claim on which it depends;
+  a standard \CycloneDX or \SPDX entry cannot hide unresolved ambiguity behind
+  a syntactically valid package URL \cite{spdxSpecification,cyclonedxSpecification,packageUrlSpecification}.
+
+  \item \textbf{Report-only containment.}
+  Diagnostic or machine-learning assistance may guide investigation, ranking,
+  and future work, but it is not allowed to modify authoritative component,
+  version, or vulnerability outputs until it passes the same validation and
+  regression gates as the deterministic evidence.
+
+  \item \textbf{Auditable abstention.}
+  Not emitting a component, emitting identity without version, or emitting a
+  version band is a legitimate outcome when evidence is insufficient. The
+  framework records why the pipeline abstained so that uncertainty becomes a
+  visible result rather than a silent failure.
+\end{enumerate}
+
+\section{Recovered Claim Model}
+
+\subsection{Claim Definition}
+
+A recovered claim is a structured statement about a component-related fact in
+an analyzed \APK. The claim may concern component identity, exact version,
+version range, artifact family, dependency relationship, file evidence, or
+vulnerability exposure. Formally, a claim can be described as:
+
+\[
+  C = \langle s, t, a, e, p, r, q, u, v, \alpha \rangle
+\]
+
+where \(s\) is the analyzed subject, \(t\) is the claim type, \(a\) is the
+asserted value, \(e\) is the supporting evidence set, \(p\) is provenance,
+\(r\) is reference and transformation risk, \(q\) is the evidence quality
+profile, \(u\) is uncertainty or ambiguity, \(v\) is validation context, and
+\(\alpha\) is the permitted downstream authority. This notation is not meant
+to impose a specific storage format. It is a discipline for preventing weak
+evidence from being consumed as a stronger result.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Core fields of a reconstructed \SBOM claim.}
+\label{tab:master-claim-schema}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.28\textwidth}X}
+\toprule
+\textbf{Field} & \textbf{Question answered} & \textbf{Examples}\\
+\midrule
+Subject & What artifact is being analyzed? & APK identifier, package name,
+hash, build variant, DEX or native file scope.\\
+Claim type & What kind of statement is this? & Component identity, exact
+version, bounded version set, relationship, file component, vulnerability
+status.\\
+Asserted value & What is being claimed? & Maven coordinate, \PURL, version,
+candidate family, dependency edge, native file hash.\\
+Evidence set & Why is the claim supported? & Class dependency graph,
+opcode/literal features, package metadata, reference profile match, source
+validation, advisory match.\\
+Provenance & Where did the evidence come from? & APK-side extraction,
+reference database, source repository validation, external vulnerability
+source, report-only model.\\
+Coverage context & What references were available? & Present or missing
+coordinate versions, artifact-family coverage, extraction failures, source
+resolution status.\\
+Transformation risk & What may have damaged the signal? & R8 shrinking,
+method inlining, package flattening, partial inclusion, multidex, hidden DEX,
+native payloads.\\
+Quality profile & How reliable is the evidence? & Directness, uniqueness,
+independence, reproducibility, version specificity.\\
+Uncertainty & What is unresolved? & Ambiguous adjacent versions, family-level
+match only, missing-source component, unsupported native package version.\\
+Validation context & Where has the claim been checked? & Controlled fixture,
+clean real APK, partial real APK, source-known upper bound, diagnostic lane.\\
+Permitted authority & How may it be used? & Confirmed SBOM component,
+potential component, report-only hint, confirmed vulnerability, potential
+vulnerability, out-of-scope boundary.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Claim Granularity}
+
+The framework distinguishes four levels of component granularity:
+
+\begin{enumerate}
+  \item \textbf{Identity claim:} a component family or coordinate is present,
+  but the exact version is not established.
+  \item \textbf{Version claim:} a specific version or bounded version set is
+  supported by version-discriminating evidence.
+  \item \textbf{Relationship claim:} the component is direct, transitive,
+  bundled, copied, shaded, partially included, or uncertain.
+  \item \textbf{Security claim:} a vulnerability advisory applies, may apply,
+  or does not apply under the current evidence.
+\end{enumerate}
+
+This granularity is important because \SBOM formats can represent package
+entries even when the recovery process is uncertain. The framework therefore
+separates syntactic representation from epistemic authority. A package URL can
+identify a candidate component, but the confidence class explains whether the
+\PURL is exact, bounded, or only investigatory.
+
+\section{Evidence Hierarchy}
+
+The evidence hierarchy ranks evidence by what it can safely support. It is not
+a universal probability scale. Instead, it is a policy for deciding which
+interpretations are permitted when the available evidence is incomplete or
+conflicted.
+
+\begingroup
+\small
+\setlength{\LTpre}{0.5em}
+\setlength{\LTpost}{0.5em}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.24\textwidth}}
+\caption{Evidence hierarchy for reconstructed component claims.}
+\label{tab:master-evidence-hierarchy}\\
+\toprule
+\textbf{Level} & \textbf{Meaning} & \textbf{Typical evidence} & \textbf{Permitted interpretation}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Level} & \textbf{Meaning} & \textbf{Typical evidence} & \textbf{Permitted interpretation}\\
+\midrule
+\endhead
+E0 & No usable component evidence & No matching code, missing extraction,
+unsupported payload type, or unavailable reference family & No package-level
+claim. The result may record a boundary or extraction failure.\\
+E1 & Weak contextual evidence & Package-name fragment, manifest hint,
+resource string, file name, or nearby ecosystem cue & Investigation hint only;
+not enough for an \SBOM component claim.\\
+E2 & Identity-supporting evidence & Class-set overlap, namespace pattern,
+partial structural match, or learned presence signal & Candidate component
+identity; exact version and vulnerability authority remain unavailable.\\
+E3 & Independent multi-source identity evidence & Agreement between structural
+graph evidence, opcode/literal evidence, reference family metadata, or
+independent detector families & Strong identity claim, but exact version still
+requires version-discriminating evidence.\\
+E4 & Version-discriminating APK evidence & Version-specific graph, opcode,
+literal, API, or stateful/stateless class features that separate nearby
+versions & Exact version or bounded version set, subject to conflict,
+coverage, and transformation caps.\\
+E5 & Externally validated exact evidence & Source-resolved dependency tree,
+controlled fixture ground truth, reproducible build evidence, or manually
+verified exact-version evidence & Confirmed exact claim within the validation
+context; still not proof of global detector completeness.\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+Two aspects of the hierarchy are deliberately strict. First, evidence levels
+are claim-specific. A signal may be E3 for identity but only E1 for exact
+version. Second, external validation does not erase the conditions under which
+it was obtained. A controlled fixture can validate pipeline mechanics, while a
+source-validated real application can validate emitted versions for that
+application. Neither automatically proves that all real-world dependencies
+are recoverable.
+
+\section{Evidence Quality Dimensions}
+
+Evidence level describes what a signal may support. Evidence quality describes
+how fragile that support is. The framework evaluates each evidence item along
+the dimensions in \cref{tab:master-quality-dimensions}.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Evidence quality dimensions used to bound claim confidence.}
+\label{tab:master-quality-dimensions}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.23\textwidth}>{\raggedright\arraybackslash}p{0.34\textwidth}X}
+\toprule
+\textbf{Dimension} & \textbf{Trust question} & \textbf{Examples of risk}\\
+\midrule
+Directness & Does the signal observe the component itself or only context
+around it? & Manifest strings and package names are indirect; class and method
+structure are more direct.\\
+Uniqueness & Does the signal distinguish one component or version from close
+neighbors? & Shared utility classes, shaded code, and adjacent AndroidX
+versions reduce uniqueness.\\
+Independence & Do multiple signals fail together or independently? & Two
+features derived from the same package namespace are weaker than namespace
+plus graph plus literal evidence.\\
+Version specificity & Can the evidence separate exact versions? & Identity
+features may confirm a coordinate while still leaving a version band.\\
+Transformation resilience & Does the signal survive obfuscation and
+optimization? & R8 shrinking, inlining, class merging, and package flattening
+can remove or distort features.\\
+Reference coverage & Were the relevant reference versions available and
+successfully extracted? & Missing historical versions or failed profiles cap
+confidence even when the best available candidate scores highly.\\
+Provenance reliability & Is the evidence reproducible and auditable? &
+Manually curated notes, source-resolution logs, and generated feature
+artifacts carry different audit strength.\\
+Conflict level & Do plausible alternatives remain? & Near-ties, artifact
+family ambiguity, and disagreement between source and APK-side evidence require
+explicit conflict handling.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+These dimensions allow a detector to be useful without being overconfident.
+For example, a learned Smali classifier may provide transformation-resilient
+identity evidence, but if it lacks exact-version specificity and independent
+validation, the framework keeps it report-only or identity-only. Conversely,
+source validation can strongly confirm emitted versions for one real
+application, but if the source tree contains dependencies that do not appear in
+the compiled artifact, the result remains an emitted-version confirmation
+rate rather than full dependency recall.
+
+\section{Evidence Fusion, Conflict, and Abstention}
+
+\subsection{Fusion Policy}
+
+The framework treats evidence fusion as an auditable decision process rather
+than a single opaque score. A practical implementation may still use numeric
+similarity scores, classifier outputs, and thresholds, but the final claim is
+assigned by policy. Formal evidence theories provide richer mathematical
+fusion rules \cite{shafer1976evidence}; the present framework does not claim to
+implement Dempster--Shafer inference and instead uses an explicit,
+provenance-preserving authority policy:
+
+\[
+  \text{trust}(C) = f(S,D,I,V) - g(K,R,T)
+\]
+
+This expression is conceptual. It should not be read as a calibrated
+probability unless a separate calibration study has been performed. Its role
+is to make the monotonicity rule explicit: more independent, direct, and
+version-specific evidence can increase trust, while unresolved conflict,
+missing references, and transformation risk can only cap or reduce it.
+This caution is necessary because even high-performing learned scores can be
+poorly calibrated \cite{guo2017calibration}.
+Here, \(S\), \(D\), \(I\), and \(V\) denote support, directness, independence,
+and version specificity; \(K\), \(R\), and \(T\) denote conflict, reference
+coverage risk, and transformation risk.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=8mm and 8mm,
+  stage/.style={
+    rectangle,
+    rounded corners,
+    draw=schoolblue,
+    thick,
+    fill=blue!5,
+    align=center,
+    minimum width=30mm,
+    minimum height=10mm
+  },
+  risk/.style={
+    rectangle,
+    rounded corners,
+    draw=warningorange,
+    thick,
+    fill=orange!8,
+    align=center,
+    minimum width=30mm,
+    minimum height=10mm
+  },
+  claimout/.style={
+    rectangle,
+    rounded corners,
+    draw=evidencegreen,
+    thick,
+    fill=green!7,
+    align=center,
+    minimum width=30mm,
+    minimum height=10mm
+  },
+  arrow/.style={-{Latex[length=2.2mm]},thick,draw=schoolblue}
+]
+\node[stage] (extract) {APK Evidence\\Extraction};
+\node[stage,right=of extract] (reference) {Reference and\\Source Context};
+\node[stage,right=of reference] (quality) {Quality and\\Provenance};
+\node[risk,below=of quality] (risk) {Coverage, Conflict,\\Transformation Caps};
+\node[claimout,left=of risk] (claim) {Claim Class and\\Ambiguity};
+\node[claimout,left=of claim] (authority) {SBOM and\\Security Authority};
+
+\draw[arrow] (extract) -- (reference);
+\draw[arrow] (reference) -- (quality);
+\draw[arrow] (quality) -- (risk);
+\draw[arrow] (risk) -- (claim);
+\draw[arrow] (claim) -- (authority);
+\draw[arrow] (extract.south) |- (claim.north);
+\end{tikzpicture}
+\caption{Conceptual flow of the proposed evidence-based trust framework.}
+\label{fig:master-framework-overview}
+\end{figure}
+
+\subsection{Conflict Handling}
+
+Conflict is not an exceptional case in APK-side \SBOM recovery; it is normal.
+Adjacent versions may share most bytecode, libraries may be partially bundled,
+old source trees may resolve different dependency versions from current
+reference repositories, and optimized builds may remove the features that
+would distinguish two candidates. The framework therefore defines the
+following conflict actions:
+
+\begin{enumerate}
+  \item \textbf{Exact promotion:} promote a single exact version only when the
+  selected candidate has version-discriminating evidence and plausible
+  alternatives are ruled out by independent signals or validation.
+  \item \textbf{Bounded ambiguity:} emit a version set or band when the
+  evidence supports a component family but cannot safely separate nearby
+  versions.
+  \item \textbf{Identity-only output:} emit the component identity without a
+  version when version evidence is weak, missing, or transformation-damaged.
+  \item \textbf{Report-only output:} preserve diagnostic candidates for human
+  review or future experiments without changing authoritative \SBOM fields.
+  \item \textbf{Abstention:} record no component claim when the evidence does
+  not meet the minimum identity threshold or when the payload is outside the
+  method's scope.
+\end{enumerate}
+
+\subsection{Confidence Caps}
+
+Confidence capping is the key mechanism that prevents overclaiming. A claim
+cannot exceed the weakest relevant boundary. For example, if the best
+available reference database lacks the source version, an exact-version match
+against a newer nearby reference may remain a candidate rather than a
+confirmed result. If a detector has only report-only validation, its result
+cannot modify authoritative \CycloneDX components. If a native shared object is
+observed but no native package-version resolver exists, the framework may
+emit a file component with hash evidence but not a Maven or native package
+version claim.
+
+\section{Claim Classes}
+
+\Cref{tab:master-claim-classes} defines the claim classes used by the
+framework. They are ordered by permitted authority, not by how useful they are.
+An identity-only or bounded claim can be more honest, and therefore more
+useful, than a false exact claim.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Claim classes and permitted downstream use.}
+\label{tab:master-claim-classes}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}X}
+\toprule
+\textbf{Claim class} & \textbf{Required support} & \textbf{Permitted use}\\
+\midrule
+\claimclass{Confirmed exact} & E5 validation or E4 evidence with strong
+independent corroboration and no unresolved nearby conflict & Authoritative
+\SBOM component and exact-version-dependent security interpretation.\\
+\claimclass{Strong exact} & E4 version-discriminating evidence with adequate
+reference coverage and manageable transformation risk & Authoritative
+component entry with exact version, but validation context must be shown.\\
+\claimclass{Likely exact} & E4 evidence exists, but one quality dimension is
+weak or a limited alternative remains & Component entry may be emitted with
+confidence caveat; vulnerability findings should be conservative.\\
+\claimclass{Version-band ambiguous} & Identity is strong, but exact version
+cannot be separated from nearby candidates & Emit component with bounded
+version set or ambiguity field; exact \CVE classification is not allowed
+without additional policy.\\
+\claimclass{Identity-only} & E2 or E3 identity evidence without
+version-discriminating support & Emit candidate component identity; do not
+emit exact-version \CVE conclusions.\\
+\claimclass{Report-only candidate} & Diagnostic, experimental, or
+machine-learning evidence that has not passed authority gates & Human
+investigation, prioritization, or future work only.\\
+\claimclass{Unsupported or abstained} & Evidence below identity threshold or
+conflict too severe & No package claim; record reason for abstention if useful.\\
+\claimclass{Boundary or out-of-scope} & Payload is observed, but the method
+does not support its package or version semantics & File/hash component,
+limitation note, or risk flag rather than package-version recovery.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Validation and Evidence Lanes}
+
+Evaluation results are meaningful only when their lane is explicit. The
+framework separates the lanes in \cref{tab:master-validation-lanes} so that
+strong evidence in one context is not accidentally generalized to another.
+
+\begingroup
+\small
+\setlength{\LTpre}{0.5em}
+\setlength{\LTpost}{0.5em}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.32\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}}
+\caption{Validation and evidence lanes.}
+\label{tab:master-validation-lanes}\\
+\toprule
+\textbf{Lane} & \textbf{What it can show} & \textbf{What it must not imply}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Lane} & \textbf{What it can show} & \textbf{What it must not imply}\\
+\midrule
+\endhead
+Controlled ground truth & Pipeline mechanics, exact expected versions,
+known transformations, and regression behavior under designed fixtures & Not
+a measure of real-world dependency completeness.\\
+Clean source-validated real APKs & Exact emitted Maven versions can be checked
+against source-resolved dependency evidence for real applications & Not a
+global real-world score if the clean set is small or sparse.\\
+Partial source-validated real APKs & Harder real applications can be analyzed
+with exact matches, mismatches, missing-source rows, and ambiguity separated &
+Partial evidence is not a total failure, but it is also not full recall.\\
+Source-known upper bound & Source trees can indicate dependencies that may or
+may not be compiled into the APK & Source dependency presence alone does not
+prove APK-side presence.\\
+Report-only diagnostic lane & Experimental signals can be inspected without
+changing authoritative results & Diagnostic improvement is not permission to
+alter \SBOM or \CVE outputs.\\
+Experiment-only optimization lane & Narrow fixes can be tested with controls,
+near-tie analysis, and regression checks & A scoped preflight is not a shared
+default until controls and evidence gates pass.\\
+Limitation or boundary lane & Native payloads, hidden code, unsupported
+transformations, and extraction failures can be reported honestly & Boundary
+cases must not be counted as Maven-version failures or successes.\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+This lane structure also changes how metrics should be reported. A controlled
+fixture success rate, a clean real-\APK emitted-version confirmation rate, and
+a partial real-\APK confirmation rate answer different questions. Combining
+them into one number can be useful only after the meaning and denominator are
+made explicit. In particular, an emitted Maven version confirmation rate
+should not be described as full dependency recall unless the evaluation has
+shown that all relevant source dependencies are present in the compiled
+artifact and within scope.
+
+\section{Vulnerability-Claim Policy}
+
+\CVE and advisory mapping is downstream of component recovery. The framework
+therefore applies an authority rule: vulnerability status cannot be stronger
+than the recovered component and version evidence. This is especially
+important when advisory ranges are narrow, when adjacent versions have
+different security status, or when the result is identity-only. The policy is
+compatible with VEX-style separation between component inventory and the
+status or applicability of a vulnerability claim \cite{cyclonedxVex}.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Vulnerability interpretation policy.}
+\label{tab:master-vulnerability-policy}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.35\textwidth}X}
+\toprule
+\textbf{Component evidence} & \textbf{Allowed vulnerability status} & \textbf{Rationale}\\
+\midrule
+Confirmed exact vulnerable version & Confirmed affected & The version claim
+has sufficient authority to evaluate version-specific advisory ranges.\\
+Confirmed exact non-affected version & Confirmed not affected for that
+advisory & The result is advisory-specific; absence of one advisory does not
+prove the component is risk-free.\\
+Likely exact version & Potential affected or likely affected, depending on
+policy & The version may be used for triage, but the confidence caveat remains
+visible.\\
+Version-band ambiguous & Potential affected if any candidate in the band is
+affected & Exact affected/not-affected labels are unsafe unless all candidates
+share the same advisory status.\\
+Identity-only component & Potential exposure only when advisory identity
+matches and version is unknown & Version-specific claims are not permitted.\\
+Report-only candidate & Report-only vulnerability hint & The finding may guide
+investigation but must not change authoritative security status.\\
+Boundary or out-of-scope payload & File/hash risk note or external analysis
+required & Package-version advisory mapping is unavailable in the current
+method.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+This policy supports conservative security reporting. It avoids two common
+errors: hiding a possible issue because the exact version is unknown, and
+declaring a confirmed vulnerability from evidence that only supports component
+identity. The result can still be actionable: a potential finding may trigger
+manual review, dependency upgrade investigation, or source validation, while a
+confirmed finding can support stronger remediation language.
+
+\section{Recovered Claim Lifecycle}
+
+The framework can be implemented as a claim lifecycle with explicit state
+transitions:
+
+\begin{enumerate}
+  \item \textbf{Extract evidence} from the APK, including bytecode,
+  resources, manifests, native files, and available build metadata.
+  \item \textbf{Generate candidates} from reference profiles, structural
+  features, learned hints, package metadata, or source-known context.
+  \item \textbf{Normalize identifiers} into coordinates, package URLs, file
+  hashes, advisory identifiers, and relationship candidates.
+  \item \textbf{Attach provenance} for every evidence item and candidate
+  source.
+  \item \textbf{Assess quality and coverage} by checking directness,
+  independence, version specificity, reference availability, and transformation
+  exposure.
+  \item \textbf{Fuse evidence} while preserving conflicts, near-ties, and
+  missing-reference explanations.
+  \item \textbf{Assign claim class} with confidence, ambiguity, validation
+  lane, and permitted downstream authority.
+  \item \textbf{Emit or abstain} in the \SBOM, vulnerability report, and
+  diagnostic artifacts according to the assigned authority.
+\end{enumerate}
+
+The lifecycle is intentionally auditable. A reviewer should be able to trace a
+\CycloneDX component entry or vulnerability row back to the features, reference
+profiles, source validation, and policy decisions that produced it.
+
+\section{PFE System as a Case Study}
+
+The PFE implementation associated with this thesis provides a concrete case
+study for the framework. The goal of this section is not to present final
+implementation evaluation as a second master experiment. Instead, the mapping
+shows how the proposed trust model organizes evidence from a real
+APK-to-\SBOM pipeline, and the following section evaluates whether the model
+preserves the project's established evidence lanes and authority boundaries.
+
+\begingroup
+\small
+\setlength{\LTpre}{0.5em}
+\setlength{\LTpost}{0.5em}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}>{\raggedright\arraybackslash}p{0.34\textwidth}}
+\caption{Mapping PFE observations to framework concepts.}
+\label{tab:master-case-study-map}\\
+\toprule
+\textbf{Case-study observation} & \textbf{Framework concept} & \textbf{Safe interpretation}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Case-study observation} & \textbf{Framework concept} & \textbf{Safe interpretation}\\
+\midrule
+\endhead
+Controlled transformed fixtures with known expected Maven versions &
+Controlled ground-truth lane and E5 validation & Demonstrates pipeline
+mechanics and transformation-specific regressions under designed conditions;
+does not prove complete real-world recovery.\\
+Clean source-validated real APKs with exact emitted Maven-version checks &
+Clean real-\APK validation lane & Confirms emitted versions for those
+applications and denominators; should remain separate from partial and sparse
+cases.\\
+Partial source-validated real APKs with exact matches, version mismatches, and
+missing-source rows separated & Partial real-\APK lane, conflict preservation,
+and emitted-version confirmation rate & Shows useful recovery in difficult
+applications without presenting unresolved rows as either success or total
+failure.\\
+Reference coverage and matcher recall measured as separate gaps & Reference
+availability, candidate-generation coverage, and denominator separation &
+Shows whether failure arises because the true release is absent from the
+reference base or because available evidence was not selected; neither gap
+should be hidden inside one accuracy value.\\
+Source-known constrained reruns with exact source versions available &
+Source-known upper-bound lane & Demonstrates recognition under a favorable
+candidate space; does not measure unconstrained APK-only accuracy or prove
+that every source dependency survives in the binary.\\
+Version-band ambiguity and adjacent-version near-ties & Bounded ambiguity,
+confidence caps, and experiment-only optimization lane & Prevents a weak
+near-tie from becoming a confirmed exact version or a confirmed \CVE status.\\
+Broad scoring and reference-database changes that improved targets but
+regressed controls & Negative evidence and promotion governance & Preserves
+failed experiments as evidence that a signal is unsafe for shared authority,
+even when it is useful diagnostically.\\
+The scoped AndroidX Fragment 1.6.2 preflight selected the intended release
+without sampled control regressions, but lacked version-unique APK evidence &
+Experiment-only near-tie decision & Keeps the result outside the shared
+reference database because clean sampled controls do not convert
+feature-equivalent candidates into exact evidence.\\
+Report-only R8 and AI assistance & Report-only containment & Allows learned
+or diagnostic signals to support triage while keeping authoritative \SBOM and
+vulnerability outputs deterministic until validation gates pass.\\
+Native shared objects and hidden-code cases & Boundary or out-of-scope claim
+class & Supports file/hash evidence, limitation notes, or risk flags without
+inventing Maven or native package-version claims.\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+This mapping illustrates the main contribution of the framework: it turns
+mixed evidence into bounded statements. A controlled result can be strong
+without being overgeneralized. A partial real-\APK result can be valuable
+without being hidden as a failure. A source-known dependency can inform an
+upper bound without proving APK-side presence. A report-only classifier can
+guide investigation without becoming \SBOM authority. These distinctions make
+the pipeline more cautious, but they also make it more usable because users
+can decide how to act on each claim class.
+
+\section{Framework Case-Study Evaluation}
+
+The framework was evaluated against the audited PFE evidence package at two
+levels: representational coverage and authority preservation. Representational
+coverage asks whether every major project outcome can be expressed without
+collapsing its validation context. Authority preservation asks whether weak,
+conflicting, source-constrained, or learned evidence remains prevented from
+silently changing authoritative component, version, or vulnerability claims.
+The underlying ledgers are retained in the project artifacts, including
+\path{docs/evaluation/THESIS_EVALUATION_TABLES.md},
+\path{docs/thesis/FINAL_V2_RESULTS_SECTION.md}, and the experiment-specific
+diagnostic reports.
+
+\begingroup
+\small
+\setlength{\LTpre}{0.5em}
+\setlength{\LTpost}{0.5em}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.36\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}}
+\caption{Case-study evaluation of representational coverage and authority preservation.}
+\label{tab:master-framework-evaluation}\\
+\toprule
+\textbf{Criterion} & \textbf{Observed PFE evidence} & \textbf{Framework evaluation}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Criterion} & \textbf{Observed PFE evidence} & \textbf{Framework evaluation}\\
+\midrule
+\endhead
+Evidence-lane separation &
+The controlled lane confirmed 84/84 expected versions. The clean real lane
+confirmed 47/47 emitted versions, while the partial real lane confirmed
+880/1790. Four explicit boundary cases were excluded from accuracy metrics. &
+Passed for the case study: strong, partial, and boundary evidence remained
+separate rather than being pooled into one success claim.\\
+
+Denominator separation &
+Across 102 source-validated real APKs, 927/1837 emitted Maven versions were
+confirmed. Against the wider 12,082-row source dependency denominator, the
+same 927 exact emitted rows represent 7.7\% end-to-end exact source recall. &
+Passed: emitted-row correctness and full source-dependency recall are stated
+as different metrics with different authority.\\
+
+Upper-bound containment &
+In 106 source-known constrained cases, 6772/6772 emitted rows matched the
+source versions, while 5238 source rows remained gaps. &
+Passed: the result is represented as a favorable source-known recognition
+upper bound, not as unconstrained APK-only accuracy.\\
+
+Conflict and negative controls &
+The Fragment 1.6.2 preflight selected the intended version in 10/10 target
+rows but remained an unresolved near-tie. The coroutines 1.6.4 experiment
+fixed 20/20 target rows but regressed three controls. Neither change was
+promoted. &
+Passed: apparent target improvements did not override ambiguity or negative
+control evidence.\\
+
+Report-only containment &
+The AI/R8 corpus contains 31,589 rows, with 20,523 training-eligible and
+11,066 held-out or report-only rows. Report-only integration left normal
+outputs unchanged, and stricter APK-only gates produced zero promotion
+candidates. &
+Passed: learned assistance can support triage while component selection,
+\SBOM emission, and vulnerability authority remain unchanged.\\
+
+Transformation-risk containment &
+The Phase 4 multi-scale R8 diagnostic found ten possible real improvements,
+but also six controlled regression blockers, 121 real regression-risk rows,
+and ten clean-real blockers. Global promotion was rejected. &
+Passed: transformation-oriented evidence remained diagnostic when its control
+matrix did not support shared authority.\\
+
+Boundary representation &
+Four native-heavy or obfuscation cases remained outside accuracy metrics.
+Seventeen native files were represented as hash-only evidence; the hybrid
+Jitsi case validated 5/7 Maven rows while keeping 13 native files hash-only. &
+Passed: unsupported package/version claims were not invented for native,
+hidden, or framework-specific payloads.\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+The evaluation therefore supports a bounded conclusion: the framework covers
+all major evidence outcomes exercised by the PFE and preserved authority in
+the observed negative-promotion, report-only, and boundary cases. It does not
+establish calibrated confidence probabilities, completeness across all Android
+detectors, or independent analyst agreement. Those questions require external
+datasets, tools, and reviewers. The case study nevertheless replaces a purely
+proposed evaluation with auditable evidence that the framework can describe
+real successes, failures, near-ties, upper bounds, and abstentions without
+changing their meaning.
+
+\section{Limitations and Research Agenda}
+
+The proposed framework is intentionally evidence-centric, but it has several
+limitations.
+
+\begin{enumerate}
+  \item \textbf{It does not solve feature extraction by itself.} The framework
+  requires detectors, reference profiles, source validation, and vulnerability
+  data. Weak upstream evidence still limits the final claims.
+
+  \item \textbf{It does not provide calibrated probabilities.} Confidence
+  classes are policy categories unless supported by a separate calibration
+  study over representative datasets.
+
+  \item \textbf{It depends on reference and source availability.} Missing
+  Maven versions, unavailable historical artifacts, broken build systems, and
+  incomplete source trees can cap evidence even when the APK-side matcher is
+  strong.
+
+  \item \textbf{It does not fully solve transitive dependency semantics.}
+  Reconstructed bytecode can show that code is present, but distinguishing
+  direct, transitive, shaded, copied, and build-time-only dependencies remains
+  difficult.
+
+  \item \textbf{It leaves native package-version recovery as future work.}
+  Native files can be represented as file components with hashes, but mapping
+  them to precise upstream package versions requires a different evidence
+  base.
+
+  \item \textbf{It requires disciplined reporting.} The framework is only
+  useful if evaluation tables, thesis claims, and generated reports keep the
+  lanes and authority boundaries visible.
+\end{enumerate}
+
+These limitations define a research agenda. Future work should combine
+multi-scale bytecode evidence with calibrated confidence models, richer
+reference coverage, reproducible source-validation pipelines, native library
+package recovery, and benchmark protocols that measure not only exact matches
+but also abstention quality and vulnerability-authority correctness.
+
+\section{Conclusion}
+
+This chapter proposed an evidence-based trust framework for reconstructing
+\SBOM claims from compiled Android applications. The framework treats each
+component, version, relationship, and vulnerability statement as an auditable
+claim with evidence, provenance, quality dimensions, validation context,
+ambiguity, and permitted downstream authority. Its main purpose is to prevent
+weak or partial evidence from being consumed as stronger security knowledge.
+
+The framework also provides a bridge between the literature reviewed in the
+previous chapter and the PFE APK-to-\SBOM implementation. Existing detection
+techniques supply useful signals; the framework defines how those signals are
+bounded, fused, and reported. This makes trustworthy \SBOM recovery less a
+question of always producing one exact answer and more a question of producing
+the strongest answer that the evidence can honestly support.

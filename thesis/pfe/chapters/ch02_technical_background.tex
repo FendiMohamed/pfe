@@ -1,0 +1,831 @@
+\chapter{Technical Background}
+\label{ch:pfe-background}
+
+\section{Introduction}
+
+Recovering a Software Bill of Materials from a compiled \Android application
+connects several technical domains. The task begins with software
+supply-chain security, because an application inherits code and risk from
+external components. It then requires a representation for those components,
+a method for relating them to vulnerability information, and an understanding
+of how the \Android build process transforms source dependencies into an
+\APK.
+
+This chapter develops that chain in the same order. It first introduces
+software supply chains, \SBOM concepts, package identifiers, and vulnerability
+terminology. It then explains the \Android ecosystem, the internal structure
+of an \APK, the D8 and \Reight compilation stages, and the evidence available
+to static reverse engineering. The final sections distinguish library
+identity from exact-version identification and define the evidence,
+provenance, confidence, and uncertainty concepts used throughout this thesis.
+
+The purpose is not to reproduce the implementation described in
+Chapters~\ref{ch:pfe-design} and~\ref{ch:pfe-evaluation}. It is to establish
+why a compiled application cannot be treated as a dependency manifest and why
+trustworthy recovery must combine several imperfect evidence sources.
+
+\section{Software Supply-Chain Security}
+
+\subsection{Software Supply Chains}
+
+A software supply chain comprises the people, processes, tools, services, and
+artifacts involved in producing and delivering software. It includes source
+repositories, build systems, package registries, external libraries,
+continuous-integration services, signing infrastructure, distribution
+channels, and the final deployed artifact. NIST treats cybersecurity
+supply-chain risk management as a life-cycle activity because a weakness or
+compromise may enter through any of these elements, including products and
+services acquired from external suppliers \cite{nist2022csc}.
+
+Third-party dependencies are therefore part of the application's security
+boundary. They reduce development effort and provide mature functionality,
+but they also introduce inherited code, licenses, maintenance schedules, and
+vulnerabilities. A single dependency may itself depend on other components,
+forming a transitive graph rather than a flat list.
+
+For an open-source project, a build file and resolved dependency graph can
+describe this supply-chain view before compilation. A released binary offers
+a different view: it contains the code and resources that survived resolution,
+merging, shrinking, and packaging. These two views overlap, but they are not
+identical. A declared dependency may contribute no code to the final artifact,
+while copied, shaded, vendored, generated, or dynamically obtained code may
+not appear as a simple direct dependency row.
+
+\subsection{Supply-Chain Attacks}
+
+Supply-chain attacks target trust relationships instead of attacking only the
+final application. Relevant attack paths include:
+
+\begin{itemize}
+  \item compromising a source repository or developer account;
+  \item publishing a malicious or dependency-confusion package;
+  \item modifying an artifact in a registry or distribution channel;
+  \item compromising a build service, compiler, plug-in, or signing key;
+  \item exploiting a known vulnerability in a reused component; and
+  \item inserting or downloading code outside the expected build graph.
+\end{itemize}
+
+These cases have different causes, but they share an attribution problem:
+security teams need to know which component is present, which version or
+variant is involved, where it originated, and which evidence supports the
+claim. A component name without a version is often insufficient for
+vulnerability assessment, while a version without provenance may be
+impossible to audit.
+
+\subsection{Transparency, Traceability, and Provenance}
+
+\emph{Transparency} makes the composition and production context of software
+visible. \emph{Traceability} connects a delivered artifact to upstream
+components and transformations. \emph{Provenance} records where an artifact or
+claim came from and how it was produced. These properties support incident
+response, patch prioritization, supplier assessment, and reproducible
+analysis.
+
+In this thesis, provenance is also applied to analysis evidence. A recovered
+component claim should preserve at least:
+
+\begin{itemize}
+  \item the analyzed \APK and its cryptographic hash;
+  \item the observed file, \DEX, class, method, literal, or structural signal;
+  \item the reference artifact and version used for comparison;
+  \item the matching or validation procedure;
+  \item the confidence and competing alternatives; and
+  \item the evidence class, such as controlled, source-validated, partial, or
+  experiment-only.
+\end{itemize}
+
+This is narrower than full build provenance, because a binary-only analyzer
+cannot recreate every upstream build event. It is nevertheless essential for
+making the resulting \SBOM auditable.
+
+\section{Software Bills of Materials}
+
+\subsection{Definition and Purpose}
+
+An \SBOM is a structured inventory of software components and their
+relationships. The NTIA describes it as a nested inventory for software,
+analogous to a list of ingredients, and emphasizes its role in software
+transparency and vulnerability management \cite{ntiaSbom}. An \SBOM can be
+created during a trusted build, supplied by a vendor, generated from source
+metadata, or reconstructed from a compiled artifact.
+
+A useful component record commonly contains:
+
+\begin{itemize}
+  \item a component type, supplier, name, namespace, and version;
+  \item one or more persistent package identifiers;
+  \item cryptographic hashes;
+  \item licenses and copyright information;
+  \item dependency or containment relationships;
+  \item external references and vulnerability links; and
+  \item evidence or properties that explain how the record was obtained.
+\end{itemize}
+
+Not every field is available in every production context. A source-generated
+\SBOM may know the declared dependency graph and licenses but not which methods
+survived optimization. A binary-recovered \SBOM observes the shipped artifact
+but may be uncertain about coordinate, version, scope, or transitive
+relationships. The generation method is therefore part of the meaning of the
+document.
+
+\subsection{\SPDX and \CycloneDX}
+
+\SPDX and \CycloneDX are widely used machine-readable standards for software
+composition data. \SPDX originated around licensing and package information
+and now supports several software supply-chain profiles. \CycloneDX is an
+OWASP standard designed for bill-of-materials and risk-analysis use cases,
+including components, services, dependencies, vulnerabilities, compositions,
+and evidence \cite{spdxSpecification,cyclonedxSpecification}.
+
+Table~\ref{tab:pfe-background-sbom-standards} compares the dimensions relevant
+to this project. The comparison does not imply that one standard is universally
+superior; the choice depends on the information available and the downstream
+workflow.
+
+\begin{table}[H]
+\centering
+\caption{SBOM-standard dimensions relevant to compiled APK analysis.}
+\label{tab:pfe-background-sbom-standards}
+\begin{tabularx}{\textwidth}{L{0.20\textwidth}XX}
+\toprule
+\textbf{Dimension} & \textbf{\SPDX} & \textbf{\CycloneDX}\\
+\midrule
+Primary emphasis & Software-package, file, license, security, build, and
+provenance information through defined profiles & Component and service
+inventory, dependency relationships, security analysis, vulnerabilities, and
+operational risk\\
+Representations & JSON, JSON-LD, RDF, YAML, XML, and tag/value depending on
+the specification version & JSON, XML, and Protocol Buffers depending on the
+specification version\\
+Identity & Package metadata, external references, checksums, and package
+identifiers & Component metadata, Package URL, CPE, hashes, properties, and
+external references\\
+Relationships & Rich typed relationships among elements & Dependency graph,
+composition, formulation, and service relationships\\
+Evidence use & Supports provenance and declared or concluded information &
+Supports component evidence, identity evidence, occurrences, methods, and
+confidence-oriented properties\\
+Project choice & Suitable alternative or exchange format & Selected output
+format because it maps directly to component, PURL, evidence, dependency, and
+vulnerability workflows\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The MVP emits \CycloneDX JSON. This is an engineering choice, not a claim that
+\SPDX is unsuitable. A later exporter could map sufficiently supported
+component data to either format.
+
+\subsection{Package URL}
+
+Package URL is a standardized package identifier whose general form is:
+
+\begin{center}
+\small\path{pkg:type/namespace/name@version?qualifiers#subpath}
+\end{center}
+
+It identifies software according to a package ecosystem rather than by a
+free-text name \cite{packageUrlSpecification}. For a Maven component, a PURL
+can represent the group, artifact, and version, for example:
+
+\begin{center}
+\texttt{pkg:maven/androidx.fragment/fragment@1.6.1}
+\end{center}
+
+This normalization is important because names such as ``fragment'' or
+``core'' are not globally unique. The ecosystem and namespace reduce
+ambiguity and give vulnerability services a stable query key. However, a
+syntactically valid PURL does not prove that the identified component exists
+in an \APK. Its trustworthiness remains bounded by the evidence used to infer
+the coordinate and version.
+
+\subsection{Use Cases and Limitations}
+
+\SBOM{}s support component inventory, vulnerability triage, license review,
+supplier communication, incident response, asset correlation, and policy
+checking. During a newly disclosed vulnerability, an organization can search
+its inventories for affected packages instead of manually examining every
+application.
+
+An \SBOM is not, by itself, proof that software is secure. It may be incomplete,
+outdated, generated with weak identifiers, or disconnected from the deployed
+artifact. It does not establish exploitability, configuration, reachability,
+or maliciousness. For binary reconstruction, the limitations are stronger:
+shrinking can remove dependency evidence; optimization can mix boundaries;
+native code may lack ecosystem metadata; and runtime-loaded components may be
+absent from the package. A responsible recovered \SBOM must expose these
+limitations instead of presenting inferred rows as original build facts.
+
+\section{Vulnerability Identification and Management}
+
+\subsection{Identifiers, Weaknesses, Scores, and Catalogs}
+
+Vulnerability management uses several related but non-interchangeable
+concepts. Table~\ref{tab:pfe-background-vulnerability-vocabulary} summarizes
+the role of each one.
+
+\begin{table}[H]
+\centering
+\caption{Vulnerability concepts used by the APK-to-SBOM workflow.}
+\label{tab:pfe-background-vulnerability-vocabulary}
+\begin{tabularx}{\textwidth}{L{0.13\textwidth}L{0.25\textwidth}X}
+\toprule
+\textbf{Term} & \textbf{Role} & \textbf{Interpretation}\\
+\midrule
+CVE & Public vulnerability identifier & Names a publicly disclosed
+vulnerability record so tools and organizations can refer to the same issue
+\cite{cveOverview}.\\
+CWE & Weakness taxonomy & Classifies recurring design and implementation
+weaknesses that may lead to vulnerabilities; it is not a component-version
+advisory list \cite{cweAbout}.\\
+NVD & Enriched vulnerability database & Adds analysis and structured data to
+CVE records, including affected-product and severity information
+\cite{nvdGeneral}.\\
+CVSS & Technical severity framework & Describes intrinsic and environmental
+severity characteristics; it does not predict whether exploitation will occur
+\cite{firstCvss}.\\
+EPSS & Exploitation-probability model & Estimates the probability that a
+published CVE will be exploited in the wild during the next 30 days
+\cite{firstEpss}.\\
+KEV & Known-exploitation catalog & Lists vulnerabilities for which CISA has
+evidence of exploitation and provides remediation-oriented operational
+priority \cite{cisaKev}.\\
+OSV & Ecosystem-aware advisory schema and service & Represents affected
+package ecosystems and version ranges and supports package/version queries
+\cite{osvSchema,osvApi}.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+These sources answer different questions. CVSS concerns severity, EPSS concerns
+forecast exploitation probability, and KEV records known exploitation. None
+of them repairs an incorrect package identity. The first requirement is still
+to determine whether an affected component and version are present.
+
+\subsection{Why Exact Identity and Version Matter}
+
+Most vulnerability advisories describe an affected package and one or more
+version ranges. Mapping the advisory to an application therefore depends on
+the chain:
+
+\begin{equation}
+\label{eq:pfe-background-vulnerability-chain}
+\text{binary evidence}
+\rightarrow
+\text{package coordinate}
+\rightarrow
+\text{version}
+\rightarrow
+\text{affected range}
+\rightarrow
+\text{vulnerability context}.
+\end{equation}
+
+An error early in the chain propagates. A wrong coordinate can produce
+unrelated advisories; a wrong version can create a false positive or hide a
+real exposure. Adjacent library versions are especially difficult because
+they may differ by only a few methods, and optimization can remove precisely
+those differences.
+
+This thesis consequently distinguishes three forms of vulnerability output:
+
+\begin{itemize}
+  \item \textbf{confirmed mapping}: the component and exact version have
+  sufficiently strong evidence, and the version falls within an advisory's
+  affected range;
+  \item \textbf{potential mapping}: the component is plausible, but version,
+  variant, reachability, or affected-range evidence is incomplete; and
+  \item \textbf{report-only enrichment}: external risk information is shown
+  for analyst review but is not allowed to change the authoritative \SBOM or
+  source-validation metrics.
+\end{itemize}
+
+Even a confirmed package/version mapping is not a proof of runtime
+exploitability. Configuration, platform behavior, call reachability, and
+mitigations still require separate assessment.
+
+\section{Android Application Ecosystem}
+
+\subsection{Application Architecture and Development}
+
+\Android applications are commonly written in Kotlin or Java, with optional
+C or C++ native code, and are executed within the \Android application
+framework and runtime. Application components such as activities, services,
+broadcast receivers, and content providers are declared through the
+application manifest and interact with platform services through framework
+APIs \cite{androidAppFundamentals,androidManifestOverview}.
+
+The standard build system uses Gradle with the Android Gradle Plugin.
+Application code, generated code, resources, local modules, and external
+dependencies are processed into an installable artifact
+\cite{androidBuildOverview}. Distribution may use an Android App Bundle,
+from which an app store generates device-specific APKs, while direct analysis
+usually receives one universal or split \APK.
+
+\subsection{JAR, AAR, and Maven Dependencies}
+
+Java libraries are commonly distributed as JAR files containing compiled JVM
+classes and metadata. Android libraries are commonly distributed as AAR
+archives, which may contain a JAR together with Android resources, a manifest,
+native libraries, consumer rules, and other Android-specific content
+\cite{androidLibrary}. Maven coordinates conventionally identify an artifact
+as \texttt{group:artifact:version}.
+
+Dependency resolution is variant-aware. Gradle selects compatible variants
+according to attributes such as platform, usage, build type, flavor, and
+target environment \cite{gradleVariantResolution}. This matters for reverse
+identification because a public dependency coordinate can resolve to
+different physical artifacts:
+
+\begin{itemize}
+  \item a base Java or Android artifact;
+  \item a Kotlin extension artifact, often identified by a \texttt{-ktx}
+  suffix;
+  \item a JVM-, Android-, or other platform-specific target;
+  \item a metadata or bill-of-materials artifact with no runtime bytecode; or
+  \item a shaded or repackaged artifact whose internal classes no longer
+  preserve the public coordinate name.
+\end{itemize}
+
+The analyzer observes the selected and transformed binary content, not the
+declarative choice that produced it. Public-coordinate, target-variant, and
+packaging differences must therefore be considered when building reference
+profiles.
+
+\section{APK Structure}
+
+\subsection{The APK as a Container}
+
+An \APK is a ZIP-format package containing executable code, resources,
+configuration, signatures, and optional native binaries. Android Studio's APK
+Analyzer exposes these archive entries and reports DEX, resource, and file
+composition information \cite{androidApkAnalyzer}. Figure
+\ref{fig:pfe-background-apk-structure} presents the main evidence-bearing
+regions.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=5mm,
+  box/.style={draw, rounded corners, align=left, text width=0.72\textwidth,
+    minimum height=8mm, fill=blue!4},
+  title/.style={draw, rounded corners, align=center, text width=0.72\textwidth,
+    minimum height=9mm, fill=schoolblue!15, font=\bfseries}
+]
+\node[title] (apk) {Android application package};
+\node[box, below=of apk] (manifest)
+  {\texttt{AndroidManifest.xml}: package, components, permissions, SDK and
+  application metadata};
+\node[box, below=of manifest] (dex)
+  {\texttt{classes.dex}, \texttt{classes2.dex}, \ldots: application and
+  embedded JVM-language bytecode};
+\node[box, below=of dex] (resources)
+  {\texttt{resources.arsc}, \texttt{res/}, and \texttt{assets/}: compiled and
+  raw resources, strings, configuration, and bundled data};
+\node[box, below=of resources] (native)
+  {\texttt{lib/<ABI>/*.so}: architecture-specific native shared libraries};
+\node[box, below=of native] (meta)
+  {\texttt{META-INF/} and signing blocks: integrity and signer evidence};
+\node[box, below=of meta] (other)
+  {Other files: configuration, models, archives, secondary payloads, or
+  nonstandard code-loading material};
+\end{tikzpicture}
+\caption{Principal APK regions and the evidence they can expose.}
+\label{fig:pfe-background-apk-structure}
+\end{figure}
+
+\subsection{Manifest, Resources, and Assets}
+
+The manifest declares the application package, components, permissions,
+features, SDK constraints, intent filters, and other installation or runtime
+metadata \cite{androidManifestOverview}. In a packaged \APK it is stored in a
+compiled binary XML representation. Manifest metadata can support application
+identification and contextual analysis, but it does not normally enumerate
+all embedded Maven dependencies.
+
+Compiled resources are indexed through \texttt{resources.arsc} and the
+\texttt{res/} hierarchy. The \texttt{assets/} directory may contain arbitrary
+application data. Resource names, strings, notices, and configuration files
+can occasionally reveal component evidence; however, these signals may be
+renamed, removed, shared among products, or unrelated to executable code.
+
+\subsection{DEX and Multidex}
+
+\DEX is the executable bytecode format used by the \Android runtime. A DEX
+file contains type, string, field, method, class, annotation, and instruction
+data. Application and dependency classes are typically merged into one or
+more DEX files, so the original JAR or AAR boundaries are no longer present.
+
+The DEX format imposes reference-index limits. Applications exceeding the
+single-DEX method-reference limit use multidex packaging, commonly producing
+\texttt{classes.dex}, \texttt{classes2.dex}, and additional numbered files
+\cite{androidMultidex}. A component detector must analyze all relevant DEX
+entries. Examining only the primary DEX can silently miss dependencies.
+
+\subsection{Signing and Native Libraries}
+
+\Android requires APKs to be digitally signed. The signing identity supports
+update trust and package integrity; modern signing schemes can protect the
+whole artifact rather than only individual ZIP entries
+\cite{androidSigning}. A signer does not identify every embedded dependency,
+but signing information is useful provenance for the application artifact.
+
+Native libraries are stored under ABI-specific directories such as
+\texttt{lib/arm64-v8a/} or \texttt{lib/x86\_64/}. An ABI defines the binary
+interface expected by a CPU architecture and platform
+\cite{androidAbi}. Native file names and hashes are observable, but general
+package and version attribution from stripped shared objects is a separate
+binary-analysis problem. This thesis therefore distinguishes native file
+evidence from Maven component identification.
+
+\subsection{Nonstandard and Dynamically Loaded Code}
+
+Not all executable behavior must appear in conventional
+\texttt{classes*.dex} entries. Applications may unpack encrypted payloads,
+load additional DEX or native code, use custom class loaders, or download code
+after installation. Android security guidance warns that dynamic code loading
+increases risk, especially when remote sources or weak integrity controls are
+used \cite{androidDynamicCode}.
+
+A static \APK analyzer can report suspicious archives, nonstandard DEX paths,
+native-heavy packages, and other observable indicators. It cannot truthfully
+inventory code that is absent, encrypted beyond available analysis, or fetched
+only at runtime. These are scope limitations, not ordinary negative detection
+results.
+
+\section{Android Compilation and Optimization}
+
+\subsection{From Source Dependencies to APK}
+
+Figure~\ref{fig:pfe-background-build-pipeline} summarizes the build path that
+turns source and external artifacts into packaged evidence.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=7mm and 7mm,
+  stage/.style={draw, rounded corners, align=center, minimum height=10mm,
+    text width=0.19\textwidth, fill=blue!5},
+  transform/.style={draw, rounded corners, align=center, minimum height=10mm,
+    text width=0.16\textwidth, fill=warningorange!12},
+  arrow/.style={-{Latex[length=2.5mm]}, thick}
+]
+\node[stage] (source) {Kotlin/Java source\\generated source};
+\node[stage, right=of source] (deps) {Resolved JAR/AAR\\dependency variants};
+\node[transform, right=of deps] (class) {JVM bytecode\\and resources};
+\node[transform, below=of class] (d8) {D8 or \Reight\\DEX transformation};
+\node[stage, left=of d8] (package) {DEX, manifest,\\resources, native files};
+\node[stage, left=of package] (signed) {Packaged and\\signed APK};
+
+\draw[arrow] (source) -- (deps);
+\draw[arrow] (deps) -- (class);
+\draw[arrow] (class) -- (d8);
+\draw[arrow] (d8) -- (package);
+\draw[arrow] (package) -- (signed);
+\end{tikzpicture}
+\caption{Simplified Android build path from source and resolved dependencies
+to a signed APK.}
+\label{fig:pfe-background-build-pipeline}
+\end{figure}
+
+Kotlin and Java sources are compiled to JVM bytecode. Resources and manifests
+are processed separately, while external artifacts are resolved according to
+the build's dependency and variant rules. D8 transforms Java bytecode into DEX
+bytecode and can receive compiled classes, JARs, APKs, and ZIP archives as
+inputs \cite{androidD8}. Packaging then combines code, resources, native
+libraries, and metadata before signing.
+
+This process destroys a convenient assumption for component recovery: the
+output is not a collection of untouched dependency archives. Classes from the
+application and many libraries coexist in merged DEX files, while AAR
+resources are merged into the application resource table.
+
+\subsection{R8 and ProGuard-Compatible Rules}
+
+\Reight combines shrinking, optimization, obfuscation, and bytecode
+transformation in the Android release build process
+\cite{androidShrinkCode}. It consumes keep rules, including rules written in
+the ProGuard configuration language, but \Reight is more than a simple
+identifier renamer.
+
+Its transformations include:
+
+\begin{itemize}
+  \item \textbf{renaming}: replacing class, method, and field names with short
+  identifiers;
+  \item \textbf{shrinking}: removing unreachable classes, methods, fields, and
+  resources;
+  \item \textbf{optimization}: rewriting instructions and simplifying control
+  or data flow;
+  \item \textbf{inlining}: moving a method body into its callers and removing
+  the original boundary;
+  \item \textbf{class merging or repackaging}: changing structural and package
+  organization; and
+  \item \textbf{constant and resource propagation}: replacing or eliminating
+  values that would otherwise provide literals or references.
+\end{itemize}
+
+Figure~\ref{fig:pfe-background-r8-evidence} relates these transformations to
+the evidence used by a component detector.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=8mm and 11mm,
+  before/.style={draw, rounded corners, align=center, text width=0.25\textwidth,
+    minimum height=11mm, fill=evidencegreen!10},
+  action/.style={draw, rounded corners, align=center, text width=0.25\textwidth,
+    minimum height=11mm, fill=warningorange!15},
+  after/.style={draw, rounded corners, align=center, text width=0.25\textwidth,
+    minimum height=11mm, fill=red!7},
+  arrow/.style={-{Latex[length=2.5mm]}, thick}
+]
+\node[before] (names) {Readable package and\\class descriptors};
+\node[action, right=of names] (rename) {Renaming and\\repackaging};
+\node[after, right=of rename] (namesloss) {Name overlap weakens};
+\node[before, below=of names] (methods) {Library methods and\\class boundaries};
+\node[action, right=of methods] (shrink) {Shrinking, inlining,\\and class merging};
+\node[after, right=of shrink] (methodloss) {Coverage and graph\\boundaries change};
+\node[before, below=of methods] (ops) {Opcodes, literals, calls,\\and dependencies};
+\node[action, right=of ops] (rewrite) {Optimization and\\constant propagation};
+\node[after, right=of rewrite] (oploss) {Some low-level signals\\survive; others drift};
+
+\draw[arrow] (names) -- (rename) -- (namesloss);
+\draw[arrow] (methods) -- (shrink) -- (methodloss);
+\draw[arrow] (ops) -- (rewrite) -- (oploss);
+\end{tikzpicture}
+\caption{How R8 transformations weaken different component-identification
+signals.}
+\label{fig:pfe-background-r8-evidence}
+\end{figure}
+
+Renaming mainly attacks textual identity, while shrinking and inlining alter
+the amount and organization of surviving code. Two neighboring versions may
+become observationally identical if \Reight removes their version-distinguishing
+methods. Conversely, a heavily transformed component may retain distinctive
+opcode, literal, call, or dependency patterns even after names disappear.
+This motivates multi-feature matching and explicit abstention.
+
+\section{Reverse Engineering and Static Analysis}
+
+\subsection{Static and Dynamic Analysis}
+
+Static analysis examines an application without executing it. For Android,
+this may include archive inspection, manifest decoding, resource analysis,
+DEX disassembly, control-flow construction, call analysis, and native binary
+inspection. OWASP describes static analysis as examining an application's
+code and resources to identify properties without runtime execution
+\cite{owaspStaticAnalysis}.
+
+Dynamic analysis observes behavior while the application runs, often through
+instrumentation, debugging, system-call observation, network interception, or
+runtime hooking. It can reveal decrypted or downloaded code and actual
+execution paths, but its coverage depends on devices, inputs, permissions, and
+the explored behavior. Reverse engineering commonly combines both approaches
+when the objective requires it \cite{owaspReverseEngineering}.
+
+The MVP in this thesis is intentionally static. Static analysis is
+reproducible, suitable for offline batch processing, and directly connected
+to the shipped \APK. The trade-off is that purely runtime or protected code
+may remain invisible.
+
+\subsection{Recoverable DEX Evidence}
+
+A DEX parser can recover several evidence families:
+
+\begin{itemize}
+  \item package and class descriptors;
+  \item fields and method signatures;
+  \item instruction opcodes and opcode-frequency summaries;
+  \item string literals and constants;
+  \item method invocations and framework API references;
+  \item inheritance, interface, field-type, and call dependencies; and
+  \item class-, method-, or basic-block-level graph structure.
+\end{itemize}
+
+These signals have different robustness. Class names can be highly
+discriminative in unobfuscated applications but fragile under renaming.
+Opcode distributions are less dependent on names but may be too coarse for
+nearby versions. Literals can distinguish releases, yet optimization may
+remove them. Dependency graphs preserve structural context, but inlining and
+class merging can change their topology. No feature family should therefore
+be interpreted independently of its failure modes.
+
+\subsection{Reverse-Engineering Challenges}
+
+Practical analysis must handle multidex applications, malformed entries,
+unusual archive paths, generated code, duplicate classes, library repackaging,
+Kotlin compiler artifacts, reflection, resource-only dependencies, native
+code, and protection systems. It must also distinguish a parse failure from an
+empty result. If one DEX file cannot be analyzed, silently treating it as
+containing no components would convert missing evidence into false negative
+evidence.
+
+Legal and ethical boundaries also matter. Reverse engineering should be
+performed on authorized artifacts for research, interoperability, audit, or
+security purposes consistent with applicable law and policy. This project
+uses static analysis to identify components and evidence; it does not attempt
+to bypass access controls or modify third-party applications.
+
+\section{Dependency and Component Identification}
+
+\subsection{Library Identity versus Version Identity}
+
+Third-party library identification asks whether code from a known component is
+present. Version identification asks which release or release range best
+explains the observed evidence. The second task is strictly harder. Many
+versions share most packages, classes, methods, and strings, while a small
+patch may change only a few instructions.
+
+This distinction is central to \SBOM and vulnerability accuracy. A detector
+may have strong evidence for \texttt{androidx.fragment:fragment} while lacking
+enough surviving evidence to separate versions \texttt{1.6.1} and
+\texttt{1.6.2}. Reporting the library identity can be justified while
+asserting an exact version cannot.
+
+\subsection{Reference Profiles}
+
+Reference-based detection begins with known artifacts. For each coordinate
+and version, the system extracts a profile containing comparable evidence,
+such as descriptors, methods, opcodes, literals, API references, and
+dependency structure. The same extraction process is applied to the target
+\APK. Comparing DEX-like representations is preferable to comparing source
+code directly with optimized DEX because it reduces representation mismatch.
+
+Reference coverage creates an important boundary. If the correct component or
+version is absent from the reference database, the matcher cannot select it.
+A high similarity to the nearest available version is not proof that the
+available version is correct. Reference absence must be represented as a
+coverage limitation rather than hidden inside the matcher score.
+
+\subsection{Candidate Generation, Similarity, and Confidence}
+
+A scalable matcher commonly uses two stages. Candidate generation removes
+obviously unrelated references through inexpensive evidence such as package
+or class overlap. Detailed scoring then combines several feature similarities
+for the remaining candidates. This coarse-to-fine pattern reduces cost, but an
+overly strict shortlist can discard the correct component after obfuscation.
+
+A weighted score can be expressed abstractly as:
+
+\begin{equation}
+\label{eq:pfe-background-weighted-score}
+S(c,v \mid A) = \sum_{i=1}^{n} w_i s_i(A,R_{c,v}),
+\end{equation}
+
+where \(A\) is the analyzed application, \(R_{c,v}\) is the reference profile
+for coordinate \(c\) and version \(v\), \(s_i\) is a feature-specific
+similarity, and \(w_i\) is its configured weight. The score ranks evidence; it
+is not automatically a calibrated probability that the component is present.
+
+Confidence also depends on separation from alternatives, feature coverage,
+evidence quality, reference completeness, and known transformations.
+Table~\ref{tab:pfe-background-identity-version} illustrates the required
+decision boundary.
+
+\begin{table}[H]
+\centering
+\caption{Example distinction between component and exact-version evidence.}
+\label{tab:pfe-background-identity-version}
+\begin{tabularx}{\textwidth}{L{0.23\textwidth}L{0.20\textwidth}XX}
+\toprule
+\textbf{Observed situation} & \textbf{Identity claim} &
+\textbf{Version claim} & \textbf{Permitted output}\\
+\midrule
+Distinctive classes, methods, literals, and structure match one reference &
+Strong & Strong and separated & Emit coordinate and exact version with
+supporting evidence\\
+Library family is clear, but two adjacent versions have nearly equal evidence
+& Strong & Ambiguous & Emit identity only or preserve both version candidates;
+do not invent a tiebreak\\
+Names are removed, while partial structural and opcode evidence remains &
+Candidate & Weak & Report as uncertain or abstain from authoritative SBOM
+emission\\
+No suitable reference exists & Unknown & Unsupported & Record a reference
+coverage gap, not component absence\\
+Only a native file hash is visible & File observation & Unsupported Maven
+version & Emit a native file component if useful, without claiming a Maven
+coordinate\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Evidence-Based SBOM Recovery}
+
+\subsection{Evidence Concepts}
+
+Evidence-based recovery treats every emitted component as a claim that must be
+connected to observable support. Five concepts organize that support:
+
+\begin{itemize}
+  \item \textbf{evidence source}: the artifact or observation from which a
+  signal was obtained;
+  \item \textbf{provenance}: the chain linking the signal to the analyzed
+  \APK, reference artifact, tool, configuration, and procedure;
+  \item \textbf{strength}: how specifically and reliably the signal supports
+  an identity or version;
+  \item \textbf{conflict}: disagreement among sources or similarly supported
+  candidates; and
+  \item \textbf{uncertainty}: the bounded lack of knowledge that remains after
+  analysis.
+\end{itemize}
+
+Evidence strength is contextual. A readable package name may be strong in a
+clear application and weak after repackaging. A shared literal may be weak
+alone but useful when combined with version-unique methods and dependency
+structure. Evidence must therefore be interpreted as a set rather than a
+collection of universally reliable indicators.
+
+\subsection{Evidence Sources and Failure Modes}
+
+Table~\ref{tab:pfe-background-evidence-sources} summarizes the main evidence
+sources available to a static APK analyzer.
+
+\begin{table}[H]
+\centering
+\caption{Static evidence sources for APK-derived SBOM recovery.}
+\label{tab:pfe-background-evidence-sources}
+\begin{tabularx}{\textwidth}{L{0.19\textwidth}L{0.29\textwidth}X}
+\toprule
+\textbf{Source} & \textbf{Useful evidence} & \textbf{Principal limitation}\\
+\midrule
+APK container & File paths, sizes, hashes, DEX inventory, native files,
+signing and suspicious payload indicators & Archive presence does not provide
+package identity for every file\\
+Manifest & Application identity, components, permissions, SDK and feature
+context & Normally does not enumerate embedded Maven dependencies\\
+DEX descriptors & Packages, classes, fields, methods, types & Renaming,
+repackaging, merging, generated code, and multidex omissions\\
+DEX instructions & Opcodes, calls, constants, strings, API references &
+Optimization, inlining, dead-code removal, and common compiler patterns\\
+Dependency structure & Class, method, inheritance, field-type, and call
+relationships & Graph topology changes under shrinking, merging, and inlining\\
+Resources and assets & Resource names, notices, metadata, bundled files and
+strings & Shared or unrelated data; removal and renaming; no guaranteed
+version semantics\\
+Native libraries & ABI, filename, size, hash, imports, and binary structure &
+Stripping, static linking, absent ecosystem identifiers, and separate native
+version-analysis requirements\\
+Reference artifacts & Known coordinate/version profiles and version-unique
+evidence & Catalog incompleteness, packaging errors, variant mismatch, and
+unavailable historical releases\\
+Source validation & Resolved Gradle dependency graph for an open-source app &
+Represents the source/build view and may differ from code surviving in the
+distributed APK\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Fusion, Conflict, and Abstention}
+
+Evidence fusion combines signals that fail differently. Names can establish
+clear identities, structural evidence can survive some renaming, literals can
+separate particular versions, and source validation can verify emitted rows
+for open-source applications. Agreement among independent signals supports a
+stronger claim than repetition of one signal family.
+
+Conflict should not be hidden by a forced maximum. If one candidate wins by
+class overlap while another wins by version-unique literals, the report should
+preserve the disagreement and identify which signal may have been affected by
+optimization or catalog error. Similarly, a narrow score margin between
+adjacent versions is evidence of ambiguity, not a reason to select the newer
+release.
+
+Abstention is therefore a valid system outcome. The analyzer may:
+
+\begin{itemize}
+  \item emit a coordinate and exact version;
+  \item emit a coordinate while withholding exact version authority;
+  \item expose ranked candidates for analyst review;
+  \item emit only a hash-based native file observation;
+  \item record a reference or parse coverage gap; or
+  \item classify the case as outside the supported static-analysis boundary.
+\end{itemize}
+
+This hierarchy prevents uncertainty from being converted into false precision.
+It also protects vulnerability analysis: a potential candidate may support a
+warning or investigation path, but it must not silently become a confirmed
+\CVE finding.
+
+\section{Conclusion}
+
+Software supply-chain security requires knowledge of the components delivered
+inside an application, yet the compiled \APK does not retain a complete
+dependency manifest. JAR and AAR boundaries are merged, DEX files combine
+application and library code, resources are processed, and \Reight may rename,
+remove, inline, or reorganize the very evidence needed for attribution.
+
+\SPDX, \CycloneDX, and Package URL provide standard structures for describing
+components, but a standard representation cannot compensate for weak
+identity or version evidence. Vulnerability databases likewise depend on
+correct package/version mapping and must remain subordinate to the certainty
+of the recovered component claim.
+
+Consequently, no single APK signal is sufficient for trustworthy recovery.
+Names, methods, opcodes, literals, dependency structure, native hashes,
+reference profiles, and source validation each contribute useful but bounded
+evidence. A defensible system must fuse these signals, retain provenance,
+expose conflicts, and abstain when exact identification is not supported. The
+next chapter examines whether machine-learning and deep-learning methods can
+assist this process while remaining outside the authoritative production
+boundary.

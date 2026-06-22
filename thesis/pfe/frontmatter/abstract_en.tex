@@ -1,0 +1,41 @@
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+Software Bills of Materials support software supply-chain transparency and
+vulnerability management, but most generation workflows rely on source code,
+build manifests, or package-manager metadata. In Android audit scenarios, the
+available artifact may be only a compiled \APK, where third-party components
+are merged into \DEX bytecode and transformed by shrinking, optimization, and
+obfuscation.
+
+This engineering thesis presents a static, evidence-gated APK-to-\SBOM
+pipeline. It extracts archive, manifest, bytecode, resource, and native-file
+evidence; compares APK features with versioned Maven reference profiles;
+separates component identity from exact-version confidence; preserves
+ambiguous alternatives; emits \CycloneDX JSON with Package URLs; and performs
+confidence-aware OSV vulnerability lookup. Source dependency trees are used
+for evaluation when available, while machine-learning and R8 assistance
+remain report-only.
+
+The evaluation separates controlled fixtures, clean and partial
+source-validated APKs, no-Maven-signal controls, full source-denominator
+coverage, source-known upper-bound recognition, failed experiments, and
+limitation cases. The system recovers 84/84 expected versions in controlled
+fixtures. Across the 102 source-validated real APKs that emitted Maven
+components, 927/1,837 emitted versions are confirmed, which is a 50.5\%
+emitted-version confirmation rate rather than full dependency recall. Four
+additional source-validated APKs emit no Maven components and are retained as
+recall controls. Against 12,082 resolved source dependency rows, 927 exact rows
+are emitted end to end. A separate source-version-constrained lane confirms
+6,772/6,772 emitted rows and is reported only as an upper bound.
+
+The resulting MVP demonstrates practical binary-derived SBOM recovery while
+exposing reference-coverage, matcher-recall, adjacent-version, artifact-family,
+native-code, hidden-code, scalability, and AI-authority limitations. Its main
+principle is to prefer auditable partial knowledge and explicit abstention over
+unsupported exact-version certainty.
+
+\vspace{0.5cm}
+\noindent\textbf{Keywords ---} Android security, APK analysis, software bill
+of materials, third-party library detection, component attribution,
+CycloneDX, vulnerability management, R8.
