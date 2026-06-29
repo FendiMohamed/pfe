@@ -1,4 +1,4 @@
-\chapter[Background and Research Methodology]{Background and Research\\ Methodology}
+\chapter[Background]{Background}
 \label{ch:master-background}
 
 \section{Introduction}
@@ -47,6 +47,197 @@ syntactically valid CycloneDX or SPDX document may contain semantically weak
 claims. Trustworthiness is consequently a property of each claim and its
 evidence trail, not of the file format alone.
 
+\section{Android Applications and Build Cycle}
+
+Android applications are built from source code, framework components,
+resources, and packaged dependencies. The platform exposes a clear execution
+model to the developer, but that model is partly transformed before the
+application reaches an analyst. Understanding the development cycle is
+therefore essential before discussing binary recovery.
+
+\subsection{Application Components}
+
+Android applications are organized around a small set of component types:
+activities for user-facing screens, services for background work, broadcast
+receivers for event-driven actions, and content providers for structured data
+sharing \cite{androidAppFundamentals}. These components are declared in the
+manifest, linked to permissions and intent filters, and connected to the
+Android framework through runtime callbacks.
+
+The manifest is important because it records the application package name,
+component declarations, permissions, SDK constraints, and other configuration
+data \cite{androidManifestOverview}. However, it does not by itself represent
+the full dependency graph of the application. A manifest can therefore support
+contextual interpretation, but it cannot be treated as a complete SBOM.
+
+\subsection{Development, Build, Packaging, and Release}
+
+Android development typically uses Gradle and the Android Gradle Plugin to
+resolve source modules and external libraries before compilation
+\cite{androidBuildOverview,gradleVariantResolution}. A dependency may resolve
+to different physical artifacts depending on platform, build type, flavor, or
+metadata-only packaging. The build cycle usually proceeds through source
+compilation, resource processing, bytecode conversion, packaging, signing,
+and distribution.
+
+Java and Kotlin source code is first compiled to JVM bytecode. D8 then
+converts that bytecode into DEX form for the Android runtime, while R8 may
+shrink, optimize, and obfuscate the release build \cite{androidD8,androidShrinkCode}. The final
+artifact therefore reflects both the build configuration and the optimization
+policy, not only the original source tree.
+
+In this context, the \emph{source project} denotes the developer-visible
+workspace: source files, Gradle scripts, manifests, resources, and declared
+dependencies. The \emph{dependency graph} is the resolved set of direct and
+transitive libraries selected for a concrete build variant. A build variant is
+important because debug and release builds, Android API targets, flavors, and
+platform attributes can lead to different resolved artifacts. The build graph
+is therefore stronger evidence than the final APK for declaring an SBOM, but
+it is not always available to an external analyst.
+
+Resolved libraries usually arrive as JAR or AAR artifacts. A JAR mainly
+contains JVM bytecode and metadata, whereas an AAR is Android-specific and may
+also contain resources, a manifest fragment, assets, and native libraries.
+During packaging, these artifacts are merged with the application code.
+Compilation and conversion then change their representation: D8 emits Android
+DEX bytecode, and R8 can remove unused classes, inline methods, rename
+identifiers, merge classes, and rewrite call sites. \emph{Shrinking} removes
+unused code and resources, while \emph{obfuscation} makes names less
+recognizable. The signed APK is the distribution artifact after these
+transformations and after integrity/authenticity metadata has been added.
+
+Figure~\ref{fig:master-android-build-stages} summarizes this development and
+release path. The figure is important because it separates the places where an
+ideal build-time SBOM can be produced from the later artifact that binary
+recovery must inspect.
+
+\begin{figure}[H]
+\centering
+\resizebox{0.96\textwidth}{!}{%
+\begin{tikzpicture}[
+  node distance=7mm and 8mm,
+  box/.style={draw, rounded corners, align=center, text width=0.18\textwidth,
+    minimum height=11mm, fill=blue!5},
+  transform/.style={draw, rounded corners, align=center, text width=0.17\textwidth,
+    minimum height=11mm, fill=warningorange!14},
+  output/.style={draw, rounded corners, align=center, text width=0.18\textwidth,
+    minimum height=11mm, fill=evidencegreen!10},
+  arrow/.style={-{Latex[length=2.5mm]}, thick}
+]
+\node[box] (project) {Source project\\code, manifest, resources};
+\node[box, right=of project] (deps) {Resolved dependency graph\\direct and transitive};
+\node[transform, right=of deps] (compile) {Compile and convert\\JVM bytecode to DEX};
+\node[transform, right=of compile] (opt) {R8 release transforms\\shrink, optimize, obfuscate};
+\node[output, right=of opt] (apk) {Signed APK\\distribution artifact};
+
+\draw[arrow] (project) -- (deps);
+\draw[arrow] (deps) -- (compile);
+\draw[arrow] (compile) -- (opt);
+\draw[arrow] (opt) -- (apk);
+\end{tikzpicture}
+}
+\caption{Android development and release stages from source project to signed APK, based on Android build documentation \cite{androidBuildOverview,androidD8,androidShrinkCode}.}
+\label{fig:master-android-build-stages}
+\end{figure}
+
+\subsection{APK Structure and DEX}
+
+An \APK is a ZIP-format archive that usually contains one or more DEX files,
+the manifest, compiled resources, raw assets, native libraries, and signing
+material \cite{androidApkAnalyzer}. The DEX files contain types, strings,
+fields, methods, classes, annotations, and instructions. When an application
+exceeds the single-DEX reference limit, multidex packaging introduces files
+such as \texttt{classes.dex} and \texttt{classes2.dex}
+\cite{androidMultidex}.
+
+This structure matters for recovery because each region contributes different
+evidence. The manifest provides configuration context, DEX files expose code
+and structural relationships, resources may reveal package or product hints,
+assets may contain bundled metadata, and native libraries may reveal
+additional files that are relevant to provenance or vulnerability analysis.
+None of these regions is a complete inventory by itself.
+
+Figure~\ref{fig:master-apk-anatomy} shows the APK as a set of complementary
+evidence regions. DEX is the main executable evidence because it contains the
+classes, methods, strings, fields, and instructions that remain after
+compilation. The manifest is declarative evidence: it names components,
+permissions, SDK constraints, package identity, and other build-time decisions.
+Resources and assets are packaging evidence; they may preserve names,
+configuration files, or markers from libraries even when Java/Kotlin names
+have been changed. Native files, typically \texttt{.so} libraries, are binary
+objects that may have their own provenance and vulnerability surface. Signing
+metadata authenticates the APK package but does not prove the correctness of
+any recovered component claim.
+
+Two additional concepts are important for structured evidence mapping. First,
+\emph{references} denote external method, field, or type calls within the DEX
+bytecode that target external packages or standard Android libraries. These
+references survive renaming and shrinking because R8 must preserve call site
+targets to maintain functionality. Second, \emph{build metadata} includes
+declared SDK levels, version codes, build variant configurations, and signing
+material. While this metadata is easy to modify, it provides essential context
+for verifying the integrity and timeline of the analyzed APK.
+
+\begin{figure}[H]
+\centering
+\resizebox{0.90\textwidth}{!}{%
+\begin{tikzpicture}[
+  node distance=6mm and 7mm,
+  center/.style={draw, rounded corners, thick, align=center, text width=0.22\textwidth,
+    minimum height=12mm, fill=evidencegreen!10},
+  part/.style={draw, rounded corners, align=center, text width=0.22\textwidth,
+    minimum height=11mm, fill=blue!5},
+  arrow/.style={-{Latex[length=2mm]}, thick}
+]
+\node[center] (apk) {APK archive\\signed distribution package};
+\node[part, above left=of apk] (dex) {DEX files\\classes, methods, opcodes};
+\node[part, above right=of apk] (manifest) {Manifest\\components, permissions, SDK};
+\node[part, below left=of apk] (resources) {Resources and assets\\layouts, strings, metadata};
+\node[part, below right=of apk] (native) {Native files\\\texttt{.so} binaries and ABI paths};
+
+\draw[arrow] (apk) -- (dex);
+\draw[arrow] (apk) -- (manifest);
+\draw[arrow] (apk) -- (resources);
+\draw[arrow] (apk) -- (native);
+\end{tikzpicture}
+}
+\caption{Main APK evidence regions used by static SBOM recovery, adapted from APK analysis documentation \cite{androidApkAnalyzer,androidManifestOverview}.}
+\label{fig:master-apk-anatomy}
+\end{figure}
+
+\subsection{Libraries and Dependencies}
+
+Android applications reuse both direct and transitive dependencies. A direct
+dependency is declared explicitly in the build; a transitive dependency is
+pulled in by another dependency. Variant-aware resolution can select Android,
+JVM, Kotlin, or metadata artifacts for the same coordinate
+\cite{gradleVariantResolution}. That is why the binary artifact may differ
+from the original source dependency declaration even when the build is
+correct.
+
+Libraries are commonly distributed as JAR or AAR files before compilation
+\cite{androidLibrary}. Their coordinates are usually expressed in Maven form,
+which makes them useful for SBOM generation and vulnerability queries.
+However, once those artifacts have been merged, transformed, or shaded into an
+APK, the library boundary is no longer directly visible. Binary recovery must
+therefore infer whether an observed feature belongs to a library family, a
+specific version, or only an uncertain candidate set.
+
+\subsection{Static and Dynamic Analysis}
+
+Static analysis inspects the APK without executing it, using archive parsing,
+manifest decoding, resource inspection, DEX disassembly, and structural
+feature extraction \cite{owaspStaticAnalysis}. Dynamic analysis observes the
+application while it runs, which can reveal runtime-loaded code or behavior
+that is invisible in the static archive \cite{owaspReverseEngineering}. Both
+approaches are useful, but they answer different questions.
+
+This thesis focuses on static analysis because the goal is to recover
+evidence from the delivered artifact itself. Dynamic analysis remains relevant
+as a future extension or validation aid, especially for encrypted payloads,
+custom class loaders, and other runtime-only behaviors
+\cite{androidDynamicCode}.
+
 \section{Trust, Evidence, Provenance, and Uncertainty}
 
 \subsection{Evidence and Claims}
@@ -57,6 +248,13 @@ class-dependency relation, a resource marker, a native-library name, or a
 source-validated expected dependency. A claim is the interpretation built
 from one or more such items, for example that a library family is present or
 that a particular version is the best-supported candidate.
+
+In this context, a \emph{bounded claim} refers to a recovered SBOM assertion
+whose certainty and completeness are strictly limited by the available binary
+evidence and compiler transformations. Unlike a build-time SBOM, which makes
+authoritative assertions based on complete project declarations, a recovered
+SBOM can make only partial claims that are bounded by what survived shrinking,
+obfuscation, and method inlining.
 
 \subsection{Provenance and Independence}
 
@@ -83,16 +281,22 @@ identity and version evidence on which it depends.
 
 \section{Android Compiled-Artifact Context}
 
-Android compilation and R8 transformations directly affect the stability and
-interpretability of recovered evidence \cite{androidShrinkCode}.
+The build-cycle concepts above explain why compiled Android evidence is
+structurally weaker than source-level dependency data. Android compilation
+and R8 transformations directly affect the stability and interpretability of
+recovered evidence \cite{androidShrinkCode}.
 
 Java or Kotlin source is compiled and transformed into \DEX bytecode, while
-resources and manifests are packaged into an \APK. Dependency boundaries that
-were explicit during the build may disappear when classes are merged into one
-or more DEX files. R8 can rename identifiers, remove unused code, rewrite
-control flow, merge classes, inline methods, and change call sites. Packaging
-may also introduce multidex layouts, shaded or relocated code, native
-libraries, generated classes, and dynamically loaded components.
+resources and manifests are packaged into an \APK. Android applications
+therefore carry both executable code and declarative metadata: the final
+artifact can still expose components, permissions, SDK constraints, resource
+names, and native binaries, but those signals no longer appear in the same
+shape as the original source tree \cite{androidAppFundamentals,androidBuildOverview,androidManifestOverview,androidApkAnalyzer}. Dependency boundaries that were explicit
+during the build may disappear when classes are merged into one or more DEX
+files. R8 can rename identifiers, remove unused code, rewrite control flow,
+merge classes, inline methods, and change call sites. Packaging may also
+introduce multidex layouts, shaded or relocated code, native libraries,
+generated classes, and dynamically loaded components.
 
 These transformations do not affect all evidence equally. Names and package
 trees are inexpensive but fragile. Opcode, control-flow, call, and dependency
@@ -136,7 +340,7 @@ APK after boundaries, names, and unused code have changed.
   {related but\\not identical} (recovered);
 \end{tikzpicture}
 }
-\caption{Android build and evidence-loss path from resolved dependencies to a recovered SBOM claim.}
+\caption{Android build and evidence-loss path from resolved dependencies to a recovered SBOM claim, adapted from Android build and APK analysis documentation \cite{androidBuildOverview,androidApkAnalyzer}.}
 \label{fig:master-android-build-evidence}
 \end{figure}
 
@@ -223,130 +427,20 @@ No family is assumed to be universally authoritative. The framework evaluates
 its origin, transformation resilience, version specificity, independence,
 coverage, and validation status.
 
-\section{Structured Literature Review Methodology}
-
-The literature study follows a frozen structured mapping protocol adapted from
-software-engineering systematic-review guidance
-\cite{kitchenham2007guidelines}. It is not presented as a completed exhaustive
-systematic literature review because the initial corpus was assembled
-iteratively before the protocol freeze. Instead, the protocol makes the
-existing corpus auditable and governs all future search refreshes, screening,
-extraction, and synthesis.
-
-\subsection{Review Questions and Search Strategy}
-
-The review asks which evidence sources and attribution techniques are used,
-which Android transformations threaten them, how identity and version results
-are evaluated, how uncertainty and provenance are represented, and which gaps
-prevent trustworthy \SBOM claims. Searches combine four concept blocks:
-Android artifacts; third-party components or SBOMs; detection or attribution
-tasks; and obfuscation, optimization, version, or vulnerability terms.
-
-Primary search sources include ACM Digital Library, IEEE Xplore, SpringerLink,
-ScienceDirect, USENIX, and arXiv. Google Scholar is restricted to discovery
-and citation chaining. The date scope begins in 2015 and continues through the
-recorded search date. The canonical query and the recording requirements for
-future database-specific adaptations are preserved in
-\cref{app:master-review-protocol}. Because the seed corpus predates the
-protocol freeze, the original database-specific query executions and result
-counts cannot be reconstructed retrospectively.
-
-\subsection{Eligibility and Screening}
-
-Eligible studies propose or evaluate Android binary component attribution,
-version identification, relevant benchmarks, empirical assessments, or
-SBOM-oriented recovery frameworks. Studies based only on authoritative source
-manifests, unrelated malware classification, product pages, duplicates, and
-records without extractable methodology are excluded.
-
-Records are deduplicated and screened by title and abstract. Full-text
-eligibility assessment and structured extraction are completed for Tier A;
-records without a verified local full text remain Tier B pending that stage.
-Related conference and journal publications are treated as one study family
-unless the later publication contributes distinct methods, datasets, or
-results.
-
-\subsection{Evidence Tiers}
-
-The frozen seed corpus contains 20 publication units. Fifteen have locally
-inspected full texts and form \emph{Tier A}. Five are \emph{Tier B}
-supplementary records whose metadata or structured notes are available but
-whose local full texts have not yet been verified. Tier B records may inform
-search coverage and provisional gap mapping, but they cannot independently
-support precise quantitative conclusions. Standards and official platform
-documentation form contextual \emph{Tier C} and are not counted as primary
-studies.
-
-\section{Analysis Dimensions}
-
-Each included study is extracted across common dimensions: task granularity,
-input assumptions, segmentation, evidence families, matching or learning
-method, transformation coverage, ground truth, dataset composition, metrics,
-confidence and ambiguity behavior, reference dependence, artifact
-availability, SBOM output, vulnerability mapping, and stated limitations.
-
-Tier A studies are additionally assessed against eight reporting-quality
-questions covering objective clarity, reproducibility, ground truth, metric
-definition, transformation conditions, identity/version separation, artifact
-availability, and threats to validity. Quality affects the weight of a study
-in synthesis but does not automatically erase historically important work.
-
-Synthesis is narrative and taxonomy-based. Metrics are compared only when
-their task unit, dataset, ground truth, and transformation conditions are
-compatible. Original-paper results remain separate from later independent
-benchmarks, and library-level, class-level, and version-level results are
-never merged into a single ranking.
-
-\section{Threats to the Review}
-
-\subsection{Search and Selection Bias}
-
-The pre-protocol corpus was built iteratively and may overrepresent well-known
-Android security venues or studies connected through citation chains. The
-frozen search blocks, multiple publisher databases, and explicit refresh log
-reduce but do not eliminate this risk. The original database-specific queries,
-raw result counts, and deduplicated flow were not retained before the freeze,
-so the protocol cannot retroactively establish an exhaustive or PRISMA-style
-selection history for the seed corpus. Those fields are mandatory for every
-future refresh.
-
-\subsection{Availability and Recency}
-
-Several recent or emerging studies currently exist only as supplementary
-records. Treating them as Tier B prevents incomplete metadata from acquiring
-the same authority as inspected full text. TPL-Benchmark and UniBOM were
-promoted after local full-text, bibliographic, extraction, and quality checks;
-the remaining classifications may change only after the same checks, and all
-such changes must be logged.
-
-\subsection{Heterogeneous Evaluation}
-
-Reported accuracy values often refer to different task definitions, datasets,
-library versions, obfuscators, and ground-truth procedures. Direct numerical
-ranking can therefore be misleading. The review preserves these conditions
-and prefers qualified comparison over pooled scores.
-
-\subsection{Reviewer and Extraction Bias}
-
-The current review is primarily maintained by one researcher. A fixed
-extraction schema, explicit \texttt{NR} values for unreported information,
-source citations, and retained structured records provide an audit trail. A
-later independent screening sample would further strengthen reliability.
-
 \section{Conclusion}
 
 This chapter separated a valid SBOM representation from the evidential
 strength of its contents and defined component attribution as a sequence of
 identity, version, and security-authority decisions. It also froze a
-structured mapping protocol that prevents unavailable full texts, incompatible
-metrics, and correlated signals from being silently promoted into strong
-claims.
+structured mapping protocol that prevents unavailable full texts,
+incompatible metrics, and correlated signals from being silently promoted
+into strong claims.
 
 These background concepts explain why Android APK-to-SBOM recovery cannot be
 evaluated through a single accuracy value. The same output may be trustworthy
 as a library-family hint, weak as an exact-version assertion, and unsafe as a
 vulnerability conclusion. A reliable review must therefore preserve the
 evidence source, transformation setting, reference coverage, denominator, and
-validation context attached to each reported result. The next chapter applies
-these rules to classify the state of the art and identify the remaining
-research gaps.
+validation context attached to each reported result. The next chapter
+summarizes the frozen review protocol and applies these rules to classify the
+state of the art and identify the remaining research gaps.
