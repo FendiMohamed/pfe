@@ -73,7 +73,8 @@ metadata has been transformed or removed.
 \draw[arrow] (advisory.east) -- (analyst.west);
 \end{tikzpicture}
 \caption{Android software-supply-chain context: dependencies enter before the
-build, while the auditor may observe only the compiled APK.}
+build, while the auditor may observe only the compiled APK, adapted from
+software-supply-chain and SBOM guidance \cite{nist2022csc,ntiaSbom,spdxSpecification,cyclonedxSpecification}.}
 \label{fig:pfe-intro-supply-chain}
 \end{figure}
 
@@ -201,7 +202,8 @@ observations and known references.
   {related views,\\not identical} (recovered);
 \end{tikzpicture}
 \caption{Source-based SBOM generation and binary-only SBOM recovery answer
-related but non-identical composition questions.}
+related but non-identical composition questions, adapted from Android build
+and analysis documentation \cite{androidBuildOverview,androidManifestOverview,androidApkAnalyzer,androidShrinkCode}.}
 \label{fig:pfe-intro-source-binary}
 \end{figure}
 

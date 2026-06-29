@@ -22,8 +22,19 @@ limitation of each result.
 \section{Development Environment}
 
 The implementation uses a small set of technologies selected for
-reproducibility rather than for visual demonstration. Table~\ref{tab:pfe-dev-env}
-summarizes their role.
+reproducibility rather than for visual demonstration. The environment was
+fixed so that parsing, matching, reference construction, reporting, and
+regression testing could be repeated across the same evidence lanes without
+changing the underlying toolchain. Table~\ref{tab:pfe-dev-env} summarizes the
+role of each component.
+
+The Docker image includes Java, Android command-line tools, D8, several
+Gradle versions, and optional external SBOM scanners. Multiple Gradle
+versions are necessary because the real-APK source-validation set contains
+both modern and legacy Android projects. The core matcher itself does not
+require network access after the APK and SQLite reference database are
+available. Network access is needed only for operations such as Maven
+acquisition and OSV queries.
 
 \begin{table}[H]
 \centering
@@ -54,14 +65,6 @@ tests.\\
 \bottomrule
 \end{tabularx}
 \end{table}
-
-The Docker image includes Java, Android command-line tools, D8, several Gradle
-versions, and optional external SBOM scanners. Multiple Gradle versions are
-necessary because the real-APK source-validation set contains both modern and
-legacy Android projects. The core matcher itself does not require network
-access after the APK and SQLite reference database are available. Network
-access is needed only for operations such as Maven acquisition and OSV
-queries.
 
 During the final evidence freeze, the local project virtual environment passed
 all 275 tests in 34.64 seconds. A separate compilation check over
@@ -630,6 +633,52 @@ runs also produced \path{report.json}, \path{report.md},
 implemented end-to-end output path without introducing a new evaluation
 denominator.
 
+The dashboard sequence should be read as a layered evidence story. The summary
+panel shows the APK metadata and the total number of detected components; the
+component panels show which versions were selected and how much evidence each
+row had; the version-decision panels expose the score gaps and the remaining
+alternatives; and the tail panels show whether the run returned vulnerabilities
+or only artifact evidence. In the clean lane, zero vulnerabilities is a
+negative-control result, not a failure. In the controlled Jackson lane, the
+single selected component and the three HIGH advisories are meaningful only
+because the source-validation path and the vulnerability lookup agree on the
+same version.
+
+For the clean F-Droid run, Figures~\ref{fig:pfe-dashboard-clean-summary}
+to~\ref{fig:pfe-dashboard-clean-tail} should therefore be interpreted as a
+complete successful run whose security output is empty. The first panel records
+the analyzed APK and confirms that extraction, matching, SBOM generation, and
+OSV lookup all executed. The component panels then show that the tool did not
+stop at a single coarse application-level result: it emitted 23 Maven
+components, attached confidence values to the selected versions, and preserved
+evidence links for analyst inspection. The version-decision panels are
+especially important because they show the alternatives that were considered
+and rejected. A row with a small score gap or an uncertain label is not hidden;
+it remains visible as bounded evidence rather than being promoted to a stronger
+claim. Finally, the findings panel reports zero vulnerabilities while still
+listing generated artifacts and native-library observations. This means that
+the absence of CVEs is an interpreted result of the selected versions and OSV
+responses, not evidence that the APK contained no libraries or that the
+analysis failed.
+
+For the controlled vulnerable Jackson run,
+Figures~\ref{fig:pfe-dashboard-vulnerable-summary}
+to~\ref{fig:pfe-dashboard-vulnerable-tail} demonstrate the opposite case: a
+small APK intentionally carries one vulnerable component, and the dashboard
+must make that positive result auditable. The summary panel shows one detected
+Maven component and three vulnerability findings, so the reader can immediately
+distinguish this case from the clean negative control. The component and
+version-decision panel then explains why the vulnerability lookup is allowed:
+the selected coordinate is Jackson Databind, the selected version is
+\texttt{2.9.10.8}, and the confidence fields mark the decision as exact/high
+rather than approximate. The CVE panel completes the evidence chain by showing
+that OSV maps that same version to CVE-2020-36518, CVE-2022-42003, and
+CVE-2022-42004. The dashboard therefore connects component recovery, version
+selection, vulnerability lookup, and report persistence in one readable
+artifact. The important point is not merely that three HIGH advisories appear,
+but that their authority is bounded by the recovered version evidence shown in
+the preceding panels.
+
 \begin{figure}[p]
 \centering
 \includegraphics[width=\textwidth,height=0.78\textheight,keepaspectratio]{figures/clean-dashboard-01-summary.png}
@@ -732,6 +781,13 @@ discarding potentially useful triage information.
 The AI layer was evaluated after the deterministic pipeline and evidence
 exports were available. Its purpose is risk triage and investigation routing,
 not direct component authority.
+
+The AI figures should be read in the same report-only way. The Random Forest
+and Transformer panels summarize suggestions, confidence, and routing status,
+but they do not mutate selected components, versions, or vulnerability labels.
+In other words, the visuals tell the reader where the assistant would focus
+attention, while the deterministic matcher remains the only authority for the
+SBOM and CVE path.
 
 \begin{table}[H]
 \centering
