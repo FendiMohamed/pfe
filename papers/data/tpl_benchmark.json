@@ -1,0 +1,54 @@
+{
+  "id": "tpl_benchmark",
+  "title": "Revisiting Third-Party Library Detection: A Ground Truth Dataset and Its Implications Across Security Tasks",
+  "authors": [
+    "Jintao Gu",
+    "Haolang Lu",
+    "Guoshun Nan",
+    "Yihan Lin",
+    "Kun Wang",
+    "Yuchun Guo",
+    "Yigui Cao",
+    "Yang Liu"
+  ],
+  "year": 2025,
+  "publication_type": "arXiv preprint",
+  "identifier": "10.48550/arXiv.2509.04091",
+  "evidence_tier": "Tier A",
+  "local_full_text": "ressources/papers/Revisiting Third-Party Library Detection - TPL-Benchmark.pdf",
+  "objective": "Construct realistic version-level Android TPL ground truth and reevaluate state-of-the-art detectors under a shared benchmark.",
+  "task_granularity": [
+    "library presence",
+    "version-level detection",
+    "cross-tool benchmark",
+    "downstream security-task analysis"
+  ],
+  "inputs_and_assumptions": "Real Android applications with remote and local dependency evidence; tool-specific reference profiling and compatibility constraints remain relevant.",
+  "ground_truth_and_dataset": "The benchmark contains more than 6,000 applications with version-level annotations. The standardized detector comparison uses a 946-application compatible slice and preserves the benchmark's stated limitations as a practical approximation rather than an absolute standard.",
+  "evaluation": {
+    "tools": 10,
+    "best_library_level_f1": "LibPecker, 60.15%",
+    "best_version_level_recall": "LibHunter, 76.48%",
+    "libpecker_version_level_f1": "49.28%",
+    "libhunter_version_level_f1": "39.69%"
+  },
+  "transformation_findings": "R8-era shrinking and optimization expose substantial recall and version-discrimination weaknesses; results depend on method family and compatibility.",
+  "uncertainty_and_limitations": [
+    "Ground truth is described by the authors as a practical approximation.",
+    "Only compatible tools and applications can enter the common evaluation slice.",
+    "Cross-tool results diagnose limitations but do not provide a new production detector."
+  ],
+  "artifact_availability": "The paper presents TPL-Benchmark and TPL-Extractor as open research artifacts.",
+  "sbom_relevance": "Directly supports realistic evaluation, denominator transparency, identity/version separation, and caution against treating original-paper metrics as universal.",
+  "quality_assessment": {
+    "q1_objective": 1,
+    "q2_method": 1,
+    "q3_dataset_ground_truth": 1,
+    "q4_task_metrics": 1,
+    "q5_transformations": 1,
+    "q6_identity_version_separation": 1,
+    "q7_artifact_availability": 1,
+    "q8_limitations": 1,
+    "total": 8.0
+  }
+}
