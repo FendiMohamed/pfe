@@ -1,0 +1,1281 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "pkg:maven/androidx.gridlayout/gridlayout@1.0.0",
+      "group": "androidx.gridlayout",
+      "name": "gridlayout",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.972"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.983"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "high"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "confirmed"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.972"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "high"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "exact"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-exact"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"1/1 reference packages matched; score=1.000\", \"source\": \"package-overlap\", \"weight\": 1.0}, {\"detail\": \"21/21 reference classes matched; score=1.000\", \"source\": \"class-overlap\", \"weight\": 1.0}, {\"detail\": \"206/217 reference methods matched; score=0.949\", \"source\": \"method-overlap\", \"weight\": 0.949309}, {\"detail\": \"88 shared opcode kinds; score=0.940\", \"source\": \"opcode-cosine\", \"weight\": 0.940207}, {\"detail\": \"52/52 reference dependency edges matched; edge_score=1.000; shape_score=0.988; score=0.996\", \"source\": \"class-dependency-graph\", \"weight\": 0.995671}, {\"detail\": \"35/35 reference string literals matched; score=1.000\", \"source\": \"string-literals\", \"weight\": 1.0}, {\"detail\": \"unique classes 0/0; unique methods 5/6; unique literals 2/2; score=0.885\", \"source\": \"version-unique-features\", \"weight\": 0.884615}, {\"detail\": \"confirmed identity with high confidence; identity_score=0.983\", \"source\": \"identity-decision\", \"weight\": 0.98345}, {\"detail\": \"exact version decision with high confidence; gap_to_next=0.084; alternatives=1.1.0:0.889\", \"source\": \"version-decision\", \"weight\": 0.972369}]"
+        }
+      ],
+      "purl": "pkg:maven/androidx.gridlayout/gridlayout@1.0.0",
+      "type": "library",
+      "version": "1.0.0"
+    },
+    {
+      "bom-ref": "pkg:maven/androidx.localbroadcastmanager/localbroadcastmanager@1.0.0",
+      "group": "androidx.localbroadcastmanager",
+      "name": "localbroadcastmanager",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.871"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.962"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "high"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "confirmed"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.871"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"1/1 reference packages matched; score=1.000\", \"source\": \"package-overlap\", \"weight\": 1.0}, {\"detail\": \"4/4 reference classes matched; score=1.000\", \"source\": \"class-overlap\", \"weight\": 1.0}, {\"detail\": \"12/13 reference methods matched; score=0.923\", \"source\": \"method-overlap\", \"weight\": 0.923077}, {\"detail\": \"47 shared opcode kinds; score=0.899\", \"source\": \"opcode-cosine\", \"weight\": 0.898584}, {\"detail\": \"2/2 reference dependency edges matched; edge_score=1.000; shape_score=0.637; score=0.873\", \"source\": \"class-dependency-graph\", \"weight\": 0.872848}, {\"detail\": \"18/18 reference string literals matched; score=1.000\", \"source\": \"string-literals\", \"weight\": 1.0}, {\"detail\": \"unique classes 0/0; unique methods 0/0; unique literals 0/0; score=0.000\", \"source\": \"version-unique-features\", \"weight\": 0.0}, {\"detail\": \"confirmed identity with high confidence; identity_score=0.962\", \"source\": \"identity-decision\", \"weight\": 0.961759}, {\"detail\": \"candidate version decision with low confidence; gap_to_next=0.000; alternatives=1.1.0:0.871\", \"source\": \"version-decision\", \"weight\": 0.871417}]"
+        }
+      ],
+      "purl": "pkg:maven/androidx.localbroadcastmanager/localbroadcastmanager@1.0.0",
+      "type": "library",
+      "version": "1.0.0"
+    },
+    {
+      "bom-ref": "pkg:maven/androidx.swiperefreshlayout/swiperefreshlayout@1.0.0",
+      "group": "androidx.swiperefreshlayout",
+      "name": "swiperefreshlayout",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.870"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.919"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "high"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "confirmed"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.870"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-likely"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"1/1 reference packages matched; score=1.000\", \"source\": \"package-overlap\", \"weight\": 1.0}, {\"detail\": \"17/18 reference classes matched; score=0.944\", \"source\": \"class-overlap\", \"weight\": 0.944444}, {\"detail\": \"155/190 reference methods matched; score=0.816\", \"source\": \"method-overlap\", \"weight\": 0.815789}, {\"detail\": \"90 shared opcode kinds; score=0.783\", \"source\": \"opcode-cosine\", \"weight\": 0.782535}, {\"detail\": \"33/35 reference dependency edges matched; edge_score=0.943; shape_score=0.952; score=0.946\", \"source\": \"class-dependency-graph\", \"weight\": 0.945994}, {\"detail\": \"4/4 reference string literals matched; score=1.000\", \"source\": \"string-literals\", \"weight\": 1.0}, {\"detail\": \"unique classes 0/0; unique methods 1/2; unique literals 0/0; score=0.500\", \"source\": \"version-unique-features\", \"weight\": 0.5}, {\"detail\": \"confirmed identity with high confidence; identity_score=0.919\", \"source\": \"identity-decision\", \"weight\": 0.919344}, {\"detail\": \"likely version decision with medium confidence; gap_to_next=0.189; alternatives=1.2.0:0.681\", \"source\": \"version-decision\", \"weight\": 0.869944}]"
+        }
+      ],
+      "purl": "pkg:maven/androidx.swiperefreshlayout/swiperefreshlayout@1.0.0",
+      "type": "library",
+      "version": "1.0.0"
+    },
+    {
+      "bom-ref": "pkg:maven/androidx.concurrent/concurrent-futures@1.1.0",
+      "group": "androidx.concurrent",
+      "name": "concurrent-futures",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.843"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.937"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "high"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "confirmed"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.843"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"1/1 reference packages matched; score=1.000\", \"source\": \"package-overlap\", \"weight\": 1.0}, {\"detail\": \"18/20 reference classes matched; score=0.900\", \"source\": \"class-overlap\", \"weight\": 0.9}, {\"detail\": \"92/101 reference methods matched; score=0.911\", \"source\": \"method-overlap\", \"weight\": 0.910891}, {\"detail\": \"57 shared opcode kinds; score=0.953\", \"source\": \"opcode-cosine\", \"weight\": 0.953236}, {\"detail\": \"27/29 reference dependency edges matched; edge_score=0.931; shape_score=0.967; score=0.944\", \"source\": \"class-dependency-graph\", \"weight\": 0.943675}, {\"detail\": \"38/40 reference string literals matched; score=0.950\", \"source\": \"string-literals\", \"weight\": 0.95}, {\"detail\": \"unique classes 0/0; unique methods 0/0; unique literals 0/0; score=0.000\", \"source\": \"version-unique-features\", \"weight\": 0.0}, {\"detail\": \"confirmed identity with high confidence; identity_score=0.937\", \"source\": \"identity-decision\", \"weight\": 0.936869}, {\"detail\": \"candidate version decision with low confidence; gap_to_next=0.002; alternatives=1.3.0:0.841\", \"source\": \"version-decision\", \"weight\": 0.843135}]"
+        }
+      ],
+      "purl": "pkg:maven/androidx.concurrent/concurrent-futures@1.1.0",
+      "type": "library",
+      "version": "1.1.0"
+    },
+    {
+      "bom-ref": "pkg:maven/androidx.recyclerview/recyclerview@1.4.0",
+      "group": "androidx.recyclerview",
+      "name": "recyclerview",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.832"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.835"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.832"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-likely"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"1/1 reference packages matched; score=1.000\", \"source\": \"package-overlap\", \"weight\": 1.0}, {\"detail\": \"152/205 reference classes matched; score=0.741\", \"source\": \"class-overlap\", \"weight\": 0.741463}, {\"detail\": \"1751/2146 reference methods matched; score=0.816\", \"source\": \"method-overlap\", \"weight\": 0.815937}, {\"detail\": \"146 shared opcode kinds; score=0.875\", \"source\": \"opcode-cosine\", \"weight\": 0.874894}, {\"detail\": \"414/576 reference dependency edges matched; edge_score=0.719; shape_score=0.992; score=0.815\", \"source\": \"class-dependency-graph\", \"weight\": 0.814526}, {\"detail\": \"251/312 reference string literals matched; score=0.804\", \"source\": \"string-literals\", \"weight\": 0.804487}, {\"detail\": \"unique classes 3/3; unique methods 78/83; unique literals 64/65; score=0.970\", \"source\": \"version-unique-features\", \"weight\": 0.969815}, {\"detail\": \"likely identity with medium confidence; identity_score=0.835\", \"source\": \"identity-decision\", \"weight\": 0.835017}, {\"detail\": \"likely version decision with medium confidence; gap_to_next=0.098; alternatives=1.2.1:0.733\", \"source\": \"version-decision\", \"weight\": 0.831589}]"
+        }
+      ],
+      "purl": "pkg:maven/androidx.recyclerview/recyclerview@1.4.0",
+      "type": "library",
+      "version": "1.4.0"
+    },
+    {
+      "bom-ref": "pkg:maven/androidx.appcompat/appcompat@1.7.0",
+      "group": "androidx.appcompat",
+      "name": "appcompat",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.815"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.802"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.815"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-likely"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"6/7 reference packages matched; score=0.857\", \"source\": \"package-overlap\", \"weight\": 0.857143}, {\"detail\": \"309/411 reference classes matched; score=0.752\", \"source\": \"class-overlap\", \"weight\": 0.751825}, {\"detail\": \"3138/4146 reference methods matched; score=0.757\", \"source\": \"method-overlap\", \"weight\": 0.756874}, {\"detail\": \"155 shared opcode kinds; score=0.910\", \"source\": \"opcode-cosine\", \"weight\": 0.910376}, {\"detail\": \"714/917 reference dependency edges matched; edge_score=0.779; shape_score=0.986; score=0.851\", \"source\": \"class-dependency-graph\", \"weight\": 0.851185}, {\"detail\": \"299/385 reference string literals matched; score=0.777\", \"source\": \"string-literals\", \"weight\": 0.776623}, {\"detail\": \"unique classes 0/0; unique methods 2/2; unique literals 0/0; score=1.000\", \"source\": \"version-unique-features\", \"weight\": 1.0}, {\"detail\": \"likely identity with medium confidence; identity_score=0.802\", \"source\": \"identity-decision\", \"weight\": 0.802169}, {\"detail\": \"likely version decision with medium confidence; gap_to_next=0.092; alternatives=1.7.1:0.723\", \"source\": \"version-decision\", \"weight\": 0.81532}]"
+        }
+      ],
+      "purl": "pkg:maven/androidx.appcompat/appcompat@1.7.0",
+      "type": "library",
+      "version": "1.7.0"
+    },
+    {
+      "bom-ref": "pkg:maven/androidx.lifecycle/lifecycle-viewmodel-android@2.8.7",
+      "group": "androidx.lifecycle",
+      "name": "lifecycle-viewmodel-android",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.808"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.822"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.808"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-likely"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"3/3 reference packages matched; score=1.000\", \"source\": \"package-overlap\", \"weight\": 1.0}, {\"detail\": \"37/50 reference classes matched; score=0.740\", \"source\": \"class-overlap\", \"weight\": 0.74}, {\"detail\": \"131/178 reference methods matched; score=0.736\", \"source\": \"method-overlap\", \"weight\": 0.735955}, {\"detail\": \"44 shared opcode kinds; score=0.851\", \"source\": \"opcode-cosine\", \"weight\": 0.851027}, {\"detail\": \"76/94 reference dependency edges matched; edge_score=0.809; shape_score=0.980; score=0.869\", \"source\": \"class-dependency-graph\", \"weight\": 0.868627}, {\"detail\": \"33/41 reference string literals matched; score=0.805\", \"source\": \"string-literals\", \"weight\": 0.804878}, {\"detail\": \"unique classes 7/8; unique methods 27/33; unique literals 3/3; score=0.874\", \"source\": \"version-unique-features\", \"weight\": 0.874432}, {\"detail\": \"likely identity with medium confidence; identity_score=0.822\", \"source\": \"identity-decision\", \"weight\": 0.821644}, {\"detail\": \"likely version decision with medium confidence; gap_to_next=0.222; alternatives=2.10.0:0.587\", \"source\": \"version-decision\", \"weight\": 0.808329}, {\"detail\": \"Selected androidx.lifecycle:lifecycle-viewmodel-android@2.8.7 for androidx.lifecycle:lifecycle-viewmodel-family; suppressed overlapping candidate(s): androidx.lifecycle:lifecycle-viewmodel@2.6.2:0.685. Reason: Android target variants can share bytecode evidence with the public Lifecycle ViewModel coordinate.\", \"source\": \"artifact-family-disambiguation\", \"weight\": 0.808329}]"
+        }
+      ],
+      "purl": "pkg:maven/androidx.lifecycle/lifecycle-viewmodel-android@2.8.7",
+      "type": "library",
+      "version": "2.8.7"
+    },
+    {
+      "bom-ref": "pkg:maven/com.squareup.okhttp3/okhttp@4.12.0",
+      "group": "com.squareup.okhttp3",
+      "name": "okhttp",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.807"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.802"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.807"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-likely"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"15/18 reference packages matched; score=0.833\", \"source\": \"package-overlap\", \"weight\": 0.833333}, {\"detail\": \"258/322 reference classes matched; score=0.801\", \"source\": \"class-overlap\", \"weight\": 0.801242}, {\"detail\": \"1740/2764 reference methods matched; score=0.630\", \"source\": \"method-overlap\", \"weight\": 0.629522}, {\"detail\": \"140 shared opcode kinds; score=0.945\", \"source\": \"opcode-cosine\", \"weight\": 0.94535}, {\"detail\": \"723/919 reference dependency edges matched; edge_score=0.787; shape_score=0.992; score=0.859\", \"source\": \"class-dependency-graph\", \"weight\": 0.858521}, {\"detail\": \"1124/1266 reference string literals matched; score=0.888\", \"source\": \"string-literals\", \"weight\": 0.887836}, {\"detail\": \"unique classes 4/4; unique methods 12/12; unique literals 2/4; score=0.900\", \"source\": \"version-unique-features\", \"weight\": 0.9}, {\"detail\": \"likely identity with medium confidence; identity_score=0.802\", \"source\": \"identity-decision\", \"weight\": 0.802114}, {\"detail\": \"likely version decision with medium confidence; gap_to_next=0.074; alternatives=4.10.0:0.733, 4.9.1:0.703, 4.9.0:0.703\", \"source\": \"version-decision\", \"weight\": 0.807401}]"
+        }
+      ],
+      "purl": "pkg:maven/com.squareup.okhttp3/okhttp@4.12.0",
+      "type": "library",
+      "version": "4.12.0"
+    },
+    {
+      "bom-ref": "pkg:maven/androidx.exifinterface/exifinterface@1.3.6",
+      "group": "androidx.exifinterface",
+      "name": "exifinterface",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.792"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.813"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.792"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-likely"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"1/1 reference packages matched; score=1.000\", \"source\": \"package-overlap\", \"weight\": 1.0}, {\"detail\": \"10/13 reference classes matched; score=0.769\", \"source\": \"class-overlap\", \"weight\": 0.769231}, {\"detail\": \"105/177 reference methods matched; score=0.593\", \"source\": \"method-overlap\", \"weight\": 0.59322}, {\"detail\": \"133 shared opcode kinds; score=0.923\", \"source\": \"opcode-cosine\", \"weight\": 0.923256}, {\"detail\": \"10/11 reference dependency edges matched; edge_score=0.909; shape_score=0.836; score=0.883\", \"source\": \"class-dependency-graph\", \"weight\": 0.883377}, {\"detail\": \"312/374 reference string literals matched; score=0.834\", \"source\": \"string-literals\", \"weight\": 0.834225}, {\"detail\": \"unique classes 1/1; unique methods 8/13; unique literals 12/17; score=0.768\", \"source\": \"version-unique-features\", \"weight\": 0.7681}, {\"detail\": \"likely identity with medium confidence; identity_score=0.813\", \"source\": \"identity-decision\", \"weight\": 0.813499}, {\"detail\": \"likely version decision with medium confidence; gap_to_next=0.094; alternatives=1.4.2:0.699\", \"source\": \"version-decision\", \"weight\": 0.792458}]"
+        }
+      ],
+      "purl": "pkg:maven/androidx.exifinterface/exifinterface@1.3.6",
+      "type": "library",
+      "version": "1.3.6"
+    },
+    {
+      "bom-ref": "pkg:maven/io.ktor/ktor-client-okhttp-jvm@2.3.12",
+      "group": "io.ktor",
+      "name": "ktor-client-okhttp-jvm",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.788"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.877"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.788"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"1/1 reference packages matched; score=1.000\", \"source\": \"package-overlap\", \"weight\": 1.0}, {\"detail\": \"31/35 reference classes matched; score=0.886\", \"source\": \"class-overlap\", \"weight\": 0.885714}, {\"detail\": \"138/178 reference methods matched; score=0.775\", \"source\": \"method-overlap\", \"weight\": 0.775281}, {\"detail\": \"56 shared opcode kinds; score=0.858\", \"source\": \"opcode-cosine\", \"weight\": 0.857762}, {\"detail\": \"13/13 reference dependency edges matched; edge_score=1.000; shape_score=0.522; score=0.833\", \"source\": \"class-dependency-graph\", \"weight\": 0.832765}, {\"detail\": \"42/48 reference string literals matched; score=0.875\", \"source\": \"string-literals\", \"weight\": 0.875}, {\"detail\": \"unique classes 0/0; unique methods 0/0; unique literals 0/0; score=0.000\", \"source\": \"version-unique-features\", \"weight\": 0.0}, {\"detail\": \"likely identity with medium confidence; identity_score=0.877\", \"source\": \"identity-decision\", \"weight\": 0.877323}, {\"detail\": \"candidate version decision with low confidence; gap_to_next=0.788; alternatives=none\", \"source\": \"version-decision\", \"weight\": 0.787948}]"
+        }
+      ],
+      "purl": "pkg:maven/io.ktor/ktor-client-okhttp-jvm@2.3.12",
+      "type": "library",
+      "version": "2.3.12"
+    },
+    {
+      "bom-ref": "pkg:maven/androidx.work/work-runtime@2.10.0",
+      "group": "androidx.work",
+      "name": "work-runtime",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.752"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.757"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.752"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-likely"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"14/19 reference packages matched; score=0.737\", \"source\": \"package-overlap\", \"weight\": 0.736842}, {\"detail\": \"370/527 reference classes matched; score=0.702\", \"source\": \"class-overlap\", \"weight\": 0.702087}, {\"detail\": \"1714/2663 reference methods matched; score=0.644\", \"source\": \"method-overlap\", \"weight\": 0.643635}, {\"detail\": \"121 shared opcode kinds; score=0.957\", \"source\": \"opcode-cosine\", \"weight\": 0.956922}, {\"detail\": \"846/1117 reference dependency edges matched; edge_score=0.757; shape_score=0.991; score=0.839\", \"source\": \"class-dependency-graph\", \"weight\": 0.839128}, {\"detail\": \"965/1061 reference string literals matched; score=0.910\", \"source\": \"string-literals\", \"weight\": 0.909519}, {\"detail\": \"unique classes 41/58; unique methods 305/419; unique literals 185/211; score=0.750\", \"source\": \"version-unique-features\", \"weight\": 0.750335}, {\"detail\": \"likely identity with medium confidence; identity_score=0.757\", \"source\": \"identity-decision\", \"weight\": 0.757278}, {\"detail\": \"likely version decision with medium confidence; gap_to_next=0.152; alternatives=2.11.2:0.600\", \"source\": \"version-decision\", \"weight\": 0.752021}]"
+        }
+      ],
+      "purl": "pkg:maven/androidx.work/work-runtime@2.10.0",
+      "type": "library",
+      "version": "2.10.0"
+    },
+    {
+      "bom-ref": "pkg:maven/androidx.fragment/fragment@1.6.1",
+      "group": "androidx.fragment",
+      "name": "fragment",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.749"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.763"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.749"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"2/3 reference packages matched; score=0.667\", \"source\": \"package-overlap\", \"weight\": 0.666667}, {\"detail\": \"120/167 reference classes matched; score=0.719\", \"source\": \"class-overlap\", \"weight\": 0.718563}, {\"detail\": \"1001/1350 reference methods matched; score=0.741\", \"source\": \"method-overlap\", \"weight\": 0.741481}, {\"detail\": \"86 shared opcode kinds; score=0.944\", \"source\": \"opcode-cosine\", \"weight\": 0.94374}, {\"detail\": \"291/410 reference dependency edges matched; edge_score=0.710; shape_score=0.992; score=0.809\", \"source\": \"class-dependency-graph\", \"weight\": 0.808522}, {\"detail\": \"549/606 reference string literals matched; score=0.906\", \"source\": \"string-literals\", \"weight\": 0.905941}, {\"detail\": \"unique classes 2/4; unique methods 15/32; unique literals 7/7; score=0.586\", \"source\": \"version-unique-features\", \"weight\": 0.585938}, {\"detail\": \"likely identity with medium confidence; identity_score=0.763\", \"source\": \"identity-decision\", \"weight\": 0.763019}, {\"detail\": \"candidate version decision with low confidence; gap_to_next=0.071; alternatives=1.5.4:0.678, 1.8.9:0.650\", \"source\": \"version-decision\", \"weight\": 0.749173}]"
+        }
+      ],
+      "purl": "pkg:maven/androidx.fragment/fragment@1.6.1",
+      "type": "library",
+      "version": "1.6.1"
+    },
+    {
+      "bom-ref": "pkg:maven/androidx.compose.ui/ui-android@1.7.8",
+      "group": "androidx.compose.ui",
+      "name": "ui-android",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.727"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.744"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.727"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"30/34 reference packages matched; score=0.882\", \"source\": \"package-overlap\", \"weight\": 0.882353}, {\"detail\": \"1048/1495 reference classes matched; score=0.701\", \"source\": \"class-overlap\", \"weight\": 0.701003}, {\"detail\": \"6618/11054 reference methods matched; score=0.599\", \"source\": \"method-overlap\", \"weight\": 0.598697}, {\"detail\": \"149 shared opcode kinds; score=0.905\", \"source\": \"opcode-cosine\", \"weight\": 0.904765}, {\"detail\": \"1965/2880 reference dependency edges matched; edge_score=0.682; shape_score=0.988; score=0.789\", \"source\": \"class-dependency-graph\", \"weight\": 0.789281}, {\"detail\": \"831/1219 reference string literals matched; score=0.682\", \"source\": \"string-literals\", \"weight\": 0.681706}, {\"detail\": \"unique classes 115/148; unique methods 1168/1719; unique literals 87/227; score=0.654\", \"source\": \"version-unique-features\", \"weight\": 0.654371}, {\"detail\": \"likely identity with medium confidence; identity_score=0.744\", \"source\": \"identity-decision\", \"weight\": 0.744086}, {\"detail\": \"candidate version decision with low confidence; gap_to_next=0.195; alternatives=1.11.2:0.532\", \"source\": \"version-decision\", \"weight\": 0.727063}]"
+        }
+      ],
+      "purl": "pkg:maven/androidx.compose.ui/ui-android@1.7.8",
+      "type": "library",
+      "version": "1.7.8"
+    },
+    {
+      "bom-ref": "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-android@1.7.3",
+      "group": "org.jetbrains.kotlinx",
+      "name": "kotlinx-coroutines-android",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.706"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.674"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.706"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"1/2 reference packages matched; score=0.500\", \"source\": \"package-overlap\", \"weight\": 0.5}, {\"detail\": \"7/11 reference classes matched; score=0.636\", \"source\": \"class-overlap\", \"weight\": 0.636364}, {\"detail\": \"32/56 reference methods matched; score=0.571\", \"source\": \"method-overlap\", \"weight\": 0.571429}, {\"detail\": \"41 shared opcode kinds; score=0.881\", \"source\": \"opcode-cosine\", \"weight\": 0.881378}, {\"detail\": \"8/10 reference dependency edges matched; edge_score=0.800; shape_score=0.828; score=0.810\", \"source\": \"class-dependency-graph\", \"weight\": 0.809865}, {\"detail\": \"8/8 reference string literals matched; score=1.000\", \"source\": \"string-literals\", \"weight\": 1.0}, {\"detail\": \"unique classes 1/1; unique methods 4/4; unique literals 0/0; score=1.000\", \"source\": \"version-unique-features\", \"weight\": 1.0}, {\"detail\": \"candidate identity with low confidence; identity_score=0.674\", \"source\": \"identity-decision\", \"weight\": 0.674319}, {\"detail\": \"candidate version decision with low confidence; gap_to_next=0.146; alternatives=1.9.0:0.560\", \"source\": \"version-decision\", \"weight\": 0.705703}]"
+        }
+      ],
+      "purl": "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-android@1.7.3",
+      "type": "library",
+      "version": "1.7.3"
+    },
+    {
+      "bom-ref": "pkg:maven/androidx.lifecycle/lifecycle-runtime-android@2.8.7",
+      "group": "androidx.lifecycle",
+      "name": "lifecycle-runtime-android",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.676"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.707"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "medium"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "likely"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.676"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"1/1 reference packages matched; score=1.000\", \"source\": \"package-overlap\", \"weight\": 1.0}, {\"detail\": \"18/32 reference classes matched; score=0.562\", \"source\": \"class-overlap\", \"weight\": 0.5625}, {\"detail\": \"96/161 reference methods matched; score=0.596\", \"source\": \"method-overlap\", \"weight\": 0.596273}, {\"detail\": \"51 shared opcode kinds; score=0.913\", \"source\": \"opcode-cosine\", \"weight\": 0.913067}, {\"detail\": \"4/15 reference dependency edges matched; edge_score=0.267; shape_score=0.651; score=0.401\", \"source\": \"class-dependency-graph\", \"weight\": 0.401273}, {\"detail\": \"36/41 reference string literals matched; score=0.878\", \"source\": \"string-literals\", \"weight\": 0.878049}, {\"detail\": \"unique classes 2/4; unique methods 10/16; unique literals 9/9; score=0.656\", \"source\": \"version-unique-features\", \"weight\": 0.65625}, {\"detail\": \"likely identity with medium confidence; identity_score=0.707\", \"source\": \"identity-decision\", \"weight\": 0.707244}, {\"detail\": \"candidate version decision with low confidence; gap_to_next=0.090; alternatives=2.10.0:0.586\", \"source\": \"version-decision\", \"weight\": 0.675596}, {\"detail\": \"Selected androidx.lifecycle:lifecycle-runtime-android@2.8.7 for androidx.lifecycle:lifecycle-runtime-family; suppressed overlapping candidate(s): androidx.lifecycle:lifecycle-runtime@2.6.2:0.766. Reason: Android target variants can share bytecode evidence with the public Lifecycle runtime coordinate.\", \"source\": \"artifact-family-disambiguation\", \"weight\": 0.675596}]"
+        }
+      ],
+      "purl": "pkg:maven/androidx.lifecycle/lifecycle-runtime-android@2.8.7",
+      "type": "library",
+      "version": "2.8.7"
+    },
+    {
+      "bom-ref": "pkg:maven/androidx.activity/activity@1.10.1",
+      "group": "androidx.activity",
+      "name": "activity",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.633"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.648"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.633"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"4/5 reference packages matched; score=0.800\", \"source\": \"package-overlap\", \"weight\": 0.8}, {\"detail\": \"80/162 reference classes matched; score=0.494\", \"source\": \"class-overlap\", \"weight\": 0.493827}, {\"detail\": \"404/762 reference methods matched; score=0.530\", \"source\": \"method-overlap\", \"weight\": 0.530184}, {\"detail\": \"76 shared opcode kinds; score=0.934\", \"source\": \"opcode-cosine\", \"weight\": 0.933875}, {\"detail\": \"128/274 reference dependency edges matched; edge_score=0.467; shape_score=0.975; score=0.645\", \"source\": \"class-dependency-graph\", \"weight\": 0.645}, {\"detail\": \"123/161 reference string literals matched; score=0.764\", \"source\": \"string-literals\", \"weight\": 0.763975}, {\"detail\": \"unique classes 6/9; unique methods 32/56; unique literals 4/4; score=0.690\", \"source\": \"version-unique-features\", \"weight\": 0.690476}, {\"detail\": \"candidate identity with low confidence; identity_score=0.648\", \"source\": \"identity-decision\", \"weight\": 0.64847}, {\"detail\": \"candidate version decision with low confidence; gap_to_next=0.074; alternatives=1.8.0:0.560, 1.13.0:0.485\", \"source\": \"version-decision\", \"weight\": 0.633327}]"
+        }
+      ],
+      "purl": "pkg:maven/androidx.activity/activity@1.10.1",
+      "type": "library",
+      "version": "1.10.1"
+    },
+    {
+      "bom-ref": "pkg:maven/androidx.lifecycle/lifecycle-livedata@2.8.7",
+      "group": "androidx.lifecycle",
+      "name": "lifecycle-livedata",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.578"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.585"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.578"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"1/2 reference packages matched; score=0.500\", \"source\": \"package-overlap\", \"weight\": 0.5}, {\"detail\": \"23/43 reference classes matched; score=0.535\", \"source\": \"class-overlap\", \"weight\": 0.534884}, {\"detail\": \"92/192 reference methods matched; score=0.479\", \"source\": \"method-overlap\", \"weight\": 0.479167}, {\"detail\": \"48 shared opcode kinds; score=0.871\", \"source\": \"opcode-cosine\", \"weight\": 0.871131}, {\"detail\": \"25/57 reference dependency edges matched; edge_score=0.439; shape_score=0.906; score=0.602\", \"source\": \"class-dependency-graph\", \"weight\": 0.602197}, {\"detail\": \"18/22 reference string literals matched; score=0.818\", \"source\": \"string-literals\", \"weight\": 0.818182}, {\"detail\": \"unique classes 2/4; unique methods 11/22; unique literals 0/0; score=0.500\", \"source\": \"version-unique-features\", \"weight\": 0.5}, {\"detail\": \"candidate identity with low confidence; identity_score=0.585\", \"source\": \"identity-decision\", \"weight\": 0.58545}, {\"detail\": \"candidate version decision with low confidence; gap_to_next=0.096; alternatives=2.10.0:0.482, 2.6.2:0.428\", \"source\": \"version-decision\", \"weight\": 0.578333}]"
+        }
+      ],
+      "purl": "pkg:maven/androidx.lifecycle/lifecycle-livedata@2.8.7",
+      "type": "library",
+      "version": "2.8.7"
+    },
+    {
+      "bom-ref": "pkg:maven/com.squareup.okio/okio-jvm@3.7.0",
+      "group": "com.squareup.okio",
+      "name": "okio-jvm",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.543"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.584"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.543"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"2/2 reference packages matched; score=1.000\", \"source\": \"package-overlap\", \"weight\": 1.0}, {\"detail\": \"43/107 reference classes matched; score=0.402\", \"source\": \"class-overlap\", \"weight\": 0.401869}, {\"detail\": \"426/1481 reference methods matched; score=0.288\", \"source\": \"method-overlap\", \"weight\": 0.287643}, {\"detail\": \"141 shared opcode kinds; score=0.916\", \"source\": \"opcode-cosine\", \"weight\": 0.91558}, {\"detail\": \"134/388 reference dependency edges matched; edge_score=0.345; shape_score=0.991; score=0.571\", \"source\": \"class-dependency-graph\", \"weight\": 0.57135}, {\"detail\": \"179/314 reference string literals matched; score=0.570\", \"source\": \"string-literals\", \"weight\": 0.570064}, {\"detail\": \"unique classes 0/0; unique methods 7/14; unique literals 6/10; score=0.531\", \"source\": \"version-unique-features\", \"weight\": 0.530769}, {\"detail\": \"candidate identity with low confidence; identity_score=0.584\", \"source\": \"identity-decision\", \"weight\": 0.583789}, {\"detail\": \"candidate version decision with low confidence; gap_to_next=0.004; alternatives=3.6.0:0.540, 3.0.0:0.474\", \"source\": \"version-decision\", \"weight\": 0.543478}, {\"detail\": \"Selected com.squareup.okio:okio-jvm@3.7.0 for com.squareup.okio:okio-family; suppressed overlapping candidate(s): com.squareup.okio:okio@2.8.0:0.557. Reason: APK DEX bytecode should prefer the JVM artifact when Okio family scores are close.\", \"source\": \"artifact-family-disambiguation\", \"weight\": 0.543478}]"
+        }
+      ],
+      "purl": "pkg:maven/com.squareup.okio/okio-jvm@3.7.0",
+      "type": "library",
+      "version": "3.7.0"
+    },
+    {
+      "bom-ref": "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm@1.7.3",
+      "group": "org.jetbrains.kotlinx",
+      "name": "kotlinx-coroutines-core-jvm",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.535"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.547"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.535"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"10/16 reference packages matched; score=0.625\", \"source\": \"package-overlap\", \"weight\": 0.625}, {\"detail\": \"376/875 reference classes matched; score=0.430\", \"source\": \"class-overlap\", \"weight\": 0.429714}, {\"detail\": \"1834/4572 reference methods matched; score=0.401\", \"source\": \"method-overlap\", \"weight\": 0.401137}, {\"detail\": \"124 shared opcode kinds; score=0.869\", \"source\": \"opcode-cosine\", \"weight\": 0.868669}, {\"detail\": \"749/1758 reference dependency edges matched; edge_score=0.426; shape_score=0.989; score=0.623\", \"source\": \"class-dependency-graph\", \"weight\": 0.622997}, {\"detail\": \"412/646 reference string literals matched; score=0.638\", \"source\": \"string-literals\", \"weight\": 0.637771}, {\"detail\": \"unique classes 34/65; unique methods 193/436; unique literals 63/81; score=0.538\", \"source\": \"version-unique-features\", \"weight\": 0.53783}, {\"detail\": \"candidate identity with low confidence; identity_score=0.547\", \"source\": \"identity-decision\", \"weight\": 0.547085}, {\"detail\": \"candidate version decision with low confidence; gap_to_next=0.079; alternatives=1.9.0:0.456\", \"source\": \"version-decision\", \"weight\": 0.535052}]"
+        }
+      ],
+      "purl": "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm@1.7.3",
+      "type": "library",
+      "version": "1.7.3"
+    },
+    {
+      "bom-ref": "pkg:maven/com.google.android.material/material@1.12.0",
+      "group": "com.google.android.material",
+      "name": "material",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.535"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.558"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.535"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"41/55 reference packages matched; score=0.745\", \"source\": \"package-overlap\", \"weight\": 0.745455}, {\"detail\": \"463/1277 reference classes matched; score=0.363\", \"source\": \"class-overlap\", \"weight\": 0.362569}, {\"detail\": \"4876/10588 reference methods matched; score=0.461\", \"source\": \"method-overlap\", \"weight\": 0.460521}, {\"detail\": \"174 shared opcode kinds; score=0.943\", \"source\": \"opcode-cosine\", \"weight\": 0.942804}, {\"detail\": \"921/2254 reference dependency edges matched; edge_score=0.409; shape_score=0.979; score=0.608\", \"source\": \"class-dependency-graph\", \"weight\": 0.608098}, {\"detail\": \"319/608 reference string literals matched; score=0.525\", \"source\": \"string-literals\", \"weight\": 0.524671}, {\"detail\": \"unique classes 19/29; unique methods 219/388; unique literals 2/15; score=0.510\", \"source\": \"version-unique-features\", \"weight\": 0.509972}, {\"detail\": \"candidate identity with low confidence; identity_score=0.558\", \"source\": \"identity-decision\", \"weight\": 0.557523}, {\"detail\": \"candidate version decision with low confidence; gap_to_next=0.072; alternatives=1.13.0:0.463\", \"source\": \"version-decision\", \"weight\": 0.535004}]"
+        }
+      ],
+      "purl": "pkg:maven/com.google.android.material/material@1.12.0",
+      "type": "library",
+      "version": "1.12.0"
+    },
+    {
+      "bom-ref": "pkg:maven/androidx.compose.foundation/foundation-android@1.7.8",
+      "group": "androidx.compose.foundation",
+      "name": "foundation-android",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.524"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.534"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.524"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"16/26 reference packages matched; score=0.615\", \"source\": \"package-overlap\", \"weight\": 0.615385}, {\"detail\": \"1015/2191 reference classes matched; score=0.463\", \"source\": \"class-overlap\", \"weight\": 0.463259}, {\"detail\": \"4922/11632 reference methods matched; score=0.423\", \"source\": \"method-overlap\", \"weight\": 0.423143}, {\"detail\": \"160 shared opcode kinds; score=0.888\", \"source\": \"opcode-cosine\", \"weight\": 0.887559}, {\"detail\": \"1798/4137 reference dependency edges matched; edge_score=0.435; shape_score=0.979; score=0.625\", \"source\": \"class-dependency-graph\", \"weight\": 0.625009}, {\"detail\": \"474/1301 reference string literals matched; score=0.364\", \"source\": \"string-literals\", \"weight\": 0.364335}, {\"detail\": \"unique classes 405/836; unique methods 1858/4154; unique literals 131/544; score=0.419\", \"source\": \"version-unique-features\", \"weight\": 0.418995}, {\"detail\": \"candidate identity with low confidence; identity_score=0.534\", \"source\": \"identity-decision\", \"weight\": 0.534374}, {\"detail\": \"candidate version decision with low confidence; gap_to_next=0.211; alternatives=1.11.2:0.314\", \"source\": \"version-decision\", \"weight\": 0.524324}]"
+        }
+      ],
+      "purl": "pkg:maven/androidx.compose.foundation/foundation-android@1.7.8",
+      "type": "library",
+      "version": "1.7.8"
+    },
+    {
+      "bom-ref": "pkg:maven/androidx.core/core@1.15.0",
+      "group": "androidx.core",
+      "name": "core",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.509"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.533"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.509"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"21/37 reference packages matched; score=0.568\", \"source\": \"package-overlap\", \"weight\": 0.567568}, {\"detail\": \"428/990 reference classes matched; score=0.432\", \"source\": \"class-overlap\", \"weight\": 0.432323}, {\"detail\": \"2316/6262 reference methods matched; score=0.370\", \"source\": \"method-overlap\", \"weight\": 0.36985}, {\"detail\": \"170 shared opcode kinds; score=0.982\", \"source\": \"opcode-cosine\", \"weight\": 0.981673}, {\"detail\": \"424/933 reference dependency edges matched; edge_score=0.454; shape_score=0.874; score=0.601\", \"source\": \"class-dependency-graph\", \"weight\": 0.601314}, {\"detail\": \"701/1229 reference string literals matched; score=0.570\", \"source\": \"string-literals\", \"weight\": 0.570382}, {\"detail\": \"unique classes 29/80; unique methods 111/389; unique literals 20/83; score=0.303\", \"source\": \"version-unique-features\", \"weight\": 0.303474}, {\"detail\": \"candidate identity with low confidence; identity_score=0.533\", \"source\": \"identity-decision\", \"weight\": 0.532517}, {\"detail\": \"candidate version decision with low confidence; gap_to_next=0.047; alternatives=1.18.0:0.462\", \"source\": \"version-decision\", \"weight\": 0.508902}]"
+        }
+      ],
+      "purl": "pkg:maven/androidx.core/core@1.15.0",
+      "type": "library",
+      "version": "1.15.0"
+    },
+    {
+      "bom-ref": "pkg:maven/io.ktor/ktor-http-jvm@2.3.12",
+      "group": "io.ktor",
+      "name": "ktor-http-jvm",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "0.456"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "0.517"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "0.456"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "low"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-candidate"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"4/7 reference packages matched; score=0.571\", \"source\": \"package-overlap\", \"weight\": 0.571429}, {\"detail\": \"94/248 reference classes matched; score=0.379\", \"source\": \"class-overlap\", \"weight\": 0.379032}, {\"detail\": \"535/1602 reference methods matched; score=0.334\", \"source\": \"method-overlap\", \"weight\": 0.333958}, {\"detail\": \"101 shared opcode kinds; score=0.906\", \"source\": \"opcode-cosine\", \"weight\": 0.905699}, {\"detail\": \"114/286 reference dependency edges matched; edge_score=0.399; shape_score=0.925; score=0.583\", \"source\": \"class-dependency-graph\", \"weight\": 0.582775}, {\"detail\": \"392/532 reference string literals matched; score=0.737\", \"source\": \"string-literals\", \"weight\": 0.736842}, {\"detail\": \"unique classes 0/0; unique methods 0/0; unique literals 0/0; score=0.000\", \"source\": \"version-unique-features\", \"weight\": 0.0}, {\"detail\": \"candidate identity with low confidence; identity_score=0.517\", \"source\": \"identity-decision\", \"weight\": 0.517319}, {\"detail\": \"candidate version decision with low confidence; gap_to_next=0.456; alternatives=none\", \"source\": \"version-decision\", \"weight\": 0.456037}]"
+        }
+      ],
+      "purl": "pkg:maven/io.ktor/ktor-http-jvm@2.3.12",
+      "type": "library",
+      "version": "2.3.12"
+    },
+    {
+      "bom-ref": "apk-native:lib/arm64-v8a/libandroidx.graphics.path.so",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6"
+        }
+      ],
+      "name": "libandroidx.graphics.path.so",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:native-path",
+          "value": "lib/arm64-v8a/libandroidx.graphics.path.so"
+        },
+        {
+          "name": "apk-sbom:mvp:native-abi",
+          "value": "arm64-v8a"
+        },
+        {
+          "name": "apk-sbom:mvp:native-size",
+          "value": "10096"
+        },
+        {
+          "name": "apk-sbom:mvp:native-identification",
+          "value": "hash-only"
+        }
+      ],
+      "type": "file"
+    },
+    {
+      "bom-ref": "apk-native:lib/armeabi-v7a/libandroidx.graphics.path.so",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "41399eba6fc2a60f6f14642375c1824f3cf25eb8fec7397d753730a3ceda3e2b"
+        }
+      ],
+      "name": "libandroidx.graphics.path.so",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:native-path",
+          "value": "lib/armeabi-v7a/libandroidx.graphics.path.so"
+        },
+        {
+          "name": "apk-sbom:mvp:native-abi",
+          "value": "armeabi-v7a"
+        },
+        {
+          "name": "apk-sbom:mvp:native-size",
+          "value": "7252"
+        },
+        {
+          "name": "apk-sbom:mvp:native-identification",
+          "value": "hash-only"
+        }
+      ],
+      "type": "file"
+    },
+    {
+      "bom-ref": "apk-native:lib/x86/libandroidx.graphics.path.so",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "eb0570b41fd3bff25d8204a967c03bd7550719e768b791f680cc40cbe35f29af"
+        }
+      ],
+      "name": "libandroidx.graphics.path.so",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:native-path",
+          "value": "lib/x86/libandroidx.graphics.path.so"
+        },
+        {
+          "name": "apk-sbom:mvp:native-abi",
+          "value": "x86"
+        },
+        {
+          "name": "apk-sbom:mvp:native-size",
+          "value": "9284"
+        },
+        {
+          "name": "apk-sbom:mvp:native-identification",
+          "value": "hash-only"
+        }
+      ],
+      "type": "file"
+    },
+    {
+      "bom-ref": "apk-native:lib/x86_64/libandroidx.graphics.path.so",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4e56c996f13670e70082658de7880c4020eabf4f25e43387f88ed78a713fc9f0"
+        }
+      ],
+      "name": "libandroidx.graphics.path.so",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:native-path",
+          "value": "lib/x86_64/libandroidx.graphics.path.so"
+        },
+        {
+          "name": "apk-sbom:mvp:native-abi",
+          "value": "x86_64"
+        },
+        {
+          "name": "apk-sbom:mvp:native-size",
+          "value": "10760"
+        },
+        {
+          "name": "apk-sbom:mvp:native-identification",
+          "value": "hash-only"
+        }
+      ],
+      "type": "file"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [
+        "pkg:maven/androidx.gridlayout/gridlayout@1.0.0",
+        "pkg:maven/androidx.localbroadcastmanager/localbroadcastmanager@1.0.0",
+        "pkg:maven/androidx.swiperefreshlayout/swiperefreshlayout@1.0.0",
+        "pkg:maven/androidx.concurrent/concurrent-futures@1.1.0",
+        "pkg:maven/androidx.recyclerview/recyclerview@1.4.0",
+        "pkg:maven/androidx.appcompat/appcompat@1.7.0",
+        "pkg:maven/androidx.lifecycle/lifecycle-viewmodel-android@2.8.7",
+        "pkg:maven/com.squareup.okhttp3/okhttp@4.12.0",
+        "pkg:maven/androidx.exifinterface/exifinterface@1.3.6",
+        "pkg:maven/io.ktor/ktor-client-okhttp-jvm@2.3.12",
+        "pkg:maven/androidx.work/work-runtime@2.10.0",
+        "pkg:maven/androidx.fragment/fragment@1.6.1",
+        "pkg:maven/androidx.compose.ui/ui-android@1.7.8",
+        "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-android@1.7.3",
+        "pkg:maven/androidx.lifecycle/lifecycle-runtime-android@2.8.7",
+        "pkg:maven/androidx.activity/activity@1.10.1",
+        "pkg:maven/androidx.lifecycle/lifecycle-livedata@2.8.7",
+        "pkg:maven/com.squareup.okio/okio-jvm@3.7.0",
+        "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm@1.7.3",
+        "pkg:maven/com.google.android.material/material@1.12.0",
+        "pkg:maven/androidx.compose.foundation/foundation-android@1.7.8",
+        "pkg:maven/androidx.core/core@1.15.0",
+        "pkg:maven/io.ktor/ktor-http-jvm@2.3.12",
+        "apk-native:lib/arm64-v8a/libandroidx.graphics.path.so",
+        "apk-native:lib/armeabi-v7a/libandroidx.graphics.path.so",
+        "apk-native:lib/x86/libandroidx.graphics.path.so",
+        "apk-native:lib/x86_64/libandroidx.graphics.path.so"
+      ],
+      "ref": "apk:F-Droid.apk"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "apk:F-Droid.apk",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "985f5181d48bb6bafd54083a048b391271e0ab28385881cc41294fb01a222762"
+        }
+      ],
+      "name": "F-Droid.apk",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:dex-files",
+          "value": "2"
+        },
+        {
+          "name": "apk-sbom:mvp:has-multidex",
+          "value": "true"
+        },
+        {
+          "name": "apk-sbom:mvp:native-libraries",
+          "value": "4"
+        },
+        {
+          "name": "apk-sbom:mvp:manifest-package",
+          "value": "org.fdroid.fdroid"
+        },
+        {
+          "name": "apk-sbom:mvp:manifest-version-code",
+          "value": "1023052"
+        },
+        {
+          "name": "apk-sbom:mvp:manifest-version-name",
+          "value": "1.23.2"
+        },
+        {
+          "name": "apk-sbom:mvp:min-sdk",
+          "value": "23"
+        },
+        {
+          "name": "apk-sbom:mvp:target-sdk",
+          "value": "30"
+        },
+        {
+          "name": "apk-sbom:mvp:nonstandard-dex-files",
+          "value": "0"
+        },
+        {
+          "name": "apk-sbom:mvp:extraction-risk",
+          "value": "low"
+        }
+      ],
+      "type": "application"
+    },
+    "timestamp": "2026-05-21T04:05:34.561658Z",
+    "tools": {
+      "components": [
+        {
+          "name": "apk-sbom-mvp",
+          "type": "application",
+          "version": "0.1.0"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:36887095-04f2-42b7-9edf-e3bdfee3af0e",
+  "specVersion": "1.5",
+  "version": 1
+}

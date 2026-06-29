@@ -1,0 +1,127 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.9.10.8",
+      "group": "com.fasterxml.jackson.core",
+      "name": "jackson-databind",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:confidence",
+          "value": "1.000"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence",
+          "value": "1.000"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-confidence-label",
+          "value": "high"
+        },
+        {
+          "name": "apk-sbom:mvp:identity-status",
+          "value": "confirmed"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence",
+          "value": "1.000"
+        },
+        {
+          "name": "apk-sbom:mvp:version-confidence-label",
+          "value": "high"
+        },
+        {
+          "name": "apk-sbom:mvp:version-status",
+          "value": "exact"
+        },
+        {
+          "name": "apk-sbom:mvp:match-type",
+          "value": "hybrid-exact"
+        },
+        {
+          "name": "apk-sbom:mvp:evidence",
+          "value": "[{\"detail\": \"20/20 reference packages matched; score=1.000\", \"source\": \"package-overlap\", \"weight\": 1.0}, {\"detail\": \"626/626 reference classes matched; score=1.000\", \"source\": \"class-overlap\", \"weight\": 1.0}, {\"detail\": \"7617/7617 reference methods matched; score=1.000\", \"source\": \"method-overlap\", \"weight\": 1.0}, {\"detail\": \"145 shared opcode kinds; score=1.000\", \"source\": \"opcode-cosine\", \"weight\": 1.0}, {\"detail\": \"3385/3385 reference dependency edges matched; edge_score=1.000; shape_score=1.000; score=1.000\", \"source\": \"class-dependency-graph\", \"weight\": 1.0}, {\"detail\": \"1050/1050 reference string literals matched; score=1.000\", \"source\": \"string-literals\", \"weight\": 1.0}, {\"detail\": \"unique classes 8/8; unique methods 175/175; unique literals 72/72; score=1.000\", \"source\": \"version-unique-features\", \"weight\": 1.0}, {\"detail\": \"confirmed identity with high confidence; identity_score=1.000\", \"source\": \"identity-decision\", \"weight\": 1.0}, {\"detail\": \"exact version decision with high confidence; gap_to_next=0.183; alternatives=2.12.7.1:0.817, 2.13.5:0.802, 2.15.2:0.755\", \"source\": \"version-decision\", \"weight\": 1.0}]"
+        }
+      ],
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.9.10.8",
+      "type": "library",
+      "version": "2.9.10.8"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [
+        "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.9.10.8"
+      ],
+      "ref": "apk:controlled-com-fasterxml-jackson-core-jackson-databind-2.9.10.8-clear.apk"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "apk:controlled-com-fasterxml-jackson-core-jackson-databind-2.9.10.8-clear.apk",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "604a9833ccd276362c2dd3685ad66b70a6c6cf9bb59b4fe55377639c4dc12e58"
+        }
+      ],
+      "name": "controlled-com-fasterxml-jackson-core-jackson-databind-2.9.10.8-clear.apk",
+      "properties": [
+        {
+          "name": "apk-sbom:mvp:dex-files",
+          "value": "1"
+        },
+        {
+          "name": "apk-sbom:mvp:has-multidex",
+          "value": "false"
+        },
+        {
+          "name": "apk-sbom:mvp:native-libraries",
+          "value": "0"
+        },
+        {
+          "name": "apk-sbom:mvp:manifest-package",
+          "value": "com.example.fixture"
+        },
+        {
+          "name": "apk-sbom:mvp:manifest-version-code",
+          "value": ""
+        },
+        {
+          "name": "apk-sbom:mvp:manifest-version-name",
+          "value": ""
+        },
+        {
+          "name": "apk-sbom:mvp:min-sdk",
+          "value": ""
+        },
+        {
+          "name": "apk-sbom:mvp:target-sdk",
+          "value": ""
+        },
+        {
+          "name": "apk-sbom:mvp:nonstandard-dex-files",
+          "value": "0"
+        },
+        {
+          "name": "apk-sbom:mvp:extraction-risk",
+          "value": "low"
+        }
+      ],
+      "type": "application"
+    },
+    "timestamp": "2026-05-20T12:30:07.643049Z",
+    "tools": {
+      "components": [
+        {
+          "name": "apk-sbom-mvp",
+          "type": "application",
+          "version": "0.1.0"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:0eaec0ac-9c72-4b36-9d58-18ec4315506b",
+  "specVersion": "1.5",
+  "version": 1
+}
