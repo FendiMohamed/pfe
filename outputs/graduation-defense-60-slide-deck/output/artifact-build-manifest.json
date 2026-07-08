@@ -1,0 +1,387 @@
+{
+  "output": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\output\\graduation-defense-60-slide-deck.pptx",
+  "outputBytes": 1478392,
+  "slideCount": 60,
+  "slideSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "contentSource": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-content.txt",
+  "previewDir": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview",
+  "contactSheet": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\contact-sheet.png",
+  "slides": [
+    {
+      "index": 1,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-01.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-01.layout.json",
+      "title": "Evidence-Based SBOM Recovery from Compiled Android APKs"
+    },
+    {
+      "index": 2,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-02.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-02.layout.json",
+      "title": "The problem starts after the source code is gone"
+    },
+    {
+      "index": 3,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-03.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-03.layout.json",
+      "title": "A valid SBOM is not automatically a trustworthy SBOM"
+    },
+    {
+      "index": 4,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-04.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-04.layout.json",
+      "title": "The project answers one practical question"
+    },
+    {
+      "index": 5,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-05.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-05.layout.json",
+      "title": "The defense combines two complementary theses"
+    },
+    {
+      "index": 6,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-06.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-06.layout.json",
+      "title": "Roadmap"
+    },
+    {
+      "index": 7,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-07.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-07.layout.json",
+      "title": "Software supply chains depend on many hidden components"
+    },
+    {
+      "index": 8,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-08.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-08.layout.json",
+      "title": "An SBOM is a structured component inventory"
+    },
+    {
+      "index": 9,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-09.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-09.layout.json",
+      "title": "Build-time SBOMs and reconstructed SBOMs are different"
+    },
+    {
+      "index": 10,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-10.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-10.layout.json",
+      "title": "Android builds transform the evidence before analysis"
+    },
+    {
+      "index": 11,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-11.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-11.layout.json",
+      "title": "The APK exposes several evidence regions"
+    },
+    {
+      "index": 12,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-12.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-12.layout.json",
+      "title": "DEX evidence supports several signal families"
+    },
+    {
+      "index": 13,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-13.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-13.layout.json",
+      "title": "R8 weakens names, coverage, and structure"
+    },
+    {
+      "index": 14,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-14.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-14.layout.json",
+      "title": "Identity and exact version are separate decisions"
+    },
+    {
+      "index": 15,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-15.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-15.layout.json",
+      "title": "Static analysis is reproducible but bounded"
+    },
+    {
+      "index": 16,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-16.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-16.layout.json",
+      "title": "The Master thesis reviews component recovery as evidence attribution"
+    },
+    {
+      "index": 17,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-17.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-17.layout.json",
+      "title": "Early tools relied on profiles, packages, and signatures"
+    },
+    {
+      "index": 18,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-18.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-18.layout.json",
+      "title": "Structural methods reduced dependence on package names"
+    },
+    {
+      "index": 19,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-19.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-19.layout.json",
+      "title": "Version-level methods make the security problem visible"
+    },
+    {
+      "index": 20,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-20.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-20.layout.json",
+      "title": "Optimization-aware research shows why R8 must be treated separately"
+    },
+    {
+      "index": 21,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-21.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-21.layout.json",
+      "title": "Learned representations are promising but not version authority"
+    },
+    {
+      "index": 22,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-22.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-22.layout.json",
+      "title": "SBOM-oriented systems expose the output gap"
+    },
+    {
+      "index": 23,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-23.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-23.layout.json",
+      "title": "Realistic benchmarks lower the expected ceiling"
+    },
+    {
+      "index": 24,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-24.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-24.layout.json",
+      "title": "The main research gap is trustworthy authority"
+    },
+    {
+      "index": 25,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-25.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-25.layout.json",
+      "title": "The state of the art shaped the MVP design"
+    },
+    {
+      "index": 26,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-26.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-26.layout.json",
+      "title": "The review leads to an evidence-first principle"
+    },
+    {
+      "index": 27,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-27.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-27.layout.json",
+      "title": "The contribution is an evidence-gated APK-to-SBOM workflow"
+    },
+    {
+      "index": 28,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-28.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-28.layout.json",
+      "title": "Each recovered component is treated as a claim"
+    },
+    {
+      "index": 29,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-29.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-29.layout.json",
+      "title": "The system separates authoritative and report-only paths"
+    },
+    {
+      "index": 30,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-30.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-30.layout.json",
+      "title": "Confidence is not one score"
+    },
+    {
+      "index": 31,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-31.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-31.layout.json",
+      "title": "The matcher uses complementary evidence"
+    },
+    {
+      "index": 32,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-32.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-32.layout.json",
+      "title": "CycloneDX output carries evidence boundaries forward"
+    },
+    {
+      "index": 33,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-33.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-33.layout.json",
+      "title": "Vulnerability findings inherit component confidence"
+    },
+    {
+      "index": 34,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-34.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-34.layout.json",
+      "title": "The contribution includes honest evaluation categories"
+    },
+    {
+      "index": 35,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-35.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-35.layout.json",
+      "title": "The Engineering thesis implements the full pipeline"
+    },
+    {
+      "index": 36,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-36.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-36.layout.json",
+      "title": "APK inspection records what is actually present"
+    },
+    {
+      "index": 37,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-37.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-37.layout.json",
+      "title": "DEX analysis builds comparable evidence"
+    },
+    {
+      "index": 38,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-38.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-38.layout.json",
+      "title": "Maven references are normalized before comparison"
+    },
+    {
+      "index": 39,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-39.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-39.layout.json",
+      "title": "Candidate generation keeps matching scalable"
+    },
+    {
+      "index": 40,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-40.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-40.layout.json",
+      "title": "Weighted scoring ranks evidence but does not prove probability"
+    },
+    {
+      "index": 41,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-41.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-41.layout.json",
+      "title": "Version decisions preserve alternatives"
+    },
+    {
+      "index": 42,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-42.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-42.layout.json",
+      "title": "SBOM generation converts accepted decisions into CycloneDX"
+    },
+    {
+      "index": 43,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-43.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-43.layout.json",
+      "title": "Vulnerability lookup is confidence-aware"
+    },
+    {
+      "index": 44,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-44.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-44.layout.json",
+      "title": "Reports make the evidence inspectable"
+    },
+    {
+      "index": 45,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-45.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-45.layout.json",
+      "title": "The CLI supports stage-level diagnosis"
+    },
+    {
+      "index": 46,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-46.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-46.layout.json",
+      "title": "Docker makes the runtime reproducible"
+    },
+    {
+      "index": 47,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-47.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-47.layout.json",
+      "title": "Evaluation layers prevent overclaiming"
+    },
+    {
+      "index": 48,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-48.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-48.layout.json",
+      "title": "Controlled fixtures validate mechanics"
+    },
+    {
+      "index": 49,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-49.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-49.layout.json",
+      "title": "Real APK results are split into clean and partial evidence"
+    },
+    {
+      "index": 50,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-50.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-50.layout.json",
+      "title": "Full source denominator reveals the remaining coverage gap"
+    },
+    {
+      "index": 51,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-51.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-51.layout.json",
+      "title": "The source-known v2 lane is an upper bound"
+    },
+    {
+      "index": 52,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-52.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-52.layout.json",
+      "title": "Remaining source gaps are classified instead of hidden"
+    },
+    {
+      "index": 53,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-53.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-53.layout.json",
+      "title": "AI and R8 assistance has its own evidence lane"
+    },
+    {
+      "index": 54,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-54.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-54.layout.json",
+      "title": "Classical ML supports report-only triage"
+    },
+    {
+      "index": 55,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-55.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-55.layout.json",
+      "title": "Deep learning results are strong only in the guarded lane"
+    },
+    {
+      "index": 56,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-56.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-56.layout.json",
+      "title": "The demo follows one deterministic APK-to-report path"
+    },
+    {
+      "index": 57,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-57.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-57.layout.json",
+      "title": "Clean and vulnerable screenshots prove both CVE lanes"
+    },
+    {
+      "index": 58,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-58.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-58.layout.json",
+      "title": "Full report pages and AI screenshots show output integrity"
+    },
+    {
+      "index": 59,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-59.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-59.layout.json",
+      "title": "The main result is bounded, auditable recovery"
+    },
+    {
+      "index": 60,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\preview\\slide-60.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-60-slide-deck\\layout\\slide-60.layout.json",
+      "title": "Limitations and future work define the next research agenda"
+    }
+  ],
+  "requiredScreenshots": [
+    "clean-report.png",
+    "vulnerable-report-top.png",
+    "ai-report-top.png",
+    "clean-fdroid-report-page-01.png",
+    "clean-fdroid-report-page-02.png",
+    "clean-fdroid-report-page-03.png",
+    "clean-fdroid-report-page-04.png",
+    "clean-fdroid-report-page-05.png",
+    "vulnerable-jackson-report-page-01.png",
+    "vulnerable-jackson-report-page-02.png",
+    "vulnerable-jackson-report-page-03.png"
+  ]
+}
