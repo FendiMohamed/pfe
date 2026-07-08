@@ -23,11 +23,10 @@ Use LuaLaTeX and Biber. In Overleaf:
    F-Droid and controlled vulnerable Jackson HTML dashboards, and report-only
    R8, hybrid-assistance, Random Forest, and Transformer dashboard evidence.
    It contains all seven chapters, Appendix A, all three abstracts, the
-   confirmed student and supervisor names, and the drafted dedication and
-   acknowledgements. The jury president, examiner, and final defense date
-   remain placeholders. The current 139-page local PDF was rebuilt from this
-   source on 2026-06-21 with LuaLaTeX and Biber, and all new dashboard pages
-   were visually inspected. Older packages are retained as source checkpoints.
+   confirmed student, supervisor, co-supervisor, jury, and defense-date
+   metadata, and the drafted dedication and acknowledgements. The current
+   local PDF was refreshed on 2026-07-06 with LuaLaTeX after the title-page
+   metadata update. Older packages are retained as source checkpoints.
 2. Select `main.tex` as the main document.
 3. Select LuaLaTeX as the compiler.
 4. Use TeX Live 2023 or newer.
@@ -60,8 +59,8 @@ current named cover-template checkpoint is
 output copy at `output/pdf/pfe-page-de-garde-template-2026-06-21.pdf`. It keeps
 the complete clean and vulnerable dashboard sequence plus the report-only
 AI/R8 evidence included, and updates the `page de garde` to match the ESI
-template style. The jury president, examiner, and final submission/defense date
-remain placeholders.
+template style. The current metadata now fills the jury president, supervisor,
+co-supervisor, examiner, and submission/defense date.
 
 The latest locally compiled master draft source is `thesis/master/main.pdf`.
 The current evidence-review checkpoint is
@@ -74,8 +73,9 @@ checkpoints; the source package should be regenerated before upload. This
 includes corrected ORLIS and Ramirez descriptions, 15 full-text-verified Tier A
 studies, completed quality scores, foundational provenance/uncertainty/SBOM
 references, an audited PFE framework evaluation, synchronized conclusions and
-multilingual abstracts, and the ESI-style `page de garde`. The jury president,
-examiner, and final submission date remain visible front-matter placeholders.
+multilingual abstracts, and the ESI-style `page de garde`. The current metadata
+now fills the jury president, supervisor, co-supervisor, examiner, and
+submission date.
 
 ## Writing governance
 

@@ -2224,3 +2224,50 @@ Copy this template for each writing session:
 - Exact next action: Send the evidence-review PDF to the supervisor, obtain
   academic and administrative approvals, update `thesis/master/metadata.tex`,
   then rebuild the final submission PDF and source ZIP.
+
+## 2026-07-06 - PFE and Master - Jury metadata and defense date finalized
+
+- Objective: Update the PFE and master title pages with the supplied jury,
+  supervisor, co-supervisor, examiner, and date values in English, then rebuild
+  the generated PDFs.
+- Changes made:
+  - filled `Dr. ANANI Djihed` as jury president;
+  - filled `Dr. NAIB Rabiaa` as examiner;
+  - filled `Dr. SERIAI Abdelhak Djamel` as supervisor;
+  - filled `Dr. BABA AHMED Manel` as co-supervisor;
+  - filled the submission/defense date as `06/07/2026`;
+  - aligned the master title-page institutional header with the English PFE
+    title-page wording;
+  - refreshed the stable `output/pdf/*-thesis-updated.pdf` aliases.
+- Files changed:
+  - `thesis/pfe/metadata.tex`
+  - `thesis/pfe/frontmatter/titlepage.tex`
+  - `thesis/master/metadata.tex`
+  - `thesis/master/frontmatter/titlepage.tex`
+  - `thesis/README.md`
+  - `docs/thesis/PFE_THESIS_WRITING_PLAN.md`
+  - `docs/thesis/MASTER_THESIS_WRITING_PLAN.md`
+  - `docs/thesis/THESIS_WRITING_SESSION_LOG.md`
+- Checks performed:
+  - rebuilt `thesis/pfe/main.pdf` with LuaLaTeX after the metadata update:
+    124 pages, 1,621,041 bytes;
+  - rebuilt `thesis/master/main.pdf` with LuaLaTeX after the metadata update:
+    48 pages, 419,419 bytes;
+  - extracted page 1 text from both output PDFs and confirmed
+    `Submission Date: 06/07/2026` plus all four requested names and English
+    roles;
+  - rendered page 1 of both output PDFs with Poppler and visually inspected
+    the title-page layout after the date update.
+- Deliverables:
+  - `output/pdf/pfe-thesis-jury-updated-2026-07-06.pdf`
+  - `output/pdf/master-thesis-jury-updated-2026-07-06.pdf`
+  - `output/pdf/PFE-thesis-updated.pdf`
+  - `output/pdf/MASTER-thesis-updated.pdf`
+- PDF SHA-256:
+  - PFE: `CF91E96CFF2005DD488F13E7D32793A9F77D638F04298C6E0F8D52E527B2121B`
+  - Master: `5526EABE4180504DDB5EA461687752A52F9541F5BCA451D2AFCE5E1E522A7E91`
+- Unresolved items:
+  - no title-page administrative fields remain unresolved;
+  - source ZIP packages were not regenerated in this pass.
+- Exact next action: If submission/export requires source archives, refresh the
+  PFE and master source ZIPs from the updated source directories.
