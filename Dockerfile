@@ -69,6 +69,6 @@ RUN python -m pip install --no-cache-dir --upgrade pip \
 
 COPY . .
 
-ENV PYTHONPATH=/app/src
+ENV PYTHONPATH=/app:/app/src
 
 CMD ["python", "scripts/check_toolchain.py"]
