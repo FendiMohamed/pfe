@@ -1,0 +1,7 @@
+Old-style structured graduation defense deck
+
+Base style: existing academic APK SBOM defense deck.
+Slide count: 52.
+Main narrative follows: Introduction, Background, State of the Art, Contribution, Implementation, Demonstration, Conclusion.
+Backup slides preserve the old technical appendix after the conclusion.
+Proof slides recreate the old report-proof screenshots using the same geometry from the report-proof deck.

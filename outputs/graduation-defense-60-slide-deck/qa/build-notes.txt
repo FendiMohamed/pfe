@@ -1,0 +1,8 @@
+Graduation defense 60-slide deck build notes
+
+Source: outputs/graduation-defense-60-slide-content.txt
+Theme: minimal light academic palette.
+Slide count: 60.
+Required screenshots from latest PPTX are embedded.
+No em dash or en dash characters are used in the content script.
+Manual visual QA still required after preview inspection.

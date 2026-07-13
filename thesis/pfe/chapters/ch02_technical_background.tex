@@ -361,7 +361,22 @@ configuration, signatures, and optional native binaries. Android Studio's APK
 Analyzer exposes these archive entries and reports DEX, resource, and file
 composition information \cite{androidApkAnalyzer}. Figure
 \ref{fig:pfe-background-apk-structure} presents the main evidence-bearing
-regions.
+regions after the manifest and resource discussion.
+
+\subsection{Manifest, Resources, and Assets}
+
+The manifest declares the application package, components, permissions,
+features, SDK constraints, intent filters, and other installation or runtime
+metadata \cite{androidManifestOverview}. In a packaged \APK it is stored in a
+compiled binary XML representation. Manifest metadata can support application
+identification and contextual analysis, but it does not normally enumerate
+all embedded Maven dependencies.
+
+Compiled resources are indexed through \texttt{resources.arsc} and the
+\texttt{res/} hierarchy. The \texttt{assets/} directory may contain arbitrary
+application data. Resource names, strings, notices, and configuration files
+can occasionally reveal component evidence; however, these signals may be
+renamed, removed, shared among products, or unrelated to executable code.
 
 \begin{figure}[H]
 \centering
@@ -390,24 +405,9 @@ regions.
   {Other files: configuration, models, archives, secondary payloads, or
   nonstandard code-loading material};
 \end{tikzpicture}
-\caption{Principal APK regions and the evidence they can expose.}
+\caption{Principal APK regions and the evidence they can expose, adapted from Android APK analysis and manifest documentation \cite{androidApkAnalyzer,androidManifestOverview}.}
 \label{fig:pfe-background-apk-structure}
 \end{figure}
-
-\subsection{Manifest, Resources, and Assets}
-
-The manifest declares the application package, components, permissions,
-features, SDK constraints, intent filters, and other installation or runtime
-metadata \cite{androidManifestOverview}. In a packaged \APK it is stored in a
-compiled binary XML representation. Manifest metadata can support application
-identification and contextual analysis, but it does not normally enumerate
-all embedded Maven dependencies.
-
-Compiled resources are indexed through \texttt{resources.arsc} and the
-\texttt{res/} hierarchy. The \texttt{assets/} directory may contain arbitrary
-application data. Resource names, strings, notices, and configuration files
-can occasionally reveal component evidence; however, these signals may be
-renamed, removed, shared among products, or unrelated to executable code.
 
 \subsection{DEX and Multidex}
 

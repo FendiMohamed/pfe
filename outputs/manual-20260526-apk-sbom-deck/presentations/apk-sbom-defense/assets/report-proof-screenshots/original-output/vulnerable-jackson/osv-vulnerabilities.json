@@ -1,0 +1,61 @@
+{
+  "api_url": "https://api.osv.dev/v1/querybatch",
+  "components": 1,
+  "confirmed_vulnerabilities": 3,
+  "confirmed_vulnerable_components": 1,
+  "potential_vulnerabilities": 0,
+  "potential_vulnerable_components": 0,
+  "results": [
+    {
+      "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+      "error": null,
+      "finding_confidence": "confirmed",
+      "finding_reason": "OSV matched a component whose APK evidence has strong identity and exact/high version confidence.",
+      "next_page_token": null,
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.9.10.8",
+      "status": "ok",
+      "version": "2.9.10.8",
+      "vulnerabilities": [
+        {
+          "aliases": [
+            "CVE-2020-36518"
+          ],
+          "id": "GHSA-57j2-w4cx-62h2",
+          "modified": "2026-02-04T04:26:14.546092Z",
+          "severity": "HIGH",
+          "severity_score": null,
+          "severity_source": "database_specific.severity",
+          "summary": "Deeply nested json in jackson-databind"
+        },
+        {
+          "aliases": [
+            "CVE-2022-42003"
+          ],
+          "id": "GHSA-jjjh-jjxp-wpff",
+          "modified": "2026-02-04T02:23:59.070528Z",
+          "severity": "HIGH",
+          "severity_score": null,
+          "severity_source": "database_specific.severity",
+          "summary": "Uncontrolled Resource Consumption in Jackson-databind"
+        },
+        {
+          "aliases": [
+            "CVE-2022-42004"
+          ],
+          "id": "GHSA-rgv9-q543-rqg4",
+          "modified": "2026-02-04T02:40:22.352009Z",
+          "severity": "HIGH",
+          "severity_score": null,
+          "severity_source": "database_specific.severity",
+          "summary": "Uncontrolled Resource Consumption in FasterXML jackson-databind"
+        }
+      ]
+    }
+  ],
+  "severity_counts": {
+    "HIGH": 3
+  },
+  "source": "detected-libraries",
+  "vulnerabilities": 3,
+  "vulnerable_components": 1
+}

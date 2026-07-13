@@ -199,13 +199,45 @@ or recommendation was produced.
 A decision tree predicts a label by applying a sequence of feature tests. It
 is easy to inspect but can overfit training data. A Random Forest reduces this
 risk by training many decision trees on different samples and feature subsets,
-then combining their votes. If \(T_j(x)\) is the prediction of tree \(j\), a
-forest with \(m\) trees predicts the majority vote:
+then combining their votes \cite{breiman2001randomforests}. If \(T_j(x)\) is
+the prediction of tree \(j\), a forest with \(m\) trees predicts the majority
+vote:
 
 \begin{equation}
 \label{eq:pfe-ai-random-forest-vote}
 \hat{y}=\operatorname*{mode}_{j=1}^{m} T_j(x).
 \end{equation}
+
+\begin{figure}[H]
+\centering
+\resizebox{0.95\textwidth}{!}{%
+\begin{tikzpicture}[
+  node distance=7mm and 13mm,
+  box/.style={draw, rounded corners, align=center, text width=0.22\textwidth,
+    minimum height=10mm, fill=blue!5},
+  tree/.style={draw, rounded corners, align=center, text width=0.18\textwidth,
+    minimum height=10mm, fill=warningorange!14},
+  vote/.style={draw, rounded corners, align=center, text width=0.22\textwidth,
+    minimum height=10mm, fill=evidencegreen!10},
+  arrow/.style={-{Latex[length=2.5mm]}, thick}
+]
+\node[box] (input) {Structured evidence\\feature vector};
+\node[tree, right=18mm of input] (t2) {Tree 2\\feature subset};
+\node[tree, above=of t2] (t1) {Tree 1\\bootstrap sample};
+\node[tree, below=of t2] (t3) {Tree 3\\feature subset};
+\node[vote, right=18mm of t2] (vote) {Majority vote\\or averaged probability};
+
+\draw[arrow] (input.east) -- (t1.west);
+\draw[arrow] (input.east) -- (t2.west);
+\draw[arrow] (input.east) -- (t3.west);
+\draw[arrow] (t1.east) -- (vote.west);
+\draw[arrow] (t2.east) -- (vote.west);
+\draw[arrow] (t3.east) -- (vote.west);
+\end{tikzpicture}
+}
+\caption{Random Forest training and voting path for structured evidence.}
+\label{fig:pfe-ai-random-forest}
+\end{figure}
 
 Random Forests are useful for tabular evidence because they handle mixed
 feature types, nonlinear interactions, and feature importance analysis. Their
@@ -219,7 +251,12 @@ A baseline is a simple method used as a comparison point. Common baselines
 include majority-class prediction, simple threshold rules, or deterministic
 heuristics. A complex model should be preferred only when it improves over
 these baselines on held-out data and when the improvement is meaningful for
-the intended decision.
+the intended decision. Baselines do two jobs here: they show whether the
+learned model is genuinely extracting signal, and they expose when a more
+complicated model is only learning a convenient shortcut from the dataset or
+report format. In a security workflow, a weak baseline that already performs
+well can be preferable to a larger model whose gain disappears outside the
+training corpus.
 
 \section{Deep Learning and Transformers}
 
@@ -233,15 +270,19 @@ opcodes, or textual report fragments.
 
 However, deep models usually need larger datasets than classical models. They
 can also learn shortcuts, such as project-specific vocabulary or report
-formatting artifacts. Validation must therefore check whether the model learns
-the intended evidence relation rather than an accidental correlation.
+formatting artifacts \cite{geirhos2020shortcut}. Validation must therefore
+check whether the model learns the intended evidence relation rather than an
+accidental correlation. That is why the chapter treats deep models as
+assistance layers: they can summarize or prioritize evidence, but they do not
+replace the deterministic SBOM path.
 
 \subsection{Transformer Encoders}
 
-Transformers are neural sequence models based on attention. Attention allows
-the model to compare tokens with other tokens in the same sequence and learn
-which relations are useful for prediction. In simplified form, attention
-computes a weighted combination of value vectors:
+Transformers are neural sequence models based on attention
+\cite{vaswani2017attention}. Attention allows the model to compare tokens
+with other tokens in the same sequence and learn which relations are useful
+for prediction. In simplified form, attention computes a weighted
+combination of value vectors:
 
 \begin{equation}
 \label{eq:pfe-ai-attention}
@@ -253,10 +294,15 @@ Here, \(Q\), \(K\), and \(V\) are query, key, and value matrices, and \(d_k\)
 is the key dimension. In software-analysis tasks, tokens may represent
 opcodes, descriptors, API calls, or structured report fields.
 
-Figure~\ref{fig:pfe-ai-transformer-boundary} summarizes a conservative
-Transformer use case. The model can recommend report-only actions, but the
-authoritative SBOM path remains controlled by explicit evidence and
-deterministic validation rules.
+Transformers are powerful because the attention mechanism can compare
+long-range tokens directly, which helps when a relevant signal is split across
+multiple classes or report rows. They also demand caution: the same mechanism
+can learn dataset shortcuts if the token stream contains coordinate names,
+version labels, or report templates that correlate too strongly with the
+target class. Figure~\ref{fig:pfe-ai-transformer-boundary} summarizes a
+conservative Transformer use case. The model can recommend report-only
+actions, but the authoritative SBOM path remains controlled by explicit
+evidence and deterministic validation rules.
 
 \begin{figure}[H]
 \centering

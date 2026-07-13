@@ -9,6 +9,15 @@ vulnerability report. The design separates extraction, reference construction,
 matching, version selection, and downstream security interpretation so that
 each claim can be traced to its supporting evidence.
 
+This separation is not only architectural; it is also epistemic. The system
+must preserve the boundary between what is observed in the APK, what is
+reconstructed from the reference database, and what is merely suggested for
+reporting or investigation. If those layers are merged too early, the final
+report becomes difficult to audit and easy to over-interpret. The solution
+therefore uses explicit data stores, explicit decision stages, and explicit
+report-only experiment paths so that the final SBOM stays within the evidence
+available to it.
+
 \section{Functional and Non-Functional Requirements}
 
 The main functional requirements are APK inspection, component candidate
@@ -16,6 +25,15 @@ generation, exact or ambiguous version estimation, CycloneDX generation,
 vulnerability lookup, and human-readable reporting. The main non-functional
 requirements are explainability, reproducibility, conservative claims,
 bounded experimental isolation, and traceable evidence.
+
+These requirements guide the implementation choices that appear later in the
+chapter. The extractor must tolerate malformed or partial APK content without
+silently discarding evidence. The matcher must report confidence and
+alternatives instead of only a single winner. The reporting layer must
+present analyst-readable outputs without changing authoritative component or
+version decisions. Finally, the experimental layer must remain separable from
+the calibrated path so that exploratory weights, R8 diagnostics, and AI
+assistance cannot override the production evidence policy.
 
 \section{General Architecture}
 
@@ -613,6 +631,15 @@ row through \texttt{component\_id}. Figure~\ref{fig:pfe-reference-schema}
 groups tables by role to keep the model readable; the labels are the actual
 table names used by the implementation.
 
+This one-to-many organization permits transactional replacement of a
+component's feature rows while preserving a stable coordinate/version
+identity. It also allows new diagnostic feature families to be stored
+without changing the meaning of the calibrated production weights. The
+schema therefore keeps the authoritative component row stable while letting
+feature-specific evidence evolve across extractor revisions, which is exactly
+what the thesis needs when it compares calibrated, experimental, and
+report-only feature families.
+
 \begin{figure}[H]
 \centering
 \resizebox{0.98\textwidth}{!}{%
@@ -708,13 +735,15 @@ each arrow represents a \texttt{component\_id} foreign-key relation.}
 \label{fig:pfe-reference-schema}
 \end{figure}
 
-This one-to-many organization permits transactional replacement of a
-component's feature rows while preserving a stable coordinate/version
-identity. It also allows new diagnostic feature families to be stored without
-changing the meaning of the calibrated production weights.
-
 \section{Conclusion}
 
 The architecture turns APK observations into explicitly bounded SBOM claims.
+Its main contribution is not only the final output format, but the discipline
+with which each evidence layer is kept separate. The result is a design that
+can accept stronger evidence when it exists, preserve uncertainty when it
+does not, and still emit a useful CycloneDX-oriented report.
+
 The following chapter explains how these components were implemented and how
-their behavior was evaluated.
+their behavior was evaluated. That evaluation matters because the design is
+only valuable if the implementation can preserve the same boundaries under
+real APKs, controlled demonstrations, and report-only research experiments.

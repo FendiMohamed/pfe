@@ -4,13 +4,15 @@
 \section{Introduction}
 
 This chapter applies the structured mapping protocol defined in
-\cref{ch:master-background} and \cref{app:master-review-protocol} to the
-Android third-party library detection literature. Its purpose is not to
-produce a numerical leaderboard. The reviewed studies use different datasets,
-task units, obfuscation settings, and ground-truth procedures, so a direct
-ranking would hide the very uncertainty that this thesis aims to expose.
-Instead, the chapter organizes prior work by technique, evidence source,
-transformation threat, and evaluation practice.
+\cref{ch:master-background} to the Android third-party library detection
+literature. The frozen review protocol follows software-engineering review
+guidance \cite{kitchenham2007guidelines} and uses a fixed search scope,
+screening logic, extraction schema, and quality assessment so that the corpus
+can be discussed transparently even when the underlying studies use different
+datasets, task units, obfuscation settings, and ground-truth procedures.
+Instead of producing a numerical leaderboard, the chapter organizes prior
+work by technique, evidence source, transformation threat, and evaluation
+practice.
 
 The analysis is centered on the 15 Tier A studies whose full texts are
 available locally. Tier B records are useful for search coverage and for
@@ -30,6 +32,16 @@ the presence of a library family does not necessarily justify an exact Maven
 version, and an exact-version candidate does not automatically justify a
 \CVE claim unless the evidence, reference coverage, and validation context are
 visible.
+
+The review protocol is therefore part of the interpretation of the chapter.
+Searches combined Android artifacts, third-party components or SBOM terms,
+detection or attribution tasks, and transformation-risk keywords; records were
+deduplicated and screened before being assigned to evidence tiers; and each
+included study was extracted across task granularity, inputs, evidence
+families, transformation coverage, evaluation setting, and stated
+limitations. Studies without locally verified full text were treated as
+supplementary records rather than as independent authority, which keeps the
+chapter's synthesis aligned with the available evidence.
 
 \section{Taxonomy of Component-Recovery Techniques}
 
@@ -66,7 +78,7 @@ Method descriptors, Merkle trees, fuzzy hashes, class or method signatures &
 Can support identity and, when references are complete, version claims. Its
 authority is bounded by reference coverage and by the stability of the hashed
 features under optimization. &
-LibScout \cite{backes2016libscout}, ORLIS \cite{wang2018orlis}, LibID
+\textbf{LibScout} \cite{backes2016libscout}, \textbf{ORLIS} \cite{wang2018orlis}, \textbf{LibID}
 \cite{zhang2019libid}\\
 
 Structural graph segmentation &
@@ -74,7 +86,7 @@ Call, inheritance, containment, and class-dependency relations &
 Improves module boundary recovery when package structure is unreliable.
 Supports stronger identity evidence, but does not by itself solve exact
 version attribution. &
-LibD \cite{li2017libd}, LibPecker \cite{zhang2018libpecker}, assessment
+\textbf{LibD} \cite{li2017libd}, \textbf{LibPecker} \cite{zhang2018libpecker}, assessment
 studies \cite{zhan2020assessment,zhan2021systematic}\\
 
 Coarse-to-fine matching &
@@ -82,7 +94,7 @@ Fast filtering followed by detailed opcode, CFG, or structural comparison &
 Balances scalability and precision. Trust depends on both stages: a missed
 coarse candidate can cap recall, while an over-permissive fine stage can
 inflate false positives. &
-ORLIS \cite{wang2018orlis}, ATVHUNTER \cite{zhan2021atvhunter}, LibScan
+\textbf{ORLIS} \cite{wang2018orlis}, \textbf{ATVHUNTER} \cite{zhan2021atvhunter}, \textbf{LibScan}
 \cite{wu2023libscan}\\
 
 Version-discriminating semantic features &
@@ -91,15 +103,15 @@ patterns, literals, and class summaries &
 Provides the main route from library identity to exact-version authority.
 Adjacent versions and optimized builds remain difficult because many versions
 share most code. &
-ATVHUNTER \cite{zhan2021atvhunter}, LibScan \cite{wu2023libscan}, LibHunter
-\cite{xie2024libhunter}, SAD \cite{zhou2025sad}\\
+\textbf{ATVHUNTER} \cite{zhan2021atvhunter}, \textbf{LibScan} \cite{wu2023libscan}, \textbf{LibHunter}
+\cite{xie2024libhunter}, \textbf{SAD} \cite{zhou2025sad}\\
 
 Learned representations &
 Smali token sequences, structural vocabularies, neural embeddings &
 Can learn obfuscation-resilient presence signals, but the reviewed Tier A
 learning approach does not provide exact-version or boundary authority on its
 own. &
-LibAttention \cite{pan2025libattention}\\
+\textbf{LibAttention} \cite{pan2025libattention}\\
 
 Empirical assessment and benchmarking &
 Shared datasets, patched tools, source-known applications, evaluation
@@ -107,8 +119,8 @@ criteria &
 Does not directly recover components, but defines which claims are comparable
 and exposes tool failure modes, missing denominators, and reproducibility
 limits. &
-Tool assessments \cite{zhan2020assessment,zhan2021systematic}, Ramirez
-thesis \cite{ramirez2024empirical}\\
+\textbf{Tool assessments} \cite{zhan2020assessment,zhan2021systematic}, \textbf{Ramirez
+thesis} \cite{ramirez2024empirical}\\
 \end{longtable}
 \endgroup
 
@@ -521,34 +533,34 @@ roles and limitations; missing study fields are not filled by inference.
 \endhead
 \bottomrule
 \endfoot
-LibScout \cite{backes2016libscout} &
+\textbf{LibScout} \cite{backes2016libscout} &
 Reference-profile identity and version matching &
 Fuzzy method descriptors, package-class-method profile hierarchy, similarity
 score &
 Supports the idea of version profiles, but package and method-structure
 assumptions must be exposed as evidence limits.\\
 
-LibD \cite{li2017libd} &
+\textbf{LibD} \cite{li2017libd} &
 Scalable library discovery and boundary recovery &
 Homogeny graph, call/inheritance/inclusion relations, opcode-derived
 fingerprints &
 Strengthens identity evidence under name obfuscation, but does not provide
 exact-version or SBOM authority.\\
 
-LibPecker \cite{zhang2018libpecker} &
+\textbf{LibPecker} \cite{zhang2018libpecker} &
 Class-dependency based detection &
 Class dependency hashing, adaptive similarity, weighted class matching &
 Shows that structural class relations are useful, while similarity still
 needs explicit thresholds and uncertainty handling.\\
 
-ORLIS \cite{wang2018orlis} &
+\textbf{ORLIS} \cite{wang2018orlis} &
 Obfuscation-resilient structural matching &
 Call-graph-derived coarse features with \texttt{sdhash}, followed by
 \texttt{ssdeep} class signatures and injective class mapping &
 Provides partial-inclusion evidence, but high cost and missing exact-version
 authority limit direct SBOM use.\\
 
-LibID \cite{zhang2019libid} &
+\textbf{LibID} \cite{zhang2019libid} &
 Obfuscated library and version identification &
 Consistent class correspondence through binary integer programming, with
 source-backed threshold evaluation &
@@ -568,13 +580,13 @@ limitations &
 Supports taxonomy-based synthesis and shows that CDG-style evidence is
 preferable to package-only evidence.\\
 
-ATVHUNTER \cite{zhan2021atvhunter} &
+\textbf{ATVHUNTER} \cite{zhan2021atvhunter} &
 Version and vulnerability-oriented detection &
 CDG decoupling, CFG coarse filter, opcode fuzzy matching, vulnerability DB &
 Strongly connects version evidence to security use, but still lacks standard
 SBOM provenance and full R8-inlining coverage.\\
 
-LibScan \cite{wu2023libscan} &
+\textbf{LibScan} \cite{wu2023libscan} &
 Precise TPL identification &
 Class correspondence, method opcode similarity, call-chain evidence &
 Improves fine-grained matching evidence; claim strength remains tied to
@@ -587,32 +599,32 @@ Android/iOS contrast &
 Supports cross-tool and dataset-reuse analysis, but does not provide
 source-known Android ground truth or standard SBOM validation.\\
 
-LibHunter \cite{xie2024libhunter} &
+\textbf{LibHunter} \cite{xie2024libhunter} &
 Optimization-aware detection &
 Call-site-optimization feature enhancement and cross-inlining method matching &
 Makes optimization a first-class validity condition for exact-version claims.\\
 
-LibAttention \cite{pan2025libattention} &
+\textbf{LibAttention} \cite{pan2025libattention} &
 Learning-based presence detection &
 Transformer over Smali tokens and SDK structural vocabulary &
 Promising for obfuscation-resilient identity hints, but insufficient alone
 for exact versions, provenance, or CVE authority.\\
 
-SAD \cite{zhou2025sad} &
+\textbf{SAD} \cite{zhou2025sad} &
 Class-structural version-level detection &
 CDG neighbor aggregation, stateful/stateless split, field-operation sequence,
 literal tie-breakers &
 Provides strong version-discriminating evidence, while remaining sensitive to
 method inlining and lacking standard SBOM output.\\
 
-TPL-Benchmark \cite{gu2025tplbenchmark} &
+\textbf{TPL-Benchmark} \cite{gu2025tplbenchmark} &
 Ground-truth benchmark and cross-tool reassessment &
 Version-annotated real applications, dependency extraction, and standardized
 evaluation of ten detectors &
 Provides realistic comparative evidence and exposes low or uneven
 generalization; it diagnoses detector limits rather than supplying a detector.\\
 
-UniBOM \cite{safronov2025unibom} &
+\textbf{UniBOM} \cite{safronov2025unibom} &
 Adjacent SBOM generation and analysis workflow &
 Firmware extraction, filesystem and source scanning, SBOM generation, CVE
 analysis, and visualization &

@@ -1,0 +1,10 @@
+Expanded old-style graduation defense deck
+
+Requested changes addressed:
+- Presented by Fendi Mohamed added on the first slide.
+- Each agreed section has its own divider slide.
+- Section content expanded with dedicated explanation slides.
+- Related-work comparison and limitations added before the contribution.
+- Results are compared back to related work after the implementation and evaluation section.
+- Demo screenshots were removed from the deck.
+- A single live-demo transition slide remains, with demo steps and commands in the speech file.

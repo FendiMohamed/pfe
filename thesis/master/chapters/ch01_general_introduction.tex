@@ -37,6 +37,24 @@ Existing Android detection research provides strong technical signals, but
 lacks a unified model connecting those signals to claim provenance,
 uncertainty, and permitted vulnerability interpretation.
 
+The practical difficulty is that Android recovery tools often output a
+single best candidate even when the supporting evidence is thin,
+transformed, or only partially representative of the shipped artifact. That
+habit is acceptable for exploratory screening, but it becomes fragile when
+the output is later used to justify a security decision. A name-only match
+can be useful as a hint, yet the same match can be misleading if the version
+boundary is unclear, the reference corpus is incomplete, or the evidence was
+altered by shrinking or repackaging. The thesis therefore treats the gap
+between detector output and auditable claim as the real problem, not merely
+the gap between source code and binary code.
+
+More precisely, the challenge is to define when a reconstructed claim is
+strong enough to support identity, when it is only strong enough to support a
+bounded version set, and when it should be reported as uncertain or
+withheld. Without that discipline, a binary recovery workflow can quietly
+turn evidence quality into false precision, especially in vulnerability
+contexts where a small version error can change the affected advisory set.
+
 \section{Motivation}
 
 Software transparency is most useful when an inventory can be inspected,
@@ -167,20 +185,17 @@ problems.
 The remainder of the thesis is organized as follows.
 
 \textbf{Chapter~\ref{ch:master-background} -- Background and Research
-Methodology} establishes the conceptual and
-methodological foundation. It distinguishes authoritative and reconstructed
-\SBOM{}s, defines evidence, provenance, uncertainty, and software-component
-attribution, describes the Android compiled-artifact context, and records the
-structured literature-review method. Appendix~\ref{app:master-review-protocol}
-contains the detailed review protocol, selection rules, extraction schema,
-quality assessment, and audit controls.
+Methodology} establishes the conceptual foundation. It distinguishes
+authoritative and reconstructed \SBOM{}s, defines evidence, provenance,
+uncertainty, and software-component attribution, and describes the Android
+compiled-artifact context.
 
-\textbf{Chapter~\ref{ch:master-sota} -- State of the Art and Taxonomy} applies
-that method to the selected literature. It
-constructs taxonomies of recovery techniques, evidence sources,
-transformation threats, and evaluation practices, compares representative
-approaches without treating incompatible reported scores as one leaderboard,
-and derives the research gap addressed by the thesis.
+\textbf{Chapter~\ref{ch:master-sota} -- State of the Art and Taxonomy}
+summarizes the frozen review protocol and applies it to the selected
+literature. It constructs taxonomies of recovery techniques, evidence
+sources, transformation threats, and evaluation practices, compares
+representative approaches without treating incompatible reported scores as
+one leaderboard, and derives the research gap addressed by the thesis.
 
 \textbf{Chapter~\ref{ch:master-conclusion} -- General Conclusion and
 Perspectives} answers the research questions, summarizes the review's main

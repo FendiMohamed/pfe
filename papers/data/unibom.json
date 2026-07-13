@@ -1,0 +1,45 @@
+{
+  "id": "unibom",
+  "title": "UniBOM: A Unified SBOM Analysis and Visualisation Tool for IoT Systems and Beyond",
+  "authors": [
+    "Vadim Safronov",
+    "Ionut Bostan",
+    "Nicholas Allott",
+    "Andrew Martin"
+  ],
+  "year": 2025,
+  "publication_type": "arXiv preprint",
+  "identifier": "10.48550/arXiv.2511.22359",
+  "evidence_tier": "Tier A",
+  "local_full_text": "ressources/papers/UniBOM - Unified Software Bill of Materials.pdf",
+  "objective": "Integrate binary, filesystem, and source analysis with SBOM generation, vulnerability analysis, comparison, and visualization for IoT systems.",
+  "task_granularity": [
+    "firmware extraction",
+    "filesystem SBOM generation",
+    "source dependency analysis",
+    "vulnerability analysis",
+    "SBOM visualization"
+  ],
+  "method": "A Node.js workflow integrates Binwalk, Syft, Grype, and CCScanner, then presents component, CVE, comparison, history, and memory-safety views through a web interface.",
+  "ground_truth_and_dataset": "The evaluation uses 258 Linux-based wireless gateway firmware images and source analyses of four IoT operating-system codebases. It compares generated vulnerability counts across tools but does not establish a complete component-level ground truth.",
+  "transformation_scope": "Firmware extraction and non-package-managed C/C++ recovery are considered; Android R8, DEX module decoupling, and adjacent Maven-version discrimination are outside scope.",
+  "metrics_and_results": "The paper reports comparative component and vulnerability findings rather than precision, recall, or exact-version accuracy against a complete gold standard.",
+  "artifact_availability": "UniBOM is presented as an open-source tool.",
+  "uncertainty_and_limitations": [
+    "The evaluation is demonstration-oriented and lacks complete component-level ground truth.",
+    "Higher vulnerability counts do not by themselves prove higher precision.",
+    "The study is adjacent SBOM evidence and cannot support Android Maven exact-version claims."
+  ],
+  "sbom_relevance": "Supports end-to-end integration of multiple evidence sources, SBOM comparison, and downstream vulnerability visualization while illustrating the need to separate workflow breadth from attribution accuracy.",
+  "quality_assessment": {
+    "q1_objective": 1,
+    "q2_method": 1,
+    "q3_dataset_ground_truth": 0.5,
+    "q4_task_metrics": 0.5,
+    "q5_transformations": 0.5,
+    "q6_identity_version_separation": 0.5,
+    "q7_artifact_availability": 1,
+    "q8_limitations": 0.5,
+    "total": 5.5
+  }
+}

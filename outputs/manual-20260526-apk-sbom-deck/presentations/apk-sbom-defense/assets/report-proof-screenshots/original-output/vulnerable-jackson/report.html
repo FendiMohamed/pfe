@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APK SBOM Recovery Report</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+      --ink: #1f2933;
+      --muted: #5f6b7a;
+      --line: #d9dee7;
+      --accent: #2563eb;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b91c1c;
+      --soft: #eef2f7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 14px/1.5 Arial, Helvetica, sans-serif;
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0 20px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+    section {
+      margin: 18px 0;
+      padding: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+    code {
+      font-family: Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 12px;
+      word-break: break-all;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 9px 8px;
+      text-align: left;
+      vertical-align: top;
+      word-break: break-word;
+    }
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    tr:last-child td { border-bottom: 0; }
+    .subtle { color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+    }
+    .metric {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--soft);
+    }
+    .metric strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 22px;
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    .pill.ok { color: var(--ok); border-color: #99d3c7; background: #ecfdf5; }
+    .pill.warn { color: var(--warn); border-color: #f3c27b; background: #fffbeb; }
+    .pill.bad { color: var(--bad); border-color: #f3a4a4; background: #fef2f2; }
+    .bar {
+      height: 8px;
+      margin-top: 5px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      overflow: hidden;
+    }
+    .bar span {
+      display: block;
+      height: 100%;
+      background: var(--accent);
+    }
+    details {
+      margin-top: 6px;
+    }
+    summary {
+      cursor: pointer;
+      color: var(--accent);
+    }
+    ul {
+      margin: 8px 0 0 18px;
+      padding: 0;
+    }
+    .artifacts li, .limitations li {
+      margin: 5px 0;
+    }
+    @media (max-width: 720px) {
+      main { padding: 14px; }
+      h1 { font-size: 22px; }
+      table { table-layout: auto; }
+      th, td { padding: 8px 6px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>APK SBOM Recovery Report</h1>
+    <div class="subtle"><code>data/test_apks/controlled-com-fasterxml-jackson-core-jackson-databind-2.9.10.8-clear.apk</code></div>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <div class="grid">
+      <div class="metric"><span class="subtle">Maven components</span><strong>1</strong></div>
+      <div class="metric"><span class="subtle">Native files</span><strong>0</strong></div>
+      <div class="metric"><span class="subtle">DEX files analyzed</span><strong>1</strong></div>
+      <div class="metric"><span class="subtle">DEX parse failures</span><strong>0</strong></div>
+      <div class="metric"><span class="subtle">Extraction risk</span><strong>low</strong></div>
+      <div class="metric"><span class="subtle">Obfuscation risk</span><strong>low</strong></div>
+      <div class="metric"><span class="subtle">Vulnerability lookup</span><strong>3 (3 confirmed, 0 potential)</strong></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>APK</h2>
+    <table>
+      <tbody>
+        <tr><th>SHA-256</th><td><code>604a9833ccd276362c2dd3685ad66b70a6c6cf9bb59b4fe55377639c4dc12e58</code></td></tr>
+        <tr><th>Package</th><td><code>com.example.fixture</code></td></tr>
+        <tr><th>Version</th><td>unknown / code unknown</td></tr>
+        <tr><th>SDK</th><td>min unknown / target unknown</td></tr>
+        <tr><th>Manifest Parse</th><td>parsed</td></tr>
+        <tr><th>Size</th><td>470436 bytes</td></tr>
+        <tr><th>Multidex</th><td>false</td></tr>
+        <tr><th>Manifest</th><td>true</td></tr>
+        <tr><th>Resources</th><td>true</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>APK Forensics</h2>
+    <table><tbody><tr><th>Standard DEX</th><td>classes.dex</td></tr><tr><th>Nonstandard DEX</th><td>none</td></tr><tr><th>Native ABIs</th><td>none</td></tr><tr><th>Permissions</th><td>none</td></tr><tr><th>Obfuscation Risk</th><td><span class="pill">low</span> score=0.20<ul><li>Structural evidence is stronger than package-name evidence.</li></ul></td></tr></tbody></table><table><thead><tr><th>Severity</th><th>Code</th><th>Detail</th></tr></thead><tbody><tr><td colspan="3">No extraction indicators were raised.</td></tr></tbody></table>
+  </section>
+
+  <section>
+    <h2>Detected Components</h2>
+    <table><thead><tr><th>Component</th><th>Version</th><th>Reasons</th><th>Identity</th><th>Version confidence</th><th>Match type</th><th>Vulns</th><th>Evidence</th></tr></thead><tbody><tr><td><code>com.fasterxml.jackson.core:jackson-databind</code><br><span class="subtle">pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.9.10.8</span></td><td>2.9.10.8</td><td>package, class, method, opcode, graph, literals, version-unique</td><td>confirmed/high (1.000)<div class="bar"><span style="width:100%"></span></div></td><td>exact/high (1.000)<div class="bar"><span style="width:100%"></span></div></td><td><span class="pill ok">hybrid-exact</span></td><td>3 confirmed</td><td><details><summary>Evidence</summary><ul><li><strong>package-overlap</strong>: 20/20 reference packages matched; score=1.000 <span class="subtle">weight=1.000</span></li><li><strong>class-overlap</strong>: 626/626 reference classes matched; score=1.000 <span class="subtle">weight=1.000</span></li><li><strong>method-overlap</strong>: 7617/7617 reference methods matched; score=1.000 <span class="subtle">weight=1.000</span></li><li><strong>opcode-cosine</strong>: 145 shared opcode kinds; score=1.000 <span class="subtle">weight=1.000</span></li><li><strong>class-dependency-graph</strong>: 3385/3385 reference dependency edges matched; edge_score=1.000; shape_score=1.000; score=1.000 <span class="subtle">weight=1.000</span></li><li><strong>string-literals</strong>: 1050/1050 reference string literals matched; score=1.000 <span class="subtle">weight=1.000</span></li><li><strong>version-unique-features</strong>: unique classes 8/8; unique methods 175/175; unique literals 72/72; score=1.000 <span class="subtle">weight=1.000</span></li><li><strong>identity-decision</strong>: confirmed identity with high confidence; identity_score=1.000 <span class="subtle">weight=1.000</span></li><li><strong>version-decision</strong>: exact version decision with high confidence; gap_to_next=0.183; alternatives=2.12.7.1:0.817, 2.13.5:0.802, 2.15.2:0.755 <span class="subtle">weight=1.000</span></li></ul></details></td></tr></tbody></table>
+  </section>
+
+  <section>
+    <h2>Version Decisions</h2>
+    <table><thead><tr><th>Component</th><th>Selected version</th><th>Identity</th><th>Version</th><th>Score</th><th>Gap</th><th>Alternatives</th></tr></thead><tbody><tr><td><code>com.fasterxml.jackson.core:jackson-databind</code></td><td>2.9.10.8</td><td><span class="pill ok">confirmed/high (1.000)</span></td><td><span class="pill ok">exact/high (1.000)</span></td><td>1.000</td><td>0.183</td><td>2.12.7.1 (0.817), 2.13.5 (0.802), 2.15.2 (0.755)</td></tr><tr><td><code>com.google.code.gson:gson</code></td><td>2.8.5</td><td><span class="pill warn">uncertain/uncertain (0.146)</span></td><td><span class="pill warn">uncertain/uncertain (0.161)</span></td><td>0.161</td><td>0.015</td><td>2.8.6 (0.146), 2.8.9 (0.146)</td></tr><tr><td><code>com.squareup.retrofit2:retrofit</code></td><td>2.8.1</td><td><span class="pill warn">uncertain/uncertain (0.133)</span></td><td><span class="pill warn">uncertain/uncertain (0.137)</span></td><td>0.137</td><td>0.000</td><td>2.9.0 (0.137)</td></tr><tr><td><code>com.squareup.okhttp3:okhttp</code></td><td>4.8.0</td><td><span class="pill warn">uncertain/uncertain (0.125)</span></td><td><span class="pill warn">uncertain/uncertain (0.130)</span></td><td>0.130</td><td>0.000</td><td>4.9.0 (0.130), 4.9.1 (0.130), 4.12.0 (0.130)</td></tr><tr><td><code>com.squareup.okio:okio-jvm</code></td><td>3.7.0</td><td><span class="pill warn">uncertain/uncertain (0.124)</span></td><td><span class="pill warn">uncertain/uncertain (0.127)</span></td><td>0.127</td><td>0.000</td><td>3.6.0 (0.127), 3.0.0 (0.125)</td></tr><tr><td><code>commons-codec:commons-codec</code></td><td>1.15</td><td><span class="pill warn">uncertain/uncertain (0.119)</span></td><td><span class="pill warn">uncertain/uncertain (0.125)</span></td><td>0.125</td><td>0.001</td><td>1.16.1 (0.124), 1.16.0 (0.124)</td></tr><tr><td><code>io.ktor:ktor-client-core-jvm</code></td><td>2.3.12</td><td><span class="pill warn">uncertain/uncertain (0.119)</span></td><td><span class="pill warn">uncertain/uncertain (0.124)</span></td><td>0.124</td><td>0.124</td><td>none</td></tr><tr><td><code>com.squareup.okio:okio</code></td><td>2.9.0</td><td><span class="pill warn">uncertain/uncertain (0.119)</span></td><td><span class="pill warn">uncertain/uncertain (0.123)</span></td><td>0.123</td><td>0.000</td><td>2.8.0 (0.122)</td></tr><tr><td><code>io.ktor:ktor-http-jvm</code></td><td>2.3.12</td><td><span class="pill warn">uncertain/uncertain (0.115)</span></td><td><span class="pill warn">uncertain/uncertain (0.119)</span></td><td>0.119</td><td>0.119</td><td>none</td></tr><tr><td><code>io.ktor:ktor-utils-jvm</code></td><td>2.3.12</td><td><span class="pill warn">uncertain/uncertain (0.114)</span></td><td><span class="pill warn">uncertain/uncertain (0.119)</span></td><td>0.119</td><td>0.119</td><td>none</td></tr><tr><td><code>io.ktor:ktor-io-jvm</code></td><td>2.3.12</td><td><span class="pill warn">uncertain/uncertain (0.112)</span></td><td><span class="pill warn">uncertain/uncertain (0.117)</span></td><td>0.117</td><td>0.117</td><td>none</td></tr><tr><td><code>io.ktor:ktor-client-okhttp-jvm</code></td><td>2.3.12</td><td><span class="pill warn">uncertain/uncertain (0.098)</span></td><td><span class="pill warn">uncertain/uncertain (0.107)</span></td><td>0.107</td><td>0.107</td><td>none</td></tr></tbody></table>
+  </section>
+
+  <section>
+    <h2>Vulnerabilities</h2>
+    <table><thead><tr><th>Component</th><th>Version</th><th>Finding</th><th>Severity</th><th>Advisory</th><th>Aliases</th><th>Summary</th></tr></thead><tbody><tr><td><code>com.fasterxml.jackson.core:jackson-databind</code></td><td>2.9.10.8</td><td><span class="pill ok">confirmed</span><br><span class="subtle">OSV matched a component whose APK evidence has strong identity and exact/high version confidence.</span></td><td><span class="pill bad">HIGH</span></td><td><code>GHSA-57j2-w4cx-62h2</code></td><td>CVE-2020-36518</td><td>Deeply nested json in jackson-databind</td></tr><tr><td><code>com.fasterxml.jackson.core:jackson-databind</code></td><td>2.9.10.8</td><td><span class="pill ok">confirmed</span><br><span class="subtle">OSV matched a component whose APK evidence has strong identity and exact/high version confidence.</span></td><td><span class="pill bad">HIGH</span></td><td><code>GHSA-jjjh-jjxp-wpff</code></td><td>CVE-2022-42003</td><td>Uncontrolled Resource Consumption in Jackson-databind</td></tr><tr><td><code>com.fasterxml.jackson.core:jackson-databind</code></td><td>2.9.10.8</td><td><span class="pill ok">confirmed</span><br><span class="subtle">OSV matched a component whose APK evidence has strong identity and exact/high version confidence.</span></td><td><span class="pill bad">HIGH</span></td><td><code>GHSA-rgv9-q543-rqg4</code></td><td>CVE-2022-42004</td><td>Uncontrolled Resource Consumption in FasterXML jackson-databind</td></tr></tbody></table>
+  </section>
+
+  <section>
+    <h2>Native Libraries</h2>
+    <p>No native <code>.so</code> files were found in the APK.</p>
+  </section>
+
+  <section>
+    <h2>Artifacts</h2>
+    <ul class="artifacts">
+      <li>Match details: <code>data/results/demo-osv-vulnerable-jackson-databind/matches.json</code></li>
+      <li>CycloneDX SBOM: <code>data/results/demo-osv-vulnerable-jackson-databind/sbom.cdx.json</code></li>
+      <li>JSON report: <code>data/results/demo-osv-vulnerable-jackson-databind/report.json</code></li>
+      <li>Markdown report: <code>data/results/demo-osv-vulnerable-jackson-databind/report.md</code></li>
+      <li>HTML report: <code>data/results/demo-osv-vulnerable-jackson-databind/report.html</code></li>
+      <li>OSV results: <code>data/results/demo-osv-vulnerable-jackson-databind/osv-vulnerabilities.json</code></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Limitations</h2>
+    <ul class="limitations">
+      <li>This MVP only detects libraries present in the local Maven reference DB.</li>
+      <li>Heavy R8 optimization, reflection, packed APKs, encrypted DEX, and dynamic loading remain limited or unsupported.</li>
+      <li>Native `.so` files are hashed, but native component version identification is not implemented in the first MVP.</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

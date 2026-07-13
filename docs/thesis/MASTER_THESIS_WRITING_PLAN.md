@@ -904,8 +904,8 @@ This section must be updated at the end of every master-thesis writing session.
 | Topic status | Recommended title remains provisional; supervisor approval is still required |
 | Review protocol | Version 1.0b: 15 Tier A full texts, five Tier B records, completed per-study quality scores, and logged TPL-Benchmark/UniBOM promotions |
 | LaTeX source status | Standalone multilingual project rebuilt with LuaLaTeX and Biber as a visually inspected 74-page evidence-review checkpoint on 2026-06-21 |
-| Current blocker | Supervisor approval of the provisional title and research questions; jury president, examiner, and final defense/submission date remain placeholders; five Tier B records remain supplementary only |
-| Exact next action | Send the 74-page evidence-review checkpoint to the supervisor, obtain title/RQ and administrative approvals, fill the remaining metadata, then regenerate the final submission PDF and source ZIP |
+| Current blocker | Supervisor approval of the provisional title and research questions remains; the jury names and defense/submission date were filled on 2026-07-06; five Tier B records remain supplementary only |
+| Exact next action | Send the current evidence-review PDF to the supervisor, obtain title/RQ approval, then regenerate the final source ZIP if required |
 
 Checkpoint update rules:
 

@@ -85,7 +85,7 @@ function page(slide, ctx, title, kicker, number, opts = {}) {
     bold: true,
     face: ctx.fonts.title,
   });
-  text(slide, ctx, String(number).padStart(2, "0"), 1170, 38, 48, 22, {
+  text(slide, ctx, String(ctx.displayNumber ?? number).padStart(2, "0"), 1170, 38, 48, 22, {
     size: 12,
     color: dark ? "#8290A6" : C.muted,
     align: "right",

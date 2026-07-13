@@ -1,0 +1,380 @@
+{
+  "output": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\output\\apk-sbom-defense-expanded-old-style.pptx",
+  "outputBytes": 250495,
+  "slideCount": 52,
+  "structure": [
+    "Introduction",
+    "Background",
+    "State of the Art and Related Work",
+    "Contribution",
+    "Implementation and Results",
+    "Live Demonstration",
+    "Conclusion"
+  ],
+  "screenshotSlides": [],
+  "contactSheet": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\contact-sheet.png",
+  "slides": [
+    {
+      "index": 1,
+      "type": "title",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-01.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-01.layout.json"
+    },
+    {
+      "index": 2,
+      "type": "section",
+      "title": "Introduction",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-02.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-02.layout.json"
+    },
+    {
+      "index": 3,
+      "type": "old",
+      "oldSlide": 2,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-03.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-03.layout.json"
+    },
+    {
+      "index": 4,
+      "type": "content",
+      "title": "The project answers one practical question",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-04.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-04.layout.json"
+    },
+    {
+      "index": 5,
+      "type": "content",
+      "title": "Two theses support one defense story",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-05.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-05.layout.json"
+    },
+    {
+      "index": 6,
+      "type": "section",
+      "title": "Background",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-06.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-06.layout.json"
+    },
+    {
+      "index": 7,
+      "type": "content",
+      "title": "An SBOM is useful only when its claims are trustworthy",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-07.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-07.layout.json"
+    },
+    {
+      "index": 8,
+      "type": "content",
+      "title": "Android compilation changes the evidence before analysis",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-08.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-08.layout.json"
+    },
+    {
+      "index": 9,
+      "type": "content",
+      "title": "The trust boundary has three decisions",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-09.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-09.layout.json"
+    },
+    {
+      "index": 10,
+      "type": "section",
+      "title": "State of the Art",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-10.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-10.layout.json"
+    },
+    {
+      "index": 11,
+      "type": "old",
+      "oldSlide": 3,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-11.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-11.layout.json"
+    },
+    {
+      "index": 12,
+      "type": "content",
+      "title": "The literature evolves through three evidence families",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-12.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-12.layout.json"
+    },
+    {
+      "index": 13,
+      "type": "content",
+      "title": "The main gap is trustworthy version authority",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-13.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-13.layout.json"
+    },
+    {
+      "index": 14,
+      "type": "table",
+      "title": "Related works solve parts of the problem, not the whole workflow",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-14.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-14.layout.json"
+    },
+    {
+      "index": 15,
+      "type": "table",
+      "title": "The limits of prior tools become MVP requirements",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-15.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-15.layout.json"
+    },
+    {
+      "index": 16,
+      "type": "content",
+      "title": "Realistic benchmarks reset the comparison baseline",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-16.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-16.layout.json"
+    },
+    {
+      "index": 17,
+      "type": "table",
+      "title": "The Master thesis turns state of the art into requirements",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-17.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-17.layout.json"
+    },
+    {
+      "index": 18,
+      "type": "section",
+      "title": "Contribution",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-18.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-18.layout.json"
+    },
+    {
+      "index": 19,
+      "type": "old",
+      "oldSlide": 4,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-19.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-19.layout.json"
+    },
+    {
+      "index": 20,
+      "type": "old",
+      "oldSlide": 5,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-20.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-20.layout.json"
+    },
+    {
+      "index": 21,
+      "type": "old",
+      "oldSlide": 6,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-21.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-21.layout.json"
+    },
+    {
+      "index": 22,
+      "type": "content",
+      "title": "The contribution is not only a detector",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-22.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-22.layout.json"
+    },
+    {
+      "index": 23,
+      "type": "section",
+      "title": "Implementation",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-23.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-23.layout.json"
+    },
+    {
+      "index": 24,
+      "type": "old",
+      "oldSlide": 7,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-24.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-24.layout.json"
+    },
+    {
+      "index": 25,
+      "type": "old",
+      "oldSlide": 8,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-25.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-25.layout.json"
+    },
+    {
+      "index": 26,
+      "type": "old",
+      "oldSlide": 9,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-26.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-26.layout.json"
+    },
+    {
+      "index": 27,
+      "type": "old",
+      "oldSlide": 10,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-27.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-27.layout.json"
+    },
+    {
+      "index": 28,
+      "type": "old",
+      "oldSlide": 11,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-28.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-28.layout.json"
+    },
+    {
+      "index": 29,
+      "type": "old",
+      "oldSlide": 12,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-29.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-29.layout.json"
+    },
+    {
+      "index": 30,
+      "type": "old",
+      "oldSlide": 13,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-30.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-30.layout.json"
+    },
+    {
+      "index": 31,
+      "type": "old",
+      "oldSlide": 14,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-31.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-31.layout.json"
+    },
+    {
+      "index": 32,
+      "type": "content",
+      "title": "The implemented command produces a report bundle",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-32.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-32.layout.json"
+    },
+    {
+      "index": 33,
+      "type": "old",
+      "oldSlide": 15,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-33.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-33.layout.json"
+    },
+    {
+      "index": 34,
+      "type": "old",
+      "oldSlide": 16,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-34.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-34.layout.json"
+    },
+    {
+      "index": 35,
+      "type": "old",
+      "oldSlide": 17,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-35.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-35.layout.json"
+    },
+    {
+      "index": 36,
+      "type": "old",
+      "oldSlide": 18,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-36.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-36.layout.json"
+    },
+    {
+      "index": 37,
+      "type": "old",
+      "oldSlide": 19,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-37.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-37.layout.json"
+    },
+    {
+      "index": 38,
+      "type": "metrics",
+      "title": "The evaluation separates controlled results, real APKs, and upper bounds",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-38.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-38.layout.json"
+    },
+    {
+      "index": 39,
+      "type": "old",
+      "oldSlide": 20,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-39.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-39.layout.json"
+    },
+    {
+      "index": 40,
+      "type": "old",
+      "oldSlide": 21,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-40.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-40.layout.json"
+    },
+    {
+      "index": 41,
+      "type": "table",
+      "title": "After the results, the MVP compares differently from related work",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-41.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-41.layout.json"
+    },
+    {
+      "index": 42,
+      "type": "content",
+      "title": "The contribution is practical evidence control, not a universal best score",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-42.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-42.layout.json"
+    },
+    {
+      "index": 43,
+      "type": "old",
+      "oldSlide": 24,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-43.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-43.layout.json"
+    },
+    {
+      "index": 44,
+      "type": "old",
+      "oldSlide": 25,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-44.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-44.layout.json"
+    },
+    {
+      "index": 45,
+      "type": "old",
+      "oldSlide": 26,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-45.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-45.layout.json"
+    },
+    {
+      "index": 46,
+      "type": "old",
+      "oldSlide": 27,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-46.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-46.layout.json"
+    },
+    {
+      "index": 47,
+      "type": "old",
+      "oldSlide": 28,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-47.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-47.layout.json"
+    },
+    {
+      "index": 48,
+      "type": "demoTransition",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-48.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-48.layout.json"
+    },
+    {
+      "index": 49,
+      "type": "section",
+      "title": "Conclusion",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-49.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-49.layout.json"
+    },
+    {
+      "index": 50,
+      "type": "old",
+      "oldSlide": 30,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-50.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-50.layout.json"
+    },
+    {
+      "index": 51,
+      "type": "content",
+      "title": "The main limitations define the next research work",
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-51.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-51.layout.json"
+    },
+    {
+      "index": 52,
+      "type": "old",
+      "oldSlide": 31,
+      "previewPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\preview\\slide-52.png",
+      "layoutPath": "C:\\Users\\PC CABA DZ\\Documents\\pfe-final\\outputs\\graduation-defense-expanded-old-style-deck\\layout\\slide-52.layout.json"
+    }
+  ]
+}

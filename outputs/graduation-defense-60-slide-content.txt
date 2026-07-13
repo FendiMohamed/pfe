@@ -1,0 +1,819 @@
+Graduation Defense Presentation Content Script
+Generated from main-master.pdf, main-pfe.pdf, and the existing APK-to-SBOM defense deck
+
+Theme
+- Minimal light academic theme.
+- Background: white or very light gray.
+- Text: charcoal.
+- Accent: muted blue with limited muted teal for evidence highlights.
+- Use simple tables, thin rules, clean diagrams, and real report screenshots.
+- Do not use decorative gradients, playful visuals, or dense dashboard styling.
+- Keep one main claim per slide.
+- Do not use em dash punctuation.
+
+Communication Job
+By the end, the jury should understand that this work combines a research framework for trustworthy APK-derived SBOM claims with an implemented, evaluated engineering pipeline that recovers bounded, evidence-based SBOM and vulnerability information from compiled Android APKs.
+
+Sources Used
+- Master thesis: Towards Trustworthy SBOM Recovery from Compiled Android Applications.
+- Engineering thesis: Evidence-Based SBOM Recovery from Compiled Android APKs.
+- Existing defense deck: apk-sbom-defense-academic-deck-report-proof.pptx.
+- Supporting project artifacts: thesis evaluation tables, demo v2 package, final demo runbook, AI R8 integration gate, paper-to-implementation traceability.
+
+Screenshot and Proof Asset Reuse Plan
+- Required from latest PPTX slide 22: clean-report.png for the clean F-Droid report summary.
+- Required from latest PPTX slide 22: vulnerable-report-top.png for the controlled vulnerable Jackson report.
+- Required from latest PPTX slide 29: ai-report-top.png for the hybrid AI report surface.
+- Required from latest PPTX slide 40: clean-fdroid-report-page-01.png and clean-fdroid-report-page-02.png.
+- Required from latest PPTX slide 41: clean-fdroid-report-page-03.png, clean-fdroid-report-page-04.png, and clean-fdroid-report-page-05.png.
+- Required from latest PPTX slide 42: vulnerable-jackson-report-page-01.png and vulnerable-jackson-report-page-02.png.
+- Required from latest PPTX slide 43: vulnerable-jackson-report-page-03.png.
+- Also keep available result crops: clean-version-decisions.png, vulnerable-cves.png, and ai-assisted-report.png.
+- Reuse original-output clean-fdroid and vulnerable-jackson report.html, report.json, matches.json, sbom.cdx.json, and osv-vulnerabilities.json as source artifacts behind the screenshots.
+- Recreate the old result proof tables from the inspected deck when screenshots are not the best fit, especially slides on normal results, v2 upper-bound results, RandomForest, Transformer, raw-opcode Transformer, and AI integration gate.
+
+Section 1. Introduction
+
+Slide 1. Evidence-Based SBOM Recovery from Compiled Android APKs
+Purpose: Open with the combined Master and Engineering thesis topic.
+Visible content:
+- Graduation defense
+- Evidence-Based SBOM Recovery from Compiled Android APKs
+- Trustworthy component attribution, CycloneDX output, and vulnerability interpretation
+- Fendi Mohamed
+- Computer Systems Engineering
+Suggested visual:
+- Simple horizontal pipeline: APK, Evidence, SBOM, CVE report.
+Speaker note summary:
+This defense presents one coherent project from two angles. The Master thesis frames trustworthy SBOM recovery as an evidence problem. The Engineering thesis implements and evaluates a working APK-to-SBOM pipeline.
+
+Slide 2. The problem starts after the source code is gone
+Purpose: Establish why the task is difficult.
+Visible content:
+- Source projects contain dependency files, lockfiles, and resolved Gradle trees.
+- A compiled APK contains DEX bytecode, resources, manifest data, native files, and signatures.
+- Maven coordinates and exact versions are usually not directly visible.
+- R8 can rename, shrink, inline, and reorganize evidence.
+Suggested visual:
+- Two-column comparison between source project and compiled APK.
+Speaker note summary:
+Normal SBOM generation works best when source metadata exists. This work starts in the harder audit scenario where only the APK is available.
+
+Slide 3. A valid SBOM is not automatically a trustworthy SBOM
+Purpose: State the main Master thesis insight.
+Visible content:
+- SBOM formats define representation.
+- Trust depends on the evidence behind each component claim.
+- A recovered component can be clear at identity level and uncertain at version level.
+- Vulnerability interpretation must inherit that uncertainty.
+Suggested visual:
+- Authority chain: APK evidence, identity claim, version claim, vulnerability interpretation.
+Speaker note summary:
+The Master thesis separates the syntax of an SBOM from the trustworthiness of the claims inside it. This distinction drives the whole defense.
+
+Slide 4. The project answers one practical question
+Purpose: Define the central question.
+Visible content:
+- Can a compiled Android APK be transformed into a useful SBOM without pretending that weak evidence is certain?
+- Useful means standard output, traceable evidence, confidence labels, and honest limitations.
+- Unsafe means forced exact versions, hidden denominator gaps, and unqualified CVE claims.
+Suggested visual:
+- Question centered with two small columns: useful output and unsafe output.
+Speaker note summary:
+The goal is not perfect reverse engineering. The goal is a usable security artifact that remains honest about what the APK evidence can and cannot prove.
+
+Slide 5. The defense combines two complementary theses
+Purpose: Explain the role of each thesis document.
+Visible content:
+- Master thesis: evidence model, state of the art, trust taxonomy, research agenda.
+- Engineering thesis: system design, implementation, CLI, evaluation, demo.
+- Existing deck: final architecture, headline metrics, demo proof, and guardrail wording.
+Suggested visual:
+- Three-source synthesis diagram feeding one defense narrative.
+Speaker note summary:
+The Master thesis explains why trust boundaries matter. The Engineering thesis shows how those boundaries were implemented in a working prototype.
+
+Slide 6. Roadmap
+Purpose: Present the exact requested structure.
+Visible content:
+1. Introduction
+2. Background
+3. State of the Art
+4. Contribution
+5. Implementation
+6. Demonstration
+7. Conclusion
+Suggested visual:
+- Clean numbered agenda with section markers.
+Speaker note summary:
+The presentation moves from problem context to literature, then to the proposed contribution, implementation, demonstration, and future work.
+
+Section 2. Background
+
+Slide 7. Software supply chains depend on many hidden components
+Purpose: Introduce supply-chain context.
+Visible content:
+- Modern applications assemble direct and transitive dependencies.
+- Libraries may come from Maven, Android artifacts, native binaries, generated code, and frameworks.
+- Security teams need inventory to manage exposure and vulnerability response.
+Suggested visual:
+- Simple component stack showing app code plus dependencies.
+Speaker note summary:
+The SBOM need comes from the complexity of modern dependency reuse. Android applications are especially difficult because many components are merged before distribution.
+
+Slide 8. An SBOM is a structured component inventory
+Purpose: Define SBOM simply.
+Visible content:
+- SBOM means Software Bill of Materials.
+- It records components, versions, identifiers, and relationships.
+- Standards such as CycloneDX and SPDX define exchange formats.
+- Package URL helps identify ecosystem package coordinates.
+Suggested visual:
+- Minimal example SBOM row: group, artifact, version, PURL.
+Speaker note summary:
+The project uses CycloneDX and PURL because the output should be interoperable, not a custom detector report only.
+
+Slide 9. Build-time SBOMs and reconstructed SBOMs are different
+Purpose: Establish key conceptual distinction.
+Visible content:
+- Build-time SBOM: produced from source, dependency resolution, and build metadata.
+- Reconstructed SBOM: inferred from the delivered artifact.
+- The reconstructed case must preserve uncertainty and provenance.
+Suggested visual:
+- Split diagram with build-time path and APK-recovery path.
+Speaker note summary:
+A build-time SBOM has access to authoritative metadata. A reconstructed APK SBOM must infer from residue and should never claim more authority than the evidence supports.
+
+Slide 10. Android builds transform the evidence before analysis
+Purpose: Explain the Android build path.
+Visible content:
+- Source code and Gradle dependencies are resolved.
+- Java and Kotlin code becomes JVM bytecode.
+- D8 converts bytecode into DEX.
+- R8 may shrink, optimize, obfuscate, and inline code.
+- The result is a signed APK.
+Suggested visual:
+- Linear Android build pipeline from source to signed APK.
+Speaker note summary:
+This slide explains why dependency boundaries are not preserved in the final artifact. The analyzer sees the result of the build, not the developer's dependency graph.
+
+Slide 11. The APK exposes several evidence regions
+Purpose: Show what can be inspected statically.
+Visible content:
+- AndroidManifest.xml for package and component metadata.
+- classes.dex and classes2.dex for executable bytecode.
+- resources.arsc, res, and assets for packaging evidence.
+- lib ABI directories for native shared libraries.
+- META-INF and signing blocks for package integrity evidence.
+Suggested visual:
+- APK container diagram with five labeled regions.
+Speaker note summary:
+Each region has value, but none is a complete dependency inventory. DEX is the main Maven evidence region, while native files require separate treatment.
+
+Slide 12. DEX evidence supports several signal families
+Purpose: Prepare the matcher discussion.
+Visible content:
+- Package and class descriptors.
+- Methods and fields.
+- Opcode counts and instruction patterns.
+- String literals and constants.
+- API references and method invocations.
+- Class dependency and call relations.
+Suggested visual:
+- Evidence family table with strengths and risks.
+Speaker note summary:
+The implementation extracts multiple DEX features because each one fails differently under transformations.
+
+Slide 13. R8 weakens names, coverage, and structure
+Purpose: Explain the main transformation threat.
+Visible content:
+- Renaming weakens textual identity.
+- Shrinking removes unused code.
+- Inlining changes method boundaries.
+- Class merging changes graph structure.
+- Constant propagation can remove literals.
+Suggested visual:
+- Transformation impact matrix: signal versus R8 effect.
+Speaker note summary:
+R8 is not only renaming. It can remove or rewrite the exact features used to distinguish adjacent library versions.
+
+Slide 14. Identity and exact version are separate decisions
+Purpose: Establish a central trust boundary.
+Visible content:
+- Identity asks whether a component family or coordinate is present.
+- Version asks which exact release is supported.
+- Security authority asks whether vulnerability interpretation is justified.
+- A strong identity match can still have weak version authority.
+Suggested visual:
+- Three-step decision chain.
+Speaker note summary:
+This distinction prevents a plausible library match from becoming an unsupported exact version and then a misleading CVE finding.
+
+Slide 15. Static analysis is reproducible but bounded
+Purpose: Explain scope.
+Visible content:
+- Static analysis inspects the delivered APK without running it.
+- It is suitable for repeatable batch processing.
+- It cannot fully analyze encrypted payloads, downloaded code, or runtime-only behavior.
+- Boundary cases should be reported, not hidden.
+Suggested visual:
+- Scope boundary diagram with static evidence inside and dynamic or hidden code outside.
+Speaker note summary:
+The project is intentionally static. It reports native and hidden-code boundaries instead of inventing Maven identities for unsupported regions.
+
+Section 3. State of the Art
+
+Slide 16. The Master thesis reviews component recovery as evidence attribution
+Purpose: Transition to state of the art.
+Visible content:
+- The review does not build a simple leaderboard.
+- Tools use different datasets, transformations, and correctness units.
+- The Master thesis classifies techniques, evidence sources, transformation threats, and evaluation practices.
+Suggested visual:
+- Four-part taxonomy: techniques, evidence, threats, evaluation.
+Speaker note summary:
+The Master thesis focuses on what each approach can justify as evidence, not only on reported percentages.
+
+Slide 17. Early tools relied on profiles, packages, and signatures
+Purpose: Cover first generation methods.
+Visible content:
+- LibScout uses reference profiles and method descriptor hierarchy.
+- LibRadar uses API frequencies and package clustering.
+- LibD uses dependency relations and opcode hashing.
+- These methods helped scale detection but remained sensitive to structure and references.
+Suggested visual:
+- Timeline segment with LibScout, LibRadar, LibD.
+Speaker note summary:
+The first generation made library detection practical but did not fully solve exact version attribution in transformed APKs.
+
+Slide 18. Structural methods reduced dependence on package names
+Purpose: Cover graph and correspondence approaches.
+Visible content:
+- ORLIS uses coarse filtering and class-level CFG evidence.
+- LibPecker uses class dependency relations and adaptive similarity.
+- LibID formulates matching as a constrained class-correspondence problem.
+- Structural evidence improves identity but still depends on references and transformations.
+Suggested visual:
+- Simple graph-to-library matching diagram.
+Speaker note summary:
+Structural methods are important because package names are fragile. They also show that stronger evidence often costs more computation.
+
+Slide 19. Version-level methods make the security problem visible
+Purpose: Show why exact versions matter.
+Visible content:
+- ATVHUNTER links version detection with vulnerability identification.
+- LibScan refines class correspondence using method and call-chain opcode similarity.
+- SAD uses class structural similarity for version-level detection.
+- Exact version recovery is harder than library presence.
+Suggested visual:
+- Table: tool, version evidence, security relevance.
+Speaker note summary:
+Version-level tools are closest to SBOM and CVE use cases because vulnerability databases depend on exact affected versions.
+
+Slide 20. Optimization-aware research shows why R8 must be treated separately
+Purpose: Focus on R8 and optimization.
+Visible content:
+- LibHunter studies compiler optimization effects.
+- Optimization and inlining can remove or merge the units used by detectors.
+- Renaming is easier than shrinking and inlining.
+- Realistic evaluation must separate transformation types.
+Suggested visual:
+- R8 threat ladder: rename, shrink, optimize, inline.
+Speaker note summary:
+The lesson is that obfuscation cannot be treated as one checkbox. Different transformations harm different evidence families.
+
+Slide 21. Learned representations are promising but not version authority
+Purpose: Include AI literature fairly.
+Visible content:
+- LibAttention uses learned representations for library presence under R8.
+- Transformers can capture patterns that manual features may miss.
+- Presence classification is not the same as exact Maven version recovery.
+- Learned models need guardrails before they affect SBOM or CVE output.
+Suggested visual:
+- Model output boundary: report assistance allowed, SBOM mutation blocked.
+Speaker note summary:
+AI can help triage hard cases, but the thesis keeps it separate from authoritative component and version decisions.
+
+Slide 22. SBOM-oriented systems expose the output gap
+Purpose: Explain why detector output is not enough.
+Visible content:
+- Most Android TPL tools output tool-specific matches.
+- Operational SBOM use requires standard identifiers, provenance, confidence, and vulnerability boundaries.
+- UniBOM shows the value of unified SBOM analysis.
+- Android-specific APK-to-CycloneDX recovery remains a gap.
+Suggested visual:
+- Detector list versus standard SBOM workflow.
+Speaker note summary:
+The project is positioned at the intersection of component detection, SBOM generation, and vulnerability interpretation.
+
+Slide 23. Realistic benchmarks lower the expected ceiling
+Purpose: Introduce benchmark humility.
+Visible content:
+- Systematic assessments show no tool dominates all conditions.
+- TPL-Benchmark reports a much lower realistic library-level ceiling than older isolated papers suggest.
+- Dataset choice, ground truth, and metric unit change the meaning of a score.
+- A single polished number can mislead.
+Suggested visual:
+- Small comparison chart labeled original reports versus common benchmark reality.
+Speaker note summary:
+The defense should not claim that this MVP beats every tool. It should claim that it reports evidence and limitations more responsibly.
+
+Slide 24. The main research gap is trustworthy authority
+Purpose: Summarize gaps from Master thesis.
+Visible content:
+- Exact-version evidence degrades faster than identity evidence.
+- Reference coverage and matcher recall are often mixed.
+- Standard SBOM output is rarely integrated with Android binary attribution.
+- Vulnerability claims often inherit hidden version uncertainty.
+- Negative experiments and abstentions are often invisible.
+Suggested visual:
+- Five-gap list with small warning markers.
+Speaker note summary:
+The gap is not only algorithmic accuracy. It is also how outputs become auditable security claims.
+
+Slide 25. The state of the art shaped the MVP design
+Purpose: Connect literature to implementation.
+Visible content:
+- Adopt reference profiles from versioned detection.
+- Adapt graph, opcode, literal, and dependency evidence.
+- Reject package-only boundaries.
+- Reject generic newest-version tie breaking.
+- Use AI only as report-only assistance.
+- Emit standard CycloneDX with confidence properties.
+Suggested visual:
+- State-of-the-art lesson, MVP adaptation, remaining limitation table.
+Speaker note summary:
+This slide prevents the project from looking ad hoc. Each main feature has a research basis and a bounded implementation decision.
+
+Slide 26. The review leads to an evidence-first principle
+Purpose: Close the state-of-the-art section.
+Visible content:
+- Do not ask only whether a version was emitted.
+- Ask what evidence supports it.
+- Ask what could invalidate it.
+- Ask how it may safely be used downstream.
+Suggested visual:
+- Four-question checklist.
+Speaker note summary:
+This principle becomes the design rule for the contribution and implementation sections.
+
+Section 4. Contribution
+
+Slide 27. The contribution is an evidence-gated APK-to-SBOM workflow
+Purpose: State contribution plainly.
+Visible content:
+- A research-backed model for APK-derived SBOM trust.
+- A static Android APK analysis pipeline.
+- Versioned Maven reference profiles normalized to DEX.
+- Hybrid matching with confidence and ambiguity.
+- CycloneDX output and confidence-aware vulnerability lookup.
+Suggested visual:
+- One clean system overview from APK to reports.
+Speaker note summary:
+The contribution is both conceptual and practical. The system implements the evidence boundaries argued by the Master thesis.
+
+Slide 28. Each recovered component is treated as a claim
+Purpose: Explain the evidence model.
+Visible content:
+- Subject APK.
+- Candidate component and artifact family.
+- Identity and version status.
+- Supporting and opposing evidence.
+- Provenance and validation context.
+- Permitted security interpretation.
+Suggested visual:
+- Claim record schema shown as a simple form.
+Speaker note summary:
+The project does not treat a match row as a final fact. It treats it as a claim with evidence and limits.
+
+Slide 29. The system separates authoritative and report-only paths
+Purpose: Explain authority design.
+Visible content:
+- Authoritative path: extraction, reference DB, matcher, SBOM, OSV, report.
+- Report-only path: R8 diagnostics, AI assistance, hybrid router, version-band experiments.
+- Report-only outputs can explain risk.
+- They cannot change selected versions, SBOM components, CVE labels, or metrics.
+Suggested visual:
+- Two-lane architecture, solid authoritative lane and thin diagnostic lane.
+Speaker note summary:
+This separation allows experimentation without silently changing the official output.
+
+Slide 30. Confidence is not one score
+Purpose: Explain identity and version confidence.
+Visible content:
+- Identity confidence measures component presence support.
+- Version confidence measures exact release support.
+- Ambiguous versions are preserved when evidence is close.
+- Abstention is allowed when evidence is insufficient.
+Suggested visual:
+- Three output states: exact, ambiguous, abstained.
+Speaker note summary:
+A confident family match and an uncertain exact version can coexist. The output should expose that situation.
+
+Slide 31. The matcher uses complementary evidence
+Purpose: Show signal fusion.
+Visible content:
+- Package coverage.
+- Class coverage.
+- Method coverage.
+- Opcode similarity.
+- Dependency similarity.
+- Literal overlap.
+- Version-unique evidence.
+- Optional API and opcode tri-gram diagnostics.
+Suggested visual:
+- Feature weight table with nonzero and disabled features.
+Speaker note summary:
+The matcher is intentionally hybrid. Optional signals exist, but they stay disabled when they do not improve controls safely.
+
+Slide 32. CycloneDX output carries evidence boundaries forward
+Purpose: Tie detection to SBOM standard.
+Visible content:
+- Accepted Maven decisions become CycloneDX components.
+- Components use Package URLs.
+- Native files become hash-based file components.
+- Confidence, match type, ambiguity, and evidence summaries remain attached.
+Suggested visual:
+- Small CycloneDX component example.
+Speaker note summary:
+The SBOM is not only a list. It carries enough context for a downstream analyst to understand how strong a recovered claim is.
+
+Slide 33. Vulnerability findings inherit component confidence
+Purpose: Explain CVE policy.
+Visible content:
+- OSV lookup uses selected Maven coordinate and version.
+- Findings are classified by evidence strength.
+- Source-confirmed findings are stronger than potential or report-only findings.
+- A weak version must not become a fake confirmed CVE.
+Suggested visual:
+- Vulnerability authority ladder: confirmed, potential, report-only.
+Speaker note summary:
+This is the security impact of confidence. A vulnerability database can only answer the version it is given.
+
+Slide 34. The contribution includes honest evaluation categories
+Purpose: Bridge to implementation and evaluation.
+Visible content:
+- Controlled fixtures.
+- Clean source-validated real APKs.
+- Partial source-validated real APKs.
+- No-Maven-signal controls.
+- Source-known upper-bound lane.
+- Limitation and boundary cases.
+- Report-only experiments.
+Suggested visual:
+- Evaluation layer pyramid.
+Speaker note summary:
+The evaluation design is part of the contribution because it prevents clean cases, hard cases, and boundary cases from being mixed into one misleading score.
+
+Section 5. Implementation
+
+Slide 35. The Engineering thesis implements the full pipeline
+Purpose: Open implementation section.
+Visible content:
+- Input: compiled Android APK.
+- Core: extractor, DEX analyzer, reference database, matcher, SBOM generator, vulnerability layer, report generator.
+- Output: JSON, Markdown, HTML, CycloneDX, and OSV artifacts.
+Suggested visual:
+- Full system architecture diagram adapted from the existing deck.
+Speaker note summary:
+This section focuses on the engineering thesis solution and how the concepts became an end-to-end tool.
+
+Slide 36. APK inspection records what is actually present
+Purpose: Explain extraction.
+Visible content:
+- ZIP entry inventory.
+- Manifest metadata.
+- DEX file discovery.
+- Native file inventory and hashes.
+- Resource and asset observations.
+- Forensic indicators for nonstandard or hidden code.
+Suggested visual:
+- APK evidence inventory table.
+Speaker note summary:
+The extractor provides the foundation. If code is missing, hidden, or native, the system should record the boundary instead of assuming absence.
+
+Slide 37. DEX analysis builds comparable evidence
+Purpose: Explain feature extraction.
+Visible content:
+- Parse all relevant classes.dex files.
+- Extract class, method, field, opcode, literal, and API evidence.
+- Build class dependency relations.
+- Aggregate multi-DEX evidence without losing parse errors.
+Suggested visual:
+- DEX to feature profile diagram.
+Speaker note summary:
+DEX analysis turns APK bytecode into the same style of features that will later be extracted from Maven references.
+
+Slide 38. Maven references are normalized before comparison
+Purpose: Explain reference construction.
+Visible content:
+- Download versioned JAR and AAR artifacts.
+- Extract AAR bytecode when needed.
+- Convert bytecode to DEX with D8.
+- Extract the same feature families.
+- Store coordinate, version, and evidence in SQLite.
+Suggested visual:
+- Maven artifact to SQLite reference DB pipeline.
+Speaker note summary:
+Comparing APK DEX to source or JVM bytecode directly would introduce representation mismatch. The reference database uses a DEX-oriented representation.
+
+Slide 39. Candidate generation keeps matching scalable
+Purpose: Explain coarse matching.
+Visible content:
+- Large reference databases create candidate pressure.
+- The system first shortlists plausible coordinates and versions.
+- Detailed scoring is reserved for candidates with enough evidence.
+- Shortlist changes need regression controls before promotion.
+Suggested visual:
+- Funnel diagram: full DB, candidates, scored matches, decisions.
+Speaker note summary:
+The matcher must balance recall and cost. A too-strict shortlist can lose real components, while a too-broad shortlist creates false near-ties.
+
+Slide 40. Weighted scoring ranks evidence but does not prove probability
+Purpose: Explain matcher formula in accessible form.
+Visible content:
+- Package coverage: 0.15.
+- Class coverage: 0.45.
+- Method coverage: 0.25.
+- Opcode similarity: 0.15.
+- Dependency similarity: 0.10.
+- Literal overlap: 0.08.
+- Version-unique evidence: 0.12.
+- API references and opcode tri-grams: disabled by default.
+Suggested visual:
+- Clean weight table with disabled rows shaded lightly.
+Speaker note summary:
+The score ranks candidates. It is not a calibrated probability. Confidence also depends on alternatives, gaps, coverage, and transformations.
+
+Slide 41. Version decisions preserve alternatives
+Purpose: Explain exact versus ambiguous decisions.
+Visible content:
+- Candidates are grouped by coordinate.
+- The top version is compared with nearby alternatives.
+- Score gap and version-unique evidence drive exactness.
+- Near-ties become ambiguous version sets.
+Suggested visual:
+- Version ranking example with top candidate and near-tie candidates.
+Speaker note summary:
+The system can select a best candidate while still exposing that nearby versions remain plausible.
+
+Slide 42. SBOM generation converts accepted decisions into CycloneDX
+Purpose: Explain SBOM module.
+Visible content:
+- Maven components include group, artifact, version, and PURL.
+- Evidence properties record confidence and match status.
+- Native files are represented as file components with hashes.
+- Uncertain Maven candidates are excluded by default unless explicitly requested.
+Suggested visual:
+- CycloneDX output path from decisions to sbom.cdx.json.
+Speaker note summary:
+The default SBOM is conservative. Diagnostic consumers can include uncertain rows, but that changes the meaning of the SBOM.
+
+Slide 43. Vulnerability lookup is confidence-aware
+Purpose: Explain OSV and classification.
+Visible content:
+- OSV queries use accepted package versions.
+- OSV, GHSA, and CVE identifiers are normalized.
+- Source validation can relabel findings.
+- Findings can be source-confirmed, source-version-mismatch, source-missing, potential, or report-only.
+Suggested visual:
+- OSV lookup and finding classification flow.
+Speaker note summary:
+The vulnerability layer does not repair uncertain component evidence. It reports vulnerability results within the authority of the detected version.
+
+Slide 44. Reports make the evidence inspectable
+Purpose: Explain report outputs.
+Visible content:
+- matches.json for ranked candidates.
+- sbom.cdx.json for standard SBOM output.
+- osv-vulnerabilities.json for vulnerability responses.
+- report.json for combined machine-readable evidence.
+- report.md and report.html for human review.
+Suggested visual:
+- Output artifact bundle.
+Speaker note summary:
+The reports are important because defense and audit users need to see why a decision was made, not only the final component list.
+
+Slide 45. The CLI supports stage-level diagnosis
+Purpose: Explain commands.
+Visible content:
+- inspect-apk checks archive, manifest, DEX, native, and forensic evidence.
+- analyze-dex checks bytecode features.
+- match-apk checks ranked candidates.
+- generate-sbom writes CycloneDX.
+- scan-sbom-osv enriches vulnerabilities.
+- generate-report creates the complete package.
+- validate-source-deps supports evaluation.
+Suggested visual:
+- Command table.
+Speaker note summary:
+The CLI is modular so failures can be localized. This also supports reproducibility and demo preparation.
+
+Slide 46. Docker makes the runtime reproducible
+Purpose: Cover environment.
+Visible content:
+- Python 3.12 runtime.
+- APK analysis libraries and DEX tooling.
+- SQLite reference database.
+- Project commands run through docker compose.
+- Cached artifacts support defense demos without long rebuilds.
+Suggested visual:
+- Docker runtime box with inputs and outputs.
+Speaker note summary:
+The thesis includes reproducibility instructions because APK analysis depends on tool versions, D8 availability, and reference data.
+
+Slide 47. Evaluation layers prevent overclaiming
+Purpose: Present evaluation setup.
+Visible content:
+- Controlled fixtures test mechanics with known ground truth.
+- Clean real APKs test exact emitted rows in easier source-validated cases.
+- Partial real APKs expose hard families.
+- No-Maven-signal controls measure emission boundaries.
+- Limitation cases test native and hidden-code scope.
+Suggested visual:
+- Evaluation layer table.
+Speaker note summary:
+The denominator matters. The evaluation is designed to show where the tool works, where it is partial, and where it should abstain.
+
+Slide 48. Controlled fixtures validate mechanics
+Purpose: Present controlled result.
+Visible content:
+- 72 controlled APK fixtures.
+- 84 expected Maven coordinate and version pairs.
+- 84 of 84 exact confirmations.
+- Categories include clear, R8 rename, R8 shrink, R8 optimize, shrink and optimize, repackaging, inline-like stress, multidex, and multi-library cases.
+Suggested visual:
+- Controlled category table.
+Speaker note summary:
+This result shows the system can recover exact versions when references and controlled ground truth are available. It is not a claim of perfect real-world coverage.
+
+Slide 49. Real APK results are split into clean and partial evidence
+Purpose: Present main real APK metric correctly.
+Visible content:
+- Clean source-validated real APKs: 47 of 47 emitted Maven versions confirmed.
+- Partial source-validated real APKs: 880 of 1790 confirmed.
+- All source-validated real APKs with emitted rows: 927 of 1837 confirmed.
+- Rate: 50.5 percent emitted Maven version confirmation.
+- This is not full dependency recall.
+Suggested visual:
+- Three-row metric table with clean and partial separated.
+Speaker note summary:
+This is the key normal metric. The wording must be precise: emitted Maven version confirmation rate, not total dependency recall.
+
+Slide 50. Full source denominator reveals the remaining coverage gap
+Purpose: Explain why 50.5 percent is not the full story.
+Visible content:
+- Resolved source dependency rows: 12082.
+- Exact source rows emitted by the ordinary lane: 927.
+- Full source denominator exact emission: 7.7 percent.
+- Shared DB exact-version coverage: 1231 of 12082, or 10.2 percent.
+- Reference coverage and matcher recall remain major limitations.
+Suggested visual:
+- Coverage-first table.
+Speaker note summary:
+The full source denominator is stricter. It shows that useful emitted rows exist, but many dependencies are not emitted exactly end to end.
+
+Slide 51. The source-known v2 lane is an upper bound
+Purpose: Present v2 result with guardrails.
+Visible content:
+- 106 source-tree APK cases rerun.
+- 10517 reference DB components.
+- 6772 emitted rows checked.
+- 6772 exact confirmations.
+- 0 wrong-version emitted rows.
+- 5238 remaining source-gap rows.
+- This is source-version constrained, not APK-only production accuracy.
+Suggested visual:
+- Upper-bound lane card with guardrail statement.
+Speaker note summary:
+The v2 lane proves recognition capacity when the correct source versions constrain the candidate space. It must not be presented as unconstrained APK-only accuracy.
+
+Slide 52. Remaining source gaps are classified instead of hidden
+Purpose: Show transparency after v2.
+Visible content:
+- Source dependency rows: 12082.
+- Source-gap rows: 5238.
+- Explained or boundary rows: 2515.
+- Actionable source-gap rows: 2723.
+- Missing-reference candidates: 442.
+- Matcher-recall candidates: 2281.
+- Matcher report-only suggestions: 1425.
+Suggested visual:
+- Stacked bar of source-gap categories.
+Speaker note summary:
+The remaining denominator is visible. Some rows are not valid runtime bytecode targets, some need references, and many need matcher recall improvements.
+
+Slide 53. AI and R8 assistance has its own evidence lane
+Purpose: Introduce the AI, ML, and DL result proof without granting authority.
+Visible content:
+- Largest local dataset: 31589 rows.
+- Training-eligible rows: 20523.
+- Heldout or report-only rows: 11066.
+- Unique cases: 150.
+- Unique coordinates: 1370.
+- Integration verdict: report-only ready, matcher and SBOM authority not ready.
+Suggested visual:
+- Result table plus ai-report-top.png or ai-assisted-report.png.
+Speaker note summary:
+This slide restores the old deck's AI proof lane. It shows that the ML and DL work is evaluated as its own evidence class and cannot silently change official SBOM or CVE output.
+
+Section 6. Demonstration
+
+Slide 54. Classical ML supports report-only triage
+Purpose: Preserve the RandomForest result evidence from the old presentation.
+Visible content:
+- Model: RandomForestClassifier.
+- Dataset rows: 20523.
+- Test macro-F1: 0.708.
+- Test accuracy: 0.690.
+- Decision: keep integrated as report-only assistance.
+- Allowed: report wording, prioritization, and diagnostics.
+- Blocked: selected versions, SBOM components, CVE labels, and source-validation metrics.
+Suggested visual:
+- Compact ML result table with a small guardrail column.
+Speaker note summary:
+The RandomForest is useful as an assistant because it can triage report rows. It is not allowed to confirm exact Maven versions.
+
+Slide 55. Deep learning results are strong only in the guarded lane
+Purpose: Preserve the Transformer and raw-opcode DL evidence.
+Visible content:
+- Structured-token Transformer macro-F1: 0.977.
+- MVP-safe Transformer macro-F1: 0.882.
+- Raw-opcode Transformer macro-F1: 0.110.
+- Raw-opcode baseline: 0.128.
+- Verdict: structured evidence is useful for report-only risk triage, raw-opcode DL remains research-only.
+Suggested visual:
+- Two-column DL result table, with ai-assisted-report.png as proof of report-only surfacing.
+Speaker note summary:
+The old presentation separated ML and DL because the conclusions are different. Structured project-evidence tokens are useful for triage, while raw opcode sequences did not beat the baseline.
+
+Slide 56. The demo follows one deterministic APK-to-report path
+Purpose: Introduce demo flow and output files.
+Visible content:
+- Input APK.
+- Reference DB.
+- generate-report command.
+- Output directory.
+- Generated report, SBOM, matches, OSV file, Markdown, and HTML.
+- Optional hybrid AI report section appears only when requested.
+Suggested visual:
+- Command flow with artifact icons and a small output bundle.
+Speaker note summary:
+The demo should show an end-to-end path without live dependence on long rebuilds or unstable network services unless explicitly refreshed.
+
+Slide 57. Clean and vulnerable screenshots prove both CVE lanes
+Purpose: Reuse the old demo screenshots as first-class proof objects.
+Visible content:
+- Clean F-Droid: 23 Maven components and OSV 0.
+- Controlled Jackson: jackson-databind 2.9.10.8.
+- Positive CVE proof: 3 HIGH advisories.
+- CVE-2020-36518.
+- CVE-2022-42003.
+- CVE-2022-42004.
+Suggested visual:
+- Side-by-side screenshots: clean-report.png and vulnerable-report-top.png.
+- Add vulnerable-cves.png as a cropped detail if space allows.
+Speaker note summary:
+These are generated report screenshots from the old deck, not mockups. The clean lane proves a negative vulnerability result, and the Jackson lane proves a positive vulnerability result.
+
+Slide 58. Full report pages and AI screenshots show output integrity
+Purpose: Preserve the larger report-proof and AI-result screenshot material.
+Visible content:
+- Full clean report proof: clean-fdroid-report-page-01.png through clean-fdroid-report-page-05.png.
+- Full vulnerable report proof: vulnerable-jackson-report-page-01.png through vulnerable-jackson-report-page-03.png.
+- AI report proof: hybrid assistance section visible.
+- Output integrity: default and hybrid reports keep components, selected versions, SBOM content, and vulnerability output unchanged.
+- Claim boundary: screenshots prove implemented output, not perfect coverage.
+Suggested visual:
+- Montage or split slides using all eight report-proof page captures plus ai-report-top.png.
+Speaker note summary:
+This slide keeps the large screenshot set from the old presentation. It shows that the generated report surfaces clean, vulnerable, and AI-assisted proof while preserving the official output boundary.
+
+Section 7. Conclusion
+
+Slide 59. The main result is bounded, auditable recovery
+Purpose: Synthesize the work.
+Visible content:
+- The Master thesis defines trustworthy APK-derived SBOM claims.
+- The Engineering thesis implements an evidence-gated APK-to-SBOM pipeline.
+- Controlled fixtures confirm 84 of 84 expected versions.
+- Real APKs show 927 of 1837 confirmed emitted Maven versions.
+- The v2 lane confirms 6772 of 6772 source-version constrained emitted rows as an upper bound.
+Suggested visual:
+- Final contribution recap with three evidence numbers.
+Speaker note summary:
+The conclusion should connect research and implementation. The project favors auditable partial knowledge over unsupported certainty.
+
+Slide 60. Limitations and future work define the next research agenda
+Purpose: Close with limitations and future directions.
+Visible content:
+- Improve reference coverage without unsafe promotion.
+- Improve matcher recall for source-gap rows.
+- Calibrate identity, version, ambiguity, and abstention classes.
+- Extend native and dynamically loaded code attribution.
+- Build public benchmarks with exact denominators and transformation labels.
+- Evaluate human understanding of confidence and report-only evidence.
+Suggested visual:
+- Future work roadmap with six lanes.
+Speaker note summary:
+The project ends with a clear agenda. The next step is not to remove uncertainty from the report, but to calibrate it and expand the evidence domains safely.
