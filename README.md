@@ -1,105 +1,134 @@
-# PFE: SBOM Extraction & CVE Detection from Compiled Android APKs
+# APK-to-SBOM Maven Evidence Recovery
 
-## Goal
+This repository contains the implementation, experiments, evaluation records, theses, and paper materials for a master's project on recovering Maven component and version evidence from compiled Android APKs.
 
-Build a tool that analyzes compiled Android APKs (potentially obfuscated), extracts a **Software Bill of Materials (SBOM)** — i.e., identifies third-party libraries and their exact versions — and maps them to known **CVEs** for vulnerability assessment.
+The project is an evidence-aware static-analysis MVP. It separates component-family identity, exact-version evidence, ambiguity, native-file boundaries, and downstream CycloneDX/OSV interpretation.
 
-## Research Baseline
+## What the tool does
 
-### Core Problem
+The pipeline:
 
-Third-party libraries (TPLs) make up >60% of Android app code [Wang+]. They're statically linked into DEX bytecode during compilation, losing version metadata and file boundaries. Obfuscation (ProGuard, R8, DashO, Allatori) further complicates identification via renaming, inlining, control-flow flattening, and dead-code removal.
+1. Inspects APK metadata, accessible DEX files, and native libraries.
+2. Extracts package, class, method, opcode, dependency, literal, and structural evidence.
+3. Compares APK evidence with versioned Maven reference profiles stored in SQLite.
+4. Shortlists component families and ranks candidate releases with normalized weighted evidence.
+5. Keeps identity confidence separate from version confidence and preserves close alternatives.
+6. Emits CycloneDX 1.5 component records with evidence properties.
+7. Represents native .so files as hash-identified file components.
+8. Optionally queries OSV using the reported component/version evidence.
 
-### Key Papers (2016–2026)
+The ordinary APK-only matcher does not use source dependency versions as candidate hints. Source dependency trees are used for explicit validation and separate source-constrained analyses.
 
-| Paper | Year | Venue | Approach | Key Result |
-|-------|------|-------|----------|------------|
-| **LibScout** [Backes+] | 2016 | CCS | Merkle tree + fuzzy descriptors | 100% renaming resilient; version-level F1 12.7% under R8 |
-| **LibRadar** | 2016 | ICSE | API freq hashing + clustering | Fastest (~5.5s/app); no version detection |
-| **LibD** [Li+] | 2017 | ICSE | Homogeny graph + opcode hashing | 1,954 libs found (vs 670); ghost calls |
-| **ORLIS** [Wang+] | 2018 | MOBILESoft | Two-stage CFG + ssdeep/sdhash | ~90% precision; slowest (1,438s/app) |
-| **Zhan+ (Are We There Yet)** | 2020 | ASE | Empirical comparison of 5 tools | Multidex blind spot; CDG > package structure |
-| **ATVHUNTER** [Zhan+] | 2021 | ICSE | CDG + two-phase CFG→opcode | 93.4% lib-F1; 88.8% version-F1; 87.5% apps vulnerable |
-| **Systematic Assessment** [Zhan+] | 2021 | TSE | 9 tools, 6 criteria | Most comprehensive survey; multidex/.aar/entrypoint patches |
-| **Libra** [Tomassi+] | 2023 | ISC | CTPH piecewise fuzzy hashing | 88% non-obf F1; 50-87% obfuscated |
-| **Ramirez** | 2024 | Thesis | Android vs iOS empirical study | iOS detection 10y behind; hybrid pipeline recommended |
-| **LibAttention** [Pan+] | 2025 | SANER | Transformer on 200M Smali tokens | +30% F1 over rules on R8; **no version detection** |
-| **SAD** [Zhou+] | 2025 | EASE | CDG + stateful/stateless class matching | **97.6% lib-F1**; 84.8% version-F1 (best) |
-| **LibMD** [Zhang+] | 2025 | Info. Fusion | Multi-scale fusion + Bayesian scoring | **Only explicit SBOM tool**; metrics unreleased |
-| **UniBOM** [Safronov+] | 2025 | IoT | Multi-modal SBOM pipeline | SBOM template; not Android-specific |
-| **TPL-Benchmark** [Gu+] | 2025 | arXiv | 10 tools, 6K apps, ground truth | **Real F1 ≈ 60%** (not 83-97%) — dramatic correction |
-| **LibScope** [Zhan+] | 2026 | ICSE | Bloom filter + global iterative matching | Set-level matching; 9.1% acceptance rate |
-| **ObfDetector** [Pan+] | 2026 | ICSE | Study on 77K apps; advanced obfuscation | **F1 < 50% lib, < 10% version** under adv. obfuscation |
+## Implementation
 
-### Key Surveys & Benchmarks
+The Python package is apk-sbom-mvp version 0.1.0 and requires Python 3.12 or newer.
 
-- **Zhan+ (ASE 2020 / TSE 2021)**: Systematic assessment of 9+ tools on 6 criteria. CDG > package structure. Multidex blind spot.
-- **Ramirez (2024)**: Android vs iOS comparison. Hybrid pipeline recommended.
-- **Gu+ (TPL-Benchmark 2025)**: **Most important empirical finding** — real-world F1 caps at ~60% (vs 83-97% claimed). Ground truth for 6K apps.
-- **Pan+ (ObfDetector ICSE 2026)**: 77K apps analyzed. F1 < 10% at version-level under advanced obfuscation.
+| Area | Main modules |
+|---|---|
+| APK and DEX analysis | src/apk_sbom/apk_extractor.py, dex_analyzer.py |
+| Maven/reference preparation | maven_downloader.py, reference_converter.py, reference_features.py |
+| Matching and version decisions | matcher.py, models.py |
+| Reports and SBOM | report.py, sbom.py |
+| Vulnerability interpretation | vulnerability.py |
+| Source validation | source_validation.py |
+| AI/R8 report-only assistance | ai_r8_assistant.py, ai_r8_final_evaluation.py, ai_r8_mvp_integration_gate.py |
 
-### Open Challenges
+The default matcher uses guarded promotion gates for the composite family shortlist and version-unique literal/context reranking. Broader R8 blending, AI suggestions, and additional structural experiments remain diagnostic or report-only; they cannot change selected versions, CycloneDX components, OSV labels, or source-validation metrics.
 
-1. **R8 method inlining resilience**: Even SAD loses −10pp; most tools untested
-2. **Realistic F1 is ~60%**: Prior papers inflated numbers by testing on easy datasets
-3. **Version-level detection < 10%**: Under advanced obfuscation (ObfDetector ICSE 2026)
-4. **Transitive dependencies**: ~47.3% of TPLs depend on others
-5. **Partial library inclusion**: Most tools produce binary yes/no, not confidence scores
-6. **No standard SBOM output**: Only LibMD (unreleased) generates structured SBOM
-7. **Package hierarchy obfuscation**: Critical blind spot identified by ObfDetector
+## Recorded evaluation snapshot
 
-## Task List
+The paper freezes the retained PFE evaluation snapshot associated with the 20 June 2026 evidence package and implementation commit 2983d54. These are documented historical results; the current checkout does not contain every original row-level export, generated fixture APK, database snapshot, hash manifest, or run manifest required to independently recalculate every aggregate.
 
-### Phase 1: Research & Baseline (Current)
+| Evaluation lane | Result | Interpretation |
+|---|---:|---|
+| Controlled fixtures | 84/84 expected rows across 72 fixtures | Controlled confirmation only |
+| Clean source-validated APKs | 47/47 across 5 APKs | Emitted-version agreement in a small clean stratum |
+| Partial source-validated APKs | 880/1,790 across 97 APKs | Emitted-version agreement on harder real cases |
+| Combined source-validated APKs | 927/1,837 across 102 APKs | Emitted-version confirmation, not full dependency recall |
+| Full source denominator | 927/12,082 across 106 source-tree cases | Source-denominator coverage |
+| Source-version-constrained lane | 6,772/6,772 across 106 cases | Upper-bound recognition using source-known candidate slices |
 
-- [x] Collect papers (10 papers collected)
-- [ ] Deep-read all papers, extract structured data to `papers/data/`
-- [ ] Fix synthesis table: add LibPecker, LIBLOOM; correct LibRadar F1
-- [ ] Write explicit "Impact on Project" per paper
-- [ ] Produce v2 of synthesis table with ground-truth column, library coverage, license info
+The 30-fixture/35-component count is an earlier checkpoint. Later priority reference-recovery records use a different evaluation-only database and are not merged into the paper's matcher results.
 
-### Phase 2: Tool Evaluation
+## R8 and AI experiments
 
-- [ ] Install and benchmark existing tools (LibScout, LibRadar, SAD, ATVHUNTER if available)
-- [ ] Build ground-truth dataset from F-Droid open-source apps
-- [ ] Test against R8-obfuscated apps
-- [ ] Document precision/recall/F1 per tool
+R8 stress fixtures cover rename, shrink, optimize, shrink-plus-optimize, package flattening/repackaging, inline-like call-site behavior, and multidex. The broader Phase-4 R8 blend was rejected after control and real-app regressions. The narrower Phase-5 trigger remains experiment-only and report-only.
 
-### Phase 3: Prototype Design
+The AI path is also report-only. Its project-derived structured dataset has 20,523 rows grouped into 149 case identifiers. A Random Forest and structured-token Transformer were evaluated for evidence/risk triage, while a raw-opcode Transformer was tested as a research prototype. These models do not determine Maven versions, modify SBOM components, or change vulnerability labels.
 
-- [ ] Design architecture: module decoupling → signature extraction → version matching → SBOM generation → CVE lookup
-- [ ] Choose approach (CDG-based + multi-scale fusion + Bayesian scoring)
-- [ ] Implement MVP: APK decompilation → TPL identification → version estimation → SBOM (CycloneDX) → CVE mapping (NVD/OSV/EPSS)
+Detailed records:
 
-### Phase 4: Evaluation
+- docs/thesis/PFE_CHAPTER3_AI_EVIDENCE_SNAPSHOT_2026-06-20.md
+- docs/evaluation/AI_R8_ASSISTANT_DIAGNOSTICS.md
+- docs/thesis/EXPERIMENT_DECISION_LEDGER.md
+- docs/evaluation/R8_PHASE5_REPORT_EVIDENCE.md
 
-- [ ] Evaluate against ground-truth dataset
-- [ ] Compare with existing tools
-- [ ] Measure R8 resilience
-- [ ] Write scientific paper
+## Repository layout
 
-## MCP Servers (Recommended)
+    src/apk_sbom/       implementation
+    tests/              unit and promotion-gate tests
+    configs/            reference and experiment configurations
+    data/               source-validation and test inputs
+    docs/               architecture, evaluation, and research records
+    papers/             manuscript, audits, references, and supervisor briefing
+    thesis/             PFE and master thesis sources and archives
+    ressources/         reviewed research papers and resources
+    scripts/            evaluation and report-generation utilities
+    output/pdf/         generated paper PDF
+    work/               technical notes and state-of-the-art documents
 
-### Essential
+## Installation
 
-| Server | Purpose | Install |
-|--------|---------|---------|
-| `cve-mcp` | NVD + EPSS + KEV + OSV + GitHub Advisory (23 tools) | `npx -y cve-mcp` |
-| `sequential-thinking` | Complex multi-step reasoning for paper analysis | `npx -y @modelcontextprotocol/server-sequential-thinking` |
+    python -m venv .venv
+    .\.venv\Scripts\Activate.ps1
+    python -m pip install -e ".[dev]"
 
-### Useful
+For report-only model experiments:
 
-| Server | Purpose | Install |
-|--------|---------|---------|
-| `apktool-mcp-server` | APK decompilation and analysis (needs apktool installed) | `uvx apktool-mcp-server` |
-| `memory` | Persistent knowledge graph across sessions | `npx -y @modelcontextprotocol/server-memory` |
+    python -m pip install -e ".[dev,ml,dl]"
 
-### For MVP Implementation
+## Main commands
 
-| Server | Purpose | Install |
-|--------|---------|---------|
-| `android-security-analyzer` | Static analysis of Android source (remote, hosted) | Remote URL |
+    apk-sbom inspect-apk
+    apk-sbom analyze-apk
+    apk-sbom generate-report
+    apk-sbom download-references
+    apk-sbom convert-references
+    apk-sbom extract-reference-features
+    apk-sbom validate-source-deps
+    apk-sbom r8-phase5-experiment
+    apk-sbom ai-r8-build-dataset
+    apk-sbom ai-r8-train
+    apk-sbom ai-r8-suggest
+    apk-sbom ai-r8-integration-gate
 
-## OpenCode Config
+Run apk-sbom command --help for arguments. The exact database and configuration used for historical evaluation must be retained with its matching run manifest.
 
-See `opencode.json` in project root for MCP configuration.
+## Paper materials
+
+- papers/INTEGRATED_MANUSCRIPT_DRAFT.md — source manuscript
+- papers/MANUSCRIPT_TWO_COLUMN.tex — LaTeX source
+- output/pdf/MANUSCRIPT_TWO_COLUMN.pdf — formatted PDF
+- papers/PAPER_SECTION_EXPLANATION_FOR_SUPERVISOR.md — supervisor briefing
+- papers/PAPER_FINAL_CONSISTENCY_REFERENCE_AUDIT.md — final audit
+
+Paper structure:
+
+1. Abstract
+2. Introduction
+3. State of the Art
+4. Proposed Approach
+5. Implementation and Experimental Evaluation
+6. Conclusion
+
+## Scope and limitations
+
+The MVP does not claim universal Android dependency recovery, complete packaged-code recall, calibrated probabilities, native package/version attribution, or vulnerability precision/recall. Native-heavy applications, dynamic loading, encrypted or hidden DEX, commercial protectors, parser failures, absent reference versions, and adjacent releases with similar bytecode remain explicit limitations.
+
+Source dependency trees are validation proxies rather than perfect packaged-code ground truth. OSV results are qualified by component/version evidence and are not independent proof of component presence or exploitability.
+
+## Reproducibility
+
+The repository contains the implementation, documentation, experiment decisions, and recorded results used for the theses and paper. Some original machine-readable inputs and run metadata are not in the current archive, so the paper reports documented evaluation snapshots and identifies their provenance instead of claiming a fresh complete rerun.
+
+
